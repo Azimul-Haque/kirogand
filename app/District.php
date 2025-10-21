@@ -22,7 +22,7 @@ class District extends Model
     /**
      * Get the division that owns the district.
      */
-    public function division(): BelongsTo
+    public function division()
     {
         return $this->belongsTo(Division::class);
     }
