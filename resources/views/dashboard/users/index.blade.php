@@ -221,7 +221,7 @@
                                     <div class="input-group mb-3">
                                         <input type="text"
                                                name="deignation"
-                                               value="{{ old('deignation') }}"
+                                               value="{{ $user->deignation }}"
                                                class="form-control"
                                                placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি)">
                                         <div class="input-group-append">
