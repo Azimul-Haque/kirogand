@@ -639,7 +639,7 @@
           // --- 2. Change Event Listener (Cascading Dropdowns) ---
           // Applies to both Add and Edit modals
           $(document).on('change', '.authority-select', function() {
-              const userId = $(this).data('target');
+              const userId = $(this).data('userid');
               const parentId = $(this).val();
               const targetId = $(this).data('target');
               const modelName = $(this).data('model');
