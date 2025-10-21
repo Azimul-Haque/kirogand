@@ -104,6 +104,6 @@ class UserAuthority extends Model
 
         // Reverse the array keys to get the order: Division -> District -> Upazila -> Union
         // The 'true' argument tells array_reverse to preserve the keys (levels)
-        return array_reverse($hierarchy, true);
+        return return(array_reverse($hierarchy, true));
     }
 }
