@@ -85,11 +85,11 @@
                         // 3. Access the specific level you need (e.g., 'District')
                         // Note: The keys are the English model names: 'Division', 'District', 'Upazila', 'Union'
                         
-                        // To get the District Model:
-                        $districtModel = $hierarchy['District'] ?? null;
-                        
                         // To get the Division Model:
                         $divisionModel = $hierarchy['Division'] ?? null;
+
+                        // To get the District Model:
+                        $districtModel = $hierarchy['District'] ?? null;
                         
                         // To get the Assigned Authority Model (Union, Upazila, etc.):
                         $assignedModel = $userAuthority->authority; 
