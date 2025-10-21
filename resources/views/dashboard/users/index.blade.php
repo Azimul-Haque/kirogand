@@ -299,7 +299,7 @@
 
                                   <!-- Division Dropdown (Level 1) -->
                                   <div class="input-group mb-3">
-                                      <select id="edit_division_id{{ $user->id }}" class="form-control authority-select" data-level="Division" data-target="edit_district_id" data-model="District">
+                                      <select id="edit_division_id{{ $user->id }}" class="form-control authority-select" data-level="Division" data-target="edit_district_id{{ $user->id }}" data-model="District">
                                           <option value="" selected disabled>বিভাগ নির্বাচন করুন</option>
                                           @foreach ($divisions as $division)
                                               <option value="{{ $division->id }}" data-level-name="Division">{{ $division->bn_name }}</option>
@@ -309,7 +309,7 @@
 
                                   <!-- District Dropdown (Level 2) -->
                                   <div class="input-group mb-3">
-                                      <select id="edit_district_id" class="form-control authority-select" data-level="District" data-target="edit_upazila_id" data-model="Upazila" disabled>
+                                      <select id="edit_district_id{{ $user->id }}" class="form-control authority-select" data-level="District" data-target="edit_upazila_id" data-model="Upazila" disabled>
                                           <option value="" selected disabled>জেলা নির্বাচন করুন</option>
                                       </select>
                                   </div>
