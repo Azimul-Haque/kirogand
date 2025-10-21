@@ -670,7 +670,6 @@
 
                   if (parentId && modelName) {
                     loadLocations('#' + $(this).attr('id'), parentId, '#' + targetId, modelName);
-                    console.log($(this).attr('id'));
                   }
               }
           });
