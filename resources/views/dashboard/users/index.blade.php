@@ -109,7 +109,7 @@
                         if ($upazilaModel) {
                             // You can now access any column (ID, name, bn_name)
                             echo "<br/>Upazila Name (BN): " . $upazilaModel->bn_name;
-                            print_r($assignedModel);
+                            print_r($assignedModel->bn_name);
                         }
                     }
                       @endphp
