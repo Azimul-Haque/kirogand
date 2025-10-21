@@ -98,7 +98,7 @@
                         $assignedModel = $userAuthority->authority; 
                         
                         // --- Displaying Data ---
-                        dd(new \ReflectionClass($userAuthority->authority_type))->getShortName();
+                        dd(new \ReflectionClass($userAuthority->authority->authority_type))->getShortName();
 
                         if ($districtModel) {
                             // You can now access any column (ID, name, bn_name)
