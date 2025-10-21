@@ -365,7 +365,7 @@
                              name="deignation"
                              value="{{ old('deignation') }}"
                              class="form-control"
-                             placeholder="মোবাইল নম্বর (১১ ডিজিট)">
+                             placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি)">
                       <div class="input-group-append">
                           <div class="input-group-text"><span class="fas fa-phone"></span></div>
                       </div>
