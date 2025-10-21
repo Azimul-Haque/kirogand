@@ -239,6 +239,9 @@ class DashboardController extends Controller
 
     public function getUsersSearch($search)
     {
+        // কাজ আছে এটাতে
+        // কাজ আছে এটাতে
+        // কাজ আছে এটাতে
         $userscount = User::where('name', 'LIKE', "%$search%")
                           ->orWhere('email', 'LIKE', "%$search%")
                           ->orWhere('mobile', 'LIKE', "%$search%")
