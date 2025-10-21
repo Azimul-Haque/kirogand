@@ -702,7 +702,7 @@
             // কাজ করতে হবে Populate করতে চাইলে
             // কাজ করতে হবে Populate করতে চাইলে
 
-              const userId = $(this).data('user-id');
+              const userId = $(this).data('userid');
               const userName = $(this).data('user-name');
               const userMobile = $(this).data('user-mobile');
               const userRole = $(this).data('user-role');
