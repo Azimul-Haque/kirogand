@@ -218,6 +218,31 @@
             				                    </div>
             				                </div>
 
+                                      <div class="input-group mb-3">
+                                        <select name="role" id="adduserrole" class="form-control" required>
+                                          <option selected="" disabled="" value="">ধরন</option>
+                                          <option value="admin">এডমিন</option>
+                                         <option value="manager">স্থানীয় সরকার প্রতিনিধি</option>
+                                         <option value="volunteer">ভলান্টিয়ার</option>
+                                          <option value="user">ব্যবহারকারী</option>
+                                  {{-- <option value="accountant">একাউন্টেন্ট</option> --}}
+                                        </select>
+                                          <div class="input-group-append">
+                                              <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
+                                          </div>
+                                      </div>
+
+                                      <div class="input-group mb-3">
+                                          <input type="text"
+                                                 name="deignation"
+                                                 value="{{ old('deignation') }}"
+                                                 class="form-control"
+                                                 placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি)">
+                                          <div class="input-group-append">
+                                              <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
+                                          </div>
+                                      </div>
+
                                     <div class="input-group mb-3">
                                         <input type="text"
                                                name="packageexpirydate"
