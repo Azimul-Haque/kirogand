@@ -307,6 +307,7 @@ class DashboardController extends Controller
         $user = new User;
         $user->name = $request->name;
         $user->mobile = $request->mobile;
+        $user->designation = $request->designation;
         $user->role = $request->role;
         // if(!empty($request->sitecheck)) {
         //     $user->sites = implode(',', $request->sitecheck);
@@ -344,6 +345,7 @@ class DashboardController extends Controller
         $user = User::find($id);
         $user->name = $request->name;
         $user->mobile = $request->mobile;
+        $user->designation = $request->designation;
         $user->role = $request->role;
         $user->package_expiry_date = date('Y-m-d', strtotime($request->packageexpirydate)) . ' 23:59:59';
         // if(!empty($request->sitecheck)) {
