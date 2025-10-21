@@ -375,200 +375,200 @@ class APIController extends Controller
         }
     }
 
-    public function getCourses($softtoken, $coursetype)
-    {
-        if($softtoken == env('SOFT_TOKEN'))
-        {
-            $courses = Cache::remember('courses'.$coursetype, 10 * 24 * 60 * 60, function () use ($coursetype) {
-                 $courses = Course::select('id', 'name')
-                             ->where('status', 1) // take only active courses
-                             ->where('type', $coursetype) // 1 = Course, 2 = BJS MT, 3 = Bar MT, 4 = Free MT, 5 = QB
-                             ->orderBy('priority', 'asc')
-                             ->get();
-                 foreach($courses as $course) {
-                     $course->examcount = $course->courseexams->count();
-                     $course->makeHidden('courseexams');
-                 }
-                 return $courses;
-            });
+    // public function getCourses($softtoken, $coursetype)
+    // {
+    //     if($softtoken == env('SOFT_TOKEN'))
+    //     {
+    //         $courses = Cache::remember('courses'.$coursetype, 10 * 24 * 60 * 60, function () use ($coursetype) {
+    //              $courses = Course::select('id', 'name')
+    //                          ->where('status', 1) // take only active courses
+    //                          ->where('type', $coursetype) // 1 = Course, 2 = BJS MT, 3 = Bar MT, 4 = Free MT, 5 = QB
+    //                          ->orderBy('priority', 'asc')
+    //                          ->get();
+    //              foreach($courses as $course) {
+    //                  $course->examcount = $course->courseexams->count();
+    //                  $course->makeHidden('courseexams');
+    //              }
+    //              return $courses;
+    //         });
             
-            // dd($courses);
-            return response()->json([
-                'success' => true,
-                'courses' => $courses,
-            ]);
-        } else {
-            return response()->json([
-                'success' => false
-            ]);
-        }
-    }
+    //         // dd($courses);
+    //         return response()->json([
+    //             'success' => true,
+    //             'courses' => $courses,
+    //         ]);
+    //     } else {
+    //         return response()->json([
+    //             'success' => false
+    //         ]);
+    //     }
+    // }
 
-    public function testCache()
-    {
-        // echo Cache::forget('courseexams');
-    }
+    // public function testCache()
+    // {
+    //     // echo Cache::forget('courseexams');
+    // }
 
-    public function getCourseExams($softtoken, $id)
-    {
-        if($softtoken == env('SOFT_TOKEN'))
-        {
-            $courseexams = Cache::remember('courseexams'.$id, 10 * 24 * 60 * 60, function () use ($id) {
-                $courseexams = Courseexam::select('course_id', 'exam_id')
-                                     ->where('course_id', $id)
-                                     ->orderBy('exam_id', 'desc')
-                                     // ->join('exams', 'exams.id', '=', 'courseexams.exam_id')
-                                     // ->orderBy('exams.available_from', 'asc')
-                                     // ->select('courseexams.*')
-                                     ->get();
+    // public function getCourseExams($softtoken, $id)
+    // {
+    //     if($softtoken == env('SOFT_TOKEN'))
+    //     {
+    //         $courseexams = Cache::remember('courseexams'.$id, 10 * 24 * 60 * 60, function () use ($id) {
+    //             $courseexams = Courseexam::select('course_id', 'exam_id')
+    //                                  ->where('course_id', $id)
+    //                                  ->orderBy('exam_id', 'desc')
+    //                                  // ->join('exams', 'exams.id', '=', 'courseexams.exam_id')
+    //                                  // ->orderBy('exams.available_from', 'asc')
+    //                                  // ->select('courseexams.*')
+    //                                  ->get();
 
-                foreach($courseexams as $courseexam) {
-                    $courseexam->name = $courseexam->exam->name;
-                    $courseexam->start = $courseexam->exam->available_from;
-                    $courseexam->questioncount = $courseexam->exam->examquestions->count();
-                    $courseexam->syllabus = $courseexam->exam->syllabus ? $courseexam->exam->syllabus : 'N/A';
-                    $courseexam->alltimeavailability = $courseexam->exam->alltimeavailability;
-                    $courseexam->exam->makeHidden('id', 'name', 'examcategory_id', 'price_type', 'available_from', 'available_to', 'syllabus', 'created_at', 'updated_at', 'examquestions', 'alltimeavailability');
-                }
-                return $courseexams;
-            });
-            // dd($courseexams);
-            // $courseexams = $courseexams->sortByDesc('start');
-            // return 'Test';
-            return response()->json([
-                'success' => true,
-                'exams' => $courseexams,
-            ]);
-        } else {
-            return response()->json([
-                'success' => false
-            ]);
-        }
-    }
+    //             foreach($courseexams as $courseexam) {
+    //                 $courseexam->name = $courseexam->exam->name;
+    //                 $courseexam->start = $courseexam->exam->available_from;
+    //                 $courseexam->questioncount = $courseexam->exam->examquestions->count();
+    //                 $courseexam->syllabus = $courseexam->exam->syllabus ? $courseexam->exam->syllabus : 'N/A';
+    //                 $courseexam->alltimeavailability = $courseexam->exam->alltimeavailability;
+    //                 $courseexam->exam->makeHidden('id', 'name', 'examcategory_id', 'price_type', 'available_from', 'available_to', 'syllabus', 'created_at', 'updated_at', 'examquestions', 'alltimeavailability');
+    //             }
+    //             return $courseexams;
+    //         });
+    //         // dd($courseexams);
+    //         // $courseexams = $courseexams->sortByDesc('start');
+    //         // return 'Test';
+    //         return response()->json([
+    //             'success' => true,
+    //             'exams' => $courseexams,
+    //         ]);
+    //     } else {
+    //         return response()->json([
+    //             'success' => false
+    //         ]);
+    //     }
+    // }
 
-    public function getOtherCourseExams($softtoken, $coursetype)
-    {
-        if($softtoken == env('SOFT_TOKEN'))
-        {
-            $course = Course::select('id')
-                             ->where('status', 1) // take only active courses
-                             ->where('type', $coursetype) // 1 = Course, 2 = BJS MT, 3 = Bar MT, 4 = Free MT, 5 = QB
-                             ->first(); 
+    // public function getOtherCourseExams($softtoken, $coursetype)
+    // {
+    //     if($softtoken == env('SOFT_TOKEN'))
+    //     {
+    //         $course = Course::select('id')
+    //                          ->where('status', 1) // take only active courses
+    //                          ->where('type', $coursetype) // 1 = Course, 2 = BJS MT, 3 = Bar MT, 4 = Free MT, 5 = QB
+    //                          ->first(); 
 
 
-            $courseexams = Cache::remember('courseexams'.$course->id, 10 * 24 * 60 * 60, function () use ($course) {
-                $courseexams = Courseexam::select('course_id', 'exam_id')
-                                         ->where('course_id', $course->id)
-                                         ->orderBy('exam_id', 'desc')
-                                         ->get();
+    //         $courseexams = Cache::remember('courseexams'.$course->id, 10 * 24 * 60 * 60, function () use ($course) {
+    //             $courseexams = Courseexam::select('course_id', 'exam_id')
+    //                                      ->where('course_id', $course->id)
+    //                                      ->orderBy('exam_id', 'desc')
+    //                                      ->get();
 
-                foreach($courseexams as $courseexam) {
-                    $courseexam->name = $courseexam->exam->name;
-                    $courseexam->start = $courseexam->exam->available_from;
-                    $courseexam->questioncount = $courseexam->exam->examquestions->count();
-                    $courseexam->syllabus = $courseexam->exam->syllabus ? $courseexam->exam->syllabus : 'N/A';
-                    $courseexam->alltimeavailability = $courseexam->exam->alltimeavailability;
-                    $courseexam->exam->makeHidden('id', 'name', 'examcategory_id', 'price_type', 'available_from', 'available_to', 'syllabus', 'created_at', 'updated_at', 'examquestions', 'alltimeavailability');
-                }
-                return $courseexams;
-            });
-            // dd($courseexams);
+    //             foreach($courseexams as $courseexam) {
+    //                 $courseexam->name = $courseexam->exam->name;
+    //                 $courseexam->start = $courseexam->exam->available_from;
+    //                 $courseexam->questioncount = $courseexam->exam->examquestions->count();
+    //                 $courseexam->syllabus = $courseexam->exam->syllabus ? $courseexam->exam->syllabus : 'N/A';
+    //                 $courseexam->alltimeavailability = $courseexam->exam->alltimeavailability;
+    //                 $courseexam->exam->makeHidden('id', 'name', 'examcategory_id', 'price_type', 'available_from', 'available_to', 'syllabus', 'created_at', 'updated_at', 'examquestions', 'alltimeavailability');
+    //             }
+    //             return $courseexams;
+    //         });
+    //         // dd($courseexams);
 
-            return response()->json([
-                'success' => true,
-                'exams' => $courseexams,
-            ]);
-        } else {
-            return response()->json([
-                'success' => false
-            ]);
-        }
-    }
+    //         return response()->json([
+    //             'success' => true,
+    //             'exams' => $courseexams,
+    //         ]);
+    //     } else {
+    //         return response()->json([
+    //             'success' => false
+    //         ]);
+    //     }
+    // }
 
-    public function getCourseExamQuestions($softtoken, $id)
-    {
-        if($softtoken == env('SOFT_TOKEN'))
-        {
-            $examquestions = Examquestion::select('exam_id', 'question_id')
-                                     ->where('exam_id', $id)
-                                     ->get();
+    // public function getCourseExamQuestions($softtoken, $id)
+    // {
+    //     if($softtoken == env('SOFT_TOKEN'))
+    //     {
+    //         $examquestions = Examquestion::select('exam_id', 'question_id')
+    //                                  ->where('exam_id', $id)
+    //                                  ->get();
 
-            foreach($examquestions as $examquestion) {
-                $examquestion = $examquestion->makeHidden(['question_id']);
-                if($examquestion->question->questionexplanation) {
-                    $examquestion->question->explanation = $examquestion->question->questionexplanation->explanation;
-                }if($examquestion->question->questionimage) {
-                    $examquestion->question->image = $examquestion->question->questionimage->image;
-                }
-                $examquestion->question = $examquestion->question->makeHidden(['topic_id', 'difficulty', 'created_at', 'updated_at', 'questionexplanation', 'questionimage']);
-            }
-            $exam = Exam::findOrFail($id);
-            $exam->participation++;
-            $exam->save();
+    //         foreach($examquestions as $examquestion) {
+    //             $examquestion = $examquestion->makeHidden(['question_id']);
+    //             if($examquestion->question->questionexplanation) {
+    //                 $examquestion->question->explanation = $examquestion->question->questionexplanation->explanation;
+    //             }if($examquestion->question->questionimage) {
+    //                 $examquestion->question->image = $examquestion->question->questionimage->image;
+    //             }
+    //             $examquestion->question = $examquestion->question->makeHidden(['topic_id', 'difficulty', 'created_at', 'updated_at', 'questionexplanation', 'questionimage']);
+    //         }
+    //         $exam = Exam::findOrFail($id);
+    //         $exam->participation++;
+    //         $exam->save();
 
-            return response()->json([
-                'success' => true,
-                'questions' => $examquestions,
-            ]);
-        } else {
-            return response()->json([
-                'success' => false
-            ]);
-        }
-    }
+    //         return response()->json([
+    //             'success' => true,
+    //             'questions' => $examquestions,
+    //         ]);
+    //     } else {
+    //         return response()->json([
+    //             'success' => false
+    //         ]);
+    //     }
+    // }
 
-    public function getTopicExamQuestions($softtoken, $id)
-    {
-        if($softtoken == env('SOFT_TOKEN'))
-        {
-            $topicquestions = Question::where('topic_id', $id)->orderBy(DB::raw('RAND()'))
-                                      ->take(20)
-                                      ->get();
+    // public function getTopicExamQuestions($softtoken, $id)
+    // {
+    //     if($softtoken == env('SOFT_TOKEN'))
+    //     {
+    //         $topicquestions = Question::where('topic_id', $id)->orderBy(DB::raw('RAND()'))
+    //                                   ->take(20)
+    //                                   ->get();
 
-            foreach($topicquestions as $topicquestion) {
-                // dd($topicquestion);
-                if($topicquestion->questionexplanation) {
-                    $topicquestion->explanation = $topicquestion->questionexplanation->explanation;
-                }if($topicquestion->questionimage) {
-                    $topicquestion->image = $topicquestion->questionimage->image;
-                }
-                $topicquestion = $topicquestion->makeHidden(['topic_id', 'difficulty', 'created_at', 'updated_at', 'questionexplanation', 'questionimage']);
-            }
-            // dd($topicquestions);
+    //         foreach($topicquestions as $topicquestion) {
+    //             // dd($topicquestion);
+    //             if($topicquestion->questionexplanation) {
+    //                 $topicquestion->explanation = $topicquestion->questionexplanation->explanation;
+    //             }if($topicquestion->questionimage) {
+    //                 $topicquestion->image = $topicquestion->questionimage->image;
+    //             }
+    //             $topicquestion = $topicquestion->makeHidden(['topic_id', 'difficulty', 'created_at', 'updated_at', 'questionexplanation', 'questionimage']);
+    //         }
+    //         // dd($topicquestions);
 
-            $topic = Topic::findOrFail($id);
-            $topic->participation++;
-            $topic->save();
+    //         $topic = Topic::findOrFail($id);
+    //         $topic->participation++;
+    //         $topic->save();
 
-            return response()->json([
-                'success' => true,
-                'questions' => $topicquestions,
-            ]);
-        } else {
-            return response()->json([
-                'success' => false
-            ]);
-        }
-    }
+    //         return response()->json([
+    //             'success' => true,
+    //             'questions' => $topicquestions,
+    //         ]);
+    //     } else {
+    //         return response()->json([
+    //             'success' => false
+    //         ]);
+    //     }
+    // }
 
-    public function getTopics($softtoken)
-    {
-        if($softtoken == env('SOFT_TOKEN'))
-        {
-            $topics = Cache::remember('topics', 10 * 24 * 60 * 60, function () {
-                $topics = Topic::all();
-                return $topics;
-            });
-            return response()->json([
-                'success' => true,
-                'topics' => $topics,
-            ]);
-        } else {
-            return response()->json([
-                'success' => false
-            ]);
-        }
-    }
+    // public function getTopics($softtoken)
+    // {
+    //     if($softtoken == env('SOFT_TOKEN'))
+    //     {
+    //         $topics = Cache::remember('topics', 10 * 24 * 60 * 60, function () {
+    //             $topics = Topic::all();
+    //             return $topics;
+    //         });
+    //         return response()->json([
+    //             'success' => true,
+    //             'topics' => $topics,
+    //         ]);
+    //     } else {
+    //         return response()->json([
+    //             'success' => false
+    //         ]);
+    //     }
+    // }
 
     public function getPackages($softtoken)
     {
