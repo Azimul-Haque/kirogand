@@ -375,7 +375,7 @@ class DashboardController extends Controller
                     [
                         'authority_id' => $id,
                         'authority_type' => $modelClass,
-                        'role' => $request->role, // Use user role as authority role for simplicity
+                        'role' => $request->designation, // Use user role as authority role for simplicity
                     ]
                 );
             }
