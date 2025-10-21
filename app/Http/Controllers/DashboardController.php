@@ -369,6 +369,8 @@ class DashboardController extends Controller
         $level = $request->input('authority_level');
         $id = $request->input('authority_id');
 
+        dd($request->all());
+
         // Check if an authority assignment is requested
         if ($level && $id) {
             // Determine the fully qualified model class name
