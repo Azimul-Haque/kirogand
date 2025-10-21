@@ -33,7 +33,25 @@ class APIController extends Controller
     public function test()
     {
         
-    } 
+    }
+
+    public function getDistricts(Request $request, $divisionId)
+    {
+        $districts = District::where('division_id', $divisionId)->pluck('name', 'id');
+        return response()->json($districts);
+    }
+
+    public function getUpazilas(Request $request, $districtId)
+    {
+        $upazilas = Upazila::where('district_id', $districtId)->pluck('name', 'id');
+        return response()->json($upazilas);
+    }
+
+    public function getUnions(Request $request, $upazilaId)
+    {
+        $unions = Union::where('upazila_id', $upazilaId)->pluck('name', 'id');
+        return response()->json($unions);
+    }
 
     public function generateOTP(Request $request)
     {
