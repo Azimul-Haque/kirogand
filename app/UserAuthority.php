@@ -16,7 +16,7 @@ class UserAuthority extends Model
     /**
      * Get the user associated with this authority assignment.
      */
-    public function user(): BelongsTo
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
@@ -24,7 +24,7 @@ class UserAuthority extends Model
     /**
      * Get the parent authority model (Union, Upazila, District, or Division).
      */
-    public function authority(): MorphTo
+    public function authority()
     {
         // This links authority_id and authority_type to the correct geographic model (Union, Upazila, etc.)
         return $this->morphTo();
