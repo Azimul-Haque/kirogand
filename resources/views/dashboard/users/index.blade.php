@@ -659,7 +659,7 @@
               
               // 2b. Load the next level of locations
               if (targetId) {
-                  console.log(targetId + 2);
+                  console.log(targetId + '-2');
                   // Clear the authority selection for downstream models when a parent changes
                   $('#' + targetId).prop('disabled', true).html('<option value="" selected disabled>নির্বাচন করুন</option>');
                   
