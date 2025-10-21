@@ -98,6 +98,7 @@
 
                         if ($districtModel) {
                             // You can now access any column (ID, name, bn_name)
+                            echo "<br/>Division Name (BN): " . $divisionModel->bn_name;
                             echo "<br/>District Name (BN): " . $districtModel->bn_name;
                             // echo "<br/>District ID: " . $districtModel->id;
                         }
