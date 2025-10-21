@@ -723,15 +723,15 @@
                       // 4. Set division, load districts, set district, load upazilas, set upazila, load unions, set union.
 
                       // Temporary assignment for the form submission
-                      $('#edit_authority_level').val(authLevel);
-                      $('#edit_authority_id').val(authId);
+                      $('#edit_authority_level' + userId).val(authLevel);
+                      $('#edit_authority_id' + userId).val(authId);
                       
                       // Inform the user that they may need to re-select
                       console.warn(`User authority set at ${authLevel}. Please select the correct Division/District/Upazila/Union manually for full view.`);
 
                   } else if (authLevel === 'Upazila') {
-                      $('#edit_authority_level').val(authLevel);
-                      $('#edit_authority_id').val(authId);
+                      $('#edit_authority_level' + userId).val(authLevel);
+                      $('#edit_authority_id' + userId).val(authId);
                   } 
                   // ... handle District, Division ...
               }
