@@ -652,8 +652,8 @@
                   $('#' + context + '_authority_level').val(level);
                   $('#' + context + '_authority_id').val(parentId);
                   if(context == 'edit') {
-                    $('#' + context + '_authority_level').val(level);
-                  $('#' + context + '_authority_id').val(parentId);
+                    $('#' + context + '_authority_level' + userId).val(level);
+                  $('#' + context + '_authority_id' + userId).val(parentId);
                   }
               } else {
                   // If the selected value is empty, reset the current authority level/id
