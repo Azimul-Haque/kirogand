@@ -34,15 +34,6 @@ class APIController extends Controller
         $districts = District::where('division_id', $divisionId)->pluck('name', 'id');
         $districts = Cache::remember('districtsapi', 10 * 24 * 60 * 60, function () use ($divisionId) {
             $districts = District::where('division_id', $divisionId)->pluck('name', 'id');
-
-            foreach($districts as $courseexam) {
-                $courseexam->name = $courseexam->exam->name;
-                $courseexam->start = $courseexam->exam->available_from;
-                $courseexam->questioncount = $courseexam->exam->examquestions->count();
-                $courseexam->syllabus = $courseexam->exam->syllabus ? $courseexam->exam->syllabus : 'N/A';
-                $courseexam->alltimeavailability = $courseexam->exam->alltimeavailability;
-                $courseexam->exam->makeHidden('id', 'name', 'examcategory_id', 'price_type', 'available_from', 'available_to', 'syllabus', 'created_at', 'updated_at', 'examquestions', 'alltimeavailability');
-            }
             return $districts;
         });
         return response()->json($districts);
