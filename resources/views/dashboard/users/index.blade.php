@@ -362,8 +362,8 @@
 
                   <div class="input-group mb-3">
                       <input type="text"
-                             name="mobile"
-                             value="{{ old('mobile') }}"
+                             name="deignation"
+                             value="{{ old('deignation') }}"
                              autocomplete="off"
                              class="form-control"
                              placeholder="মোবাইল নম্বর (১১ ডিজিট)">
