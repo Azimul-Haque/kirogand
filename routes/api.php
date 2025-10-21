@@ -48,8 +48,8 @@ Route::get('/getpaymenthistory/{softtoken}/{phonenumber}', 'APIController@getPay
 // Route::get('/getmaterials/{softtoken}', 'APIController@getMaterials')->name('api.getmaterials');
 // Route::get('/getmaterials/single/{softtoken}/{id}', 'APIController@getSingleMaterial')->name('api.getsinglematerial');
 
-Route::post('/addexamresult', 'APIController@addExamResult')->name('api.addexamresult');
-Route::get('/meritlist/{softtoken}/{course_id}/{exam_id}', 'APIController@getMeritList')->name('api.getmeritlist');
-Route::post('/reportquestion', 'APIController@reportQuestion')->name('api.reportquestion');
-Route::get('/getexamcategories/{softtoken}', 'APIController@getExamCategories')->name('api.getexamcategories');
-Route::get('/getquestionbank/exams/{softtoken}/{getexamcategory}', 'APIController@getQBCatWise')->name('api.getquestionbank.exams');
+// Route::post('/addexamresult', 'APIController@addExamResult')->name('api.addexamresult');
+// Route::get('/meritlist/{softtoken}/{course_id}/{exam_id}', 'APIController@getMeritList')->name('api.getmeritlist');
+// Route::post('/reportquestion', 'APIController@reportQuestion')->name('api.reportquestion');
+// Route::get('/getexamcategories/{softtoken}', 'APIController@getExamCategories')->name('api.getexamcategories');
+// Route::get('/getquestionbank/exams/{softtoken}/{getexamcategory}', 'APIController@getQBCatWise')->name('api.getquestionbank.exams');
