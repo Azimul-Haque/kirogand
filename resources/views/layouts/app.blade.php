@@ -38,7 +38,7 @@
                     $auth = Auth::user()->authorities->first();
                 @endphp
                 {{-- Display the full dynamic hierarchy string --}}
-                <span style="color: #000000;">{!! $auth->getFullHierarchy() !!} </span>
+                <span style="color: #000000;">{{ $auth->getFullHierarchy() }} </span>
                 <span class="badge badge-secondary">
                     ({{ (new \ReflectionClass($auth->authority_type))->getShortName() }})
                 </span>
