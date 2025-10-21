@@ -98,7 +98,7 @@
                         $assignedModel = $userAuthority->authority; 
                         
                         // --- Displaying Data ---
-                        dd($userAuthority->authority);
+                        dd($userAuthority);
 
                         if ($districtModel) {
                             // You can now access any column (ID, name, bn_name)
