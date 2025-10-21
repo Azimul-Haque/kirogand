@@ -19,7 +19,7 @@ class Division extends Model
     /**
      * Get the districts for the division.
      */
-    public function districts(): HasMany
+    public function districts()
     {
         return $this->hasMany(District::class);
     }
