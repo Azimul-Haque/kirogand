@@ -15,6 +15,7 @@ use App\Division;
 use App\District;
 use App\Upazila;
 use App\Union;
+use App\UserAuthority;
 
 use Carbon\Carbon;
 use DB;
