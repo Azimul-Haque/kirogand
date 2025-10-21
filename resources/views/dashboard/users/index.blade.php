@@ -655,6 +655,8 @@
                   $('#' + context + '_authority_level').val('');
                   $('#' + context + '_authority_id').val('');
               }
+
+              console.log(targetId);
               
               // 2b. Load the next level of locations
               if (targetId) {
