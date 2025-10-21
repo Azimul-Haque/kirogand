@@ -644,7 +644,7 @@
               const modelName = $(this).data('model');
               const level = $(this).data('level');
               const context = $(this).attr('id').startsWith('add') ? 'add' : 'edit';
-              
+              console.log(parentId);
               // 2a. Update the hidden authority_level/authority_id fields
               if (parentId) {
                   $('#' + context + '_authority_level').val(level);
