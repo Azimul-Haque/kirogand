@@ -76,7 +76,7 @@
                       @endif
 
                       @php
-                        $userAuthority = auth()->user()->authorities->first();
+                        $userAuthority = $user->authorities->first();
 
                         if ($userAuthority) {
                         // 2. Call the method to get the full hierarchy array
