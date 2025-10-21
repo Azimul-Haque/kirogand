@@ -66,7 +66,7 @@
                       {{-- SMS Modal Code --}}
                       {{-- SMS Modal Code --}}
                       <!-- Modal -->
-                      <div class="modal fade" id="smsModal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="smsModalLabel" aria-hidden="true" data-backdrop="static">
+                      {{-- <div class="modal fade" id="smsModal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="smsModalLabel" aria-hidden="true" data-backdrop="static">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
                             <div class="modal-header bg-info">
@@ -87,12 +87,12 @@
                             </form>
                           </div>
                         </div>
-                      </div>
+                      </div> --}}
                       {{-- SMS Modal Code --}}
                       {{-- SMS Modal Code --}}
-                      <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#notifModal{{ $user->id }}">
+                      {{-- <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#notifModal{{ $user->id }}">
                         <i class="fas fa-bell"></i>
-                      </button>
+                      </button> --}}
                       {{-- Notif Modal Code --}}
                       {{-- Notif Modal Code --}}
                       <!-- Modal -->
