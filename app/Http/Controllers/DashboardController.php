@@ -18,6 +18,7 @@ use App\Union;
 use App\UserAuthority;
 
 use Carbon\Carbon;
+use Illuminate\Validation\Rule;
 use DB;
 use Hash;
 use Auth;
