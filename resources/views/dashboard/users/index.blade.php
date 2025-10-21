@@ -669,8 +669,8 @@
                   }
 
                   if (parentId && modelName) {
-                    console.log(grandTargetId);
-                      loadLocations('#' + $(this).attr('id'), parentId, '#' + targetId, modelName);
+                    console.log(parentId);
+                    loadLocations('#' + $(this).attr('id'), parentId, '#' + targetId, modelName);
                   }
               }
           });
