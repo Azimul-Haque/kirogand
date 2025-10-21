@@ -369,7 +369,7 @@ class DashboardController extends Controller
         $level = $request->input('authority_level');
         $id = $request->input('authority_id');
 
-        dd($request->all());
+        dd($level);
 
         // Check if an authority assignment is requested
         if ($level && $id) {
