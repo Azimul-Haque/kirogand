@@ -945,7 +945,7 @@ class DashboardController extends Controller
 
     public function getDivDUUniData()
     {
-        return view('components');
+        $divisions = Division::all();
     }
 
     // clear configs, routes and serve
