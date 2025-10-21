@@ -126,7 +126,8 @@ class DashboardController extends Controller
         $users = User::where('name', '!=', null)->orderBy('id', 'asc')->paginate(10);
         return view('dashboard.users.index')
                     ->withUsers($users)
-                    ->withUserscount($userscount);
+                    ->withUserscount($userscount)
+                    ->withDivisions($divisions);
     }
 
     public function getUsersSort()
