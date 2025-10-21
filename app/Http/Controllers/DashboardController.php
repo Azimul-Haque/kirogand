@@ -372,7 +372,7 @@ class DashboardController extends Controller
         // Check if an authority assignment is requested
         if ($level && $id) {
             // Determine the fully qualified model class name
-            $modelClass = 'App\\Models\\' . $level;
+            $modelClass = 'App\\' . $level;
             
             if (class_exists($modelClass)) {
                 // Upsert the authority (create or update the single assignment)
