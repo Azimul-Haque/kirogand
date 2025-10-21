@@ -367,7 +367,7 @@
                              class="form-control"
                              placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি)">
                       <div class="input-group-append">
-                          <div class="input-group-text"><span class="fas fa-phone"></span></div>
+                          <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
                       </div>
                   </div>
 
