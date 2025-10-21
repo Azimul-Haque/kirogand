@@ -144,10 +144,8 @@
 <script src="{{ asset('js/pace.min.js') }}"></script>
 <script>
  Pace.restart();
- $(document).ready(function(){
-      $('[data-toggle="tooltip"]').tooltip();
-      $("[rel='tooltip']").tooltip();
-  });
+ $('[data-toggle="tooltip"]').tooltip();
+ $("[rel='tooltip']").tooltip();
 </script>
 
 @yield('third_party_scripts')
