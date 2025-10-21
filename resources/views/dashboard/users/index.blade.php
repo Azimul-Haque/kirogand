@@ -63,10 +63,12 @@
                       @if ($user->authorities->isNotEmpty())
                           @php
                               $auth = $user->authorities->first();
-                              // This line extracts the model name (Union, Upazila, etc.) from the full class path (App\Union)
-                              $level = (new \ReflectionClass($auth->authority_type))->getShortName();
                           @endphp
-                          {{ $auth->authority->bn_name ?? $auth->authority->name }} ({{ $level }})
+                          {{-- Display the full dynamic hierarchy string --}}
+                          {!! $auth->getFullHierarchy() !!} 
+                          <span class="badge badge-secondary">
+                              ({{ (new \ReflectionClass($auth->authority_type))->getShortName() }})
+                          </span>
                       @else
                           না
                       @endif
