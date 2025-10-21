@@ -59,6 +59,18 @@
                       <small><span>যোগদান: {{ date('d F, Y h:i A', strtotime($user->created_at)) }}</span></small>,
                       <small><span>প্যাকেজ: <b>{{ date('d F, Y', strtotime($user->package_expiry_date)) }}</b></span></small>
                 		</td>
+                    <td>
+                      @if ($user->authorities->isNotEmpty())
+                          @php
+                              $auth = $user->authorities->first();
+                              // This line extracts the model name (Union, Upazila, etc.) from the full class path (App\Union)
+                              $level = (new \ReflectionClass($auth->authority_type))->getShortName();
+                          @endphp
+                          {{ $auth->authority->bn_name ?? $auth->authority->name }} ({{ $level }})
+                      @else
+                          না
+                      @endif
+                    </td>
                 		<td align="right" width="40%">
                       {{-- <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#smsModal{{ $user->id }}">
                         <i class="fas fa-envelope"></i>
