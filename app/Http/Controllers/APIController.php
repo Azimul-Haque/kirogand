@@ -55,7 +55,7 @@ class APIController extends Controller
             $unions = Union::where('upazila_id', $upazilaId)->pluck('name', 'id');
             return $unions;
         });
-        $unions = Union::where('upazila_id', $upazilaId)->pluck('name', 'id');
+        // $unions = Union::where('upazila_id', $upazilaId)->pluck('name', 'id');
         return response()->json($unions);
     }
 
