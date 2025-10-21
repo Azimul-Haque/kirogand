@@ -17,7 +17,10 @@ use App\Temppayment;
 use App\Payment;
 use App\Blog;
 
-use App\Exam;
+use App\Division;
+use App\District;
+use App\Upazila;
+use App\Union;
 
 use Carbon\Carbon;
 use DB;
