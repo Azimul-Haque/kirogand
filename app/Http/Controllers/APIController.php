@@ -41,9 +41,9 @@ class APIController extends Controller
 
     public function getUpazilas(Request $request, $districtId)
     {
-        $districts = Cache::remember('districtsapi', 30 * 24 * 60 * 60, function () use ($divisionId) {
-            $districts = District::where('division_id', $divisionId)->pluck('name', 'id');
-            return $districts;
+        $upazilas = Cache::remember('districtsapi', 30 * 24 * 60 * 60, function () use ($divisionId) {
+            $upazilas = Upazila::where('district_id', $districtId)->pluck('name', 'id');
+            return $upazilas;
         });
         $upazilas = Upazila::where('district_id', $districtId)->pluck('name', 'id');
         return response()->json($upazilas);
