@@ -600,13 +600,13 @@
 
               if (!parentId) {
                   // Clear and disable downstream if parentId is empty
-                  $targetSelect.html('<option value="">নির্বাচন করুন</option>').prop('disabled', true);
+                  $targetSelect.html('<option value="" selected disabled>নির্বাচন করুন</option>').prop('disabled', true);
                   // Recursively clear further downstream if needed (e.g., clearing Upazila if District changes to empty)
                   if (modelName === 'District') {
-                      $('#' + $(selector).data('target')).html('<option value="">নির্বাচন করুন</option>').prop('disabled', true);
-                      $('#' + $('#' + $(selector).data('target')).data('target')).html('<option value="">নির্বাচন করুন</option>').prop('disabled', true);
+                      $('#' + $(selector).data('target')).html('<option value="" selected disabled>নির্বাচন করুন</option>').prop('disabled', true);
+                      $('#' + $('#' + $(selector).data('target')).data('target')).html('<option value="" selected disabled>নির্বাচন করুন</option>').prop('disabled', true);
                   } else if (modelName === 'Upazila') {
-                      $('#' + $(selector).data('target')).html('<option value="">নির্বাচন করুন</option>').prop('disabled', true);
+                      $('#' + $(selector).data('target')).html('<option value="" selected disabled>নির্বাচন করুন</option>').prop('disabled', true);
                   }
                   return;
               }
@@ -621,7 +621,7 @@
                   method: 'GET',
                   success: function(data) {
                       $targetSelect.empty();
-                      $targetSelect.append('<option value="">নির্বাচন করুন</option>');
+                      $targetSelect.append('<option value="" selected disabled>নির্বাচন করুন</option>');
                       $.each(data, function(id, name) {
                           $targetSelect.append(`<option value="${id}">${name}</option>`);
                       });
@@ -656,12 +656,12 @@
               // 2b. Load the next level of locations
               if (targetId) {
                   // Clear the authority selection for downstream models when a parent changes
-                  $('#' + targetId).prop('disabled', true).html('<option value="">নির্বাচন করুন</option>');
+                  $('#' + targetId).prop('disabled', true).html('<option value="" selected disabled>নির্বাচন করুন</option>');
                   
                   // Clear any selections two levels down (for District -> Union clearing)
                   const grandTargetId = $('#' + targetId).data('target');
                   if (grandTargetId) {
-                      $('#' + grandTargetId).prop('disabled', true).html('<option value="">নির্বাচন করুন</option>');
+                      $('#' + grandTargetId).prop('disabled', true).html('<option value="" selected disabled>নির্বাচন করুন</option>');
                   }
 
                   if (parentId && modelName) {
