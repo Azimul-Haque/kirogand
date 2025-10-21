@@ -316,14 +316,14 @@
 
                                   <!-- Upazila Dropdown (Level 3 - Can be Municipality Authority) -->
                                   <div class="input-group mb-3">
-                                      <select id="edit_upazila_id{{ $user->id }}" class="form-control authority-select" data-level="Upazila" data-target="edit_union_id" data-model="Union" disabled>
+                                      <select id="edit_upazila_id{{ $user->id }}" class="form-control authority-select" data-level="Upazila" data-target="edit_union_id{{ $user->id }}" data-model="Union" disabled>
                                           <option value="" selected disabled>উপজেলা/পৌরসভা নির্বাচন করুন</option>
                                       </select>
                                   </div>
 
                                   <!-- Union Dropdown (Level 4) -->
                                   <div class="input-group mb-3">
-                                      <select id="edit_union_id" class="form-control authority-select" data-level="Union" data-target="" data-model="" disabled>
+                                      <select id="edit_union_id{{ $user->id }}" class="form-control authority-select" data-level="Union" data-target="" data-model="" disabled>
                                           <option value="" selected disabled>ইউনিয়ন নির্বাচন করুন</option>
                                       </select>
                                   </div>
