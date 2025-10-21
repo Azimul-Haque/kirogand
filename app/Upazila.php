@@ -20,7 +20,7 @@ class Upazila extends Model
     /**
      * Get the district that owns the upazila.
      */
-    public function district(): BelongsTo
+    public function district()
     {
         return $this->belongsTo(District::class);
     }

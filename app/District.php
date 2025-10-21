@@ -30,7 +30,7 @@ class District extends Model
     /**
      * Get the upazilas for the district.
      */
-    public function upazilas(): HasMany
+    public function upazilas()
     {
         return $this->hasMany(Upazila::class);
     }
