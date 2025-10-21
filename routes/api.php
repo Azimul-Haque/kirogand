@@ -32,7 +32,7 @@ Route::post('/notification/single', 'APIController@sendSingleNotification')->nam
 Route::get('/notification/test', 'APIController@testNotification')->name('api.testnotification');
 
 //
-Route::prefix('api/location')->group(function () {
+Route::prefix('/location')->group(function () {
     Route::get('districts/{divisionId}', [UserController::class, 'api.getDistricts']);
     Route::get('upazilas/{districtId}', [UserController::class, 'api.getUpazilas']);
     Route::get('unions/{upazilaId}', [UserController::class, 'api.getUnions']);
