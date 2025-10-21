@@ -60,7 +60,7 @@
                       <small><span>প্যাকেজ: <b>{{ date('d F, Y', strtotime($user->package_expiry_date)) }}</b></span></small>
                 		</td>
                     <td>
-                      {{ $user->authorities->first() }}
+                      {{ $user->authorities->first()->authority }}
                       @if ($user->authorities->isNotEmpty())
                           @php
                               $auth = $user->authorities->first();
