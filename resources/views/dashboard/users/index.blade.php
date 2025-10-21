@@ -690,8 +690,8 @@
               $('#edit_user_role').val(userRole);
               
               // Reset authority fields
-              $('#edit_authority_level').val('');
-              $('#edit_authority_id').val('');
+              $('#edit_authority_level' + userId).val('');
+              $('#edit_authority_id' + userId).val('');
               
               // Reset all location dropdowns
               $('#edit_division_id'+userId).val('');
