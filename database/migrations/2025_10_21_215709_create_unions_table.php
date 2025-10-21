@@ -15,7 +15,16 @@ class CreateUnionsTable extends Migration
     {
         Schema::create('unions', function (Blueprint $table) {
             $table->id();
+            // Foreign key to Upazila table
+            $table->foreignId('upazila_id')->constrained()->onDelete('cascade');
+
+            $table->string('name');
+            $table->string('bn_name');
+            $table->string('url')->nullable();
             $table->timestamps();
+
+            // Ensure union names are unique within an upazila
+            $table->unique(['upazila_id', 'name']);
         });
     }
 
