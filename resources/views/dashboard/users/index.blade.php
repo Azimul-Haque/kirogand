@@ -676,6 +676,7 @@
 
           // --- 3. Populate Edit Modal on Button Click ---
           $('.edit-user-btn').on('click', function() {
+            console.log('clicked');
               const userId = $(this).data('user-id');
               const userName = $(this).data('user-name');
               const userMobile = $(this).data('user-mobile');
