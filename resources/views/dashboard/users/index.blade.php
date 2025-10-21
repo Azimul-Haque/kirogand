@@ -648,9 +648,10 @@
               // 2a. Update the hidden authority_level/authority_id fields
 
               if (parentId) {
+                
+                  console.log($('#' + context + '_authority_level').val());
                   $('#' + context + '_authority_level').val(level);
                   $('#' + context + '_authority_id').val(parentId);
-                  console.log($('#' + context + '_authority_level').val());
               } else {
                   // If the selected value is empty, reset the current authority level/id
                   $('#' + context + '_authority_level').val('');
