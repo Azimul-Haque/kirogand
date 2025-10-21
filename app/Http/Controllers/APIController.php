@@ -32,7 +32,7 @@ class APIController extends Controller
     public function getDistricts(Request $request, $divisionId)
     {
         // $districts = District::where('division_id', $divisionId)->pluck('name', 'id');
-        $districts = Cache::remember('districtsapi', 30 * 24 * 60 * 60, function () use ($divisionId) {
+        $districts = Cache::remember('districtsapi' . $divisionId, 30 * 24 * 60 * 60, function () use ($divisionId) {
             $districts = District::where('division_id', $divisionId)->pluck('name', 'id');
             return $districts;
         });
