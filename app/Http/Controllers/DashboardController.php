@@ -11,7 +11,6 @@ use App\Message;
 use App\Notification;
 use App\Blog;
 use App\Blogcategory;
-
 use App\Division;
 use App\District;
 use App\Upazila;
