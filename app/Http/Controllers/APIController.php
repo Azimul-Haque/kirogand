@@ -33,7 +33,7 @@ class APIController extends Controller
     {
         $districts = District::where('division_id', $divisionId)->pluck('name', 'id');
         $districts = Cache::remember('districtsapi', 10 * 24 * 60 * 60, function () use ($divisionId) {
-            $districts = District::where('course_id', $id)
+            $districts = District::where('division_id', $divisionId)
                                  ->orderBy('exam_id', 'desc')
                                  // ->join('exams', 'exams.id', '=', 'districts.exam_id')
                                  // ->orderBy('exams.available_from', 'asc')
