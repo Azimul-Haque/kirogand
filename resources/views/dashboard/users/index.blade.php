@@ -96,7 +96,7 @@
                       {{-- Notif Modal Code --}}
                       {{-- Notif Modal Code --}}
                       <!-- Modal -->
-                      <div class="modal fade" id="notifModal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="notifModalLabel" aria-hidden="true" data-backdrop="static">
+                      {{-- <div class="modal fade" id="notifModal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="notifModalLabel" aria-hidden="true" data-backdrop="static">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
                             <div class="modal-header bg-warning">
@@ -134,7 +134,7 @@
                             </form>
                           </div>
                         </div>
-                      </div>
+                      </div> --}}
                       {{-- Notif Modal Code --}}
                       {{-- Notif Modal Code --}}
                 			<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editUserModal{{ $user->id }}">
