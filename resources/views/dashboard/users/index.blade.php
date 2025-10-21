@@ -73,7 +73,7 @@
                           না
                       @endif
                     </td>
-                		<td align="right" width="20%">
+                		<td align="right" width="15%">
                       {{-- <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#smsModal{{ $user->id }}">
                         <i class="fas fa-envelope"></i>
                       </button> --}}
