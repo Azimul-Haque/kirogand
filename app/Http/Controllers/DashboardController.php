@@ -59,10 +59,6 @@ class DashboardController extends Controller
         // $totalsites = Site::count();
         $totalusers = User::count();
 
-        $totalexamsattendedtoday = Meritlist::whereDate('created_at', Carbon::today())->count();
-
-        
-
         $totalpayment = Payment::sum('amount');
         // $totalbalance = Balance::sum('amount');
         // $totalexpense = Expense::sum('amount');
@@ -103,7 +99,6 @@ class DashboardController extends Controller
         return view('dashboard.index')->withTotalusers($totalusers)
                                       ->withTotalpayment($totalpayment)
                                       ->withTotalmonthlypayment($totalmonthlypayment)
-                                      ->withTotalexamsattendedtoday($totalexamsattendedtoday)
                                       ->withDaysforchartc($daysforchartc)
                                       ->withTotalusersforchartc($totalusersforchartc)
                                       ->withTotaluserscumulitiveforchartc($totaluserscumulitiveforchartc);
