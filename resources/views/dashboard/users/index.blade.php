@@ -92,7 +92,7 @@
                         $districtModel = $hierarchy['District'] ?? null;
 
                         // To get the Upazilla Model:
-                        $districtModel = $hierarchy['District'] ?? null;
+                        $upazilaModel = $hierarchy['District'] ?? null;
                         
                         // To get the Assigned Authority Model (Union, Upazila, etc.):
                         $assignedModel = $userAuthority->authority; 
