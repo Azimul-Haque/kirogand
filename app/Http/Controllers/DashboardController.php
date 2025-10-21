@@ -12,6 +12,9 @@ use App\Notification;
 use App\Blog;
 use App\Blogcategory;
 
+use App\Division;
+use App\Division;
+
 use Carbon\Carbon;
 use DB;
 use Hash;
