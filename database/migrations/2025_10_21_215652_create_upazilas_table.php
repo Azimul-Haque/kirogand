@@ -15,7 +15,16 @@ class CreateUpazilasTable extends Migration
     {
         Schema::create('upazilas', function (Blueprint $table) {
             $table->id();
+            // Foreign key to District table
+            $table->foreignId('district_id')->constrained()->onDelete('cascade');
+
+            $table->string('name');
+            $table->string('bn_name');
+            $table->string('url')->nullable();
             $table->timestamps();
+
+            // Ensure upazila names are unique within a district
+            $table->unique(['district_id', 'name']);
         });
     }
 
