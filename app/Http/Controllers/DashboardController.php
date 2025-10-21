@@ -151,26 +151,26 @@ class DashboardController extends Controller
                     ->withUserscount($userscount);
     }
 
-    public function getExpiredUsers()
-    {
-        $paidusersids = DB::table('payments')->select('user_id')->groupBy('user_id')->get()->pluck('user_id')->toArray();
-        // dd($paidusersids);
-        $userscount = User::where('package_expiry_date', '<', Carbon::now())
-                          ->whereIn('id', $paidusersids)
-                          ->count();
-        $users = User::where('package_expiry_date', '<', Carbon::now())
-                     ->whereIn('id', $paidusersids)
-                     ->orderBy('package_expiry_date', 'asc')
-                     ->paginate(10);
-                     // ->get();
+    // public function getExpiredUsers()
+    // {
+    //     $paidusersids = DB::table('payments')->select('user_id')->groupBy('user_id')->get()->pluck('user_id')->toArray();
+    //     // dd($paidusersids);
+    //     $userscount = User::where('package_expiry_date', '<', Carbon::now())
+    //                       ->whereIn('id', $paidusersids)
+    //                       ->count();
+    //     $users = User::where('package_expiry_date', '<', Carbon::now())
+    //                  ->whereIn('id', $paidusersids)
+    //                  ->orderBy('package_expiry_date', 'asc')
+    //                  ->paginate(10);
+    //                  // ->get();
         
-        // dd($users);
-        // $usermobiles = $users->pluck('mobile')->toArray();
-        // dd(implode(', ', $usermobiles));
-        return view('dashboard.users.expiredusers')
-                    ->withUsers($users)
-                    ->withUserscount($userscount);
-    }
+    //     // dd($users);
+    //     // $usermobiles = $users->pluck('mobile')->toArray();
+    //     // dd(implode(', ', $usermobiles));
+    //     return view('dashboard.users.expiredusers')
+    //                 ->withUsers($users)
+    //                 ->withUserscount($userscount);
+    // }
 
     public function sendExpiredSMS(Request $request)
     {
