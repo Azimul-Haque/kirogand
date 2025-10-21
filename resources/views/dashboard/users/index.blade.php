@@ -108,7 +108,7 @@
 
                         if ($upazilaModel) {
                             // You can now access any column (ID, name, bn_name)
-                            echo "<br/>Upazila Name (BN): " . $upazilaModel->bn_name;
+                            echo "<br/>উপজেলা: " . $upazilaModel->bn_name;
                             if($level == 'Union') {
                               echo "<br/>Union Name (BN): " . $assignedModel->bn_name;
                             }
