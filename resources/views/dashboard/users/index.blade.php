@@ -62,7 +62,7 @@
                     <td>
 
                       @if ($user->authorities->isNotEmpty())
-                          {{ print_r($user->authorities->first()->getAncestorsByLevel()) }}
+                          {{-- {{ print_r($user->authorities->first()->getAncestorsByLevel()) }} --}}
                           @php
                               $auth = $user->authorities->first();
                           @endphp
