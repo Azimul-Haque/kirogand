@@ -31,19 +31,27 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
         </ul>
+        
+        {{-- DYNAMIC AUTHORITY HIERARCHY DISPLAY --}}
         @if(Auth::user()->role == 'manager')
             @if (Auth::user()->authorities->isNotEmpty())
-                {{-- {{ print_r(Auth::user()->authorities->first()->getAncestorsByLevel()) }} --}}
                 @php
                     $auth = Auth::user()->authorities->first();
                 @endphp
-                {{-- Display the full dynamic hierarchy string --}}
-                <span style="color: #FFFFFF !important;">{!! $auth->getFullHierarchy() !!} </span>
-                <span class="badge badge-secondary">
-                    ({{ (new \ReflectionClass($auth->authority_type))->getShortName() }})
+                {{--
+                    The span below uses d-none (display: none) for xs screens 
+                    and d-sm-inline (display: inline) from small screens up.
+                --}}
+                <span class="d-none d-sm-inline">
+                    {{-- Display the full dynamic hierarchy string --}}
+                    <span style="color: #FFFFFF !important; font-weight: bold;">{!! $auth->getFullHierarchy() !!} </span>
+                    <span class="badge badge-secondary">
+                        ({{ (new \ReflectionClass($auth->authority_type))->getShortName() }})
+                    </span>
                 </span>
             @else
-                /
+                {{-- This "না" (No) should also be hidden on small screens if it appears in the center --}}
+                <span class="d-none d-sm-inline">না</span>
             @endif
         @endif
 
