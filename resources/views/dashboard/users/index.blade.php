@@ -294,8 +294,8 @@
                                   <h6 class="mb-3">কর্তৃপক্ষ (Authority) নির্ধারণ (ঐচ্ছিক)</h6>
                                   
                                   <!-- DYNAMIC AUTHORITY FIELDS FOR EDIT -->
-                                  <input type="hidden" name="authority_level" id="edit_authority_level">
-                                  <input type="hidden" name="authority_id" id="edit_authority_id">
+                                  <input type="hidden" name="authority_level" id="edit_authority_level{{ $user->id }}">
+                                  <input type="hidden" name="authority_id" id="edit_authority_id{{ $user->id }}">
 
                                   <!-- Division Dropdown (Level 1) -->
                                   <div class="input-group mb-3">
