@@ -83,7 +83,7 @@ class UserAuthority extends Model
         // Traverse upwards until the Division is reached
         while ($current) {
             // Get the short model name (e.g., 'Union' from 'App\Union')
-            $level = (new ReflectionClass($current))->getShortName();
+            $level = (new \ReflectionClass($current))->getShortName();
 
             // Store the current object with its level as the key
             $hierarchy[$level] = $current;
