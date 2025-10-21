@@ -309,7 +309,7 @@
                                   <!-- District Dropdown (Level 2) -->
                                   <div class="input-group mb-3">
                                       <select id="edit_district_id" class="form-control authority-select" data-level="District" data-target="edit_upazila_id" data-model="Upazila" disabled>
-                                          <option value="">জেলা নির্বাচন করুন</option>
+                                          <option value="" selected disabled>জেলা নির্বাচন করুন</option>
                                       </select>
                                   </div>
 
@@ -454,7 +454,7 @@
                   <!-- District Dropdown (Level 2) -->
                   <div class="input-group mb-3">
                       <select id="add_district_id" class="form-control authority-select" data-level="District" data-target="add_upazila_id" data-model="Upazila" disabled>
-                          <option value="">জেলা নির্বাচন করুন</option>
+                          <option value="" selected disabled>জেলা নির্বাচন করুন</option>
                       </select>
                   </div>
 
@@ -692,7 +692,7 @@
               
               // Reset all location dropdowns
               $('#edit_division_id').val('');
-              $('#edit_district_id').prop('disabled', true).html('<option value="">জেলা নির্বাচন করুন</option>');
+              $('#edit_district_id').prop('disabled', true).html('<option value="" selected disabled>জেলা নির্বাচন করুন</option>');
               $('#edit_upazila_id').prop('disabled', true).html('<option value="">উপজেলা/পৌরসভা নির্বাচন করুন</option>');
               $('#edit_union_id').prop('disabled', true).html('<option value="">ইউনিয়ন নির্বাচন করুন</option>');
 
