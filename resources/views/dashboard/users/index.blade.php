@@ -259,7 +259,7 @@
                                              name="designation"
                                              value="{{ $user->designation }}"
                                              class="form-control"
-                                             placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি)">
+                                             placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)">
                                       <div class="input-group-append">
                                           <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
                                       </div>
@@ -417,7 +417,7 @@
                              name="designation"
                              value="{{ old('designation') }}"
                              class="form-control"
-                             placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি)">
+                             placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে) ">
                       <div class="input-group-append">
                           <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
                       </div>
