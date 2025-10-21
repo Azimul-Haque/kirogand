@@ -364,7 +364,6 @@
                       <input type="text"
                              name="deignation"
                              value="{{ old('deignation') }}"
-                             autocomplete="off"
                              class="form-control"
                              placeholder="মোবাইল নম্বর (১১ ডিজিট)">
                       <div class="input-group-append">
