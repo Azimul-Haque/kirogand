@@ -943,10 +943,7 @@ class DashboardController extends Controller
         return redirect()->route('dashboard.blogs');
     }
 
-
-    
-
-    public function getComponents()
+    public function getDivDUUniData()
     {
         return view('components');
     }
