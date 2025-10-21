@@ -8,19 +8,13 @@ use App\Repositories\userRepository;
 
 use App\User;
 use App\Userotp;
-use App\Examcategory;
-use App\Question;
-use App\Course;
-use App\Courseexam;
-use App\Exam;
-use App\Examquestion;
-use App\Topic;
 use App\Package;
 use App\Temppayment;
 use App\Message;
-use App\Material;
-use App\Meritlist;
-use App\Reportedquestion;
+use App\Division;
+use App\District;
+use App\Upazila;
+use App\unions;
 
 use Hash;
 use Carbon\Carbon;
