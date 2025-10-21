@@ -946,7 +946,7 @@ class DashboardController extends Controller
     {
         $divisions = Division::get();
 
-        dd($divisions[6]->districts[7]->upazilas[3]);
+        dd($divisions[6]->districts[7]->upazilas[3]->unions);
     }
 
     // clear configs, routes and serve
