@@ -694,9 +694,9 @@
               
               // Reset all location dropdowns
               $('#edit_division_id').val('');
-              $('#edit_district_id').prop('disabled', true).html('<option value="" >জেলা নির্বাচন করুন</option>');
-              $('#edit_upazila_id').prop('disabled', true).html('<option value="" >উপজেলা/পৌরসভা নির্বাচন করুন</option>');
-              $('#edit_union_id').prop('disabled', true).html('<option value="" >ইউনিয়ন নির্বাচন করুন</option>');
+              $('#edit_district_id').prop('disabled', true).html('<option value="" selected disabled>জেলা নির্বাচন করুন</option>');
+              $('#edit_upazila_id').prop('disabled', true).html('<option value="" selected disabled>উপজেলা/পৌরসভা নির্বাচন করুন</option>');
+              $('#edit_union_id').prop('disabled', true).html('<option value="" selected disabled>ইউনিয়ন নির্বাচন করুন</option>');
 
               if (authTypeFull && authId) {
                   // Extract the model name from the full class path
