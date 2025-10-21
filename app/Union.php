@@ -20,7 +20,7 @@ class Union extends Model
     /**
      * Get the upazila that owns the union.
      */
-    public function upazila(): BelongsTo
+    public function upazila()
     {
         return $this->belongsTo(Upazila::class);
     }

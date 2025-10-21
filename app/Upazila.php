@@ -28,7 +28,7 @@ class Upazila extends Model
     /**
      * Get the unions for the upazila.
      */
-    public function unions(): HasMany
+    public function unions()
     {
         return $this->hasMany(Union::class);
     }
