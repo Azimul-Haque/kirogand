@@ -74,6 +74,35 @@
                       @else
                           না
                       @endif
+
+                      @php
+                        $userAuthority = auth()->user()->authorities->first();
+
+                        if ($userAuthority) {
+                        // 2. Call the method to get the full hierarchy array
+                        $hierarchy = $userAuthority->getAncestorsByLevel();
+
+                        // 3. Access the specific level you need (e.g., 'District')
+                        // Note: The keys are the English model names: 'Division', 'District', 'Upazila', 'Union'
+                        
+                        // To get the District Model:
+                        $districtModel = $hierarchy['District'] ?? null;
+                        
+                        // To get the Division Model:
+                        $divisionModel = $hierarchy['Division'] ?? null;
+                        
+                        // To get the Assigned Authority Model (Union, Upazila, etc.):
+                        $assignedModel = $userAuthority->authority; 
+                        
+                        // --- Displaying Data ---
+
+                        if ($districtModel) {
+                            // You can now access any column (ID, name, bn_name)
+                            echo "District Name (BN): " . $districtModel->bn_name;
+                            echo "District ID: " . $districtModel->id;
+                        }
+                    }
+                      @endphp
                     </td>
                 		<td align="right" width="15%">
                       {{-- <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#smsModal{{ $user->id }}">
