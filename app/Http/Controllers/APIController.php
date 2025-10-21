@@ -14,7 +14,7 @@ use App\Message;
 use App\Division;
 use App\District;
 use App\Upazila;
-use App\unions;
+use App\Union;
 
 use Hash;
 use Carbon\Carbon;
