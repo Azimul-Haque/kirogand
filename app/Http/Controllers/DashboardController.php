@@ -945,7 +945,7 @@ class DashboardController extends Controller
 
     public function getDivDUUniData()
     {
-        $divisions = Division::all();
+        $divisions = Division::get();
 
         dd($divisions);
     }
