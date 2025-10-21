@@ -22,7 +22,7 @@ class User extends Authenticatable
         return $this->hasMany('App\Blog');
     }
 
-    public function authorities(): HasMany
+    public function authorities()
     {
         return $this->hasMany(UserAuthority::class);
     }
