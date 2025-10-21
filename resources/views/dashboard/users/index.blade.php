@@ -664,6 +664,7 @@
                   
                   // Clear any selections two levels down (for District -> Union clearing)
                   const grandTargetId = $('#' + targetId).data('target');
+                  console.log(grandTargetId);
                   if (grandTargetId) {
                       $('#' + grandTargetId).prop('disabled', true).html('<option value="" selected disabled>নির্বাচন করুন</option>');
                   }
