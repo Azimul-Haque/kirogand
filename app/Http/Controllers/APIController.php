@@ -41,7 +41,7 @@ class APIController extends Controller
 
     public function getUpazilas(Request $request, $districtId)
     {
-        $upazilas = Cache::remember('upazilassapi', 30 * 24 * 60 * 60, function () use ($districtId) {
+        $upazilas = Cache::remember('upazilassapi' . $districtId, 30 * 24 * 60 * 60, function () use ($districtId) {
             $upazilas = Upazila::where('district_id', $districtId)->pluck('name', 'id');
             return $upazilas;
         });
@@ -51,6 +51,10 @@ class APIController extends Controller
 
     public function getUnions(Request $request, $upazilaId)
     {
+        $upazilas = Cache::remember('upazilassapi' . $districtId, 30 * 24 * 60 * 60, function () use ($districtId) {
+            $upazilas = Upazila::where('district_id', $districtId)->pluck('name', 'id');
+            return $upazilas;
+        });
         $unions = Union::where('upazila_id', $upazilaId)->pluck('name', 'id');
         return response()->json($unions);
     }
