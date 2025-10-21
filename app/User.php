@@ -22,6 +22,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Blog');
     }
 
+    public function authorities(): HasMany
+    {
+        return $this->hasMany(UserAuthority::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *
