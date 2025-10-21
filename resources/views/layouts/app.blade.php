@@ -32,10 +32,10 @@
             </li>
         </ul>
         @if(Auth::user()->role == 'manager')
-            @if ($user->authorities->isNotEmpty())
-                {{-- {{ print_r($user->authorities->first()->getAncestorsByLevel()) }} --}}
+            @if (Auth::user()->authorities->isNotEmpty())
+                {{-- {{ print_r(Auth::user()->authorities->first()->getAncestorsByLevel()) }} --}}
                 @php
-                    $auth = $user->authorities->first();
+                    $auth = Auth::user()->authorities->first();
                 @endphp
                 {{-- Display the full dynamic hierarchy string --}}
                 {!! $auth->getFullHierarchy() !!} 
