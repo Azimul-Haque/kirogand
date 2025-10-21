@@ -677,7 +677,9 @@
           // --- 3. Populate Edit Modal on Button Click ---
           $('.edit-user-btn').on('click', function() {
 
-            // কাজ করতে হবে...
+            // কাজ করতে হবে Populate করতে চাইলে
+            // কাজ করতে হবে Populate করতে চাইলে
+            // কাজ করতে হবে Populate করতে চাইলে
 
               const userId = $(this).data('user-id');
               const userName = $(this).data('user-name');
