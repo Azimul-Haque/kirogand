@@ -15,6 +15,9 @@ class CreateDivisionsTable extends Migration
     {
         Schema::create('divisions', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique(); // English name
+            $table->string('bn_name')->unique(); // Bengali name
+            $table->string('url')->nullable();
             $table->timestamps();
         });
     }
