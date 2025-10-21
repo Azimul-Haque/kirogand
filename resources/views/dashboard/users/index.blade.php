@@ -323,7 +323,7 @@
                                   <!-- Union Dropdown (Level 4) -->
                                   <div class="input-group mb-3">
                                       <select id="edit_union_id" class="form-control authority-select" data-level="Union" data-target="" data-model="" disabled>
-                                          <option value="">ইউনিয়ন নির্বাচন করুন</option>
+                                          <option value="" selected disabled>ইউনিয়ন নির্বাচন করুন</option>
                                       </select>
                                   </div>
                                   <!-- END DYNAMIC AUTHORITY FIELDS -->
@@ -468,7 +468,7 @@
                   <!-- Union Dropdown (Level 4) -->
                   <div class="input-group mb-3">
                       <select id="add_union_id" class="form-control authority-select" data-level="Union" data-target="" data-model="" disabled>
-                          <option value="">ইউনিয়ন নির্বাচন করুন</option>
+                          <option value="" selected disabled>ইউনিয়ন নির্বাচন করুন</option>
                       </select>
                   </div>
                   <!-- END DYNAMIC AUTHORITY FIELDS -->
