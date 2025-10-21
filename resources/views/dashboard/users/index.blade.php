@@ -646,7 +646,7 @@
               const context = $(this).attr('id').startsWith('add') ? 'add' : 'edit';
               
               // 2a. Update the hidden authority_level/authority_id fields
-              
+              console.log(parentId);
               if (parentId) {
                   $('#' + context + '_authority_level').val(level);
                   $('#' + context + '_authority_id').val(parentId);
@@ -655,8 +655,6 @@
                   $('#' + context + '_authority_level').val('');
                   $('#' + context + '_authority_id').val('');
               }
-
-              console.log(targetId);
               
               // 2b. Load the next level of locations
               if (targetId) {
