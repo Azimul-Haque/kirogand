@@ -385,8 +385,6 @@ class DashboardController extends Controller
                         'role' => $request->designation, // Use user role as authority role for simplicity
                     ]
                 );
-            } else {
-                dd('Problem');
             }
         } else {
             // If no authority is selected, delete any existing authority assignments
