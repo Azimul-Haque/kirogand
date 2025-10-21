@@ -31,6 +31,13 @@ Route::post('/updateuser', 'APIController@updateUser')->name('api.updateuser');
 Route::post('/notification/single', 'APIController@sendSingleNotification')->name('api.sendsinglenotification');
 Route::get('/notification/test', 'APIController@testNotification')->name('api.testnotification');
 
+//
+Route::prefix('api/location')->group(function () {
+    Route::get('districts/{divisionId}', [UserController::class, 'getDistricts']);
+    Route::get('upazilas/{districtId}', [UserController::class, 'getUpazilas']);
+    Route::get('unions/{upazilaId}', [UserController::class, 'getUnions']);
+});
+
 // Route::get('/testcache', 'APIController@testCache')->name('api.testcache');
 // Route::get('/getcourses/{softtoken}/{coursetype}', 'APIController@getCourses')->name('api.getcourses');
 // Route::get('/getcourses/exams/{softtoken}/{id}', 'APIController@getCourseExams')->name('api.getcourses.exams');
