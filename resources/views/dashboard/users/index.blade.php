@@ -106,7 +106,7 @@
                             // echo "<br/>District ID: " . $districtModel->id;
                         }
 
-                        if ($upazilaModel == $assignedModel) {
+                        if ($upazilaModel) {
                             // You can now access any column (ID, name, bn_name)
                             echo "<br/>Upazila Name (BN): " . $upazilaModel->bn_name;
                         }
