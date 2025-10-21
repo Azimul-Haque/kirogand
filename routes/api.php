@@ -33,9 +33,9 @@ Route::get('/notification/test', 'APIController@testNotification')->name('api.te
 
 //
 Route::prefix('/location')->group(function () {
-    Route::get('districts/{divisionId}', [APIController::class, 'api.getDistricts']);
-    Route::get('upazilas/{districtId}', [APIController::class, 'api.getUpazilas']);
-    Route::get('unions/{upazilaId}', [APIController::class, 'api.getUnions']);
+    Route::get('districts/{divisionId}', 'APIController@api.getDistricts');
+    Route::get('upazilas/{districtId}', 'APIController@api.getUpazilas');
+    Route::get('unions/{upazilaId}', 'APIController@api.getUnions');
 });
 
 // Route::get('/testcache', 'APIController@testCache')->name('api.testcache');
