@@ -440,8 +440,8 @@
                   <h6 class="mb-3">কর্তৃপক্ষ (Authority) নির্ধারণ (ঐচ্ছিক)</h6>
 
                   <!-- DYNAMIC AUTHORITY FIELDS -->
-                  <input type="text" name="authority_level" id="add_authority_level">
-                  <input type="text" name="authority_id" id="add_authority_id">
+                  <input type="hidden" name="authority_level" id="add_authority_level">
+                  <input type="hidden" name="authority_id" id="add_authority_id">
 
                   <!-- Division Dropdown (Level 1) -->
                   <div class="input-group mb-3">
@@ -650,7 +650,7 @@
               if (parentId) {
                   $('#' + context + '_authority_level').val(level);
                   $('#' + context + '_authority_id').val(parentId);
-
+                  
                   console.log($('#' + context + '_authority_level').val());
               } else {
                   // If the selected value is empty, reset the current authority level/id
