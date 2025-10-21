@@ -356,6 +356,34 @@ class DashboardController extends Controller
         return redirect()->route('dashboard.users');
     }
 
+    protected function syncUserAuthority(User $user, Request $request): void
+    {
+        $level = $request->input('authority_level');
+        $id = $request->input('authority_id');
+
+        // Check if an authority assignment is requested
+        if ($level && $id) {
+            // Determine the fully qualified model class name
+            $modelClass = 'App\\Models\\' . $level;
+            
+            if (class_exists($modelClass)) {
+                // Upsert the authority (create or update the single assignment)
+                // Note: We are assuming only one authority can be assigned for simplicity here
+                UserAuthority::updateOrCreate(
+                    ['user_id' => $user->id],
+                    [
+                        'authority_id' => $id,
+                        'authority_type' => $modelClass,
+                        'role' => $request->role, // Use user role as authority role for simplicity
+                    ]
+                );
+            }
+        } else {
+            // If no authority is selected, delete any existing authority assignments
+            $user->authorities()->delete();
+        }
+    }
+
     public function updateBulkPackageDate(Request $request)
     {
         $this->validate($request,array(
