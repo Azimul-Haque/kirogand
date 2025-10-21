@@ -96,7 +96,7 @@
                           
                           // To get the Assigned Authority Model (Union, Upazila, etc.):
                           $assignedModel = $userAuthority->authority; 
-                          $level = (new \ReflectionClass($auth->authority_type))->getShortName();
+                          $level = (new \ReflectionClass($userAuthority->authority_type))->getShortName();
                           
                           // --- Displaying Data ---
                           if ($districtModel) {
