@@ -351,7 +351,7 @@
 	                		<option selected="" disabled="" value="">ধরন</option>
 	                		<option value="admin">এডমিন</option>
 							       <option value="manager">স্থানীয় সরকার প্রতিনিধি</option>
-                     <option value="volunteer">ভলান্টিয়ার</option>
+                     {{-- <option value="volunteer">ভলান্টিয়ার</option> --}}
 	                		<option value="user">ব্যবহারকারী</option>
 							{{-- <option value="accountant">একাউন্টেন্ট</option> --}}
 	                	</select>
