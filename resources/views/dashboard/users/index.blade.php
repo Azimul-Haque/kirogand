@@ -371,7 +371,6 @@
                       </div>
                   </div>
 
-
 	                <div class="input-group mb-3">
 	                    <input type="password"
 	                           name="password"
@@ -382,6 +381,46 @@
 	                        <div class="input-group-text"><span class="fas fa-lock"></span></div>
 	                    </div>
 	                </div>
+
+                  <hr class="my-4">
+                  <h6 class="mb-3">কর্তৃপক্ষ (Authority) নির্ধারণ (ঐচ্ছিক)</h6>
+
+                  <!-- DYNAMIC AUTHORITY FIELDS -->
+                  <input type="hidden" name="authority_level" id="add_authority_level">
+                  <input type="hidden" name="authority_id" id="add_authority_id">
+
+                  <!-- Division Dropdown (Level 1) -->
+                  <div class="input-group mb-3">
+                      <select id="add_division_id" class="form-control authority-select" data-level="Division" data-target="add_district_id" data-model="District">
+                          <option value="">বিভাগ নির্বাচন করুন</option>
+                          @foreach ($divisions as $division)
+                              <option value="{{ $division->id }}" data-level-name="Division">{{ $division->bn_name }}</option>
+                          @endforeach
+                      </select>
+                  </div>
+
+                  <!-- District Dropdown (Level 2) -->
+                  <div class="input-group mb-3">
+                      <select id="add_district_id" class="form-control authority-select" data-level="District" data-target="add_upazila_id" data-model="Upazila" disabled>
+                          <option value="">জেলা নির্বাচন করুন</option>
+                      </select>
+                  </div>
+
+                  <!-- Upazila Dropdown (Level 3 - Can be Municipality Authority) -->
+                  <div class="input-group mb-3">
+                      <select id="add_upazila_id" class="form-control authority-select" data-level="Upazila" data-target="add_union_id" data-model="Union" disabled>
+                          <option value="">উপজেলা/পৌরসভা নির্বাচন করুন</option>
+                      </select>
+                  </div>
+
+                  <!-- Union Dropdown (Level 4) -->
+                  <div class="input-group mb-3">
+                      <select id="add_union_id" class="form-control authority-select" data-level="Union" data-target="" data-model="" disabled>
+                          <option value="">ইউনিয়ন নির্বাচন করুন</option>
+                      </select>
+                  </div>
+                  <!-- END DYNAMIC AUTHORITY FIELDS -->
+
 	            
 	          </div>
 	          <div class="modal-footer">
