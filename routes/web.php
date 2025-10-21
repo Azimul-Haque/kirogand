@@ -63,6 +63,8 @@ Route::get('bkash/failed/page/web', 'BkashController@bkashFailedPageWeb')->name(
 
 Auth::routes();
 
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
+
 // Dashboard starts here
 // Dashboard starts here
 // Dashboard starts here
