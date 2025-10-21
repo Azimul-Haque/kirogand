@@ -445,7 +445,7 @@
 
                   <!-- Division Dropdown (Level 1) -->
                   <div class="input-group mb-3">
-                      <select id="add_division_id" class="form-control authority-select" data-level="Division" data-target="add_district_id" data-model="District">
+                      <select id="add_division_id" class="form-control authority-select" data-level="Division" data-target="add_division_id" data-model="District">
                           <option value="" selected disabled>বিভাগ নির্বাচন করুন</option>
                           @foreach ($divisions as $division)
                               <option value="{{ $division->id }}" data-level-name="Division">{{ $division->bn_name }}</option>
