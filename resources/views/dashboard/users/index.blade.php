@@ -676,14 +676,14 @@
 
           // --- 3. Populate Edit Modal on Button Click ---
           $('.edit-user-btn').on('click', function() {
-            
+
               const userId = $(this).data('user-id');
               const userName = $(this).data('user-name');
               const userMobile = $(this).data('user-mobile');
               const userRole = $(this).data('user-role');
               const authTypeFull = $(this).data('user-authority'); // e.g., App\Models\Union
               const authId = $(this).data('user-authority-id'); // e.g., 5
-console.log(userId);
+              
               // Set basic user data
               $('#editUserForm').attr('action', `${baseUrl}/dashboard/users/${userId}`);
               $('#edit_name').val(userName);
