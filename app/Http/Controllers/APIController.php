@@ -32,7 +32,7 @@ class APIController extends Controller
     public function getDistricts(Request $request, $divisionId)
     {
         $districts = District::where('division_id', $divisionId)->pluck('name', 'id');
-        $districtsapi = Cache::remember('districts'.$id, 10 * 24 * 60 * 60, function () use ($id) {
+        $districts = Cache::remember('districts'.$id, 10 * 24 * 60 * 60, function () use ($id) {
             $districts = Courseexam::select('course_id', 'exam_id')
                                  ->where('course_id', $id)
                                  ->orderBy('exam_id', 'desc')
