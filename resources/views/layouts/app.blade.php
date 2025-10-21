@@ -33,7 +33,7 @@
         </ul>
         @if(Auth::user()->role == 'manager')
             @php
-              $userAuthority = $user->authorities->first();
+              $userAuthority = Auth::user()->authorities->first();
 
               if ($userAuthority) {
                 // 2. Call the method to get the full hierarchy array
