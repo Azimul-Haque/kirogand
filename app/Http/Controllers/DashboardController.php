@@ -946,7 +946,7 @@ class DashboardController extends Controller
     {
         $divisions = Division::get();
 
-        dd($divisions[0]);
+        dd($divisions[1]);
     }
 
     // clear configs, routes and serve
