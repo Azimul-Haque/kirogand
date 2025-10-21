@@ -130,26 +130,26 @@ class DashboardController extends Controller
                     ->withDivisions($divisions);
     }
 
-    public function getUsersSort()
-    {
-        // $users = User::where('name', '!=', null)->orderBy('id', 'asc')->get(10);
-        $userscount = User::count();
-        $users = User::withCount('meritlists')
-                     ->orderBy('meritlists_count', 'desc')
-                     ->paginate(10);
+    // public function getUsersSort()
+    // {
+    //     // $users = User::where('name', '!=', null)->orderBy('id', 'asc')->get(10);
+    //     $userscount = User::count();
+    //     $users = User::withCount('meritlists')
+    //                  ->orderBy('meritlists_count', 'desc')
+    //                  ->paginate(10);
 
-        // dd($users);
-        // $users = $users->join('meritlists', function ($join) {
-        //                 $join->on('meritlists.user_id', '=', 'users.id');
-        //             })
-        //             ->groupBy('users.id')
-        //             ->orderBy('count', $order)
-        //             ->select((['users.*', DB::raw('COUNT(meritlists.user_id) as count')]))->paginate(10);
+    //     // dd($users);
+    //     // $users = $users->join('meritlists', function ($join) {
+    //     //                 $join->on('meritlists.user_id', '=', 'users.id');
+    //     //             })
+    //     //             ->groupBy('users.id')
+    //     //             ->orderBy('count', $order)
+    //     //             ->select((['users.*', DB::raw('COUNT(meritlists.user_id) as count')]))->paginate(10);
 
-        return view('dashboard.users.index')
-                    ->withUsers($users)
-                    ->withUserscount($userscount);
-    }
+    //     return view('dashboard.users.index')
+    //                 ->withUsers($users)
+    //                 ->withUserscount($userscount);
+    // }
 
     // public function getExpiredUsers()
     // {
