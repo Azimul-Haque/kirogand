@@ -31,9 +31,9 @@ class APIController extends Controller
 
     public function getDistricts(Request $request, $divisionId)
     {
-        // $districts = District::where('division_id', $divisionId)->pluck('name', 'id');
+        // $districts = District::where('division_id', $divisionId)->pluck('bn_name', 'id');
         $districts = Cache::remember('districtsapi' . $divisionId, 30 * 24 * 60 * 60, function () use ($divisionId) {
-            $districts = District::where('division_id', $divisionId)->pluck('name', 'id');
+            $districts = District::where('division_id', $divisionId)->pluck('bn_name', 'id');
             return $districts;
         });
         return response()->json($districts);
@@ -42,20 +42,20 @@ class APIController extends Controller
     public function getUpazilas(Request $request, $districtId)
     {
         $upazilas = Cache::remember('upazilassapi' . $districtId, 30 * 24 * 60 * 60, function () use ($districtId) {
-            $upazilas = Upazila::where('district_id', $districtId)->pluck('name', 'id');
+            $upazilas = Upazila::where('district_id', $districtId)->pluck('bn_name', 'id');
             return $upazilas;
         });
-        // $upazilas = Upazila::where('district_id', $districtId)->pluck('name', 'id');
+        // $upazilas = Upazila::where('district_id', $districtId)->pluck('bn_name', 'id');
         return response()->json($upazilas);
     }
 
     public function getUnions(Request $request, $upazilaId)
     {
         $unions = Cache::remember('unionsapi' . $upazilaId, 30 * 24 * 60 * 60, function () use ($upazilaId) {
-            $unions = Union::where('upazila_id', $upazilaId)->pluck('name', 'id');
+            $unions = Union::where('upazila_id', $upazilaId)->pluck('bn_name', 'id');
             return $unions;
         });
-        // $unions = Union::where('upazila_id', $upazilaId)->pluck('name', 'id');
+        // $unions = Union::where('upazila_id', $upazilaId)->pluck('bn_name', 'id');
         return response()->json($unions);
     }
 
