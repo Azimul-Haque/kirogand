@@ -650,6 +650,7 @@
               if (parentId) {
                   $('#' + context + '_authority_level').val(level);
                   $('#' + context + '_authority_id').val(parentId);
+                  console.log(context);
               } else {
                   // If the selected value is empty, reset the current authority level/id
                   $('#' + context + '_authority_level').val('');
