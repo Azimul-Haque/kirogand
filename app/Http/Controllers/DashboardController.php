@@ -313,6 +313,8 @@ class DashboardController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
 
+        $this->syncUserAuthority($user, $request);
+
         Session::flash('success', 'User created successfully!');
         return redirect()->route('dashboard.users');
     }
@@ -352,7 +354,7 @@ class DashboardController extends Controller
             $user->password = Hash::make($request->password);
         }
         $user->save();
-        
+
         $this->syncUserAuthority($user, $request);
 
         Session::flash('success', 'User updated successfully!');
