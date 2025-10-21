@@ -299,7 +299,7 @@
 
                                   <!-- Division Dropdown (Level 1) -->
                                   <div class="input-group mb-3">
-                                      <select id="edit_division_id{{ $user->id }}" class="form-control authority-select" data-level="Division" data-target="edit_district_id{{ $user->id }}" data-model="District">
+                                      <select id="edit_division_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Division" data-target="edit_district_id{{ $user->id }}" data-model="District">
                                           <option value="" selected disabled>বিভাগ নির্বাচন করুন</option>
                                           @foreach ($divisions as $division)
                                               <option value="{{ $division->id }}" data-level-name="Division">{{ $division->bn_name }}</option>
@@ -309,21 +309,21 @@
 
                                   <!-- District Dropdown (Level 2) -->
                                   <div class="input-group mb-3">
-                                      <select id="edit_district_id{{ $user->id }}" class="form-control authority-select" data-level="District" data-target="edit_upazila_id{{ $user->id }}" data-model="Upazila" disabled>
+                                      <select id="edit_district_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="District" data-target="edit_upazila_id{{ $user->id }}" data-model="Upazila" disabled>
                                           <option value="" selected disabled>জেলা নির্বাচন করুন</option>
                                       </select>
                                   </div>
 
                                   <!-- Upazila Dropdown (Level 3 - Can be Municipality Authority) -->
                                   <div class="input-group mb-3">
-                                      <select id="edit_upazila_id{{ $user->id }}" class="form-control authority-select" data-level="Upazila" data-target="edit_union_id{{ $user->id }}" data-model="Union" disabled>
+                                      <select id="edit_upazila_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Upazila" data-target="edit_union_id{{ $user->id }}" data-model="Union" disabled>
                                           <option value="" selected disabled>উপজেলা/পৌরসভা নির্বাচন করুন</option>
                                       </select>
                                   </div>
 
                                   <!-- Union Dropdown (Level 4) -->
                                   <div class="input-group mb-3">
-                                      <select id="edit_union_id{{ $user->id }}" class="form-control authority-select" data-level="Union" data-target="" data-model="" disabled>
+                                      <select id="edit_union_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Union" data-target="" data-model="" disabled>
                                           <option value="" selected disabled>ইউনিয়ন নির্বাচন করুন</option>
                                       </select>
                                   </div>
@@ -638,7 +638,7 @@
 
           // --- 2. Change Event Listener (Cascading Dropdowns) ---
           // Applies to both Add and Edit modals
-          $(document).on('change', '.authority-select', function() {
+          $(document).on('change', '.authority-select' data-userid="{{ $user->id }}", function() {
               const userId = $(this).data('userid');
               const parentId = $(this).val();
               const targetId = $(this).data('target');
