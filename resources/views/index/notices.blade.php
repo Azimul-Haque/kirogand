@@ -1,5 +1,5 @@
 @extends('layouts.index')
-@section('title') ডিজিটাল নাগরিক - সনদ যাচাই @endsection
+@section('title') ডিজিটাল নাগরিক - নোটিশসমূহ @endsection
 
 @section('third_party_stylesheets')
   <style>
