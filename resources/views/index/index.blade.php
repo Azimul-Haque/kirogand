@@ -246,29 +246,45 @@
               <!-- Notices Section -->
               <div class="col-lg-7">
                   <h2 class="h3 fw-bold mb-4" style="color: var(--darker-color);"><i class="fas fa-bell me-2"></i> গুরুত্বপূর্ণ নোটিশ বোর্ড</h2>
-                  <div class="list-group shadow-sm rounded-3">
-                      <a href="/notice/5" class="list-group-item list-group-item-action notice-card border-0 rounded-3 mb-2 p-3">
-                          <div class="d-flex w-100 justify-content-between">
-                              <h6 class="mb-1 fw-bold" style="color: var(--darker-color);">নতুন প্রশাসনিক প্যানেলের উদ্বোধন ও নির্দেশিকা</h6>
-                              <small class="text-muted">২ দিন আগে</small>
-                          </div>
-                          <p class="mb-1 small">সকল ইউনিয়নের জন্য নতুন ইউজার ম্যানুয়াল প্রকাশিত হয়েছে। বিস্তারিত দেখুন...</p>
-                      </a>
-                      <a href="/notice/4" class="list-group-item list-group-item-action notice-card border-0 rounded-3 mb-2 p-3">
-                          <div class="d-flex w-100 justify-content-between">
-                              <h6 class="mb-1 fw-bold" style="color: var(--darker-color);">সার্ভার রক্ষণাবেক্ষণের জন্য সাময়িক বিরতি</h6>
-                              <small class="text-muted">১ সপ্তাহ আগে</small>
-                          </div>
-                          <p class="mb-1 small">আগামীকাল রাত ১২টা থেকে ভোর ৬টা পর্যন্ত সিস্টেম বন্ধ থাকবে।</p>
-                      </a>
-                      <a href="/notice/3" class="list-group-item list-group-item-action notice-card border-0 rounded-3 p-3">
-                          <div class="d-flex w-100 justify-content-between">
-                              <h6 class="mb-1 fw-bold" style="color: var(--darker-color);">জন্ম নিবন্ধন ফি হালনাগাদ সংক্রান্ত তথ্য</h6>
-                              <small class="text-muted">১ মাস আগে</small>
-                          </div>
-                          <p class="mb-1 small">নতুন ফি কাঠামো দেখতে এখানে ক্লিক করুন।</p>
-                      </a>
-                  </div>
+                  <!-- Notice 1: New Security Feature (Primary/Default Color) -->
+                    <a href="notice_board.html" class="text-decoration-none d-block">
+                        <div class="card p-3 shadow-sm rounded-3 notice-card">
+                            <div class="card-body p-2">
+                                <span class="notice-date small text-uppercase"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ২৪, ২০২৫</span>
+                                <h5 class="fw-bold mt-1 mb-2" style="color: var(--darker-color);">ডিজিটাল সনদ যাচাইয়ে নতুন নিরাপত্তা ফিচার যুক্তকরণ</h5>
+                                <p class="small text-muted mb-0">সনদ যাচাই প্রক্রিয়াকে আরও সুরক্ষিত করতে নতুন দ্বি-স্তর যাচাইকরণ পদ্ধতি চালু...</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- Notice 2: Emergency Maintenance (Warning Color) -->
+                    <a href="notice_board.html" class="text-decoration-none d-block">
+                        <div class="card p-3 shadow-sm rounded-3 notice-card" style="border-left: 5px solid #ffc107;"> <!-- Warning border color -->
+                            <div class="card-body p-2">
+                                <span class="notice-date small text-uppercase text-warning"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ১৭, ২০২৫</span>
+                                <h5 class="fw-bold mt-1 mb-2 text-warning">জরুরী সার্ভার রক্ষণাবেক্ষণ বিজ্ঞপ্তি</h5>
+                                <p class="small text-muted mb-0">আগামী শনিবার রাত ১২টা থেকে সকাল ৬টা পর্যন্ত পোর্টালের সেবাসমূহ সাময়িকভাবে বন্ধ থাকবে।</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Notice 3: Process Simplification (Success/Union Color) -->
+                    <a href="notice_board.html" class="text-decoration-none d-block">
+                        <div class="card p-3 shadow-sm rounded-3 notice-card" style="border-left: 5px solid var(--union-color);"> <!-- Success border color -->
+                            <div class="card-body p-2">
+                                <span class="notice-date small text-uppercase" style="color: var(--union-color);"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ০৫, ২০২৫</span>
+                                <h5 class="fw-bold mt-1 mb-2" style="color: var(--darker-color);">ওয়ারিশ সনদ আবেদনের প্রক্রিয়া সরলীকরণ</h5>
+                                <p class="small text-muted mb-0">নাগরিকের সুবিধার্থে ওয়ারিশ সনদ আবেদনের ধাপ ও প্রয়োজনীয়তা কমানো হয়েছে। নতুন প্রক্রিয়া দেখুন...</p>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- Link to the full notice board page -->
+                <div class="mt-4 text-center text-lg-start">
+                    <a href="notice_board.html" class="btn btn-outline-primary rounded-pill fw-bold">সকল নোটিশ দেখুন <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
               </div>
 
               <!-- Registration/Login Links (Citizen and Admin) -->
