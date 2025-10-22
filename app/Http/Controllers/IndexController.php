@@ -75,7 +75,7 @@ class IndexController extends Controller
 
     public function getNotices()
     {
-        return view('index.applicationstatus');
+        return view('index.notices');
     }
 
     public function termsAndConditions()
