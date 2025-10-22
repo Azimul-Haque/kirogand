@@ -23,7 +23,7 @@
   <!-- Services List Section (Dynamic Show/Hide Logic) -->
   <section id="services" class="service-section section-gap">
     <div class="container">
-        <div class="row g-5">
+        <div class="row g-5 align-items-center">
             <!-- Contact Section -->
             <div class="col-lg-6">
                 <h2 class="h3 fw-bold mb-4" style="color: var(--darker-color);"><i class="fas fa-headset me-2"></i> যোগাযোগ ও সহায়তা</h2>
