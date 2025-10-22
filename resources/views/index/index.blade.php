@@ -395,7 +395,7 @@
                           </div>
                       </div>
                        <!-- Stat Card 5 (Full Width) -->
-                       <div class="col-12" id="contact">
+                       <div class="col-12">
                           <div class="card p-4 rounded-3 text-center stats-card border-0 shadow-sm" style="background-color: #f0f4c3; border-bottom: 5px solid #607d8b;">
                               <h3 class="display-4 fw-bolder" style="color: #607d8b;">৪০ টি</h3>
                               <p class="mb-0 text-uppercase fw-bold text-muted">মোট সেবাসমূহ</p>
