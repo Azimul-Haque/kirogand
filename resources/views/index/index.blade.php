@@ -419,6 +419,7 @@
               </div>
 
               <div class="col-lg-6">
+                <h2 class="h3 fw-bold mb-4" style="color: var(--darker-color);"><i class="fas fa-chart-bar me-2"></i> ডিজিটাল সেবার পরিসংখ্যান</h2>
                   <div class="p-4 p-md-5 verification-card">
                       <h2 class="h3 fw-bold text-center mb-4" style="color: var(--darker-color);">
                           <i class="fas fa-shield-alt me-2 text-primary"></i> দ্রুত সনদ যাচাই
