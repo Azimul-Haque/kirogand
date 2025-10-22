@@ -18,6 +18,18 @@
         font-weight: 600;
     }
     /* --- END NOTICE BOARD STYLES --- */
+
+    /* Verification Section */
+    #verification-section {
+        background-color: var(--white-bg);
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+    .verification-card {
+        border: 2px solid var(--primary-color);
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
   </style>
 @endsection
 
