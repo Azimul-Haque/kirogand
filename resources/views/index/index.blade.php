@@ -318,7 +318,7 @@
 
               <!-- Registration/Login Links (Citizen and Admin) -->
               <div class="col-lg-5">
-                  <h2 class="h3 fw-bold mb-4" style="color: var(--darker-color);"><i class="fas fa-key me-2"></i> অফিস/সংস্থা তালিকাভুক্তির আবেদন</h2>
+                  <h2 class="h3 fw-bold mb-4" style="color: var(--darker-color);"><i class="fas fa-key me-2"></i> কর্তৃপক্ষ তালিকাভুক্তির আবেদন</h2>
                   
                   <!-- Citizen Panel -->
                   <div class="card shadow-sm mb-4 border-0 rounded-3 border-start border-primary border-4" style="border-left-color: var(--primary-color) !important;">
