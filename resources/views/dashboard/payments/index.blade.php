@@ -129,7 +129,7 @@
 
           <!-- Service Search Filter -->
           <div class="row mb-5 justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-2">
               <div class="input-group input-group-lg shadow-sm rounded-pill">
                 <div class="input-group-prepend">
                   <span class="input-group-text bg-white border-right-0 rounded-left-pill">
