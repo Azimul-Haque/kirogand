@@ -23,50 +23,60 @@
   <!-- Services List Section (Dynamic Show/Hide Logic) -->
   <section id="services" class="service-section section-gap">
     <div class="container">
-      <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="fas fa-check-circle me-3 text-success"></i> সনদপত্রের নির্ভরযোগ্য যাচাই</h1>
+      <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="fas fa-bullhorn me-3 text-primary"></i> গুরুত্বপূর্ণ নোটিশ বোর্ড</h1>
       
-      <!-- Centered Row for 6-Column Form -->
+      <!-- Centered Row for 6-Column Content -->
       <div class="row justify-content-center">
-          <!-- Applies 6-column width on large screens and 8-column on medium screens -->
+          <!-- Applies 6-column width on large screens -->
           <div class="col-md-8 col-lg-6"> 
-              <!-- Verification Form Card -->
-              <div class="card p-4 p-md-5 shadow-lg rounded-3">
-                  <div class="card-body">
-                      <p class="lead text-muted mb-4 text-center">সনদটি যাচাই করতে অনুগ্রহ করে 'সনদ নং'/'আবেদন আইডি নং' দিন অথবা QR কোডটি স্ক্যান করুন</p>
-                      
-                      <form id="verificationForm">
-                        <div class="mb-5">
-                            <label for="verificationInput" class="form-label fw-bold h4">সনদ নং / আবেদন আইডি নং <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control form-control-lg rounded-pill" id="verificationInput" 
-                                   placeholder="যেমন: BC-2024-123456 বা APP-0098765" required 
-                                   aria-label="সনদ নং বা আবেদন আইডি নং ইনপুট">
-                            <div class="form-text mt-2 text-muted">এই একটি ফিল্ডেই আপনার সনদ নম্বর অথবা আবেদন আইডি নম্বরটি লিখুন</div>
-                        </div>
-                        
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill fw-bold text-uppercase shadow-sm">
-                                <i class="fas fa-search me-2"></i> সনদ যাচাই করুন
-                            </button>
-                            <a href="#" class="mt-3 text-center fw-bold text-decoration-none" data-bs-toggle="tooltip" title="সনদ নং খুঁজে না পেলে আবেদন আইডি ব্যবহার করুন।">সহায়তা প্রয়োজন?</a>
-                        </div>
-                      </form>
+              
+              <div id="noticeList" class="d-grid gap-4">
+                  <!-- Mock Notices -->
+                  <div class="card p-3 shadow-sm rounded-3 notice-card">
+                      <div class="card-body p-2">
+                          <span class="notice-date small text-uppercase"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ২৪, ২০২৫</span>
+                          <h5 class="fw-bold mt-1 mb-2">ডিজিটাল সনদ যাচাইয়ে নতুন নিরাপত্তা ফিচার যুক্তকরণ</h5>
+                          <p class="small text-muted mb-2">সনদ যাচাই প্রক্রিয়াকে আরও সুরক্ষিত করতে নতুন দ্বি-স্তর যাচাইকরণ পদ্ধতি চালু করা হয়েছে। বিস্তারিত জানতে নিচে দেখুন।</p>
+                          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-eye me-1"></i> বিস্তারিত পড়ুন</a>
+                      </div>
                   </div>
+
+                  <div class="card p-3 shadow-sm rounded-3 notice-card">
+                      <div class="card-body p-2">
+                          <span class="notice-date small text-uppercase text-warning"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ১৭, ২০২৫</span>
+                          <h5 class="fw-bold mt-1 mb-2 text-warning">জরুরী সার্ভার রক্ষণাবেক্ষণ বিজ্ঞপ্তি</h5>
+                          <p class="small text-muted mb-2">আগামী শনিবার রাত ১২টা থেকে সকাল ৬টা পর্যন্ত পোর্টালের সেবাসমূহ সাময়িকভাবে বন্ধ থাকবে।</p>
+                          <a href="#" class="btn btn-sm btn-outline-warning rounded-pill"><i class="fas fa-eye me-1"></i> বিস্তারিত পড়ুন</a>
+                      </div>
+                  </div>
+
+                  <div class="card p-3 shadow-sm rounded-3 notice-card">
+                      <div class="card-body p-2">
+                          <span class="notice-date small text-uppercase"><i class="fas fa-calendar-alt me-1"></i> সেপ্টেম্বর ০৫, ২০২৫</span>
+                          <h5 class="fw-bold mt-1 mb-2">সকল প্রকার ট্রেড লাইসেন্সের জন্য নতুন আবেদন ফরম চালু</h5>
+                          <p class="small text-muted mb-2">পৌরসভা এবং ইউনিয়ন পর্যায়ে ট্রেড লাইসেন্সের অনলাইন আবেদন ফরমে কিছু নতুন তথ্য সংযোজন করা হয়েছে।</p>
+                          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-eye me-1"></i> বিস্তারিত পড়ুন</a>
+                      </div>
+                  </div>
+
+                  <div class="card p-3 shadow-sm rounded-3 notice-card">
+                      <div class="card-body p-2">
+                          <span class="notice-date small text-uppercase"><i class="fas fa-calendar-alt me-1"></i> আগস্ট ১০, ২০২৫</span>
+                          <h5 class="fw-bold mt-1 mb-2">জন্ম ও মৃত্যু সনদের ফি পুনর্নির্ধারণ</h5>
+                          <p class="small text-muted mb-2">সরকারের নতুন গেজেট অনুযায়ী জন্ম ও মৃত্যু নিবন্ধন সনদের জন্য প্রযোজ্য ফির হার পরিবর্তন করা হয়েছে।</p>
+                          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-eye me-1"></i> বিস্তারিত পড়ুন</a>
+                      </div>
+                  </div>
+                  
+              </div>
+              
+              <div class="text-center mt-5">
+                   <button class="btn btn-lg btn-secondary rounded-pill fw-bold text-uppercase shadow-sm" disabled>
+                      <i class="fas fa-history me-2"></i> আরও পুরোনো নোটিশ
+                  </button>
               </div>
           </div>
       </div>
-
-      <!-- Verification Result Section (Update to be centered and same width) -->
-      <div id="resultContainer" class="mt-5 d-none">
-          <h2 class="h3 fw-bold mb-4 text-center" style="color: var(--darker-color);">যাচাইয়ের ফলাফল</h2>
-          <div class="row justify-content-center">
-              <div class="col-md-8 col-lg-6">
-                  <div id="verificationResult" class="card p-4 p-md-5 border-0 shadow-lg rounded-3">
-                      <!-- Result content will be injected here -->
-                  </div>
-              </div>
-          </div>
-      </div>
-
   </div>
   </section>
 @endsection
