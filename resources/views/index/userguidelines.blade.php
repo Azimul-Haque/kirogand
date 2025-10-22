@@ -74,58 +74,136 @@
   <!-- Services List Section (Dynamic Show/Hide Logic) -->
   <section id="services" class="service-section section-gap">
     <div class="container">
-      <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="fas fa-bullhorn me-3 text-primary"></i> গুরুত্বপূর্ণ নোটিশ বোর্ড</h1>
+      <h1 class="text-center display-6 fw-bold mb-3 manual-heading"><i class="fas fa-book-open me-3 text-primary"></i> স্থানীয় সরকার প্রত্যয়ন পোর্টাল ব্যবহার নির্দেশিকা</h1>
+      <p class="text-center lead mb-5 text-muted">এই নির্দেশিকা পোর্টালে উপলব্ধ প্রধান সেবাসমূহ ব্যবহারের সহজ ধাপসমূহ প্রদান করে।</p>
       
-      <!-- Centered Row for 6-Column Content -->
       <div class="row justify-content-center">
-          <!-- Applies 6-column width on large screens -->
-          <div class="col-md-8 col-lg-7"> 
-              
-              <div id="noticeList" class="d-grid gap-4">
-                  <!-- Mock Notices -->
-                  <div class="card p-3 shadow-sm rounded-3 notice-card">
-                      <div class="card-body p-2">
-                          <span class="notice-date small text-uppercase"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ২৪, ২০২৫</span>
-                          <h5 class="fw-bold mt-1 mb-2">ডিজিটাল সনদ যাচাইয়ে নতুন নিরাপত্তা ফিচার যুক্তকরণ</h5>
-                          <p class="small text-muted mb-2">সনদ যাচাই প্রক্রিয়াকে আরও সুরক্ষিত করতে নতুন দ্বি-স্তর যাচাইকরণ পদ্ধতি চালু করা হয়েছে। বিস্তারিত জানতে নিচে দেখুন।</p>
-                          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-eye me-1"></i> বিস্তারিত পড়ুন</a>
-                      </div>
-                  </div>
+          <!-- Two-Column Layout Start (col-lg-12 to encompass both 6:6 columns) -->
+          <div class="col-lg-12"> 
+              <div class="row g-5">
+                  
+                  <!-- LEFT COLUMN: Text Manuals (6/12) -->
+                  <div class="col-lg-6">
+                      <h2 class="h4 fw-bold mb-4 manual-heading border-bottom pb-2">নাগরিক সেবা: ধাপে ধাপে প্রক্রিয়া</h2>
+                      <div id="manualSections" class="d-grid gap-4">
+                          
+                          <!-- Section 1: সনদ আবেদন প্রক্রিয়া -->
+                          <div class="card p-4 manual-card bg-white">
+                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-file-alt"></i></span> ১. ডিজিটাল সনদ আবেদনের প্রক্রিয়া</h3>
+                              <p>নাগরিক সনদ, জন্ম সনদ, ওয়ারিশ সনদ সহ যেকোনো প্রত্যয়নের জন্য আবেদন করতে নিম্নলিখিত ধাপগুলি অনুসরণ করুন:</p>
+                              
+                              <ol class="list-group list-group-numbered">
+                                  <li class="list-group-item d-flex align-items-start small">
+                                      <strong>১:</strong> পোর্টাল প্রবেশ ও <a href="/citizen-registration">নিবন্ধন</a>।
+                                  </li>
+                                  <li class="list-group-item d-flex align-items-start small">
+                                      <strong>২:</strong> সেবার তালিকা থেকে কাঙ্ক্ষিত সনদ নির্বাচন।
+                                  </li>
+                                  <li class="list-group-item d-flex align-items-start small">
+                                      <strong>৩:</strong> নির্ভুলভাবে সমস্ত তথ্য দিয়ে ফরম পূরণ।
+                                  </li>
+                                  <li class="list-group-item d-flex align-items-start small">
+                                      <strong>৪:</strong> প্রয়োজনীয় ডকুমেন্ট আপলোড (জাতীয় পরিচয়পত্র, ছবি ইত্যাদি)।
+                                  </li>
+                                  <li class="list-group-item d-flex align-items-start small">
+                                      <strong>৫:</strong> ফি পরিশোধ ও ট্র্যাকিং নম্বর সংগ্রহ।
+                                  </li>
+                              </ol>
+                              <a href="/citizen-registration" class="btn btn-sm btn-primary rounded-pill mt-3 align-self-start"><i class="fas fa-hand-point-right me-2"></i> আবেদন শুরু করুন</a>
+                          </div>
+                          
+                          <!-- Section 2: সনদ যাচাই প্রক্রিয়া -->
+                          <div class="card p-4 manual-card bg-white" style="border-left-color: var(--primary-color);">
+                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-check-circle"></i></span> ২. সনদ যাচাই (Verification) প্রক্রিয়া</h3>
+                              <p>ইস্যু হওয়া কোনো ডিজিটাল সনদপত্রের বৈধতা যাচাই করতে এই ধাপগুলি অনুসরণ করুন:</p>
+                              
+                              <ul class="list-unstyled small">
+                                  <li class="mb-1"><i class="fas fa-arrow-right me-2 text-primary"></i> <a href="certificate_verify.html" class="fw-bold">সনদ যাচাই</a> পেজে প্রবেশ।</li>
+                                  <li class="mb-1"><i class="fas fa-arrow-right me-2 text-primary"></i> সনদে উল্লেখিত <span class="fw-bold">ডিজিটাল সনদ নম্বরটি</span> ইনপুট করা।</li>
+                                  <li class="mb-1"><i class="fas fa-arrow-right me-2 text-primary"></i> নিরাপত্তা কোড (ক্যাপচা) সঠিকভাবে পূরণ করা।</li>
+                                  <li class="mb-1"><i class="fas fa-arrow-right me-2 text-primary"></i> যাচাই ফলাফল স্ক্রিনে প্রদর্শন।</li>
+                              </ul>
+                              <a href="certificate_verify.html" class="btn btn-sm btn-info text-white rounded-pill mt-3 align-self-start"><i class="fas fa-search me-2"></i> সনদ যাচাই করুন</a>
+                          </div>
 
-                  <div class="card p-3 shadow-sm rounded-3 notice-card">
-                      <div class="card-body p-2">
-                          <span class="notice-date small text-uppercase text-warning"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ১৭, ২০২৫</span>
-                          <h5 class="fw-bold mt-1 mb-2 text-warning">জরুরী সার্ভার রক্ষণাবেক্ষণ বিজ্ঞপ্তি</h5>
-                          <p class="small text-muted mb-2">আগামী শনিবার রাত ১২টা থেকে সকাল ৬টা পর্যন্ত পোর্টালের সেবাসমূহ সাময়িকভাবে বন্ধ থাকবে।</p>
-                          <a href="#" class="btn btn-sm btn-outline-warning rounded-pill"><i class="fas fa-eye me-1"></i> বিস্তারিত পড়ুন</a>
-                      </div>
-                  </div>
+                          <!-- Section 3: আবেদনের অবস্থা জানা -->
+                          <div class="card p-4 manual-card bg-white" style="border-left-color: var(--darker-color);">
+                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-tasks"></i></span> ৩. আবেদনের অবস্থা জানা</h3>
+                              <p>আবেদন করার সময় প্রাপ্ত <span class="fw-bold text-primary">ট্র্যাকিং নম্বরটি</span> ব্যবহার করে আপনার আবেদনের বর্তমান স্ট্যাটাস জানুন:</p>
+                              
+                              <ul class="list-unstyled small">
+                                  <li class="mb-1 d-flex align-items-start">
+                                      <i class="fas fa-dot-circle me-3 mt-1 text-dark"></i> <a href="application_status.html" class="fw-bold">আবেদনের অবস্থা</a> পেজে যান।
+                                  </li>
+                                  <li class="mb-1 d-flex align-items-start">
+                                      <i class="fas fa-dot-circle me-3 mt-1 text-dark"></i> ট্র্যাকিং নম্বর ইনপুট করুন।
+                                  </li>
+                                  <li class="mb-1 d-flex align-items-start">
+                                      <i class="fas fa-dot-circle me-3 mt-1 text-dark"></i> 'অনুসন্ধান' বাটনে ক্লিক করে স্ট্যাটাস (প্রক্রিয়াধীন/অনুমোদিত) দেখুন।
+                                  </li>
+                              </ul>
+                              <a href="application_status.html" class="btn btn-sm btn-outline-dark rounded-pill mt-3 align-self-start"><i class="fas fa-map-marker-alt me-2"></i> অবস্থা দেখুন</a>
+                          </div>
 
-                  <div class="card p-3 shadow-sm rounded-3 notice-card">
-                      <div class="card-body p-2">
-                          <span class="notice-date small text-uppercase"><i class="fas fa-calendar-alt me-1"></i> সেপ্টেম্বর ০৫, ২০২৫</span>
-                          <h5 class="fw-bold mt-1 mb-2">সকল প্রকার ট্রেড লাইসেন্সের জন্য নতুন আবেদন ফরম চালু</h5>
-                          <p class="small text-muted mb-2">পৌরসভা এবং ইউনিয়ন পর্যায়ে ট্রেড লাইসেন্সের অনলাইন আবেদন ফরমে কিছু নতুন তথ্য সংযোজন করা হয়েছে।</p>
-                          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-eye me-1"></i> বিস্তারিত পড়ুন</a>
-                      </div>
-                  </div>
-
-                  <div class="card p-3 shadow-sm rounded-3 notice-card">
-                      <div class="card-body p-2">
-                          <span class="notice-date small text-uppercase"><i class="fas fa-calendar-alt me-1"></i> আগস্ট ১০, ২০২৫</span>
-                          <h5 class="fw-bold mt-1 mb-2">জন্ম ও মৃত্যু সনদের ফি পুনর্নির্ধারণ</h5>
-                          <p class="small text-muted mb-2">সরকারের নতুন গেজেট অনুযায়ী জন্ম ও মৃত্যু নিবন্ধন সনদের জন্য প্রযোজ্য ফির হার পরিবর্তন করা হয়েছে।</p>
-                          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-eye me-1"></i> বিস্তারিত পড়ুন</a>
+                          <!-- Section 4: প্রশাসনিক প্যানেল -->
+                          <div class="card p-4 manual-card bg-white" style="border-left-color: #28a745;">
+                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2" style="background-color: #d4edda; color: #28a745;"><i class="fas fa-user-tie"></i></span> ৪. প্রশাসনিক প্যানেল</h3>
+                              <p class="small mb-0">ইউনিয়ন পরিষদ, পৌরসভা এবং উপজেলা পরিষদের কর্মকর্তাদের জন্য ডেডিকেটেড প্যানেল। এই প্যানেল থেকে আবেদন অনুমোদন, বাতিলকরণ এবং প্রতিবেদন তৈরির কাজ করা হয়।</p>
+                              <a href="/admin-login" class="btn btn-sm btn-success text-white rounded-pill mt-3 align-self-start"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক লগইন</a>
+                          </div>
                       </div>
                   </div>
                   
+                  <!-- RIGHT COLUMN: Video Guides (6/12) -->
+                  <div class="col-lg-6">
+                      <h2 class="h4 fw-bold mb-4 manual-heading border-bottom pb-2"><i class="fab fa-youtube text-danger me-2"></i> সহায়ক ভিডিও নির্দেশিকা</h2>
+                      <p class="text-muted small">নিচের ভিডিও টিউটোরিয়ালগুলো পোর্টালের প্রধান সেবাসমূহ সহজে বুঝতে সাহায্য করবে।</p>
+                      
+                      <!-- Video Guide 1: Citizen Registration -->
+                      <a href="#" class="text-decoration-none d-block video-guide-card">
+                          <h5 class="fw-bold text-primary mb-2">১. নতুন নাগরিক একাউন্ট তৈরি ও নিবন্ধন প্রক্রিয়া</h5>
+                          <div class="ratio ratio-16x9 video-thumbnail">
+                              <!-- Placeholder for YouTube/Video Embed -->
+                              <div class="placeholder-text d-flex align-items-center justify-content-center">
+                                  <i class="fas fa-video fa-2x me-2"></i> ভিডিও লোড করা হবে...
+                              </div>
+                              <i class="fab fa-youtube play-icon"></i>
+                          </div>
+                      </a>
+
+                      <!-- Video Guide 2: Certificate Application -->
+                      <a href="#" class="text-decoration-none d-block video-guide-card">
+                          <h5 class="fw-bold text-info mb-2">২. জন্ম সনদ ও ওয়ারিশ সনদের জন্য অনলাইন আবেদন</h5>
+                          <div class="ratio ratio-16x9 video-thumbnail">
+                              <!-- Placeholder for YouTube/Video Embed -->
+                              <div class="placeholder-text d-flex align-items-center justify-content-center">
+                                  <i class="fas fa-video fa-2x me-2"></i> ভিডিও লোড করা হবে...
+                              </div>
+                              <i class="fab fa-youtube play-icon"></i>
+                          </div>
+                      </a>
+
+                      <!-- Video Guide 3: Application Status Check -->
+                      <a href="#" class="text-decoration-none d-block video-guide-card">
+                          <h5 class="fw-bold text-darker mb-2">৩. আবেদনের অবস্থা যাচাই ও সনদ প্রিন্ট করার পদ্ধতি</h5>
+                          <div class="ratio ratio-16x9 video-thumbnail">
+                              <!-- Placeholder for YouTube/Video Embed -->
+                              <div class="placeholder-text d-flex align-items-center justify-content-center">
+                                  <i class="fas fa-video fa-2x me-2"></i> ভিডিও লোড করা হবে...
+                              </div>
+                              <i class="fab fa-youtube play-icon"></i>
+                          </div>
+                      </a>
+
+                      <!-- Footer note for video section -->
+                      <p class="text-center pt-3 small text-muted">এই লিংকগুলি টিউটোরিয়াল ভিডিও লোড হওয়ার জন্য প্রস্তুত।</p>
+                  </div>
+                  
               </div>
-              
-              <div class="text-center mt-5">
-                   <button class="btn btn-lg btn-secondary rounded-pill fw-bold text-uppercase shadow-sm" disabled>
-                      <i class="fas fa-history me-2"></i> আরও পুরোনো নোটিশ
-                  </button>
-              </div>
+          </div>
+          
+          <div class="col-lg-12">
+              <p class="text-center pt-5 text-muted">যদি আপনার কোনো কারিগরি সহায়তা প্রয়োজন হয়, অনুগ্রহ করে আমাদের <a href="index.html#contact">যোগাযোগ</a> সেকশনটি দেখুন।</p>
           </div>
       </div>
   </div>
