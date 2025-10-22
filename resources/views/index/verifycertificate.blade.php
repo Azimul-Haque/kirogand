@@ -30,20 +30,21 @@
                       <p class="lead text-muted mb-4 text-center">সনদটি যাচাই করতে অনুগ্রহ করে **সনদ নং অথবা আবেদন আইডি নং**-এর যেকোনো একটি সঠিকভাবে পূরণ করুন</p>
                       
                       <form id="verificationForm">
-                          <div class="mb-5">
-                              <label for="verificationInput" class="form-label fw-bold h4">আবেদন আইডি নং * <span class="text-danger">*</span></label>
-                              <input type="text" class="form-control form-control-lg rounded-pill" id="verificationInput" 
-                                     placeholder="যেমন: BC-2024-123456 বা APP-0098765" required 
-                                     aria-label="সনদ নং বা আবেদন আইডি নং ইনপুট">
-                              <div class="form-text mt-2 text-muted">আপনার সনদের জন্য আবেদন করার সময় এই আইডিটি পেয়েছেন</div>
-                          </div>
-                          
-                          <div class="d-grid">
-                              <button type="submit" class="btn btn-primary btn-lg rounded-pill fw-bold text-uppercase shadow-sm">
-                                  <i class="fas fa-search me-2"></i> আবেদনের অবস্থা দেখুন
-                              </button>
-                              <a href="#" class="mt-3 text-center fw-bold text-decoration-none" data-bs-toggle="tooltip" title="সনদ নং খুঁজে না পেলে আবেদন আইডি ব্যবহার করুন।">সহায়তা প্রয়োজন?</a>
-                          </div>
+                        <div class="mb-5">
+                            <label for="verificationInput" class="form-label fw-bold h4">সনদ নং / আবেদন আইডি নং <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control form-control-lg rounded-pill" id="verificationInput" 
+                                   placeholder="যেমন: BC-2024-123456 বা APP-0098765" required 
+                                   aria-label="সনদ নং বা আবেদন আইডি নং ইনপুট">
+                            <div class="form-text mt-2 text-muted">এই একটি ফিল্ডেই আপনার সনদ নম্বর অথবা আবেদন আইডি নম্বরটি লিখুন</div>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill fw-bold text-uppercase shadow-sm">
+                                <i class="fas fa-search me-2"></i> সনদ যাচাই করুন
+                            </button>
+                            <a href="#" class="mt-3 text-center fw-bold text-decoration-none" data-bs-toggle="tooltip" title="সনদ নং খুঁজে না পেলে আবেদন আইডি ব্যবহার করুন।">সহায়তা প্রয়োজন?</a>
+                        </div>
+                        
                       </form>
                   </div>
               </div>
