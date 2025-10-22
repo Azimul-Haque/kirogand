@@ -72,6 +72,8 @@ Auth::routes([
     'register' => false,
 ]);
 
+Route::get('bkash/failed/page/web', 'BkashController@bkashFailedPageWeb')->name('bkash-failed-page-web');
+
 Route::get('/testunion', 'DashboardController@getDivDUUniData')->name('dashboard.testunion');
 
 // Dashboard starts here
