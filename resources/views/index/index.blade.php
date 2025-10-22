@@ -62,16 +62,16 @@
                   <div id="heroCarousel" class="carousel slide shadow-2xl rounded-3" data-bs-ride="carousel">
                       <div class="carousel-inner rounded-3">
                           <div class="carousel-item active">
-                              <img src="{{ asset('images/slider/1.jpg') }}" class="d-block w-100" alt="Slider Image 1">
+                              <img src="{{ asset('images/slider/1.jpg') }}" class="d-block" alt="Slider Image 1">
                           </div>
                           <div class="carousel-item">
-                              <img src="{{ asset('images/slider/2.jpg') }}" class="d-block w-100" alt="Slider Image 2">
+                              <img src="{{ asset('images/slider/2.jpg') }}" class="d-block" alt="Slider Image 2">
                           </div>
                           <div class="carousel-item">
-                              <img src="{{ asset('images/slider/3.jpg') }}" class="d-block w-100" alt="Slider Image 3">
+                              <img src="{{ asset('images/slider/3.jpg') }}" class="d-block" alt="Slider Image 3">
                           </div>
                           <div class="carousel-item">
-                              <img src="{{ asset('images/slider/4.jpg') }}" class="d-block w-100" alt="Slider Image 4">
+                              <img src="{{ asset('images/slider/4.jpg') }}" class="d-block" alt="Slider Image 4">
                           </div>
                       </div>
                       <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
