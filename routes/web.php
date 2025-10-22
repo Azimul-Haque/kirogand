@@ -68,7 +68,7 @@ Route::get('bkash/success/page/web', 'BkashController@bkashSuccessPageWeb')->nam
 Route::get('bkash/failed/page/web', 'BkashController@bkashFailedPageWeb')->name('bkash-failed-page-web');
 // Payment Routes for bKash
 
-Auth::routes();
+Auth::routes('register' => false,);
 
 Route::get('/testunion', 'DashboardController@getDivDUUniData')->name('dashboard.testunion');
 
