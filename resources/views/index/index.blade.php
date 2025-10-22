@@ -311,7 +311,7 @@
                 </div>
 
                 <!-- Link to the full notice board page -->
-                <div class="mt-4 text-center text-lg-start">
+                <div class="mt-4 text-center text-lg-start" id="contact">
                     <a href="{{ route('index.notices') }}" class="btn btn-outline-primary rounded-pill fw-bold">সকল নোটিশ দেখুন <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
