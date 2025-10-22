@@ -30,7 +30,6 @@
   <meta name="theme-color" content="#155BD5">
   <meta name="msapplication-navbutton-color" content="#155BD5">
   <meta name="apple-mobile-web-app-status-bar-style" content="#155BD5">
-  <meta name="author" content="A. H. M. Azimul Haque">
 
 
   <!--====== Title ======-->
