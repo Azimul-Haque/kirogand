@@ -288,7 +288,7 @@
 
                     <!-- Notice 3: Process Simplification (Success/Union Color) -->
                     <a href="notice_board.html" class="text-decoration-none d-block">
-                        <div class="card p-3 shadow-sm rounded-3 notice-card" style="border-left: 5px solid var(--union-color);"> <!-- Success border color -->
+                        <div class="card p-3 shadow-sm rounded-3 notice-card">
                             <div class="card-body p-2">
                                 <span class="notice-date small text-uppercase" style="color: var(--union-color);"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ০৫, ২০২৫</span>
                                 <h5 class="fw-bold mt-1 mb-2" style="color: var(--darker-color);">ওয়ারিশ সনদ আবেদনের প্রক্রিয়া সরলীকরণ</h5>
