@@ -327,7 +327,7 @@ class IndexController extends Controller
 
     public function getAuthorityRegister()
     {
-        return view('index.register.authority');
+        return view('index.auth.authority');
     }
 
     // clear configs, routes and serve
