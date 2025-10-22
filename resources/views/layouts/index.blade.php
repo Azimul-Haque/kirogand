@@ -236,7 +236,7 @@
                       
                       <!-- Login/Dropdown remains, floated right (mostly redundant now, but kept for mobile/small screen) -->
                       <li class="nav-item dropdown ms-auto">
-                          <a class="nav-link dropdown-toggle btn btn-primary btn-sm ms-lg-3 rounded-pill" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <a class="nav-link dropdown-toggle btn btn-primary btn-sm  rounded-pill" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               <i class="fas fa-sign-in-alt me-1"></i> প্রবেশ
                           </a>
                           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdown">
