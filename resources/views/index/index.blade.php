@@ -297,6 +297,17 @@
                         </div>
                     </a>
 
+                    <!-- Notice 2: Emergency Maintenance (Warning Color) -->
+                    <a href="notice_board.html" class="text-decoration-none d-block">
+                        <div class="card p-3 shadow-sm rounded-3 notice-card" style="border-left: 5px solid #ffc107;"> <!-- Warning border color -->
+                            <div class="card-body p-2">
+                                <span class="notice-date small text-uppercase text-warning"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ১৭, ২০২৫</span>
+                                <h5 class="fw-bold mt-1 mb-2 text-warning">জরুরী সার্ভার রক্ষণাবেক্ষণ বিজ্ঞপ্তি</h5>
+                                <p class="small text-muted mb-0">আগামী শনিবার রাত ১২টা থেকে সকাল ৬টা পর্যন্ত পোর্টালের সেবাসমূহ সাময়িকভাবে বন্ধ থাকবে।</p>
+                            </div>
+                        </div>
+                    </a>
+
                 </div>
 
                 <!-- Link to the full notice board page -->
