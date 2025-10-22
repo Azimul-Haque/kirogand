@@ -343,7 +343,7 @@
                   </div>
 
                   <!-- Citizen Panel -->
-                  <div class="card shadow-sm border-0 rounded-3 border-start border-primary border-4" style="border-left-color: var(--primary-color) !important;" id="contact">
+                  <div class="card shadow-sm border-0 rounded-3 border-start border-primary border-4" style="border-left-color: var(--primary-color) !important;">
                       <div class="card-body p-4">
                           <h3 class="h4 card-title fw-bold" style="color: var(--primary-color);">নাগরিক প্যানেল</h3>
                           <p class="card-text text-muted">আপনার সনদপত্র আবেদনের অবস্থা জানতে এবং নতুন আবেদন করতে প্রবেশ করুন।</p>
