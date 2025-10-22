@@ -254,7 +254,7 @@
 
   <main>
     @yield('content')
-  <main>
+  </main>
 
 
   <!-- Start Footer Area -->

@@ -1,7 +1,7 @@
 
     
 
-    <main>
+    
         <!-- Hero/Banner Section -->
         <section id="home" class="hero-section section-gap">
             <div class="container">
