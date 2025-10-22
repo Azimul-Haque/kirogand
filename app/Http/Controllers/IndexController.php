@@ -78,6 +78,11 @@ class IndexController extends Controller
         return view('index.notices');
     }
 
+    public function getUserGuidelines()
+    {
+        return view('index.userguidelines');
+    }
+
     public function termsAndConditions()
     {
         return view('index.termsandconditions');
