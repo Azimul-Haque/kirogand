@@ -465,7 +465,7 @@
                               </button>
                           </div>
                       </form>
-                      <p class="text-center small mt-3 mb-0">বিস্তারিত যাচাইয়ের জন্য <a href="certificate_verify.html" class="text-info fw-bold">সনদ যাচাই পেজে</a> যান।</p>
+                      <p class="text-center small mt-3 mb-0">বিস্তারিত যাচাইয়ের জন্য <a href="{{ route('index.verify-certificate') }}" class="text-info fw-bold">সনদ যাচাই পেজে</a> যান।</p>
                   </div>
               </div>
 
