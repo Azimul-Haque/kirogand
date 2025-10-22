@@ -330,9 +330,9 @@ class IndexController extends Controller
         return view('index.auth.register-authority');
     }
 
-    public function getAuthorityRegister()
+    public function getCitizenRegister()
     {
-        return view('index.auth.register-authority');
+        return view('index.auth.register-citizen');
     }
 
     // clear configs, routes and serve
