@@ -433,6 +433,29 @@
                   </div>
               </div>
 
+
+              <div class="col-lg-6">
+                  <div class="p-4 p-md-5 verification-card">
+                      <h2 class="h3 fw-bold text-center mb-4" style="color: var(--darker-color);">
+                          <i class="fas fa-shield-alt me-2 text-primary"></i> দ্রুত সনদ যাচাই
+                      </h2>
+                      <p class="text-center text-muted mb-4">সনদপত্রের সত্যতা যাচাই করতে সনদ নম্বর ও QR কোড ব্যবহার করুন।</p>
+                      
+                      <form action="certificate_verify.html" method="GET" class="row g-3">
+                          <div class="col-md-7">
+                              <label for="certificateNumber" class="form-label fw-bold">সনদপত্রের নম্বর</label>
+                              <input type="text" class="form-control form-control-lg" id="certificateNumber" name="cert_id" placeholder="সনদপত্র নম্বরটি এখানে লিখুন" required>
+                          </div>
+                          <div class="col-md-5 d-flex align-items-end">
+                              <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold">
+                                  <i class="fas fa-search me-2"></i> যাচাই করুন
+                              </button>
+                          </div>
+                      </form>
+                      <p class="text-center small mt-3 mb-0">বিস্তারিত যাচাইয়ের জন্য <a href="certificate_verify.html" class="text-info fw-bold">সনদ যাচাই পেজে</a> যান।</p>
+                  </div>
+              </div>
+
           </div>
       </div>
   </section>
