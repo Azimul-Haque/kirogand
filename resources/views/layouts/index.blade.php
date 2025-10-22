@@ -229,7 +229,7 @@
                       <li class="nav-item"><a class="nav-link {{ Request::is('verify-certificate') ? 'active' : '' }}" href="{{ route('index.verify-certificate') }}"><i class="fas fa-check-circle me-1"></i> সনদ যাচাই</a></li>
                       <li class="nav-item"><a class="nav-link {{ Request::is('application-status') ? 'active' : '' }}" href="{{ route('index.application-status') }}"><i class="fas fa-tasks me-1"></i> আবেদনের অবস্থা</a></li>
                       <li class="nav-item"><a class="nav-link {{ Request::is('services') ? 'active' : '' }}" href="{{ route('index.services') }}"><i class="fas fa-list-check me-1"></i> সেবাসমূহ</a></li>
-                      <li class="nav-item"><a class="nav-link {{ Request::is('notices') ? 'active' : '' }}" href="{{ routes('index.notices') }}"><i class="fas fa-bullhorn me-1"></i> নোটিশ বোর্ড</a></li>
+                      <li class="nav-item"><a class="nav-link {{ Request::is('notices') ? 'active' : '' }}" href="{{ route('index.notices') }}"><i class="fas fa-bullhorn me-1"></i> নোটিশ বোর্ড</a></li>
                       <!-- Order Change: User Guide before Contact -->
                       <li class="nav-item"><a class="nav-link" href="/user-guide-link"><i class="fas fa-book me-1"></i> ব্যবহার নির্দেশিকা</a></li>
                       <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-headset me-1"></i> যোগাযোগ</a></li>
