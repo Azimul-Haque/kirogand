@@ -3,19 +3,70 @@
 
 @section('third_party_stylesheets')
   <style>
-    .notice-card {
-          background-color: var(--white-bg);
-          border-left: 5px solid var(--primary-color);
-          transition: box-shadow 0.3s, transform 0.3s;
-      }
-      .notice-card:hover {
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-          transform: translateY(-2px);
-      }
-      .notice-date {
-          color: var(--light-primary-color);
-          font-weight: 600;
-      }
+    /* Manual Card Styles */
+    .manual-card {
+        border-left: 5px solid var(--light-primary-color);
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.3s;
+    }
+    .manual-card:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .step-icon {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        background-color: #e3f2fd; /* Light Blue background */
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .manual-heading {
+        color: var(--darker-color);
+    }
+
+    /* Video Guide Styles */
+    .video-guide-card {
+        background-color: var(--white-bg);
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 25px;
+        transition: transform 0.2s;
+    }
+    .video-guide-card:hover {
+        transform: scale(1.02);
+    }
+    .video-thumbnail {
+        background-color: var(--darker-color);
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    }
+    .play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        color: white;
+        opacity: 0.9;
+        transition: opacity 0.2s;
+    }
+    .video-thumbnail:hover .play-icon {
+        opacity: 1;
+        color: var(--light-primary-color);
+    }
+    .placeholder-text {
+        color: #ccc;
+        padding: 30px 10px;
+        text-align: center;
+    }
   </style>
 @endsection
 
