@@ -3,6 +3,62 @@
 
 @section('third_party_stylesheets')
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css">
+
+    <style>
+      .service-box {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      }
+
+      .service-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      }
+
+      .icon-circle {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 10px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 28px;
+      }
+
+      input#serviceSearch {
+        box-shadow: none !important;
+      }
+
+      .input-group-lg .form-control,
+      .input-group-lg .input-group-text {
+        height: calc(2.875rem + 2px);
+        font-size: 1.25rem;
+      }
+
+      .rounded-left-pill {
+        border-top-left-radius: 50rem !important;
+        border-bottom-left-radius: 50rem !important;
+      }
+
+      .rounded-right-pill {
+        border-top-right-radius: 50rem !important;
+        border-bottom-right-radius: 50rem !important;
+      }
+
+      .text-decoration-none {
+        text-decoration: none !important;
+      }
+
+      .text-decoration-none:hover {
+        text-decoration: none !important;
+      }
+
+    </style>
 @endsection
 
 @section('content')
