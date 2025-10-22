@@ -72,7 +72,8 @@ Auth::routes([
     'register' => false,
 ]);
 
-Route::get('register/authority', 'IndexController@getRegister')->name('register.authority');
+Route::get('register/authority', 'IndexController@getAuthorityRegister')->name('register.authority');
+Route::get('register/citizen', 'IndexController@getCitizenRegister')->name('register.citizen');
 
 Route::get('/testunion', 'DashboardController@getDivDUUniData')->name('dashboard.testunion');
 
