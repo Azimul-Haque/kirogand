@@ -201,7 +201,7 @@
                       <div class="form-check mb-4">
                           <input class="form-check-input" type="checkbox" value="" id="policyCheck" required>
                           <label class="form-check-label small" for="policyCheck">
-                              আমি <a href="/admin-terms" class="text-primary fw-bold">প্রশাসনিক নীতিমালার</a> সাথে একমত পোষণ করছি <span class="required-asterisk">*</span>
+                              আমি <a href="{{ route('index.terms-and-conditions') }}" class="text-primary fw-bold">প্রশাসনিক নীতিমালার</a> সাথে একমত পোষণ করছি <span class="required-asterisk">*</span>
                           </label>
                       </div>
                       
