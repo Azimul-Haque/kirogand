@@ -160,17 +160,19 @@
                       <p class="text-muted small">নিচের ভিডিও টিউটোরিয়ালগুলো পোর্টালের প্রধান সেবাসমূহ সহজে বুঝতে সাহায্য করবে।</p>
                       
                       <!-- Video Guide 1: Citizen Registration -->
-                      <a href="#" class="text-decoration-none d-block video-guide-card">
-                          <h5 class="fw-bold text-primary mb-2">১. নতুন নাগরিক একাউন্ট তৈরি ও নিবন্ধন প্রক্রিয়া</h5>
-                          <div class="ratio ratio-16x9 video-thumbnail">
-                              <!-- Placeholder for YouTube/Video Embed -->
-                              <div class="placeholder-text d-flex align-items-center justify-content-center">
-                                  <i class="fas fa-video fa-2x me-2"></i> ভিডিও লোড করা হবে...
-                              </div>
-                              <i class="fab fa-youtube play-icon"></i>
+                      <div class="video-guide-card">
+                          <h5 class="fw-bold text-primary mb-2">১. নতুন নাগরিক একাউন্ট তৈরি ও নিবন্ধন প্রক্রিয়া (ভিডিও)</h5>
+                          <!-- YouTube Embed Code -->
+                          <div class="ratio ratio-16x9 rounded-3 overflow-hidden" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);">
+                              <iframe 
+                                  src="https://www.youtube.com/embed/D0UnqGm_miA" 
+                                  title="Dummy Video For Website - নাগরিক নিবন্ধন" 
+                                  frameborder="0" 
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                  allowfullscreen
+                              ></iframe>
                           </div>
-                          https://www.youtube.com/watch?v=D0UnqGm_miA
-                      </a>
+                      </div>
 
                       <!-- Video Guide 2: Certificate Application -->
                       <a href="#" class="text-decoration-none d-block video-guide-card">
