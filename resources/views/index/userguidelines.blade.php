@@ -93,7 +93,7 @@
                               <p>নাগরিক সনদ, জন্ম সনদ, ওয়ারিশ সনদ সহ যেকোনো প্রত্যয়নের জন্য আবেদন করতে নিম্নলিখিত ধাপগুলি অনুসরণ করুন:</p>
                               
                               <ol class="list-group ">
-                                  <li class="list-group-item d-flex  small">
+                                  <li class="list-group-item  align-items-start small">
                                       <strong>১: </strong> পোর্টাল প্রবেশ ও <a href="/citizen-registration">নিবন্ধন</a>।
                                   </li>
                                   <li class="list-group-item d-flex align-items-start small">
