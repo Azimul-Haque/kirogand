@@ -3,42 +3,7 @@
 
 @section('third_party_stylesheets')
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css">
-    <style type="text/css">
-      /* Service Cards Enhancement (6 column layout) */
-      .service-box {
-          background-color: var(--white-bg);
-          padding: 20px 10px; 
-          border-radius: 12px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
-          transition: transform 0.3s, box-shadow 0.3s;
-          min-height: 180px; 
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          border-bottom: 5px solid var(--darker-color); 
-      }
-
-      .service-box:hover {
-          transform: translateY(-8px); 
-          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-          border-bottom-color: var(--medium-color); 
-      }
-
-      .icon-circle {
-          background-color: var(--darker-color); 
-          color: white;
-          padding: 18px; 
-          border-radius: 50%; 
-          margin-bottom: 15px;
-          font-size: 1.8rem; 
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-          display: inline-flex; 
-          align-items: center; 
-          justify-content: center; 
-      }
-    </style>
+    
 @endsection
 
 @section('content')
