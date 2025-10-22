@@ -73,6 +73,11 @@ class IndexController extends Controller
         return view('index.applicationstatus');
     }
 
+    public function getNotices()
+    {
+        return view('index.applicationstatus');
+    }
+
     public function termsAndConditions()
     {
         return view('index.termsandconditions');
