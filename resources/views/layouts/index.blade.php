@@ -8,6 +8,7 @@
   @if (!Request::is('blogs', 'blogs/*', 'blog', 'blog/*'))
     <meta name="description" content="স্থানীয় সরকার কর্তৃপক্ষ কর্তৃক প্রদত্ত সকল প্রকার ডিজিটাল সনদপত্র ও প্রত্যয়নপত্র অনলাইনে আবেদন করুন। জন্ম নিবন্ধন, মৃত্যু নিবন্ধন, আয় ও চারিত্রিক সনদপত্র দ্রুত, সহজে এবং নির্ভরযোগ্যভাবে পান।">
     <meta name="keywords" content="সনদপত্র, প্রত্যয়ন, জন্ম নিবন্ধন, মৃত্যু নিবন্ধন, অনলাইন সেবা, স্থানীয় সরকার, ইউনিয়ন পরিষদ, পৌরসভা, ডিজিটাল সেবা, বাংলাদেশ">
+    <meta name="author" content="E-Prottoyon System">
 
     <meta property="og:image" content="{{ asset('images/bcs-exam-aid-banner.png') }}" />
     <meta property="og:type" content="website"/>
