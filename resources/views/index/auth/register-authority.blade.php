@@ -241,7 +241,7 @@
                       <p class="small mb-2">
                           যদি আপনি কোনো সমস্যার সম্মুখীন হোন অথবা আপনার কোনো জিজ্ঞাসা থাকলে আমাদের সাপোর্ট টিমের সাথে যোগাযোগ করতে পারেন।
                       </p>
-                      <a href="index.html#contact" class="btn btn-sm btn-outline-danger w-100 rounded-pill mt-2">
+                      <a href="{{ route('index.contact') }}" class="btn btn-sm btn-outline-danger w-100 rounded-pill mt-2">
                           <i class="fas fa-phone-alt me-2"></i> যোগাযোগ করতে এখানে ক্লিক করুন
                       </a>
                   </div>
