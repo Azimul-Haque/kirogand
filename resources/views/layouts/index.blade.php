@@ -252,8 +252,9 @@
   </header>
   <!--====== NAVBAR NINE PART ENDS ======-->
 
-
-  @yield('content')
+  <main>
+    @yield('content')
+  <main>
 
 
   <!-- Start Footer Area -->
