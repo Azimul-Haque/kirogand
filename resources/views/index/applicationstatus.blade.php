@@ -35,7 +35,7 @@
                               <input type="text" class="form-control form-control-lg rounded-pill" id="verificationInput" 
                                      placeholder="যেমন: BC-2024-123456 বা APP-0098765" required 
                                      aria-label="সনদ নং বা আবেদন আইডি নং ইনপুট">
-                              <div class="form-text mt-2 text-muted">এই একটি ফিল্ডেই আপনার সনদ নম্বর অথবা আবেদন আইডি নম্বরটি লিখুন।</div>
+                              <div class="form-text mt-2 text-muted">এই একটি ফিল্ডেই আপনার সনদ নম্বর অথবা আবেদন আইডি নম্বরটি লিখুন</div>
                           </div>
                           
                           <div class="d-grid">
