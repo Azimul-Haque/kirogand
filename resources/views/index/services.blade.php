@@ -1,5 +1,5 @@
 @extends('layouts.index')
-@section('title') ডিজিটাল নাগরিক @endsection
+@section('title') ডিজিটাল নাগরিক - সেবাসমূহ @endsection
 
 @section('third_party_stylesheets')
 
