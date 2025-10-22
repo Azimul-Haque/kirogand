@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO Optimization -->
     
-    <meta name="author" content="E-Prottoyon System">
+    
     
    
 </head>
@@ -399,9 +399,3 @@
         </section>
         
     </main>
-
-    
-    
-
-</body>
-</html>
