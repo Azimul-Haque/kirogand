@@ -358,7 +358,7 @@
   </section>
 
   <!-- Statistics and Contact Section -->
-  <section id="stats-contact" class="section-gap" style="background-color: var(--light-bg);">
+  <section id="stats-contact" class="section-gap" style="background-color: var(--light-bg);" id="contact">
       <div class="container">
           <div class="row g-5">
               
