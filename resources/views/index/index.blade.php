@@ -395,7 +395,7 @@
                           </div>
                       </div>
                        <!-- Stat Card 5 (Full Width) -->
-                       <div class="col-12">
+                       <div class="col-12" id="contact">
                           <div class="card p-4 rounded-3 text-center stats-card border-0 shadow-sm" style="background-color: #f0f4c3; border-bottom: 5px solid #607d8b;">
                               <h3 class="display-4 fw-bolder" style="color: #607d8b;">৪০ টি</h3>
                               <p class="mb-0 text-uppercase fw-bold text-muted">মোট সেবাসমূহ</p>
@@ -405,7 +405,7 @@
               </div>
               
               <!-- Contact Section -->
-              <div class="col-lg-6" id="contact">
+              <div class="col-lg-6">
                   <h2 class="h3 fw-bold mb-4" style="color: var(--darker-color);"><i class="fas fa-headset me-2"></i> যোগাযোগ ও সহায়তা</h2>
                   
                   <div class="card shadow-lg border-0 rounded-3">
