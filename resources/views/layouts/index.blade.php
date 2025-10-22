@@ -232,7 +232,7 @@
                       <li class="nav-item"><a class="nav-link {{ Request::is('notices') ? 'active' : '' }}" href="{{ route('index.notices') }}"><i class="fas fa-bullhorn me-1"></i> নোটিশ বোর্ড</a></li>
                       <!-- Order Change: User Guide before Contact -->
                       <li class="nav-item"><a class="nav-link" href="/user-guide-link"><i class="fas fa-book me-1"></i> ব্যবহার নির্দেশিকা</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-headset me-1"></i> যোগাযোগ</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{{ url('/#contact') }}"><i class="fas fa-headset me-1"></i> যোগাযোগ</a></li>
                       
                       <!-- Login/Dropdown remains, floated right (mostly redundant now, but kept for mobile/small screen) -->
                       <li class="nav-item dropdown ms-auto d-lg-none">
