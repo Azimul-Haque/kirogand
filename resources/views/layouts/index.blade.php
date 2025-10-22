@@ -250,9 +250,7 @@
           </div>
       </nav>
   </header>
-
   <!--====== NAVBAR NINE PART ENDS ======-->
-
 
 
   @yield('content')
