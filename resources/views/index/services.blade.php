@@ -137,7 +137,17 @@
                   </a>
               </div>
 
-              <!-- Service 1: জন্ম নিবন্ধন সনদ -->
+
+              <!-- Service 12: ভূমির খাজনা প্রত্যয়ন -->
+              <div class="col-lg-2 col-md-4 col-sm-6 service-box-container" data-service-id="12">
+                  <a href="/service/land-tax-certificate" class="text-decoration-none text-dark d-block">
+                      <div class="service-box">
+                          <div class="icon-circle" style="background-color: #607d8b;"><i class="fas fa-file-invoice-dollar"></i></div>
+                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">ভূমির খাজনা প্রত্যয়ন</h3>
+                      </div>
+                  </a>
+              </div>
+
               <div class="col-lg-2 col-md-4 col-sm-6 service-box-container" data-service-id="1">
                   <a href="/service/birth-certificate" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
@@ -246,6 +256,7 @@
                       </div>
                   </a>
               </div>
+
 
               <!-- Service 12: ভূমির খাজনা প্রত্যয়ন -->
               <div class="col-lg-2 col-md-4 col-sm-6 service-box-container" data-service-id="12">
