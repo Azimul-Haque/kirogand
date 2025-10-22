@@ -388,7 +388,7 @@
                           </div>
                       </div>
                       <!-- Stat Card 4 -->
-                      <div class="col-6" id="contact">
+                      <div class="col-6">
                           <div class="card p-4 rounded-3 text-center stats-card border-0 shadow-sm" style="background-color: #fce4ec; border-bottom: 5px solid #e91e63;">
                               <h3 class="display-4 fw-bolder" style="color: #e91e63;">৮০০৯১ টি</h3>
                               <p class="mb-0 text-uppercase fw-bold text-muted">সেবা প্রদান</p>
