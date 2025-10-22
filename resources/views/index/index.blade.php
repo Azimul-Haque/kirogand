@@ -2,7 +2,23 @@
 @section('title') ডিজিটাল নাগরিক @endsection
 
 @section('third_party_stylesheets')
-
+  <style>
+    /* --- NOTICE BOARD STYLES (MATCHING dedicated page) --- */
+    .notice-card {
+        background-color: var(--white-bg);
+        border-left: 5px solid var(--primary-color); /* Default border color */
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .notice-card:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+    }
+    .notice-date {
+        color: var(--light-primary-color);
+        font-weight: 600;
+    }
+    /* --- END NOTICE BOARD STYLES --- */
+  </style>
 @endsection
 
 @section('content')
