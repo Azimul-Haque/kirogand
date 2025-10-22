@@ -235,7 +235,7 @@
                       <li class="nav-item"><a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('index.contact') }}"><i class="fas fa-headset me-1"></i> যোগাযোগ</a></li>
                       
                       <!-- Login/Dropdown remains, floated right (mostly redundant now, but kept for mobile/small screen) -->
-                      <li class="nav-item dropdown ms-auto">
+                     {{--  <li class="nav-item dropdown ms-auto">
                           <a class="nav-link dropdown-toggle btn btn-primary btn-sm ms-lg-3 rounded-pill" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               <i class="fas fa-sign-in-alt me-1"></i> প্রবেশ
                           </a>
@@ -244,7 +244,7 @@
                               <li><hr class="dropdown-divider"></li>
                               <li><a class="dropdown-item text-info fw-bold" href="/admin-login"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক লগইন</a></li>
                           </ul>
-                      </li>
+                      </li> --}}
                   </ul>
               </div>
 
