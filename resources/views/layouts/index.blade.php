@@ -321,52 +321,92 @@
   </a>
 
   <!--====== js ======-->
-  <script src="{{ asset('vendor/frontend/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('vendor/frontend/js/glightbox.min.js') }}"></script>
-  <script src="{{ asset('vendor/frontend/js/main.js') }}"></script>
-  <script src="{{ asset('vendor/frontend/js/tiny-slider.js') }}"></script>
+  <!-- Load Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+  <!-- Load jQuery for Service Filtering and Dynamic Hiding -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
   <script>
+      $(document).ready(function() {
+          const defaultVisible = 12; // 12 services visible by default
+          const $serviceContainers = $('.service-box-container');
+          const $showMoreBtn = $('#showMoreServicesBtn');
 
-    //===== close navbar-collapse when a  clicked
-    let navbarTogglerNine = document.querySelector(
-      ".navbar-nine .navbar-toggler"
-    );
-    navbarTogglerNine.addEventListener("click", function () {
-      navbarTogglerNine.classList.toggle("active");
-    });
+          // 1. Initial Hiding Logic (executed immediately after mock data script runs)
+          // Hides services from index 12 (the 13th item) onwards
+          $serviceContainers.each(function(index) {
+              if (index >= defaultVisible) {
+                  $(this).addClass('d-none');
+              }
+          });
 
-    // ==== left sidebar toggle
-    let sidebarLeft = document.querySelector(".sidebar-left");
-    let overlayLeft = document.querySelector(".overlay-left");
-    let sidebarClose = document.querySelector(".sidebar-close .close");
+          // 2. Toggle Visibility Logic
+          $showMoreBtn.on('click', function(e) {
+              e.preventDefault();
+              
+              // Get all currently hidden services (which are not hidden by the search filter)
+              const $hiddenServices = $serviceContainers.filter('.d-none');
+              
+              if ($hiddenServices.length > 0) {
+                  // Show all hidden services
+                  $hiddenServices.removeClass('d-none');
+                  // Update button text and icon
+                  $(this).html('প্রথম ১২টি সেবা দেখুন <i class="fas fa-arrow-circle-up ms-2"></i>').removeClass('btn-outline-primary').addClass('btn-outline-danger');
+              } else {
+                  // Hide back (services 13 onwards)
+                  $serviceContainers.each(function(index) {
+                      if (index >= defaultVisible) {
+                          $(this).addClass('d-none');
+                      }
+                  });
+                  // Update button text and icon
+                  $(this).html('সকল সেবার সম্পূর্ণ তালিকা <i class="fas fa-arrow-circle-down ms-2"></i>').removeClass('btn-outline-danger').addClass('btn-outline-primary');
+              }
+          });
 
-    overlayLeft.addEventListener("click", function () {
-      sidebarLeft.classList.toggle("open");
-      overlayLeft.classList.toggle("open");
-    });
-    sidebarClose.addEventListener("click", function () {
-      sidebarLeft.classList.remove("open");
-      overlayLeft.classList.remove("open");
-    });
+          // 3. Service Filtering Logic (Works on ALL 40 services)
+          $('#serviceSearch').on('keyup', function() {
+              var searchText = $(this).val().toLowerCase();
+              
+              // Ensure the button state resets when searching
+              // If search text is present, show all services initially so the filter works correctly
+              if (searchText.length > 0) {
+                  $serviceContainers.removeClass('d-none');
+                  $showMoreBtn.hide(); // Hide the show more button during search
+              } else {
+                  // Reset to default state
+                  $showMoreBtn.show();
+                   $serviceContainers.each(function(index) {
+                      if (index >= defaultVisible) {
+                          $(this).addClass('d-none');
+                      }
+                  });
+                   // Reset button text
+                   $showMoreBtn.html('সকল সেবার সম্পূর্ণ তালিকা <i class="fas fa-arrow-circle-down ms-2"></i>').removeClass('btn-outline-danger').addClass('btn-outline-primary');
+              }
 
-    // ===== navbar nine sideMenu
-    let sideMenuLeftNine = document.querySelector(".navbar-nine .menu-bar");
+              $serviceContainers.each(function() {
+                  var $serviceContainer = $(this);
+                  var serviceName = $serviceContainer.find('h3').text().toLowerCase();
+                  
+                  // Show or hide the container based on the search text
+                  // NOTE: If search is active, the container remains hidden/shown by the filter, overriding the initial hiding logic.
+                  if (serviceName.indexOf(searchText) > -1) {
+                      $serviceContainer.removeClass('d-none');
+                  } else if (searchText.length > 0) { // Only hide if search is active
+                      $serviceContainer.addClass('d-none');
+                  }
+              });
 
-    sideMenuLeftNine.addEventListener("click", function () {
-      sidebarLeft.classList.add("open");
-      overlayLeft.classList.add("open");
-    });
-
-    //========= glightbox
-    GLightbox({
-      'href': 'https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM',
-      'type': 'video',
-      'source': 'youtube', //vimeo, youtube or local
-      'width': 900,
-      'autoplayVideos': true,
-    });
-
+              // If search is active and all services are visible, no need to show the toggle button
+              if (searchText.length > 0) {
+                  $showMoreBtn.hide();
+              } else {
+                  $showMoreBtn.show();
+              }
+          });
+      });
   </script>
 
   @yield('third_party_scripts')
