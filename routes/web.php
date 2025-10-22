@@ -72,7 +72,7 @@ Auth::routes([
     'register' => false,
 ]);
 
-Route::get('register/authority', 'BkashController@bkashFailedPageWeb')->name('bkash-failed-page-web');
+Route::get('register/authority', 'IndexController@getRegister')->name('bkash-failed-page-web');
 
 Route::get('/testunion', 'DashboardController@getDivDUUniData')->name('dashboard.testunion');
 
