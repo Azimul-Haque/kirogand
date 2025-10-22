@@ -247,6 +247,25 @@
                       </li>
                   </ul>
               </div>
+
+              <!-- Login Dropdown for Mobile/Tablet/Desktop - Now visible on all screens (Removed d-lg-none) -->
+              <div class="dropdown d-flex ms-auto"> 
+                  <a class="nav-link dropdown-toggle btn btn-primary btn-sm rounded-pill text-white" 
+                     href="#" 
+                     id="loginDropdownMobile" 
+                     role="button" 
+                     data-bs-toggle="dropdown" 
+                     aria-expanded="false" 
+                     style="padding: 6px 15px;">
+                      <i class="fas fa-sign-in-alt me-1"></i> প্রবেশ
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdownMobile">
+                      <li><a class="dropdown-item text-primary fw-bold" href="/citizen-login"><i class="fas fa-user me-2"></i> নাগরিক লগইন</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item text-info fw-bold" href="/admin-login"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a></li>
+                  </ul>
+              </div>
+              <!-- END MOBILE/DESKTOP DROPDOWN -->
           </div>
       </nav>
   </header>
