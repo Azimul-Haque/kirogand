@@ -320,7 +320,7 @@
               <div class="col-lg-5">
                   <h2 class="h3 fw-bold mb-4" style="color: var(--darker-color);"><i class="fas fa-key me-2"></i> কর্তৃপক্ষ তালিকাভুক্তির আবেদন</h2>
                   <!-- Administrative Panel (New distinct button colors) -->
-                  <div class="card shadow-sm border-0 rounded-3 admin-card" style="border-left-color: #00bcd4 !important;">
+                  <div class="card shadow-sm mb-4 border-0 rounded-3 admin-card" style="border-left-color: #00bcd4 !important;">
                       <div class="card-body p-4">
                           <h3 class="h4 card-title fw-bold" style="color: var(--darker-color);">প্রশাসনিক প্যানেল</h3>
                           <p class="card-text text-muted">সনদপত্র অনুমোদন, যাচাই এবং সিস্টেম পরিচালনার জন্য কর্তৃপক্ষের রেজিস্ট্রেশন ও লগইন।</p>
@@ -343,7 +343,7 @@
                   </div>
 
                   <!-- Citizen Panel -->
-                  <div class="card shadow-sm mb-4 border-0 rounded-3 border-start border-primary border-4" style="border-left-color: var(--primary-color) !important;">
+                  <div class="card shadow-sm border-0 rounded-3 border-start border-primary border-4" style="border-left-color: var(--primary-color) !important;">
                       <div class="card-body p-4">
                           <h3 class="h4 card-title fw-bold" style="color: var(--primary-color);">নাগরিক প্যানেল</h3>
                           <p class="card-text text-muted">আপনার সনদপত্র আবেদনের অবস্থা জানতে এবং নতুন আবেদন করতে প্রবেশ করুন।</p>
