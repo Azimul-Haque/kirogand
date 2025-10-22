@@ -268,36 +268,7 @@
                   </a>
               </div>
 
-              <!-- Additional Services (13-40) - Initially Hidden by JS -->
-              <!-- MOCK DATA LOOP START: 13 to 40 -->
-              <!-- The following script generates the remaining 28 services for demonstration -->
-              <script>
-                  // Function to generate services 13 through 40 (mock data)
-                  const serviceGrid = document.getElementById('serviceGrid');
-                  const colors = ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#009688', '#8bc34a', '#ffeb3b', '#ff5722'];
-                  
-                  for (let i = 13; i <= 40; i++) {
-                      const container = document.createElement('div');
-                      // Add d-none class for initial hiding, which JS will remove if necessary
-                      container.className = 'col-lg-2 col-md-4 col-sm-6 service-box-container d-none'; 
-                      container.dataset.serviceId = i;
-
-                      const serviceName = (i % 3 === 0) ? `বিশেষ সনদপত্র - ${i}` : (i % 2 === 0 ? `সরকারি সেবা - ${i}` : `অন্যান্য প্রত্যয়ন - ${i}`);
-                      const iconClass = (i % 5 === 0) ? 'fas fa-graduation-cap' : 'fas fa-id-card';
-                      const bgColor = colors[(i - 1) % colors.length];
-
-                      container.innerHTML = `
-                          <a href="/service/misc-${i}" class="text-decoration-none text-dark d-block">
-                              <div class="service-box">
-                                  <div class="icon-circle" style="background-color: ${bgColor};"><i class="${iconClass}"></i></div>
-                                  <h3 class="h5 fw-bolder" style="color: var(--darker-color);">${serviceName}</h3>
-                              </div>
-                          </a>
-                      `;
-                      serviceGrid.appendChild(container);
-                  }
-              </script>
-              <!-- MOCK DATA LOOP END -->
+              
 
           </div>
           
