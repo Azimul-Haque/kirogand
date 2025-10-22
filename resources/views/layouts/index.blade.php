@@ -61,8 +61,8 @@
     }
     
     .section-gap {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 
     /* 1. New Header Structure for Logo, and Nav */
