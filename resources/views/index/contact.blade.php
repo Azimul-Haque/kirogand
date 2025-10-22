@@ -26,7 +26,7 @@
       <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="fas fa-headset me-3 text-primary"></i> যোগাযোগ ও সহায়তা</h1>
         <div class="row justify-content-center">
             <!-- Contact Section -->
-            <div class="col-lg-6">
+            <div class="col-md-8 col-lg-6">
                 <div class="card shadow-lg border-0 rounded-3">
                     <div class="card-body p-5">
                         <h3 class="h4 fw-bold mb-4" style="color: var(--darker-color);">সহায়তা ডেস্কের ঠিকানা</h3>
