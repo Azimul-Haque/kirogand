@@ -265,7 +265,7 @@
                   
                   <div class="d-grid gap-3">
                     <!-- Notice 1: New Security Feature (Primary/Default Color) -->
-                    <a href="notice_board.html" class="text-decoration-none d-block">
+                    <a href="{{ route('index.notices') }}" class="text-decoration-none d-block">
                         <div class="card p-3 shadow-sm rounded-3 notice-card">
                             <div class="card-body p-2">
                                 <span class="notice-date small text-uppercase"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ২৪, ২০২৫</span>
@@ -276,7 +276,7 @@
                     </a>
                     
                     <!-- Notice 2: Emergency Maintenance (Warning Color) -->
-                    <a href="notice_board.html" class="text-decoration-none d-block">
+                    <a href="{{ route('index.notices') }}" class="text-decoration-none d-block">
                         <div class="card p-3 shadow-sm rounded-3 notice-card" style="border-left: 5px solid #ffc107;"> <!-- Warning border color -->
                             <div class="card-body p-2">
                                 <span class="notice-date small text-uppercase text-warning"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ১৭, ২০২৫</span>
@@ -287,7 +287,7 @@
                     </a>
 
                     <!-- Notice 3: Process Simplification (Success/Union Color) -->
-                    <a href="notice_board.html" class="text-decoration-none d-block">
+                    <a href="{{ route('index.notices') }}" class="text-decoration-none d-block">
                         <div class="card p-3 shadow-sm rounded-3 notice-card">
                             <div class="card-body p-2">
                                 <span class="notice-date small text-uppercase" style="color: var(--union-color);"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ০৫, ২০২৫</span>
@@ -298,7 +298,7 @@
                     </a>
 
                     <!-- Notice 2: Emergency Maintenance (Warning Color) -->
-                    <a href="notice_board.html" class="text-decoration-none d-block">
+                    <a href="{{ route('index.notices') }}" class="text-decoration-none d-block">
                         <div class="card p-3 shadow-sm rounded-3 notice-card" style="border-left: 5px solid #198754;"> <!-- Warning border color -->
                             <div class="card-body p-2">
                                 <span class="notice-date small text-uppercase text-success"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ১৭, ২০২৫</span>
@@ -312,7 +312,7 @@
 
                 <!-- Link to the full notice board page -->
                 <div class="mt-4 text-center text-lg-start">
-                    <a href="notice_board.html" class="btn btn-outline-primary rounded-pill fw-bold">সকল নোটিশ দেখুন <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="{{ route('index.notices') }}" class="btn btn-outline-primary rounded-pill fw-bold">সকল নোটিশ দেখুন <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
 
