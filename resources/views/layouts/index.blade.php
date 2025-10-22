@@ -232,7 +232,7 @@
                       <li class="nav-item"><a class="nav-link {{ Request::is('notices') ? 'active' : '' }}" href="{{ route('index.notices') }}"><i class="fas fa-bullhorn me-1"></i> নোটিশ বোর্ড</a></li>
                       <!-- Order Change: User Guide before Contact -->
                       <li class="nav-item"><a class="nav-link {{ Request::is('user-guidelines') ? 'active' : '' }}" href="{{ route('index.user-guidelines') }}"><i class="fas fa-book me-1"></i> ব্যবহার নির্দেশিকা</a></li>
-                      <li class="nav-item"><a class="nav-link" href="{{ url('/#contact') }}"><i class="fas fa-headset me-1"></i> যোগাযোগ</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{{ route('index.contact') }}"><i class="fas fa-headset me-1"></i> যোগাযোগ</a></li>
                       
                       <!-- Login/Dropdown remains, floated right (mostly redundant now, but kept for mobile/small screen) -->
                       <li class="nav-item dropdown ms-auto">
@@ -295,7 +295,7 @@
                   <h5 class="fw-bold text-uppercase">সহায়তা ও যোগাযোগ</h5>
                   <ul class="list-unstyled mt-3">
                       <li><a href="/faq">প্রায়শই জিজ্ঞাসিত প্রশ্ন (FAQ)</a></li>
-                      <li><a href="{{ url('/#contact') }}">সহায়তা কেন্দ্রে যোগাযোগ</a></li>
+                      <li><a href="{{ route('index.contact') }}">সহায়তা কেন্দ্রে যোগাযোগ</a></li>
                       <li><a href="{{ route('index.user-guidelines') }}">ব্যবহারকারী নির্দেশিকা</a></li>
                       <li><a href="/privacy">গোপনীয়তা নীতি</a></li>
                   </ul>
