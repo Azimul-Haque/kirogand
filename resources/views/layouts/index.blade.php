@@ -209,7 +209,7 @@
               </div>
               <!-- Replaced 'সহায়তা ডেস্ক' with two new account buttons -->
               <div class="d-none d-md-flex gap-3">
-                  <a href="{{ route('register.user') }}" class="btn btn-outline-light rounded-pill"><i class="fas fa-user me-2"></i> নাগরিক একাউন্ট</a>
+                  <a href="{{ route('register.citizen') }}" class="btn btn-outline-light rounded-pill"><i class="fas fa-user me-2"></i> নাগরিক একাউন্ট</a>
                   <a href="{{ route('register.authority') }}" class="btn btn-outline-info rounded-pill"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a>
               </div>
           </div>
