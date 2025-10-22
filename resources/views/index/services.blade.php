@@ -7,7 +7,7 @@
 
 @section('content')
   <!-- Services List Section (Dynamic Show/Hide Logic) -->
-  <section id="services" class="service-section section-gap">
+  <section id="services" class="service-section ">
       <div class="container">
           <h2 class="text-center mb-5 fw-bold display-6" style="color: var(--darker-color);">প্রধান ডিজিটাল সেবাসমূহ</h2>
           
