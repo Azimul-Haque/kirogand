@@ -268,8 +268,6 @@
                   </a>
               </div>
 
-              
-
           </div>
           
           <!-- Show More Button -->
