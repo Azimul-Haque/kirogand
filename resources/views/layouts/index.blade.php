@@ -235,7 +235,7 @@
                       <li class="nav-item"><a class="nav-link" href="{{ url('/#contact') }}"><i class="fas fa-headset me-1"></i> যোগাযোগ</a></li>
                       
                       <!-- Login/Dropdown remains, floated right (mostly redundant now, but kept for mobile/small screen) -->
-                      <li class="nav-item dropdown ms-auto d-lg-none">
+                      <li class="nav-item dropdown ms-auto">
                           <a class="nav-link dropdown-toggle btn btn-primary btn-sm ms-lg-3 rounded-pill" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               <i class="fas fa-sign-in-alt me-1"></i> প্রবেশ
                           </a>
