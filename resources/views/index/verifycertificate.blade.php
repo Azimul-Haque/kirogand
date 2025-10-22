@@ -27,7 +27,7 @@
               <!-- Verification Form Card -->
               <div class="card p-4 p-md-5 shadow-lg rounded-3">
                   <div class="card-body">
-                      <p class="lead text-muted mb-4 text-center">সনদটি যাচাই করতে অনুগ্রহ করে **সনদ নং অথবা আবেদন আইডি নং**-এর যেকোনো একটি সঠিকভাবে পূরণ করুন</p>
+                      <p class="lead text-muted mb-4 text-center">সনদটি যাচাই করতে অনুগ্রহ করে সনদ নং অথবা আবেদন আইডি নং-এর যেকোনো একটি সঠিকভাবে পূরণ করুন</p>
                       
                       <form id="verificationForm">
                         <div class="mb-5">
