@@ -244,7 +244,7 @@
           <div class="row g-5">
               
               <!-- Notices Section -->
-              <div class="col-lg-6">
+              <div class="col-lg-8">
                   <h2 class="h3 fw-bold mb-4" style="color: var(--darker-color);"><i class="fas fa-bell me-2"></i> গুরুত্বপূর্ণ নোটিশ বোর্ড</h2>
                   <div class="list-group shadow-sm rounded-3">
                       <a href="/notice/5" class="list-group-item list-group-item-action notice-card border-0 rounded-3 mb-2 p-3">
@@ -272,7 +272,7 @@
               </div>
 
               <!-- Registration/Login Links (Citizen and Admin) -->
-              <div class="col-lg-6">
+              <div class="col-lg-4">
                   <h2 class="h3 fw-bold mb-4" style="color: var(--darker-color);"><i class="fas fa-key me-2"></i> দ্রুত প্রবেশাধিকার</h2>
                   
                   <!-- Citizen Panel -->
