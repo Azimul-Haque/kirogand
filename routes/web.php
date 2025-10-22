@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'IndexController@index')->name('index.index');
-Route::get('/services', 'IndexController@getServices')->name('index.terms-and-conditions');
+Route::get('/services', 'IndexController@getServices')->name('index.services');
 
 
 Route::get('/terms-and-conditions', 'IndexController@termsAndConditions')->name('index.terms-and-conditions');
