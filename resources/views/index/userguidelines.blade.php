@@ -203,9 +203,6 @@
                               ></iframe>
                           </div>
                       </a>
-
-                      <!-- Footer note for video section -->
-                      <p class="text-center pt-3 small text-muted">এই লিংকগুলি টিউটোরিয়াল ভিডিও লোড হওয়ার জন্য প্রস্তুত।</p>
                   </div>
                   
               </div>
