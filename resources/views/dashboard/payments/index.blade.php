@@ -143,6 +143,62 @@
                   placeholder="সেবা অনুসন্ধান করুন (যেমন: জন্ম)"
                 />
               </div>
+            </div><div class="col-md-2">
+              <div class="input-group input-group-lg shadow-sm rounded-pill">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-white border-right-0 rounded-left-pill">
+                    <i class="fas fa-search text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  id="serviceSearch"
+                  class="form-control border-left-0 rounded-right-pill"
+                  placeholder="সেবা অনুসন্ধান করুন (যেমন: জন্ম)"
+                />
+              </div>
+            </div><div class="col-md-2">
+              <div class="input-group input-group-lg shadow-sm rounded-pill">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-white border-right-0 rounded-left-pill">
+                    <i class="fas fa-search text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  id="serviceSearch"
+                  class="form-control border-left-0 rounded-right-pill"
+                  placeholder="সেবা অনুসন্ধান করুন (যেমন: জন্ম)"
+                />
+              </div>
+            </div><div class="col-md-2">
+              <div class="input-group input-group-lg shadow-sm rounded-pill">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-white border-right-0 rounded-left-pill">
+                    <i class="fas fa-search text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  id="serviceSearch"
+                  class="form-control border-left-0 rounded-right-pill"
+                  placeholder="সেবা অনুসন্ধান করুন (যেমন: জন্ম)"
+                />
+              </div>
+            </div><div class="col-md-2">
+              <div class="input-group input-group-lg shadow-sm rounded-pill">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-white border-right-0 rounded-left-pill">
+                    <i class="fas fa-search text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  id="serviceSearch"
+                  class="form-control border-left-0 rounded-right-pill"
+                  placeholder="সেবা অনুসন্ধান করুন (যেমন: জন্ম)"
+                />
+              </div>
             </div>
           </div>
 
