@@ -39,7 +39,7 @@
                       </a>
                       <!-- Button Rename: আমাদের সকল সেবা দেখুন -> সনদ যাচাই করুন -->
                       <a href="{{ route('index.verify-certificate') }}" class="btn btn-outline-primary btn-lg rounded-pill shadow" style="">
-                          সনদ যাচাই করুন <i class="fas fa-magnifying-glass ms-2"></i>
+                          সনদ যাচাই করুন <i class="fas fa-check-double me-2"></i>
                       </a>
                   </div>
               </div>
