@@ -26,6 +26,7 @@
         border-bottom: 1px solid #ddd;
     }
     .verification-card {
+        background-color: var(--white-bg);
         border: 2px solid var(--primary-color);
         border-radius: 15px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
