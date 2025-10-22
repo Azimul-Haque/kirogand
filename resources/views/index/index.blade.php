@@ -383,35 +383,35 @@
                       <!-- Stat Card 1 -->
                       <div class="col-6">
                           <div class="card p-2 rounded-3 text-center stats-card border-0 shadow-sm" style="background-color: #e3f2fd; border-bottom: 5px solid var(--primary-color);">
-                              <h3 class="display-3 fw-bolder text-primary mb-1">২</h3>
+                              <h3 class="display-4 fw-bolder text-primary mb-1">২</h3>
                               <p class="mb-0 text-uppercase fw-bold text-muted">সিটি কর্পোরেশন</p>
                           </div>
                       </div>
                       <!-- Stat Card 2 -->
                       <div class="col-6">
                           <div class="card p-2 rounded-3 text-center stats-card border-0 shadow-sm" style="background-color: #fff3e0; border-bottom: 5px solid #ff9800;">
-                              <h3 class="display-3 fw-bolder" style="color: #ff9800;">৯</h3>
+                              <h3 class="display-4 fw-bolder" style="color: #ff9800;">৯</h3>
                               <p class="mb-0 text-uppercase fw-bold text-muted">পৌরসভা আওতাধীন</p>
                           </div>
                       </div>
                       <!-- Stat Card 3 -->
                       <div class="col-6">
                           <div class="card p-2 rounded-3 text-center stats-card border-0 shadow-sm" style="background-color: #e8f5e9; border-bottom: 5px solid #4caf50;">
-                              <h3 class="display-3 fw-bolder" style="color: #4caf50;">২৭১৭ টি</h3>
+                              <h3 class="display-4 fw-bolder" style="color: #4caf50;">২৭১৭ টি</h3>
                               <p class="mb-0 text-uppercase fw-bold text-muted">ইউনিয়ন আওতাধীন</p>
                           </div>
                       </div>
                       <!-- Stat Card 4 -->
                       <div class="col-6">
                           <div class="card p-2 rounded-3 text-center stats-card border-0 shadow-sm" style="background-color: #fce4ec; border-bottom: 5px solid #e91e63;">
-                              <h3 class="display-3 fw-bolder" style="color: #e91e63;">৮০০৯১ টি</h3>
+                              <h3 class="display-4 fw-bolder" style="color: #e91e63;">৮০০৯১ টি</h3>
                               <p class="mb-0 text-uppercase fw-bold text-muted">সেবা প্রদান</p>
                           </div>
                       </div>
                        <!-- Stat Card 5 (Full Width) -->
                        <div class="col-12">
                           <div class="card p-2 rounded-3 text-center stats-card border-0 shadow-sm" style="background-color: #f0f4c3; border-bottom: 5px solid #607d8b;">
-                              <h3 class="display-3 fw-bolder" style="color: #607d8b;">৪০ টি</h3>
+                              <h3 class="display-4 fw-bolder" style="color: #607d8b;">৪০ টি</h3>
                               <p class="mb-0 text-uppercase fw-bold text-muted">মোট সেবাসমূহ</p>
                           </div>
                       </div>
