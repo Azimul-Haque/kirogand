@@ -40,59 +40,214 @@
   <!-- Services List Section (Dynamic Show/Hide Logic) -->
   <section id="services" class="service-section section-gap">
     <div class="container">
-      <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="fas fa-bullhorn me-3 text-primary"></i> কর্তৃপক্ষ নিবন্ধন</h1>
-      
-      <!-- Centered Row for 6-Column Content -->
-      <div class="row justify-content-center">
-          <!-- Applies 6-column width on large screens -->
-          <div class="col-md-8 col-lg-7"> 
-              
-              <div id="noticeList" class="d-grid gap-4">
-                  <!-- Mock Notices -->
-                  <div class="card p-3 shadow-sm rounded-3 notice-card">
-                      <div class="card-body p-2">
-                          <span class="notice-date small text-uppercase"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ২৪, ২০২৫</span>
-                          <h5 class="fw-bold mt-1 mb-2">ডিজিটাল সনদ যাচাইয়ে নতুন নিরাপত্তা ফিচার যুক্তকরণ</h5>
-                          <p class="small text-muted mb-2">সনদ যাচাই প্রক্রিয়াকে আরও সুরক্ষিত করতে নতুন দ্বি-স্তর যাচাইকরণ পদ্ধতি চালু করা হয়েছে। বিস্তারিত জানতে নিচে দেখুন।</p>
-                          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-eye me-1"></i> বিস্তারিত পড়ুন</a>
-                      </div>
-                  </div>
+      <!-- Title for Registration Page -->
+      <h1 class="text-center display-6 fw-bold mb-4" style="color: var(--darker-color);">
+          <i class="fas fa-user-plus me-3 text-info"></i> প্রশাসনিক কর্মকর্তা নিবন্ধন
+      </h1>
+      <p class="text-center lead mb-5 text-muted">স্থানীয় সরকার কর্তৃপক্ষের কর্মকর্তা ও কর্মচারীদের জন্য ডেডিকেটেড একাউন্ট নিবন্ধন ফর্ম।</p>
 
-                  <div class="card p-3 shadow-sm rounded-3 notice-card">
-                      <div class="card-body p-2">
-                          <span class="notice-date small text-uppercase text-warning"><i class="fas fa-calendar-alt me-1"></i> অক্টোবর ১৭, ২০২৫</span>
-                          <h5 class="fw-bold mt-1 mb-2 text-warning">জরুরী সার্ভার রক্ষণাবেক্ষণ বিজ্ঞপ্তি</h5>
-                          <p class="small text-muted mb-2">আগামী শনিবার রাত ১২টা থেকে সকাল ৬টা পর্যন্ত পোর্টালের সেবাসমূহ সাময়িকভাবে বন্ধ থাকবে।</p>
-                          <a href="#" class="btn btn-sm btn-outline-warning rounded-pill"><i class="fas fa-eye me-1"></i> বিস্তারিত পড়ুন</a>
-                      </div>
-                  </div>
+      <div class="row justify-content-center g-4">
+          
+          <!-- Left Column (Form: 8/12) -->
+          <div class="col-lg-8">
+              <div class="card p-4 p-md-5 form-card bg-white">
+                  <!-- EDITED: Added method="POST" and action="/admin/register" for custom route targeting -->
+                  <form id="adminRegistrationForm" method="POST" action="/admin/register">
+                      
+                      <!-- Section 1: সাধারণ তথ্য -->
+                      <h2 class="h5 form-heading"><i class="fas fa-info-circle me-2"></i> সাধারণ তথ্য</h2>
+                      <div class="row g-3 mb-4">
+                          
+                          <!-- নাম (বাংলায়) -->
+                          <div class="col-md-6">
+                              <label for="nameBn" class="form-label small fw-bold">নাম (বাংলায়) <span class="required-asterisk">*</span></label>
+                              <input type="text" class="form-control" id="nameBn" placeholder="যেমন: আব্দুল করিম" required>
+                          </div>
+                          
+                          <!-- নাম (ইংরেজিতে) -->
+                          <div class="col-md-6">
+                              <label for="nameEn" class="form-label small fw-bold">নাম (ইংরেজিতে) <span class="required-asterisk">*</span></label>
+                              <input type="text" class="form-control" id="nameEn" placeholder="E.g., Abdul Karim" required>
+                          </div>
+                          
+                          <!-- জাতীয় পরিচয়পত্র নম্বর -->
+                          <div class="col-md-6">
+                              <label for="nid" class="form-label small fw-bold">জাতীয় পরিচয়পত্র নম্বর <span class="required-asterisk">*</span></label>
+                              <input type="text" class="form-control" id="nid" placeholder="১১/১৭ সংখ্যার এনআইডি" required pattern="[0-9]{10,17}" title="অনুগ্রহ করে সঠিক এনআইডি নম্বর দিন।">
+                          </div>
+                          
+                          <!-- মোবাইল নম্বর -->
+                          <div class="col-md-6">
+                              <label for="mobile" class="form-label small fw-bold">মোবাইল নম্বর <span class="required-asterisk">*</span></label>
+                              <div class="input-group">
+                                  <span class="input-group-text">+৮৮</span>
+                                  <input type="tel" class="form-control" id="mobile" placeholder="১১ ডিজিটের মোবাইল নম্বর" required maxlength="11" pattern="[0-9]{11}" title="১১ ডিজিটের মোবাইল নম্বর দিন।">
+                              </div>
+                          </div>
 
-                  <div class="card p-3 shadow-sm rounded-3 notice-card">
-                      <div class="card-body p-2">
-                          <span class="notice-date small text-uppercase"><i class="fas fa-calendar-alt me-1"></i> সেপ্টেম্বর ০৫, ২০২৫</span>
-                          <h5 class="fw-bold mt-1 mb-2">সকল প্রকার ট্রেড লাইসেন্সের জন্য নতুন আবেদন ফরম চালু</h5>
-                          <p class="small text-muted mb-2">পৌরসভা এবং ইউনিয়ন পর্যায়ে ট্রেড লাইসেন্সের অনলাইন আবেদন ফরমে কিছু নতুন তথ্য সংযোজন করা হয়েছে।</p>
-                          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-eye me-1"></i> বিস্তারিত পড়ুন</a>
+                          <!-- ইমেইল এড্রেস -->
+                          <div class="col-md-6">
+                              <label for="email" class="form-label small fw-bold">ইমেইল এড্রেস <span class="required-asterisk">*</span></label>
+                              <input type="email" class="form-control" id="email" placeholder="example@gov.bd" required>
+                          </div>
+                          
+                          <!-- একাউন্ট ধরন -->
+                          <div class="col-md-6">
+                              <label for="accountType" class="form-label small fw-bold">একাউন্ট ধরন <span class="required-asterisk">*</span></label>
+                              <select id="accountType" class="form-select" required>
+                                  <option value="">নির্বাচন করুন...</option>
+                                  <option value="officer">প্রশাসনিক কর্মকর্তা</option>
+                                  <option value="secretary">ইউনিয়ন সচিব / সহকারী</option>
+                                  <option value="chairman">চেয়ারম্যান/মেয়র</option>
+                              </select>
+                          </div>
                       </div>
-                  </div>
 
-                  <div class="card p-3 shadow-sm rounded-3 notice-card">
-                      <div class="card-body p-2">
-                          <span class="notice-date small text-uppercase"><i class="fas fa-calendar-alt me-1"></i> আগস্ট ১০, ২০২৫</span>
-                          <h5 class="fw-bold mt-1 mb-2">জন্ম ও মৃত্যু সনদের ফি পুনর্নির্ধারণ</h5>
-                          <p class="small text-muted mb-2">সরকারের নতুন গেজেট অনুযায়ী জন্ম ও মৃত্যু নিবন্ধন সনদের জন্য প্রযোজ্য ফির হার পরিবর্তন করা হয়েছে।</p>
-                          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill"><i class="fas fa-eye me-1"></i> বিস্তারিত পড়ুন</a>
+                      <!-- Section 2: অফিস তথ্য -->
+                      <h2 class="h5 form-heading mt-4"><i class="fas fa-building me-2"></i> অফিস তথ্য</h2>
+                      <div class="row g-3 mb-4">
+                          
+                          <!-- কর্তৃপক্ষের ধরণ -->
+                          <div class="col-md-6">
+                              <label for="authorityType" class="form-label small fw-bold">কর্তৃপক্ষের ধরণ <span class="required-asterisk">*</span></label>
+                              <select id="authorityType" class="form-select" required>
+                                  <option value="">নির্বাচন করুন...</option>
+                                  <option value="up">ইউনিয়ন পরিষদ</option>
+                                  <option value="poura">পৌরসভা</option>
+                                  <option value="upazila">উপজেলা পরিষদ</option>
+                                  <option value="district">জেলা পরিষদ</option>
+                              </select>
+                          </div>
+                          
+                          <!-- বিভাগ -->
+                          <div class="col-md-6">
+                              <label for="division" class="form-label small fw-bold">বিভাগ <span class="required-asterisk">*</span></label>
+                              <select id="division" class="form-select" required>
+                                  <option value="">নির্বাচন করুন...</option>
+                                  <option value="dhaka">ঢাকা</option>
+                                  <option value="chattogram">চট্টগ্রাম</option>
+                                  <!-- Add more divisions as needed -->
+                              </select>
+                          </div>
+
+                          <!-- জেলা -->
+                          <div class="col-md-6">
+                              <label for="district" class="form-label small fw-bold">জেলা <span class="required-asterisk">*</span></label>
+                              <select id="district" class="form-select" required>
+                                  <option value="">নির্বাচন করুন...</option>
+                                  <option value="dhaka">ঢাকা</option>
+                                  <option value="gazipur">গাজীপুর</option>
+                                  <!-- Options based on selected Division in real app -->
+                              </select>
+                          </div>
+                          
+                          <!-- থানা / উপজেলা -->
+                          <div class="col-md-6">
+                              <label for="upazila" class="form-label small fw-bold">থানা / উপজেলা <span class="required-asterisk">*</span></label>
+                              <select id="upazila" class="form-select" required>
+                                  <option value="">নির্বাচন করুন...</option>
+                                  <option value="sreepur">শ্রীপুর</option>
+                                  <option value="kapasia">কাপাসিয়া</option>
+                                  <!-- Options based on selected District in real app -->
+                              </select>
+                          </div>
+
+                          <!-- NEW FIELD: ইউনিয়ন -->
+                          <div class="col-md-6">
+                              <label for="union" class="form-label small fw-bold">ইউনিয়ন <span class="required-asterisk">*</span></label>
+                              <select id="union" class="form-select" required>
+                                  <option value="">নির্বাচন করুন...</option>
+                                  <option value="unit1">ইউনিয়ন ১</option>
+                                  <option value="unit2">ইউনিয়ন ২</option>
+                                  <!-- Options based on selected Upazila in real app -->
+                              </select>
+                          </div>
+                          
+                          <!-- কর্তৃপক্ষ (Union/Pourashava/Upazila name) -->
+                          <div class="col-md-6">
+                              <label for="authorityName" class="form-label small fw-bold">কর্তৃপক্ষ (নাম) <span class="required-asterisk">*</span></label>
+                              <select id="authorityName" class="form-select" required>
+                                  <option value="">নির্বাচন করুন...</option>
+                                  <option value="tekmot">টেকমত ইউনিয়ন পরিষদ</option>
+                                  <option value="gazipurPoura">গাজীপুর পৌরসভা</option>
+                                  <!-- Options based on selected Upazila/Authority Type -->
+                              </select>
+                          </div>
+                          
+                          <!-- অফিস (Specific Office/Designation) -->
+                          <div class="col-md-6">
+                              <label for="office" class="form-label small fw-bold">অফিস (নির্দিষ্ট পদবি/কার্যালয়) <span class="required-asterisk">*</span></label>
+                              <input type="text" class="form-control" id="office" placeholder="যেমন: সহকারী সচিব, তথ্যকেন্দ্র" required>
+                          </div>
                       </div>
-                  </div>
-                  
-              </div>
-              
-              <div class="text-center mt-5">
-                   <button class="btn btn-lg btn-secondary rounded-pill fw-bold text-uppercase shadow-sm" disabled>
-                      <i class="fas fa-history me-2"></i> আরও পুরোনো নোটিশ
-                  </button>
+                      
+                      <!-- Section 3: নিরাপত্তা তথ্য -->
+                      <h2 class="h5 form-heading mt-4"><i class="fas fa-lock me-2"></i> পাসওয়ার্ড তৈরি</h2>
+                      <div class="row g-3 mb-4">
+                          <!-- পাসওয়ার্ড -->
+                          <div class="col-md-6">
+                              <label for="password" class="form-label small fw-bold">পাসওয়ার্ড <span class="required-asterisk">*</span></label>
+                              <input type="password" class="form-control" id="password" required minlength="8" placeholder="ন্যূনতম ৮ অক্ষরের পাসওয়ার্ড">
+                          </div>
+                          
+                          <!-- কনফার্ম পাসওয়ার্ড -->
+                          <div class="col-md-6">
+                              <label for="confirmPassword" class="form-label small fw-bold">কনফার্ম পাসওয়ার্ড <span class="required-asterisk">*</span></label>
+                              <input type="password" class="form-control" id="confirmPassword" required placeholder="পাসওয়ার্ড পুনরায় লিখুন">
+                          </div>
+                      </div>
+                      
+                      <!-- Section 4: সম্মতি -->
+                      <div class="form-check mb-4">
+                          <input class="form-check-input" type="checkbox" value="" id="policyCheck" required>
+                          <label class="form-check-label small" for="policyCheck">
+                              আমি <a href="/admin-terms" class="text-primary fw-bold">প্রশাসনিক নীতিমালার</a> সাথে একমত পোষণ করছি <span class="required-asterisk">*</span>
+                          </label>
+                      </div>
+                      
+                      <!-- Submit Button -->
+                      <button type="submit" class="btn btn-success btn-lg w-100 rounded-pill fw-bold"><i class="fas fa-user-plus me-2"></i> নিবন্ধন করুন</button>
+                  </form>
               </div>
           </div>
+          
+          <!-- Right Column (Instructions: 4/12) -->
+          <div class="col-lg-4">
+              <div class="guideline-card h-100">
+                  <h4 class="h5 fw-bold text-darker mb-3"><i class="fas fa-bullhorn me-2 text-primary"></i> নির্দেশিকা ও সতর্কতা</h4>
+                  
+                  <div class="mb-4">
+                      <h6 class="fw-bold text-darker mb-2">আবশ্যিক তথ্যাদি:</h6>
+                      <ul class="list-unstyled small">
+                          <li class="mb-1"><i class="fas fa-check-circle me-2 text-success"></i> <span class="required-asterisk">(*)</span> চিহ্নিত ক্ষেত্রগুলি পূরণ করা বাধ্যতামূলক।</li>
+                          <li class="mb-1"><i class="fas fa-check-circle me-2 text-success"></i> আপনার সঠিক ও সম্পূর্ণ ১১ ডিজিটের মোবাইল নম্বর পূরণ করুন।</li>
+                          <li class="mb-1"><i class="fas fa-check-circle me-2 text-success"></i> অনুগ্রহ করে সঠিক নাম্বার প্রদান করুন, কারণ এটি অ্যাকাউন্টের জন্য ব্যবহার হবে।</li>
+                      </ul>
+                  </div>
+
+                  <div class="mb-4">
+                      <h6 class="fw-bold text-darker mb-2">যাচাইকরণ প্রক্রিয়া:</h6>
+                      <p class="small mb-2">
+                          তথ্য জমা দেওয়ার পর একটি **যাচাইকরণ কোড** প্রদানকৃত মোবাইল নম্বর অথবা ইমেইল এড্রেসে পাঠানো হবে। এই কোডটি দিয়ে আপনার অ্যাকাউন্টের সত্যতা যাচাই করা হবে।
+                      </p>
+                      <p class="small fw-bold text-danger">অনুগ্রহ করে সঠিক তথ্য প্রদান করুন।</p>
+                  </div>
+                  
+                  <hr class="border-primary opacity-50">
+                  
+                  <!-- জরুরী প্রয়োজনে -->
+                  <div class="mt-4">
+                      <h6 class="fw-bold text-darker mb-2"><i class="fas fa-headset me-2 text-danger"></i> জরুরী প্রয়োজনে</h6>
+                      <p class="small mb-2">
+                          যদি আপনি কোনো সমস্যার সম্মুখীন হোন অথবা আপনার কোনো জিজ্ঞাসা থাকলে আমাদের সাপোর্ট টিমের সাথে যোগাযোগ করতে পারেন।
+                      </p>
+                      <a href="index.html#contact" class="btn btn-sm btn-outline-danger w-100 rounded-pill mt-2">
+                          <i class="fas fa-phone-alt me-2"></i> যোগাযোগ করতে এখানে ক্লিক করুন
+                      </a>
+                  </div>
+              </div>
+          </div>
+
       </div>
     </div>
   </section>
