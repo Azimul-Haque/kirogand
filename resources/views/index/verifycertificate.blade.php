@@ -31,7 +31,7 @@
                       
                       <form id="verificationForm">
                           <div class="mb-5">
-                              <label for="verificationInput" class="form-label fw-bold h4">সনদ নং / আবেদন আইডি নং <span class="text-danger">*</span></label>
+                              <label for="verificationInput" class="form-label fw-bold h4">আবেদন আইডি নং * <span class="text-danger">*</span></label>
                               <input type="text" class="form-control form-control-lg rounded-pill" id="verificationInput" 
                                      placeholder="যেমন: BC-2024-123456 বা APP-0098765" required 
                                      aria-label="সনদ নং বা আবেদন আইডি নং ইনপুট">
