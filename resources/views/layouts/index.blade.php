@@ -224,7 +224,7 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav w-100 align-items-lg-center">
-                      <li class="nav-item"><a class="nav-link" href="{{ route('index.index') }}"><i class="fas fa-home me-1"></i> হোম</a></li>
+                      <li class="nav-item"><a class="nav-link active" href="{{ route('index.index') }}"><i class="fas fa-home me-1"></i> হোম</a></li>
                       <!-- New Links Added -->
                       <li class="nav-item"><a class="nav-link" href="{{ route('index.verify-certificate') }}"><i class="fas fa-check-circle me-1"></i> সনদ যাচাই</a></li>
                       <li class="nav-item"><a class="nav-link" href="/application-status"><i class="fas fa-tasks me-1"></i> আবেদনের অবস্থা</a></li>
