@@ -23,7 +23,7 @@
   <!-- Services List Section (Dynamic Show/Hide Logic) -->
   <section id="services" class="service-section section-gap">
     <div class="container">
-      <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="fas fa-bullhorn me-3 text-primary"></i> গুরুত্বপূর্ণ নোটিশ বোর্ড</h1>
+      <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="fas fa-bullhorn me-3 text-primary"></i> কর্তৃপক্ষ নিবন্ধন</h1>
       
       <!-- Centered Row for 6-Column Content -->
       <div class="row justify-content-center">
