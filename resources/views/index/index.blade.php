@@ -405,7 +405,7 @@
               </div>
               
               <!-- Contact Section -->
-              <div class="col-lg-6">
+              <div class="col-lg-6" id="contact">
                   <h2 class="h3 fw-bold mb-4" style="color: var(--darker-color);"><i class="fas fa-headset me-2"></i> যোগাযোগ ও সহায়তা</h2>
                   
                   <div class="card shadow-lg border-0 rounded-3">
