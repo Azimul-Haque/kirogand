@@ -206,7 +206,7 @@
               <p class="text-center pt-5 text-muted">যদি আপনার কোনো কারিগরি সহায়তা প্রয়োজন হয়, অনুগ্রহ করে আমাদের <a href="index.html#contact">যোগাযোগ</a> সেকশনটি দেখুন।</p>
           </div>
       </div>
-  </div>
+    </div>
   </section>
 @endsection
 
