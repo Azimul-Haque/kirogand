@@ -17,6 +17,7 @@ Route::get('/', 'IndexController@index')->name('index.index');
 Route::get('/services', 'IndexController@getServices')->name('index.services');
 Route::get('/verify-certificate', 'IndexController@verifyCertificate')->name('index.verify-certificate');
 Route::get('/application-status', 'IndexController@applicationStatus')->name('index.application-status');
+Route::get('/notices', 'IndexController@applicationStatus')->name('index.notices');
 
 
 Route::get('/terms-and-conditions', 'IndexController@termsAndConditions')->name('index.terms-and-conditions');
