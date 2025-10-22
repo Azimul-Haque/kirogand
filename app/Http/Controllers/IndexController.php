@@ -58,6 +58,11 @@ class IndexController extends Controller
                     ->withBlogs($blogs);
     }
 
+    public function getServices()
+    {
+        return view('index.services');
+    }
+
     public function termsAndConditions()
     {
         return view('index.termsandconditions');
