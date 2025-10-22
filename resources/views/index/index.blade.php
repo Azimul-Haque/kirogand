@@ -417,35 +417,6 @@
                       </div>
                   </div>
               </div>
-              
-              <!-- Contact Section -->
-              <div class="col-lg-6">
-                  <h2 class="h3 fw-bold mb-4" style="color: var(--darker-color);"><i class="fas fa-headset me-2"></i> যোগাযোগ ও সহায়তা</h2>
-                  
-                  <div class="card shadow-lg border-0 rounded-3">
-                      <div class="card-body p-5">
-                          <h3 class="h4 fw-bold mb-4" style="color: var(--darker-color);">সহায়তা ডেস্কের ঠিকানা</h3>
-                          <p class="mb-2"><i class="fas fa-map-marker-alt me-2" style="color: var(--light-primary-color);"></i> <strong>ঠিকানা:</strong> ডিজিটাল প্রত্যয়ন শাখা, স্থানীয় সরকার বিভাগ, ঢাকা, বাংলাদেশ।</p>
-                          <p class="mb-2"><i class="fas fa-phone me-2" style="color: var(--light-primary-color);"></i> <strong>ফোন:</strong> +৮৮০ ৯৬৭৮-০০০০০০ (কার্যকালীন)</p>
-                          <p class="mb-4"><i class="fas fa-envelope me-2" style="color: var(--light-primary-color);"></i> <strong>ইমেইল:</strong> support@esonod.gov.bd</p>
-                          
-                          <hr>
-                          
-                          <form action="/contact-submit" method="POST">
-                              <div class="mb-3">
-                                  <label for="contactName" class="form-label">আপনার নাম</label>
-                                  <input type="text" class="form-control rounded-pill" id="contactName" placeholder="নাম" required>
-                              </div>
-                              <div class="mb-4">
-                                  <label for="contactMessage" class="form-label">বার্তার বিষয়বস্তু</label>
-                                  <textarea class="form-control rounded-3" id="contactMessage" rows="4" placeholder="আপনার সমস্যাটি লিখুন..." required></textarea>
-                              </div>
-                              <button type="submit" class="btn btn-primary w-100 rounded-pill text-uppercase fw-bold">বার্তা পাঠান</button>
-                          </form>
-                      </div>
-                  </div>
-              </div>
-
 
               <div class="col-lg-6">
                   <div class="p-4 p-md-5 verification-card">
