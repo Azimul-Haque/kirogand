@@ -37,7 +37,7 @@
                           <i class="fas fa-file-alt me-2"></i> সনদ আবেদন করুন
                       </a>
                       <!-- Button Rename: আমাদের সকল সেবা দেখুন -> সনদ যাচাই করুন -->
-                      <a href="{{ route('index.verify-certificate') }}" class="btn btn-outline-primary btn-lg rounded-pill shadow" style="color: var(--darker-color);">
+                      <a href="{{ route('index.verify-certificate') }}" class="btn btn-outline-primary btn-lg rounded-pill shadow" style="">
                           সনদ যাচাই করুন <i class="fas fa-magnifying-glass ms-2"></i>
                       </a>
                   </div>
