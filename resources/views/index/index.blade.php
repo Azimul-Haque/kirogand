@@ -65,10 +65,13 @@
                               <img src="{{ asset('images/slider/1.jpg') }}" class="d-block w-100" alt="Slider Image 1">
                           </div>
                           <div class="carousel-item">
-                              <img src="https://placehold.co/600x420/2c3e50/ffffff?text=দ্রুত+সনদ+যাচাই" class="d-block w-100" alt="Slider Image 2">
+                              <img src="{{ asset('images/slider/2.jpg') }}" class="d-block w-100" alt="Slider Image 2">
                           </div>
                           <div class="carousel-item">
-                              <img src="https://placehold.co/600x420/17a2b8/ffffff?text=স্থানীয়+সরকার+কর্তৃপক্ষ" class="d-block w-100" alt="Slider Image 3">
+                              <img src="{{ asset('images/slider/3.jpg') }}" class="d-block w-100" alt="Slider Image 3">
+                          </div>
+                          <div class="carousel-item">
+                              <img src="{{ asset('images/slider/4.jpg') }}" class="d-block w-100" alt="Slider Image 4">
                           </div>
                       </div>
                       <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
