@@ -28,7 +28,7 @@
       <!-- Centered Row for 6-Column Content -->
       <div class="row justify-content-center">
           <!-- Applies 6-column width on large screens -->
-          <div class="col-md-8 col-lg-8"> 
+          <div class="col-md-8 col-lg-7"> 
               
               <div id="noticeList" class="d-grid gap-4">
                   <!-- Mock Notices -->
