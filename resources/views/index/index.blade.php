@@ -394,7 +394,87 @@
 @endsection
 
 @section('third_party_scripts')
-  
+  <script>
+      $(document).ready(function() {
+          const defaultVisible = 12; // 12 services visible by default
+          const $serviceContainers = $('.service-box-container');
+          const $showMoreBtn = $('#showMoreServicesBtn');
+
+          // 1. Initial Hiding Logic (executed immediately after mock data script runs)
+          // Hides services from index 12 (the 13th item) onwards
+          $serviceContainers.each(function(index) {
+              if (index >= defaultVisible) {
+                  $(this).addClass('d-none');
+              }
+          });
+
+          // 2. Toggle Visibility Logic
+          $showMoreBtn.on('click', function(e) {
+              e.preventDefault();
+              
+              // Get all currently hidden services (which are not hidden by the search filter)
+              const $hiddenServices = $serviceContainers.filter('.d-none');
+              
+              if ($hiddenServices.length > 0) {
+                  // Show all hidden services
+                  $hiddenServices.removeClass('d-none');
+                  // Update button text and icon
+                  $(this).html('প্রথম ১২টি সেবা দেখুন <i class="fas fa-arrow-circle-up ms-2"></i>').removeClass('btn-outline-primary').addClass('btn-outline-danger');
+              } else {
+                  // Hide back (services 13 onwards)
+                  $serviceContainers.each(function(index) {
+                      if (index >= defaultVisible) {
+                          $(this).addClass('d-none');
+                      }
+                  });
+                  // Update button text and icon
+                  $(this).html('সকল সেবার সম্পূর্ণ তালিকা <i class="fas fa-arrow-circle-down ms-2"></i>').removeClass('btn-outline-danger').addClass('btn-outline-primary');
+              }
+          });
+
+          // 3. Service Filtering Logic (Works on ALL 40 services)
+          $('#serviceSearch').on('keyup', function() {
+              var searchText = $(this).val().toLowerCase();
+              
+              // Ensure the button state resets when searching
+              // If search text is present, show all services initially so the filter works correctly
+              if (searchText.length > 0) {
+                  $serviceContainers.removeClass('d-none');
+                  $showMoreBtn.hide(); // Hide the show more button during search
+              } else {
+                  // Reset to default state
+                  $showMoreBtn.show();
+                   $serviceContainers.each(function(index) {
+                      if (index >= defaultVisible) {
+                          $(this).addClass('d-none');
+                      }
+                  });
+                   // Reset button text
+                   $showMoreBtn.html('সকল সেবার সম্পূর্ণ তালিকা <i class="fas fa-arrow-circle-down ms-2"></i>').removeClass('btn-outline-danger').addClass('btn-outline-primary');
+              }
+
+              $serviceContainers.each(function() {
+                  var $serviceContainer = $(this);
+                  var serviceName = $serviceContainer.find('h3').text().toLowerCase();
+                  
+                  // Show or hide the container based on the search text
+                  // NOTE: If search is active, the container remains hidden/shown by the filter, overriding the initial hiding logic.
+                  if (serviceName.indexOf(searchText) > -1) {
+                      $serviceContainer.removeClass('d-none');
+                  } else if (searchText.length > 0) { // Only hide if search is active
+                      $serviceContainer.addClass('d-none');
+                  }
+              });
+
+              // If search is active and all services are visible, no need to show the toggle button
+              if (searchText.length > 0) {
+                  $showMoreBtn.hide();
+              } else {
+                  $showMoreBtn.show();
+              }
+          });
+      });
+  </script>
 
 @endsection
     
