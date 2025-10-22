@@ -24,7 +24,7 @@
   <section id="services" class="service-section section-gap">
     <div class="container">
       <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="fas fa-headset me-3 text-primary"></i> যোগাযোগ ও সহায়তা</h1>
-        <div class="row g-5 align-items-center">
+        <div class="row justify-content-center">
             <!-- Contact Section -->
             <div class="col-lg-6">
                 <h2 class="h3 fw-bold mb-4" style="color: var(--darker-color);"><i class="fas fa-headset me-2"></i> যোগাযোগ ও সহায়তা</h2>
