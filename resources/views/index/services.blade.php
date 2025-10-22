@@ -9,7 +9,7 @@
   <!-- Services List Section (Dynamic Show/Hide Logic) -->
   <section id="services" class="service-section section-gap">
       <div class="container">
-          <h2 class="text-center mb-5 fw-bold display-6" style="color: var(--darker-color);">প্রধান ডিজিটাল সেবাসমূহ</h2>
+          <h2 class="text-center mb-5 fw-bold display-6" style="color: var(--darker-color);"><i class="fas fa-list-check me-2 text-primary"></i> প্রধান ডিজিটাল সেবাসমূহ</h2>
           
           <!-- Service Search Filter -->
           <div class="row mb-5 justify-content-center">
