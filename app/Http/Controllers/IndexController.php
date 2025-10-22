@@ -335,6 +335,11 @@ class IndexController extends Controller
         return view('index.auth.register-citizen');
     }
 
+    public function getContact()
+    {
+        return view('index.contact');
+    }
+
     // clear configs, routes and serve
     public function clear()
     {
