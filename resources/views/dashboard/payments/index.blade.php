@@ -65,6 +65,49 @@
           <!-- /.card-body -->
         </div>
         {{ $payments->links() }}
+
+        <div class="container">
+          <h2 class="text-center mb-5 font-weight-bold display-4" style="color: var(--darker-color);">
+            <i class="fas fa-list-check mr-2 text-primary"></i> সনদ ও প্রত্যয়ন সেবাসমূহ
+          </h2>
+
+          <!-- Service Search Filter -->
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-6">
+              <div class="input-group input-group-lg shadow-sm rounded-pill">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-white border-right-0 rounded-left-pill">
+                    <i class="fas fa-search text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  id="serviceSearch"
+                  class="form-control border-left-0 rounded-right-pill"
+                  placeholder="সেবা অনুসন্ধান করুন (যেমন: জন্ম)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Cards -->
+          <div class="row" id="serviceGrid">
+            <!-- Example Service Box -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
+              <a href="/service/birth-certificate" class="text-dark d-block text-decoration-none">
+                <div class="service-box text-center">
+                  <div class="icon-circle" style="background-color: var(--primary-color);">
+                    <i class="fas fa-baby"></i>
+                  </div>
+                  <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">জন্ম নিবন্ধন সনদ</h3>
+                </div>
+              </a>
+            </div>
+
+            <!-- Add other service boxes here following the same pattern -->
+          </div>
+        </div>
+
     </div>
 @endsection
 
