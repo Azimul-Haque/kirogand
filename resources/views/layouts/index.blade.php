@@ -6,8 +6,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   @if (!Request::is('blogs', 'blogs/*', 'blog', 'blog/*'))
-    <meta name="description" content="BCS Exam Aid বাংলাদেশ সিভিল সার্ভিস (BCS) পরীক্ষা এবং অন্যান্য সরকারি চাকরি (NSI, DGFI, দুদক, বাংলাদেশ ব্যাংক, অন্যান্য ব্যাংক, প্রাথমিক শিক্ষক নিয়োগ) পরীক্ষার প্রস্তুতির জন্য সেরা ডেডিকেটেড অনলাইন প্ল্যাটফর্ম। Developed By A. H. M. Azimul Haque.">
-    <meta name="keywords" content="BCS, Bangladesh Civil Service, NSI, DGFI দুদক, বাংলাদেশ ব্যাংক, অন্যান্য ব্যাংক, প্রাথমিক শিক্ষক নিয়োগ, Primary Exam, Job Circular, Bank Job Circular, Bank Job Exam, BCS Circular, বিসিএস পরীক্ষা, বার কাউন্সিল পরীক্ষা, জুডিশিয়াল পরীক্ষা, Judicial Exam, bcs book list, bcs book suggestion, BCS Preparation Books, বিসিএস প্রিলিমিনারি বই তালিকা, বিসিএস বই তালিকা, বিসিএস লিখিত বই তালিকা, bcs preliminary book list, bcs written book list, বিসিএস প্রিলিমিনারি পরীক্ষার সিলেবাস, বিসিএস পরীক্ষার সিলেবাস">
+    <meta name="description" content="স্থানীয় সরকার কর্তৃপক্ষ কর্তৃক প্রদত্ত সকল প্রকার ডিজিটাল সনদপত্র ও প্রত্যয়নপত্র অনলাইনে আবেদন করুন। জন্ম নিবন্ধন, মৃত্যু নিবন্ধন, আয় ও চারিত্রিক সনদপত্র দ্রুত, সহজে এবং নির্ভরযোগ্যভাবে পান।">
+    <meta name="keywords" content="সনদপত্র, প্রত্যয়ন, জন্ম নিবন্ধন, মৃত্যু নিবন্ধন, অনলাইন সেবা, স্থানীয় সরকার, ইউনিয়ন পরিষদ, পৌরসভা, ডিজিটাল সেবা, বাংলাদেশ">
 
     <meta property="og:image" content="{{ asset('images/bcs-exam-aid-banner.png') }}" />
     <meta property="og:type" content="website"/>
@@ -38,19 +38,129 @@
   <!--====== Favicon Icon ======-->
   <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/svg" />
 
-  <!--====== Bootstrap css ======-->
-  <link rel="stylesheet" href="{{ asset('vendor/frontend/css/bootstrap.min.css') }}" />
+  <!-- Load Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hGk+ALEwIH" crossorigin="anonymous">
+    <!-- Load Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJz9a9wGg/QzY0n8m8FzG0K6Qo/d9E8K1Z5X+8WlGqJ3hK/Wz5H5uL5T/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    /* Custom Styles for Professional Look - Clean Blue/Navy Palette */
+    :root {
+        --primary-color: #0d6efd; /* Standard Blue for main actions */
+        --darkest-color: #2c3e50; /* Header, Footer BG (Dark Navy) */
+        --darker-color: #34495e; /* Main Text, Service Box Accent (Slightly Lighter Navy) */
+        --medium-color: #007bff; /* Primary Accent Blue */
+        --light-primary-color: #17a2b8; /* Secondary Accent Teal */
+        --light-bg: #f8f9fa; /* Lightest Gray Background */
+        --white-bg: #ffffff; /* Explicit White */
+    }
 
-  <!--====== Line Icons css ======-->
-  <link rel="stylesheet" href="{{ asset('vendor/frontend/css/lineicons.css') }}" />
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--white-bg);
+        color: var(--darker-color);
+    }
+    
+    .section-gap {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 
-  <!--====== Tiny Slider css ======-->
-  <link rel="stylesheet" href="{{ asset('vendor/frontend/css/tiny-slider.css') }}" />
+    /* 1. New Header Structure for Logo, and Nav */
+    header.navbar-custom {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-  <!--====== gLightBox css ======-->
-  <link rel="stylesheet" href="{{ asset('vendor/frontend/css/glightbox.min.css') }}" />
+    .top-bar {
+        background-color: var(--light-bg) !important; /* Light background for marquee */
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .logo-area {
+        background-color: var(--darkest-color) !important; /* Dark Navy for Logo panel */
+    }
 
-  <link rel="stylesheet" href="{{ asset('vendor/frontend/css/style.css') }}" />
+    /* Ensure the main nav is slightly lighter than the logo area for contrast */
+    nav.navbar.bg-darker {
+         background-color: var(--darker-color) !important;
+    }
+
+    /* Service Cards Enhancement (6 column layout) */
+    .service-box {
+        background-color: var(--white-bg);
+        padding: 20px 10px; 
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+        transition: transform 0.3s, box-shadow 0.3s;
+        min-height: 180px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-bottom: 5px solid var(--darker-color); 
+    }
+
+    .service-box:hover {
+        transform: translateY(-8px); 
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        border-bottom-color: var(--medium-color); 
+    }
+
+    .icon-circle {
+        background-color: var(--darker-color); 
+        color: white;
+        padding: 18px; 
+        border-radius: 50%; 
+        margin-bottom: 15px;
+        font-size: 1.8rem; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        display: inline-flex; 
+        align-items: center; 
+        justify-content: center; 
+    }
+    
+    /* New Admin Panel Theming (Multiple Colors) */
+    .admin-card {
+        border-left: 5px solid #28a745 !important; /* Default Green accent for context */
+    }
+    
+    /* Stats Card Revert CSS */
+    .stats-card {
+        border: 1px solid #ddd;
+        transition: all 0.3s;
+    }
+    .stats-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer Revert CSS */
+    footer.footer-custom {
+        background-color: var(--darkest-color);
+        color: #ecf0f1; /* Light text */
+        padding: 40px 0 20px 0;
+    }
+    footer.footer-custom a {
+        color: #ecf0f1;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    footer.footer-custom a:hover {
+        color: var(--light-primary-color);
+    }
+
+    /* Mobile specific adjustments */
+    @media (max-width: 991.98px) {
+        .hero-section {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+        .section-gap {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
+</style>
 
   <!-- Structured data JSON-LD (optional but highly recommended) -->
   @if (!Request::is('blogs', 'blogs/*', 'blog', 'blog/*', 'documentation'))
@@ -77,185 +187,126 @@
 
   <!--====== NAVBAR NINE PART START ======-->
 
-  <section class="navbar-area navbar-nine">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="/">
-              <img src="{{ asset('/') }}images/white-logo.png" alt="BCS Exam Aid Logo" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
-              aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="toggler-icon"></span>
-              <span class="toggler-icon"></span>
-              <span class="toggler-icon"></span>
-            </button>
+  <!-- Main Header Container -->
+  <header class="navbar-custom sticky-top">
+      <!-- Marquee Text (Hidden on Mobile) - COMMENTED OUT AS PER REQUEST -->
+      <!-- <div class="top-bar d-none d-lg-block">
+          <div class="container">
+              <marquee class="small text-darker-color fw-bold">
+                  <i class="fas fa-certificate text-danger me-2"></i> আপনার ডিজিটাল সনদপত্র আবেদনের জন্য জাতীয় পরিচয়পত্র নম্বর ও জন্ম তারিখ ব্যবহার করুন। সেবাসমূহ এখন আরও দ্রুত এবং নির্ভরযোগ্য।
+              </marquee>
+          </div>
+      </div> -->
 
-            <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
-              <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                  <a class=" active" href="{{ route('index.index')  }}/#hero-area">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="" href="{{ route('index.index')  }}/#services">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="" href="{{ route('blogs.index')  }}">Blogs</a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="" href="{{ route('index.index')  }}/#pricing">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="" href="{{ route('index.index')  }}/#contact">Contact</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="navbar-btn d-none d-lg-inline-block">
-              <a class="menu-bar" href="#side-menu-left"><i class="lni lni-menu"></i></a>
-            </div>
-          </nav>
-          <!-- navbar -->
-        </div>
+      <!-- 2. Logo/Branding Area (Bigger Logo) -->
+      <div class="logo-area">
+          <div class="container py-3 d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                  <!-- Increased Icon Size and Text Emphasis -->
+                  <i class="fas fa-landmark me-3" style="font-size: 2.8rem; color: var(--light-primary-color);"></i>
+                  <span class="h3 fw-bolder text-white mb-0 d-none d-sm-inline">স্থানীয় সরকার প্রত্যয়ন পোর্টাল</span>
+                  <span class="h4 fw-bolder text-white mb-0 d-inline d-sm-none">প্রত্যয়ন পোর্টাল</span>
+              </div>
+              <!-- Replaced 'সহায়তা ডেস্ক' with two new account buttons -->
+              <div class="d-none d-md-flex gap-3">
+                  <a href="/citizen-login" class="btn btn-outline-light rounded-pill"><i class="fas fa-user me-2"></i> নাগরিক একাউন্ট</a>
+                  <a href="/admin-login" class="btn btn-outline-info rounded-pill"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a>
+              </div>
+          </div>
       </div>
-      <!-- row -->
-    </div>
-    <!-- container -->
-  </section>
+      
+      <!-- 3. Main Navigation Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-darker">
+          <div class="container">
+              <!-- Toggler button remains for mobile -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav w-100 align-items-lg-center">
+                      <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home me-1"></i> হোম</a></li>
+                      <!-- New Links Added -->
+                      <li class="nav-item"><a class="nav-link" href="/certificate-verify"><i class="fas fa-check-circle me-1"></i> সনদ যাচাই</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/application-status"><i class="fas fa-tasks me-1"></i> আবেদনের অবস্থা</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#services"><i class="fas fa-list-check me-1"></i> সেবাসমূহ</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#notices"><i class="fas fa-bullhorn me-1"></i> নোটিশ বোর্ড</a></li>
+                      <!-- Order Change: User Guide before Contact -->
+                      <li class="nav-item"><a class="nav-link" href="/user-guide-link"><i class="fas fa-book me-1"></i> ব্যবহার নির্দেশিকা</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-headset me-1"></i> যোগাযোগ</a></li>
+                      
+                      <!-- Login/Dropdown remains, floated right (mostly redundant now, but kept for mobile/small screen) -->
+                      <li class="nav-item dropdown ms-auto d-lg-none">
+                          <a class="nav-link dropdown-toggle btn btn-primary btn-sm ms-lg-3 rounded-pill" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="fas fa-sign-in-alt me-1"></i> প্রবেশ
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdown">
+                              <li><a class="dropdown-item text-primary fw-bold" href="/citizen-login"><i class="fas fa-user me-2"></i> নাগরিক লগইন</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item text-info fw-bold" href="/admin-login"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক লগইন</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
 
   <!--====== NAVBAR NINE PART ENDS ======-->
 
-  <!--====== SIDEBAR PART START ======-->
-
-  <div class="sidebar-left">
-    <div class="sidebar-close">
-      <a class="close" href="#close"><i class="lni lni-close"></i></a>
-    </div>
-    <div class="sidebar-content">
-      <div class="sidebar-logo">
-        <a href="/"><img src="{{ asset('/') }}images/logo.png" alt="Logo" /></a>
-      </div>
-      <p class="text">BCS Exam Aid</p>
-      <!-- logo -->
-      <div class="sidebar-menu">
-        <h5 class="menu-title">Quick Links</h5>
-        <ul>
-          <li><a href="{{ route('blogs.index') }}">Blogs</a></li>
-          <li><a href="{{ route('index.terms-and-conditions') }}">Terms & Conditions</a></li>
-          <li><a href="{{ route('index.privacy-policy') }}">Privacy Policy</a></li>
-          <li><a href="{{ route('index.refund-policy') }}">Refund Policy</a></li>
-          <li><a href="{{ route('index.index')  }}/#contact">Contact Us</a></li>
-        </ul>
-      </div>
-      <!-- menu -->
-      <div class="sidebar-social align-items-center justify-content-center">
-        <h5 class="social-title">Follow Us On</h5>
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/profile.php?id=100094040247109"><i class="lni lni-facebook-filled"></i></a>
-          </li>
-          <li>
-            <a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a>
-          </li>
-          <li>
-            <a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a>
-          </li>
-          <li>
-            <a href="javascript:void(0)"><i class="lni lni-youtube"></i></a>
-          </li>
-        </ul>
-      </div>
-      <!-- sidebar social -->
-    </div>
-    <!-- content -->
-  </div>
-  <div class="overlay-left"></div>
-
-  <!--====== SIDEBAR PART ENDS ======-->
 
 
   @yield('content')
 
 
   <!-- Start Footer Area -->
-  <footer class="footer-area footer-eleven">
-    <!-- Start Footer Top -->
-    <div class="footer-top">
+  <footer class="footer-custom">
       <div class="container">
-        <div class="inner-content">
           <div class="row">
-            <div class="col-lg-4 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="footer-widget f-about">
-                <div class="logo">
-                  <a href="/">
-                    <img src="{{ asset('/') }}images/logo.png" alt="#" class="img-fluid" />
-                  </a>
-                </div>
-                <p>
-                  BCS EXAM AID is a dedicated online platform to take the best preparation for the Bangladesh Civil Service (BCS) Exam and Other Govt Job Exam.
-                </p>
-                <p class="copyright-text">
-                  <span>© {{ date('Y') }} App Lab IT.</span>Designed and Developed by
-                  <a href="https://orbachinujbuk.com" rel="nofollow"> A. H. M. Azimul Haque</a>
-                </p>
-              </div>
-              <!-- End Single Widget -->
-            </div>
-            <div class="col-lg-2 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="footer-widget f-link">
-                <h5>Links</h5>
-                <ul>
-                  <li><a href="{{ route('blogs.index') }}">Blogs</a></li>
-                  <li><a href="{{ route('index.terms-and-conditions') }}">Terms & Conditions</a></li>
-                  <li><a href="{{ route('index.privacy-policy') }}">Privacy Policy</a></li>
-                  <li><a href="{{ route('index.refund-policy') }}">Refund Policy</a></li>
-                </ul>
-              </div>
-              <!-- End Single Widget -->
-            </div>
-            <div class="col-lg-2 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="footer-widget f-link">
-                <h5>Support</h5>
-                <ul>
-                  <li><a href="#pricing">Pricing</a></li>
-                  <li><a href="{{ route('index.documentation') }}">Documentation</a></li>
-                  <li><a href="javascript:void(0)">Guides</a></li>
-                  <li><a href="{{ route('index.api.status') }}">API Status</a></li>
-                </ul>
-              </div>
-              <!-- End Single Widget -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="footer-widget newsletter">
-                <h5>Subscribe</h5>
-                <a href='https://play.google.com/store/apps/details?id=com.orbachinujbuk.bcs' target="_blank"><img alt='Get it on Google Play' class="img-responsive" style="max-width: 200px; width: auto;" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
-                <form action="#" method="get" target="_blank" class="newsletter-form">
-                  <input name="EMAIL" placeholder="Email address" required="required" type="email" />
-                  <div class="button">
-                    <button class="sub-btn">
-                      <i class="lni lni-envelope"></i>
-                    </button>
+              <div class="col-md-4 mb-4 mb-md-0">
+                  <h5 class="fw-bold text-uppercase"><i class="fas fa-landmark me-2"></i> ডিজিটাল প্রত্যয়ন পোর্টাল</h5>
+                  <p class="small mt-3">স্থানীয় সরকার কর্তৃপক্ষের ডিজিটাল প্রত্যয়ন ও সনদপত্র ব্যবস্থাপনা ব্যবস্থা। জনগণের জন্য দ্রুত ও স্বচ্ছ সেবা নিশ্চিত করতে আমরা প্রতিশ্রুতিবদ্ধ।</p>
+                  <div class="social-links mt-3">
+                      <a href="#" class="me-3 btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="me-3 btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-twitter"></i></a>
+                      <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-linkedin-in"></i></a>
                   </div>
-                </form>
               </div>
-              <!-- End Single Widget -->
-            </div>
+              
+              <div class="col-md-2 mb-4 mb-md-0">
+                  <h5 class="fw-bold text-uppercase">জরুরী প্রয়োজনে</h5>
+                  <ul class="list-unstyled mt-3">
+                      <li><a href="#contact">হটলাইন: 1678</a></li>
+                      <li><a href="/police">নিকটস্থ থানা</a></li>
+                      <li><a href="/fire-service">ফায়ার সার্ভিস</a></li>
+                      <li><a href="/disaster">দুর্যোগ সহায়তা</a></li>
+                  </ul>
+              </div>
+              
+              <div class="col-md-3 mb-4 mb-md-0">
+                  <h5 class="fw-bold text-uppercase">গুরুত্বপূর্ণ লিংকসমূহ</h5>
+                  <ul class="list-unstyled mt-3">
+                      <li><a href="#services">সেবা ও আবেদন</a></li>
+                      <li><a href="/verification">সনদ যাচাই</a></li>
+                      <li><a href="#notices">নোটিশ বোর্ড</a></li>
+                      <li><a href="/terms">শর্তাবলী</a></li>
+                  </ul>
+              </div>
+              
+              <div class="col-md-3">
+                  <h5 class="fw-bold text-uppercase">সহায়তা ও যোগাযোগ</h5>
+                  <ul class="list-unstyled mt-3">
+                      <li><a href="/faq">প্রায়শই জিজ্ঞাসিত প্রশ্ন (FAQ)</a></li>
+                      <li><a href="#contact">সহায়তা কেন্দ্রে যোগাযোগ</a></li>
+                      <li><a href="/user-guide">ব্যবহারকারী নির্দেশিকা</a></li>
+                      <li><a href="/privacy">গোপনীয়তা নীতি</a></li>
+                  </ul>
+              </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              {{-- <img src="{{ asset('images/Footer-Logo.png') }}" onmousedown="return false;" onselectstart="return false;"> --}}
-            </div>
+          <hr class="my-4 border-light">
+          <div class="text-center small">
+              &copy;  সকল স্বত্ব সংরক্ষিত - স্থানীয় সরকার কর্তৃপক্ষ, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার
           </div>
-        </div>
       </div>
-    </div>
-    <!--/ End Footer Top -->
   </footer>
   <!--/ End Footer Area -->
 
