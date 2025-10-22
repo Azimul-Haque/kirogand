@@ -62,7 +62,7 @@
                   <div id="heroCarousel" class="carousel slide shadow-2xl rounded-3" data-bs-ride="carousel">
                       <div class="carousel-inner rounded-3">
                           <div class="carousel-item active">
-                              <img src="https://placehold.co/600x420/0d6efd/ffffff?text=ডিজিটাল+আবেদন+প্রক্রিয়া" class="d-block w-100" alt="Slider Image 1">
+                              <img src="{{ asset('images/slider/1.jpg') }}" class="d-block w-100" alt="Slider Image 1">
                           </div>
                           <div class="carousel-item">
                               <img src="https://placehold.co/600x420/2c3e50/ffffff?text=দ্রুত+সনদ+যাচাই" class="d-block w-100" alt="Slider Image 2">
