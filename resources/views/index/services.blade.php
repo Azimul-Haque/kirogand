@@ -271,11 +271,11 @@
           </div>
           
           <!-- Show More Button -->
-          <div class="text-center mt-5">
+          {{-- <div class="text-center mt-5">
                <a href="#" id="showMoreServicesBtn" class="btn btn-outline-primary btn-lg rounded-pill shadow">
                   সকল সেবার সম্পূর্ণ তালিকা <i class="fas fa-arrow-circle-down ms-2"></i>
               </a>
-          </div>
+          </div> --}}
       </div>
   </section>
 @endsection
