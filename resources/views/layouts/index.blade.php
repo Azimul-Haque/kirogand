@@ -50,7 +50,7 @@
         --darker-color: #34495e; /* Main Text, Service Box Accent (Slightly Lighter Navy) */
         --medium-color: #007bff; /* Primary Accent Blue */
         --light-primary-color: #17a2b8; /* Secondary Accent Teal */
-        --light-bg: #FAFAFA; /* Lightest Gray Background */
+        --light-bg: #f8f9fa; /* Lightest Gray Background */
         --white-bg: #ffffff; /* Explicit White */
     }
 
