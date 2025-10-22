@@ -27,7 +27,7 @@
       <div class="container">
           <div class="row align-items-center">
               <div class="col-lg-6 mb-4 mb-lg-0 hero-text">
-                  <h1 class="display-5 fw-bolder" style="color: var(--darker-color);">ডিজিটাল নাগরিক: সনদপত্র, প্রত্যয়ন ও সরকারি সেবার সেবা প্ল্যাটফর্ম</h1>
+                  <h1 class="display-5 fw-bolder" style="color: var(--darker-color);">ডিজিটাল নাগরিক: সনদপত্র, প্রত্যয়ন ও সরকারি সেবার সেরা প্ল্যাটফর্ম</h1>
                   <p class="lead text-muted mt-3">
 
                       স্থানীয় সরকার কর্তৃপক্ষের (ইউনিয়ন, পৌরসভা, উপজেলা পরিষদ) মাধ্যমে সকল ডিজিটাল সনদপত্র (জন্ম, মৃত্যু, চারিত্রিক, নাগরিকত্ব ইত্যাদি) অনলাইনে আবেদন, ট্র‍্যাকিং ও যাচাই করুন। আপনার প্রয়োজন এখন ডিজিটাল উপায়ে আপনার হাতের মুঠোয়।
