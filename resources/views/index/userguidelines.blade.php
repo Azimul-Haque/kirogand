@@ -94,19 +94,19 @@
                               
                               <ol class="list-group ">
                                   <li class="list-group-item d-flex align-items-start small">
-                                      <strong>১:</strong> পোর্টাল প্রবেশ ও <a href="/citizen-registration">নিবন্ধন</a>।
+                                      <strong>১: </strong> পোর্টাল প্রবেশ ও <a href="/citizen-registration">নিবন্ধন</a>।
                                   </li>
                                   <li class="list-group-item d-flex align-items-start small">
-                                      <strong>২:</strong> সেবার তালিকা থেকে কাঙ্ক্ষিত সনদ নির্বাচন।
+                                      <strong>২: </strong> সেবার তালিকা থেকে কাঙ্ক্ষিত সনদ নির্বাচন।
                                   </li>
                                   <li class="list-group-item d-flex align-items-start small">
-                                      <strong>৩:</strong> নির্ভুলভাবে সমস্ত তথ্য দিয়ে ফরম পূরণ।
+                                      <strong>৩: </strong> নির্ভুলভাবে সমস্ত তথ্য দিয়ে ফরম পূরণ।
                                   </li>
                                   <li class="list-group-item d-flex align-items-start small">
-                                      <strong>৪:</strong> প্রয়োজনীয় ডকুমেন্ট আপলোড (জাতীয় পরিচয়পত্র, ছবি ইত্যাদি)।
+                                      <strong>৪: </strong> প্রয়োজনীয় ডকুমেন্ট আপলোড (জাতীয় পরিচয়পত্র, ছবি ইত্যাদি)।
                                   </li>
                                   <li class="list-group-item d-flex align-items-start small">
-                                      <strong>৫:</strong> ফি পরিশোধ ও ট্র্যাকিং নম্বর সংগ্রহ।
+                                      <strong>৫: </strong> ফি পরিশোধ ও ট্র্যাকিং নম্বর সংগ্রহ।
                                   </li>
                               </ol>
                               <a href="/citizen-registration" class="btn btn-sm btn-primary rounded-pill mt-3 align-self-start"><i class="fas fa-hand-point-right me-2"></i> আবেদন শুরু করুন</a>
