@@ -257,7 +257,7 @@
                      data-bs-toggle="dropdown" 
                      aria-expanded="false" 
                      style="padding: 6px 15px;">
-                      <i class="fas fa-sign-in-alt me-1"></i> প্রবেশ
+                      <i class="fas fa-sign-in-alt me-1"></i> লগইন
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdownMobile">
                       <li><a class="dropdown-item text-primary fw-bold" href="/citizen-login"><i class="fas fa-user me-2"></i> নাগরিক লগইন</a></li>
