@@ -94,7 +94,7 @@
               <!-- Note: The first 12 services will be visible, the rest will be dynamically hidden by JS -->
               
               <!-- Service 1: জন্ম নিবন্ধন সনদ -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container" data-service-id="1">
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
                   <a href="/service/birth-certificate" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-baby"></i></div>
@@ -104,7 +104,7 @@
               </div>
 
               <!-- Service 2: মৃত্যু নিবন্ধন সনদ -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container" data-service-id="2">
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="2">
                   <a href="/service/death-certificate" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: #dc3545;"><i class="fas fa-cross"></i></div> 
@@ -114,7 +114,7 @@
               </div>
 
               <!-- Service 3: বার্ষিক আয়ের সনদ -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container" data-service-id="3">
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="3">
                   <a href="/service/income-certificate" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: var(--medium-color);"><i class="fas fa-sack-dollar"></i></div>
@@ -124,7 +124,7 @@
               </div>
 
               <!-- Service 4: চারিত্রিক সনদপত্র -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container" data-service-id="4">
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
                   <a href="/service/character-certificate" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-user-check"></i></div> 
@@ -134,7 +134,7 @@
               </div>
               
               <!-- Service 5: ওয়ারিশ সনদ -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container" data-service-id="5">
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
                   <a href="/service/heir-certificate" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: #6f42c1;"><i class="fas fa-handshake"></i></div>
@@ -144,7 +144,7 @@
               </div>
               
               <!-- Service 6: ঠিকানার প্রত্যয়ন -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container" data-service-id="6">
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="6">
                   <a href="/service/address-certificate" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: var(--light-primary-color);"><i class="fas fa-map-marker-alt"></i></div>
@@ -154,7 +154,7 @@
               </div>
               
               <!-- Service 7: অবিবাহিত সনদ -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container" data-service-id="7">
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="7">
                   <a href="/service/unmarried" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: #00bcd4;"><i class="fas fa-ring"></i></div>
@@ -164,7 +164,7 @@
               </div>
 
               <!-- Service 8: নতুন ট্রেড লাইসেন্স -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container" data-service-id="8">
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="8">
                   <a href="/service/trade-license-new" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: #795548;"><i class="fas fa-store"></i></div>
@@ -174,7 +174,7 @@
               </div>
 
               <!-- Service 9: ট্রেড লাইসেন্স নবায়ন -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container" data-service-id="9">
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="9">
                   <a href="/service/trade-license-renewal" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: #9e9e9e;"><i class="fas fa-sync-alt"></i></div>
@@ -184,7 +184,7 @@
               </div>
 
               <!-- Service 10: কৃষি ভর্তুকির প্রত্যয়ন -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container" data-service-id="10">
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="10">
                   <a href="/service/agriculture-subsidy" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: #4caf50;"><i class="fas fa-leaf"></i></div>
@@ -194,7 +194,7 @@
               </div>
               
               <!-- Service 11: নাগরিকত্ব সনদ -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container" data-service-id="11">
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="11">
                   <a href="/service/citizenship-certificate" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: #ff9800;"><i class="fas fa-flag"></i></div>
@@ -204,7 +204,7 @@
               </div>
 
               <!-- Service 12: ভূমির খাজনা প্রত্যয়ন -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container" data-service-id="12">
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="12">
                   <a href="/service/land-tax-certificate" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: #607d8b;"><i class="fas fa-file-invoice-dollar"></i></div>
@@ -224,7 +224,7 @@
                   for (let i = 13; i <= 40; i++) {
                       const container = document.createElement('div');
                       // Add d-none class for initial hiding, which JS will remove if necessary
-                      container.className = 'col-lg-2 col-md-4 col-sm-6 col-sx-6 service-box-container d-none'; 
+                      container.className = 'col-lg-2 col-md-4 col-sm-6 col-6 service-box-container d-none'; 
                       container.dataset.serviceId = i;
 
                       const serviceName = (i % 3 === 0) ? `বিশেষ সনদপত্র - ${i}` : (i % 2 === 0 ? `সরকারি সেবা - ${i}` : `অন্যান্য প্রত্যয়ন - ${i}`);
