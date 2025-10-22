@@ -169,6 +169,7 @@
                               </div>
                               <i class="fab fa-youtube play-icon"></i>
                           </div>
+                          https://www.youtube.com/watch?v=D0UnqGm_miA
                       </a>
 
                       <!-- Video Guide 2: Certificate Application -->
