@@ -3,66 +3,15 @@
 
 @section('third_party_stylesheets')
   <style>
-          /* Custom Styles for Professional Look (Consistent with Homepage) */
-          :root {
-              --primary-color: #0d6efd; 
-              --darkest-color: #2c3e50; 
-              --darker-color: #34495e; 
-              --medium-color: #007bff; 
-              --light-primary-color: #17a2b8; 
-              --light-bg: #f8f9fa; 
-              --white-bg: #ffffff; 
-          }
-
-          body {
-              font-family: 'Inter', sans-serif;
-              background-color: var(--light-bg);
-              color: var(--darker-color);
-          }
-          
-          .section-gap {
-              padding-top: 5rem;
-              padding-bottom: 5rem;
-          }
-
-          /* Header Structure */
-          header.navbar-custom {
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-          }
-          .logo-area {
-              background-color: var(--darkest-color) !important; 
-          }
-          nav.navbar.bg-darker {
-               background-color: var(--darker-color) !important;
-          }
-
-          /* Card and Verification Specific Styles */
-          /* Removed max-width on verification-card, using Bootstrap grid for centering and width */
-          
-          .result-success {
-              border-left: 5px solid #28a745;
-              background-color: #e8f5e9;
-          }
-          .result-failure {
-              border-left: 5px solid #dc3545;
-              background-color: #fce4ec;
-          }
-
-          /* Footer Consistency */
-          footer.footer-custom {
-              background-color: var(--darkest-color);
-              color: #ecf0f1;
-              padding: 40px 0 20px 0;
-          }
-          footer.footer-custom a {
-              color: #ecf0f1;
-              text-decoration: none;
-              transition: color 0.2s;
-          }
-          footer.footer-custom a:hover {
-              color: var(--light-primary-color);
-          }
-      </style>
+    .result-success {
+        border-left: 5px solid #28a745;
+        background-color: #e8f5e9;
+    }
+    .result-failure {
+        border-left: 5px solid #dc3545;
+        background-color: #fce4ec;
+    }
+  </style>
 @endsection
 
 @section('content')
