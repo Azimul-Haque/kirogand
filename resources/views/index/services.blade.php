@@ -6,55 +6,6 @@
 @endsection
 
 @section('content')
-  <!-- Hero/Banner Section -->
-  <section id="home" class="hero-section section-gap">
-      <div class="container">
-          <div class="row align-items-center">
-              <div class="col-lg-6 mb-4 mb-lg-0 hero-text">
-                  <h1 class="display-5 fw-bolder" style="color: var(--darker-color);">সহজেই পান আপনার ডিজিটাল সনদপত্র ও প্রত্যয়ন</h1>
-                  <p class="lead text-muted mt-3">
-                      স্থানীয় সরকার কর্তৃপক্ষের মাধ্যমে সকল সনদপত্রের জন্য অনলাইনে আবেদন, ট্র‍্যাকিং ও যাচাই করুন। এটি একটি দ্রুত, স্বচ্ছ ও নির্ভরযোগ্য সেবা।
-                  </p>
-                  <div class="mt-4 d-flex flex-column flex-md-row">
-                      <!-- Button Rename: নাগরিক নিবন্ধন করুন -> সনদ আবেদন করুন -->
-                      <a href="/citizen-registration" class="btn btn-primary btn-lg rounded-pill me-md-3 mb-2 mb-md-0 shadow-lg text-uppercase">
-                          <i class="fas fa-file-alt me-2"></i> সনদ আবেদন করুন
-                      </a>
-                      <!-- Button Rename: আমাদের সকল সেবা দেখুন -> সনদ যাচাই করুন -->
-                      <a href="/certificate-verify" class="btn btn-outline-secondary btn-lg rounded-pill shadow" style="border-color: var(--darker-color); color: var(--darker-color);">
-                          সনদ যাচাই করুন <i class="fas fa-magnifying-glass ms-2"></i>
-                      </a>
-                  </div>
-              </div>
-
-              <!-- Slider/Carousel -->
-              <div class="col-lg-6 hero-image text-center">
-                  <div id="heroCarousel" class="carousel slide shadow-2xl rounded-3" data-bs-ride="carousel">
-                      <div class="carousel-inner rounded-3">
-                          <div class="carousel-item active">
-                              <img src="https://placehold.co/600x420/0d6efd/ffffff?text=ডিজিটাল+আবেদন+প্রক্রিয়া" class="d-block w-100" alt="Slider Image 1">
-                          </div>
-                          <div class="carousel-item">
-                              <img src="https://placehold.co/600x420/2c3e50/ffffff?text=দ্রুত+সনদ+যাচাই" class="d-block w-100" alt="Slider Image 2">
-                          </div>
-                          <div class="carousel-item">
-                              <img src="https://placehold.co/600x420/17a2b8/ffffff?text=স্থানীয়+সরকার+কর্তৃপক্ষ" class="d-block w-100" alt="Slider Image 3">
-                          </div>
-                      </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
   <!-- Services List Section (Dynamic Show/Hide Logic) -->
   <section id="services" class="service-section section-gap">
       <div class="container">
