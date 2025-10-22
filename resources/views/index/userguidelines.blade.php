@@ -92,7 +92,7 @@
                               <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-file-alt"></i></span> ১. ডিজিটাল সনদ আবেদনের প্রক্রিয়া</h3>
                               <p>নাগরিক সনদ, জন্ম সনদ, ওয়ারিশ সনদ সহ যেকোনো প্রত্যয়নের জন্য আবেদন করতে নিম্নলিখিত ধাপগুলি অনুসরণ করুন:</p>
                               
-                              <ol class="list-group list-group-numbered">
+                              <ol class="list-group ">
                                   <li class="list-group-item d-flex align-items-start small">
                                       <strong>১:</strong> পোর্টাল প্রবেশ ও <a href="/citizen-registration">নিবন্ধন</a>।
                                   </li>
