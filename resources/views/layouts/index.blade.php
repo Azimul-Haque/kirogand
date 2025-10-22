@@ -8,7 +8,7 @@
   @if (!Request::is('blogs', 'blogs/*', 'blog', 'blog/*'))
     <meta name="description" content="অনলাইনে সনদপত্র, প্রত্যয়ন ও সরকারি সেবা নিতে এখনই যুক্ত হোন ডিজিটাল নাগরিকের সাথে—বাংলাদেশের সেরা সনদ ও প্রত্যয়ন সেবা প্ল্যাটফর্ম।">
     <meta name="keywords" content="সনদপত্র, প্রত্যয়ন, জন্ম নিবন্ধন, মৃত্যু নিবন্ধন, অনলাইন সেবা, স্থানীয় সরকার, ইউনিয়ন পরিষদ, পৌরসভা, ডিজিটাল সেবা, বাংলাদেশ">
-    <meta name="author" content="E-Prottoyon System">
+    <meta name="author" content="D Nagorik System">
 
     <meta property="og:image" content="{{ asset('images/bcs-exam-aid-banner.png') }}" />
     <meta property="og:type" content="website"/>
