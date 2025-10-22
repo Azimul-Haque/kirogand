@@ -228,7 +228,7 @@
                       <!-- New Links Added -->
                       <li class="nav-item"><a class="nav-link" href="/certificate-verify"><i class="fas fa-check-circle me-1"></i> সনদ যাচাই</a></li>
                       <li class="nav-item"><a class="nav-link" href="/application-status"><i class="fas fa-tasks me-1"></i> আবেদনের অবস্থা</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#services"><i class="fas fa-list-check me-1"></i> সেবাসমূহ</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{{ route('index.services') }}"><i class="fas fa-list-check me-1"></i> সেবাসমূহ</a></li>
                       <li class="nav-item"><a class="nav-link" href="#notices"><i class="fas fa-bullhorn me-1"></i> নোটিশ বোর্ড</a></li>
                       <!-- Order Change: User Guide before Contact -->
                       <li class="nav-item"><a class="nav-link" href="/user-guide-link"><i class="fas fa-book me-1"></i> ব্যবহার নির্দেশিকা</a></li>
