@@ -3,18 +3,35 @@
 
 @section('third_party_stylesheets')
   <style>
-    .notice-card {
-        background-color: var(--white-bg);
-        border-left: 5px solid var(--primary-color);
-        transition: box-shadow 0.3s, transform 0.3s;
+    /* Form Specific Styles */
+    .form-card {
+        border-left: 5px solid var(--light-primary-color);
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        height: 100%; /* Ensure card matches guideline height */
     }
-    .notice-card:hover {
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        transform: translateY(-2px);
+    .guideline-card {
+        background-color: #e3f2fd; /* Light blue background */
+        border-radius: 12px;
+        padding: 25px;
+        border: 1px solid #cce5ff;
     }
-    .notice-date {
-        color: var(--light-primary-color);
-        font-weight: 600;
+    .form-heading {
+        color: var(--darker-color);
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .required-asterisk {
+        color: #dc3545; /* Red for emphasis */
+        font-weight: bold;
+    }
+
+    /* Responsive Layout Adjustments */
+    @media (max-width: 991.98px) {
+        .guideline-card {
+            margin-top: 30px;
+        }
     }
   </style>
 @endsection
