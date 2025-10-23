@@ -183,8 +183,12 @@
                               <input type="password" class="form-control" id="confirmPassword" required placeholder="পাসওয়ার্ড পুনরায় লিখুন">
                           </div>
 
-                          <div class="col-md-6 ">
-                            <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
+                          <div class="col-md-6">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
+                              </div>
+                            </div>
                           </div>
                       </div>
 
