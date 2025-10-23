@@ -151,8 +151,8 @@
 
                           <!-- NEW FIELD: ইউনিয়ন -->
                           <div class="col-md-6">
-                              <label for="union" class="form-label small fw-bold">ইউনিয়ন <span class="required-asterisk">*</span></label>
-                              <select id="union" class="form-select" required>
+                              <label for="add_union_id" class="form-label small fw-bold">ইউনিয়ন <span class="required-asterisk">*</span></label>
+                              <select id="add_union_id" class="form-select" required>
                                   <option value="">নির্বাচন করুন...</option>
                                   <option value="unit1">ইউনিয়ন ১</option>
                                   <option value="unit2">ইউনিয়ন ২</option>
