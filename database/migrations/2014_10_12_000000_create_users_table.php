@@ -15,6 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('local_office_id')->nullable();
             $table->foreign('local_office_id')->nullable()->references('id') ->on('local_offices') ->onDelete('set null');
             $table->string('uid')->nullable();
             $table->string('onesignal_id')->nullable();
