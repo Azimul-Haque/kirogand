@@ -34,9 +34,6 @@ class CreateLocalOfficesTable extends Migration
             // --- END REFACTORING ---
             
             $table->timestamps();
-            
-            // We can still index this single column for quick lookup
-            $table->index('geo_location_id');
         });
     }
 
