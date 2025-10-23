@@ -15,7 +15,6 @@ class CreateLocalOfficesTable extends Migration
     {
         Schema::create('local_offices', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             // Office Contact & Visual Information
             $table->string('email')->nullable()->unique();
             $table->string('phone', 20)->nullable();
@@ -25,13 +24,6 @@ class CreateLocalOfficesTable extends Migration
             $table->string('office_name_bn', 150); // Office's full name in Bengali
             $table->string('office_type', 50); // E.g., 'Union Parishad', 'Pourasava', 'District Council'
             $table->boolean('is_active')->default(true);
-
-            // --- REFACTORING: Single Geographical Anchor ID ---
-            // This single ID represents the lowest administrative unit this office belongs to 
-            // (e.g., Union ID, Paurashava ID, or District ID if it's a high-level office).
-            // All higher-level IDs (District, Division) must be derived via joins.
-            $table->string('geo_location_id', 10)->nullable();
-            // --- END REFACTORING ---
             
             $table->timestamps();
         });
