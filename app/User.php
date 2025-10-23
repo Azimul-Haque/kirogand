@@ -27,6 +27,8 @@ class User extends Authenticatable
         return $this->hasMany(UserAuthority::class);
     }
 
+    
+
     /**
      * The attributes that are mass assignable.
      *
