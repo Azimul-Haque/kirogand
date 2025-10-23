@@ -22,8 +22,8 @@ class CreateLocalOfficesTable extends Migration
             $table->string('monogram', 255)->nullable();
             
             // Office Identification
-            $table->string('authority_name_bn', 150); // Office/Authority's full name in Bengali
-            $table->string('authority_type', 50); // E.g., 'Union Parishad', 'Pourasava', 'District Council'
+            $table->string('office_name_bn', 150); // Office/Office's full name in Bengali
+            $table->string('office_type', 50); // E.g., 'Union Parishad', 'Pourasava', 'District Council'
             $table->boolean('is_active')->default(true);
 
             // --- REFACTORING: Single Geographical Anchor ID ---
