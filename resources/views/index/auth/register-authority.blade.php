@@ -97,7 +97,8 @@
                               <select id="accountType" class="form-select" required>
                                   <option value="" selected disabled>পদবি নির্বাচন করুন</option>
                                   <option value="officer">ইউনিয়ন চেয়ারম্যান</option>
-                                  <option value="secretary">ইউনিয়ন সচিব / সহকারী</option>
+                                  <option value="secretary">ইউনিয়ন সচিব</option>
+                                  <option value="secretary">ইউনিয়ন সহকারী</option>
                                   <option value="chairman">চেয়ারম্যান/মেয়র</option>
                               </select>
                           </div>
