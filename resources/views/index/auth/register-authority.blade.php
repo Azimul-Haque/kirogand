@@ -170,8 +170,8 @@
                           
                           <!-- কর্তৃপক্ষ অফিসের নাম (Specific Office/Designation) -->
                           <div class="col-md-12">
-                              <label for="office" class="form-label small fw-bold">কর্তৃপক্ষ অফিসের নাম (কার্যালয়) <span class="required-asterisk">*</span></label>
-                              <input type="text" class="form-control" id="office" placeholder="২নং নেকমরদ ইউনিয়ন পরিষদ/ ভৈরব পৌরসভা ইত্যাদি" required>
+                              <label for="office_name" class="form-label small fw-bold">কর্তৃপক্ষ অফিসের নাম (কার্যালয়) <span class="required-asterisk">*</span></label>
+                              <input type="text" class="form-control" id="office_name" placeholder="২নং নেকমরদ ইউনিয়ন পরিষদ/ ভৈরব পৌরসভা ইত্যাদি" required>
                           </div>
                       </div>
                       
