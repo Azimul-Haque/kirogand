@@ -296,8 +296,8 @@
             // 2a. Update the hidden authority_level/authority_id fields
 
             if (parentId) {
-                $('#' + context + '_authority_level').val(level);
-                $('#' + context + '_authority_id').val(parentId);
+                $('#add_authority_level').val(level);
+                $('#add_authority_id').val(parentId);
                 if(context == 'edit') {
                   $('#' + context + '_authority_level' + userId).val(level);
                   $('#' + context + '_authority_id' + userId).val(parentId);
