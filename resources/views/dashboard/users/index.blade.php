@@ -386,12 +386,13 @@
                                       </div>
                                     </div>
                                     <div class="col-md-6">
-                                      <!-- District Dropdown (Level 2) -->
+                                      <!-- Union Dropdown (Level 4) -->
                                       <div class="input-group mb-3">
-                                          <select id="edit_district_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="District" data-target="edit_upazila_id{{ $user->id }}" data-model="Upazila" disabled>
-                                              <option value="" selected disabled>জেলা নির্বাচন করুন</option>
+                                          <select id="edit_union_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Union" data-target="" data-model="" disabled>
+                                              <option value="" selected disabled>ইউনিয়ন নির্বাচন করুন</option>
                                           </select>
                                       </div>
+                                      <!-- END DYNAMIC AUTHORITY FIELDS -->
                                     </div>
                                   </div>
 
@@ -401,13 +402,7 @@
 
                                   
 
-                                  <!-- Union Dropdown (Level 4) -->
-                                  <div class="input-group mb-3">
-                                      <select id="edit_union_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Union" data-target="" data-model="" disabled>
-                                          <option value="" selected disabled>ইউনিয়ন নির্বাচন করুন</option>
-                                      </select>
-                                  </div>
-                                  <!-- END DYNAMIC AUTHORITY FIELDS -->
+                                  
                               
                             </div>
                             <div class="modal-footer">
