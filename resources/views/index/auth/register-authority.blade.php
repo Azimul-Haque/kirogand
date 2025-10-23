@@ -237,7 +237,99 @@
 @endsection
 
 @section('third_party_scripts')
-  
+    <script>
+      $(document).ready(function() {
+        const csrfToken = '{{ csrf_token() }}';
+        const baseUrl = '{{ url('/') }}';
+
+        // --- 1. Dynamic Location Loading Function ---
+        function loadLocations(selector, parentId, targetSelector, modelName) {
+            const $targetSelect = $(targetSelector);
+            $targetSelect.html('<option value="">লোড হচ্ছে...</option>').prop('disabled', true);
+
+            if (!parentId) {
+                // Clear and disable downstream if parentId is empty
+                $targetSelect.html('<option value="" selected disabled>নির্বাচন করুন</option>').prop('disabled', true);
+                // Recursively clear further downstream if needed (e.g., clearing Upazila if District changes to empty)
+                if (modelName === 'District') {
+                    $('#' + $(selector).data('target')).html('<option value="" selected disabled>নির্বাচন করুন</option>').prop('disabled', true);
+                    $('#' + $('#' + $(selector).data('target')).data('target')).html('<option value="" selected disabled>নির্বাচন করুন</option>').prop('disabled', true);
+                } else if (modelName === 'Upazila') {
+                    $('#' + $(selector).data('target')).html('<option value="" selected disabled>নির্বাচন করুন</option>').prop('disabled', true);
+                }
+                return;
+            }
+
+            let routeSegment = '';
+            if (modelName === 'District') routeSegment = 'districts/';
+            else if (modelName === 'Upazila') routeSegment = 'upazilas/';
+            else if (modelName === 'Union') routeSegment = 'unions/';
+
+            $.ajax({
+                url: `${baseUrl}/api/location/${routeSegment}${parentId}`,
+                method: 'GET',
+                success: function(data) {
+                    $targetSelect.empty();
+                    $targetSelect.append('<option value="" selected disabled>নির্বাচন করুন</option>');
+                    $.each(data, function(id, name) {
+                        $targetSelect.append(`<option value="${id}">${name}</option>`);
+                    });
+                    $targetSelect.prop('disabled', false);
+                },
+                error: function() {
+                    $targetSelect.html('<option value="">লোড করতে ব্যর্থ</option>').prop('disabled', true);
+                    console.error('Failed to load locations for ' + modelName);
+                }
+            });
+        }
+
+        // --- 2. Change Event Listener (Cascading Dropdowns) ---
+        // Applies to both Add and Edit modals
+        $(document).on('change', '.authority-select', function() {
+            const userId = $(this).data('userid');
+            const parentId = $(this).val();
+            const targetId = $(this).data('target');
+            const modelName = $(this).data('model');
+            const level = $(this).data('level');
+            const context = $(this).attr('id').startsWith('add') ? 'add' : 'edit';
+            
+            // 2a. Update the hidden authority_level/authority_id fields
+
+            if (parentId) {
+                $('#' + context + '_authority_level').val(level);
+                $('#' + context + '_authority_id').val(parentId);
+                if(context == 'edit') {
+                  $('#' + context + '_authority_level' + userId).val(level);
+                  $('#' + context + '_authority_id' + userId).val(parentId);
+                }
+            } else {
+                // If the selected value is empty, reset the current authority level/id
+                $('#' + context + '_authority_level').val('');
+                $('#' + context + '_authority_id').val('');
+                if(context == 'edit') {
+                  $('#' + context + '_authority_level' + userId).val(level);
+                  $('#' + context + '_authority_id' + userId).val(parentId);
+                }
+            }
+            
+            // 2b. Load the next level of locations
+            if (targetId) {
+                // Clear the authority selection for downstream models when a parent changes
+                $('#' + targetId).prop('disabled', true).html('<option value="" selected disabled>নির্বাচন করুন</option>');
+                
+                // Clear any selections two levels down (for District -> Union clearing)
+                const grandTargetId = $('#' + targetId).data('target');
+                if (grandTargetId) {
+                    $('#' + grandTargetId).prop('disabled', true).html('<option value="" selected disabled>নির্বাচন করুন</option>');
+                }
+
+                if (parentId && modelName) {
+                  loadLocations('#' + $(this).attr('id'), parentId, '#' + targetId, modelName);
+                }
+            }
+        });
+      });
+  </script>
 
 @endsection
     
