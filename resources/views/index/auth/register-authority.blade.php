@@ -95,7 +95,7 @@
                           <div class="col-md-6">
                               <label for="accountType" class="form-label small fw-bold">পদবি <span class="required-asterisk">*</span></label>
                               <select id="accountType" class="form-select" required>
-                                  <option value="">নির্বাচন করুন...</option>
+                                  <option value="" selected disabled>নির্বাচন করুন...</option>
                                   <option value="officer">প্রশাসনিক কর্মকর্তা</option>
                                   <option value="secretary">ইউনিয়ন সচিব / সহকারী</option>
                                   <option value="chairman">চেয়ারম্যান/মেয়র</option>
