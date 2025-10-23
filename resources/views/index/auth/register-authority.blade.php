@@ -149,12 +149,6 @@
                               </select>
                           </div>
 
-                          <div class="input-group mb-3">
-                              <select id="add_upazila_id" class="form-control authority-select" data-level="Upazila" data-target="add_union_id" data-model="Union" disabled>
-                                  <option value="" selected disabled>উপজেলা/পৌরসভা নির্বাচন করুন</option>
-                              </select>
-                          </div>
-
                           <!-- NEW FIELD: ইউনিয়ন -->
                           <div class="col-md-6">
                               <label for="union" class="form-label small fw-bold">ইউনিয়ন <span class="required-asterisk">*</span></label>
