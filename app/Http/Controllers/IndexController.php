@@ -330,6 +330,41 @@ class IndexController extends Controller
         return view('index.auth.register-authority');
     }
 
+    public function storeUser(Request $request)
+    {
+        $this->validate($request,array(
+            'name'        => 'required|string|max:191',
+            'mobile'      => 'required|string|max:191|unique:users,mobile',
+            'designation'      => 'sometimes',
+            'role'        => 'required',
+            // 'sitecheck'   => 'sometimes',
+            'password'    => 'required|string|min:8|max:191',
+            'authority_level' => 'nullable|string|in:Division,District,Upazila,Union',
+            // Validation for authority ID based on selected level
+            'authority_id' => [
+                'nullable',
+                Rule::requiredIf(fn () => $request->authority_level),
+                'integer',
+            ],
+        ));
+
+        $user = new User;
+        $user->name = $request->name;
+        $user->mobile = $request->mobile;
+        $user->designation = $request->designation;
+        $user->role = $request->role;
+        // if(!empty($request->sitecheck)) {
+        //     $user->sites = implode(',', $request->sitecheck);
+        // }
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        $this->syncUserAuthority($user, $request);
+
+        Session::flash('success', 'User created successfully!');
+        return redirect()->route('dashboard.users');
+    }
+
     public function getCitizenRegister()
     {
         return view('index.auth.register-citizen');
