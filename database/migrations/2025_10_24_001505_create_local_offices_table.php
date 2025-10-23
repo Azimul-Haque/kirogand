@@ -21,6 +21,7 @@ class CreateLocalOfficesTable extends Migration
             $table->string('monogram', 255)->nullable();
             
             // Office Identification
+            $table->string('name_bn', 150); // Office's full name in Bengali
             $table->string('name', 150); // Office's full name in Bengali
             $table->string('office_type', 50); // E.g., 'Union Parishad', 'Pourasava', 'District Council'
             $table->boolean('is_active')->default(true);
