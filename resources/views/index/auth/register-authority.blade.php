@@ -135,8 +135,8 @@
 
                           <!-- জেলা -->
                           <div class="col-md-6">
-                              <label for="district" class="form-label small fw-bold">জেলা <span class="required-asterisk">*</span></label>
-                              <select id="district" class="form-select" required>
+                              <label for="add_district_id" class="form-label small fw-bold">জেলা <span class="required-asterisk">*</span></label>
+                              <select id="add_district_id" class="form-select" required>
                                   <option value="">নির্বাচন করুন...</option>
                                   <option value="dhaka">ঢাকা</option>
                                   <option value="gazipur">গাজীপুর</option>
