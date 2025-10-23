@@ -96,12 +96,14 @@
                               <label for="accountType" class="form-label small fw-bold">পদবি <span class="required-asterisk">*</span></label>
                               <select id="accountType" class="form-select" required>
                                   <option value="" selected disabled>পদবি নির্বাচন করুন</option>
-                                  <option value="officer">প্রশাসনিক কর্মকর্তা</option>
+                                  <option value="officer">ইউনিয়ন চেয়ারম্যান</option>
                                   <option value="secretary">ইউনিয়ন সচিব / সহকারী</option>
                                   <option value="chairman">চেয়ারম্যান/মেয়র</option>
                               </select>
                           </div>
                       </div>
+
+                      মেয়র কাউন্সিলর সংরক্ষিত কাউন্সিলর মেয়র সচিব ওয়ার্ড সচিব সংরক্ষিত ওয়ার্ড সচিব স্মার্ট সেন্টার উদ্যোক্তা 
 
                       <!-- Section 2: অফিস তথ্য -->
                       <h2 class="h5 form-heading mt-4"><i class="fas fa-building me-2"></i> অফিস তথ্য</h2>
