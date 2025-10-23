@@ -133,6 +133,13 @@
                               </select>
                           </div>
 
+                          <select id="add_division_id" class="form-control authority-select" data-level="Division" data-target="add_district_id" data-model="District">
+                              <option value="" selected disabled>বিভাগ নির্বাচন করুন</option>
+                              @foreach ($divisions as $division)
+                                  <option value="{{ $division->id }}" data-level-name="Division">{{ $division->bn_name }}</option>
+                              @endforeach
+                          </select>
+
                           <!-- জেলা -->
                           <div class="col-md-6">
                               <label for="district" class="form-label small fw-bold">জেলা <span class="required-asterisk">*</span></label>
