@@ -283,7 +283,7 @@
 @section('third_party_scripts')
   <script>
       $(document).ready(function() {
-          const defaultVisible = 12; // 12 services visible by default
+          const defaultVisible = 500; // 12 services visible by default
           const $serviceContainers = $('.service-box-container');
           const $showMoreBtn = $('#showMoreServicesBtn');
 
