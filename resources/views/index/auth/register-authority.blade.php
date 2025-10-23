@@ -188,6 +188,9 @@
                               <div class="col-md-6">
                                 <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
                               </div>
+                              <div class="col-md-6">
+                                <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
+                              </div>
                             </div>
                           </div>
                       </div>
