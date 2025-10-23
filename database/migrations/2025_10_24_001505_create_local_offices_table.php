@@ -15,7 +15,7 @@ class CreateLocalOfficesTable extends Migration
     {
         Schema::create('local_offices', function (Blueprint $table) {
             $table->id();
-
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             // Office Contact & Visual Information
             $table->string('email')->nullable()->unique();
             $table->string('phone', 20)->nullable();
