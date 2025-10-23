@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->foreignId('local_office_id')->constrained()->onDelete('cascade');
             $table->string('uid')->nullable();
             $table->string('onesignal_id')->nullable();
-            $table->timestamp('package_expiry_date')->nullable();
+            $table->timestamp('package_expiry_date')->nullable()->(6);
             $table->string('name');
             $table->string('name_en')->nullable();
             $table->string('role')->default('user');
