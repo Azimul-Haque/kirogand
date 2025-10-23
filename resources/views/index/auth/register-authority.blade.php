@@ -93,7 +93,7 @@
                           
                           <!-- একাউন্ট ধরন -->
                           <div class="col-md-6">
-                              <label for="accountType" class="form-label small fw-bold">একাউন্ট ধরন <span class="required-asterisk">*</span></label>
+                              <label for="accountType" class="form-label small fw-bold">পদবি <span class="required-asterisk">*</span></label>
                               <select id="accountType" class="form-select" required>
                                   <option value="">নির্বাচন করুন...</option>
                                   <option value="officer">প্রশাসনিক কর্মকর্তা</option>
