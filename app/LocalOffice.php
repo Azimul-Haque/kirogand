@@ -20,17 +20,17 @@ class LocalOffice extends Model
     * @var array
     */
     protected $fillable = [
-    'office_name_bn',
-    'office_type',
-    'is_active',
+        'office_name_bn',
+        'office_type',
+        'is_active',
 
-    // Contact and Visuals
-    'email',
-    'phone',
-    'monogram',
+        // Contact and Visuals
+        'email',
+        'phone',
+        'monogram',
 
-    // Geographical Field (Single Anchor)
-    'geo_location_id', 
+        // Geographical Field (Single Anchor)
+        'geo_location_id', 
     ];
 
     /**
