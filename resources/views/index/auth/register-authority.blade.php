@@ -101,7 +101,7 @@
                                   <option value="ইউনিয়ন সহকারী">ইউনিয়ন সহকারী</option>
                                   <option value="মেয়র">মেয়র</option>
                                   <option value="কাউন্সিলর">কাউন্সিলর</option>
-                                  <option value="কাউন্সিলর">পৌর সচিব</option>
+                                  <option value="পৌর সচিব">পৌর সচিব</option>
                               </select>
                           </div>
                       </div>
