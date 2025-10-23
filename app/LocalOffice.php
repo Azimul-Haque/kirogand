@@ -36,8 +36,9 @@ class LocalOffice extends Model
     /**
     * Get the administrators (users) associated with this Local Office.
     */
-    public function localOffice(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(LocalOffice::class, 'local_office_id');
+        // An office belongs to one user, defined by the 'user_id' column
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
