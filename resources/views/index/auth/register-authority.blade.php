@@ -170,7 +170,7 @@
                           
                           <!-- কর্তৃপক্ষ অফিসের নাম (Specific Office/Designation) -->
                           <div class="col-md-6">
-                              <label for="office" class="form-label small fw-bold">অফিস (নির্দিষ্ট পদবি/কার্যালয়) <span class="required-asterisk">*</span></label>
+                              <label for="office" class="form-label small fw-bold">কর্তৃপক্ষ অফিসের নাম (কার্যালয়) <span class="required-asterisk">*</span></label>
                               <input type="text" class="form-control" id="office" placeholder="যেমন: সহকারী সচিব, তথ্যকেন্দ্র" required>
                           </div>
                       </div>
