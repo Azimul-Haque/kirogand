@@ -541,12 +541,6 @@
                       <!-- END DYNAMIC AUTHORITY FIELDS -->
                     </div>
                   </div>
-                  
-
-                  
-
-                  
-
 	            
 	          </div>
 	          <div class="modal-footer">
