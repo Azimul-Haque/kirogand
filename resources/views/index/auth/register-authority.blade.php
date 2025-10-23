@@ -121,6 +121,10 @@
                                   <option value="district">জেলা পরিষদ</option>
                               </select>
                           </div>
+
+                          <!-- DYNAMIC AUTHORITY FIELDS -->
+                          <input type="hidden" name="authority_level" id="add_authority_level">
+                          <input type="hidden" name="authority_id" id="add_authority_id">
                           
                           <!-- বিভাগ -->
                           <div class="col-md-6">
