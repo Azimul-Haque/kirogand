@@ -354,15 +354,30 @@
                                   <input type="hidden" name="authority_level" id="edit_authority_level{{ $user->id }}">
                                   <input type="hidden" name="authority_id" id="edit_authority_id{{ $user->id }}">
 
-                                  <!-- Division Dropdown (Level 1) -->
-                                  <div class="input-group mb-3">
-                                      <select id="edit_division_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Division" data-target="edit_district_id{{ $user->id }}" data-model="District">
-                                          <option value="" selected disabled>বিভাগ নির্বাচন করুন</option>
-                                          @foreach ($divisions as $division)
-                                              <option value="{{ $division->id }}" data-level-name="Division">{{ $division->bn_name }}</option>
-                                          @endforeach
-                                      </select>
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <!-- Division Dropdown (Level 1) -->
+                                        <div class="input-group mb-3">
+                                            <select id="edit_division_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Division" data-target="edit_district_id{{ $user->id }}" data-model="District">
+                                                <option value="" selected disabled>বিভাগ নির্বাচন করুন</option>
+                                                @foreach ($divisions as $division)
+                                                    <option value="{{ $division->id }}" data-level-name="Division">{{ $division->bn_name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <!-- Union Dropdown (Level 4) -->
+                                      <div class="input-group mb-3">
+                                          <select id="add_union_id" class="form-control authority-select" data-level="Union" data-target="" data-model="" disabled>
+                                              <option value="" selected disabled>ইউনিয়ন নির্বাচন করুন</option>
+                                          </select>
+                                      </div>
+                                      <!-- END DYNAMIC AUTHORITY FIELDS -->
+                                    </div>
                                   </div>
+                                  
+                                  
 
                                   <!-- District Dropdown (Level 2) -->
                                   <div class="input-group mb-3">
