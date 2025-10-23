@@ -292,23 +292,6 @@
           // 3. Service Filtering Logic (Works on ALL 40 services)
           $('#serviceSearch').on('keyup', function() {
               var searchText = $(this).val().toLowerCase();
-              
-              // Ensure the button state resets when searching
-              // If search text is present, show all services initially so the filter works correctly
-              if (searchText.length > 0) {
-                  $serviceContainers.removeClass('d-none');
-                  $showMoreBtn.hide(); // Hide the show more button during search
-              } else {
-                  // Reset to default state
-                  $showMoreBtn.show();
-                   $serviceContainers.each(function(index) {
-                      if (index >= defaultVisible) {
-                          $(this).addClass('d-none');
-                      }
-                  });
-                   // Reset button text
-                   $showMoreBtn.html('সকল সেবার সম্পূর্ণ তালিকা <i class="fas fa-arrow-circle-down ms-2"></i>').removeClass('btn-outline-danger').addClass('btn-outline-primary');
-              }
 
               $serviceContainers.each(function() {
                   var $serviceContainer = $(this);
