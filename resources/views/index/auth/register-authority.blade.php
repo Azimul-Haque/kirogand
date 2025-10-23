@@ -186,6 +186,7 @@
                           <div class="col-md-6">
                             <div class="row">
                               <div class="col-md-6">
+                                <label for="confirmPassword" class="form-label small fw-bold">কনফার্ম পাসওয়ার্ড <span class="required-asterisk">*</span></label>
                                 <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
                               </div>
                               <div class="col-md-6">
