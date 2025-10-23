@@ -153,15 +153,6 @@
                           <div class="col-md-6">
                               <label for="add_union_id" class="form-label small fw-bold">ইউনিয়ন <span class="required-asterisk">*</span></label>
                               <select id="add_union_id" class="form-select authority-select" data-level="Union" data-target="" data-model="" disabled>
-                                  <option value="">নির্বাচন করুন...</option>
-                                  <option value="unit1">ইউনিয়ন ১</option>
-                                  <option value="unit2">ইউনিয়ন ২</option>
-                                  <!-- Options based on selected Upazila in real app -->
-                              </select>
-                          </div>
-
-                          <div class="input-group mb-3">
-                              <select id="add_union_id" class="form-control authority-select" data-level="Union" data-target="" data-model="" disabled>
                                   <option value="" selected disabled>ইউনিয়ন নির্বাচন করুন</option>
                               </select>
                           </div>
