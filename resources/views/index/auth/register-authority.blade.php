@@ -191,7 +191,7 @@
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label small fw-bold">ক্যাপচা টেক্সট লিখুন <span class="required-asterisk">*</span></label>
-                                <input type="text" class="form-control" name="captcha" placeholder="Write the Captcha" required="">
+                                <input type="text" class="form-control" name="captcha" placeholder="ক্যাপচা টেক্সটটি এখানে লিখুন" required="">
                               </div>
                             </div>
                           </div>
