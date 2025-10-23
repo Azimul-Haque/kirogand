@@ -382,7 +382,7 @@ class IndexController extends Controller
     public function generateCaptcha()
     {
         // Define image dimensions
-        $width = 120;
+        $width = 100;
         $height = 33;
 
         // Create a new image
