@@ -300,11 +300,11 @@
                 $('#add_authority_id').val(parentId);
             } else {
                 // If the selected value is empty, reset the current authority level/id
-                $('#' + context + '_authority_level').val('');
-                $('#' + context + '_authority_id').val('');
+                $('#add_authority_level').val('');
+                $('#add_authority_id').val('');
                 if(context == 'edit') {
-                  $('#' + context + '_authority_level' + userId).val(level);
-                  $('#' + context + '_authority_id' + userId).val(parentId);
+                  $('#add_authority_level' + userId).val(level);
+                  $('#add_authority_id' + userId).val(parentId);
                 }
             }
             
