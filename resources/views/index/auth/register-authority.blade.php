@@ -190,7 +190,7 @@
                                 <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
                               </div>
                               <div class="col-md-6">
-                                <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
+                                <input type="text" class="form-control" name="captcha" placeholder="Write the Captcha" required="">
                               </div>
                             </div>
                           </div>
