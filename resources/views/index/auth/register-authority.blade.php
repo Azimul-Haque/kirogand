@@ -137,10 +137,7 @@
                           <div class="col-md-6">
                               <label for="add_district_id" class="form-label small fw-bold">জেলা <span class="required-asterisk">*</span></label>
                               <select id="add_district_id" class="form-select authority-select" data-level="District" data-target="add_upazila_id" data-model="Upazila" disabled>
-                                  <option value="">নির্বাচন করুন...</option>
-                                  <option value="dhaka">ঢাকা</option>
-                                  <option value="gazipur">গাজীপুর</option>
-                                  <!-- Options based on selected Division in real app -->
+                                  <option value="" selected disabled>জেলা নির্বাচন করুন</option>
                               </select>
                           </div>
 
