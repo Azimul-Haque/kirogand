@@ -114,7 +114,7 @@
                           <div class="col-md-6">
                               <label for="authorityType" class="form-label small fw-bold">কর্তৃপক্ষের ধরণ <span class="required-asterisk">*</span></label>
                               <select id="authorityType" class="form-select" required>
-                                  <option value="">নির্বাচন করুন...</option>
+                                  <option value="" selected disabled>নির্বাচন করুন...</option>
                                   <option value="up">ইউনিয়ন পরিষদ</option>
                                   <option value="poura">পৌরসভা</option>
                                   <option value="upazila">উপজেলা পরিষদ</option>
