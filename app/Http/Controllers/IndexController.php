@@ -383,7 +383,7 @@ class IndexController extends Controller
     {
         // Define image dimensions
         $width = 100;
-        $height = 33;
+        $height = 30;
 
         // Create a new image
         $image = imagecreatetruecolor($width, $height);
