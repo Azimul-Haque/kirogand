@@ -182,7 +182,12 @@
                               <label for="confirmPassword" class="form-label small fw-bold">কনফার্ম পাসওয়ার্ড <span class="required-asterisk">*</span></label>
                               <input type="password" class="form-control" id="confirmPassword" required placeholder="পাসওয়ার্ড পুনরায় লিখুন">
                           </div>
+
+                          <div class="col-md-6 ">
+                            <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
+                          </div>
                       </div>
+
                       
                       <!-- Section 4: সম্মতি -->
                       <div class="form-check mb-4">
