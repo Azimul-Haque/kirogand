@@ -111,7 +111,7 @@
                       <div class="row g-3 mb-4">
                           
                           <!-- কর্তৃপক্ষের ধরণ -->
-                          <div class="col-md-6">
+                          <div class="col-md-12">
                               <label for="authorityType" class="form-label small fw-bold">কর্তৃপক্ষের ধরণ <span class="required-asterisk">*</span></label>
                               <select id="authorityType" class="form-select" required>
                                   <option value="" selected disabled>কর্তৃপক্ষের ধরণ নির্বাচন করুন</option>
