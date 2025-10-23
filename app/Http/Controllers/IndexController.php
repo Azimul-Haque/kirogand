@@ -328,8 +328,8 @@ class IndexController extends Controller
     public function getAuthorityRegister()
     {
         $divisions = Division::all();
-        
-        return view('index.auth.register-authority');
+
+        return view('index.auth.register-authority')->withDivisions($divisions)
     }
 
     public function storeAuthorityRegister(Request $request)
