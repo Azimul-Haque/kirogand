@@ -27,7 +27,12 @@ class User extends Authenticatable
         return $this->hasMany(UserAuthority::class);
     }
 
-    
+    public function localOffice(): BelongsTo
+    {
+        return $this->belongsTo(LocalOffice::class, 'local_office_id');
+    }
+
+
 
     /**
      * The attributes that are mass assignable.
