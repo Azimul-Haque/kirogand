@@ -53,7 +53,7 @@
               <div class="card p-4 p-md-5 form-card bg-white">
                   <!-- EDITED: Added method="POST" and action="/admin/register" for custom route targeting -->
                   <form id="adminRegistrationForm" method="POST" action="/admin/register">
-                      
+                      @csrf
                       <!-- Section 1: সাধারণ তথ্য -->
                       <h2 class="h5 form-heading"><i class="fas fa-info-circle me-2"></i> সাধারণ তথ্য</h2>
                       <div class="row g-3 mb-4">
