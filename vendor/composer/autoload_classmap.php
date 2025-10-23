@@ -37,7 +37,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Like' => $baseDir . '/app/Like.php',
-    'App\\LocalGovernment' => $baseDir . '/app/LocalGovernment.php',
+    'App\\LocalOffice' => $baseDir . '/app/LocalOffice.php',
     'App\\Message' => $baseDir . '/app/Message.php',
     'App\\Notification' => $baseDir . '/app/Notification.php',
     'App\\Package' => $baseDir . '/app/Package.php',
