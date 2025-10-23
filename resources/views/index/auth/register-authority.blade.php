@@ -302,10 +302,6 @@
                 // If the selected value is empty, reset the current authority level/id
                 $('#add_authority_level').val('');
                 $('#add_authority_id').val('');
-                if(context == 'edit') {
-                  $('#add_authority_level' + userId).val(level);
-                  $('#add_authority_id' + userId).val(parentId);
-                }
             }
             
             // 2b. Load the next level of locations
