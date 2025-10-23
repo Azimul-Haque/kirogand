@@ -143,8 +143,8 @@
                           
                           <!-- থানা / উপজেলা -->
                           <div class="col-md-6">
-                              <label for="upazila" class="form-label small fw-bold">থানা / উপজেলা <span class="required-asterisk">*</span></label>
-                              <select id="upazila" class="form-select" required>
+                              <label for="add_upazila_id" class="form-label small fw-bold">থানা / উপজেলা <span class="required-asterisk">*</span></label>
+                              <select id="add_upazila_id" class="form-select" required>
                                   <option value="">নির্বাচন করুন...</option>
                                   <option value="sreepur">শ্রীপুর</option>
                                   <option value="kapasia">কাপাসিয়া</option>
