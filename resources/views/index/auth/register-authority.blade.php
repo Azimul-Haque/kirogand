@@ -125,7 +125,7 @@
                           <!-- বিভাগ -->
                           <div class="col-md-6">
                               <label for="add_division_id" class="form-label small fw-bold">বিভাগ <span class="required-asterisk">*</span></label>
-                              <select id="add_division_id" class="form-select authority-select" required>
+                              <select id="add_division_id" class="form-select authority-select" data-level="Division" data-target="add_district_id" data-model="District" required>
                                   <option value="">নির্বাচন করুন...</option>
                                   <option value="dhaka">ঢাকা</option>
                                   <option value="chattogram">চট্টগ্রাম</option>
