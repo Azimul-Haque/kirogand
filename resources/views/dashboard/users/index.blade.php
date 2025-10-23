@@ -375,17 +375,31 @@
                                       </div>
                                     </div>
                                   </div>
-                                  
-                                  
 
-                                  
-
-                                  <!-- Upazila Dropdown (Level 3 - Can be Municipality Authority) -->
-                                  <div class="input-group mb-3">
-                                      <select id="edit_upazila_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Upazila" data-target="edit_union_id{{ $user->id }}" data-model="Union" disabled>
-                                          <option value="" selected disabled>উপজেলা/পৌরসভা নির্বাচন করুন</option>
-                                      </select>
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <!-- Upazila Dropdown (Level 3 - Can be Municipality Authority) -->
+                                      <div class="input-group mb-3">
+                                          <select id="edit_upazila_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Upazila" data-target="edit_union_id{{ $user->id }}" data-model="Union" disabled>
+                                              <option value="" selected disabled>উপজেলা/পৌরসভা নির্বাচন করুন</option>
+                                          </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <!-- District Dropdown (Level 2) -->
+                                      <div class="input-group mb-3">
+                                          <select id="edit_district_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="District" data-target="edit_upazila_id{{ $user->id }}" data-model="Upazila" disabled>
+                                              <option value="" selected disabled>জেলা নির্বাচন করুন</option>
+                                          </select>
+                                      </div>
+                                    </div>
                                   </div>
+
+                                  
+
+                                  
+
+                                  
 
                                   <!-- Union Dropdown (Level 4) -->
                                   <div class="input-group mb-3">
