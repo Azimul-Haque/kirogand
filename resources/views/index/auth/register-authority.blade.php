@@ -99,7 +99,8 @@
                                   <option value="officer">ইউনিয়ন চেয়ারম্যান</option>
                                   <option value="secretary">ইউনিয়ন সচিব</option>
                                   <option value="secretary">ইউনিয়ন সহকারী</option>
-                                  <option value="chairman">চেয়ারম্যান/মেয়র</option>
+                                  <option value="chairman">মেয়র</option>
+                                  <option value="chairman">কাউন্সিলর</option>
                               </select>
                           </div>
                       </div>
