@@ -159,6 +159,12 @@
                                   <!-- Options based on selected Upazila in real app -->
                               </select>
                           </div>
+
+                          <div class="input-group mb-3">
+                              <select id="add_union_id" class="form-control authority-select" data-level="Union" data-target="" data-model="" disabled>
+                                  <option value="" selected disabled>ইউনিয়ন নির্বাচন করুন</option>
+                              </select>
+                          </div>
                           
                           <!-- কর্তৃপক্ষ (Union/Pourashava/Upazila name) -->
                           <div class="col-md-6">
