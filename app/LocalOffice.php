@@ -36,8 +36,8 @@ class LocalOffice extends Model
     /**
     * Get the administrators (users) associated with this Local Office.
     */
-    public function admins()
+    public function localOffice(): BelongsTo
     {
-    return $this->hasMany(OfficeAdmin::class);
+        return $this->belongsTo(LocalOffice::class, 'local_office_id');
     }
 }
