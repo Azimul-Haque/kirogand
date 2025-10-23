@@ -287,37 +287,7 @@
           const $serviceContainers = $('.service-box-container');
           const $showMoreBtn = $('#showMoreServicesBtn');
 
-          // 1. Initial Hiding Logic (executed immediately after mock data script runs)
-          // Hides services from index 12 (the 13th item) onwards
-          $serviceContainers.each(function(index) {
-              if (index >= defaultVisible) {
-                  $(this).addClass('d-none');
-              }
-          });
-
-          // 2. Toggle Visibility Logic
-          $showMoreBtn.on('click', function(e) {
-              e.preventDefault();
-              
-              // Get all currently hidden services (which are not hidden by the search filter)
-              const $hiddenServices = $serviceContainers.filter('.d-none');
-              
-              if ($hiddenServices.length > 0) {
-                  // Show all hidden services
-                  $hiddenServices.removeClass('d-none');
-                  // Update button text and icon
-                  $(this).html('প্রথম ১২টি সেবা দেখুন <i class="fas fa-arrow-circle-up ms-2"></i>').removeClass('btn-outline-primary').addClass('btn-outline-danger');
-              } else {
-                  // Hide back (services 13 onwards)
-                  $serviceContainers.each(function(index) {
-                      if (index >= defaultVisible) {
-                          $(this).addClass('d-none');
-                      }
-                  });
-                  // Update button text and icon
-                  $(this).html('সকল সেবার সম্পূর্ণ তালিকা <i class="fas fa-arrow-circle-down ms-2"></i>').removeClass('btn-outline-danger').addClass('btn-outline-primary');
-              }
-          });
+          
 
           // 3. Service Filtering Logic (Works on ALL 40 services)
           $('#serviceSearch').on('keyup', function() {
