@@ -157,17 +157,6 @@
                               </select>
                           </div>
                           
-                          <!-- কর্তৃপক্ষ (Union/Pourashava/Upazila name) -->
-                          <div class="col-md-6">
-                              <label for="authorityName" class="form-label small fw-bold">কর্তৃপক্ষ (নাম) <span class="required-asterisk">*</span></label>
-                              <select id="authorityName" class="form-select" required>
-                                  <option value="">নির্বাচন করুন...</option>
-                                  <option value="tekmot">টেকমত ইউনিয়ন পরিষদ</option>
-                                  <option value="gazipurPoura">গাজীপুর পৌরসভা</option>
-                                  <!-- Options based on selected Upazila/Authority Type -->
-                              </select>
-                          </div>
-                          
                           <!-- কর্তৃপক্ষ অফিসের নাম (Specific Office/Designation) -->
                           <div class="col-md-12">
                               <label for="office_name" class="form-label small fw-bold">কর্তৃপক্ষ অফিসের নাম (কার্যালয়) <span class="required-asterisk">*</span></label>
