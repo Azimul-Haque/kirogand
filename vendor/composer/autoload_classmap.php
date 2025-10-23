@@ -40,6 +40,7 @@ return array(
     'App\\LocalOffice' => $baseDir . '/app/LocalOffice.php',
     'App\\Message' => $baseDir . '/app/Message.php',
     'App\\Notification' => $baseDir . '/app/Notification.php',
+    'App\\OfficeAdmin' => $baseDir . '/app/OfficeAdmin.php',
     'App\\Package' => $baseDir . '/app/Package.php',
     'App\\Payment' => $baseDir . '/app/Payment.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',

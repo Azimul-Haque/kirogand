@@ -591,6 +591,7 @@ class ComposerStaticInitd99be2aa22b662638be63ef18831ea06
         'App\\LocalOffice' => __DIR__ . '/../..' . '/app/LocalOffice.php',
         'App\\Message' => __DIR__ . '/../..' . '/app/Message.php',
         'App\\Notification' => __DIR__ . '/../..' . '/app/Notification.php',
+        'App\\OfficeAdmin' => __DIR__ . '/../..' . '/app/OfficeAdmin.php',
         'App\\Package' => __DIR__ . '/../..' . '/app/Package.php',
         'App\\Payment' => __DIR__ . '/../..' . '/app/Payment.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
