@@ -186,7 +186,7 @@
                           <div class="col-md-6">
                             <div class="row">
                               <div class="col-md-6">
-                                <label for="captcha" class="form-label small fw-bold"></label>
+                                <label for="captcha" class="form-label small fw-bold">ক্যাপচা</label>
                                 <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
                               </div>
                               <div class="col-md-6">
