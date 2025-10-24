@@ -109,7 +109,8 @@
                              class="img-circle elevation-1"
                              alt="User Image">
                         <p>
-                            {{ Auth::user()->name }}
+                            {{ Auth::user()->name }}<br/>
+                            {{ Auth::user()->name }}<br/>
                             <small>যোগদানঃ {{ bangla(Auth::user()->created_at->format('F Y')) }}</small>
                         </p>
                     </li>
