@@ -424,7 +424,7 @@ class IndexController extends Controller
                 UserAuthority::LocalOffice(
                     [
                         'package_expiry_date' => Carbon::now()->addDays(2)->format('Y-m-d') . ' 23:59:59'
-                        'authority_type' => $modelClass,
+                        'name_bn' => $request->office_name,
                         'role' => $request->designation, // Use user role as authority role for simplicity
                     ]
                 );
