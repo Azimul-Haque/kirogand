@@ -143,6 +143,16 @@ class DashboardController extends Controller
                     ->withLocaloffices($localoffices);
     }
 
+    public function getApplyforCertificate()
+    {
+        $localofficescount = LocalOffice::count();
+        $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
+
+        return view('dashboard.localoffices.index')
+                    ->withLocalofficescount($localofficescount)
+                    ->withLocaloffices($localoffices);
+    }
+
     // public function getUsersSort()
     // {
     //     // $users = User::where('name', '!=', null)->orderBy('id', 'asc')->get(10);
