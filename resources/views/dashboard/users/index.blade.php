@@ -501,20 +501,21 @@
                       <div class="input-group-append">
                           <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
                       </div>
+                      <select id="designation" name="designation" class="form-select" required>
+                          <option value="" selected disabled>পদবি নির্বাচন করুন</option>
+                          <option value="চেয়ারম্যান" {{ old('designation') == 'চেয়ারম্যান' ? 'selected' : '' }}>ইউনিয়ন চেয়ারম্যান</option>
+                          <option value="সচিব" {{ old('designation') == 'সচিব' ? 'selected' : '' }}>ইউনিয়ন সচিব</option>
+                          <option value="সহকারী" {{ old('designation') == 'সহকারী' ? 'selected' : '' }}>ইউনিয়ন সহকারী</option>
+                          <option value="মেয়র" {{ old('designation') == 'মেয়র' ? 'selected' : '' }}>মেয়র</option>
+                          <option value="কাউন্সিলর" {{ old('designation') == 'কাউন্সিলর' ? 'selected' : '' }}>কাউন্সিলর</option>
+                          <option value="পৌর সচিব" {{ old('designation') == 'পৌর সচিব' ? 'selected' : '' }}>পৌর সচিব</option>
+                          <div class="input-group-append">
+                              <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
+                          </div>
+                      </select>
                   </div>
 
-                  <select id="designation" name="designation" class="form-select" required>
-                      <option value="" selected disabled>পদবি নির্বাচন করুন</option>
-                      <option value="চেয়ারম্যান" {{ old('designation') == 'চেয়ারম্যান' ? 'selected' : '' }}>ইউনিয়ন চেয়ারম্যান</option>
-                      <option value="সচিব" {{ old('designation') == 'সচিব' ? 'selected' : '' }}>ইউনিয়ন সচিব</option>
-                      <option value="সহকারী" {{ old('designation') == 'সহকারী' ? 'selected' : '' }}>ইউনিয়ন সহকারী</option>
-                      <option value="মেয়র" {{ old('designation') == 'মেয়র' ? 'selected' : '' }}>মেয়র</option>
-                      <option value="কাউন্সিলর" {{ old('designation') == 'কাউন্সিলর' ? 'selected' : '' }}>কাউন্সিলর</option>
-                      <option value="পৌর সচিব" {{ old('designation') == 'পৌর সচিব' ? 'selected' : '' }}>পৌর সচিব</option>
-                      <div class="input-group-append">
-                          <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
-                      </div>
-                  </select>
+
 
 	                <div class="input-group mb-3">
 	                    <input type="password"
