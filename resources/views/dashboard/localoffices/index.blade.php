@@ -49,7 +49,7 @@
                 </thead>
               </thead>
               <tbody>
-                @foreach($localoffices as $payment)
+                @foreach($localoffices as $localoffice)
                   <tr>
                     <td>
                       <a href="{{ route('dashboard.users.single', $payment->user->id) }}">{{ $payment->user->name }}</a>
