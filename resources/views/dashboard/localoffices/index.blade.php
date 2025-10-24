@@ -52,7 +52,7 @@
                   <tr>
                     <td>
                       {{ $localoffice->name_bn }}</br>
-                      <span class="badge badge-default">📞 {{ $localoffice->phone }}</span>
+                      <span class="badge badge-primary">📞 {{ $localoffice->phone }}</span>
                       <span class="badge badge-warning">✉ {{ $localoffice->email }}</span>
                     </td>
                     <td><span class="badge badge-{{ $localoffice->is_active == 0 ? 'default' : 'success' }}">{{ $localoffice->is_active == 0 ? 'এক্টিভ নয়' : 'একটিভ' }}</span></td>
