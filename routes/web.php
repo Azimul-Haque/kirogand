@@ -104,7 +104,7 @@ Route::post('/dashboard/users/{id}/single/sms', 'DashboardController@sendSingleS
 
 Route::get('/dashboard/local-offices', 'DashboardController@getLocalOffices')->name('dashboard.local-offices');
 
-Route::get('/dashboard/apply-for-certificate', 'DashboardController@getApplyforCertificate')->name('dashboard.local-offices');
+Route::get('/dashboard/apply-for-certificate', 'DashboardController@getApplyforCertificate')->name('dashboard.apply-for-certificate');
 
 Route::get('/dashboard/payments', 'DashboardController@getPayments')->name('dashboard.payments');
 Route::get('/dashboard/payments/{search}', 'DashboardController@getPaymentsSearch')->name('dashboard.payments.search');
