@@ -26,6 +26,15 @@
 
 @if(Auth::user()->role == 'admin')
 <li class="nav-item">
+    <a href="{{ route('dashboard.local-offices') }}" class="nav-link {{ Request::is('dashboard/local-offices') ? 'active' : '' }} {{ Request::is('dashboard/local-offices/*') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-landmark"></i>
+        <p>ইউনিয়ন/পৌরসভা তালিকা</p>
+    </a>
+</li>
+@endif
+
+@if(Auth::user()->role == 'admin')
+<li class="nav-item">
     <a href="{{ route('dashboard.payments') }}" class="nav-link {{ Request::is('dashboard/payments') ? 'active' : '' }} {{ Request::is('dashboard/payments/*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-hand-holding-usd"></i>
         <p>পেমেন্টসমূহ</p>
