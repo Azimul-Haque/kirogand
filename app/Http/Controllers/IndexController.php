@@ -414,7 +414,7 @@ class IndexController extends Controller
         }
     }
 
-    protected function syncUserAuthoritywithLO(User $user, Request $request): void
+    protected function syncUserAuthoritywithLO(User $user, Request $request)
     {
         $level = $request->input('authority_level');
         $id = $request->input('authority_id');
