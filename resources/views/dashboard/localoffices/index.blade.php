@@ -57,7 +57,11 @@
                     </td>
                     <td><span class="badge badge-{{ $localoffice->is_active == 0 ? 'light' : 'success' }}">{{ $localoffice->is_active == 0 ? 'এক্টিভ নয়' : 'একটিভ' }}</span></td>
                     <td>{{ $localoffice->localoffice_type == 0 ? 'Successfull' : 'Failed' }}</td>
-                    <td>{{ $localoffice->card_type }}</td>
+                    <td>
+                      @foreach($localoffice->users as $user)
+
+                      @endforeach
+                    </td>
                     <td><b>৳ {{ $localoffice->store_amount }}</b> <small>(৳ {{ $localoffice->amount }})</small></td>
                     <td>{{ date('F d, Y', strtotime($localoffice->created_at)) }}</td>
                     <td>
