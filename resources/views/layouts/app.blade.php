@@ -44,7 +44,7 @@
                 --}}
                 <span class="d-none d-sm-inline">
                     {{-- Display the full dynamic hierarchy string --}}
-                    <span style="color: #FFFFFF !important; font-weight: bold;">{!! $auth->getFullHierarchy() !!} </span>
+                    <span style="color: #FFFFFF !important; font-weight: bold;">{!! $auth->getFullHierarchy() !!} ({{ Auth::user()->localOffice->name_bn }})</span>
                     {{-- <span class="badge badge-secondary">
                         ({{ (new \ReflectionClass($auth->authority_type))->getShortName() }})
                     </span> --}}
