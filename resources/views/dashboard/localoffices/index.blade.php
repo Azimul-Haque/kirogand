@@ -52,9 +52,7 @@
                 @foreach($localoffices as $localoffice)
                   <tr>
                     <td>
-                      <a href="{{ route('dashboard.users.single', $payment->user->id) }}">{{ $payment->user->name }}</a>
-                      <small>({{ $payment->user->localoffices->count() }} বার)</small><br/>
-                      <small class="text-black-50">{{ $payment->user->mobile }}</small>
+                      {{  }}
                     </td>
                     <td>{{ $payment->package->name }}</td>
                     <td>{{ $payment->payment_status == 1 ? 'Successfull' : 'Failed' }}</td>
