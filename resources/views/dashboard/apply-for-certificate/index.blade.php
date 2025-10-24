@@ -12,7 +12,9 @@
 
 @section('content')
   @section('page-header') সনদের আবেদন @endsection
-  
+    <div class="container-fluid">
+      
+    </div>
 @endsection
 
 @section('third_party_scripts')
