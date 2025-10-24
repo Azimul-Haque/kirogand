@@ -356,6 +356,7 @@ class IndexController extends Controller
             ],
 
             'office_name'    => 'required|string|max:191',
+            'office_type'    => 'required',
             'password'    => 'required|string|min:8|max:191|confirmed',
             'captcha' => 'required|string',
         ];
