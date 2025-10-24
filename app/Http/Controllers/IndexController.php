@@ -434,7 +434,7 @@ class IndexController extends Controller
                     ]
                 );
                 // update or create Local Office
-                $localoffice = LocalOffice::updateOrCreate(
+                $localoffice = new LocalOffice::updateOrCreate(
                     [
                         'package_expiry_date' => Carbon::now()->addDays(2)->format('Y-m-d') . ' 23:59:59',
                         'name_bn' => $request->office_name,
@@ -445,7 +445,7 @@ class IndexController extends Controller
                 $user->local_office_id = $localoffice->id;
                 $user->save();
             }
-            dd($request->all());
+            dd($localoffice);
         } else {
             // If no authority is selected, delete any existing authority assignments
             $user->authorities()->delete();
