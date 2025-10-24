@@ -20,7 +20,8 @@ class LocalOffice extends Model
     * @var array
     */
     protected $fillable = [
-        'office_name_bn',
+        'name_bn',
+        'name',
         'office_type',
         'is_active',
 
