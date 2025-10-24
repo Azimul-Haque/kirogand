@@ -340,7 +340,6 @@ class IndexController extends Controller
 
     public function storeAuthorityRegister(Request $request)
     {
-        dd($request->all());
         $rules = [
             'name'        => 'required|string|max:191',
             'name_en'        => 'required|string|max:191',
