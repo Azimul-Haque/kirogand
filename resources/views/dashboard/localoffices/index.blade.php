@@ -59,7 +59,7 @@
                     <td>{{ $localoffice->localoffice_type == 0 ? 'Successfull' : 'Failed' }}</td>
                     <td>
                       @foreach($localoffice->users as $user)
-
+                        {{ $user->name_bn }}
                       @endforeach
                     </td>
                     <td><b>৳ {{ $localoffice->store_amount }}</b> <small>(৳ {{ $localoffice->amount }})</small></td>
