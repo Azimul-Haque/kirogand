@@ -49,11 +49,11 @@
                 </thead>
               </thead>
               <tbody>
-                @foreach($payments as $payment)
+                @foreach($localoffices as $payment)
                   <tr>
                     <td>
                       <a href="{{ route('dashboard.users.single', $payment->user->id) }}">{{ $payment->user->name }}</a>
-                      <small>({{ $payment->user->payments->count() }} বার)</small><br/>
+                      <small>({{ $payment->user->localoffices->count() }} বার)</small><br/>
                       <small class="text-black-50">{{ $payment->user->mobile }}</small>
                     </td>
                     <td>{{ $payment->package->name }}</td>
@@ -69,7 +69,7 @@
           </div>
           <!-- /.card-body -->
         </div>
-        {{ $payments->links() }}
+        {{ $localoffices->links() }}
 
     </div>
 @endsection
@@ -80,7 +80,7 @@
 
       $(document).on('click', '#search-button', function() {
         if($('#search-param').val() != '') {
-          var urltocall = '{{ route('dashboard.payments') }}' +  '/' + $('#search-param').val();
+          var urltocall = '{{ route('dashboard.localoffices') }}' +  '/' + $('#search-param').val();
           location.href= urltocall;
         } else {
           $('#search-param').css({ "border": '#FF0000 2px solid'});
@@ -93,7 +93,7 @@
       $("#search-param").keyup(function(e) {
         if(e.which == 13) {
           if($('#search-param').val() != '') {
-            var urltocall = '{{ route('dashboard.payments') }}' +  '/' + $('#search-param').val();
+            var urltocall = '{{ route('dashboard.localoffices') }}' +  '/' + $('#search-param').val();
             location.href= urltocall;
           } else {
             $('#search-param').css({ "border": '#FF0000 2px solid'});
