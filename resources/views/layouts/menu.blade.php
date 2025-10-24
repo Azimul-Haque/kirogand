@@ -17,8 +17,8 @@
 
 @if(Auth::user()->role == 'admin')
 <li class="nav-item">
-    <a href="{{ route('dashboard.users') }}" class="nav-link {{ Request::is('dashboard/users') ? 'active' : '' }} {{ Request::is('dashboard/users/*') ? 'active' : '' }}">
-        <i class="nav-icon fas fa-users"></i>
+    <a href="{{ route('dashboard.local-offices') }}" class="nav-link {{ Request::is('dashboard/local-offices') ? 'active' : '' }} {{ Request::is('dashboard/local-offices/*') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-local-offices"></i>
         <p>ইউনিয়ন/পৌরসভা তালিকা</p>
     </a>
 </li>
