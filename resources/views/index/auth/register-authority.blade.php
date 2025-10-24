@@ -160,14 +160,14 @@
                       <!-- কর্তৃপক্ষের ধরণ -->
                       <div class="col-md-12">
                           <label for="authorityType" class="form-label small fw-bold">কর্তৃপক্ষের ধরণ <span class="required-asterisk">*</span></label>
-                          <select id="authorityType" name="authority_type" class="form-select @error('authority_type') is-invalid @enderror" required> <!-- Added name="authority_type" -->
-                              <option value="" {{ old('authority_type') == '' ? 'selected' : '' }} disabled>কর্তৃপক্ষের ধরণ নির্বাচন করুন</option>
-                              <option value="up" {{ old('authority_type') == 'up' ? 'selected' : '' }}>ইউনিয়ন পরিষদ</option>
-                              <option value="poura" {{ old('authority_type') == 'poura' ? 'selected' : '' }}>পৌরসভা</option>
+                          <select id="authorityType" name="office_type" class="form-select @error('office_type') is-invalid @enderror" required> <!-- Added name="office_type" -->
+                              <option value="" {{ old('office_type') == '' ? 'selected' : '' }} disabled>কর্তৃপক্ষের ধরণ নির্বাচন করুন</option>
+                              <option value="up" {{ old('office_type') == 'up' ? 'selected' : '' }}>ইউনিয়ন পরিষদ</option>
+                              <option value="poura" {{ old('office_type') == 'poura' ? 'selected' : '' }}>পৌরসভা</option>
                               {{-- <option value="upazila">উপজেলা পরিষদ</option>
                               <option value="district">জেলা পরিষদ</option> --}}
                           </select>
-                          @error('authority_type')
+                          @error('office_type')
                               <div class="invalid-feedback">{{ $message }}</div>
                           @enderror
                       </div>
