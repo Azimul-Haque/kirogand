@@ -425,7 +425,7 @@ class IndexController extends Controller
                 // update or create Local Office
                 LocalOffice::updateOrCreate(
                     [
-                        'package_expiry_date' => Carbon::now()->addDays(2)->format('Y-m-d') . ' 23:59:59'
+                        'package_expiry_date' => Carbon::now()->addDays(2)->format('Y-m-d') . ' 23:59:59' ,
                         'name_bn' => $request->office_name,
                         'office_type' => $request->office_type,
                         'is_active' => 0, // by default active kora thakbe na
