@@ -423,7 +423,7 @@ class IndexController extends Controller
                     ]
                 );
                 // update or create Local Office
-                UserAuthority::LocalOffice(
+                LocalOffice::updateOrCreate(
                     [
                         'package_expiry_date' => Carbon::now()->addDays(2)->format('Y-m-d') . ' 23:59:59'
                         'name_bn' => $request->office_name,
