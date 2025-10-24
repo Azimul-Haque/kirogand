@@ -408,11 +408,11 @@ class IndexController extends Controller
             // User is logged in but inactive. Redirect to a non-dashboard page (e.g., home)
             // and show a message that their account is pending approval.
             $request->session()->flash('status', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
-            return redirect()->route('home'); // Change 'home' to your desired route name for the home page
+            return redirect()->route('index.index'); // Change 'home' to your desired route name for the home page
 
         } else {
             // User is active (shouldn't happen with default 'is_active' = 0, but good for safety)
-            return redirect()->intended('/dashboard');
+            return redirect()->route('dashboard.index');
         }
     }
 
