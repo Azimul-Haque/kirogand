@@ -56,7 +56,7 @@
                       <span class="badge badge-warning">✉ {{ $localoffice->email }}</span>
                     </td>
                     <td><span class="badge badge-{{ $localoffice->is_active == 0 ? 'light' : 'success' }}">{{ $localoffice->is_active == 0 ? 'এক্টিভ নয়' : 'একটিভ' }}</span></td>
-                    <td>{{ $localoffice->localoffice_status == 1 ? 'Successfull' : 'Failed' }}</td>
+                    <td>{{ $localoffice->localoffice_type == 1 ? 'Successfull' : 'Failed' }}</td>
                     <td>{{ $localoffice->card_type }}</td>
                     <td>{{ $localoffice->trx_id }}</td>
                     <td><b>৳ {{ $localoffice->store_amount }}</b> <small>(৳ {{ $localoffice->amount }})</small></td>
