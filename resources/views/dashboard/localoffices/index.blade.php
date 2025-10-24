@@ -62,7 +62,6 @@
                         {{ $user->name }}
                       @endforeach
                     </td>
-                    <td><b>৳ {{ $localoffice->store_amount }}</b> <small>(৳ {{ $localoffice->amount }})</small></td>
                     <td>{{ date('F d, Y', strtotime($localoffice->created_at)) }}</td>
                     <td>
 
