@@ -19,7 +19,7 @@
 <li class="nav-item">
     <a href="{{ route('dashboard.users') }}" class="nav-link {{ Request::is('dashboard/users') ? 'active' : '' }} {{ Request::is('dashboard/users/*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-users"></i>
-        <p>ব্যবহারকারীগণ</p>
+        <p>ইউনিয়ন/পৌরসভা তালিকা</p>
     </a>
 </li>
 @endif
