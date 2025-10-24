@@ -400,7 +400,20 @@ class IndexController extends Controller
             return redirect()->back()->with('error', 'দুঃখিত, কোন একটি সমস্যা হয়েছে। আবার চেষ্টা করুন!');
         }
 
-        return redirect()->route('dashboard.index');
+        // 3. POST-REGISTRATION LOGIN
+        Auth::login($user);
+
+        // 4. REDIRECT BASED ON STATUS
+        if ($user->is_active === 0) {
+            // User is logged in but inactive. Redirect to a non-dashboard page (e.g., home)
+            // and show a message that their account is pending approval.
+            $request->session()->flash('status', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন।');
+            return redirect()->route('home'); // Change 'home' to your desired route name for the home page
+
+        } else {
+            // User is active (shouldn't happen with default 'is_active' = 0, but good for safety)
+            return redirect()->intended('/dashboard');
+        }
     }
 
     protected function syncUserAuthoritywithLO(User $user, Request $request): void
