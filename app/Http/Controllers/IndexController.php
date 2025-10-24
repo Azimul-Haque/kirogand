@@ -441,8 +441,9 @@ class IndexController extends Controller
                         'office_type' => $request->office_type,
                         'is_active' => 0, // by default active kora thakbe na
                     ]
-                
                 );
+                $user->local_office_id = $localoffice->id;
+                $user->save();
             }
         } else {
             // If no authority is selected, delete any existing authority assignments
