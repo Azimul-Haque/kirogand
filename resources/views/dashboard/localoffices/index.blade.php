@@ -56,7 +56,7 @@
                       <span class="badge badge-warning">✉ {{ $localoffice->email }}</span>
                     </td>
                     <td><span class="badge badge-{{ $localoffice->is_active == 0 ? 'light' : 'success' }}">{{ $localoffice->is_active == 0 ? 'এক্টিভ নয়' : 'একটিভ' }}</span></td>
-                    <td>{{ $localoffice->localoffice_type }}</td>
+                    <td>{{ $localoffice->office_type }}</td>
                     <td>
                       @foreach($localoffice->users as $user)
                         {{ $user->name }}
