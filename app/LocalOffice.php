@@ -30,9 +30,6 @@ class LocalOffice extends Model
         'email',
         'phone',
         'monogram',
-
-        // Geographical Field (Single Anchor)
-        'geo_location_id', 
     ];
 
     /**
