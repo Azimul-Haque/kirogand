@@ -13,7 +13,7 @@
 @section('content')
   @section('page-header') ইউনিয়ন/পৌরসভা @endsection
     <div class="container-fluid">
-    <div class="card">
+      <div class="card">
           <div class="card-header">
             <h3 class="card-title">ইউনিয়ন/পৌরসভা তালিকা (মোট: {{ $localofficescount }})</h3>
 
@@ -74,7 +74,6 @@
           <!-- /.card-body -->
         </div>
         {{ $localoffices->links() }}
-
     </div>
 @endsection
 
