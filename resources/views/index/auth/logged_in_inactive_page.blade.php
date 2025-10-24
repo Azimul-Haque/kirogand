@@ -18,7 +18,6 @@
       <p class="text-center lead mb-5 text-muted">স্থানীয় সরকার কর্তৃপক্ষ (ইউনিয়ন/পৌরসভা/উপজেলা পরিষদ/জেলা পরিষদ) ও কর্মকর্তা একাউন্ট নিবন্ধন</p>
 
       <div id="resultContainer" class="mt-5">
-          <h2 class="h3 fw-bold mb-4 text-center" style="color: var(--darker-color);">যাচাইয়ের ফলাফল</h2>
           <div class="row justify-content-center">
               <div class="col-md-8 col-lg-6">
                   <div id="" class="card p-4 p-md-5 border-0 shadow-lg rounded-3">
