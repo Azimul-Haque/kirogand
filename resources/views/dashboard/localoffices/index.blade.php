@@ -55,7 +55,7 @@
                       <span class="badge badge-primary">📞 {{ $localoffice->phone }}</span>
                       <span class="badge badge-warning">✉ {{ $localoffice->email }}</span>
                     </td>
-                    <td><span class="badge badge-warning">{{ $localoffice->is_active }}</span></td>
+                    <td><span class="badge badge-success">{{ $localoffice->is_active }}</span></td>
                     <td>{{ $localoffice->localoffice_status == 1 ? 'Successfull' : 'Failed' }}</td>
                     <td>{{ $localoffice->card_type }}</td>
                     <td>{{ $localoffice->trx_id }}</td>
