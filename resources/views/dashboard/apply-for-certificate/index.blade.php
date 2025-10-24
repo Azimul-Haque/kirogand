@@ -11,20 +11,20 @@
 @endsection
 
 @section('content')
-  @section('page-header') ইউনিয়ন/পৌরসভা @endsection
+  @section('page-header') সনদের আবেদন @endsection
     <div class="container-fluid">
     <div class="card">
           <div class="card-header">
-            <h3 class="card-title">ইউনিয়ন/পৌরসভা তালিকা (মোট: {{ $localofficescount }})</h3>
+            <h3 class="card-title">সনদের আবেদন তালিকা (মোট: )</h3>
 
             <div class="card-tools">
-              {{-- <button type="button" class="btn btn-success btn-sm"  data-toggle="modal" data-target="#addPackageModal" title="" rel="tooltip" data-original-title="ইউনিয়ন/পৌরসভা যোগ করুন">
-                <i class="fas fa-clipboard-check"></i> নতুন ইউনিয়ন/পৌরসভা
+              {{-- <button type="button" class="btn btn-success btn-sm"  data-toggle="modal" data-target="#addPackageModal" title="" rel="tooltip" data-original-title="সনদের আবেদন যোগ করুন">
+                <i class="fas fa-clipboard-check"></i> নতুন সনদের আবেদন
               </button> --}}
               <div class="card-tools">
                 <form class="form-inline form-group-lg" action="">
                   <div class="form-group">
-                    <input type="search-param" class="form-control form-control-sm" placeholder="ইউনিয়ন/পৌরসভা খুঁজুন" id="search-param" required>
+                    <input type="search-param" class="form-control form-control-sm" placeholder="সনদের আবেদন খুঁজুন" id="search-param" required>
                   </div>
                   <button type="button" id="search-button" class="btn btn-default btn-sm" style="margin-left: 5px;">
                     <i class="fas fa-search"></i> খুঁজুন
