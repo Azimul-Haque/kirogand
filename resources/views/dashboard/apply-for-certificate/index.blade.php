@@ -3,10 +3,64 @@
 
 @section('third_party_stylesheets')
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css"> --}}
-
     <style>
-    
+        /* Define custom variables for colors if they are used elsewhere in your dashboard */
+        :root {
+            --primary-color: #007bff; /* Example Primary */
+            --light-primary-color: #6c757d; /* Example Secondary */
+            --medium-color: #17a2b8; /* Example Info */
+            --darker-color: #343a40; /* Example Dark */
+        }
 
+        /* --- Custom Styles to Preserve BS5 Aesthetic in BS4 --- */
+
+        /* Ensures the whole input group gets the rounded pill shape */
+        .input-group.rounded-pill-custom,
+        .input-group.rounded-pill-custom .input-group-text,
+        .input-group.rounded-pill-custom .form-control {
+            border-radius: 50rem !important;
+        }
+
+        /* Fixing the individual borders for the pill look in BS4 */
+        .input-group.rounded-pill-custom .input-group-text {
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+        }
+
+        .input-group.rounded-pill-custom .form-control {
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            background-color: #fff;
+            padding: 20px 10px;
+            border-radius: 12px; /* Slight rounding for the boxes */
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); /* Equivalent to shadow-sm */
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            height: 100%; /* Ensures uniform height in the grid */
+            margin-bottom: 1rem; /* Add some vertical space between rows in BS4 grid */
+        }
+        
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); /* Equivalent to shadow on hover */
+        }
+
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 1.25rem;
+        }
     </style>
 @endsection
 
