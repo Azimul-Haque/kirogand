@@ -28,7 +28,7 @@
 <li class="nav-item">
     <a href="{{ route('dashboard.local-offices') }}" class="nav-link {{ Request::is('dashboard/local-offices') ? 'active' : '' }} {{ Request::is('dashboard/local-offices/*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-landmark"></i>
-        <p>ইউনিয়ন/পৌরসভা তালিকা</p>
+        <p>সনদের আবেদনসমূহ</p>
     </a>
 </li>
 @endif
