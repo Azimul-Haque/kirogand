@@ -45,9 +45,9 @@
                 <span class="d-none d-sm-inline">
                     {{-- Display the full dynamic hierarchy string --}}
                     <span style="color: #FFFFFF !important; font-weight: bold;">{!! $auth->getFullHierarchy() !!} </span>
-                    <span class="badge badge-secondary">
+                    {{-- <span class="badge badge-secondary">
                         ({{ (new \ReflectionClass($auth->authority_type))->getShortName() }})
-                    </span>
+                    </span> --}}
                 </span>
             @else
                 {{-- This "না" (No) should also be hidden on small screens if it appears in the center --}}
