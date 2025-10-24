@@ -12,7 +12,7 @@
 
 @section('content')
   @section('page-header') সনদের আবেদন @endsection
-    
+  
 @endsection
 
 @section('third_party_scripts')
