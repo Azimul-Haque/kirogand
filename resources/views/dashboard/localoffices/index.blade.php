@@ -52,8 +52,8 @@
                   <tr>
                     <td>
                       {{ $localoffice->name_bn }}</br>
-                      <span class="badge badge-warning-primary">📞 {{ $localoffice->mobile }}</span>
-                      <span class="badge badge-warning-primary">📞 {{ $localoffice->mobile }}</span>
+                      <span class="badge badge-warning-primary">📞 {{ $localoffice->phone }}</span>
+                      <span class="badge badge-warning-primary">📞 {{ $localoffice->email }}</span>
                     </td>
                     {{-- <td>{{ $localoffice->package->name }}</td>
                     <td>{{ $localoffice->localoffice_status == 1 ? 'Successfull' : 'Failed' }}</td>
