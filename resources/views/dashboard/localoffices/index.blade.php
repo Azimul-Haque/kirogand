@@ -51,7 +51,7 @@
                 @foreach($localoffices as $localoffice)
                   <tr>
                     <td>
-                      {{ $localoffice->name_bn }}</td>
+                      {{ $localoffice->name_bn }}</br>
                       <span class="badge badge-warning-primary">📞 {{ $localoffice->mobile }}</span>
                       <span class="badge badge-warning-primary">📞 {{ $localoffice->mobile }}</span>
                     </td>
