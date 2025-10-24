@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Validator;
 
 use App\User;
 use App\Package;
@@ -15,6 +17,8 @@ use App\Division;
 use App\District;
 use App\Upazila;
 use App\Union;
+use App\UserAuthority;
+use App\LocalOffice;
 
 use Carbon\Carbon;
 use DB;
@@ -336,13 +340,13 @@ class IndexController extends Controller
 
     public function storeAuthorityRegister(Request $request)
     {
-        $this->validate($request,array(
+        $rules = [
             'name'        => 'required|string|max:191',
+            'name_en'        => 'required|string|max:191',
+            'nid'        => 'required|string|max:191',
             'mobile'      => 'required|string|max:191|unique:users,mobile',
-            'designation'      => 'sometimes',
-            'role'        => 'required',
-            // 'sitecheck'   => 'sometimes',
-            'password'    => 'required|string|min:8|max:191',
+            'email'      => 'required|string|max:191|unique:users,email',
+            'designation'      => 'required',
             'authority_level' => 'nullable|string|in:Division,District,Upazila,Union',
             // Validation for authority ID based on selected level
             'authority_id' => [
@@ -350,23 +354,85 @@ class IndexController extends Controller
                 Rule::requiredIf(fn () => $request->authority_level),
                 'integer',
             ],
-        ));
 
-        $user = new User;
-        $user->name = $request->name;
-        $user->mobile = $request->mobile;
-        $user->designation = $request->designation;
-        $user->role = $request->role;
-        // if(!empty($request->sitecheck)) {
-        //     $user->sites = implode(',', $request->sitecheck);
-        // }
-        $user->password = Hash::make($request->password);
-        $user->save();
+            'password'    => 'required|string|min:8|max:191|confirmed',
+            'captcha' => 'required|string',
+        ];
 
-        $this->syncUserAuthority($user, $request);
+        $validator = Validator::make($request->all(), $rules);
+        
+        // Correct manual handling MUST include withInput()
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput(); // <--- ADD THIS LINE if you manually validate
+        }
 
-        Session::flash('success', 'User created successfully!');
+        // Retrieve the CAPTCHA text from the session
+        $sessionCaptcha = Session::get('captcha');
+
+        if (strtolower($request->input('captcha')) != strtolower($sessionCaptcha)) {
+            // If the CAPTCHA is incorrect, redirect back with an error.
+            return redirect()->back()->withErrors(['captcha' => 'ক্যাপচাটি ভুল হয়েছে !']);
+        }
+
+        try {
+            $user = new User;
+            $user->name = $request->name;
+            $user->is_active = 0; // by default active kora thakbe na
+            $user->name_en = $request->name_en;
+            $user->nid = $request->nid;
+            $user->mobile = $request->mobile;
+            $user->email = $request->email;
+            $user->designation = $request->designation;
+            $user->role = 'manager'; // All authority accounts will be manager
+            
+            $user->password = Hash::make($request->password);
+            $user->save();
+
+            $this->syncUserAuthoritywithLO($user, $request);
+
+            Session::flash('success', 'User created successfully!');
+        } catch (\Exception $e) {
+            // Handle any database saving errors
+            return redirect()->back()->with('error', 'দুঃখিত, কোন একটি সমস্যা হয়েছে। আবার চেষ্টা করুন!');
+        }
+
         return redirect()->route('dashboard.users');
+    }
+
+    protected function syncUserAuthoritywithLO(User $user, Request $request): void
+    {
+        $level = $request->input('authority_level');
+        $id = $request->input('authority_id');
+
+        // Check if an authority assignment is requested
+        if ($level && $id) {
+            // Determine the fully qualified model class name
+            $modelClass = 'App\\' . $level;
+            
+            if (class_exists($modelClass)) {
+                UserAuthority::updateOrCreate(
+                    ['user_id' => $user->id],
+                    [
+                        'authority_id' => $id,
+                        'authority_type' => $modelClass,
+                        'role' => $request->designation, // Use user role as authority role for simplicity
+                    ]
+                );
+                // update or create Local Office
+                UserAuthority::LocalOffice(
+                    [
+                        'package_expiry_date' => Carbon::now()->addDays(2)->format('Y-m-d') . ' 23:59:59'
+                        'authority_type' => $modelClass,
+                        'role' => $request->designation, // Use user role as authority role for simplicity
+                    ]
+                );
+            }
+        } else {
+            // If no authority is selected, delete any existing authority assignments
+            $user->authorities()->delete();
+        }
     }
 
     public function getCitizenRegister()
@@ -389,7 +455,7 @@ class IndexController extends Controller
         $image = imagecreatetruecolor($width, $height);
 
         // Define colors
-        $white = imagecolorallocate($image, 223, 227, 209);
+        $white = imagecolorallocate($image, 227, 242, 253);
         $black = imagecolorallocate($image, 0, 0, 0);
 
         // Fill the background with white
@@ -402,7 +468,7 @@ class IndexController extends Controller
         Session::put('captcha', $captchaText);
 
         // Draw the text on the image
-        imagestring($image, 5, 30, 10, $captchaText, $black);
+        imagestring($image, 5, 20, 7, $captchaText, $black);
 
         // Capture the image output as a string
         ob_start();
