@@ -111,6 +111,7 @@
                         <p>
                             {{ Auth::user()->name }}<br/>
                             <span style="font-size: 15px;">{{ Auth::user()->designation }}</span><br/>
+                            <span style="font-size: 15px;">{{ Auth::user()->local_office }}</span><br/>
                             <small>যোগদানঃ {{ bangla(Auth::user()->created_at->format('F Y')) }}</small>
                         </p>
                     </li>
