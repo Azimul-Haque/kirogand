@@ -132,6 +132,17 @@ class DashboardController extends Controller
                     ->withDivisions($divisions);
     }
 
+    public function getLocalOffices()
+    {
+        $userscount = User::count();
+        $divisions = Division::all();
+        $users = User::where('name', '!=', null)->orderBy('id', 'asc')->paginate(10);
+        return view('dashboard.users.index')
+                    ->withUsers($users)
+                    ->withUserscount($userscount)
+                    ->withDivisions($divisions);
+    }
+
     // public function getUsersSort()
     // {
     //     // $users = User::where('name', '!=', null)->orderBy('id', 'asc')->get(10);
