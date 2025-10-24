@@ -284,8 +284,7 @@
                                          class="form-control @error('captcha') is-invalid @enderror" 
                                          name="captcha" 
                                          placeholder="ক্যাপচা এখানে লিখুন" 
-                                         required="" 
-                                         value="{{ old('captcha') }}"> <!-- Added old() -->
+                                         required="">
                                   @error('captcha')
                                       <div class="invalid-feedback">{{ $message }}</div>
                                   @enderror
