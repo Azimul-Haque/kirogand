@@ -52,7 +52,7 @@
                 @foreach($localoffices as $localoffice)
                   <tr>
                     <td>
-                      {{  }}
+                      {{ $localoffice->name_bn }}
                     </td>
                     <td>{{ $payment->package->name }}</td>
                     <td>{{ $payment->payment_status == 1 ? 'Successfull' : 'Failed' }}</td>
