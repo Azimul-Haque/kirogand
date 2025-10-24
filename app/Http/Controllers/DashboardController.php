@@ -145,8 +145,8 @@ class DashboardController extends Controller
 
     public function getApplyforCertificate()
     {
-        $localofficescount = LocalOffice::count();
-        $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
+        // $localofficescount = LocalOffice::count();
+        // $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
 
         return view('dashboard.localoffices.index')
                     ->withLocalofficescount($localofficescount)
