@@ -139,7 +139,7 @@
                       <div class="col-md-6">
                           <label for="designation" class="form-label small fw-bold">পদবি <span class="required-asterisk">*</span></label>
                           <select id="designation" name="designation" class="form-select @error('designation') is-invalid @enderror" required>
-                              <option value="" {{ old('designation') == '' ? 'selected' : '' }} disabled>পদবি নির্বাচন করুন</option>
+                              <option value="" selected disabled>পদবি নির্বাচন করুন</option>
                               <option value="চেয়ারম্যান" {{ old('designation') == 'চেয়ারম্যান' ? 'selected' : '' }}>ইউনিয়ন চেয়ারম্যান</option>
                               <option value="সচিব" {{ old('designation') == 'সচিব' ? 'selected' : '' }}>ইউনিয়ন সচিব</option>
                               <option value="সহকারী" {{ old('designation') == 'সহকারী' ? 'selected' : '' }}>ইউনিয়ন সহকারী</option>
