@@ -148,7 +148,7 @@ class DashboardController extends Controller
         // $localofficescount = LocalOffice::count();
         // $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
 
-        return view('dashboard.localoffices.index');
+        return view('dashboard.apply-for-certificate.index');
     }
 
     // public function getUsersSort()
