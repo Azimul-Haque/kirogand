@@ -110,7 +110,7 @@
                              alt="User Image">
                         <p>
                             {{ Auth::user()->name }}<br/>
-                            {{ Auth::user()->name }}<br/>
+                            {{ Auth::user()->designation }}<br/>
                             <small>যোগদানঃ {{ bangla(Auth::user()->created_at->format('F Y')) }}</small>
                         </p>
                     </li>
