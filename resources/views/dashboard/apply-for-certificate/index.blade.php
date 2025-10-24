@@ -272,6 +272,7 @@
 @endsection
 
 @section('third_party_scripts')
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
       $(document).ready(function() {
           const defaultVisible = 500; // 12 services visible by default
