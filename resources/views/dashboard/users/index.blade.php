@@ -492,15 +492,6 @@
 	                </div>
 
                   <div class="input-group mb-3">
-                      <input type="text"
-                             name="designation"
-                             value="{{ old('designation') }}"
-                             autocomplete="off"
-                             class="form-control"
-                             placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে) ">
-                      <div class="input-group-append">
-                          <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
-                      </div>
                       <select id="designation" name="designation" class="form-select" required>
                           <option value="" selected disabled>পদবি নির্বাচন করুন</option>
                           <option value="চেয়ারম্যান" {{ old('designation') == 'চেয়ারম্যান' ? 'selected' : '' }}>ইউনিয়ন চেয়ারম্যান</option>
