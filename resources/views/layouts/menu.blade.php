@@ -27,7 +27,7 @@
 @if(Auth::user()->role == 'admin' || Auth::user()->role == 'manager')
 <li class="nav-item">
     <a href="{{ route('dashboard.local-offices') }}" class="nav-link {{ Request::is('dashboard/local-offices') ? 'active' : '' }} {{ Request::is('dashboard/local-offices/*') ? 'active' : '' }}">
-        <i class="nav-icon fas fa-landmark"></i>
+        <i class="nav-icon fas fa-certificate"></i>
         <p>সনদের আবেদনসমূহ</p>
     </a>
 </li>
