@@ -503,7 +503,7 @@
                       </div>
                   </div>
 
-                  <select id="designation" name="designation" class="form-select @error('designation') is-invalid @enderror" required>
+                  <select id="designation" name="designation" class="form-select" required>
                       <option value="" selected disabled>পদবি নির্বাচন করুন</option>
                       <option value="চেয়ারম্যান" {{ old('designation') == 'চেয়ারম্যান' ? 'selected' : '' }}>ইউনিয়ন চেয়ারম্যান</option>
                       <option value="সচিব" {{ old('designation') == 'সচিব' ? 'selected' : '' }}>ইউনিয়ন সচিব</option>
