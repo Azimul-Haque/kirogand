@@ -54,12 +54,12 @@
                     <td>
                       {{ $localoffice->name_bn }}
                     </td>
-                    <td>{{ $payment->package->name }}</td>
-                    <td>{{ $payment->payment_status == 1 ? 'Successfull' : 'Failed' }}</td>
-                    <td>{{ $payment->card_type }}</td>
-                    <td>{{ $payment->trx_id }}</td>
-                    <td><b>৳ {{ $payment->store_amount }}</b> <small>(৳ {{ $payment->amount }})</small></td>
-                    <td>{{ date('F d, Y h:i A', strtotime($payment->created_at)) }}</td>
+                    <td>{{ $localoffice->package->name }}</td>
+                    <td>{{ $localoffice->localoffice_status == 1 ? 'Successfull' : 'Failed' }}</td>
+                    <td>{{ $localoffice->card_type }}</td>
+                    <td>{{ $localoffice->trx_id }}</td>
+                    <td><b>৳ {{ $localoffice->store_amount }}</b> <small>(৳ {{ $localoffice->amount }})</small></td>
+                    <td>{{ date('F d, Y h:i A', strtotime($localoffice->created_at)) }}</td>
                   </tr>
                 @endforeach
               </tbody>
