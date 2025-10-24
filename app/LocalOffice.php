@@ -22,6 +22,7 @@ class LocalOffice extends Model
     protected $fillable = [
         'name_bn',
         'name',
+        'package_expiry_date',
         'office_type',
         'is_active',
 
