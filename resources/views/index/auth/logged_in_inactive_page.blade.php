@@ -50,8 +50,8 @@
           <h2 class="h3 fw-bold mb-4 text-center" style="color: var(--darker-color);">যাচাইয়ের ফলাফল</h2>
           <div class="row justify-content-center">
               <div class="col-md-8 col-lg-6">
-                  <div id="verificationResult" class="card p-4 p-md-5 border-0 shadow-lg rounded-3">
-                      <!-- Result content will be injected here -->
+                  <div id="" class="card p-4 p-md-5 border-0 shadow-lg rounded-3">
+                      আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx
                   </div>
               </div>
           </div>
