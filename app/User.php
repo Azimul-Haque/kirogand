@@ -27,7 +27,7 @@ class User extends Authenticatable
         return $this->hasMany(UserAuthority::class);
     }
 
-    public function localOffice(): BelongsTo
+    public function localOffice()
     {
         return $this->belongsTo(LocalOffice::class, 'local_office_id');
     }
