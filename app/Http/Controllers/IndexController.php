@@ -445,7 +445,6 @@ class IndexController extends Controller
                 $user->local_office_id = $localoffice->id;
                 $user->save();
             }
-            dd($localoffice);
         } else {
             // If no authority is selected, delete any existing authority assignments
             $user->authorities()->delete();
