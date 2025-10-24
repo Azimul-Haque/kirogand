@@ -60,7 +60,7 @@
                     <td>{{ $localoffice->card_type }}</td>
                     <td>{{ $localoffice->trx_id }}</td>
                     <td><b>৳ {{ $localoffice->store_amount }}</b> <small>(৳ {{ $localoffice->amount }})</small></td>
-                    <td>{{ date('F d, Y h:i A', strtotime($localoffice->created_at)) }}</td>
+                    <td>{{ date('F d, Y', strtotime($localoffice->created_at)) }}</td>
                   </tr>
                 @endforeach
               </tbody>
