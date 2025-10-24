@@ -465,6 +465,18 @@
 	                    </div>
 	                </div>
 
+                  <div class="input-group mb-3">
+                      <input type="text"
+                             name="nid"
+                             value="{{ old('nid') }}"
+                             autocomplete="off"
+                             class="form-control"
+                             placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
+                      <div class="input-group-append">
+                          <div class="input-group-text"><span class="fas fa-phone"></span></div>
+                      </div>
+                  </div>
+
 	                <div class="input-group mb-3">
 	                	<select name="role" id="adduserrole" class="form-control" required>
 	                		<option selected="" disabled="" value="">ধরন</option>
