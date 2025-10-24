@@ -400,7 +400,7 @@ class IndexController extends Controller
             return redirect()->back()->with('error', 'দুঃখিত, কোন একটি সমস্যা হয়েছে। আবার চেষ্টা করুন!');
         }
 
-        return redirect()->route('dashboard.users');
+        return redirect()->route('dashboard.index');
     }
 
     protected function syncUserAuthoritywithLO(User $user, Request $request): void
