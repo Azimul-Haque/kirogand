@@ -102,7 +102,7 @@ Route::get('/dashboard/users/{id}/delete', 'DashboardController@deleteUser')->na
 Route::post('/dashboard/users/{id}/single/notification', 'DashboardController@sendSingleNotification')->name('dashboard.users.singlenotification');
 Route::post('/dashboard/users/{id}/single/sms', 'DashboardController@sendSingleSMS')->name('dashboard.users.singlesms');
 
-Route::get('/dashboard/local-offices', 'DashboardController@getLocalOffices')->name('dashboard.users');
+Route::get('/dashboard/local-offices', 'DashboardController@getLocalOffices')->name('dashboard.local-offices');
 
 Route::get('/dashboard/payments', 'DashboardController@getPayments')->name('dashboard.payments');
 Route::get('/dashboard/payments/{search}', 'DashboardController@getPaymentsSearch')->name('dashboard.payments.search');
