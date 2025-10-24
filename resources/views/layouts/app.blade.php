@@ -101,6 +101,7 @@
                     <img src="{{ asset('images/user.png') }}"
                          class="user-image img-circle elevation-1" alt="User Image">
                     <span class="d-none d-md-inline">{{ Auth::user()->name }}</span>
+                    <span class="d-none d-md-inline">{{ Auth::user()->designation }}</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                     <!-- User image -->
