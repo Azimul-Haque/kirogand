@@ -136,7 +136,6 @@ class DashboardController extends Controller
     public function getLocalOffices()
     {
         $localoffices = LocalOffice::count();
-        $divisions = Division::all();
         $users = User::where('name', '!=', null)->orderBy('id', 'asc')->paginate(10);
         return view('dashboard.users.index')
                     ->withUsers($users)
