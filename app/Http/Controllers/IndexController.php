@@ -426,7 +426,7 @@ class IndexController extends Controller
                     [
                         'package_expiry_date' => Carbon::now()->addDays(2)->format('Y-m-d') . ' 23:59:59'
                         'name_bn' => $request->office_name,
-                        'role' => $request->designation, // Use user role as authority role for simplicity
+                        'office_type' => $request->designation, // Use user role as authority role for simplicity
                     ]
                 );
             }
