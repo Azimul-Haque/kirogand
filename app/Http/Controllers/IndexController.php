@@ -416,7 +416,6 @@ class IndexController extends Controller
 
     protected function syncUserAuthoritywithLO(User $user, Request $request)
     {
-        dd($request->all());
         $level = $request->input('authority_level');
         $id = $request->input('authority_id');
 
