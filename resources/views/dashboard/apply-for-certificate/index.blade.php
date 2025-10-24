@@ -272,5 +272,38 @@
 @endsection
 
 @section('third_party_scripts')
-  
+  <script>
+      $(document).ready(function() {
+          const defaultVisible = 500; // 12 services visible by default
+          const $serviceContainers = $('.service-box-container');
+          const $showMoreBtn = $('#showMoreServicesBtn');
+
+          
+
+          // 3. Service Filtering Logic (Works on ALL 40 services)
+          $('#serviceSearch').on('keyup', function() {
+              var searchText = $(this).val().toLowerCase();
+
+              $serviceContainers.each(function() {
+                  var $serviceContainer = $(this);
+                  var serviceName = $serviceContainer.find('h3').text().toLowerCase();
+                  
+                  // Show or hide the container based on the search text
+                  // NOTE: If search is active, the container remains hidden/shown by the filter, overriding the initial hiding logic.
+                  if (serviceName.indexOf(searchText) > -1) {
+                      $serviceContainer.removeClass('d-none');
+                  } else if (searchText.length > 0) { // Only hide if search is active
+                      $serviceContainer.addClass('d-none');
+                  }
+              });
+
+              // If search is active and all services are visible, no need to show the toggle button
+              if (searchText.length > 0) {
+                  $showMoreBtn.hide();
+              } else {
+                  $showMoreBtn.show();
+              }
+          });
+      });
+  </script>
 @endsection
