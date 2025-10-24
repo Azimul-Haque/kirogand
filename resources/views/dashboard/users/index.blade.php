@@ -9,7 +9,7 @@
 @section('content')
 	@section('page-header') ব্যবহারকারীগণ (মোট {{ bangla($userscount) }} জন) @endsection
     <div class="container-fluid">
-		<div class="card">
+		  <div class="card">
           <div class="card-header">
             <h3 class="card-title">ব্যবহারকারীগণ</h3>
             {{-- <small><a href="{{ route('dashboard.userssort')  }}" style="margin-left: 5px;">সর্বোচ্চ পরীক্ষার্থী</a></small>
