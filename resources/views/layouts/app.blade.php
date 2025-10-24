@@ -110,8 +110,8 @@
                              alt="User Image">
                         <p>
                             {{ Auth::user()->name }}<br/>
-                            <span style="font-size: 14px; margin-top: -5px;">{{ Auth::user()->designation }}</span><br/>
-                            <span style="font-size: 14px; margin-top: -5px;">{{ Auth::user()->localOffice->name_bn }}</span><br/>
+                            <span style="font-size: 14px; margin-top: -10px;">{{ Auth::user()->designation }}</span><br/>
+                            <span style="font-size: 14px; margin-top: -10px;">{{ Auth::user()->localOffice->name_bn }}</span><br/>
                             <small>যোগদানঃ {{ bangla(Auth::user()->created_at->format('F Y')) }}</small>
                         </p>
                     </li>
