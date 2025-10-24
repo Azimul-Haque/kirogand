@@ -471,7 +471,7 @@
                              value="{{ old('nid') }}"
                              autocomplete="off"
                              class="form-control"
-                             placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
+                             placeholder="এনআইডি নন্মবর" required>
                       <div class="input-group-append">
                           <div class="input-group-text"><span class="fas fa-phone"></span></div>
                       </div>
