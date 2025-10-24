@@ -66,7 +66,7 @@
 
 @section('content')
   @section('page-header') সনদের আবেদন @endsection
-    <div class="container-fluid">
+    <div class="container-fluid md-5">
       <!-- Service Search Filter -->
       <div class="row mb-5 justify-content-center">
           <div class="col-md-6">
