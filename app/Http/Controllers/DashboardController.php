@@ -65,10 +65,9 @@ class DashboardController extends Controller
                 // User is logged in but inactive. Redirect to a non-dashboard page (e.g., home)
                 // and show a message that their account is pending approval.
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
-                return view('index.index'); // Change 'home' to your desired route name for the home page
+                return view('index.index');
 
             } else {
-                // User is active (shouldn't happen with default 'is_active' = 0, but good for safety)
                 return redirect()->route('dashboard.index');
             }
             return redirect()->route('dashboard.questions.reported');
