@@ -19,6 +19,23 @@ class IsAdminMiddleware
         if(!Auth::check() || Auth::user()->role != 'admin'){
             abort(403, 'Access Denied');
         }
+
+        // 1. Ensure the user is authenticated
+        if (!Auth::check()) {
+            return redirect('/login'); // Redirect to login if not authenticated
+        }
+
+        $user = Auth::user();
+
+        // 2. Check for the OR condition: Admin OR Manager
+        // You MUST have isAdmin() and isManager() methods on your User model 
+        // that return boolean true/false based on the user's role.
+        if ($user->isAdmin() || $user->isManager()) {
+            return $next($request);
+        }
+
+        // 3. If neither role is met, deny access
+        return abort(403, 'Access Denied. Requires Admin or Manager role.');
         return $next($request);
     }
 }
