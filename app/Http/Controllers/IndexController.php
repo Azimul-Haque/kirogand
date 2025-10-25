@@ -453,6 +453,8 @@ class IndexController extends Controller
 
     public function getCitizenRegister()
     {
+        Session::flash('warning', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
+                return view('index.auth.logged_in_inactive_page'); // Change 'home' to your desired route name for the home page
         return view('index.auth.register-citizen');
     }
 
