@@ -60,7 +60,7 @@ class DashboardController extends Controller
             // abort(403, 'Access Denied');
             Session::flash('warning', 'নাগরিক একাউন্ট এ কাজ চলমান!');
             return redirect()->route('index.index');
-        } elseif(Auth::user()->role == 'volunteer') {
+        } elseif(Auth::user()->role == 'manager') {
             // echo 'ase';
             return redirect()->route('dashboard.questions.reported');
         }
