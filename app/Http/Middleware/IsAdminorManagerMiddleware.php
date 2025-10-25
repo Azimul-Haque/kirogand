@@ -22,7 +22,7 @@ class IsAdminMiddleware
 
         // 1. Ensure the user is authenticated
         if (!Auth::check()) {
-            return redirect('/login'); // Redirect to login if not authenticated
+            abort(403, 'Access Denied');
         }
 
         $user = Auth::user();
