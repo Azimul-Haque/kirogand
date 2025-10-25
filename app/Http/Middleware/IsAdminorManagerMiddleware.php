@@ -35,7 +35,6 @@ class IsAdminMiddleware
         }
 
         // 3. If neither role is met, deny access
-        return abort(403, 'Access Denied. Requires Admin or Manager role.');
-        return $next($request);
+        abort(403, 'Access Denied');
     }
 }
