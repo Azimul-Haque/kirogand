@@ -58,7 +58,7 @@ class DashboardController extends Controller
         // if user is a manager, redirect him to his profile
         if(Auth::user()->role == 'user') {
             // abort(403, 'Access Denied');
-            Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
+            Session::flash('warning', 'নাগরিক একাউন্ট এ কাজ চলমান!');
             return redirect()->route('index.index');
         } elseif(Auth::user()->role == 'volunteer') {
             // echo 'ase';
