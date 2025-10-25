@@ -70,7 +70,6 @@ class DashboardController extends Controller
             } else {
                 return redirect()->route('dashboard.index');
             }
-            return redirect()->route('dashboard.questions.reported');
         }
 
 if ($user->is_active === 0) {
