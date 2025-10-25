@@ -30,7 +30,7 @@ class IsAdminMiddleware
         // 2. Check for the OR condition: Admin OR Manager
         // You MUST have isAdmin() and isManager() methods on your User model 
         // that return boolean true/false based on the user's role.
-        if ($user->isAdmin() || $user->isManager()) {
+        if (Auth::user()->role == 'admin' || Auth::user()->role == 'manager') {
             return $next($request);
         }
 
