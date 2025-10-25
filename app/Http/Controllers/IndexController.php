@@ -454,7 +454,7 @@ class IndexController extends Controller
     public function getCitizenRegister()
     {
         Session::flash('info', 'নাগরিক নিবন্ধন এর কাজ চলমান। কিছুদিন অপেক্ষা করুন!');
-        return view('index.index'); // Change 'home' to your desired route name for the home page
+        return redirect()->route('index.index');
         return view('index.auth.register-citizen');
     }
 
