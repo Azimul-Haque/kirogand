@@ -155,11 +155,7 @@ class DashboardController extends Controller
 
     public function getApplyforCertificate()
     {
-        if(Auth::user()->role == 'user') {
-            // abort(403, 'Access Denied');
-            Session::flash('warning', 'নাগরিক একাউন্ট এ কাজ চলমান!');
-            return redirect()->route('index.index');
-        } elseif(Auth::user()->role == 'manager') {
+        if(Auth::user()->role == 'manager') {
             if (Auth::user()->is_active === 0) {
                 // User is logged in but inactive. Redirect to a non-dashboard page (e.g., home)
                 // and show a message that their account is pending approval.
