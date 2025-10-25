@@ -163,9 +163,6 @@ class DashboardController extends Controller
                 // and show a message that their account is pending approval.
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
                 return redirect()->route('index.index');
-
-            } else {
-                return redirect()->route('dashboard.index');
             }
         }
         // $localofficescount = LocalOffice::count();
