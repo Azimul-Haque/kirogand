@@ -144,6 +144,7 @@ class DashboardController extends Controller
 
     public function getLocalOffices()
     {
+        // ONLY ADMIN
         $localofficescount = LocalOffice::count();
         $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
 
@@ -154,6 +155,21 @@ class DashboardController extends Controller
 
     public function getApplyforCertificate()
     {
+        if(Auth::user()->role == 'user') {
+            // abort(403, 'Access Denied');
+            Session::flash('warning', 'নাগরিক একাউন্ট এ কাজ চলমান!');
+            return redirect()->route('index.index');
+        } elseif(Auth::user()->role == 'manager') {
+            if (Auth::user()->is_active === 0) {
+                // User is logged in but inactive. Redirect to a non-dashboard page (e.g., home)
+                // and show a message that their account is pending approval.
+                Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
+                return redirect()->route('index.index');
+
+            } else {
+                return redirect()->route('dashboard.index');
+            }
+        }
         // $localofficescount = LocalOffice::count();
         // $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
 
