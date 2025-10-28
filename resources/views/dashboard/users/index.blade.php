@@ -251,7 +251,7 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                            আপনি কি নিশ্চিতভাবে এই ব্যবহারকারীকে ডিলেট করতে চান?<br/>
+                            আপনি কি নিশ্চিতভাবে এই ব্যবহারকারীকে এক্টিভেট করতে চান?<br/>
                             <center>
                                 <big><b>{{ $user->name }}</b></big><br/>
                                 <small><i class="fas fa-phone"></i> {{ $user->mobile }}</small>
@@ -259,7 +259,7 @@
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">ফিরে যান</button>
-                            <a href="{{ route('dashboard.users.delete', $user->id) }}" class="btn btn-warning">ডিলেট করুন</a>
+                            <a href="{{ route('dashboard.users.delete', $user->id) }}" class="btn btn-warning">এক্টিভেট করুন</a>
                           </div>
                         </div>
                       </div>
