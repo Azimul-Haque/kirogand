@@ -31,7 +31,7 @@
 @endsection
 
 @section('content-s')
-    <section style="padding-top: 50px; padding-bottom: 50px;">
+    {{-- <section style="padding-top: 50px; padding-bottom: 50px;">
         @foreach ($blogs as $blog)
         <div class="blog-listing blog-listing-classic no-margin-top wow fadeIn">
             <!-- post image -->
@@ -74,10 +74,7 @@
             // });
         </script>
         @endforeach
-        <!-- end post item -->
-        {{-- paginating --}}
-        {{ $blogs->links() }}
-    </section>
+    </section> --}}
 
     <section class="py-5 g-4">
         <div class="row">
