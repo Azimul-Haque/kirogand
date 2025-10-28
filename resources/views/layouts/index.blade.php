@@ -282,7 +282,9 @@
       <div class="container">
           <div class="row">
               <div class="col-md-4 mb-4 mb-md-0">
-                  <h5 class="fw-bold text-uppercase"><i class="fas fa-landmark me-2"></i> ডিজিটাল প্রত্যয়ন পোর্টাল</h5>
+                  <h5 class="fw-bold text-uppercase">
+                    <i class="fas fa-landmark me-2"></i> ডিজিটাল প্রত্যয়ন পোর্টাল
+                  </h5>
                   <p class="small mt-3">স্থানীয় সরকার কর্তৃপক্ষের ডিজিটাল প্রত্যয়ন ও সনদপত্র ব্যবস্থাপনা ব্যবস্থা। জনগণের জন্য দ্রুত ও স্বচ্ছ সেবা নিশ্চিত করতে আমরা প্রতিশ্রুতিবদ্ধ।</p>
                   <div class="social-links mt-3">
                       <a href="#" class="me-3 btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-facebook-f"></i></a>
