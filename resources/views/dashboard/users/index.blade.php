@@ -254,7 +254,7 @@
                             আপনি কি নিশ্চিতভাবে এই ব্যবহারকারীকে এক্টিভেট করতে চান?<br/>
                             <center>
                                 <big><b>{{ $user->name }}</b></big><br/>
-                                <small>স্থানীয় সরকার কার্যালয়: {{ $user->localOffice ?? $user->localOffice->name_bn }}</small>
+                                <small>স্থানীয় সরকার কার্যালয়: {{ $user->localOffice != null ?? $user->localOffice->name_bn }}</small>
                             </center>
                           </div>
                           <div class="modal-footer">
