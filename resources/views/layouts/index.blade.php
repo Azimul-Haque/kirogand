@@ -261,7 +261,7 @@
                      aria-expanded="false" 
                      style="padding: 6px 15px;">
                      @if(Auth::user())
-                      <i class="fas fa-user-tie me-1"></i> {{ Auth::user()->name }}
+                      <i class="fas fa-user-tie me-2"></i> {{ Auth::user()->name }}
                      @else
                       <i class="fas fa-sign-in-alt me-1"></i> লগইন
                      @endif
