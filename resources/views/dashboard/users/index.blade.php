@@ -241,7 +241,7 @@
                     {{-- Activate User Modal Code --}}
                     {{-- Activate User Modal Code --}}
                     <!-- Modal -->
-                    <div class="modal fade" id="actiavateUser{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteUserModalLabel" aria-hidden="true" data-backdrop="static">
+                    <div class="modal fade" id="actiavateUser{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="actiavateUserModalLabel" aria-hidden="true" data-backdrop="static">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header bg-danger">
