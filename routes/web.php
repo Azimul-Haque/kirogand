@@ -103,7 +103,7 @@ Route::get('/dashboard/users/{id}/delete', 'DashboardController@deleteUser')->na
 Route::post('/dashboard/users/{id}/single/notification', 'DashboardController@sendSingleNotification')->name('dashboard.users.singlenotification');
 Route::post('/dashboard/users/{id}/single/sms', 'DashboardController@sendSingleSMS')->name('dashboard.users.singlesms');
 
-Route::get('/dashboard/users/{id}/activete', 'DashboardController@activeteUser')->name('dashboard.users.activete');
+Route::get('/dashboard/users/{id}/activate', 'DashboardController@activateUser')->name('dashboard.users.activate');
 
 Route::get('/dashboard/local-offices', 'DashboardController@getLocalOffices')->name('dashboard.local-offices');
 
