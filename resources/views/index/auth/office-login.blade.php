@@ -48,7 +48,6 @@
 
       <div class="row justify-content-center g-4">
           
-          <!-- Left Column (Form: 8/12) -->
           <div class="col-lg-8">
               <div class="card p-4 p-md-5 form-card bg-white">
                 <form method="post" action="{{ url('/login') }}">
