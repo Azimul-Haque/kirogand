@@ -217,7 +217,7 @@
       </div>
       
       <!-- 3. Main Navigation Bar -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-darker">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-darker sticky-top">
           <div class="container">
               <!-- Toggler button remains for mobile -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
