@@ -201,13 +201,15 @@
       <!-- 2. Logo/Branding Area (Bigger Logo) -->
       <div class="logo-area">
           <div class="container py-3 d-flex align-items-center justify-content-between">
-              <div class="d-flex align-items-center">
-                  <!-- Increased Icon Size and Text Emphasis -->
-                  {{-- <i class="fas fa-landmark me-3" style="font-size: 2.8rem; color: var(--light-primary-color);"></i> --}}
-                  <img src="{{ asset('/') }}images/logo.png" class="img-fluid" style="height: 60px; width: auto;" alt="ডি-নাগরিক: ডিজিটাল প্রত্যয়ন পোর্টাল">
-                  <span class="h3 fw-bolder text-white mb-0 d-none d-sm-inline">ডি-নাগরিক: ডিজিটাল প্রত্যয়ন পোর্টাল</span>
-                  <span class="h4 fw-bolder text-white mb-0 d-inline d-sm-none">ডি-নাগরিক</span>
-              </div>
+              <a href="" title="">
+                <div class="d-flex align-items-center">
+                    <!-- Increased Icon Size and Text Emphasis -->
+                    {{-- <i class="fas fa-landmark me-3" style="font-size: 2.8rem; color: var(--light-primary-color);"></i> --}}
+                    <img src="{{ asset('/') }}images/logo.png" class="img-fluid" style="height: 60px; width: auto;" alt="ডি-নাগরিক: ডিজিটাল প্রত্যয়ন পোর্টাল">
+                    <span class="h3 fw-bolder text-white mb-0 d-none d-sm-inline">ডি-নাগরিক: ডিজিটাল প্রত্যয়ন পোর্টাল</span>
+                    <span class="h4 fw-bolder text-white mb-0 d-inline d-sm-none">ডি-নাগরিক</span>
+                </div>
+              </a>
               <!-- Replaced 'সহায়তা ডেস্ক' with two new account buttons -->
               <div class="d-none d-md-flex gap-3">
                   <a href="{{ route('register.citizen') }}" class="btn btn-outline-light rounded-pill"><i class="fas fa-user me-2"></i> নাগরিক একাউন্ট</a>
