@@ -101,23 +101,6 @@
             </div>
         </div>
 
-        <!-- The original commented-out jQuery logic is removed as it relies on specific external scripts, 
-             but the containing script tag is kept in case you use other necessary JS. 
-             Note: The comment count logic inside the script remains commented out. -->
-        <script type="text/javascript" src="{{ asset('vendor/hcode/js/jquery.min.js') }}"></script>
-        <script type="text/javascript">
-            // The original Facebook comment count logic is commented out here:
-            /*
-            $.ajax({
-                 url: "https://graph.facebook.com/v2.2/?fields=share{comment_count}&id={{ url('/blog/'.$blog->slug) }}",
-                 dataType: "jsonp",
-                 success: function(data) {
-                     $('#comment_count{{ $blog->id }}').text(data.share.comment_count);
-                 }
-            });
-            */
-        </script>
-
     @endforeach
 
     <!-- Paginating Links -->
