@@ -274,7 +274,6 @@
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item text-info fw-bold" href="{{ route('office.login') }}"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a></li>
                     @endif
-                      
                   </ul>
               </div>
               <!-- END MOBILE/DESKTOP DROPDOWN -->
