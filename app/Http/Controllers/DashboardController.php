@@ -402,25 +402,6 @@ class DashboardController extends Controller
 
     public function activeteUser($id)
     {
-        $this->validate($request,array(
-            'name'        => 'required|string|max:191',
-            'mobile'      => 'required|string|max:191|unique:users,mobile,'.$id,
-            'designation'        => 'sometimes',
-            'role'        => 'required',
-            'packageexpirydate'        => 'required',
-            'uid'        => 'sometimes',
-            'onesignal_id'        => 'sometimes',
-            // 'sitecheck'   => 'sometimes',
-            'password'    => 'nullable|string|min:8|max:191',
-            'authority_level' => 'nullable|string|in:Division,District,Upazila,Union',
-            // Validation for authority ID based on selected level
-            'authority_id' => [
-                'nullable',
-                Rule::requiredIf(fn () => $request->authority_level),
-                'integer',
-            ],
-        ));
-
         $user = User::find($id);
         $user->name = $request->name;
         $user->mobile = $request->mobile;
