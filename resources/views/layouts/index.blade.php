@@ -188,7 +188,7 @@
   <!--====== NAVBAR NINE PART START ======-->
 
   <!-- Main Header Container -->
-  <header class="navbar-custom sticky-top-">
+  <header class="navbar-custom sticky-top">
       <!-- Marquee Text (Hidden on Mobile) - COMMENTED OUT AS PER REQUEST -->
       <!-- <div class="top-bar d-none d-lg-block">
           <div class="container">
@@ -199,7 +199,7 @@
       </div> -->
 
       <!-- 2. Logo/Branding Area (Bigger Logo) -->
-      <div class="logo-area sticky-top">
+      <div class="logo-area">
           <div class="container py-3 d-flex align-items-center justify-content-between">
               <div class="d-flex align-items-center">
                   <!-- Increased Icon Size and Text Emphasis -->
