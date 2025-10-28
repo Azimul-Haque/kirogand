@@ -268,9 +268,10 @@
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdownMobile">
                     @if(Auth::user())
-                     <i class="fas fa-user-tie me-2"></i> {{ Auth::user()->name }}
-                    @else
+                     
                      <li><a class="dropdown-item text-primary fw-bold" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-user me-2"></i> লগআউট</a></li>
+                    @else
+                     <i class="fas fa-user-tie me-2"></i> {{ Auth::user()->name }}
                     @endif
                       
                   </ul>
