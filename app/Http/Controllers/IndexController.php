@@ -414,13 +414,6 @@ class IndexController extends Controller
         }
     }
 
-    public function getOfficeLogin()
-    {
-        $divisions = Division::all();
-
-        return view('index.auth.register-authority')->withDivisions($divisions);
-    }
-
     protected function syncUserAuthoritywithLO(User $user, Request $request)
     {
         $level = $request->input('authority_level');
@@ -456,6 +449,13 @@ class IndexController extends Controller
             // If no authority is selected, delete any existing authority assignments
             $user->authorities()->delete();
         }
+    }
+
+    public function getOfficeLogin()
+    {
+        $divisions = Division::all();
+
+        return view('index.auth.register-authority')->withDivisions($divisions);
     }
 
     public function getCitizenRegister()
