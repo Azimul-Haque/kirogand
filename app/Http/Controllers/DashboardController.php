@@ -401,19 +401,6 @@ class DashboardController extends Controller
         return redirect()->route('dashboard.users');
     }
 
-    public function activeteUser($id)
-    {
-        $user = User::find($id);
-        $user->is_active = 1;
-        $user->localOffice->is_active = 1;
-        $user->save();
-
-        $this->syncUserAuthority($user, $request);
-
-        Session::flash('success', 'User updated successfully!');
-        return redirect()->route('dashboard.users');
-    }
-
     protected function syncUserAuthority(User $user, Request $request): void
     {
         $level = $request->input('authority_level');
@@ -441,6 +428,22 @@ class DashboardController extends Controller
             $user->authorities()->delete();
         }
     }
+
+    public function activeteUser($id)
+    {
+        $user = User::find($id);
+        $user->is_active = 1;
+        $user->localOffice->is_active = 1;
+        $user->save();
+
+
+        Session::flash('success', 'User updated successfully!');
+        return redirect()->route('dashboard.users');
+    }
+
+
+
+    
 
     public function updateBulkPackageDate(Request $request)
     {
