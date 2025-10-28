@@ -204,7 +204,7 @@
               <div class="d-flex align-items-center">
                   <!-- Increased Icon Size and Text Emphasis -->
                   <i class="fas fa-landmark me-3" style="font-size: 2.8rem; color: var(--light-primary-color);"></i>
-                  <img src="{{ asset('/') }}images/logo.png" class="img-fluid w-100" style="height: 80px; width: auto;">
+                  <img src="{{ asset('/') }}images/logo.png" class="img-fluid w-100" style="height: 70px; width: auto;">
                   <span class="h3 fw-bolder text-white mb-0 d-none d-sm-inline">ডি-নাগরিক: ডিজিটাল প্রত্যয়ন পোর্টাল</span>
                   <span class="h4 fw-bolder text-white mb-0 d-inline d-sm-none">ডি-নাগরিক</span>
               </div>
