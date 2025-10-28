@@ -71,8 +71,6 @@
                           <span class="badge badge-secondary">
                               ({{ (new \ReflectionClass($auth->authority_type))->getShortName() }})
                           </span>
-                      @else
-                          N/A
                       @endif
 
                       @php
