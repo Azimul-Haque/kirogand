@@ -404,19 +404,7 @@ class DashboardController extends Controller
     public function activeteUser($id)
     {
         $user = User::find($id);
-        $user->name = $request->name;
-        $user->mobile = $request->mobile;
-        $user->designation = $request->designation;
-        $user->role = $request->role;
-        $user->package_expiry_date = date('Y-m-d', strtotime($request->packageexpirydate)) . ' 23:59:59';
-        // if(!empty($request->sitecheck)) {
-        //     $user->sites = implode(',', $request->sitecheck);
-        // }
-        $user->uid = $request->uid;
-        $user->onesignal_id = $request->onesignal_id;
-        if(!empty($request->password)) {
-            $user->password = Hash::make($request->password);
-        }
+        $user->is_active = 1;
         $user->save();
 
         $this->syncUserAuthority($user, $request);
