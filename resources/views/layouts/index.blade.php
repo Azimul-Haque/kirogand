@@ -326,6 +326,7 @@
                       <li><a href="#services">সেবা ও আবেদন</a></li>
                       <li><a href="/verification">সনদ যাচাই</a></li>
                       <li><a href="#notices">নোটিশ বোর্ড</a></li>
+                      <li><a href="{{ route('blogs.index') }}">ব্লগ</a></li>
                       <li><a href="/terms">শর্তাবলী</a></li>
                   </ul>
               </div>
