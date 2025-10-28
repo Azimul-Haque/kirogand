@@ -67,9 +67,7 @@
     </style>
 @endsection
 
-@section('header-s')
-    {{-- {{ $blog->title }} --}}
-@endsection
+
 
 @section('content-s')
     {{-- facebook comment plugin --}}
