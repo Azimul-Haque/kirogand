@@ -338,13 +338,6 @@ class IndexController extends Controller
         return view('index.auth.register-authority')->withDivisions($divisions);
     }
 
-    public function getOfficeLogin()
-    {
-        $divisions = Division::all();
-
-        return view('index.auth.register-authority')->withDivisions($divisions);
-    }
-
     public function storeAuthorityRegister(Request $request)
     {
         $rules = [
@@ -419,6 +412,13 @@ class IndexController extends Controller
             // Handle any database saving errors
             return redirect()->back()->with('error', 'দুঃখিত, কোন একটি সমস্যা হয়েছে। আবার চেষ্টা করুন!');
         }
+    }
+
+    public function getOfficeLogin()
+    {
+        $divisions = Division::all();
+
+        return view('index.auth.register-authority')->withDivisions($divisions);
     }
 
     protected function syncUserAuthoritywithLO(User $user, Request $request)
