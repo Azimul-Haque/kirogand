@@ -453,7 +453,7 @@ class IndexController extends Controller
 
     public function getOfficeLogin()
     {
-        return view('index.auth.office.login');
+        return view('index.auth.office-login');
     }
 
     public function getCitizenRegister()
