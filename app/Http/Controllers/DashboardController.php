@@ -400,6 +400,49 @@ class DashboardController extends Controller
         return redirect()->route('dashboard.users');
     }
 
+    public function activeteUser(Request $request, $id)
+    {
+        $this->validate($request,array(
+            'name'        => 'required|string|max:191',
+            'mobile'      => 'required|string|max:191|unique:users,mobile,'.$id,
+            'designation'        => 'sometimes',
+            'role'        => 'required',
+            'packageexpirydate'        => 'required',
+            'uid'        => 'sometimes',
+            'onesignal_id'        => 'sometimes',
+            // 'sitecheck'   => 'sometimes',
+            'password'    => 'nullable|string|min:8|max:191',
+            'authority_level' => 'nullable|string|in:Division,District,Upazila,Union',
+            // Validation for authority ID based on selected level
+            'authority_id' => [
+                'nullable',
+                Rule::requiredIf(fn () => $request->authority_level),
+                'integer',
+            ],
+        ));
+
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->mobile = $request->mobile;
+        $user->designation = $request->designation;
+        $user->role = $request->role;
+        $user->package_expiry_date = date('Y-m-d', strtotime($request->packageexpirydate)) . ' 23:59:59';
+        // if(!empty($request->sitecheck)) {
+        //     $user->sites = implode(',', $request->sitecheck);
+        // }
+        $user->uid = $request->uid;
+        $user->onesignal_id = $request->onesignal_id;
+        if(!empty($request->password)) {
+            $user->password = Hash::make($request->password);
+        }
+        $user->save();
+
+        $this->syncUserAuthority($user, $request);
+
+        Session::flash('success', 'User updated successfully!');
+        return redirect()->route('dashboard.users');
+    }
+
     protected function syncUserAuthority(User $user, Request $request): void
     {
         $level = $request->input('authority_level');
