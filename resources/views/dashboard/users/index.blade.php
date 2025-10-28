@@ -195,7 +195,7 @@
                       {{-- Notif Modal Code --}}
                       {{-- Notif Modal Code --}}
                       @if($user->is_active == 0)
-                      <button type="button" class="btn btn-warning btn-sm edit-user-btn" data-toggle="modal" data-target="#editUserModal{{ $user->id }}">
+                      <button type="button" class="btn btn-warning btn-sm edit-user-btn" data-toggle="modal" data-target="#actiavateUser{{ $user->id }}">
                         <i class="fas fa-toggle-on"></i>
                       </button>
                       @endif
@@ -241,7 +241,7 @@
                     {{-- Activate User Modal Code --}}
                     {{-- Activate User Modal Code --}}
                     <!-- Modal -->
-                    <div class="modal fade" id="deleteUserModal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteUserModalLabel" aria-hidden="true" data-backdrop="static">
+                    <div class="modal fade" id="actiavateUser{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteUserModalLabel" aria-hidden="true" data-backdrop="static">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header bg-danger">
