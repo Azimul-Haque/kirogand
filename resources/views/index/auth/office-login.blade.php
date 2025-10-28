@@ -100,7 +100,7 @@
                                     মনে রাখুন
                                 </label>
                             </div>
-                            <a href="">প্রশাসনিক একাউন্ট নেই?</a>
+                            <a href="{{ route('register.authority') }}">প্রশাসনিক একাউন্ট নেই?</a>
                         </div>
 
                         <div class="col-6">
