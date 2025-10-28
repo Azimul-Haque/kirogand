@@ -345,6 +345,7 @@ class DashboardController extends Controller
         $user->mobile = $request->mobile;
         $user->designation = $request->designation;
         $user->role = $request->role;
+        $user->is_active = 1;
         // if(!empty($request->sitecheck)) {
         //     $user->sites = implode(',', $request->sitecheck);
         // }
