@@ -31,9 +31,10 @@
 
 @section('content-s')
     <section class="py-5">
+        <div class="row">
     @foreach ($blogs as $blog)
 
-        <div class="row">
+        
             <div class="col-md-6">
                 <!-- Blog Post Card/Article (Replaced custom classes with BS5 spacing and shadow for visual pop) -->
                 <article class="card mb-5 shadow-sm border-0 wow fadeIn">
