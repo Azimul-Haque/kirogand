@@ -102,7 +102,7 @@
                           if ($districtModel) {
                               // You can now access any column (ID, name, bn_name)
                               echo "<br/>বিভাগ: " . $divisionModel->bn_name;
-                              echo "<br/>জেলা: " . $districtModel->bn_name;
+                              echo ", জেলা: " . $districtModel->bn_name;
                               // echo "<br/>District ID: " . $districtModel->id;
                           }
 
