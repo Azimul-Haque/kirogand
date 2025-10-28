@@ -48,7 +48,7 @@
 
       <div class="row justify-content-center g-4">
           
-          <div class="col-lg-4">
+          <div class="col-lg-5">
               <div class="card card p-4 p-md-5 shadow-lg rounded-3">
                 <form method="post" action="{{ url('/login') }}">
                     @csrf
