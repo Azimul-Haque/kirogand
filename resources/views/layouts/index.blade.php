@@ -201,7 +201,7 @@
       <!-- 2. Logo/Branding Area (Bigger Logo) -->
       <div class="logo-area">
           <div class="container py-3 d-flex align-items-center justify-content-between">
-              <a href="" title="ডি-নাগরিক হোম" style="">
+              <a href="" title="ডি-নাগরিক হোম" style="text-decoration: none;">
                 <div class="d-flex align-items-center">
                     <!-- Increased Icon Size and Text Emphasis -->
                     {{-- <i class="fas fa-landmark me-3" style="font-size: 2.8rem; color: var(--light-primary-color);"></i> --}}
