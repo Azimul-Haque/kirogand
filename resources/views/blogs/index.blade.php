@@ -30,7 +30,7 @@
 @endsection
 
 @section('content-s')
-    <section class="py-5">
+    <section class="py-5 g-4">
         <div class="row">
             @foreach ($blogs as $blog)
 
@@ -102,7 +102,7 @@
                     </div>
 
             @endforeach
-    
+
         </div>
 
     <!-- Paginating Links -->
