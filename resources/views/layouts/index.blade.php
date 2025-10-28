@@ -275,6 +275,10 @@
                       <li><a class="dropdown-item text-info fw-bold" href="{{ route('office.login') }}"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a></li>
                     @endif
                   </ul>
+                  <form id="logout-form" action="/logout" method="POST" style="display: none;">
+                      <!-- @csrf (In a real Laravel application, this directive is essential!) -->
+                      <input type="hidden" name="_token" value="YOUR_CSRF_TOKEN_HERE">
+                  </form>
               </div>
               <!-- END MOBILE/DESKTOP DROPDOWN -->
           </div>
