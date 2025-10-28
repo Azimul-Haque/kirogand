@@ -2,7 +2,7 @@
     <a href="{{ route('dashboard.index') }}" class="brand-link">
         <img src="{{ asset('images/icon.png') }}"
              alt="AdminLTE Logo"
-             class=" img-circle elevation-2">
+             class="brand-image img-circle elevation-2">
         <span class="brand-text font-weight-light">ডি-নাগরিক</span>
     </a>
 
