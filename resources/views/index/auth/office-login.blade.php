@@ -53,50 +53,61 @@
                 <form method="post" action="{{ url('/login') }}">
                     @csrf
 
+                    <!-- Mobile Number Input Group -->
                     <div class="input-group mb-3">
                         <input type="number"
-                               name="mobile"
-                               value="{{ old('mobile') }}"
-                               placeholder="মোবাইল নম্বর (১১ ডিজিট)"
-                               class="form-control @error('mobile') is-invalid @enderror">
-                        <div class="input-group-append">
-                            <div class="input-group-text"><span class="fas fa-phone"></span></div>
-                        </div>
+                                name="mobile"
+                                value="{{ old('mobile') }}"
+                                placeholder="মোবাইল নম্বর (১১ ডিজিট)"
+                                class="form-control @error('mobile') is-invalid @enderror">
+                        
+                        <!-- BS5 change: input-group-append removed, using input-group-text -->
+                        <span class="input-group-text">
+                            <span class="fas fa-phone"></span>
+                        </span>
+                        
+                        <!-- Validation feedback for mobile -->
                         @error('mobile')
-                        <span class="error invalid-feedback">{{ $message }}</span>
+                        <div class="invalid-feedback d-block">{{ $message }}</div>
                         @enderror
                     </div>
 
+                    <!-- Password Input Group -->
                     <div class="input-group mb-3">
                         <input type="password"
-                               name="password"
-                               placeholder="পাসওয়ার্ড"
-                               class="form-control @error('password') is-invalid @enderror">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                        @error('password')
-                        <span class="error invalid-feedback">{{ $message }}</span>
-                        @enderror
+                                name="password"
+                                placeholder="পাসওয়ার্ড"
+                                class="form-control @error('password') is-invalid @enderror">
+                        
+                        <!-- BS5 change: input-group-append removed, using input-group-text -->
+                        <span class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </span>
 
+                        <!-- Validation feedback for password -->
+                        @error('password')
+                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="row">
                         <div class="col-6">
-                            <div class="icheck-primary">
-                                <input type="checkbox" id="remember">
-                                <label for="remember">মনে রাখুন</label>
+                            <!-- BS5 change: Using the form-check structure -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="remember" name="remember">
+                                <label class="form-check-label" for="remember">
+                                    মনে রাখুন
+                                </label>
                             </div>
                         </div>
 
                         <div class="col-6">
-                            <button type="submit" class="btn btn-primary btn-block">লগইন করুন</button>
+                            <!-- BS5 change: btn-block replaced with w-100 -->
+                            <button type="submit" class="btn btn-primary w-100">লগইন করুন</button>
                         </div>
-
                     </div>
                 </form>
+
                 
               </div>
           </div>
