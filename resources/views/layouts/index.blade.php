@@ -265,7 +265,7 @@
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdownMobile">
                       <li><a class="dropdown-item text-primary fw-bold" href="/citizen-login"><i class="fas fa-user me-2"></i> নাগরিক লগইন</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item text-info fw-bold" href="/admin-login"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a></li>
+                      <li><a class="dropdown-item text-info fw-bold" href="{{ route('office.login') }}"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a></li>
                   </ul>
               </div>
               <!-- END MOBILE/DESKTOP DROPDOWN -->
