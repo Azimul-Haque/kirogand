@@ -100,9 +100,10 @@ Route::post('/dashboard/users/store', 'DashboardController@storeUser')->name('da
 Route::post('/dashboard/users/{id}/update', 'DashboardController@updateUser')->name('dashboard.users.update');
 Route::post('/dashboard/users/bulk/package/update', 'DashboardController@updateBulkPackageDate')->name('dashboard.users.bulk.package.update');
 Route::get('/dashboard/users/{id}/delete', 'DashboardController@deleteUser')->name('dashboard.users.delete');
-Route::get('/dashboard/users/{id}/activete', 'DashboardController@activeteUser')->name('dashboard.users.activete');
 Route::post('/dashboard/users/{id}/single/notification', 'DashboardController@sendSingleNotification')->name('dashboard.users.singlenotification');
 Route::post('/dashboard/users/{id}/single/sms', 'DashboardController@sendSingleSMS')->name('dashboard.users.singlesms');
+
+Route::get('/dashboard/users/{id}/activete', 'DashboardController@activeteUser')->name('dashboard.users.activete');
 
 Route::get('/dashboard/local-offices', 'DashboardController@getLocalOffices')->name('dashboard.local-offices');
 
