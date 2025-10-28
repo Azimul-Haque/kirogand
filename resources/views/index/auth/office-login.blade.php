@@ -98,9 +98,10 @@
                                 <input class="form-check-input" type="checkbox" id="remember" name="remember">
                                 <label class="form-check-label" for="remember">
                                     মনে রাখুন
-                                </label><br/>
-                                <a href="">প্রশাসনিক একাউন্ট খুলুন</a>
+                                </label>
                             </div>
+                            <br/>
+                                <a href="">প্রশাসনিক একাউন্ট খুলুন</a>
                         </div>
 
                         <div class="col-6">
