@@ -6,8 +6,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   @if (!Request::is('blogs', 'blogs/*', 'blog', 'blog/*'))
-    <meta name="description" content="অনলাইনে সনদপত্র, প্রত্যয়ন ও সরকারি সেবা নিতে এখনই যুক্ত হোন ডিজিটাল নাগরিকের সাথে—বাংলাদেশের সেরা সনদ ও প্রত্যয়ন সেবা প্ল্যাটফর্ম।">
-    <meta name="keywords" content="সনদপত্র, প্রত্যয়ন, জন্ম নিবন্ধন, মৃত্যু নিবন্ধন, অনলাইন সেবা, স্থানীয় সরকার, ইউনিয়ন পরিষদ, পৌরসভা, ডিজিটাল সেবা, বাংলাদেশ">
+    <meta name="description" content="ডি-নাগরিক: অনলাইনে ডিজিটাল সনদপত্র, প্রত্যয়ন ও সরকারি সেবা নিতে এখনই যুক্ত হোন ডিজিটাল নাগরিকের সাথে—বাংলাদেশের সেরা সনদ ও প্রত্যয়ন সেবা প্ল্যাটফর্ম।">
+    <meta name="keywords" content="ডি-নাগরিক, ডিজিটাল নাগরিক, সনদপত্র, প্রত্যয়ন, জন্ম নিবন্ধন, মৃত্যু নিবন্ধন, অনলাইন সেবা, স্থানীয় সরকার, ইউনিয়ন পরিষদ, পৌরসভা, ডিজিটাল সেবা, বাংলাদেশ">
     <meta name="author" content="D Nagorik System">
 
     <meta property="og:image" content="{{ asset('images/bcs-exam-aid-banner.png') }}" />
@@ -204,8 +204,8 @@
               <div class="d-flex align-items-center">
                   <!-- Increased Icon Size and Text Emphasis -->
                   <i class="fas fa-landmark me-3" style="font-size: 2.8rem; color: var(--light-primary-color);"></i>
-                  <span class="h3 fw-bolder text-white mb-0 d-none d-sm-inline">স্থানীয় সরকার প্রত্যয়ন পোর্টাল</span>
-                  <span class="h4 fw-bolder text-white mb-0 d-inline d-sm-none">প্রত্যয়ন পোর্টাল</span>
+                  <span class="h3 fw-bolder text-white mb-0 d-none d-sm-inline">ডি-নাগরিক: ডিজিটাল প্রত্যয়ন পোর্টাল</span>
+                  <span class="h4 fw-bolder text-white mb-0 d-inline d-sm-none">ডি-নাগরিক</span>
               </div>
               <!-- Replaced 'সহায়তা ডেস্ক' with two new account buttons -->
               <div class="d-none d-md-flex gap-3">
