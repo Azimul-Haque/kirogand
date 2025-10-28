@@ -67,7 +67,7 @@
                               $auth = $user->authorities->first();
                           @endphp
                           {{-- Display the full dynamic hierarchy string --}}
-                          {!! $auth->getFullHierarchy() !!} 
+                          {{-- {!! $auth->getFullHierarchy() !!}  --}}
                           <span class="badge badge-secondary">
                               ({{ (new \ReflectionClass($auth->authority_type))->getShortName() }})
                           </span>
