@@ -44,7 +44,7 @@
       <h1 class="text-center display-6 fw-bold mb-4" style="color: var(--darker-color);">
           <i class="fas fa-user-plus me-3 text-info"></i> কর্তৃপক্ষ লগইন
       </h1>
-      <p class="text-center lead mb-5 text-muted">স্থানীয় সরকার কর্তৃপক্ষ (ইউনিয়ন/পৌরসভা/উপজেলা পরিষদ/জেলা পরিষদ) ও কর্মকর্তা একাউন্ট নিবন্ধন ফর্ম</p>
+      <p class="text-center lead mb-5 text-muted">ডি-নাগরিকে কর্তৃপক্ষ (ইউনিয়ন/পৌরসভা) ও কর্মকর্তা একাউন্ট নিবন্ধন ফর্ম</p>
 
       <div class="row justify-content-center g-4">
           
