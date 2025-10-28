@@ -69,7 +69,7 @@
                 </a>
                 <!-- Metadata -->
                 <small class="d-block text-muted text-truncate">
-                    {{ $popular->user->name }} - {{ date('F d', strtotime($popular->created_at)) }}
+                    {{ $popular->user->name }}<br/>{{ date('F d', strtotime($popular->created_at)) }}
                 </small>
             </div>
         </li>
