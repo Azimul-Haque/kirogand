@@ -271,6 +271,7 @@
                      
                      <li><a class="dropdown-item text-primary fw-bold" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-user me-2"></i> লগআউট</a></li>
                     @else
+                      <li><a class="dropdown-item text-primary fw-bold" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-user me-2"></i> লগআউট</a></li>
                      <i class="fas fa-user-tie me-2"></i> {{ Auth::user()->name }}
                     @endif
                       
