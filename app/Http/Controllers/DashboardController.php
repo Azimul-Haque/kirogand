@@ -434,6 +434,7 @@ class DashboardController extends Controller
         $user = User::find($id);
         $user->is_active = 1;
         $user->localOffice->is_active = 1;
+        $user->localOffice->save();
         $user->save();
 
 
