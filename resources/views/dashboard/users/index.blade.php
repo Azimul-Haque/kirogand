@@ -244,7 +244,7 @@
                     <div class="modal fade" id="actiavateUser{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="actiavateUserModalLabel" aria-hidden="true" data-backdrop="static">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                          <div class="modal-header bg-danger">
+                          <div class="modal-header bg-warning">
                             <h5 class="modal-title" id="actiavateUserModalLabel">ব্যবহারকারী ডিলেট</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
@@ -259,7 +259,7 @@
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">ফিরে যান</button>
-                            <a href="{{ route('dashboard.users.delete', $user->id) }}" class="btn btn-danger">ডিলেট করুন</a>
+                            <a href="{{ route('dashboard.users.delete', $user->id) }}" class="btn btn-warning">ডিলেট করুন</a>
                           </div>
                         </div>
                       </div>
