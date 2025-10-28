@@ -76,7 +76,7 @@ Auth::routes([
 
 Route::get('register/authority', 'IndexController@getAuthorityRegister')->name('register.authority');
 Route::post('register/authority', 'IndexController@storeAuthorityRegister')->name('register.store.authority');
-Route::get('register/authority', 'IndexController@getAuthorityRegister')->name('register.authority');
+Route::get('office/login', 'IndexController@getAuthorityRegister')->name('register.authority');
 // Route::get('register/authority/message', 'IndexController@storeAuthorityRegister')->name('register.authority.message');
 Route::get('register/citizen', 'IndexController@getCitizenRegister')->name('register.citizen');
 
