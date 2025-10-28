@@ -437,13 +437,13 @@ class DashboardController extends Controller
         $user->save();
 
 
-        Session::flash('success', 'User updated successfully!');
+        Session::flash('success', 'User activated successfully!');
         return redirect()->route('dashboard.users');
     }
 
 
 
-    
+
 
     public function updateBulkPackageDate(Request $request)
     {
