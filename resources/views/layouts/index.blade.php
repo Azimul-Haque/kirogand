@@ -188,7 +188,7 @@
   <!--====== NAVBAR NINE PART START ======-->
 
   <!-- Main Header Container -->
-  <header class="navbar-custom sticky-top">
+  <header class="navbar-custom ">
       <!-- Marquee Text (Hidden on Mobile) - COMMENTED OUT AS PER REQUEST -->
       <!-- <div class="top-bar d-none d-lg-block">
           <div class="container">
