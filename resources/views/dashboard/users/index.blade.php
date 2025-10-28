@@ -257,7 +257,7 @@
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">ফিরে যান</button>
-                            <a href="{{ route('dashboard.users.delete', $user->id) }}" class="btn btn-warning">এক্টিভেট করুন</a>
+                            <a href="{{ route('dashboard.users.activate', $user->id) }}" class="btn btn-warning">এক্টিভেট করুন</a>
                           </div>
                         </div>
                       </div>
