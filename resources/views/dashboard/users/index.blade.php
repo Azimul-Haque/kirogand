@@ -194,9 +194,11 @@
                       </div> --}}
                       {{-- Notif Modal Code --}}
                       {{-- Notif Modal Code --}}
+                      @if($user->is_active == 0)
                       <button type="button" class="btn btn-warning btn-sm edit-user-btn" data-toggle="modal" data-target="#editUserModal{{ $user->id }}">
                         <i class="fas fa-toggle-on"></i>
                       </button>
+                      @endif
                 			<button type="button" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#editUserModal{{ $user->id }}">
                 				<i class="fas fa-user-edit"></i>
                 			</button>
