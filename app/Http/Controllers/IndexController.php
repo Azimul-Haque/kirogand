@@ -453,8 +453,6 @@ class IndexController extends Controller
 
     public function getOfficeLogin()
     {
-        $divisions = Division::all();
-
         return view('index.auth.register-authority')->withDivisions($divisions);
     }
 
