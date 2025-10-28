@@ -99,6 +99,7 @@
                                 <label class="form-check-label" for="remember">
                                     মনে রাখুন
                                 </label>
+                                আসদসদ
                             </div>
                         </div>
 
