@@ -98,7 +98,7 @@
                                 <input class="form-check-input" type="checkbox" id="remember" name="remember">
                                 <label class="form-check-label" for="remember">
                                     মনে রাখুন
-                                </label>
+                                </label><a href="">প্রশাসনিক একাউন্ট খুলুন</a>
                             </div>
                         </div>
 
@@ -106,7 +106,7 @@
                             <!-- BS5 change: btn-block replaced with w-100 -->
                             <button type="submit" class="btn btn-primary w-100">লগইন করুন</button>
                         </div>
-                        <a href="">প্রশাসনিক একাউন্ট খুলুন</a>
+                        
                     </div>
                 </form>
 
