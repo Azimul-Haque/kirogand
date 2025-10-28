@@ -34,11 +34,9 @@
     {{-- <section style="padding-top: 50px; padding-bottom: 50px;">
         @foreach ($blogs as $blog)
         <div class="blog-listing blog-listing-classic no-margin-top wow fadeIn">
-            <!-- post image -->
             @if($blog->featured_image != null)
                 <div><a class="blog-image" href="{{ route('blog.single', $blog->slug) }}"><img class="img-responsive" src="{{ asset('images/blogs/'.$blog->featured_image) }}" alt="" style="width: 100%;" /></a></div><br/>
             @endif
-            <!-- end post image -->
             <div class="blog-details">
                 <div class="blog-date">Posted by <a href="{{ route('blogger.profile', $blog->user->id) }}"><b>{{ $blog->user->name }}</b></a> | {{ date('F d, Y', strtotime($blog->created_at)) }} | <a href="{{ route('blog.categorywise', $blog->blogcategory->name) }}">{{ $blog->blogcategory->name }}</a> </div>
                 <div class="blog-title"><a href="{{ route('blog.single', $blog->slug) }}">
