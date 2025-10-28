@@ -201,7 +201,7 @@
       <!-- 2. Logo/Branding Area (Bigger Logo) -->
       <div class="logo-area">
           <div class="container py-3 d-flex align-items-center justify-content-between">
-              <a href="{{ routes('index.index') }}" title="ডি-নাগরিক হোম" style="text-decoration: none;">
+              <a href="{{ route('index.index') }}" title="ডি-নাগরিক হোম" style="text-decoration: none;">
                 <div class="d-flex align-items-center">
                     <!-- Increased Icon Size and Text Emphasis -->
                     {{-- <i class="fas fa-landmark me-3" style="font-size: 2.8rem; color: var(--light-primary-color);"></i> --}}
@@ -284,7 +284,7 @@
       <div class="container">
           <div class="row">
               <div class="col-md-4 mb-4 mb-md-0">
-                  <a href="{{ routes('index.index') }}" title="ডি-নাগরিক হোম" style="text-decoration: none;">
+                  <a href="{{ route('index.index') }}" title="ডি-নাগরিক হোম" style="text-decoration: none;">
                     <h5 class="fw-bold text-uppercase">
                       {{-- <i class="fas fa-landmark me-2"></i> --}}
                       <img src="{{ asset('/') }}images/logo-horizontal.png" class="img-fluid" style="height: 75px; width: auto;" alt="ডি-নাগরিক: ডিজিটাল প্রত্যয়ন পোর্টাল">
