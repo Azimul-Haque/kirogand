@@ -104,7 +104,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                     <!-- User image -->
-                    <li class="user-header bg-primary">
+                    <li class="user-header bg-success">
                         <img src="{{ asset('images/user.png') }}"
                              class="img-circle elevation-1"
                              alt="User Image">
