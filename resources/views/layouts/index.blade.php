@@ -187,74 +187,90 @@
 
   <!--====== NAVBAR NINE PART START ======-->
 
-<!-- Main Header Container (REMOVED sticky-top) -->
-<header class="navbar-custom">
-    <!-- Marquee Text (Hidden on Mobile) - COMMENTED OUT AS PER REQUEST -->
-    <!-- <div class="top-bar d-none d-lg-block">
-        ...
-    </div> -->
+  <!-- Main Header Container -->
+  <header class="navbar-custom sticky-top">
+      <!-- Marquee Text (Hidden on Mobile) - COMMENTED OUT AS PER REQUEST -->
+      <!-- <div class="top-bar d-none d-lg-block">
+          <div class="container">
+              <marquee class="small text-darker-color fw-bold">
+                  <i class="fas fa-certificate text-danger me-2"></i> আপনার ডিজিটাল সনদপত্র আবেদনের জন্য জাতীয় পরিচয়পত্র নম্বর ও জন্ম তারিখ ব্যবহার করুন। সেবাসমূহ এখন আরও দ্রুত এবং নির্ভরযোগ্য।
+              </marquee>
+          </div>
+      </div> -->
 
-    <!-- 2. Logo/Branding Area (This part will SCROLL AWAY) -->
-    <div class="logo-area">
-        <div class="container py-3 d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center">
-                {{-- <i class="fas fa-landmark me-3" style="font-size: 2.8rem; color: var(--light-primary-color);"></i> --}}
-                <img src="{{ asset('/') }}images/logo.png" class="img-fluid" style="height: 60px; width: auto;" alt="ডি-নাগরিক: ডিজিটাল প্রত্যয়ন পোর্টাল">
-                <span class="h3 fw-bolder text-white mb-0 d-none d-sm-inline">ডি-নাগরিক: ডিজিটাল প্রত্যয়ন পোর্টাল</span>
-                <span class="h4 fw-bolder text-white mb-0 d-inline d-sm-none">ডি-নাগরিক</span>
-            </div>
-            <!-- Replaced 'সহায়তা ডেস্ক' with two new account buttons -->
-            <div class="d-none d-md-flex gap-3">
-                <a href="{{ route('register.citizen') }}" class="btn btn-outline-light rounded-pill"><i class="fas fa-user me-2"></i> নাগরিক একাউন্ট</a>
-                <a href="{{ route('register.authority') }}" class="btn btn-outline-info rounded-pill"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a>
-            </div>
-        </div>
-    </div>
-    
-    <!-- 3. Main Navigation Bar (ADDED sticky-top) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-darker sticky-top">
-        <div class="container">
-            <!-- Toggler button remains for mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav w-100 align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('index.index') }}"><i class="fas fa-home me-1"></i> হোম</a></li>
-                    <!-- New Links Added -->
-                    <li class="nav-item"><a class="nav-link {{ Request::is('verify-certificate') ? 'active' : '' }}" href="{{ route('index.verify-certificate') }}"><i class="fas fa-check-circle me-1"></i> সনদ যাচাই</a></li>
-                    <li class="nav-item"><a class="nav-link {{ Request::is('application-status') ? 'active' : '' }}" href="{{ route('index.application-status') }}"><i class="fas fa-tasks me-1"></i> আবেদনের অবস্থা</a></li>
-                    <li class="nav-item"><a class="nav-link {{ Request::is('services') ? 'active' : '' }}" href="{{ route('index.services') }}"><i class="fas fa-list-check me-1"></i> সেবাসমূহ</a></li>
-                    <li class="nav-item"><a class="nav-link {{ Request::is('notices') ? 'active' : '' }}" href="{{ route('index.notices') }}"><i class="fas fa-bullhorn me-1"></i> নোটিশ বোর্ড</a></li>
-                    <!-- Order Change: User Guide before Contact -->
-                    <li class="nav-item"><a class="nav-link {{ Request::is('user-guidelines') ? 'active' : '' }}" href="{{ route('index.user-guidelines') }}"><i class="fas fa-book me-1"></i> ব্যবহার নির্দেশিকা</a></li>
-                    <li class="nav-item"><a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('index.contact') }}"><i class="fas fa-headset me-1"></i> যোগাযোগ</a></li>
-                </ul>
-            </div>
+      <!-- 2. Logo/Branding Area (Bigger Logo) -->
+      <div class="logo-area">
+          <div class="container py-3 d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                  <!-- Increased Icon Size and Text Emphasis -->
+                  {{-- <i class="fas fa-landmark me-3" style="font-size: 2.8rem; color: var(--light-primary-color);"></i> --}}
+                  <img src="{{ asset('/') }}images/logo.png" class="img-fluid" style="height: 60px; width: auto;" alt="ডি-নাগরিক: ডিজিটাল প্রত্যয়ন পোর্টাল">
+                  <span class="h3 fw-bolder text-white mb-0 d-none d-sm-inline">ডি-নাগরিক: ডিজিটাল প্রত্যয়ন পোর্টাল</span>
+                  <span class="h4 fw-bolder text-white mb-0 d-inline d-sm-none">ডি-নাগরিক</span>
+              </div>
+              <!-- Replaced 'সহায়তা ডেস্ক' with two new account buttons -->
+              <div class="d-none d-md-flex gap-3">
+                  <a href="{{ route('register.citizen') }}" class="btn btn-outline-light rounded-pill"><i class="fas fa-user me-2"></i> নাগরিক একাউন্ট</a>
+                  <a href="{{ route('register.authority') }}" class="btn btn-outline-info rounded-pill"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- 3. Main Navigation Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-darker">
+          <div class="container">
+              <!-- Toggler button remains for mobile -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav w-100 align-items-lg-center">
+                      <li class="nav-item"><a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('index.index') }}"><i class="fas fa-home me-1"></i> হোম</a></li>
+                      <!-- New Links Added -->
+                      <li class="nav-item"><a class="nav-link {{ Request::is('verify-certificate') ? 'active' : '' }}" href="{{ route('index.verify-certificate') }}"><i class="fas fa-check-circle me-1"></i> সনদ যাচাই</a></li>
+                      <li class="nav-item"><a class="nav-link {{ Request::is('application-status') ? 'active' : '' }}" href="{{ route('index.application-status') }}"><i class="fas fa-tasks me-1"></i> আবেদনের অবস্থা</a></li>
+                      <li class="nav-item"><a class="nav-link {{ Request::is('services') ? 'active' : '' }}" href="{{ route('index.services') }}"><i class="fas fa-list-check me-1"></i> সেবাসমূহ</a></li>
+                      <li class="nav-item"><a class="nav-link {{ Request::is('notices') ? 'active' : '' }}" href="{{ route('index.notices') }}"><i class="fas fa-bullhorn me-1"></i> নোটিশ বোর্ড</a></li>
+                      <!-- Order Change: User Guide before Contact -->
+                      <li class="nav-item"><a class="nav-link {{ Request::is('user-guidelines') ? 'active' : '' }}" href="{{ route('index.user-guidelines') }}"><i class="fas fa-book me-1"></i> ব্যবহার নির্দেশিকা</a></li>
+                      <li class="nav-item"><a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('index.contact') }}"><i class="fas fa-headset me-1"></i> যোগাযোগ</a></li>
+                      
+                      <!-- Login/Dropdown remains, floated right (mostly redundant now, but kept for mobile/small screen) -->
+                     {{--  <li class="nav-item dropdown ms-auto">
+                          <a class="nav-link dropdown-toggle btn btn-primary btn-sm ms-lg-3 rounded-pill" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="fas fa-sign-in-alt me-1"></i> প্রবেশ
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdown">
+                              <li><a class="dropdown-item text-primary fw-bold" href="/citizen-login"><i class="fas fa-user me-2"></i> নাগরিক লগইন</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item text-info fw-bold" href="/admin-login"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক লগইন</a></li>
+                          </ul>
+                      </li> --}}
+                  </ul>
+              </div>
 
-            <!-- Login Dropdown for Mobile/Tablet/Desktop - Now visible on all screens (Removed d-lg-none) -->
-            <div class="dropdown d-flex ms-auto"> 
-                <a class="nav-link dropdown-toggle btn btn-primary btn-sm rounded-pill text-white" 
-                    href="#" 
-                    id="loginDropdownMobile" 
-                    role="button" 
-                    data-bs-toggle="dropdown" 
-                    aria-expanded="false" 
-                    style="padding: 6px 15px;">
-                     <i class="fas fa-sign-in-alt me-1"></i> লগইন
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdownMobile">
-                    <li><a class="dropdown-item text-primary fw-bold" href="/citizen-login"><i class="fas fa-user me-2"></i> নাগরিক লগইন</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item text-info fw-bold" href="/admin-login"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a></li>
-                </ul>
-            </div>
-            <!-- END MOBILE/DESKTOP DROPDOWN -->
-        </div>
-    </nav>
-</header>
-<!--====== NAVBAR NINE PART ENDS ======-->
-
+              <!-- Login Dropdown for Mobile/Tablet/Desktop - Now visible on all screens (Removed d-lg-none) -->
+              <div class="dropdown d-flex ms-auto"> 
+                  <a class="nav-link dropdown-toggle btn btn-primary btn-sm rounded-pill text-white" 
+                     href="#" 
+                     id="loginDropdownMobile" 
+                     role="button" 
+                     data-bs-toggle="dropdown" 
+                     aria-expanded="false" 
+                     style="padding: 6px 15px;">
+                      <i class="fas fa-sign-in-alt me-1"></i> লগইন
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdownMobile">
+                      <li><a class="dropdown-item text-primary fw-bold" href="/citizen-login"><i class="fas fa-user me-2"></i> নাগরিক লগইন</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item text-info fw-bold" href="/admin-login"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a></li>
+                  </ul>
+              </div>
+              <!-- END MOBILE/DESKTOP DROPDOWN -->
+          </div>
+      </nav>
+  </header>
+  <!--====== NAVBAR NINE PART ENDS ======-->
 
   <main>
     @yield('content')
