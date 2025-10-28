@@ -72,7 +72,7 @@
                               ({{ (new \ReflectionClass($auth->authority_type))->getShortName() }})
                           </span>
                       @else
-                          না
+                          N/A
                       @endif
 
                       @php
