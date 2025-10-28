@@ -263,7 +263,7 @@
                      @if(Auth::user())
                       <i class="fas fa-sign-in-alt me-1"></i> লগইন
                      @else
-
+                      <i class="fas fa-sign-in-alt me-1"></i> লগইন
                      @endif
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdownMobile">
