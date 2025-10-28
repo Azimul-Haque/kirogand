@@ -21,7 +21,7 @@
     @stack('page_css')
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed pace-primary layout-navbar-fixed">
+<body class="hold-transition sidebar-mini layout-fixed pace-success layout-navbar-fixed">
 <div class="wrapper">
     <!-- Main Header -->
     <nav class="main-header navbar navbar-expand navbar-green navbar-dark">
@@ -104,7 +104,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                     <!-- User image -->
-                    <li class="user-header bg-primary">
+                    <li class="user-header bg-success">
                         <img src="{{ asset('images/user.png') }}"
                              class="img-circle elevation-1"
                              alt="User Image">
