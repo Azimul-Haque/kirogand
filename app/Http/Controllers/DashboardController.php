@@ -429,7 +429,7 @@ class DashboardController extends Controller
         }
     }
 
-    public function activeteUser($id)
+    public function activateUser($id)
     {
         $user = User::find($id);
         $user->is_active = 1;
