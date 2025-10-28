@@ -238,8 +238,8 @@
                         {{-- Delete User Modal Code --}}
                 	</tr>
 
-                    {{-- Delete User Modal Code --}}
-                    {{-- Delete User Modal Code --}}
+                    {{-- Activate User Modal Code --}}
+                    {{-- Activate User Modal Code --}}
                     <!-- Modal -->
                     <div class="modal fade" id="deleteUserModal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteUserModalLabel" aria-hidden="true" data-backdrop="static">
                       <div class="modal-dialog" role="document">
@@ -264,8 +264,8 @@
                         </div>
                       </div>
                     </div>
-                    {{-- Delete User Modal Code --}}
-                    {{-- Delete User Modal Code --}}
+                    {{-- Activate User Modal Code --}}
+                    {{-- Activate User Modal Code --}}
 
                     {{-- Edit User Modal Code --}}
                     {{-- Edit User Modal Code --}}
