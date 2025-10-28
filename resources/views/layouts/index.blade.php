@@ -277,7 +277,7 @@
                   </ul>
                   <form id="logout-form" action="/logout" method="POST" style="display: none;">
                       <!-- @csrf (In a real Laravel application, this directive is essential!) -->
-                      <input type="hidden" name="_token" value="YOUR_CSRF_TOKEN_HERE">
+                      @csrf
                   </form>
               </div>
               <!-- END MOBILE/DESKTOP DROPDOWN -->
