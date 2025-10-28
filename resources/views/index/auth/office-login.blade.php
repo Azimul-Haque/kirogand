@@ -98,7 +98,7 @@
                                 <input class="form-check-input" type="checkbox" id="remember" name="remember">
                                 <label class="form-check-label" for="remember">
                                     মনে রাখুন
-                                </label>
+                                </label><br/>
                                 আসদসদ
                             </div>
                         </div>
