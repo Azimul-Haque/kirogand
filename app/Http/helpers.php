@@ -54,6 +54,8 @@
           return 'এডমিন';
       else if ($text == 'manager')
           return 'প্রতিনিধি';
+      else if ($text == 'user')
+        return 'প্রতিনিধি';
       else
           return $text;
   }
