@@ -86,50 +86,6 @@
                         </div>
                         <form method="post" action="{{ route('dashboard.users.update', $localoffice->id) }}">
                           <div class="modal-body">
-                            @php
-                              if($localoffice->users && $localoffice->users->count() > 0) {
-                                $userAuthority = $localOffice->users[0]->authorities->first();
-                              }
-                              
-
-                              if ($userAuthority) {
-                                // 2. Call the method to get the full hierarchy array
-                                $hierarchy = $userAuthority->getAncestorsByLevel();
-
-                                // 3. Access the specific level you need (e.g., 'District')
-                                // Note: The keys are the English model names: 'Division', 'District', 'Upazila', 'Union'
-                                
-                                // To get the Division Model:
-                                $divisionModel = $hierarchy['Division'] ?? null;
-
-                                // To get the District Model:
-                                $districtModel = $hierarchy['District'] ?? null;
-
-                                // To get the Upazilla Model:
-                                $upazilaModel = $hierarchy['Upazila'] ?? null;
-                                
-                                // To get the Assigned Authority Model (Union, Upazila, etc.):
-                                $assignedModel = $userAuthority->authority; 
-                                $level = (new \ReflectionClass($userAuthority->authority_type))->getShortName();
-                                
-                                // --- Displaying Data ---
-                                if ($districtModel) {
-                                    // You can now access any column (ID, name, bn_name)
-                                    echo "<br/>বিভাগ: " . $divisionModel->bn_name;
-                                    echo ", জেলা: " . $districtModel->bn_name;
-                                    // echo "<br/>District ID: " . $districtModel->id;
-                                }
-
-                                if ($upazilaModel) {
-                                    // You can now access any column (ID, name, bn_name)
-                                    echo "<br/>উপজেলা: " . $upazilaModel->bn_name;
-                                    if($level == 'Union') {
-                                      echo ", ইউনিয়ন: " . $assignedModel->bn_name;
-                                    }
-                                }
-                            }
-                            @endphp
-
                             @if ($user->authorities->isNotEmpty())
                                 {{-- {{ print_r($user->authorities->first()->getAncestorsByLevel()) }} --}}
                                 @php
