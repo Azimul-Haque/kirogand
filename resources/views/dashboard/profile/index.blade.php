@@ -260,5 +260,12 @@
 @endsection
 
 @section('third_party_scripts')
-
+  <script>
+    // JavaScript to update the label text of the custom file input
+    document.querySelector('#monogram').addEventListener('change', function (e) {
+        var fileName = e.target.files[0].name;
+        var nextSibling = e.target.nextElementSibling;
+        nextSibling.innerText = fileName;
+    });
+  </script>
 @endsection
