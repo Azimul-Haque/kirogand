@@ -255,7 +255,7 @@
                                   </div>
                               @else
                                   <div class="monogram-placeholder bg-gray-100 p-6 rounded-lg text-center border-dashed border-2 border-gray-300">
-                                      <p class="text-gray-500">No Monogram set or file not found.</p>
+                                      <p class="text-gray-500">কোন মনোগ্রাম সেট করা নেই!</p>
                                   </div>
                               @endif
                             </div>
