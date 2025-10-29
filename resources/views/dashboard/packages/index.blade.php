@@ -7,6 +7,12 @@
 
 @section('content')
 	@section('page-header') প্যাকেজ @endsection
+  @section('page-header-right')
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
+        <li class="breadcrumb-item active">প্যাকেজ</li>
+    </ol>
+  @endsection
     <div class="container-fluid">
 		<div class="card">
           <div class="card-header">
