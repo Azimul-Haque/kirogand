@@ -162,7 +162,7 @@
         <div class="float-right d-none d-sm-block">
             <strong>Copyright &copy; {{ date('Y') }} | <b>ভার্শন</b> ১.০.০
         </div>
-        কোন সমস্যার সম্মুখীন হলে <a href="tel:+8801333333333">01333333333</a>
+        কোন সমস্যার সম্মুখীন হলে <a href="tel:+8801333333333">01333333333</a> নাম্বারে কল করুন
     </footer>
 </div>
 
