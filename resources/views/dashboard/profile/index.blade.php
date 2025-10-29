@@ -104,13 +104,6 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <!-- Empty column for layout symmetry -->
-                            </div>
-                        </div>
-                        
-                        <!-- Row 4: Designation & Password -->
-                        <div class="row">
-                            <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <select id="designation" name="designation" class="form-control" required>
                                         <option value="" disabled="">পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)</option>
@@ -125,6 +118,13 @@
                                         <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Row 4: Designation & Password -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                
                             </div>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
