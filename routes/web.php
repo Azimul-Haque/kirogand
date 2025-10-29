@@ -111,6 +111,7 @@ Route::post('/dashboard/local-offices/{id}/update/', 'DashboardController@update
 Route::get('/dashboard/apply-for-certificate', 'DashboardController@getApplyforCertificate')->name('dashboard.apply-for-certificate');
 
 Route::get('/dashboard/profile', 'DashboardController@getProfile')->name('dashboard.profile');
+Route::get('/dashboard/profile/update/{id}/user', 'DashboardController@getProfile')->name('dashboard.profile');
 
 Route::get('/dashboard/payments', 'DashboardController@getPayments')->name('dashboard.payments');
 Route::get('/dashboard/payments/{search}', 'DashboardController@getPaymentsSearch')->name('dashboard.payments.search');
