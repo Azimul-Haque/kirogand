@@ -344,6 +344,9 @@
 
                                   <div class="row">
                                     <div class="col-md-6">
+                                      
+                                    </div>
+                                    <div class="col-md-6">
                                       <div class="input-group mb-3">
                                         <select name="role" class="form-control" required>
                                           <option disabled="" value="">ধরন নির্ধারণ করুন</option>
@@ -357,9 +360,6 @@
                                               <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
                                           </div>
                                       </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                      
                                     </div>
 
                                   </div>
