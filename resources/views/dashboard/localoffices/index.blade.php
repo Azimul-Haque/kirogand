@@ -206,8 +206,9 @@
                                                 class="custom-file-input" 
                                                 id="monogram{{ $localoffice->id }}" 
                                                 name="monogram"
-                                                required
+                                                
                                                 accept="image/png, image/jpeg, image/gif"
+                                                @if($localoffice->monogram != null) required @endif
                                             >
                                             <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
                                         </div>
