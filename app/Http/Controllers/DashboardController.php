@@ -562,7 +562,69 @@ class DashboardController extends Controller
 
     public function updateProfileLocalOffice(Request $request, $id)
     {
-        return view('dashboard.profile.index');
+        // 1. Validation for LocalOffice fields
+        $request->validate([
+            'name_bn'           => 'required|string|max:255',
+            'name'              => 'nullable|string|max:255',
+            'mobile'            => 'required|string|digits:11',
+            'email'             => 'required|email|max:255',
+            'office_type'       => 'required|in:up,poura',
+            'packageexpirydate' => 'nullable|date',
+            'monogram'          => 'sometimes|image|max:300', // max 300KB
+        ]);
+
+        // 2. Find the LocalOffice model
+        // Using findOrFail ensures a 404 error if the record doesn't exist
+        $localoffice = LocalOffice::findOrFail($id);
+
+        // OPTIONAL SECURITY CHECK: Ensure the authenticated user owns this LocalOffice record
+        // if ($localoffice->user_id !== Auth::id()) {
+        //     abort(403, 'Unauthorized action.');
+        // }
+
+        // 3. Update scalar fields
+        $localoffice->name_bn           = $request->name_bn;
+        $localoffice->name              = $request->name;
+        $localoffice->mobile            = $request->mobile;
+        $localoffice->email             = $request->email;
+        $localoffice->office_type       = $request->office_type;
+        $localoffice->is_active         = $request->has('is_active') ? 1 : 0;
+
+        // 4. Date formatting (using Carbon for better practice, but replicating your string manipulation)
+        // Ensure you have the 'packageexpirydate' field in the form.
+        if ($request->packageexpirydate) {
+             // Creates a datetime string from the submitted date
+             $localoffice->package_expiry_date = date('Y-m-d', strtotime($request->packageexpirydate)) . ' 23:59:59';
+        }
+
+        // 5. Image upload and deletion of old file
+        if ($request->hasFile('monogram')) {
+            // Delete old monogram if it exists
+            if ($localoffice->monogram) {
+                $image_path = public_path('images/localoffices/' . $localoffice->monogram);
+                if (File::exists($image_path)) {
+                    File::delete($image_path);
+                }
+            }
+
+            // Process new image
+            $image      = $request->file('monogram');
+            // Create a unique filename
+            $filename   = strtolower($request->office_type) . '-monogram-' . time() . '.' . "webp";
+            $location   = public_path('images/localoffices/' . $filename);
+
+            // Resize and save the image
+            // NOTE: You must ensure Intervention/Image is installed via composer require intervention/image
+            Image::make($image)->fit(300, 300)->save($location);
+
+            // Save the new filename to the database
+            $localoffice->monogram = $filename;
+        }
+
+        // 6. Save the model
+        $localoffice->save();
+
+        return redirect()->back()->with('success', 'Local office details updated successfully.');
     }
 
     public function getPackages()
