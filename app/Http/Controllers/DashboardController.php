@@ -153,7 +153,7 @@ class DashboardController extends Controller
                     ->withLocaloffices($localoffices);
     }
 
-    public function updateLocalOffices(Request $request, LocalOffice $localoffice)
+    public function updateLocalOffices(Request $request, $id)
     {
         $this->validate($request, [
             'name_bn'           => 'required|string|max:255',
