@@ -181,7 +181,7 @@
                                     <input type="text"
                                            name="name"
                                            class="form-control"
-                                           value="{{ Auth::user()->localOffice->name_bn }}"
+                                           value="{{ Auth::user()->localOffice->name }}"
                                            placeholder="ইংরেজি নাম (OPTIONAL)">
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-flag"></span></div>
