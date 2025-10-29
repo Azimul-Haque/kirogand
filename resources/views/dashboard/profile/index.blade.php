@@ -196,7 +196,7 @@
                                 <div class="input-group mb-3">
                                     <input type="text"
                                            name="mobile"
-                                           value="02XXXXXXXXX"
+                                           value="{{ Auth::user()->localOffice->name }}"
                                            autocomplete="off"
                                            class="form-control"
                                            placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
