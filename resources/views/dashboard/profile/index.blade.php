@@ -117,9 +117,9 @@
                                         <option value="চেয়ারম্যান" @if(Auth::user()->designation == 'চেয়ারম্যান') selected @endif>ইউনিয়ন চেয়ারম্যান</option>
                                         <option value="সচিব" @if(Auth::user()->designation == 'চেয়ারম্যান') selected @endif>ইউনিয়ন সচিব</option>
                                         <option value="সহকারী" @if(Auth::user()->designation == 'চেয়ারম্যান') selected @endif>ইউনিয়ন সহকারী</option>
-                                        <option value="মেয়র">মেয়র</option>
-                                        <option value="কাউন্সিলর">কাউন্সিলর</option>
-                                        <option value="পৌর সচিব">পৌর সচিব</option>
+                                        <option value="মেয়র" @if(Auth::user()->designation == 'চেয়ারম্যান') selected @endif>মেয়র</option>
+                                        <option value="কাউন্সিলর" @if(Auth::user()->designation == 'চেয়ারম্যান') selected @endif>কাউন্সিলর</option>
+                                        <option value="পৌর সচিব" @if(Auth::user()->designation == 'চেয়ারম্যান') selected @endif>পৌর সচিব</option>
                                     </select>
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
