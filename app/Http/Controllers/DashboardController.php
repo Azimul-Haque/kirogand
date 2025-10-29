@@ -589,7 +589,6 @@ class DashboardController extends Controller
             }
 
             $image      = $request->file('monogram');
-            // Create a unique filename
             $filename   = strtolower($request->office_type) . '-monogram-' . time() . '.' . "webp";
             $location   = public_path('images/localoffices/' . $filename);
             Image::make($image)->fit(300, 300)->save($location);
