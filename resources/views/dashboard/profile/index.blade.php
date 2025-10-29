@@ -162,8 +162,7 @@
                 </div>
                 <!-- Form: My Office -->
                 <form action="/update-local-office" method="POST" enctype="multipart/form-data">
-                    <!-- Note: For file uploads, ensure enctype="multipart/form-data" -->
-                    <input type="hidden" name="_token" value="mock_csrf_token">
+                    @csrf
                     <input type="hidden" name="_method" value="POST">
                     <div class="card-body">
 
