@@ -88,8 +88,8 @@
                           <div class="modal-body">
                             @php
                               if($localoffice->users && $localoffice->users->count() > 0) {
-                                if($user->authorities->isNotEmpty()) {
-                                  $auth = $user->authorities->first();
+                                if($localOffice->users->authorities->isNotEmpty()) {
+                                  $userAuthority = $localOffice->users[0]->authorities->first();
                                 }
                               }
                             @endphp
