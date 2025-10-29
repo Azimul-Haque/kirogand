@@ -28,7 +28,7 @@
 <li class="nav-item">
     <a href="{{ route('dashboard.profile') }}" class="nav-link {{ Request::is('dashboard/profile') ? 'active' : '' }} {{ Request::is('dashboard/profile/*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-cog"></i>
-        <p>তথ্য আপডেট</p>
+        <p>অফিস প্রোফাইল</p>
     </a>
 </li>
 @endif
