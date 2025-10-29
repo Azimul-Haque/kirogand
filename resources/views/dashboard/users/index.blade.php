@@ -60,6 +60,7 @@
                       <small><span>প্যাকেজ: <b>{{ date('d F, Y', strtotime($user->package_expiry_date)) }}</b></span></small>
                 		</td>
                     <td>
+                      {{ $user->designation }}<br/>
                       {{ $user->designation }}
                     </td>
                     <td>
