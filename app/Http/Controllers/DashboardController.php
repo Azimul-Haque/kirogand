@@ -579,15 +579,6 @@ class DashboardController extends Controller
         $localoffice->name              = $request->name;
         $localoffice->mobile            = $request->mobile;
         $localoffice->email             = $request->email;
-        $localoffice->office_type       = $request->office_type;
-        $localoffice->is_active         = $request->has('is_active') ? 1 : 0;
-
-        // 4. Date formatting (using Carbon for better practice, but replicating your string manipulation)
-        // Ensure you have the 'packageexpirydate' field in the form.
-        if ($request->packageexpirydate) {
-             // Creates a datetime string from the submitted date
-             $localoffice->package_expiry_date = date('Y-m-d', strtotime($request->packageexpirydate)) . ' 23:59:59';
-        }
 
         // 5. Image upload and deletion of old file
         if ($request->hasFile('monogram')) {
