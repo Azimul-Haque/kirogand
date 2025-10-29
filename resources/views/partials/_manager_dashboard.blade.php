@@ -1,0 +1,202 @@
+<!-- 1. Info Boxes / Summary Metrics -->
+<div class="row">
+    <!-- Total Certificates Issued -->
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box bg-gradient-primary shadow-lg quick-action-card">
+            <span class="info-box-icon"><i class="fas fa-check-circle"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text text-uppercase font-weight-bold">মোট ইস্যুকৃত সনদ</span>
+                <span class="info-box-number text-3xl font-weight-bold">২৫,৪২০</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%"></div>
+                </div>
+                <span class="progress-description">
+                    এই মাসে ইস্যু হয়েছে: ১২৫ টি
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Pending Applications -->
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box bg-gradient-warning shadow-lg quick-action-card">
+            <span class="info-box-icon"><i class="fas fa-clock"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text text-uppercase font-weight-bold">অপেক্ষমাণ আবেদন</span>
+                <span class="info-box-number text-3xl font-weight-bold">২০</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 50%"></div>
+                </div>
+                <span class="progress-description">
+                    দ্রুত পর্যালোচনা প্রয়োজন
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Total Citizens -->
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box bg-gradient-info shadow-lg quick-action-card">
+            <span class="info-box-icon"><i class="fas fa-users"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text text-uppercase font-weight-bold">মোট নাগরিক (ইউনিয়ন)</span>
+                <span class="info-box-number text-3xl font-weight-bold">৩০,২০০</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%"></div>
+                </div>
+                <span class="progress-description">
+                    ভোটার তালিকা অনুযায়ী
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Revenue Collected -->
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box bg-gradient-success shadow-lg quick-action-card">
+            <span class="info-box-icon"><i class="fas fa-hand-holding-usd"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text text-uppercase font-weight-bold">সংগৃহীত রাজস্ব (এই মাসে)</span>
+                <span class="info-box-number text-3xl font-weight-bold">৳ 80,500</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+                <span class="progress-description">
+                    গত মাসের তুলনায় ১০% বেশি
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.row (Info Boxes) -->
+
+<!-- 2. Main Content Row (Charts and Quick Actions) -->
+<div class="row">
+    <!-- Monthly Issuance Trend Chart -->
+    <section class="col-lg-7 connectedSortable">
+        <div class="card shadow-lg">
+            <div class="card-header bg-gradient-light card-header-bangla">
+                <h3 class="card-title">
+                    <i class="fas fa-chart-line mr-1"></i>
+                    মাসিক সনদ ইস্যুর প্রবণতা (গত ৬ মাস)
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="tab-content p-0">
+                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;">
+                        <canvas id="monthlyIssuanceChart" height="300" style="height: 300px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions and System Status -->
+    <section class="col-lg-5 connectedSortable">
+        <!-- Quick Actions -->
+        <div class="card shadow-lg">
+            <div class="card-header bg-gradient-light card-header-bangla">
+                <h3 class="card-title">
+                    <i class="fas fa-bolt mr-1"></i>
+                    দ্রুত কার্যসমূহ
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="#" class="btn btn-app bg-primary quick-action-card w-full rounded-lg">
+                            <i class="fas fa-file-signature"></i> সনদ তৈরি করুন
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="#" class="btn btn-app bg-info quick-action-card w-full rounded-lg">
+                            <i class="fas fa-search"></i> আবেদন খুঁজুন
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="#" class="btn btn-app bg-success quick-action-card w-full rounded-lg">
+                            <i class="fas fa-chart-pie"></i> প্রতিবেদন দেখুন
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="#" class="btn btn-app bg-secondary quick-action-card w-full rounded-lg">
+                            <i class="fas fa-cog"></i> প্রোফাইল সেটিংস
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Status / Package Expiry Card -->
+        <div class="card bg-danger shadow-lg quick-action-card">
+            <div class="card-header border-0">
+                <h3 class="card-title font-weight-bold text-white">
+                    <i class="fas fa-calendar-times mr-1"></i>
+                    সিস্টেম/প্যাকেজ স্থিতি
+                </h3>
+            </div>
+            <div class="card-body pt-0 pb-3">
+                <p class="text-white">
+                    আপনার **সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ** শীঘ্রই শেষ হতে চলেছে।
+                </p>
+                <p class="text-white text-lg font-weight-bold">
+                    মেয়াদ শেষ: {{ date('d F, Y', strtotime('+20 days')) }}
+                </p>
+                <a href="#" class="btn btn-outline-light btn-sm mt-2">প্যাকেজ নবায়ন করুন <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- /.row (Charts and Quick Actions) -->
+
+<!-- 3. Recent Activities / Notifications -->
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow-lg">
+            <div class="card-header bg-gradient-light card-header-bangla">
+                <h3 class="card-title">
+                    <i class="fas fa-history mr-1"></i>
+                    সাম্প্রতিক কার্যকলাপ (শেষ ১০টি সনদ ইস্যু)
+                </h3>
+            </div>
+            <div class="card-body p-0">
+                <ul class="products-list product-list-in-card pr-2 pl-2">
+                    <li class="item">
+                        <div class="product-img">
+                            <i class="fas fa-user-check fa-2x text-success"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="javascript:void(0)" class="product-title font-weight-bold">নাগরিক সনদ - আইডি: #৯৮৭৬</a>
+                            <span class="product-description">
+                                ইস্যু করেছেন: আপনি (প্রশাসনিক কর্মকর্তা), সময়: {{ date('H:i A') }}
+                            </span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="product-img">
+                            <i class="fas fa-user-edit fa-2x text-info"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="javascript:void(0)" class="product-title font-weight-bold">চারিত্রিক সনদ - আইডি: #৯৮৭৫</a>
+                            <span class="product-description">
+                                অনুমোদিত: চেয়ারম্যান, সময়: {{ date('H:i A', strtotime('-1 hour')) }}
+                            </span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="product-img">
+                            <i class="fas fa-money-bill-wave fa-2x text-warning"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="javascript:void(0)" class="product-title font-weight-bold">ট্যাক্স আদায় - রসিদ: #৫৬০</a>
+                            <span class="product-description">
+                                জমা হয়েছে: ৳ ১,২০০, সময়: {{ date('H:i A', strtotime('-3 hours')) }}
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-footer text-center">
+                <a href="javascript:void(0)" class="uppercase">সকল কার্যকলাপ দেখুন</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.row (Activities) -->
