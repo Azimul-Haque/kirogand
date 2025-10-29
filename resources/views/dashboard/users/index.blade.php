@@ -51,7 +51,7 @@
                 	<tr>
                 		<td>
                 			<a href="{{ route('dashboard.users.single', $user->id) }}">{{ $user->name }}</a>
-                      <small><b>প্যাকেজ: ({{ bangla($user->payments->count()) }} বার)</b></small>
+                      {{-- <small><b>প্যাকেজ: ({{ bangla($user->payments->count()) }} বার)</b></small> --}}
                 			<br/>
                             {{-- {{ $user->balances2 }} --}}
                 			<small class="text-black-50">{{ $user->mobile }}</small> 
