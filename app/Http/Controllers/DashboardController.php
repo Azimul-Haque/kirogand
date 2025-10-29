@@ -524,6 +524,11 @@ class DashboardController extends Controller
         return view('dashboard.apply-for-certificate.index');
     }
 
+    public function getProfile()
+    {
+        return view('dashboard.packages.index')->withPackages($packages);
+    }
+
     public function getPackages()
     {
         $packages = Package::all();
