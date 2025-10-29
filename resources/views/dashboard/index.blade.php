@@ -159,6 +159,7 @@
             </div>
           </div>
         </div>
+      @elseif(Auth::user()->role == 'mananger')
       @endif
     </div>
 @endsection
