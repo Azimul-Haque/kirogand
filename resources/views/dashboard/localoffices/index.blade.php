@@ -75,7 +75,7 @@
                   {{-- Edit Modal Code --}}
                   {{-- Edit Modal Code --}}
                   <!-- Modal -->
-                  <div class="modal fade" id="editLocalOfficeModal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="editLocalOfficeModalLabel" aria-hidden="true" data-backdrop="static">
+                  <div class="modal fade" id="editLocalOfficeModal{{ $localoffice->id }}" tabindex="-1" role="dialog" aria-labelledby="editLocalOfficeModalLabel" aria-hidden="true" data-backdrop="static">
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
                         <div class="modal-header bg-primary">
@@ -84,7 +84,7 @@
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
-                        <form method="post" action="{{ route('dashboard.users.update', $user->id) }}">
+                        <form method="post" action="{{ route('dashboard.users.update', $localoffice->id) }}">
                           <div class="modal-body">
                             
                                 @csrf
@@ -93,7 +93,7 @@
                                     <input type="text"
                                            name="name"
                                            class="form-control"
-                                           value="{{ $user->name }}"
+                                           value="{{ $localoffice->name }}"
                                            placeholder="নাম" required>
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-user"></span></div>
@@ -103,7 +103,7 @@
                                 <div class="input-group mb-3">
                                     <input type="text"
                                            name="mobile"
-                                           value="{{ $user->mobile }}"
+                                           value="{{ $localoffice->mobile }}"
                                            autocomplete="off"
                                            class="form-control"
                                            placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
@@ -115,7 +115,7 @@
                                 <div class="input-group mb-3">
                                     <input type="text"
                                            name="uid"
-                                           value="{{ $user->uid }}"
+                                           value="{{ $localoffice->uid }}"
                                            autocomplete="off"
                                            class="form-control"
                                            placeholder="Firebase UID">
@@ -127,7 +127,7 @@
                                 <div class="input-group mb-3">
                                     <input type="text"
                                            name="onesignal_id"
-                                           value="{{ $user->onesignal_id }}"
+                                           value="{{ $localoffice->onesignal_id }}"
                                            autocomplete="off"
                                            class="form-control"
                                            placeholder="Onesignal Player ID">
@@ -139,11 +139,11 @@
                                 <div class="input-group mb-3">
                                   <select name="role" class="form-control" required>
                                     <option disabled="" value="">ধরন নির্ধারণ করুন</option>
-                                    <option value="admin" @if($user->role == 'admin') selected="" @endif>এডমিন</option>
-                                    <option value="manager" @if($user->role == 'manager') selected="" @endif>স্থানীয় সরকার প্রতিনিধি</option>
-                                    {{-- <option value="volunteer" @if($user->role == 'volunteer') selected="" @endif>ভলান্টিয়ার</option> --}}
-                                    <option value="user" @if($user->role == 'user') selected="" @endif>ব্যবহারকারী</option>
-                                    {{-- <option value="accountant" @if($user->role == 'accountant') selected="" @endif>একাউন্টেন্ট</option> --}}
+                                    <option value="admin" @if($localoffice->role == 'admin') selected="" @endif>এডমিন</option>
+                                    <option value="manager" @if($localoffice->role == 'manager') selected="" @endif>স্থানীয় সরকার প্রতিনিধি</option>
+                                    {{-- <option value="volunteer" @if($localoffice->role == 'volunteer') selected="" @endif>ভলান্টিয়ার</option> --}}
+                                    <option value="user" @if($localoffice->role == 'user') selected="" @endif>ব্যবহারকারী</option>
+                                    {{-- <option value="accountant" @if($localoffice->role == 'accountant') selected="" @endif>একাউন্টেন্ট</option> --}}
                                   </select>
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
@@ -153,7 +153,7 @@
                                 <div class="input-group mb-3">
                                     <input type="text"
                                            name="designation"
-                                           value="{{ $user->designation }}"
+                                           value="{{ $localoffice->designation }}"
                                            autocomplete="off"
                                            class="form-control"
                                            placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)">
@@ -165,8 +165,8 @@
                                 <div class="input-group mb-3">
                                     <input type="text"
                                            name="packageexpirydate"
-                                           id="packageexpirydate{{ $user->id }}" 
-                                           value="{{ date('F d, Y', strtotime($user->package_expiry_date)) }}"
+                                           id="packageexpirydate{{ $localoffice->id }}" 
+                                           value="{{ date('F d, Y', strtotime($localoffice->package_expiry_date)) }}"
                                            autocomplete="off"
                                            class="form-control"
                                            placeholder="প্যাকেজের মেয়াদ বৃদ্ধি" required>
@@ -190,14 +190,14 @@
                                 <h6 class="mb-3">কর্তৃপক্ষ (Authority) নির্ধারণ (ঐচ্ছিক)</h6>
                                 
                                 <!-- DYNAMIC AUTHORITY FIELDS FOR EDIT -->
-                                <input type="hidden" name="authority_level" id="edit_authority_level{{ $user->id }}">
-                                <input type="hidden" name="authority_id" id="edit_authority_id{{ $user->id }}">
+                                <input type="hidden" name="authority_level" id="edit_authority_level{{ $localoffice->id }}">
+                                <input type="hidden" name="authority_id" id="edit_authority_id{{ $localoffice->id }}">
 
                                 <div class="row">
                                   <div class="col-md-6">
                                     <!-- Division Dropdown (Level 1) -->
                                       <div class="input-group mb-3">
-                                          <select id="edit_division_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Division" data-target="edit_district_id{{ $user->id }}" data-model="District">
+                                          <select id="edit_division_id{{ $localoffice->id }}" class="form-control authority-select" data-userid="{{ $localoffice->id }}" data-level="Division" data-target="edit_district_id{{ $localoffice->id }}" data-model="District">
                                               <option value="" selected disabled>বিভাগ নির্বাচন করুন</option>
                                               @foreach ($divisions as $division)
                                                   <option value="{{ $division->id }}" data-level-name="Division">{{ $division->bn_name }}</option>
@@ -208,7 +208,7 @@
                                   <div class="col-md-6">
                                     <!-- District Dropdown (Level 2) -->
                                     <div class="input-group mb-3">
-                                        <select id="edit_district_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="District" data-target="edit_upazila_id{{ $user->id }}" data-model="Upazila" disabled>
+                                        <select id="edit_district_id{{ $localoffice->id }}" class="form-control authority-select" data-userid="{{ $localoffice->id }}" data-level="District" data-target="edit_upazila_id{{ $localoffice->id }}" data-model="Upazila" disabled>
                                             <option value="" selected disabled>জেলা নির্বাচন করুন</option>
                                         </select>
                                     </div>
@@ -219,7 +219,7 @@
                                   <div class="col-md-6">
                                     <!-- Upazila Dropdown (Level 3 - Can be Municipality Authority) -->
                                     <div class="input-group mb-3">
-                                        <select id="edit_upazila_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Upazila" data-target="edit_union_id{{ $user->id }}" data-model="Union" disabled>
+                                        <select id="edit_upazila_id{{ $localoffice->id }}" class="form-control authority-select" data-userid="{{ $localoffice->id }}" data-level="Upazila" data-target="edit_union_id{{ $localoffice->id }}" data-model="Union" disabled>
                                             <option value="" selected disabled>উপজেলা/পৌরসভা নির্বাচন করুন</option>
                                         </select>
                                     </div>
@@ -227,7 +227,7 @@
                                   <div class="col-md-6">
                                     <!-- Union Dropdown (Level 4) -->
                                     <div class="input-group mb-3">
-                                        <select id="edit_union_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Union" data-target="" data-model="" disabled>
+                                        <select id="edit_union_id{{ $localoffice->id }}" class="form-control authority-select" data-userid="{{ $localoffice->id }}" data-level="Union" data-target="" data-model="" disabled>
                                             <option value="" selected disabled>ইউনিয়ন নির্বাচন করুন</option>
                                         </select>
                                     </div>
