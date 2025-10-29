@@ -16,7 +16,7 @@
     <div class="container-fluid">
       <div class="card">
           <div class="card-header">
-            <h3 class="card-title">প্রোফাইল তালিকা (মোট: {{ $localofficescount }})</h3>
+            <h3 class="card-title">প্রোফাইল</h3>
 
             <div class="card-tools">
               {{-- <button type="button" class="btn btn-success btn-sm"  data-toggle="modal" data-target="#addPackageModal" title="" rel="tooltip" data-original-title="প্রোফাইল যোগ করুন">
