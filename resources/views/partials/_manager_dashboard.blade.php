@@ -13,7 +13,7 @@
         border-bottom: 2px solid #007bff; /* Primary color separator */
     }
     
-    /* Custom Hover Effect using pure CSS (replaces quick-action-card and shadow-lg from Tailwind) */
+    /* Custom Hover Effect using pure CSS (replaces quick-action-card and shadow from Tailwind) */
     .info-box, .card, .btn-app {
         transition: all 0.3s ease;
         cursor: pointer;
@@ -35,7 +35,7 @@
 <div class="row">
     <!-- Total Certificates Issued -->
     <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box bg-gradient-primary shadow-lg quick-action-card">
+        <div class="info-box bg-gradient-primary shadow quick-action-card">
             <span class="info-box-icon"><i class="fas fa-check-circle"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text text-uppercase font-weight-bold">মোট ইস্যুকৃত সনদ</span>
@@ -51,7 +51,7 @@
     </div>
     <!-- Pending Applications -->
     <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box bg-gradient-warning shadow-lg quick-action-card">
+        <div class="info-box bg-gradient-warning shadow quick-action-card">
             <span class="info-box-icon"><i class="fas fa-clock"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text text-uppercase font-weight-bold">অপেক্ষমাণ আবেদন</span>
@@ -67,7 +67,7 @@
     </div>
     <!-- Total Citizens -->
     <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box bg-gradient-info shadow-lg quick-action-card">
+        <div class="info-box bg-gradient-info shadow quick-action-card">
             <span class="info-box-icon"><i class="fas fa-users"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text text-uppercase font-weight-bold">মোট নাগরিক (ইউনিয়ন)</span>
@@ -83,7 +83,7 @@
     </div>
     <!-- Revenue Collected -->
     <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box bg-gradient-success shadow-lg quick-action-card">
+        <div class="info-box bg-gradient-success shadow quick-action-card">
             <span class="info-box-icon"><i class="fas fa-hand-holding-usd"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text text-uppercase font-weight-bold">সংগৃহীত রাজস্ব (এই মাসে)</span>
@@ -105,7 +105,7 @@
     <!-- Quick Actions and System Status -->
     <section class="col-lg-5 connectedSortable">
         <!-- Quick Actions -->
-        <div class="card shadow-lg">
+        <div class="card shadow">
             <div class="card-header bg-gradient-light card-header-bangla">
                 <h3 class="card-title">
                     <i class="fas fa-bolt mr-1"></i>
@@ -139,7 +139,7 @@
         </div>
 
         <!-- System Status / Package Expiry Card -->
-        <div class="card bg-danger shadow-lg quick-action-card">
+        <div class="card bg-danger shadow quick-action-card">
             <div class="card-header border-0">
                 <h3 class="card-title font-weight-bold text-white">
                     <i class="fas fa-calendar-times mr-1"></i>
@@ -160,7 +160,7 @@
 
     <!-- Monthly Issuance Trend Chart -->
     <section class="col-lg-7 connectedSortable">
-        <div class="card shadow-lg">
+        <div class="card shadow">
             <div class="card-header bg-gradient-light card-header-bangla">
                 <h3 class="card-title">
                     <i class="fas fa-history mr-1"></i>
@@ -208,7 +208,7 @@
                 <a href="javascript:void(0)" class="uppercase">সকল কার্যকলাপ দেখুন</a>
             </div>
         </div>
-        {{-- <div class="card shadow-lg">
+        {{-- <div class="card shadow">
             <div class="card-header bg-gradient-light card-header-bangla">
                 <h3 class="card-title">
                     <i class="fas fa-chart-line mr-1"></i>
