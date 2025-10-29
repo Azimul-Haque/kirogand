@@ -88,7 +88,7 @@
                           <div class="modal-body">
                             @php
                               if($localoffice->users && $localoffice->users->count() > 0) {
-                                $userAuthority = $localOffice->user->authorities->first();
+                                $userAuthority = $localOffice->users[0]->authorities->first();
                               }
                               
 
