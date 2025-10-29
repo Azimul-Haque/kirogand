@@ -571,9 +571,7 @@ class DashboardController extends Controller
             'office_type'       => 'required|in:up,poura',
             'monogram'          => 'sometimes|image|max:300', // max 300KB
         ]);
-
-        // 2. Find the LocalOffice model
-        // Using findOrFail ensures a 404 error if the record doesn't exist
+        
         $localoffice = LocalOffice::findOrFail($id);
 
         // OPTIONAL SECURITY CHECK: Ensure the authenticated user owns this LocalOffice record
