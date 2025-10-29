@@ -18,7 +18,7 @@ class CreateLocalOfficesTable extends Migration
             $table->timestamp('package_expiry_date')->nullable()->(6);
             // Office Contact & Visual Information
             $table->string('email')->nullable()->unique();
-            $table->string('phone', 20)->nullable();
+            $table->string('mobile', 20)->nullable();
             $table->string('monogram', 255)->nullable();
             
             // Office Identification
