@@ -88,9 +88,9 @@
                           <div class="modal-body">
                             @php
                               if($localoffice->users && $localoffice->users->count() > 0) {
-                                
+                                $userAuthority = $localOffice->user->authorities->first();
                               }
-                              $userAuthority = $localOffice->user->authorities->first();
+                              
 
                               if ($userAuthority) {
                                 // 2. Call the method to get the full hierarchy array
