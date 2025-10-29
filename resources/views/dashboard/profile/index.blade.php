@@ -239,7 +239,7 @@
                                                id="monogram"
                                                name="monogram"
                                                accept="image/png, image/jpeg, image/gif"
-                                               @(!$monogramExists) required @endif> <!-- Assuming monogram is null, hence required -->
+                                               @(!$monogramExists) required @endif>
                                         <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
                                     </div>
                                     <small class="form-text text-muted">সর্বোচ্চ ফাইলের সাইজ 300KB (PNG, JPG, GIF), (300px X 300px)</small>
@@ -251,7 +251,7 @@
                                       <img 
                                           src="{{ asset('images/localoffices/' . Auth::user()->localoffice->monogram) }}" 
                                           alt="{{ Auth::user()->localoffice->name_bn }} Monogram" 
-                                          class="w-32 h-32 object-contain rounded-full border-4 border-gray-200"
+                                          class="object-contain rounded-full border-4 border-gray-200"
                                       >
                                       <p class="text-sm text-gray-600 mt-2">বর্তমান</p>
                                   </div>
