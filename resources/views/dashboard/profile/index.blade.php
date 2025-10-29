@@ -169,7 +169,7 @@
                                     <input type="text"
                                            name="name_bn"
                                            class="form-control"
-                                           value="ইউনিয়ন পরিষদ কার্যালয়"
+                                           value="{{ Auth::user()->localOffice->name_bn }}"
                                            placeholder="নাম" required>
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-home"></span></div>
