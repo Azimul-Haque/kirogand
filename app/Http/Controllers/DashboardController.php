@@ -144,74 +144,6 @@ class DashboardController extends Controller
                     ->withDivisions($divisions);
     }
 
-    public function getLocalOffices()
-    {
-        // ONLY ADMIN
-        $localofficescount = LocalOffice::count();
-        $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
-
-        return view('dashboard.localoffices.index')
-                    ->withLocalofficescount($localofficescount)
-                    ->withLocaloffices($localoffices);
-    }
-
-    public function updateLocalOffices(Request $request, $id)
-    {
-        $this->validate($request, [
-            'name_bn'           => 'required|string|max:255',
-            'name'              => 'nullable|string|max:255',
-            'mobile'            => 'required|string|digits:11',
-            'email'             => 'required|email|max:255',
-            'office_type'       => 'required|in:up,poura',
-            'packageexpirydate' => 'nullable|date',
-            'monogram'          => 'sometimes|image|max:300',
-        ]);
-
-        $localoffice                    = LocalOffice::findOrFail($id);
-        $localoffice->name_bn           = $request->name_bn;
-        $localoffice->name              = $request->name;
-        $localoffice->mobile            = $request->mobile;
-        $localoffice->email             = $request->email;
-        $localoffice->office_type       = $request->office_type;
-
-        $localoffice->package_expiry_date = date('Y-m-d', strtotime($request->packageexpirydate)) . ' 23:59:59';
-
-        $localoffice->is_active = $request->has('is_active') ? 1 : 0;
-
-        // image upload
-        if($request->hasFile('monogram')) {
-            $image_path = public_path('images/localoffices/'. $localoffice->monogram);
-            if(File::exists($image_path)) {
-                File::delete($image_path);
-            }
-            $image      = $request->file('monogram');
-            $filename   = strtolower($request->office_type) . '-monogram-' .time() . '.' . "webp";
-            $location   = public_path('images/localoffices/'. $filename);
-            // Image::make($image)->resize(600, null, function ($constraint) { $constraint->aspectRatio(); })->save($location);
-            Image::make($image)->fit(300, 300)->save($location);
-            $localoffice->monogram = $filename;
-        }
-
-        $localoffice->save();
-
-        return redirect()->back()
-                         ->with('success', 'Local office details updated successfully.');
-    }
-
-    public function getApplyforCertificate()
-    {
-        if(Auth::user()->role == 'manager') {
-            if (Auth::user()->is_active === 0) {
-                Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
-                return redirect()->route('index.index');
-            }
-        }
-        // $localofficescount = LocalOffice::count();
-        // $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
-
-        return view('dashboard.apply-for-certificate.index');
-    }
-
     // public function getUsersSort()
     // {
     //     // $users = User::where('name', '!=', null)->orderBy('id', 'asc')->get(10);
@@ -522,6 +454,74 @@ class DashboardController extends Controller
 
         Session::flash('success', 'User deleted successfully!');
         return redirect()->route('dashboard.users');
+    }
+
+    public function getLocalOffices()
+    {
+        // ONLY ADMIN
+        $localofficescount = LocalOffice::count();
+        $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
+
+        return view('dashboard.localoffices.index')
+                    ->withLocalofficescount($localofficescount)
+                    ->withLocaloffices($localoffices);
+    }
+
+    public function updateLocalOffices(Request $request, $id)
+    {
+        $this->validate($request, [
+            'name_bn'           => 'required|string|max:255',
+            'name'              => 'nullable|string|max:255',
+            'mobile'            => 'required|string|digits:11',
+            'email'             => 'required|email|max:255',
+            'office_type'       => 'required|in:up,poura',
+            'packageexpirydate' => 'nullable|date',
+            'monogram'          => 'sometimes|image|max:300',
+        ]);
+
+        $localoffice                    = LocalOffice::findOrFail($id);
+        $localoffice->name_bn           = $request->name_bn;
+        $localoffice->name              = $request->name;
+        $localoffice->mobile            = $request->mobile;
+        $localoffice->email             = $request->email;
+        $localoffice->office_type       = $request->office_type;
+
+        $localoffice->package_expiry_date = date('Y-m-d', strtotime($request->packageexpirydate)) . ' 23:59:59';
+
+        $localoffice->is_active = $request->has('is_active') ? 1 : 0;
+
+        // image upload
+        if($request->hasFile('monogram')) {
+            $image_path = public_path('images/localoffices/'. $localoffice->monogram);
+            if(File::exists($image_path)) {
+                File::delete($image_path);
+            }
+            $image      = $request->file('monogram');
+            $filename   = strtolower($request->office_type) . '-monogram-' .time() . '.' . "webp";
+            $location   = public_path('images/localoffices/'. $filename);
+            // Image::make($image)->resize(600, null, function ($constraint) { $constraint->aspectRatio(); })->save($location);
+            Image::make($image)->fit(300, 300)->save($location);
+            $localoffice->monogram = $filename;
+        }
+
+        $localoffice->save();
+
+        return redirect()->back()
+                         ->with('success', 'Local office details updated successfully.');
+    }
+
+    public function getApplyforCertificate()
+    {
+        if(Auth::user()->role == 'manager') {
+            if (Auth::user()->is_active === 0) {
+                Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
+                return redirect()->route('index.index');
+            }
+        }
+        // $localofficescount = LocalOffice::count();
+        // $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
+
+        return view('dashboard.apply-for-certificate.index');
     }
 
     public function getPackages()
