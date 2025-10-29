@@ -154,28 +154,6 @@
         <div class="card shadow-lg">
             <div class="card-header bg-gradient-light card-header-bangla">
                 <h3 class="card-title">
-                    <i class="fas fa-chart-line mr-1"></i>
-                    মাসিক সনদ ইস্যুর প্রবণতা (গত ৬ মাস)
-                </h3>
-            </div>
-            <div class="card-body">
-                <div class="tab-content p-0">
-                    <div class="chart">
-                      <canvas id="lineChart2" style="min-height: 250px; height: 300px; max-height: 400px; max-width: 100%;"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-<!-- /.row (Charts and Quick Actions) -->
-
-<!-- 3. Recent Activities / Notifications -->
-<div class="row">
-    <div class="col-12">
-        <div class="card shadow-lg">
-            <div class="card-header bg-gradient-light card-header-bangla">
-                <h3 class="card-title">
                     <i class="fas fa-history mr-1"></i>
                     সাম্প্রতিক কার্যকলাপ (শেষ ১০টি সনদ ইস্যু)
                 </h3>
@@ -221,6 +199,29 @@
                 <a href="javascript:void(0)" class="uppercase">সকল কার্যকলাপ দেখুন</a>
             </div>
         </div>
+        {{-- <div class="card shadow-lg">
+            <div class="card-header bg-gradient-light card-header-bangla">
+                <h3 class="card-title">
+                    <i class="fas fa-chart-line mr-1"></i>
+                    মাসিক সনদ ইস্যুর প্রবণতা (গত ৬ মাস)
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="tab-content p-0">
+                    <div class="chart">
+                      <canvas id="lineChart2" style="min-height: 250px; height: 300px; max-height: 400px; max-width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+    </section>
+</div>
+<!-- /.row (Charts and Quick Actions) -->
+
+<!-- 3. Recent Activities / Notifications -->
+<div class="row">
+    <div class="col-12">
+        
     </div>
 </div>
 <!-- /.row (Activities) -->
