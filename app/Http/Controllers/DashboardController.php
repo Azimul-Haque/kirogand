@@ -529,7 +529,7 @@ class DashboardController extends Controller
         return view('dashboard.profile.index');
     }
 
-    public function updateProfileUser($id)
+    public function updateProfileUser(Request $request, $id)
     {
         // 1. Validation for the core user fields
         $request->validate([
