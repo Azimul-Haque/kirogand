@@ -526,7 +526,7 @@ class DashboardController extends Controller
 
     public function getProfile()
     {
-        return view('dashboard.packages.index')->withPackages($packages);
+        return view('dashboard.profile.index');
     }
 
     public function getPackages()
