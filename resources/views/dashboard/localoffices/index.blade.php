@@ -102,7 +102,7 @@
                                 @csrf
 
                                 <div class="custom-control custom-switch mb-3">
-                                  <input type="checkbox" class="custom-control-input" value="{{ $localoffice->name_bn }}" id="customSwitch1">
+                                  <input type="checkbox" class="custom-control-input" value="{{ $localoffice->is_active }}" id="customSwitch1">
                                   <label class="custom-control-label" for="customSwitch1">একটিভ স্ট্যাটাস</label>
                                 </div>
 
