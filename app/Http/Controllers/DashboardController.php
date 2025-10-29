@@ -536,7 +536,7 @@ class DashboardController extends Controller
             'name' => 'required|string|max:255',
             'name_en' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:users,email,' . Auth::id(),
-            'phone' => 'nullable|string|max:20',
+            'mobile' => 'nullable|string|max:20',
         ]);
 
         // 2. Get the authenticated user
@@ -545,7 +545,7 @@ class DashboardController extends Controller
         // 3. Update fields
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->phone = $request->phone;
+        $user->mobile = $request->mobile;
         // You might have other core user fields here...
 
         $user->save();
