@@ -551,7 +551,9 @@ class DashboardController extends Controller
         $user->mobile = $request->mobile;
         $user->nid = $request->nid;
         $user->designation = $request->designation;
-        // You might have other core user fields here...
+        if(!empty($request->password)) {
+            $user->password = Hash::make($request->password);
+        }
 
         $user->save();
 
