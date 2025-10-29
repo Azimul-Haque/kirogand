@@ -115,8 +115,8 @@
                                     <select id="designation" name="designation" class="form-control">
                                         <option value="" disabled="">পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)</option>
                                         <option value="চেয়ারম্যান" @if(Auth::user()->designation == 'চেয়ারম্যান') selected @endif>ইউনিয়ন চেয়ারম্যান</option>
-                                        <option value="সচিব">ইউনিয়ন সচিব</option>
-                                        <option value="সহকারী">ইউনিয়ন সহকারী</option>
+                                        <option value="সচিব" @if(Auth::user()->designation == 'চেয়ারম্যান') selected @endif>ইউনিয়ন সচিব</option>
+                                        <option value="সহকারী" @if(Auth::user()->designation == 'চেয়ারম্যান') selected @endif>ইউনিয়ন সহকারী</option>
                                         <option value="মেয়র">মেয়র</option>
                                         <option value="কাউন্সিলর">কাউন্সিলর</option>
                                         <option value="পৌর সচিব">পৌর সচিব</option>
