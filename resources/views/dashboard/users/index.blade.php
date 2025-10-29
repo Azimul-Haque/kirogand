@@ -371,6 +371,15 @@
                                           </div>
                                       </div>
                                     </div>
+                                    <select id="designation" name="designation" class="form-select " required="">
+                                        <option value="" selected="" disabled="">পদবি নির্বাচন করুন</option>
+                                        <option value="চেয়ারম্যান">ইউনিয়ন চেয়ারম্যান</option>
+                                        <option value="সচিব">ইউনিয়ন সচিব</option>
+                                        <option value="সহকারী">ইউনিয়ন সহকারী</option>
+                                        <option value="মেয়র">মেয়র</option>
+                                        <option value="কাউন্সিলর">কাউন্সিলর</option>
+                                        <option value="পৌর সচিব">পৌর সচিব</option>
+                                    </select>
                                   </div>
 
                                   <div class="row">
