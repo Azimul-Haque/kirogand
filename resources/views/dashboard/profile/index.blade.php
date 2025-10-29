@@ -49,7 +49,7 @@
                                     <input type="text"
                                            name="name_en"
                                            class="form-control"
-                                           value="Abul Kalam Azad"
+                                           value="{{ Auth::user()->name_en }}"
                                            placeholder="ইংরেজি নাম (OPTIONAL)">
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-user"></span></div>
