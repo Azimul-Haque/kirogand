@@ -194,7 +194,6 @@
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="monogram">Select an Image File</label>
                                         
                                         <!-- Bootstrap 4 Custom File Input -->
                                         <div class="custom-file">
