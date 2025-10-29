@@ -238,7 +238,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <!-- Empty column for layout symmetry -->
+                                <img src="" alt="">
                             </div>
                         </div>
                         
