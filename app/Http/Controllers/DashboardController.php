@@ -538,6 +538,7 @@ class DashboardController extends Controller
             'email' => 'required|email|max:255|unique:users,email,' . $id,
             'mobile' => 'required|string|max:20|unique:users,mobile,' . $id,
             'nid' => 'required|string|max:20',
+            'designation' => 'required|string|max:20',
         ]);
 
         // 2. Get the authenticated user
