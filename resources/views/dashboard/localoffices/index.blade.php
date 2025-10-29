@@ -94,6 +94,9 @@
                                 }
                               }
                             @endphp
+                            <span class="badge badge-secondary">
+                                ({{ (new \ReflectionClass($auth->authority_type))->getShortName() }})
+                            </span>
 
                             @if ($user->authorities->isNotEmpty())
                                 {{-- {{ print_r($user->authorities->first()->getAncestorsByLevel()) }} --}}
