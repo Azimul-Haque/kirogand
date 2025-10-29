@@ -37,7 +37,7 @@
                                     <input type="text"
                                            name="name"
                                            class="form-control"
-                                           value="আবুল কালাম আজাদ"
+                                           value="{{ Auth::user()->name }}"
                                            placeholder="নাম" required>
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-user"></span></div>
