@@ -63,7 +63,7 @@
                     <td>{{ $localoffice->office_type == 'up' ? 'ইউনিয়ন পরিষদ' : 'পৌরসভা' }}</td>
                     <td>
                       @foreach($localoffice->users as $user)
-                        {{ $user->name }}
+                        <span class="badge badge-primary">{{ $user->name }}</span>
                       @endforeach
                     </td>
                     <td><small>{{ date('F d, Y', strtotime($localoffice->created_at)) }}</small></td>
