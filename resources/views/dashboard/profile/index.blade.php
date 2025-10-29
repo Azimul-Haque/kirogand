@@ -246,7 +246,7 @@
                                   // 2. Check if the file name is stored AND if the physical file exists.
                                   $monogramExists = $localOffice->monogram && File::exists($imagePath);
                               @endphp
-                              @if(Auth::user()->localOffice->monogram)
+                              @if($monogramExists)
                                 <img src="" alt="">
                               @endif
                             </div>
