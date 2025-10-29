@@ -48,6 +48,14 @@
           return $number. $ends[$number % 10];
   }
 
+  function ordinal($checkrole) {
+      $ends = array('th','st','nd','rd','th','th','th','th','th','th');
+      if ((($checkrole % 100) >= 11) && (($checkrole%100) <= 13))
+          return $checkrole. 'th';
+      else
+          return $checkrole. $ends[$checkrole % 10];
+  }
+
   function local_currency($num) {
     $explrestunits = "" ;
     if(strlen($num)>3) {
