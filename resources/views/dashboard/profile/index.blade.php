@@ -239,7 +239,7 @@
                                                id="monogram"
                                                name="monogram"
                                                accept="image/png, image/jpeg, image/gif"
-                                               required> <!-- Assuming monogram is null, hence required -->
+                                               @(!$monogramExists) required @endif> <!-- Assuming monogram is null, hence required -->
                                         <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
                                     </div>
                                     <small class="form-text text-muted">সর্বোচ্চ ফাইলের সাইজ 300KB (PNG, JPG, GIF), (300px X 300px)</small>
