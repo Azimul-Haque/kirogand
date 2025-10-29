@@ -369,7 +369,7 @@
                                           
                                           <select id="designation" name="designation" class="form-control">
                                               <option value="" selected="" disabled="">পদবি নির্বাচন করুন</option>
-                                              <option value="চেয়ারম্যান" @if($user->designation == '') selected @endif>ইউনিয়ন চেয়ারম্যান</option>
+                                              <option value="চেয়ারম্যান" @if($user->designation == 'চেয়ারম্যান') selected @endif>ইউনিয়ন চেয়ারম্যান</option>
                                               <option value="সচিব">ইউনিয়ন সচিব</option>
                                               <option value="সহকারী">ইউনিয়ন সহকারী</option>
                                               <option value="মেয়র">মেয়র</option>
