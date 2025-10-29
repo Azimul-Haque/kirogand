@@ -9,7 +9,7 @@
 	@section('page-header') ড্যাশবোর্ড @endsection
   @section('page-header-right')
     <ol class="breadcrumb float-sm-right">
-        <li class="breadcrumb-item"><a href="#">হোম</a></li>
+        <li class="breadcrumb-item"><a href="#">ড্যাশবোর্ড</a></li>
         <li class="breadcrumb-item active">ড্যাশবোর্ড</li>
     </ol>
   @endsection
