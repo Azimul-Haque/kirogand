@@ -15,254 +15,253 @@
   @section('page-header') প্রোফাইল @endsection
     <div class="container-fluid">
       <div class="row">
+        <!-- ============================================= -->
+        <!-- COLUMN 1: আমার তথ্য (My Information) - col-md-6 -->
+        <!-- ============================================= -->
+        <div class="col-md-6">
+            <!-- Card for My Information Form -->
+            <div class="card card-primary card-outline">
+                <div class="card-header">
+                    <h3 class="card-title"><i class="fas fa-user-circle mr-1"></i> আমার তথ্য</h3>
+                </div>
+                <!-- Form: My Information -->
+                <form action="/update-user-profile" method="POST">
+                    <!-- Note: For live use, include CSRF token and method spoofing for PUT/PATCH -->
+                    <input type="hidden" name="_token" value="mock_csrf_token">
+                    <input type="hidden" name="_method" value="POST">
+                    <div class="card-body">
+                        
+                        <!-- Row 1: Name (Bengali & English) -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="text"
+                                           name="name"
+                                           class="form-control"
+                                           value="আবুল কালাম আজাদ"
+                                           placeholder="নাম" required>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-user"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="text"
+                                           name="name_en"
+                                           class="form-control"
+                                           value="Abul Kalam Azad"
+                                           placeholder="ইংরেজি নাম (OPTIONAL)">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-user"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Row 2: Mobile & Email -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="text"
+                                           name="mobile"
+                                           value="017XXXXXXXX"
+                                           autocomplete="off"
+                                           class="form-control"
+                                           placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-phone"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="email"
+                                           name="email"
+                                           value="abul.kalam@example.com"
+                                           autocomplete="off"
+                                           class="form-control"
+                                           placeholder="ইমেইল এড্রেস">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-envelope"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Row 3: NID -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="text"
+                                           name="nid"
+                                           value="19901234567890123"
+                                           autocomplete="off"
+                                           class="form-control"
+                                           placeholder="এনআইডি">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-id-card"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Empty column for layout symmetry -->
+                            </div>
+                        </div>
+                        
+                        <!-- Row 4: Designation & Password -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <select id="designation" name="designation" class="form-control">
+                                        <option value="" disabled="">পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)</option>
+                                        <!-- Mocking '$user->designation == 'চেয়ারম্যান' selected logic' -->
+                                        <option value="চেয়ারম্যান" selected>ইউনিয়ন চেয়ারম্যান</option>
+                                        <option value="সচিব">ইউনিয়ন সচিব</option>
+                                        <option value="সহকারী">ইউনিয়ন সহকারী</option>
+                                        <option value="মেয়র">মেয়র</option>
+                                        <option value="কাউন্সিলর">কাউন্সিলর</option>
+                                        <option value="পৌর সচিব">পৌর সচিব</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="password"
+                                           name="password"
+                                           class="form-control"
+                                           autocomplete="new-password"
+                                           placeholder="পাসওয়ার্ড (ঐচ্ছিক)">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-lock"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                          <!-- ============================================= -->
-                          <!-- COLUMN 1: আমার তথ্য (My Information) - col-md-6 -->
-                          <!-- ============================================= -->
-                          <div class="col-md-6">
-                              <!-- Card for My Information Form -->
-                              <div class="card card-primary card-outline">
-                                  <div class="card-header">
-                                      <h3 class="card-title"><i class="fas fa-user-circle mr-1"></i> আমার তথ্য</h3>
-                                  </div>
-                                  <!-- Form: My Information -->
-                                  <form action="/update-user-profile" method="POST">
-                                      <!-- Note: For live use, include CSRF token and method spoofing for PUT/PATCH -->
-                                      <input type="hidden" name="_token" value="mock_csrf_token">
-                                      <input type="hidden" name="_method" value="POST">
-                                      <div class="card-body">
-                                          
-                                          <!-- Row 1: Name (Bengali & English) -->
-                                          <div class="row">
-                                              <div class="col-md-6">
-                                                  <div class="input-group mb-3">
-                                                      <input type="text"
-                                                             name="name"
-                                                             class="form-control"
-                                                             value="আবুল কালাম আজাদ"
-                                                             placeholder="নাম" required>
-                                                      <div class="input-group-append">
-                                                          <div class="input-group-text"><span class="fas fa-user"></span></div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <div class="input-group mb-3">
-                                                      <input type="text"
-                                                             name="name_en"
-                                                             class="form-control"
-                                                             value="Abul Kalam Azad"
-                                                             placeholder="ইংরেজি নাম (OPTIONAL)">
-                                                      <div class="input-group-append">
-                                                          <div class="input-group-text"><span class="fas fa-user"></span></div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          
-                                          <!-- Row 2: Mobile & Email -->
-                                          <div class="row">
-                                              <div class="col-md-6">
-                                                  <div class="input-group mb-3">
-                                                      <input type="text"
-                                                             name="mobile"
-                                                             value="017XXXXXXXX"
-                                                             autocomplete="off"
-                                                             class="form-control"
-                                                             placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
-                                                      <div class="input-group-append">
-                                                          <div class="input-group-text"><span class="fas fa-phone"></span></div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <div class="input-group mb-3">
-                                                      <input type="email"
-                                                             name="email"
-                                                             value="abul.kalam@example.com"
-                                                             autocomplete="off"
-                                                             class="form-control"
-                                                             placeholder="ইমেইল এড্রেস">
-                                                      <div class="input-group-append">
-                                                          <div class="input-group-text"><span class="fas fa-envelope"></span></div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          
-                                          <!-- Row 3: NID -->
-                                          <div class="row">
-                                              <div class="col-md-6">
-                                                  <div class="input-group mb-3">
-                                                      <input type="text"
-                                                             name="nid"
-                                                             value="19901234567890123"
-                                                             autocomplete="off"
-                                                             class="form-control"
-                                                             placeholder="এনআইডি">
-                                                      <div class="input-group-append">
-                                                          <div class="input-group-text"><span class="fas fa-id-card"></span></div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <!-- Empty column for layout symmetry -->
-                                              </div>
-                                          </div>
-                                          
-                                          <!-- Row 4: Designation & Password -->
-                                          <div class="row">
-                                              <div class="col-md-6">
-                                                  <div class="input-group mb-3">
-                                                      <select id="designation" name="designation" class="form-control">
-                                                          <option value="" disabled="">পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)</option>
-                                                          <!-- Mocking '$user->designation == 'চেয়ারম্যান' selected logic' -->
-                                                          <option value="চেয়ারম্যান" selected>ইউনিয়ন চেয়ারম্যান</option>
-                                                          <option value="সচিব">ইউনিয়ন সচিব</option>
-                                                          <option value="সহকারী">ইউনিয়ন সহকারী</option>
-                                                          <option value="মেয়র">মেয়র</option>
-                                                          <option value="কাউন্সিলর">কাউন্সিলর</option>
-                                                          <option value="পৌর সচিব">পৌর সচিব</option>
-                                                      </select>
-                                                      <div class="input-group-append">
-                                                          <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <div class="input-group mb-3">
-                                                      <input type="password"
-                                                             name="password"
-                                                             class="form-control"
-                                                             autocomplete="new-password"
-                                                             placeholder="পাসওয়ার্ড (ঐচ্ছিক)">
-                                                      <div class="input-group-append">
-                                                          <div class="input-group-text"><span class="fas fa-lock"></span></div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary float-right"><i class="fas fa-save mr-1"></i> তথ্য সংরক্ষণ করুন</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.card -->
+        </div>
+        
+        <!-- ============================================= -->
+        <!-- COLUMN 2: আমার কার্যালয় (My Office) - col-md-6 -->
+        <!-- ============================================= -->
+        <div class="col-md-6">
+            <!-- Card for My Office Form -->
+            <div class="card card-info card-outline">
+                <div class="card-header">
+                    <h3 class="card-title"><i class="fas fa-building mr-1"></i> আমার কার্যালয়</h3>
+                </div>
+                <!-- Form: My Office -->
+                <form action="/update-local-office" method="POST" enctype="multipart/form-data">
+                    <!-- Note: For file uploads, ensure enctype="multipart/form-data" -->
+                    <input type="hidden" name="_token" value="mock_csrf_token">
+                    <input type="hidden" name="_method" value="POST">
+                    <div class="card-body">
 
-                                      </div>
-                                      <!-- /.card-body -->
-                                      <div class="card-footer">
-                                          <button type="submit" class="btn btn-primary float-right"><i class="fas fa-save mr-1"></i> তথ্য সংরক্ষণ করুন</button>
-                                      </div>
-                                  </form>
-                              </div>
-                              <!-- /.card -->
-                          </div>
-                          
-                          <!-- ============================================= -->
-                          <!-- COLUMN 2: আমার কার্যালয় (My Office) - col-md-6 -->
-                          <!-- ============================================= -->
-                          <div class="col-md-6">
-                              <!-- Card for My Office Form -->
-                              <div class="card card-info card-outline">
-                                  <div class="card-header">
-                                      <h3 class="card-title"><i class="fas fa-building mr-1"></i> আমার কার্যালয়</h3>
-                                  </div>
-                                  <!-- Form: My Office -->
-                                  <form action="/update-local-office" method="POST" enctype="multipart/form-data">
-                                      <!-- Note: For file uploads, ensure enctype="multipart/form-data" -->
-                                      <input type="hidden" name="_token" value="mock_csrf_token">
-                                      <input type="hidden" name="_method" value="POST">
-                                      <div class="card-body">
+                        <!-- Row 1: Office Name (Bengali & English) -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="text"
+                                           name="name_bn"
+                                           class="form-control"
+                                           value="ইউনিয়ন পরিষদ কার্যালয়"
+                                           placeholder="নাম" required>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-home"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="text"
+                                           name="name"
+                                           class="form-control"
+                                           value="Union Parishad Office"
+                                           placeholder="ইংরেজি নাম (OPTIONAL)">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-flag"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                                          <!-- Row 1: Office Name (Bengali & English) -->
-                                          <div class="row">
-                                              <div class="col-md-6">
-                                                  <div class="input-group mb-3">
-                                                      <input type="text"
-                                                             name="name_bn"
-                                                             class="form-control"
-                                                             value="ইউনিয়ন পরিষদ কার্যালয়"
-                                                             placeholder="নাম" required>
-                                                      <div class="input-group-append">
-                                                          <div class="input-group-text"><span class="fas fa-home"></span></div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <div class="input-group mb-3">
-                                                      <input type="text"
-                                                             name="name"
-                                                             class="form-control"
-                                                             value="Union Parishad Office"
-                                                             placeholder="ইংরেজি নাম (OPTIONAL)">
-                                                      <div class="input-group-append">
-                                                          <div class="input-group-text"><span class="fas fa-flag"></span></div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
+                        <!-- Row 2: Mobile & Email -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="text"
+                                           name="mobile"
+                                           value="02XXXXXXXXX"
+                                           autocomplete="off"
+                                           class="form-control"
+                                           placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-phone-square-alt"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="email"
+                                           name="email"
+                                           value="office@local.gov.bd"
+                                           autocomplete="off"
+                                           class="form-control"
+                                           placeholder="অফিস ইমেইল এড্রেস" required>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><span class="fas fa-envelope-square"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                                          <!-- Row 2: Mobile & Email -->
-                                          <div class="row">
-                                              <div class="col-md-6">
-                                                  <div class="input-group mb-3">
-                                                      <input type="text"
-                                                             name="mobile"
-                                                             value="02XXXXXXXXX"
-                                                             autocomplete="off"
-                                                             class="form-control"
-                                                             placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
-                                                      <div class="input-group-append">
-                                                          <div class="input-group-text"><span class="fas fa-phone-square-alt"></span></div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <div class="input-group mb-3">
-                                                      <input type="email"
-                                                             name="email"
-                                                             value="office@local.gov.bd"
-                                                             autocomplete="off"
-                                                             class="form-control"
-                                                             placeholder="অফিস ইমেইল এড্রেস" required>
-                                                      <div class="input-group-append">
-                                                          <div class="input-group-text"><span class="fas fa-envelope-square"></span></div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
+                        <!-- Row 3: Monogram File Upload -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <!-- Custom File Input (AdminLTE compatible) -->
+                                    <div class="custom-file">
+                                        <input type="file"
+                                               class="custom-file-input"
+                                               id="monogram_file"
+                                               name="monogram"
+                                               accept="image/png, image/jpeg, image/gif"
+                                               required> <!-- Assuming monogram is null, hence required -->
+                                        <label class="custom-file-label" for="monogram_file">মনোগ্রাম সিলেক্ট করুন</label>
+                                    </div>
+                                    <small class="form-text text-muted">সর্বোচ্চ ফাইল সাইজ 300KB। (PNG, JPG, GIF)</small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Empty column for layout symmetry -->
+                            </div>
+                        </div>
+                        
+                        <!-- Additional Text/Disclaimer -->
+                        <h3 class="text-secondary text-sm font-weight-bold mt-4">অন্যান্য তথ্য আপডেট করতে চাইলে ডি-নাগরিক কর্তৃপক্ষের সাথে যোগাযোগ করুন</h3>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-info float-right"><i class="fas fa-upload mr-1"></i> কার্যালয় তথ্য আপডেট করুন</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.card -->
+        </div>
 
-                                          <!-- Row 3: Monogram File Upload -->
-                                          <div class="row">
-                                              <div class="col-md-6">
-                                                  <div class="form-group">
-                                                      <!-- Custom File Input (AdminLTE compatible) -->
-                                                      <div class="custom-file">
-                                                          <input type="file"
-                                                                 class="custom-file-input"
-                                                                 id="monogram_file"
-                                                                 name="monogram"
-                                                                 accept="image/png, image/jpeg, image/gif"
-                                                                 required> <!-- Assuming monogram is null, hence required -->
-                                                          <label class="custom-file-label" for="monogram_file">মনোগ্রাম সিলেক্ট করুন</label>
-                                                      </div>
-                                                      <small class="form-text text-muted">সর্বোচ্চ ফাইল সাইজ 300KB। (PNG, JPG, GIF)</small>
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <!-- Empty column for layout symmetry -->
-                                              </div>
-                                          </div>
-                                          
-                                          <!-- Additional Text/Disclaimer -->
-                                          <h3 class="text-secondary text-sm font-weight-bold mt-4">অন্যান্য তথ্য আপডেট করতে চাইলে ডি-নাগরিক কর্তৃপক্ষের সাথে যোগাযোগ করুন</h3>
-                                      </div>
-                                      <!-- /.card-body -->
-                                      <div class="card-footer">
-                                          <button type="submit" class="btn btn-info float-right"><i class="fas fa-upload mr-1"></i> কার্যালয় তথ্য আপডেট করুন</button>
-                                      </div>
-                                  </form>
-                              </div>
-                              <!-- /.card -->
-                          </div>
-
-                      </div>
-                      <!-- /.row -->
+    </div>
+    <!-- /.row -->
     </div>
 @endsection
 
