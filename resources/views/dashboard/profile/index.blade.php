@@ -238,7 +238,9 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
+                              @if()
                                 <img src="" alt="">
+                              @endif
                             </div>
                         </div>
                         
