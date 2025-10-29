@@ -67,7 +67,7 @@
                     </td>
                     <td><small>{{ date('F d, Y', strtotime($localoffice->created_at)) }}</small></td>
                     <td>
-                      <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editUserModal{{ $localoffice->id }}">
+                      <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editLocalOfficeModal{{ $localoffice->id }}">
                         <i class="fas fa-pen"></i>
                       </button>
                     </td>
@@ -75,11 +75,11 @@
                   {{-- Edit Modal Code --}}
                   {{-- Edit Modal Code --}}
                   <!-- Modal -->
-                  <div class="modal fade" id="editUserModal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="editUserModalLabel" aria-hidden="true" data-backdrop="static">
+                  <div class="modal fade" id="editLocalOfficeModal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="editLocalOfficeModalLabel" aria-hidden="true" data-backdrop="static">
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
                         <div class="modal-header bg-primary">
-                          <h5 class="modal-title" id="editUserModalLabel">ব্যবহারকারী তথ্য হালনাগাদ</h5>
+                          <h5 class="modal-title" id="editLocalOfficeModalLabel">ব্যবহারকারী তথ্য হালনাগাদ</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
