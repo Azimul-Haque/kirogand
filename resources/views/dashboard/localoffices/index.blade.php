@@ -139,7 +139,7 @@
                                   <select name="office_type" class="form-control" required>
                                     <option disabled="" value="">ধরন নির্ধারণ করুন</option>
                                     <option value="up" @if($localoffice->office_type == 'up') selected="" @endif>ইউনিয়ন পরিষদ</option>
-                                    <option value="manager" @if($localoffice->office_type == 'poura') selected="" @endif>পৌরসভা</option>
+                                    <option value="poura" @if($localoffice->office_type == 'poura') selected="" @endif>পৌরসভা</option>
                                   </select>
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
