@@ -531,7 +531,26 @@ class DashboardController extends Controller
 
     public function updateProfileUser()
     {
-        return view('dashboard.profile.index');
+        // 1. Validation for the core user fields
+        $request->validate([
+            'name' => 'required|string|max:255',
+            // Ensure email is unique except for the current user's ID
+            'email' => 'required|email|max:255|unique:users,email,' . Auth::id(),
+            'phone' => 'nullable|string|max:20',
+        ]);
+
+        // 2. Get the authenticated user
+        $user = Auth::user();
+
+        // 3. Update fields
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        // You might have other core user fields here...
+
+        $user->save();
+
+        return redirect()->back()->with('success', 'Your profile information has been updated successfully.');
     }
 
     public function updateProfileLocalOffice()
