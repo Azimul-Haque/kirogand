@@ -140,7 +140,7 @@ class DashboardController extends Controller
         return view('dashboard.users.index')
                     ->withUsers($users)
                     ->withUserscount($userscount)
-                    ->withlocaloffices($localoffices)
+                    ->withLocaloffices($localoffices)
                     ->withDivisions($divisions);
     }
 
