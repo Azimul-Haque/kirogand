@@ -8,6 +8,7 @@
 @section('content')
 	@section('page-header') ড্যাশবোর্ড @endsection
     <div class="container-fluid">
+      @if(Auth::user()->role == 'admin')
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
