@@ -568,7 +568,6 @@ class DashboardController extends Controller
             'name'              => 'nullable|string|max:255',
             'mobile'            => 'required|string|digits:11',
             'email'             => 'required|email|max:255',
-            'office_type'       => 'required|in:up,poura',
             'monogram'          => 'sometimes|image|max:300', // max 300KB
         ]);
 
