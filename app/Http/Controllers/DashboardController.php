@@ -197,6 +197,20 @@ class DashboardController extends Controller
             $localoffice->monogram = $filename;
         }
 
+        // image upload
+        if($request->hasFile('featured_image')) {
+            $image_path = public_path('images/blogs/'. $blog->featured_image);
+            if(File::exists($image_path)) {
+                File::delete($image_path);
+            }
+            $image      = $request->file('featured_image');
+            $filename   = str_replace(['?',':', '\\', '/', '*', ' '], '-', strtolower($request->slug)) . '-' .time() . '.' . "webp";
+            $location   = public_path('images/blogs/'. $filename);
+            // Image::make($image)->resize(600, null, function ($constraint) { $constraint->aspectRatio(); })->save($location);
+            Image::make($image)->fit(600, 315)->save($location);
+            $blog->featured_image = $filename;
+        }
+
         $localoffice->save();
 
         return redirect()->back()
