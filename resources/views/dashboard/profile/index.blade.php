@@ -94,7 +94,7 @@
                                 <div class="input-group mb-3">
                                     <input type="text"
                                            name="nid"
-                                           value="19901234567890123"
+                                           value="{{ Auth::user()->nid }}"
                                            autocomplete="off"
                                            class="form-control"
                                            placeholder="এনআইডি">
