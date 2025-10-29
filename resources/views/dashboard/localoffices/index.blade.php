@@ -87,7 +87,7 @@
                         <form method="post" action="{{ route('dashboard.users.update', $localoffice->id) }}">
                           <div class="modal-body">
                             @php
-                              $userAuthority = $user->authorities->first();
+                              $userAuthority = $localOfficeuser->authorities->first();
 
                               if ($userAuthority) {
                                 // 2. Call the method to get the full hierarchy array
