@@ -51,9 +51,7 @@
                 	<tr>
                 		<td>
                 			<a href="{{ route('dashboard.users.single', $user->id) }}">{{ $user->name }}</a>
-                      <small><b>প্যাকেজ: ({{ bangla($user->payments->count()) }} বার)</b></small>
                 			<br/>
-                            {{-- {{ $user->balances2 }} --}}
                 			<small class="text-black-50">{{ $user->mobile }}</small> 
                 			<span class="badge @if($user->role == 'admin') bg-success @elseif($user->role == 'manager') bg-warning @else bg-info @endif">{{ checkrole($user->role) }}</span><br/>
                       <small><span>যোগদান: {{ date('d F, Y h:i A', strtotime($user->created_at)) }}</span></small><br/>
