@@ -125,8 +125,8 @@
 
                                 <div class="input-group mb-3">
                                     <input type="text"
-                                           name="uid"
-                                           value="{{ $localoffice->uid }}"
+                                           name="email"
+                                           value="{{ $localoffice->email }}"
                                            autocomplete="off"
                                            class="form-control"
                                            placeholder="Firebase UID">
