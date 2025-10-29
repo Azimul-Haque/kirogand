@@ -136,16 +136,16 @@
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="input-group mb-3">
-                                    <input type="text"
-                                           name="mobile"
-                                           value="{{ $localoffice->mobile }}"
-                                           autocomplete="off"
-                                           class="form-control"
-                                           placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
-                                    <div class="input-group-append">
-                                        <div class="input-group-text"><span class="fas fa-phone"></span></div>
-                                    </div>
-                                </div>
+                                      <input type="text"
+                                             name="mobile"
+                                             value="{{ $localoffice->mobile }}"
+                                             autocomplete="off"
+                                             class="form-control"
+                                             placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
+                                      <div class="input-group-append">
+                                          <div class="input-group-text"><span class="fas fa-phone"></span></div>
+                                      </div>
+                                  </div>
                                   </div>
                                   <div class="col-md-6">
                                     <div class="input-group mb-3">
