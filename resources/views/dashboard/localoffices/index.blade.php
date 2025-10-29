@@ -208,7 +208,7 @@
                                                 name="monogram"
                                                 
                                                 accept="image/png, image/jpeg, image/gif"
-                                                @if($localoffice->monogram != null) required @endif
+                                                @if($localoffice->monogram == null) required @endif
                                             >
                                             <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
                                         </div>
