@@ -251,7 +251,7 @@
                                       <img 
                                           src="{{ asset('images/localoffices/' . Auth::user()->localoffice->monogram) }}" 
                                           alt="{{ Auth::user()->localoffice->name_bn }} Monogram" 
-                                          class="img-fluid" style="height:"
+                                          class="img-fluid" style="max-height: 200"
                                       >
                                   </div>
                               @else
