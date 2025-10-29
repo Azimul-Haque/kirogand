@@ -594,10 +594,10 @@ class DashboardController extends Controller
             Image::make($image)->fit(300, 300)->save($location);
             $localoffice->monogram = $filename;
         }
-        
+
         $localoffice->save();
 
-        return redirect()->back()->with('success', 'Local office details updated successfully.');
+        return redirect()->back()->with('success', 'আপনার অফিস আপডেট করা হয়েছে ');
     }
 
     public function getPackages()
