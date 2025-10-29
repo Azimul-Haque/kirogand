@@ -569,6 +569,15 @@
                       <!-- END DYNAMIC AUTHORITY FIELDS -->
                     </div>
                   </div>
+
+                  <div class="input-group mb-3">
+                      <select class="form-control" name="local_office_id">
+                          <option value="" selected disabled>স্থানীয় সরকার কার্যালয় নির্বাচন করুন</option>
+                          @foreach ($localoffices as $localoffice)
+                              <option value="{{ $localoffice->id }}">{{ $localoffice->name_bn }}</option>
+                          @endforeach
+                      </select>
+                  </div>
 	            
 	          </div>
 	          <div class="modal-footer">
