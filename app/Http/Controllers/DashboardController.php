@@ -409,6 +409,7 @@ class DashboardController extends Controller
             'name'        => 'required|string|max:191',
             'name_en'        => 'required|string|max:191',
             'mobile'      => 'required|string|max:191|unique:users,mobile,'.$id,
+            'email'        => 'sometimes',
             'designation'        => 'sometimes',
             'role'        => 'required',
             'packageexpirydate'        => 'required',
