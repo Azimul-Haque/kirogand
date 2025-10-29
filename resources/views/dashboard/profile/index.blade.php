@@ -238,7 +238,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                              @if()
+                              @if(Auth::user()->localOffice->monogram)
                                 <img src="" alt="">
                               @endif
                             </div>
