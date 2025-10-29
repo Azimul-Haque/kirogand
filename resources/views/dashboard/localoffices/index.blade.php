@@ -158,66 +158,6 @@
                                         <div class="input-group-text"><span class="fas fa-calendar-check"></span></div>
                                     </div>
                                 </div>
-
-                                <div class="input-group mb-3">
-                                    <input type="password"
-                                           name="password"
-                                           class="form-control"
-                                           autocomplete="new-password"
-                                           placeholder="পাসওয়ার্ড (ঐচ্ছিক)">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text"><span class="fas fa-lock"></span></div>
-                                    </div>
-                                </div>
-
-                                <hr class="my-4">
-                                <h6 class="mb-3">কর্তৃপক্ষ (Authority) নির্ধারণ (ঐচ্ছিক)</h6>
-                                
-                                <!-- DYNAMIC AUTHORITY FIELDS FOR EDIT -->
-                                <input type="hidden" name="authority_level" id="edit_authority_level{{ $localoffice->id }}">
-                                <input type="hidden" name="authority_id" id="edit_authority_id{{ $localoffice->id }}">
-
-                                <div class="row">
-                                  <div class="col-md-6">
-                                    <!-- Division Dropdown (Level 1) -->
-                                      <div class="input-group mb-3">
-                                          <select id="edit_division_id{{ $localoffice->id }}" class="form-control authority-select" data-userid="{{ $localoffice->id }}" data-level="Division" data-target="edit_district_id{{ $localoffice->id }}" data-model="District">
-                                              <option value="" selected disabled>বিভাগ নির্বাচন করুন</option>
-                                              @foreach ($divisions as $division)
-                                                  <option value="{{ $division->id }}" data-level-name="Division">{{ $division->bn_name }}</option>
-                                              @endforeach
-                                          </select>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                    <!-- District Dropdown (Level 2) -->
-                                    <div class="input-group mb-3">
-                                        <select id="edit_district_id{{ $localoffice->id }}" class="form-control authority-select" data-userid="{{ $localoffice->id }}" data-level="District" data-target="edit_upazila_id{{ $localoffice->id }}" data-model="Upazila" disabled>
-                                            <option value="" selected disabled>জেলা নির্বাচন করুন</option>
-                                        </select>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <div class="row">
-                                  <div class="col-md-6">
-                                    <!-- Upazila Dropdown (Level 3 - Can be Municipality Authority) -->
-                                    <div class="input-group mb-3">
-                                        <select id="edit_upazila_id{{ $localoffice->id }}" class="form-control authority-select" data-userid="{{ $localoffice->id }}" data-level="Upazila" data-target="edit_union_id{{ $localoffice->id }}" data-model="Union" disabled>
-                                            <option value="" selected disabled>উপজেলা/পৌরসভা নির্বাচন করুন</option>
-                                        </select>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                    <!-- Union Dropdown (Level 4) -->
-                                    <div class="input-group mb-3">
-                                        <select id="edit_union_id{{ $localoffice->id }}" class="form-control authority-select" data-userid="{{ $localoffice->id }}" data-level="Union" data-target="" data-model="" disabled>
-                                            <option value="" selected disabled>ইউনিয়ন নির্বাচন করুন</option>
-                                        </select>
-                                    </div>
-                                    <!-- END DYNAMIC AUTHORITY FIELDS -->
-                                  </div>
-                                </div>
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">ফিরে যান</button>
