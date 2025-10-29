@@ -61,7 +61,7 @@
                 		</td>
                     <td>
                       {{ $user->designation }}<br/>
-                      {{ $user->designation }}
+                      {{ $user->localOffice }}
                     </td>
                     <td>
 
