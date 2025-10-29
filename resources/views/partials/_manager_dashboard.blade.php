@@ -79,10 +79,11 @@
                 </h3>
             </div>
             <div class="card-body">
-                
+                <div class="tab-content p-0">
                     <div class="chart">
                       <canvas id="lineChart2" style="min-height: 250px; height: 300px; max-height: 400px; max-width: 100%;"></canvas>
                     </div>
+                </div>
             </div>
         </div>
     </section>
