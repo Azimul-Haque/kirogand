@@ -106,6 +106,15 @@
                                   <label class="custom-control-label" for="switchIsActive{{ $localoffice->id }}">একটিভ স্ট্যাটাস</label>
                                 </div>
 
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    
+                                  </div>
+                                  <div class="col-md-6">
+                                    
+                                  </div>
+                                </div>
+
                                 <div class="input-group mb-3">
                                     <input type="text"
                                            name="name_bn"
