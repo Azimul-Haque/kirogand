@@ -72,8 +72,8 @@
                       </button>
                     </td>
                   </tr>
-                  {{-- Edit User Modal Code --}}
-                  {{-- Edit User Modal Code --}}
+                  {{-- Edit Modal Code --}}
+                  {{-- Edit Modal Code --}}
                   <!-- Modal -->
                   <div class="modal fade" id="editUserModal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="editUserModalLabel" aria-hidden="true" data-backdrop="static">
                     <div class="modal-dialog modal-lg" role="document">
@@ -243,8 +243,8 @@
                       </div>
                     </div>
                   </div>
-                  {{-- Edit User Modal Code --}}
-                  {{-- Edit User Modal Code --}}
+                  {{-- Edit Modal Code --}}
+                  {{-- Edit Modal Code --}}
                 @endforeach
               </tbody>
             </table>
