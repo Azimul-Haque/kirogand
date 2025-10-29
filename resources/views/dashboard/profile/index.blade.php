@@ -246,8 +246,19 @@
                                   // 2. Check if the file name is stored AND if the physical file exists.
                                   $monogramExists = $localOffice->monogram && File::exists($imagePath);
                               @endphp
-                              @if($monogramExists)
-                                <img src="" alt="">
+                              @if ($monogramExists)
+                                  <div class="monogram-container mb-4">
+                                      <img 
+                                          src="{{ asset('images/localoffices/' . $localoffice->monogram) }}" 
+                                          alt="{{ $localoffice->name_bn }} Monogram" 
+                                          class="w-32 h-32 object-contain rounded-full border-4 border-gray-200"
+                                      >
+                                      <p class="text-sm text-gray-600 mt-2">Current Monogram</p>
+                                  </div>
+                              @else
+                                  <div class="monogram-placeholder bg-gray-100 p-6 rounded-lg text-center border-dashed border-2 border-gray-300">
+                                      <p class="text-gray-500">No Monogram set or file not found.</p>
+                                  </div>
                               @endif
                             </div>
                         </div>
