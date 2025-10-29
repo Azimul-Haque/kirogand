@@ -89,7 +89,7 @@
                             @php
                               $authlevel = '';
                               if($localoffice->users && $localoffice->users->count() > 0) {
-                                if($localoffice->users->authorities->isNotEmpty()) {
+                                if($localoffice->users[0]->authorities->isNotEmpty()) {
                                   $auth = $localoffice->users[0]->authorities->first();
                                   $authlevel = (new \ReflectionClass($auth->authority_type))->getShortName();
                                 }
