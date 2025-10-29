@@ -187,7 +187,7 @@ class DashboardController extends Controller
             $location   = public_path('images/localoffices/'. $filename);
             // Image::make($image)->resize(600, null, function ($constraint) { $constraint->aspectRatio(); })->save($location);
             Image::make($image)->fit(300, 300)->save($location);
-            $blog->monogram = $filename;
+            $localoffice->monogram = $filename;
         }
 
         $localoffice->save();
