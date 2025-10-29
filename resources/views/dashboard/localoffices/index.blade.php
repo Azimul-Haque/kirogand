@@ -116,7 +116,7 @@
                                            name="name"
                                            class="form-control"
                                            value="{{ $localoffice->name }}"
-                                           placeholder="নাম" required>
+                                           placeholder="ইংরেজি নাম">
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-user"></span></div>
                                     </div>
