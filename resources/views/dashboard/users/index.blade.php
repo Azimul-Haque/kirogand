@@ -65,10 +65,10 @@
                     </td>
                     <td>
 
-                      @if ($user->authorities->isNotEmpty())
-                          {{-- {{ print_r($user->authorities->first()->getAncestorsByLevel()) }} --}}
+                      @if ($user->authority->isNotEmpty())
+                          {{-- {{ print_r($user->authority->first()->getAncestorsByLevel()) }} --}}
                           @php
-                              $auth = $user->authorities->first();
+                              $auth = $user->authority->first();
                           @endphp
                           {{-- Display the full dynamic hierarchy string --}}
                           {{-- {!! $auth->getFullHierarchy() !!}  --}}
