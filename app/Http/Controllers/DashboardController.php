@@ -529,14 +529,14 @@ class DashboardController extends Controller
         return view('dashboard.profile.index');
     }
 
-    public function updateProfileUser()
+    public function updateProfileUser($id)
     {
         // 1. Validation for the core user fields
         $request->validate([
             'name' => 'required|string|max:255',
             'name_en' => 'required|string|max:255',
-            'email' => 'required|email|max:255|unique:users,email,' . Auth::id(),
-            'mobile' => 'nullable|string|max:20|unique:users,mobile,' . Auth::id(),
+            'email' => 'required|email|max:255|unique:users,email,' . $id,
+            'mobile' => 'nullable|string|max:20|unique:users,mobile,' . $id,
         ]);
 
         // 2. Get the authenticated user
