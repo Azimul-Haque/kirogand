@@ -478,6 +478,15 @@
                                       <!-- END DYNAMIC AUTHORITY FIELDS -->
                                     </div>
                                   </div>
+
+                                  <div class="input-group mb-3">
+                                      <select id="edit_division_id{{ $user->id }}" class="form-control authority-select" data-userid="{{ $user->id }}" data-level="Division" data-target="edit_district_id{{ $user->id }}" data-model="District">
+                                          <option value="" selected disabled>বিভাগ নির্বাচন করুন</option>
+                                          @foreach ($divisions as $division)
+                                              <option value="{{ $division->id }}" data-level-name="Division">{{ $division->bn_name }}</option>
+                                          @endforeach
+                                      </select>
+                                  </div>
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">ফিরে যান</button>
