@@ -571,13 +571,8 @@ class DashboardController extends Controller
             'office_type'       => 'required|in:up,poura',
             'monogram'          => 'sometimes|image|max:300', // max 300KB
         ]);
-        
-        $localoffice = LocalOffice::findOrFail($id);
 
-        // OPTIONAL SECURITY CHECK: Ensure the authenticated user owns this LocalOffice record
-        // if ($localoffice->user_id !== Auth::id()) {
-        //     abort(403, 'Unauthorized action.');
-        // }
+        $localoffice = LocalOffice::findOrFail($id);
 
         // 3. Update scalar fields
         $localoffice->name_bn           = $request->name_bn;
