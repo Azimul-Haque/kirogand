@@ -597,7 +597,7 @@ class DashboardController extends Controller
 
         $localoffice->save();
 
-        return redirect()->back()->with('success', 'আপনার অফিস আপডেট করা হয়েছে ');
+        return redirect()->back()->with('success', 'আপনার অফিস আপডেট করা হয়েছে!');
     }
 
     public function getPackages()
