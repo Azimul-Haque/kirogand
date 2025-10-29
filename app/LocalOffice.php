@@ -28,7 +28,7 @@ class LocalOffice extends Model
 
         // Contact and Visuals
         'email',
-        'phone',
+        'mobile',
         'monogram',
     ];
 
