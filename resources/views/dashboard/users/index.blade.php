@@ -57,7 +57,7 @@
                 			<small class="text-black-50">{{ $user->mobile }}</small> 
                 			<span class="badge @if($user->role == 'admin') bg-success @elseif($user->role == 'manager') bg-warning @else bg-info @endif">{{ checkrole($user->role) }}</span><br/>
                       <small><span>যোগদান: {{ date('d F, Y h:i A', strtotime($user->created_at)) }}</span></small><br/>
-                      <small><span>প্যাকেজ: <b>{{ date('d F, Y', strtotime($user->package_expiry_date)) }}</b></span></small>
+                      <small><span>প্যাকেজ: <b>{{ $user->localOffice != null ? $user->localOffice->name_bn : '' date('d F, Y', strtotime($user->package_expiry_date)) }}</b></span></small>
                 		</td>
                     <td>
                       {{ $user->designation }}<br/>
