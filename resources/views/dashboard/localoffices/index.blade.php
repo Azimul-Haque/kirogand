@@ -55,7 +55,10 @@
                       <span class="badge badge-primary">📞 {{ $localoffice->phone }}</span>
                       <span class="badge badge-warning">✉ {{ $localoffice->email }}</span>
                     </td>
-                    <td><span class="badge badge-{{ $localoffice->is_active == 0 ? 'light' : 'success' }}">{{ $localoffice->is_active == 0 ? 'এক্টিভ নয়' : 'একটিভ' }}</span></td>
+                    <td>
+                      <span class="badge badge-{{ $localoffice->is_active == 0 ? 'light' : 'success' }}">{{ $localoffice->is_active == 0 ? 'এক্টিভ নয়' : 'একটিভ' }}</span><br/>
+                      <small><span>প্যাকেজ: <b>{{ $user->localOffice != null ? $user->localOffice->package_expiry_date != null ? date('d F, Y', strtotime($user->localOffice->package_expiry_date)) : 'N/A' : 'N/A' }}</b></span></small>
+                    </td>
                     <td>{{ $localoffice->office_type == 'up' ? 'ইউনিয়ন পরিষদ' : 'পৌরসভা' }}</td>
                     <td>
                       @foreach($localoffice->users as $user)
