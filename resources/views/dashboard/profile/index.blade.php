@@ -114,8 +114,7 @@
                                 <div class="input-group mb-3">
                                     <select id="designation" name="designation" class="form-control">
                                         <option value="" disabled="">পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)</option>
-                                        <!-- Mocking '$user->designation == 'চেয়ারম্যান' selected logic' -->
-                                        <option value="চেয়ারম্যান" @if(Auth::user()->designation == 'চেয়ারম্যান') @endif>ইউনিয়ন চেয়ারম্যান</option>
+                                        <option value="চেয়ারম্যান" @if(Auth::user()->designation == 'চেয়ারম্যান') selected @endif>ইউনিয়ন চেয়ারম্যান</option>
                                         <option value="সচিব">ইউনিয়ন সচিব</option>
                                         <option value="সহকারী">ইউনিয়ন সহকারী</option>
                                         <option value="মেয়র">মেয়র</option>
