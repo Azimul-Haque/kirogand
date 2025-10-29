@@ -176,27 +176,6 @@ class DashboardController extends Controller
 
         $localoffice->is_active = $request->has('is_active') ? 1 : 0;
 
-        if ($request->hasFile('monogram')) {
-            $image = $request->file('monogram');
-
-            $filename = str_replace(['?', ':', '\\', '/', '*', ' '], '_', $localoffice->name_bn) . time() . '.' . $image->getClientOriginalExtension();
-            $location = public_path('images/localoffices/' . $filename);
-
-            if ($localoffice->monogram) {
-                $old_file = public_path('images/localoffices/' . $localoffice->monogram);
-                if (File::exists($old_file)) {
-                    File::delete($old_file);
-                }
-            }
-
-            Image::make($image)->resize(300, 300, function ($constraint) {
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            })->save($location);
-
-            $localoffice->monogram = $filename;
-        }
-
         // image upload
         if($request->hasFile('monogram')) {
             $image_path = public_path('images/localoffices/'. $localoffice->monogram);
