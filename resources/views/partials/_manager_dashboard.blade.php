@@ -12,14 +12,23 @@
         color: #343a40;
         border-bottom: 2px solid #007bff; /* Primary color separator */
     }
-    /* Custom card style for quick actions */
-    .quick-action-card {
+    
+    /* Custom Hover Effect using pure CSS (replaces quick-action-card and shadow-lg from Tailwind) */
+    .info-box, .card, .btn-app {
         transition: all 0.3s ease;
         cursor: pointer;
+        /* Applying an initial shadow using AdminLTE class in HTML for consistency */
     }
-    .quick-action-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+    .info-box:hover, .card:hover:not(.no-hover-effect) {
+        transform: translateY(-3px);
+        /* A clear shadow on hover */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+    }
+
+    .btn-app {
+        width: 100%; /* Uses Bootstrap w-100 class equivalent in HTML */
+        height: 60px; /* Standard button size for better fit */
     }
 </style>
 <!-- 1. Info Boxes / Summary Metrics -->
