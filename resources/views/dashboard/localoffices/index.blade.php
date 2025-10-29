@@ -136,13 +136,10 @@
                                 </div>
                                 
                                 <div class="input-group mb-3">
-                                  <select name="role" class="form-control" required>
+                                  <select name="office_type" class="form-control" required>
                                     <option disabled="" value="">ধরন নির্ধারণ করুন</option>
-                                    <option value="admin" @if($localoffice->role == 'admin') selected="" @endif>এডমিন</option>
-                                    <option value="manager" @if($localoffice->role == 'manager') selected="" @endif>স্থানীয় সরকার প্রতিনিধি</option>
-                                    {{-- <option value="volunteer" @if($localoffice->role == 'volunteer') selected="" @endif>ভলান্টিয়ার</option> --}}
-                                    <option value="user" @if($localoffice->role == 'user') selected="" @endif>ব্যবহারকারী</option>
-                                    {{-- <option value="accountant" @if($localoffice->role == 'accountant') selected="" @endif>একাউন্টেন্ট</option> --}}
+                                    <option value="admin" @if($localoffice->office_type == 'admin') selected="" @endif>এডমিন</option>
+                                    <option value="manager" @if($localoffice->office_type == 'manager') selected="" @endif>স্থানীয় সরকার প্রতিনিধি</option>--}}
                                   </select>
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
