@@ -212,7 +212,7 @@
                                             >
                                             <label class="custom-file-label" for="imageUpload">Choose file...</label>
                                         </div>
-                                        <small class="form-text text-muted">Max file size 5MB. Accepts PNG, JPG, GIF.</small>
+                                        <small class="form-text text-muted">Max file size 300KB. Accepts PNG, JPG, GIF.</small>
                                     </div>
                                   </div>
                                   <div class="col-md-6">
