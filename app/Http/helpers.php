@@ -51,6 +51,8 @@
   function checkrole($text) {
       $ends = array('th','st','nd','rd','th','th','th','th','th','th');
       if ($text == 'admin')
+          return 'এডমিন';+
+      elseif ($text == 'admin')
           return 'এডমিন';
       else
           return $text;
