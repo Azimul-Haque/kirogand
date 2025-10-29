@@ -155,7 +155,6 @@ class DashboardController extends Controller
 
     public function updateLocalOffices(Request $request, $id)
     {
-        dd($request->all());
         $this->validate($request, [
             'name_bn'           => 'required|string|max:255',
             'name'              => 'nullable|string|max:255',
