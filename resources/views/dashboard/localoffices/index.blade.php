@@ -142,7 +142,7 @@
                                     <option value="poura" @if($localoffice->office_type == 'poura') selected="" @endif>পৌরসভা</option>
                                   </select>
                                     <div class="input-group-append">
-                                        <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
+                                        <div class="input-group-text"><span class="fas fa-landmark"></span></div>
                                     </div>
                                 </div>
 
