@@ -57,7 +57,7 @@
                     </td>
                     <td>
                       <span class="badge badge-{{ $localoffice->is_active == 0 ? 'light' : 'success' }}">{{ $localoffice->is_active == 0 ? 'এক্টিভ নয়' : 'একটিভ' }}</span><br/>
-                      <small><span>প্যাকেজ: <b>{{$localOffice->package_expiry_date != null ? date('d F, Y', strtotime($localOffice->package_expiry_date)) : 'N/A' }}</b></span></small>
+                      <small><span>প্যাকেজ: <b>{{$localoffice->package_expiry_date != null ? date('d F, Y', strtotime($localoffice->package_expiry_date)) : 'N/A' }}</b></span></small>
                     </td>
                     <td>{{ $localoffice->office_type == 'up' ? 'ইউনিয়ন পরিষদ' : 'পৌরসভা' }}</td>
                     <td>
