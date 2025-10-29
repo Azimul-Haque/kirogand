@@ -536,7 +536,7 @@ class DashboardController extends Controller
             'name' => 'required|string|max:255',
             'name_en' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:users,email,' . Auth::id(),
-            'mobile' => 'nullable|string|max:20',
+            'mobile' => 'nullable|string|max:20|unique:users,email,' . Auth::id(),
         ]);
 
         // 2. Get the authenticated user
