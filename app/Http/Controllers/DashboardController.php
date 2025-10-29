@@ -161,7 +161,7 @@ class DashboardController extends Controller
             'mobile'            => 'required|string|digits:11',
             'email'             => 'required|email|max:255',
             'office_type'       => 'required|in:up,poura',
-            'packageexpirydate' => 'required|date',
+            'packageexpirydate' => 'nullable|date',
             'monogram'          => 'sometimes|image|max:300',
         ]);
 
