@@ -55,7 +55,7 @@
       else if ($text == 'manager')
           return 'প্রতিনিধি';
       else if ($text == 'user')
-        return 'প্রতিনিধি';
+        return 'ব্যবহারকারী';
       else
           return $text;
   }
