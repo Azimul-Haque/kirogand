@@ -72,7 +72,7 @@
           </div>
         </div>
         <div class="row">
-          {{-- <div class="col-md-6">
+          <div class="col-md-6">
             <a href="{{ route('dashboard.deposit.getlist', [date('Y-m-d'), 'All']) }}" class="info-box mb-3">
               <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-coins"></i></span>
 
@@ -91,7 +91,7 @@
                 <span class="info-box-number">৳ {{ 0 }}</span>
               </div>
             </a>
-          </div> --}}
+          </div>
         </div>
         <div class="row">
           <div class="col-md-6">
