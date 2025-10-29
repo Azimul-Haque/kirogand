@@ -134,12 +134,12 @@
                                         <div class="input-group-text"><span class="fas fa-envelope"></span></div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="input-group mb-3">
                                   <select name="office_type" class="form-control" required>
                                     <option disabled="" value="">ধরন নির্ধারণ করুন</option>
-                                    <option value="admin" @if($localoffice->office_type == 'admin') selected="" @endif>এডমিন</option>
-                                    <option value="manager" @if($localoffice->office_type == 'manager') selected="" @endif>স্থানীয় সরকার প্রতিনিধি</option>--}}
+                                    <option value="admin" @if($localoffice->office_type == 'up') selected="" @endif>এডমিন</option>
+                                    <option value="manager" @if($localoffice->office_type == 'poura') selected="" @endif>স্থানীয় সরকার প্রতিনিধি</option>--}}
                                   </select>
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
