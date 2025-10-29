@@ -253,7 +253,7 @@
                                           alt="{{ Auth::user()->localoffice->name_bn }} Monogram" 
                                           class="w-32 h-32 object-contain rounded-full border-4 border-gray-200"
                                       >
-                                      <p class="text-sm text-gray-600 mt-2">Current Monogram</p>
+                                      <p class="text-sm text-gray-600 mt-2">বর্তমান</p>
                                   </div>
                               @else
                                   <div class="monogram-placeholder bg-gray-100 p-6 rounded-lg text-center border-dashed border-2 border-gray-300">
