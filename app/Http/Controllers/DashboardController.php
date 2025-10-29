@@ -43,7 +43,7 @@ class DashboardController extends Controller
     {
         parent::__construct();
         $this->middleware('auth')->except('clear');
-        $this->middleware(['admin'])->only('getUsers', 'storeUser', 'updateUser', 'deleteUser', 'getUser', 'getLocalOffices', 'getPackages', 'storePackage', 'updatePackage', 'deletePackage', 'getPayments', 'getMessages', 'updateMessage', 'getNotifications', 'sendSingleNotification', 'sendSingleSMS', 'getExamSolvePDF');
+        $this->middleware(['admin'])->only('getUsers', 'storeUser', 'updateUser', 'deleteUser', 'getUser', 'getLocalOffices', 'updateLocalOffices', 'getPackages', 'storePackage', 'updatePackage', 'deletePackage', 'getPayments', 'getMessages', 'updateMessage', 'getNotifications', 'sendSingleNotification', 'sendSingleSMS', 'getExamSolvePDF');
 
         $this->middleware(['admin_or_manager'])->only('getApplyforCertificate');
         
@@ -143,6 +143,17 @@ class DashboardController extends Controller
     }
 
     public function getLocalOffices()
+    {
+        // ONLY ADMIN
+        $localofficescount = LocalOffice::count();
+        $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
+
+        return view('dashboard.localoffices.index')
+                    ->withLocalofficescount($localofficescount)
+                    ->withLocaloffices($localoffices);
+    }
+
+    public function updateLocalOffices()
     {
         // ONLY ADMIN
         $localofficescount = LocalOffice::count();
