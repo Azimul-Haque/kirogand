@@ -50,7 +50,7 @@
 
   function checkrole($text) {
       $ends = array('th','st','nd','rd','th','th','th','th','th','th');
-      if ((($text % 100) >= 11) && (($text%100) <= 13))
+      if ($text == 'admin')
           return $text. 'th';
       else
           return $text. $ends[$text % 10];
