@@ -430,6 +430,9 @@
                                       </div>
                                   </div> --}}
 
+                                  <hr class="my-4">
+                                  <h6 class="mb-3">কর্তৃপক্ষ (Authority) নির্ধারণ (ঐচ্ছিক)</h6>
+
                                   
 
                                   <hr class="my-4">
