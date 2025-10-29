@@ -77,10 +77,10 @@
                                 <div class="input-group mb-3">
                                     <input type="email"
                                            name="email"
-                                           value="abul.kalam@example.com"
+                                           value="{{ Auth::user()->email }}"
                                            autocomplete="off"
                                            class="form-control"
-                                           placeholder="ইমেইল এড্রেস">
+                                           placeholder="আপনার ইমেইল এড্রেস">
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-envelope"></span></div>
                                     </div>
