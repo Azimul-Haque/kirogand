@@ -241,10 +241,10 @@
                               @php
                                   // 1. Define the full local path to the file.
                                   // We use public_path() because that's where File::exists() looks.
-                                  $imagePath = public_path('images/localoffices/' . Auth::user()->localOffice->monogram);
+                                  $imagePath = public_path('images/localoffices/' . Auth::user()->localoffice->monogram);
 
                                   // 2. Check if the file name is stored AND if the physical file exists.
-                                  $monogramExists = $localOffice->monogram && File::exists($imagePath);
+                                  $monogramExists = $localoffice->monogram && File::exists($imagePath);
                               @endphp
                               @if ($monogramExists)
                                   <div class="monogram-container mb-4">
