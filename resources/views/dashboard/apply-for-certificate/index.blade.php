@@ -66,12 +66,7 @@
 
 @section('content')
   @section('page-header') সনদের আবেদন @endsection
-  @section('page-header-right')
-    <ol class="breadcrumb float-sm-right">
-        <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
-        <li class="breadcrumb-item active">সনদের আবেদন</li>
-    </ol>
-  @endsection
+  
     <div class="container-fluid">
       <!-- Service Search Filter -->
       <div class="row mb-5 justify-content-center">

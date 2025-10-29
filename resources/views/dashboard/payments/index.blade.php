@@ -12,6 +12,7 @@
 
 @section('content')
 	@section('page-header') পেমেন্ট @endsection
+  
     <div class="container-fluid">
 		<div class="card">
           <div class="card-header">
