@@ -360,13 +360,6 @@
                                     </div>
                                     <div class="col-md-6">
                                       <div class="input-group mb-3">
-                                          <input type="text"
-                                                 name="designation"
-                                                 value="{{ $user->designation }}"
-                                                 autocomplete="off"
-                                                 class="form-control"
-                                                 placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)">
-                                          
                                           <select id="designation" name="designation" class="form-control">
                                               <option value="" selected="" disabled="">পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)</option>
                                               <option value="চেয়ারম্যান" @if($user->designation == 'চেয়ারম্যান') selected @endif>ইউনিয়ন চেয়ারম্যান</option>
