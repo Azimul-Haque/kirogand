@@ -89,7 +89,7 @@
                             @php
                               if($localoffice->users && $localoffice->users->count() > 0) {
                                 if($localOffice->users->authorities->isNotEmpty()) {
-                                  $userAuthority = $localOffice->users[0]->authorities->first();
+                                  $auth = $localOffice->users[0]->authorities->first();
                                 }
                               }
                             @endphp
