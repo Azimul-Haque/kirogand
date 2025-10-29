@@ -112,7 +112,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
-                                    <select id="designation" name="designation" class="form-control">
+                                    <select id="designation" name="designation" class="form-control" required>
                                         <option value="" disabled="">পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)</option>
                                         <option value="চেয়ারম্যান" @if(Auth::user()->designation == 'চেয়ারম্যান') selected @endif>ইউনিয়ন চেয়ারম্যান</option>
                                         <option value="সচিব" @if(Auth::user()->designation == 'সচিব') selected @endif>ইউনিয়ন সচিব</option>
