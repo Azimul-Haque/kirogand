@@ -204,7 +204,7 @@
                                             <input 
                                                 type="file" 
                                                 class="custom-file-input" 
-                                                id="monogram" 
+                                                id="monogram{{ $localoffice->id }}" 
                                                 name="monogram"
                                                 required
                                                 accept="image/png, image/jpeg, image/gif"
