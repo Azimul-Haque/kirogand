@@ -549,6 +549,7 @@ class DashboardController extends Controller
         $user->email = $request->email;
         $user->mobile = $request->mobile;
         $user->nid = $request->nid;
+        $user->designation = $request->designation;
         // You might have other core user fields here...
 
         $user->save();
