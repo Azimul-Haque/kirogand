@@ -53,7 +53,7 @@
       if ($text == 'admin')
           return 'এডমিন';
       else
-          return $text. $ends[$text % 10];
+          return $text;
   }
 
   function local_currency($num) {
