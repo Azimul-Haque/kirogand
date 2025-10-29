@@ -180,7 +180,7 @@
                                         <input type="text"
                                                name="packageexpirydate"
                                                id="packageexpirydate{{ $localoffice->id }}" 
-                                               value="{{ $localoffice->package_expiry_date ?? date('F d, Y', strtotime($localoffice->package_expiry_date)) }}"
+                                               value="{{ $localoffice->package_expiry_date ? date('F d, Y', strtotime($localoffice->package_expiry_date)) : '' }}"
                                                autocomplete="off"
                                                class="form-control"
                                                placeholder="প্যাকেজের মেয়াদ বৃদ্ধি" required>
