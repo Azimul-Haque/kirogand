@@ -28,7 +28,7 @@
 <li class="nav-item">
     <a href="{{ route('dashboard.update-data') }}" class="nav-link {{ Request::is('dashboard/update-data') ? 'active' : '' }} {{ Request::is('dashboard/update-data/*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-cog"></i>
-        <p>সনদের আবেদনসমূহ</p>
+        <p>তথ্য আপডেট</p>
     </a>
 </li>
 @endif
