@@ -22,9 +22,9 @@ class User extends Authenticatable
         return $this->hasMany('App\Blog');
     }
 
-    public function authorities()
+    public function authority()
     {
-        return $this->hasMany(UserAuthority::class);
+        return $this->hasOne(UserAuthority::class);
     }
 
     public function localOffice()
