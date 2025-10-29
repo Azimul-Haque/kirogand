@@ -422,6 +422,7 @@ class DashboardController extends Controller
                 Rule::requiredIf(fn () => $request->authority_level),
                 'integer',
             ],
+            'local_office_id'        => 'sometimes',
         ));
 
         $user = User::find($id);
