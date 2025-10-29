@@ -210,7 +210,7 @@
                                                 required
                                                 accept="image/png, image/jpeg, image/gif"
                                             >
-                                            <label class="custom-file-label" for="imageUpload">Choose file...</label>
+                                            <label class="custom-file-label" for="imageUpload">ছবি সিলেক্ট করুন</label>
                                         </div>
                                         <small class="form-text text-muted">Max file size 300KB. Accepts PNG, JPG, GIF.</small>
                                     </div>
