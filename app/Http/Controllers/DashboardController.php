@@ -534,6 +534,7 @@ class DashboardController extends Controller
         // 1. Validation for the core user fields
         $request->validate([
             'name' => 'required|string|max:255',
+            'name_en' => 'required|string|max:255',
             // Ensure email is unique except for the current user's ID
             'email' => 'required|email|max:255|unique:users,email,' . Auth::id(),
             'phone' => 'nullable|string|max:20',
