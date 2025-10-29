@@ -124,7 +124,7 @@
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <input type="text"
+                                    <input type="email"
                                            name="email"
                                            value="{{ $localoffice->email }}"
                                            autocomplete="off"
