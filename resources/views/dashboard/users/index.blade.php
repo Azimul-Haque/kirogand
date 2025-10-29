@@ -519,7 +519,128 @@
 	            
 	                @csrf
 
-	                
+	                <!-- Name Fields -->
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="input-group mb-3">
+                                  <input type="text"
+                                         name="name"
+                                         class="form-control"
+                                         value="{{ old('name') }}"
+                                         placeholder="নাম" required>
+                                  <div class="input-group-append">
+                                      <div class="input-group-text"><span class="fas fa-user"></span></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="input-group mb-3">
+                                  <input type="text"
+                                         name="name_en"
+                                         class="form-control"
+                                         value="{{ old('name_en') }}"
+                                         placeholder="ইংরেজি নাম (OPTIONAL)">
+                                  <div class="input-group-append">
+                                      <div class="input-group-text"><span class="fas fa-user"></span></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Contact Fields -->
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="input-group mb-3">
+                                  <input type="text"
+                                         name="mobile"
+                                         value="{{ old('mobile') }}"
+                                         autocomplete="off"
+                                         class="form-control"
+                                         placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
+                                  <div class="input-group-append">
+                                      <div class="input-group-text"><span class="fas fa-phone"></span></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="input-group mb-3">
+                                  <input type="text"
+                                         name="email"
+                                         value="{{ old('email') }}"
+                                         autocomplete="off"
+                                         class="form-control"
+                                         placeholder="ইমেইল এড্রেস">
+                                  <div class="input-group-append">
+                                      <div class="input-group-text"><span class="fas fa-server"></span></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- NID and Role Fields -->
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="input-group mb-3">
+                                  <input type="text"
+                                         name="nid"
+                                         value="{{ old('nid') }}"
+                                         autocomplete="off"
+                                         class="form-control"
+                                         placeholder="এনআইডি">
+                                  <div class="input-group-append">
+                                      <div class="input-group-text"><span class="fas fa-server"></span></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="input-group mb-3">
+                                  <select name="role" class="form-control" required>
+                                      <option selected disabled value="">ধরন নির্ধারণ করুন</option>
+                                      <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>এডমিন</option>
+                                      <option value="manager" {{ old('role') == 'manager' ? 'selected' : '' }}>স্থানীয় সরকার প্রতিনিধি</option>
+                                      {{-- <option value="volunteer" {{ old('role') == 'volunteer' ? 'selected' : '' }}>ভলান্টিয়ার</option> --}}
+                                      <option value="user" {{ old('role') == 'user' ? 'selected' : '' }}>ব্যবহারকারী</option>
+                                      {{-- <option value="accountant" {{ old('role') == 'accountant' ? 'selected' : '' }}>একাউন্টেন্ট</option> --}}
+                                  </select>
+                                  <div class="input-group-append">
+                                      <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Designation and Password Fields -->
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="input-group mb-3">
+                                  <select id="designation" name="designation" class="form-control">
+                                      <option value="" selected disabled>পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)</option>
+                                      <option value="চেয়ারম্যান" {{ old('designation') == 'চেয়ারম্যান' ? 'selected' : '' }}>ইউনিয়ন চেয়ারম্যান</option>
+                                      <option value="সচিব" {{ old('designation') == 'সচিব' ? 'selected' : '' }}>ইউনিয়ন সচিব</option>
+                                      <option value="সহকারী" {{ old('designation') == 'সহকারী' ? 'selected' : '' }}>ইউনিয়ন সহকারী</option>
+                                      <option value="মেয়র" {{ old('designation') == 'মেয়র' ? 'selected' : '' }}>মেয়র</option>
+                                      <option value="কাউন্সিলর" {{ old('designation') == 'কাউন্সিলর' ? 'selected' : '' }}>কাউন্সিলর</option>
+                                      <option value="পৌর সচিব" {{ old('designation') == 'পৌর সচিব' ? 'selected' : '' }}>পৌর সচিব</option>
+                                  </select>
+                                  <div class="input-group-append">
+                                      <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="input-group mb-3">
+                                  <input type="password"
+                                         name="password"
+                                         class="form-control"
+                                         autocomplete="new-password"
+                                         placeholder="পাসওয়ার্ড (আবশ্যক)"
+                                         required> <!-- Password is required for creation -->
+                                  <div class="input-group-append">
+                                      <div class="input-group-text"><span class="fas fa-lock"></span></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
 
                   <hr class="my-4">
                   <h6 class="mb-3">কর্তৃপক্ষ (Authority) নির্ধারণ (ঐচ্ছিক)</h6>
