@@ -43,7 +43,7 @@ class DashboardController extends Controller
     {
         parent::__construct();
         $this->middleware('auth')->except('clear');
-        $this->middleware(['admin'])->only('getUsers', 'storeUser', 'updateUser', 'deleteUser', 'getUser', 'getLocalOffices', 'updateLocalOffices', 'getPackages', 'storePackage', 'updatePackage', 'deletePackage', 'getPayments', 'getMessages', 'updateMessage', 'getNotifications', 'sendSingleNotification', 'sendSingleSMS', 'getExamSolvePDF');
+        $this->middleware(['admin'])->only('getUsers', 'storeUser', 'updateUser', 'deleteUser', 'getUser', 'getLocalOffices', 'updateLocalOffices', 'getPackages', 'storePackage', 'updatePackage', 'deletePackage', 'getPayments', 'getMessages', 'updateMessage', 'getNotifications', 'sendSingleNotification', 'sendSingleSMS', 'getBlogs', 'getBlogsSearch', 'storeBlog', 'storeBlogCategory', 'updateBlog', 'getExamSolvePDF');
 
         $this->middleware(['admin_or_manager'])->only('getApplyforCertificate');
         
