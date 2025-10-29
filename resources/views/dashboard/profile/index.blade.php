@@ -250,7 +250,7 @@
                                   <div class="monogram-container mb-4">
                                       <img 
                                           src="{{ asset('images/localoffices/' . Auth::user()->localoffice->monogram) }}" 
-                                          alt="{{ $localoffice->name_bn }} Monogram" 
+                                          alt="{{ Auth::user()->localoffice->name_bn }} Monogram" 
                                           class="w-32 h-32 object-contain rounded-full border-4 border-gray-200"
                                       >
                                       <p class="text-sm text-gray-600 mt-2">Current Monogram</p>
