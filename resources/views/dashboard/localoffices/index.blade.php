@@ -96,7 +96,7 @@
                                 }
                               }
                             @endphp
-                            <<small>{!! $authlevel !!}</small>
+                            <small>{!! $authlevel !!}</small>
                             
                                 @csrf
 
