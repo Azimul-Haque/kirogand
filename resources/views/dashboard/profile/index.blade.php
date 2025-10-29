@@ -161,7 +161,7 @@
                     <h3 class="card-title"><i class="fas fa-building mr-1"></i> আমার কার্যালয়</h3>
                 </div>
                 <!-- Form: My Office -->
-                <form action="/update-local-office" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('dashboard.profile.update.user', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="_method" value="POST">
                     <div class="card-body">
