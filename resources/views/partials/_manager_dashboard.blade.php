@@ -20,7 +20,7 @@
         /* Applying an initial shadow using AdminLTE class in HTML for consistency */
     }
 
-    .info-box:hover, .quick-action-card {
+    .info-box:hover, .quick-action-card:hover {
         transform: translateY(-3px);
         /* A clear shadow on hover */
         box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
