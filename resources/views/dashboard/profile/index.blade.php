@@ -209,7 +209,7 @@
                                 <div class="input-group mb-3">
                                     <input type="email"
                                            name="email"
-                                           value="{{ Auth::user()->localOffice->name }}"
+                                           value="{{ Auth::user()->localOffice->email }}"
                                            autocomplete="off"
                                            class="form-control"
                                            placeholder="অফিস ইমেইল এড্রেস" required>
