@@ -209,7 +209,7 @@
                                 <div class="input-group mb-3">
                                     <input type="email"
                                            name="email"
-                                           value="office@local.gov.bd"
+                                           value="{{ Auth::user()->localOffice->name }}"
                                            autocomplete="off"
                                            class="form-control"
                                            placeholder="অফিস ইমেইল এড্রেস" required>
