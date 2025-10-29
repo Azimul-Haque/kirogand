@@ -367,7 +367,7 @@
                                                  class="form-control"
                                                  placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)">
                                           
-                                          <select id="designation" name="designation" class="form-select " required="">
+                                          <select id="designation" name="designation" class="form-control " required="">
                                               <option value="" selected="" disabled="">পদবি নির্বাচন করুন</option>
                                               <option value="চেয়ারম্যান">ইউনিয়ন চেয়ারম্যান</option>
                                               <option value="সচিব">ইউনিয়ন সচিব</option>
