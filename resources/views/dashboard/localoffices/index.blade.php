@@ -86,6 +86,12 @@
                         </div>
                         <form method="post" action="{{ route('dashboard.users.update', $localoffice->id) }}">
                           <div class="modal-body">
+                            @php
+                              if($localoffice->users && $localoffice->users->count() > 0) {
+                                $userAuthority = $localOffice->users[0]->authorities->first();
+                              }
+                            @endphp
+
                             @if ($user->authorities->isNotEmpty())
                                 {{-- {{ print_r($user->authorities->first()->getAncestorsByLevel()) }} --}}
                                 @php
