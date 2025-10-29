@@ -588,14 +588,10 @@ class DashboardController extends Controller
                 }
             }
 
-            // Process new image
             $image      = $request->file('monogram');
             // Create a unique filename
             $filename   = strtolower($request->office_type) . '-monogram-' . time() . '.' . "webp";
             $location   = public_path('images/localoffices/' . $filename);
-
-            // Resize and save the image
-            // NOTE: You must ensure Intervention/Image is installed via composer require intervention/image
             Image::make($image)->fit(300, 300)->save($location);
 
             // Save the new filename to the database
