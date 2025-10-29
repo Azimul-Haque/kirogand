@@ -50,8 +50,7 @@
                     </span> --}}
                 </span>
             @else
-                {{-- This "না" (No) should also be hidden on small screens if it appears in the center --}}
-                <span class="d-none d-sm-inline">না</span>
+                {{-- <span class="d-none d-sm-inline">না</span> --}}
             @endif
         @endif
 
