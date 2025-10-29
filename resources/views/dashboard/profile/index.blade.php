@@ -228,11 +228,11 @@
                                     <div class="custom-file">
                                         <input type="file"
                                                class="custom-file-input"
-                                               id="monogram_file"
+                                               id="monogram"
                                                name="monogram"
                                                accept="image/png, image/jpeg, image/gif"
                                                required> <!-- Assuming monogram is null, hence required -->
-                                        <label class="custom-file-label" for="monogram_file">মনোগ্রাম সিলেক্ট করুন</label>
+                                        <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
                                     </div>
                                     <small class="form-text text-muted">সর্বোচ্চ ফাইল সাইজ 300KB। (PNG, JPG, GIF)</small>
                                 </div>
