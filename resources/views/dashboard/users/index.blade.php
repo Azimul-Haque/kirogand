@@ -330,8 +330,8 @@
                                     <div class="col-md-6">
                                       <div class="input-group mb-3">
                                           <input type="text"
-                                                 name="nid"
-                                                 value="{{ $user->nid }}"
+                                                 name="email"
+                                                 value="{{ $user->email }}"
                                                  autocomplete="off"
                                                  class="form-control"
                                                  placeholder="এনআইডি">
@@ -344,7 +344,17 @@
 
                                   <div class="row">
                                     <div class="col-md-6">
-                                      
+                                      <div class="input-group mb-3">
+                                          <input type="text"
+                                                 name="nid"
+                                                 value="{{ $user->nid }}"
+                                                 autocomplete="off"
+                                                 class="form-control"
+                                                 placeholder="এনআইডি">
+                                          <div class="input-group-append">
+                                              <div class="input-group-text"><span class="fas fa-server"></span></div>
+                                          </div>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
                                       <div class="input-group mb-3">
