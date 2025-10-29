@@ -560,7 +560,7 @@ class DashboardController extends Controller
         return redirect()->back()->with('success', 'Your profile information has been updated successfully.');
     }
 
-    public function updateProfileLocalOffice()
+    public function updateProfileLocalOffice(Request $request, $id)
     {
         return view('dashboard.profile.index');
     }
