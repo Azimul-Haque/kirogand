@@ -91,6 +91,7 @@
                               if($localoffice->users && $localoffice->users->count() > 0) {
                                 if($localoffice->users[0]->authorities->isNotEmpty()) {
                                   $auth = $localoffice->users[0]->authorities->first();
+                                  // $authlevel = (new \ReflectionClass($auth->authority_type))->getShortName();
                                   $authlevel = (new \ReflectionClass($auth->authority_type))->getShortName();
                                 }
                               }
