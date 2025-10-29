@@ -97,7 +97,7 @@
                                            value="{{ Auth::user()->nid }}"
                                            autocomplete="off"
                                            class="form-control"
-                                           placeholder="এনআইডি">
+                                           placeholder="এনআইডি" required>
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-id-card"></span></div>
                                     </div>
