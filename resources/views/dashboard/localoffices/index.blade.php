@@ -209,7 +209,7 @@
                                                 required
                                                 accept="image/png, image/jpeg, image/gif"
                                             >
-                                            <label class="custom-file-label" for="monogram">ছবি সিলেক্ট করুন</label>
+                                            <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
                                         </div>
                                         <small class="form-text text-muted">Max file size 300KB. Accepts PNG, JPG, GIF.</small>
                                     </div>
