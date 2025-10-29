@@ -145,12 +145,6 @@
                 <h4 class="m-0">@yield('page-header')</h4>
               </div>
               <div class="col-sm-6">
-                  <ol class="breadcrumb float-sm-right">
-                      <li class="breadcrumb-item"><a href="#">হোম</a></li>
-                      <li class="breadcrumb-item active">ড্যাশবোর্ড</li>
-                  </ol>
-              </div>
-              <div class="col-sm-6">
                 <div class="float-sm-right">
                   @yield('page-header-right')
                 </div>
