@@ -48,12 +48,12 @@
           return $number. $ends[$number % 10];
   }
 
-  function ordinal($checkrole) {
+  function checkrole($text) {
       $ends = array('th','st','nd','rd','th','th','th','th','th','th');
-      if ((($checkrole % 100) >= 11) && (($checkrole%100) <= 13))
-          return $checkrole. 'th';
+      if ((($text % 100) >= 11) && (($text%100) <= 13))
+          return $text. 'th';
       else
-          return $checkrole. $ends[$checkrole % 10];
+          return $text. $ends[$text % 10];
   }
 
   function local_currency($num) {
