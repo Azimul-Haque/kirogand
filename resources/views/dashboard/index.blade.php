@@ -162,7 +162,7 @@
       @elseif(Auth::user()->role == 'manager')
         <div class="row">
           <div class="col-md-3">
-            <a href="" class="info-box mb-3">
+            <a href="#@" class="info-box mb-3">
               <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-coins"></i></span>
 
               <div class="info-box-content">
