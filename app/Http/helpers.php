@@ -51,7 +51,7 @@
   function checkrole($text) {
       $ends = array('th','st','nd','rd','th','th','th','th','th','th');
       if ($text == 'admin')
-          return 'এডমিন';+
+          return 'এডমিন';
       else if ($text == 'manager')
           return 'প্রতিনিধি';
       else
