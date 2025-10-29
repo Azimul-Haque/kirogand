@@ -14,7 +14,7 @@
     }
     
     /* Custom Hover Effect using pure CSS (replaces quick-action-card and shadow from Tailwind) */
-    .info-box, .card, .btn-app {
+    .info-box, .btn-app {
         transition: all 0.3s ease;
         cursor: pointer;
         /* Applying an initial shadow using AdminLTE class in HTML for consistency */
