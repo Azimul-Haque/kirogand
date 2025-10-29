@@ -427,7 +427,9 @@ class DashboardController extends Controller
 
         $user = User::find($id);
         $user->name = $request->name;
+        $user->name_en = $request->name_en;
         $user->mobile = $request->mobile;
+        $user->email = $request->email;
         $user->designation = $request->designation;
         $user->role = $request->role;
         $user->package_expiry_date = date('Y-m-d', strtotime($request->packageexpirydate)) . ' 23:59:59';
