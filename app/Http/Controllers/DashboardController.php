@@ -580,9 +580,7 @@ class DashboardController extends Controller
         $localoffice->mobile            = $request->mobile;
         $localoffice->email             = $request->email;
 
-        // 5. Image upload and deletion of old file
         if ($request->hasFile('monogram')) {
-            // Delete old monogram if it exists
             if ($localoffice->monogram) {
                 $image_path = public_path('images/localoffices/' . $localoffice->monogram);
                 if (File::exists($image_path)) {
