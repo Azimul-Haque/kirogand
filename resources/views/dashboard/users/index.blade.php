@@ -395,7 +395,7 @@
 
                                   
 
-                                  <div class="input-group mb-3">
+                                  {{-- <div class="input-group mb-3">
                                       <input type="text"
                                              name="packageexpirydate"
                                              id="packageexpirydate{{ $user->id }}" 
@@ -406,7 +406,7 @@
                                       <div class="input-group-append">
                                           <div class="input-group-text"><span class="fas fa-calendar-check"></span></div>
                                       </div>
-                                  </div>
+                                  </div> --}}
 
                                   <div class="input-group mb-3">
                                       <input type="password"
