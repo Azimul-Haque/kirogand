@@ -339,11 +339,11 @@
                                     <div class="col-md-6">
                                       <div class="input-group mb-3">
                                           <input type="text"
-                                                 name="uid"
-                                                 value="{{ $user->uid }}"
+                                                 name="nid"
+                                                 value="{{ $user->nid }}"
                                                  autocomplete="off"
                                                  class="form-control"
-                                                 placeholder="Firebase UID">
+                                                 placeholder="এনআইডি">
                                           <div class="input-group-append">
                                               <div class="input-group-text"><span class="fas fa-server"></span></div>
                                           </div>
