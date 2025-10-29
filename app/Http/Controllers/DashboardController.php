@@ -592,12 +592,9 @@ class DashboardController extends Controller
             $filename   = strtolower($request->office_type) . '-monogram-' . time() . '.' . "webp";
             $location   = public_path('images/localoffices/' . $filename);
             Image::make($image)->fit(300, 300)->save($location);
-
-            // Save the new filename to the database
             $localoffice->monogram = $filename;
         }
-
-        // 6. Save the model
+        
         $localoffice->save();
 
         return redirect()->back()->with('success', 'Local office details updated successfully.');
