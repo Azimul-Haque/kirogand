@@ -433,6 +433,7 @@ class DashboardController extends Controller
         $user->designation = $request->designation;
         $user->role = $request->role;
         $user->nid = $request->nid;
+        $user->local_office_id = $request->local_office_id;
         if(!empty($request->password)) {
             $user->password = Hash::make($request->password);
         }
