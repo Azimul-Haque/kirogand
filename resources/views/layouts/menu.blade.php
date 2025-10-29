@@ -24,14 +24,14 @@
 </li>
 @endif
 
-@if(Auth::user()->role == 'manager')
+{{-- @if(Auth::user()->role == 'manager')
 <li class="nav-item">
     <a href="{{ route('dashboard.update-data') }}" class="nav-link {{ Request::is('dashboard/update-data') ? 'active' : '' }} {{ Request::is('dashboard/apply-for-certificate/*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-certificate"></i>
         <p>সনদের আবেদনসমূহ</p>
     </a>
 </li>
-@endif
+@endif --}}
 
 @if(Auth::user()->role == 'admin' || Auth::user()->role == 'manager')
 <li class="nav-item">
