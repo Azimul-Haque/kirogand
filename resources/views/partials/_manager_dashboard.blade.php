@@ -69,25 +69,6 @@
 
 <!-- 2. Main Content Row (Charts and Quick Actions) -->
 <div class="row">
-    <!-- Monthly Issuance Trend Chart -->
-    <section class="col-lg-7 connectedSortable">
-        <div class="card shadow-lg">
-            <div class="card-header bg-gradient-light card-header-bangla">
-                <h3 class="card-title">
-                    <i class="fas fa-chart-line mr-1"></i>
-                    মাসিক সনদ ইস্যুর প্রবণতা (গত ৬ মাস)
-                </h3>
-            </div>
-            <div class="card-body">
-                <div class="tab-content p-0">
-                    <div class="chart">
-                      <canvas id="lineChart2" style="min-height: 250px; height: 300px; max-height: 400px; max-width: 100%;"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Quick Actions and System Status -->
     <section class="col-lg-5 connectedSortable">
         <!-- Quick Actions -->
@@ -140,6 +121,25 @@
                     মেয়াদ শেষ: {{ date('d F, Y', strtotime('+20 days')) }}
                 </p>
                 <a href="#" class="btn btn-outline-light btn-sm mt-2">প্যাকেজ নবায়ন করুন <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monthly Issuance Trend Chart -->
+    <section class="col-lg-7 connectedSortable">
+        <div class="card shadow-lg">
+            <div class="card-header bg-gradient-light card-header-bangla">
+                <h3 class="card-title">
+                    <i class="fas fa-chart-line mr-1"></i>
+                    মাসিক সনদ ইস্যুর প্রবণতা (গত ৬ মাস)
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="tab-content p-0">
+                    <div class="chart">
+                      <canvas id="lineChart2" style="min-height: 250px; height: 300px; max-height: 400px; max-width: 100%;"></canvas>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
