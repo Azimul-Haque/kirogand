@@ -332,6 +332,7 @@ class DashboardController extends Controller
                           ->orderBy('id', 'desc')
                           ->count();
         $divisions = Division::all();
+        $localoffices = LocalOffice::all();
         $users = User::where('name', 'LIKE', "%$search%")
                      ->orWhere('email', 'LIKE', "%$search%")
                      ->orWhere('mobile', 'LIKE', "%$search%")
@@ -344,6 +345,7 @@ class DashboardController extends Controller
         return view('dashboard.users.index')
                     ->withUsers($users)
                     ->withUserscount($userscount)
+                    ->withLocaloffices($localoffices)
                     ->withDivisions($divisions);
     }
 
