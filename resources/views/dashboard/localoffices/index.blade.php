@@ -129,7 +129,7 @@
                                            value="{{ $localoffice->email }}"
                                            autocomplete="off"
                                            class="form-control"
-                                           placeholder="Firebase UID">
+                                           placeholder="অফিস ইমেইল এড্রেস">
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-server"></span></div>
                                     </div>
