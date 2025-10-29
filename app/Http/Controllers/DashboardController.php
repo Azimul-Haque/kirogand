@@ -204,7 +204,7 @@ class DashboardController extends Controller
                 File::delete($image_path);
             }
             $image      = $request->file('monogram');
-            $filename   = str_replace(['?',':', '\\', '/', '*', ' '], '-', strtolower($request->office_type)) . '-monogram-' .time() . '.' . "webp";
+            $filename   = strtolower($request->office_type) . '-monogram-' .time() . '.' . "webp";
             $location   = public_path('images/localoffices/'. $filename);
             // Image::make($image)->resize(600, null, function ($constraint) { $constraint->aspectRatio(); })->save($location);
             Image::make($image)->fit(600, 315)->save($location);
