@@ -97,7 +97,7 @@
                                 }
                               }
                             @endphp
-                            <small class="mb-3">{!! $authlevel !!}</small>
+                            <small>{!! $authlevel !!}</small>
                             
                                 @csrf
 
