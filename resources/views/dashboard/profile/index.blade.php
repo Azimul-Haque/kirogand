@@ -64,7 +64,7 @@
                                 <div class="input-group mb-3">
                                     <input type="text"
                                            name="mobile"
-                                           value="017XXXXXXXX"
+                                           value="{{ Auth::user()->mobile }}"
                                            autocomplete="off"
                                            class="form-control"
                                            placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
