@@ -249,7 +249,7 @@
                               @if ($monogramExists)
                                   <div class="monogram-container mb-4">
                                       <img 
-                                          src="{{ asset('images/localoffices/' . $localoffice->monogram) }}" 
+                                          src="{{ asset('images/localoffices/' . Auth::user()->localoffice->monogram) }}" 
                                           alt="{{ $localoffice->name_bn }} Monogram" 
                                           class="w-32 h-32 object-contain rounded-full border-4 border-gray-200"
                                       >
