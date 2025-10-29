@@ -337,23 +337,23 @@
                                       </div>
                                     </div>
                                     <div class="col-md-6">
-                                      
+                                      <div class="input-group mb-3">
+                                          <input type="text"
+                                                 name="uid"
+                                                 value="{{ $user->uid }}"
+                                                 autocomplete="off"
+                                                 class="form-control"
+                                                 placeholder="Firebase UID">
+                                          <div class="input-group-append">
+                                              <div class="input-group-text"><span class="fas fa-server"></span></div>
+                                          </div>
+                                      </div>
                                     </div>
                                   </div>
 
                                   
 
-                                  <div class="input-group mb-3">
-                                      <input type="text"
-                                             name="uid"
-                                             value="{{ $user->uid }}"
-                                             autocomplete="off"
-                                             class="form-control"
-                                             placeholder="Firebase UID">
-                                      <div class="input-group-append">
-                                          <div class="input-group-text"><span class="fas fa-server"></span></div>
-                                      </div>
-                                  </div>
+                                  
 
                                   <div class="input-group mb-3">
                                       <input type="text"
