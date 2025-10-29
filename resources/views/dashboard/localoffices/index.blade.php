@@ -102,8 +102,8 @@
                                 @csrf
 
                                 <div class="custom-control custom-switch mb-3">
-                                  <input type="checkbox" class="custom-control-input" {{ $localoffice->is_active ? 'checked' : '' }} id="customSwitch1">
-                                  <label class="custom-control-label" for="customSwitch1">একটিভ স্ট্যাটাস</label>
+                                  <input type="checkbox" class="custom-control-input" {{ $localoffice->is_active ? 'checked' : '' }} id="switchIsActive{{ $localoffice->id }}">
+                                  <label class="custom-control-label" for="switchIsActive{{ $localoffice->id }}">একটিভ স্ট্যাটাস</label>
                                 </div>
 
                                 <div class="input-group mb-3">
