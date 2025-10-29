@@ -24,7 +24,7 @@ class User extends Authenticatable
 
     public function authority()
     {
-        return $this->hasOne(UserAuthority::class);
+        return $this->has(UserAuthority::class);
     }
 
     public function localOffice()
