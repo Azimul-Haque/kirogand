@@ -334,7 +334,7 @@
                                                  value="{{ $user->email }}"
                                                  autocomplete="off"
                                                  class="form-control"
-                                                 placeholder="এনআইডি">
+                                                 placeholder="ইমেইল এড্রেস">
                                           <div class="input-group-append">
                                               <div class="input-group-text"><span class="fas fa-server"></span></div>
                                           </div>
