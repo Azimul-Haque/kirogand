@@ -375,7 +375,16 @@
 
                                   <div class="row">
                                     <div class="col-md-6">
-                                      
+                                      <div class="input-group mb-3">
+                                          <input type="password"
+                                                 name="password"
+                                                 class="form-control"
+                                                 autocomplete="new-password"
+                                                 placeholder="পাসওয়ার্ড (ঐচ্ছিক)">
+                                          <div class="input-group-append">
+                                              <div class="input-group-text"><span class="fas fa-lock"></span></div>
+                                          </div>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
                                       
@@ -408,16 +417,7 @@
                                       </div>
                                   </div> --}}
 
-                                  <div class="input-group mb-3">
-                                      <input type="password"
-                                             name="password"
-                                             class="form-control"
-                                             autocomplete="new-password"
-                                             placeholder="পাসওয়ার্ড (ঐচ্ছিক)">
-                                      <div class="input-group-append">
-                                          <div class="input-group-text"><span class="fas fa-lock"></span></div>
-                                      </div>
-                                  </div>
+                                  
 
                                   <hr class="my-4">
                                   <h6 class="mb-3">কর্তৃপক্ষ (Authority) নির্ধারণ (ঐচ্ছিক)</h6>
