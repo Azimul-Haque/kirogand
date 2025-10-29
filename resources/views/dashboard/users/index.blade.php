@@ -290,9 +290,9 @@
                                     <div class="col-md-6">
                                       <div class="input-group mb-3">
                                           <input type="text"
-                                                 name="name_bn"
+                                                 name="name"
                                                  class="form-control"
-                                                 value="{{ $user->name_bn }}"
+                                                 value="{{ $user->name }}"
                                                  placeholder="নাম" required>
                                           <div class="input-group-append">
                                               <div class="input-group-text"><span class="fas fa-user"></span></div>
