@@ -468,7 +468,7 @@
                                       <select class="form-control" name="local_office_id">
                                           <option value="" selected disabled>স্থানীয় সরকার কার্যালয় নির্বাচন করুন</option>
                                           @foreach ($localoffices as $localoffice)
-                                              <option value="{{ $localoffice->id }}" @if($localoffice->id == $user->local_office_id) @endif>{{ $localoffice->name_bn }}</option>
+                                              <option value="{{ $localoffice->id }}" @if($localoffice->id == $user->local_office_id) selected @endif>{{ $localoffice->name_bn }}</option>
                                           @endforeach
                                       </select>
                                   </div>
