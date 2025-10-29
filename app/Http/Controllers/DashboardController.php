@@ -529,6 +529,11 @@ class DashboardController extends Controller
         return view('dashboard.profile.index');
     }
 
+    public function updateProfileUser()
+    {
+        return view('dashboard.profile.index');
+    }
+
     public function getPackages()
     {
         $packages = Package::all();
