@@ -165,6 +165,7 @@ class DashboardController extends Controller
             'monogram'          => 'sometimes|image|max:300',
         ]);
 
+        $localoffice                    = LocalOffice::findOrFail($id);
         $localoffice->name_bn           = $request->name_bn;
         $localoffice->name              = $request->name;
         $localoffice->mobile            = $request->mobile;
