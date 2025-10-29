@@ -26,8 +26,7 @@
                 </div>
                 <!-- Form: My Information -->
                 <form action="/update-user-profile" method="POST">
-                    <!-- Note: For live use, include CSRF token and method spoofing for PUT/PATCH -->
-                    <input type="hidden" name="_token" value="mock_csrf_token">
+                    @csrf
                     <input type="hidden" name="_method" value="POST">
                     <div class="card-body">
                         
