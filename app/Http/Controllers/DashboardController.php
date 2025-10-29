@@ -544,6 +544,7 @@ class DashboardController extends Controller
 
         // 3. Update fields
         $user->name = $request->name;
+        $user->name_en = $request->name_en;
         $user->email = $request->email;
         $user->mobile = $request->mobile;
         // You might have other core user fields here...
