@@ -162,8 +162,7 @@
         <div class="float-right d-none d-sm-block">
             <strong>Copyright &copy; {{ date('Y') }} | <b>ভার্শন</b> ১.০.০
         </div>
-        <strong>Copyright &copy; {{ date('Y') }} All rights
-        reserved.
+        কোন সমস্যার সম্মুখীন হলে <a tell:01711111000>01711111000</a>
     </footer>
 </div>
 
