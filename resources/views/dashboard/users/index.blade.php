@@ -413,10 +413,6 @@
                                     </div>
                                   </div>
 
-                                  
-
-                                  
-
                                   {{-- <div class="input-group mb-3">
                                       <input type="text"
                                              name="packageexpirydate"
