@@ -148,18 +148,6 @@
 
                                 <div class="input-group mb-3">
                                     <input type="text"
-                                           name="designation"
-                                           value="{{ $localoffice->designation }}"
-                                           autocomplete="off"
-                                           class="form-control"
-                                           placeholder="পদবি (প্রশাসক/মেয়র/চেয়ারম্যান/সচিব ইত্যাদি, যদি থাকে)">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text"><span class="fas fa-user-secret"></span></div>
-                                    </div>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <input type="text"
                                            name="packageexpirydate"
                                            id="packageexpirydate{{ $localoffice->id }}" 
                                            value="{{ date('F d, Y', strtotime($localoffice->package_expiry_date)) }}"
