@@ -191,6 +191,28 @@
                                   </div>
                                 </div>
 
+                                <div class="form-group">
+                                    <label for="imageUpload">Select an Image File</label>
+                                    
+                                    <!-- Bootstrap 4 Custom File Input -->
+                                    <div class="custom-file">
+                                        <!-- 
+                                            The 'accept' attribute restricts the file picker 
+                                            to show only common image types.
+                                        -->
+                                        <input 
+                                            type="file" 
+                                            class="custom-file-input" 
+                                            id="imageUpload" 
+                                            name="image_file"
+                                            required
+                                            accept="image/png, image/jpeg, image/gif"
+                                        >
+                                        <label class="custom-file-label" for="imageUpload">Choose file...</label>
+                                    </div>
+                                    <small class="form-text text-muted">Max file size 5MB. Accepts PNG, JPG, GIF.</small>
+                                </div>
+
                                 
 
                                 
