@@ -103,7 +103,7 @@
 
                                 <div class="custom-control custom-switch mb-3">
                                   <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                                  <label class="custom-control-label" for="customSwitch1">একটিভ স্ট্যাটাস</label>
                                 </div>
 
                                 <div class="input-group mb-3">
