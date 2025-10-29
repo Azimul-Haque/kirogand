@@ -1,5 +1,5 @@
 <!-- Tailwind CSS for minor aesthetic enhancements (AdminLTE is primarily Bootstrap 4) -->
-<script src="https://cdn.tailwindcss.com"></script>
+{{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 
 <!-- Custom Style for Bangla Typography and overall look -->
 <style>
@@ -224,4 +224,3 @@
     </div>
 </div>
 <!-- /.row (Activities) -->
-
