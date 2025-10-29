@@ -67,7 +67,7 @@
                     </td>
                     <td><small>{{ date('F d, Y', strtotime($localoffice->created_at)) }}</small></td>
                     <td>
-                      <button type="button" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#editUserModal{{ $localoffice->id }}">
+                      <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editUserModal{{ $localoffice->id }}">
                         <i class="fas fa-user-edit"></i>
                       </button>
                     </td>
