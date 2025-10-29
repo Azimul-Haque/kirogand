@@ -13,6 +13,12 @@
 
 @section('content')
   @section('page-header') ইউনিয়ন/পৌরসভা @endsection
+  @section('page-header-right')
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
+        <li class="breadcrumb-item active">ব্যবহারকারীগণ</li>
+    </ol>
+  @endsection
     <div class="container-fluid">
       <div class="card">
           <div class="card-header">
