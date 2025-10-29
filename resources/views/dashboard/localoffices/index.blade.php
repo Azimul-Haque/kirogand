@@ -142,10 +142,38 @@
                                              autocomplete="off"
                                              class="form-control"
                                              placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
-                                      <div class="input-group-append">
-                                          <div class="input-group-text"><span class="fas fa-phone"></span></div>
-                                      </div>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><span class="fas fa-phone"></span></div>
+                                        </div>
+                                    </div>
                                   </div>
+                                  <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                        <input type="email"
+                                               name="email"
+                                               value="{{ $localoffice->email }}"
+                                               autocomplete="off"
+                                               class="form-control"
+                                               placeholder="অফিস ইমেইল এড্রেস">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><span class="fas fa-envelope"></span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                      <select name="office_type" class="form-control" required>
+                                        <option disabled="" value="">ধরন নির্ধারণ করুন</option>
+                                        <option value="up" @if($localoffice->office_type == 'up') selected="" @endif>ইউনিয়ন পরিষদ</option>
+                                        <option value="poura" @if($localoffice->office_type == 'poura') selected="" @endif>পৌরসভা</option>
+                                      </select>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><span class="fas fa-landmark"></span></div>
+                                        </div>
+                                    </div>
                                   </div>
                                   <div class="col-md-6">
                                     <div class="input-group mb-3">
@@ -170,16 +198,7 @@
 
                                 
 
-                                <div class="input-group mb-3">
-                                  <select name="office_type" class="form-control" required>
-                                    <option disabled="" value="">ধরন নির্ধারণ করুন</option>
-                                    <option value="up" @if($localoffice->office_type == 'up') selected="" @endif>ইউনিয়ন পরিষদ</option>
-                                    <option value="poura" @if($localoffice->office_type == 'poura') selected="" @endif>পৌরসভা</option>
-                                  </select>
-                                    <div class="input-group-append">
-                                        <div class="input-group-text"><span class="fas fa-landmark"></span></div>
-                                    </div>
-                                </div>
+                                
 
                                 <div class="input-group mb-3">
                                     <input type="text"
