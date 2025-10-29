@@ -60,6 +60,8 @@
                       <small><span>প্যাকেজ: <b>{{ date('d F, Y', strtotime($user->package_expiry_date)) }}</b></span></small>
                 		</td>
                     <td>
+                    </td>
+                    <td>
 
                       @if ($user->authorities->isNotEmpty())
                           {{-- {{ print_r($user->authorities->first()->getAncestorsByLevel()) }} --}}
