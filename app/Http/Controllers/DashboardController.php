@@ -534,6 +534,11 @@ class DashboardController extends Controller
         return view('dashboard.profile.index');
     }
 
+    public function updateProfileLocalOffice()
+    {
+        return view('dashboard.profile.index');
+    }
+
     public function getPackages()
     {
         $packages = Package::all();
