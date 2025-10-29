@@ -85,7 +85,7 @@
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
-                        <form method="post" action="{{ route('dashboard.users.update', $localoffice->id) }}">
+                        <form method="post" action="{{ route('dashboard.users.update', $localoffice->id) }}" enctype="multipart/form-data">
                           <div class="modal-body">
                             @php
                               $authlevel = '';
