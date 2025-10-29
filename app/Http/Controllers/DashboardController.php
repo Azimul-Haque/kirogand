@@ -557,7 +557,7 @@ class DashboardController extends Controller
 
         $user->save();
 
-        return redirect()->back()->with('success', 'Your profile information has been updated successfully.');
+        return redirect()->back()->with('success', 'আপনার ব্যক্তিগত তথ্য আপডেট করা হয়েছে!');
     }
 
     public function updateProfileLocalOffice(Request $request, $id)
