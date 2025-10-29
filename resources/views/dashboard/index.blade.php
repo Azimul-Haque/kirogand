@@ -8,7 +8,10 @@
 @section('content')
 	@section('page-header') ড্যাশবোর্ড @endsection
   @section('page-header-right')
-    sdasd
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="#">হোম</a></li>
+        <li class="breadcrumb-item active">ড্যাশবোর্ড</li>
+    </ol>
   @endsection
     <div class="container-fluid">
       @if(Auth::user()->role == 'admin')
