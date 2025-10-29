@@ -1,3 +1,27 @@
+<!-- Tailwind CSS for minor aesthetic enhancements (AdminLTE is primarily Bootstrap 4) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Custom Style for Bangla Typography and overall look -->
+<style>
+    .info-box-icon i {
+        font-size: 3rem !important;
+        line-height: 4.5rem !important;
+    }
+    .card-header-bangla {
+        font-weight: 700;
+        color: #343a40;
+        border-bottom: 2px solid #007bff; /* Primary color separator */
+    }
+    /* Custom card style for quick actions */
+    .quick-action-card {
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .quick-action-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+</style>
 <!-- 1. Info Boxes / Summary Metrics -->
 <div class="row">
     <!-- Total Certificates Issued -->
