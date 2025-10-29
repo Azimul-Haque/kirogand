@@ -166,7 +166,7 @@
           </div>
         </div>
       @elseif(Auth::user()->role == 'manager')
-        
+        @include('partials._messages')
       @endif
     </div>
 @endsection
