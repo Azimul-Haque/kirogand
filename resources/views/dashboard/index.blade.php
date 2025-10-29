@@ -159,29 +159,29 @@
             </div>
           </div>
         </div>
-      @elseif(Auth::user()->role == 'mananger')
-      <div class="row">
-        <div class="col-md-3">
-          <a href="" class="info-box mb-3">
-            <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-coins"></i></span>
+      @elseif(Auth::user()->role == 'manager')
+        <div class="row">
+          <div class="col-md-3">
+            <a href="" class="info-box mb-3">
+              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-coins"></i></span>
 
-            <div class="info-box-content">
-              <span class="info-box-text">দৈনিক জমা</span>
-              <span class="info-box-number">৳ {{ 0 }}</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="" class="info-box mb-3">
-            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-hand-holding-usd"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">দৈনিক জমা</span>
+                <span class="info-box-number">৳ {{ 0 }}</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="" class="info-box mb-3">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-hand-holding-usd"></i></span>
 
-            <div class="info-box-content">
-              <span class="info-box-text">দৈনিক খরচ</span>
-              <span class="info-box-number">৳ {{ 0 }}</span>
-            </div>
-          </a>
+              <div class="info-box-content">
+                <span class="info-box-text">দৈনিক খরচ</span>
+                <span class="info-box-number">৳ {{ 0 }}</span>
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
       @endif
     </div>
 @endsection
