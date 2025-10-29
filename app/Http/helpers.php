@@ -52,7 +52,7 @@
       $ends = array('th','st','nd','rd','th','th','th','th','th','th');
       if ($text == 'admin')
           return 'এডমিন';+
-      elseif ($text == 'admin')
+      elseif ($text == 'manager')
           return 'এডমিন';
       else
           return $text;
