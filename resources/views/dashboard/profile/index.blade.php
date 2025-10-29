@@ -25,7 +25,7 @@
                     <h3 class="card-title"><i class="fas fa-user-circle mr-1"></i> আমার তথ্য</h3>
                 </div>
                 <!-- Form: My Information -->
-                <form action="/update-user-profile" method="POST">
+                <form action="{{ route('dashboard.profile.update.user', Auth::user()->id) }}" method="POST">
                     @csrf
                     <input type="hidden" name="_method" value="POST">
                     <div class="card-body">
