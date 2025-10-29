@@ -206,7 +206,7 @@
                                                 type="file" 
                                                 class="custom-file-input" 
                                                 id="monogram" 
-                                                name="image_file"
+                                                name="monogram"
                                                 required
                                                 accept="image/png, image/jpeg, image/gif"
                                             >
