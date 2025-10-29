@@ -65,7 +65,7 @@
                         {{ $user->name }}
                       @endforeach
                     </td>
-                    <td>{{ date('F d, Y', strtotime($localoffice->created_at)) }}</td>
+                    <td><small>{{ date('F d, Y', strtotime($localoffice->created_at)) }}</small></td>
                     <td>
 
                     </td>
