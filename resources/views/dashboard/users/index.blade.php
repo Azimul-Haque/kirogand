@@ -482,8 +482,8 @@
                                   <div class="input-group mb-3">
                                       <select class="form-control" name="local_office_id">
                                           <option value="" selected disabled>বিভাগ নির্বাচন করুন</option>
-                                          @foreach ($divisions as $division)
-                                              <option value="{{ $division->id }}" data-level-name="Division">{{ $division->bn_name }}</option>
+                                          @foreach ($localoffices as $localoffice)
+                                              <option value="{{ $localoffice->id }}">{{ $localoffice->bn_name }}</option>
                                           @endforeach
                                       </select>
                                   </div>
