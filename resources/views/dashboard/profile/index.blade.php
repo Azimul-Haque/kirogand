@@ -234,7 +234,7 @@
                                                required> <!-- Assuming monogram is null, hence required -->
                                         <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
                                     </div>
-                                    <small class="form-text text-muted">সর্বোচ্চ ফাইল সাইজ 300KB। (PNG, JPG, GIF)</small>
+                                    <small class="form-text text-muted">সর্বোচ্চ ফাইলের আকার ৩০০KB। PNG, JPG, GIF গ্রহণ করে। (৩০০px X ৩০০px)</small>
                                 </div>
                             </div>
                             <div class="col-md-6">
