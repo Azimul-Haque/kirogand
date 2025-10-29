@@ -153,15 +153,53 @@ class DashboardController extends Controller
                     ->withLocaloffices($localoffices);
     }
 
-    public function updateLocalOffices()
+    public function updateLocalOffices(Request $request, LocalOffice $localoffice)
     {
-        // ONLY ADMIN
-        $localofficescount = LocalOffice::count();
-        $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
+        $this->validate($request, [
+            'name_bn'           => 'required|string|max:255',
+            'name'              => 'nullable|string|max:255',
+            'mobile'            => 'required|string|digits:11',
+            'email'             => 'nullable|email|max:255',
+            'office_type'       => 'required|in:up,poura',
+            'packageexpirydate' => 'required|date',
+            'monogram'          => 'sometimes|image|max:300',
+        ]);
 
-        return view('dashboard.localoffices.index')
-                    ->withLocalofficescount($localofficescount)
-                    ->withLocaloffices($localoffices);
+        $localoffice->name_bn           = $request->name_bn;
+        $localoffice->name              = $request->name;
+        $localoffice->mobile            = $request->mobile;
+        $localoffice->email             = $request->email;
+        $localoffice->office_type       = $request->office_type;
+
+        $localoffice->package_expiry_date = Carbon::parse($request->packageexpirydate)->toDateString();
+
+        $localoffice->is_active = $request->has('is_active') ? 1 : 0;
+
+        if ($request->hasFile('monogram')) {
+            $image = $request->file('monogram');
+
+            $filename = str_replace(['?', ':', '\\', '/', '*', ' '], '_', $localoffice->name_bn) . time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/localoffices/' . $filename);
+
+            if ($localoffice->monogram) {
+                $old_file = public_path('images/localoffices/' . $localoffice->monogram);
+                if (File::exists($old_file)) {
+                    File::delete($old_file);
+                }
+            }
+
+            Image::make($image)->resize(300, 300, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })->save($location);
+
+            $localoffice->monogram = $filename;
+        }
+
+        $localoffice->save();
+
+        return redirect()->back()
+                         ->with('success', 'Local office details updated successfully.');
     }
 
     public function getApplyforCertificate()
