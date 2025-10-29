@@ -194,7 +194,7 @@
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="imageUpload">Select an Image File</label>
+                                        <label for="monogram">Select an Image File</label>
                                         
                                         <!-- Bootstrap 4 Custom File Input -->
                                         <div class="custom-file">
@@ -205,12 +205,12 @@
                                             <input 
                                                 type="file" 
                                                 class="custom-file-input" 
-                                                id="imageUpload" 
+                                                id="monogram" 
                                                 name="image_file"
                                                 required
                                                 accept="image/png, image/jpeg, image/gif"
                                             >
-                                            <label class="custom-file-label" for="imageUpload">ছবি সিলেক্ট করুন</label>
+                                            <label class="custom-file-label" for="monogram">ছবি সিলেক্ট করুন</label>
                                         </div>
                                         <small class="form-text text-muted">Max file size 300KB. Accepts PNG, JPG, GIF.</small>
                                     </div>
