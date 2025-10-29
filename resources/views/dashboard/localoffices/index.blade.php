@@ -87,6 +87,9 @@
                         <form method="post" action="{{ route('dashboard.users.update', $localoffice->id) }}">
                           <div class="modal-body">
                             @php
+                              if($localoffice->users && $localoffice->users->count() > 0) {
+                                
+                              }
                               $userAuthority = $localOffice->user->authorities->first();
 
                               if ($userAuthority) {
