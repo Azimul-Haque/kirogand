@@ -199,13 +199,13 @@ class DashboardController extends Controller
 
         // image upload
         if($request->hasFile('monogram')) {
-            $image_path = public_path('images/blogs/'. $blog->monogram);
+            $image_path = public_path('images/localoffices/'. $localoffice->monogram);
             if(File::exists($image_path)) {
                 File::delete($image_path);
             }
             $image      = $request->file('monogram');
             $filename   = str_replace(['?',':', '\\', '/', '*', ' '], '-', strtolower($request->slug)) . '-' .time() . '.' . "webp";
-            $location   = public_path('images/blogs/'. $filename);
+            $location   = public_path('images/localoffices/'. $filename);
             // Image::make($image)->resize(600, null, function ($constraint) { $constraint->aspectRatio(); })->save($location);
             Image::make($image)->fit(600, 315)->save($location);
             $blog->monogram = $filename;
