@@ -61,7 +61,7 @@
                 		</td>
                     <td>
                       {{ $user->designation }}<br/>
-                      {{ $user->localOffice->name_bn }}
+                      {{ $user->localOffice != null ? $user->localOffice->name_bn : '' }}
                     </td>
                     <td>
 
