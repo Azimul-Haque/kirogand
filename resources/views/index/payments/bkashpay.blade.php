@@ -62,7 +62,7 @@
         }
 
         .card{
-            width:350px;
+            width:300px;
             height:150px;
         }
 
