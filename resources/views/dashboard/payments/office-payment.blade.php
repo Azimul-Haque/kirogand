@@ -248,7 +248,7 @@
           @endforeach
       </div>
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-10">
           <!-- Main AdminLTE 3 Callout using Bootstrap 4 classes -->
             <div class="callout callout-success shadow">
               <div class="callout-content">
