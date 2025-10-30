@@ -110,7 +110,6 @@ function isPackageExpired(?string $expiryDate): bool
 
 function isPackageExpiringSoon(?string $expiryDate, int $days = 10): bool
 {
-    // If it's already expired, it cannot be 'expiring soon'.
     if (isPackageExpired($expiryDate)) {
         return false;
     }
