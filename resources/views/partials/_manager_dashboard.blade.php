@@ -156,6 +156,7 @@
                     মেয়াদ শেষ: {{ Auth::user()->localOffice->package_expiry_date != null ? date('d F, Y', strtotime(Auth::user()->localOffice->package_expiry_date)) : 'কোন প্যাকেজ কেনা নেই!' }}
                 </p>
                 <a href="{{ route('dashboard.payments.office') }}" class="btn btn-outline-light btn-sm mt-2">প্যাকেজ নবায়ন করুন <i class="fas fa-arrow-circle-right"></i></a>
+                @endif
             </div>
         </div>
     </section>
