@@ -68,7 +68,6 @@
             border-radius: 10px;
             overflow: hidden;
             border: 1px solid #e0e0e0;
-            height: 100%; /* Ensure all cards have equal height */
             display: flex;
             flex-direction: column;
         }
