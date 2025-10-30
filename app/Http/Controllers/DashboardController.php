@@ -638,7 +638,7 @@ class DashboardController extends Controller
     {
         $packages = Package::all();
         
-        return view('dashboard.payments.office-payment')->withPackages($packages);
+        return view('dashboard.payments.payment-list')->withPackages($packages);
     }
 
     public function getOfficePaymentsList ()
