@@ -149,7 +149,7 @@
             <div class="card-body pt-0 pb-3">
                 @if(Auth::user()->localOffice)
                     <p class="text-white">
-
+                        @if(isPackageExpired(Auth::user()->localOffice->package_expiry_date))
                         আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শীঘ্রই শেষ হতে চলেছে।
                     </p>
                     <p class="text-white text-lg font-weight-bold">
