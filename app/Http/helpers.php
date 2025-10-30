@@ -87,8 +87,6 @@ function isPackageExpired(?string $expiryDate): bool
 {
     // 1. Check if the expiry date is null or empty. If no date is set, treat it as non-existent or expired for safety.
     if (empty($expiryDate)) {
-        // Depending on your business logic, you might return true or false here. 
-        // Returning true (expired) is safer for access control.
         return true; 
     }
 
