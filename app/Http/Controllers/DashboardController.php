@@ -46,12 +46,6 @@ class DashboardController extends Controller
         $this->middleware(['admin'])->only('getUsers', 'storeUser', 'updateUser', 'deleteUser', 'getUser', 'getLocalOffices', 'updateLocalOffices', 'getPackages', 'storePackage', 'updatePackage', 'deletePackage', 'getPayments', 'getPaymentsSearch', 'getMessages', 'updateMessage', 'getNotifications', 'sendSingleNotification', 'sendSingleSMS', 'getBlogs', 'getBlogsSearch', 'storeBlog', 'storeBlogCategory', 'updateBlog', 'getExamSolvePDF');
 
         $this->middleware(['admin_or_manager'])->only('getApplyforCertificate');
-
-        if(Auth::user()->local_office_id) {
-          $localoffice = LocalOffice::findOrFail(Auth::user()->local_office_id);
-          $packageexpirycheck = isPackageExpired($localoffice->package_expiry_date);
-        }
-        
     }
 
     /**
