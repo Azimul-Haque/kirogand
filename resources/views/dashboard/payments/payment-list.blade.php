@@ -55,7 +55,7 @@
                           <td><b>৳ {{ $payment->store_amount }}</b> <small>(৳ {{ $payment->amount }})</small></td>
                           <td>{{ $payment->card_type }}</td>
                           <td>{{ $payment->payment_status == 1 ? 'Successfull' : 'Failed' }}</td>
-                          <td>{{ date('F d, Y h:i A', strtotime($payment->created_at)) }}</td>
+                          <td>{{ bangla(date('F d, Y h:i A', strtotime($payment->created_at))) }}</td>
                         </tr>
                       @endforeach
                     </tbody>
