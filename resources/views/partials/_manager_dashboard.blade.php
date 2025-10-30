@@ -143,12 +143,12 @@
             <div class="card-header border-0">
                 <h3 class="card-title font-weight-bold text-white">
                     <i class="fas fa-calendar-times mr-1"></i>
-                    প্যাকেজ স্থিতি
+                    প্যাকেজ মেয়াদ
                 </h3>
             </div>
             <div class="card-body pt-0 pb-3">
                 <p class="text-white">
-                    আপনার **সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ** শীঘ্রই শেষ হতে চলেছে।
+                    আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শীঘ্রই শেষ হতে চলেছে।
                 </p>
                 <p class="text-white text-lg font-weight-bold">
                     মেয়াদ শেষ: {{ date('d F, Y', strtotime('+20 days')) }}
