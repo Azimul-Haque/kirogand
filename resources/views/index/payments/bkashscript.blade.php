@@ -95,6 +95,21 @@
                     bKash.create().onError();
                 }
             });
+            document.addEventListener('DOMContentLoaded', function() {
+                        
+                // 1. Select the element using its class name
+                // querySelector will find the *first* element that matches the selector
+                const targetElement = document.querySelector('.merchant__details__name');
+                
+                // 2. Check if the element was found to prevent errors
+                if (targetElement) {
+                    // 3. Update the text content of the element
+                    targetElement.textContent = 'D-Nagorik Payment';
+                    console.log('Successfully changed text to: D-Nagorik Payment');
+                } else {
+                    console.error('Element with class "merchant__details__name" not found.');
+                }
+            });
         }
         function BkashSuccess(data) {
             // console.log('পেমেন্ট সাকসেসফুল!');
