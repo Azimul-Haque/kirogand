@@ -148,6 +148,7 @@
             </div>
             <div class="card-body pt-0 pb-3">
                 <p class="text-white">
+                    
                     আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শীঘ্রই শেষ হতে চলেছে।
                 </p>
                 <p class="text-white text-lg font-weight-bold">
