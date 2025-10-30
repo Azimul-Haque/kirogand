@@ -637,12 +637,12 @@ class DashboardController extends Controller
         return view('dashboard.payments.office-payment')->withPackages($packages);
     }
 
-    public function getExamsToday()
-    {
-        $examstoday = Meritlist::whereDate('created_at', Carbon::today())->paginate(15);
+    // public function getExamsToday()
+    // {
+    //     $examstoday = Meritlist::whereDate('created_at', Carbon::today())->paginate(15);
         
-        return view('dashboard.exams.examstoday')->withExamstoday($examstoday);
-    }
+    //     return view('dashboard.exams.examstoday')->withExamstoday($examstoday);
+    // }
 
     public function storePackage(Request $request)
     {
