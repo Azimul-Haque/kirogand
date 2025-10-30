@@ -139,11 +139,11 @@
         </div>
 
         <!-- System Status / Package Expiry Card -->
-        <div class="card bg-info shadow">
+        <div class="card bg-success shadow">
             <div class="card-header border-0">
                 <h3 class="card-title font-weight-bold text-white">
                     <i class="fas fa-calendar-times mr-1"></i>
-                    সিস্টেম/প্যাকেজ স্থিতি
+                    প্যাকেজ স্থিতি
                 </h3>
             </div>
             <div class="card-body pt-0 pb-3">
