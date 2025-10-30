@@ -174,7 +174,7 @@
                       <div class="modal-content">
 
                           <!-- Modal Header -->
-                          <div class="modal-header bg-primary text-white">
+                          <div class="modal-header bg-success text-white">
                               <h4 class="modal-title">{{ $package->name }} প্ল্যান সাবস্ক্রাইব করুন</h4>
                               <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
