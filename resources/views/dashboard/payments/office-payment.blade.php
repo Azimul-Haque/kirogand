@@ -145,7 +145,7 @@
                                   <li> <span class="feature-check">✓</span> আনলিমিটেড সার্টিফিকেট জেনারেট</li>
                                   <li> <span class="feature-check">✓</span> একাধিক ইউজার যোগ ও ব্যবহারের সুযোগ</li>
                                   @if($package->price > 1000)
-                                    <li> <span class="feature-check">✓</span> মডেল টেস্ট ও সাবজেক্টিভ প্রস্তুতি</li>
+                                    <li> <span class="feature-check">✓</span> নতুন ফিচার অনুরোধ</li>
                                     <li> <span class="feature-check text-danger">✖</span> সীমিত সাপোর্ট</li>
                                   @else
 
