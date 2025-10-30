@@ -49,14 +49,7 @@
                 <i class="fas fa-clipboard-check"></i> নতুন পেমেন্ট
               </button> --}}
               <div class="card-tools">
-                <form class="form-inline form-group-lg" action="">
-                  <div class="form-group">
-                    <input type="search-param" class="form-control form-control-sm" placeholder="পেমেন্ট খুঁজুন" id="search-param" required>
-                  </div>
-                  <button type="button" id="search-button" class="btn btn-default btn-sm" style="margin-left: 5px;">
-                    <i class="fas fa-search"></i> খুঁজুন
-                  </button>
-                </form>
+                
                 
               </div>
             </div>
