@@ -64,7 +64,12 @@
             width:300px;
             height:150px;
 
-            
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
         }
 
         .image{
