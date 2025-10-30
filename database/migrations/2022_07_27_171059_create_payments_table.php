@@ -23,7 +23,7 @@ class CreatePaymentsTable extends Migration
             $table->string('trx_id');
             $table->string('amount');
             $table->string('store_amount');
-            $table->foreign('local_office_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('local_office_id')->references('id')->on('localoffices')->onDelete('cascade');
             $table->timestamps();
         });
     }
