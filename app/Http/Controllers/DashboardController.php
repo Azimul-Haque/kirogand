@@ -641,6 +641,15 @@ class DashboardController extends Controller
         return view('dashboard.payments.office-payment')->withPackages($packages);
     }
 
+    
+
+    public function getOfficePaymentsList ()
+    {
+        $payments = Payment::orderBy('id', 'desc')->paginate(15);
+        
+        return view('dashboard.payments.index')->withPayments($payments);
+    }
+
     // public function getExamsToday()
     // {
     //     $examstoday = Meritlist::whereDate('created_at', Carbon::today())->paginate(15);
