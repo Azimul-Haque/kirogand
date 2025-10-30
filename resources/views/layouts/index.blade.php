@@ -13,12 +13,12 @@
     <meta property="og:image" content="{{ asset('images/bcs-exam-aid-banner.png') }}" />
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="{{ Request::url() }}" />
-    <meta property="og:site_name" content="BCS Exam Aid">
+    <meta property="og:site_name" content="D-Nagorik">
     <meta property="og:locale" content="en_US">
     <meta property="fb:admins" content="100001596964477">
     <meta property="fb:app_id" content="1471913530260781">
     <meta property="og:type" content="website">
-    <meta property="og:image:alt" content="BCS Exam Aid" />
+    <meta property="og:image:alt" content="D-Nagorik" />
     <link rel="canonical" href="{{ url()->current() }}">
     <meta name="facebook-domain-verification" content="zzjvr4zbhetww7xikfwoq0rlpu6u09" />
   @endif
@@ -33,7 +33,7 @@
 
 
   <!--====== Title ======-->
-  {{-- <title>BCS Exam Aid</title> --}}
+  {{-- <title>D-Nagorik</title> --}}
   <title>@yield('title')</title>
   <!--====== Favicon Icon ======-->
   <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/svg" />
@@ -169,7 +169,7 @@
       "@context": "https://schema.org",
       "@type": "Website",
       "headline": "D-Nagorik",
-      "description": "BCS Exam Aid - বিসিএস ও সরকারি চাকরির সেরা প্ল্যাটফর্ম",
+      "description": "D-Nagorik - বিসিএস ও সরকারি চাকরির সেরা প্ল্যাটফর্ম",
       "image": "{{ asset('images/bcs-exam-aid-banner.png') }}",
       "url": "{{ url()->current() }}",
       "author": {
