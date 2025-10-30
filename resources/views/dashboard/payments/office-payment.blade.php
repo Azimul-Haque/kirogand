@@ -239,7 +239,7 @@
                               </div>
 
                               <!-- Modal footer -->
-                              <div class="modal-footer justify-content-between">
+                              <div class="modal-footer ">
                                   <button type="button" class="btn btn-default" data-dismiss="modal">ফিরে যান</button>
                                   <input type="hidden" name="amount" value="{{ $package->price }}" required>
                                   <input type="hidden" name="package_id" value="{{ $package->id }}" required>
