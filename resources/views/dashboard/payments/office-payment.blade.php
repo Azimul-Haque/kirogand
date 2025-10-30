@@ -185,7 +185,7 @@
                               @csrf
                               <!-- Modal body -->
                               <div class="modal-body">
-                                  <h5 class="text-primary">{{ $package->name }} ({{ $package->tagline }})</h5>
+                                  <h5 class="text-primary"><small>{{ $package->name }}</small> ({{ $package->tagline }})</h5>
                                   <p>
                                       <b>প্যাকেজের মেয়াদ:</b> <span class="text-bold">{{ $package->duration }}</span>
                                   </p>
