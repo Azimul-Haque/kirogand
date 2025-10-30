@@ -139,7 +139,7 @@
         </div>
 
         <!-- System Status / Package Expiry Card -->
-        <div class="card @if(isPackageExpired(Auth::user()->localOffice->package_expiry_date) || isPackageExpiringSoon(Auth::user()->localOffice->package_expiry_date)) bg-danger @else bg-success @endif shadow">
+        <div class="card @if(isPackageExpired(Auth::user()->localOffice->package_expiry_date)) bg-danger @elseif(isPackageExpiringSoon(Auth::user()->localOffice->package_expiry_date)) @else bg-success @endif shadow">
             <div class="card-header border-0">
                 <h3 class="card-title font-weight-bold text-white">
                     <i class="fas fa-calendar-times mr-1"></i>
