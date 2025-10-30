@@ -81,3 +81,32 @@
     }
     return $thecash; // writes the final format where $currency is the currency symbol.
 }
+
+function isPackageExpired(?string $expiryDate): bool
+{
+    // 1. Check if the expiry date is null or empty. If no date is set, treat it as non-existent or expired for safety.
+    if (empty($expiryDate)) {
+        // Depending on your business logic, you might return true or false here. 
+        // Returning true (expired) is safer for access control.
+        return true; 
+    }
+
+    try {
+        // 2. Convert the database date string into a Carbon object.
+        $expiry = Carbon::parse($expiryDate);
+        
+        // 3. Get the current time (now).
+        $now = Carbon::now();
+
+        // 4. Compare: If the expiry date is before the current time, it is expired.
+        // Using ->isPast() is a simple and reliable method.
+        return $expiry->isPast();
+
+    } catch (\Exception $e) {
+        // Handle parsing errors gracefully (e.g., if the date format is invalid)
+        // You might log the error here.
+        \Log::error("Date parsing error for package expiry: " . $e->getMessage());
+        // Treat as expired if the date is unparseable for safety.
+        return true; 
+    }
+}
