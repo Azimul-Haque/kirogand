@@ -153,7 +153,7 @@
                 <p class="text-white text-lg font-weight-bold">
                     মেয়াদ শেষ: {{ date('d F, Y', strtotime('+20 days')) }}
                 </p>
-                <a href="#" class="btn btn-outline-light btn-sm mt-2">প্যাকেজ নবায়ন করুন <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{{ route('dashboard.payments.office') }}" class="btn btn-outline-light btn-sm mt-2">প্যাকেজ নবায়ন করুন <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
     </section>
