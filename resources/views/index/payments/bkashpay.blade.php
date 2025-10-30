@@ -64,7 +64,7 @@
         .card{
             
             width:300px;
-            height:150px;
+            height:200px;
         }
 
         .image{
