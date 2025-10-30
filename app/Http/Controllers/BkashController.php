@@ -175,7 +175,7 @@ class BkashController extends Controller
         $user = User::where('mobile', $request->mobile)->first();
         
         $payment = new Payment;
-        $payment->local_office_id = $user->localOffice;
+        $payment->local_office_id = $user->local_office_id;
         $payment->package_id = $request->package_id;
         $payment->uid = $user->uid;
         $payment->payment_status = 1;
