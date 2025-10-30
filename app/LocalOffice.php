@@ -39,4 +39,8 @@ class LocalOffice extends Model
     {
         return $this->hasMany(User::class);
     }
+
+    public function payments(){
+        return $this->hasMany('App\Payment');
+    }
 }
