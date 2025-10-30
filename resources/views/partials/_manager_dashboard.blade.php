@@ -139,7 +139,7 @@
         </div>
 
         <!-- System Status / Package Expiry Card -->
-        <div class="card bg-danger shadow ">
+        <div class="card bg-danger shadow">
             <div class="card-header border-0">
                 <h3 class="card-title font-weight-bold text-white">
                     <i class="fas fa-calendar-times mr-1"></i>
