@@ -217,9 +217,9 @@
                                       <label for="user_number_{{ $package->id }}" class="font-weight-bold">
                                           অ্যাপে ব্যবহৃত ১১ ডিজিটের মোবাইল নম্বরটি লিখুন:
                                       </label>
-                                      @if(Auth::guest())
+                                      {{-- @if(Auth::guest())
                                           <p class="text-success text-sm m-0">রেজিস্ট্রেশন না করে থাকলে <a href="#!" class="text-primary font-weight-bold">এখানে ক্লিক করুন</a></p>
-                                      @endif
+                                      @endif --}}
                                       <input 
                                           type="number" 
                                           name="user_number" 
