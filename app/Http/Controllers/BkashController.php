@@ -186,7 +186,7 @@ class BkashController extends Controller
         $payment->save();
 
         
-        $current_package_date = Carbon::parse($user->package_expiry_date);
+        $current_package_date = Carbon::parse($user->localOffice->package_expiry_date);
         $package = Package::findOrFail($request->package_id);
         if($current_package_date->greaterThanOrEqualTo(Carbon::now())) {
             $package_expiry_date = $current_package_date->addDays($package->numeric_duration)->format('Y-m-d') . ' 23:59:59';
@@ -194,7 +194,7 @@ class BkashController extends Controller
             $package_expiry_date = Carbon::now()->addDays($package->numeric_duration)->format('Y-m-d') . ' 23:59:59';
         }
         // dd($package_expiry_date);
-        $user->package_expiry_date = $package_expiry_date;
+        $user->localOffice->package_expiry_date = $package_expiry_date;
         $user->save();
         return response()->json(['status' => true]);
         
