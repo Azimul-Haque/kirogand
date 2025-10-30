@@ -486,6 +486,7 @@ class DashboardController extends Controller
         $localoffice->email             = $request->email;
         $localoffice->office_type       = $request->office_type;
 
+        Carbon::now()->format('Y-m-d') . ' 23:59:59'
         $localoffice->package_expiry_date = date('Y-m-d', strtotime($request->packageexpirydate)) . ' 23:59:59';
 
         $localoffice->is_active = $request->has('is_active') ? 1 : 0;
