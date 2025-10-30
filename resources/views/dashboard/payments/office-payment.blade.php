@@ -5,8 +5,86 @@
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css"> --}}
 
     <style>
-    
+        /* প্যাকেজ কার্ডের জন্য কাস্টম স্টাইল */
+        .package-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            height: 100%; /* Ensure all cards have equal height */
+            display: flex;
+            flex-direction: column;
+        }
 
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* হাইলাইট করা প্যাকেজের জন্য বিশেষ স্টাইল */
+        .package-card.suggested-card {
+            border-color: #007bff; /* AdminLTE Primary Color */
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+        }
+
+        .card-header-suggested {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .price-value {
+            font-size: 2.5rem; /* মূল্য বড় করে দেখানো */
+            font-weight: 700;
+            color: #28a745; /* AdminLTE Success Color */
+            margin-bottom: 0.5rem;
+        }
+
+        .suggested-card .price-value {
+            color: #ffc107; /* AdminLTE Warning Color for contrast on blue background */
+        }
+
+        .strike-through {
+            font-size: 1rem;
+            color: #999;
+            margin-right: 5px;
+        }
+
+        .card-body {
+            padding-bottom: 0;
+            flex-grow: 1; /* Make sure the body takes up available space */
+        }
+
+        .card-footer {
+            padding: 1rem;
+            border-top: none;
+        }
+
+        /* বৈশিষ্ট্য তালিকা সরল করা হয়েছে */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-check {
+            color: #28a745; /* Checkmark color */
+            margin-right: 8px;
+            font-weight: bold;
+        }
     </style>
 @endsection
 
