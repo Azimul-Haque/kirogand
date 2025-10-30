@@ -169,7 +169,7 @@
       "@context": "https://schema.org",
       "@type": "Website",
       "headline": "D-Nagorik",
-      "description": "D-Nagorik - বিসিএস ও সরকারি চাকরির সেরা প্ল্যাটফর্ম",
+      "description": "ডি-নাগরিক: অনলাইনে ডিজিটাল সনদপত্র, প্রত্যয়ন ও সরকারি সেবা নিতে এখনই যুক্ত হোন ডিজিটাল নাগরিকের সাথে—বাংলাদেশের সেরা সনদ ও প্রত্যয়ন সেবা প্ল্যাটফর্ম।",
       "image": "{{ asset('images/bcs-exam-aid-banner.png') }}",
       "url": "{{ url()->current() }}",
       "author": {
