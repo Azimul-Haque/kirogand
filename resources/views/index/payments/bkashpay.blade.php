@@ -89,43 +89,7 @@
             margin-top:2px;
         }
 
-        .colors{
-            display:flex;
-            margin-top:2px;
-        }
-
-        .colors span{
-            width:15px;
-            height:15px;
-            border-radius:50%;
-            cursor:pointer;
-            display:flex;
-            margin-right:6px;
-        }
-
-        .colors span:nth-child(1) {
-            
-            background-color:red;
-            
-        }
-
-        .colors span:nth-child(2) {
-            
-            background-color:blue;
-            
-        }
-
-        .colors span:nth-child(3) {
-            
-            background-color:yellow;
-            
-        }
-
-        .colors span:nth-child(4) {
-            
-            background-color:purple;
-            
-        }
+        
 
         .btn-danger{
             
