@@ -47,6 +47,7 @@ class DashboardController extends Controller
 
         $this->middleware(['admin_or_manager'])->only('getApplyforCertificate');
 
+        dd(Auth::user());
         if(Auth::user()->local_office_id) {
           $localoffice = LocalOffice::findOrFail(Auth::user()->local_office_id);
           $packageexpirycheck = isPackageExpired($localoffice->package_expiry_date);
