@@ -75,9 +75,7 @@ class DashboardController extends Controller
           $packageexpirycheck = isPackageExpired(Auth::user()->localOffice->package_expiry_date);
           if($packageexpirycheck) {
             Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
-        } else {
-            Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
-        }
+            }
         }
 
         // $totalsites = Site::count();
