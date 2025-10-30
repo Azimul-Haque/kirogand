@@ -26,7 +26,7 @@ class CreateLocalOfficesTable extends Migration
             $table->string('name', 191)->nullable();
             $table->string('office_type', 50); // E.g., 'Union Parishad', 'Pourasava', 'District Council'
             $table->integer('installation_rate', 50);
-            $table->string('monthly_rate', 50);
+            $table->integer('monthly_rate', 50);
             $table->boolean('is_active')->default(true);
             
             $table->timestamps();
