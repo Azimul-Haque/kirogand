@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller as BaseController;
 
 use App\Message;
 use View;
+use Auth;
 
 class Controller extends BaseController
 {
