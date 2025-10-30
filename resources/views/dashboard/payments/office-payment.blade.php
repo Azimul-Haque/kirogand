@@ -117,7 +117,7 @@
                               <h4 class="mb-1 @if($package->suggested != 1) text-primary @endif">
                                   {{ $package->name }}
                               </h4>
-                              <p class="text-sm m-0 @if($package->suggested == 1) text-white @else text-muted @endif">
+                              <p class="text-sm m-0 @if($package->suggested == 1) text-white @else text-muted১ @endif">
                                   {{ $package->tagline }}
                               </p>
                           </div>
