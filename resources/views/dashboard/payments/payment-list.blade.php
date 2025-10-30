@@ -47,7 +47,21 @@
                         </tr>
                     </thead>
                     <tbody id="payment-history-body">
-                        <!-- Data will be injected here by JavaScript -->
+                      @foreach($payments as $payment)
+                        <tr>
+                          <td>
+                            <a href="#!">{{ $payment->localOffice->name_bn }}</a>
+                            <small>({{ $payment->localOffice->payments->count() }} বার)</small><br/>
+                            <small class="text-black-50">{{ $payment->localOffice->mobile }}</small>
+                          </td>
+                          <td>{{ $payment->package->name }}</td>
+                          <td>{{ $payment->payment_status == 1 ? 'Successfull' : 'Failed' }}</td>
+                          <td>{{ $payment->card_type }}</td>
+                          <td>{{ $payment->trx_id }}</td>
+                          <td><b>৳ {{ $payment->store_amount }}</b> <small>(৳ {{ $payment->amount }})</small></td>
+                          <td>{{ date('F d, Y h:i A', strtotime($payment->created_at)) }}</td>
+                        </tr>
+                      @endforeach
                     </tbody>
                 </table>
             </div>
@@ -64,21 +78,7 @@
                 </thead>
               </thead>
               <tbody>
-                @foreach($payments as $payment)
-                  <tr>
-                    <td>
-                      <a href="#!">{{ $payment->localOffice->name_bn }}</a>
-                      <small>({{ $payment->localOffice->payments->count() }} বার)</small><br/>
-                      <small class="text-black-50">{{ $payment->localOffice->mobile }}</small>
-                    </td>
-                    <td>{{ $payment->package->name }}</td>
-                    <td>{{ $payment->payment_status == 1 ? 'Successfull' : 'Failed' }}</td>
-                    <td>{{ $payment->card_type }}</td>
-                    <td>{{ $payment->trx_id }}</td>
-                    <td><b>৳ {{ $payment->store_amount }}</b> <small>(৳ {{ $payment->amount }})</small></td>
-                    <td>{{ date('F d, Y h:i A', strtotime($payment->created_at)) }}</td>
-                  </tr>
-                @endforeach
+                
               </tbody>
             </table>
           </div>
