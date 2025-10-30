@@ -143,7 +143,7 @@
                               <ul class="feature-list">
                                   <li> <span class="feature-check">✓</span> সফটওয়্যারের সকল ফিচারের এক্সেস</li>
                                   <li> <span class="feature-check">✓</span> আনলিমিটেড সার্টিফিকেট জেনারেট</li>
-                                  <li> <span class="feature-check">✓</span> অন্যান্য চাকরির কোর্স এক্সেস</li>
+                                  <li> <span class="feature-check">✓</span> একাধিক ইউজার যোগ ও ব্যবহারের সুযোগ</li>
                                   <li> <span class="feature-check">✓</span> মডেল টেস্ট ও সাবজেক্টিভ প্রস্তুতি</li>
                                   {{-- আপনি এখানে আপনার লজিক দিয়ে ফিচারগুলো যোগ/বাদ করতে পারেন --}}
                                   {{-- উদাহরণ: <li> <span class="feature-check text-danger">✖</span> সীমিত সাপোর্ট</li> --}}
@@ -200,7 +200,7 @@
                                       <ul class="feature-list">
                                           <li> <span class="feature-check">✓</span> সফটওয়্যারের সকল ফিচারের এক্সেস</li>
                                           <li> <span class="feature-check">✓</span> আনলিমিটেড সার্টিফিকেট জেনারেট</li>
-                                          <li> <span class="feature-check">✓</span> অন্যান্য চাকরির কোর্স এক্সেস</li>
+                                          <li> <span class="feature-check">✓</span> একাধিক ইউজার যোগ ও ব্যবহারের সুযোগ</li>
                                           <li> <span class="feature-check">✓</span> মডেল টেস্ট ও সাবজেক্টিভ প্রস্তুতি</li>
                                       </ul>
                                   </div><br/>
