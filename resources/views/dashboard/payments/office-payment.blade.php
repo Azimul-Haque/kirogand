@@ -107,7 +107,7 @@
                       <div class="card-header text-center p-0 @if($package->suggested == 1) card-header-suggested @endif">
                           @if($package->suggested == 1)
                               {{-- 'জনপ্রিয়' ব্যাজটি কার্ডের উপরে থাকবে --}}
-                              <span class="badge badge-warning p-2" style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); font-size: 0.8rem;">
+                              <span class="badge badge-warning p-2" style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); font-size: 0.8rem; z-index: 999;">
                                   জনপ্রিয়
                               </span>
                               <div class="pt-4 pb-3">
