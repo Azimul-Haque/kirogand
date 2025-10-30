@@ -107,3 +107,30 @@ function isPackageExpired(?string $expiryDate): bool
         return true; 
     }
 }
+
+function isPackageExpiringSoon(?string $expiryDate, int $days = 10): bool
+{
+    // If it's already expired, it cannot be 'expiring soon'.
+    if (isPackageExpired($expiryDate)) {
+        return false;
+    }
+    
+    // If date is empty but not expired (shouldn't happen due to previous check, but for robustness)
+    if (empty($expiryDate)) {
+        return false;
+    }
+
+    try {
+        $expiry = Carbon::parse($expiryDate);
+        
+        // Define the warning threshold: today + $days (e.g., today + 10 days)
+        $warningThreshold = Carbon::now()->addDays($days);
+
+        // If the expiry date is before or equal to the warning threshold, it is expiring soon.
+        return $expiry->lte($warningThreshold);
+
+    } catch (\Exception $e) {
+        \Log::error("Date parsing error for package expiry check (soon): " . $e->getMessage());
+        return false; 
+    }
+}
