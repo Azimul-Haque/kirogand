@@ -194,6 +194,9 @@ class DashboardController extends Controller
             'sms'                     => 'required|string',
         ));
         if($request->randtotalhidden == $request->randtotalvisible) {
+            //  এখানে কাজ করা যাবে না... user_id চেঞ্জ হইসে...
+            //  এখানে কাজ করা যাবে না... user_id চেঞ্জ হইসে...
+            //  এখানে কাজ করা যাবে না... user_id চেঞ্জ হইসে...
             $paidusersids = DB::table('payments')->select('user_id')->groupBy('user_id')->get()->pluck('user_id')->toArray();
             $users = User::select('name', 'mobile')
                          ->where('package_expiry_date', '<', Carbon::now())
