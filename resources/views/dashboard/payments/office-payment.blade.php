@@ -248,6 +248,7 @@
           @endforeach
       </div>
     </div>
+    asd
 @endsection
 
 @section('third_party_scripts')
