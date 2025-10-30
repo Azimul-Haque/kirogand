@@ -158,8 +158,8 @@
                       <div class="card-footer text-center">
                           <button 
                               type="button" 
-                              data-bs-toggle="modal" 
-                              data-bs-target="#packageModal{{ $package->id }}" 
+                              data-toggle="modal" 
+                              data-target="#packageModal{{ $package->id }}" 
                               class="btn btn-block @if($package->suggested == 1) btn-primary @else btn-outline-primary @endif btn-lg"
                           >
                               শুরু করুন!
@@ -169,14 +169,14 @@
               </div>
 
               {{-- প্যাকেজ মডাল (বিদ্যমান লজিক, সামান্য স্টাইল পরিবর্তন) --}}
-              <div class="modal fade" id="packageModal{{ $package->id }}" data-bs-backdrop="static">
+              <div class="modal fade" id="packageModal{{ $package->id }}" data-backdrop="static">
                   <div class="modal-dialog modal-lg">
                       <div class="modal-content">
 
                           <!-- Modal Header -->
                           <div class="modal-header bg-primary text-white">
                               <h4 class="modal-title">{{ $package->name }} প্ল্যান সাবস্ক্রাইব করুন</h4>
-                              <button type="button" class="close text-white" data-bs-dismiss="modal" aria-label="Close">
+                              <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                               </button>
                           </div>
@@ -234,7 +234,7 @@
 
                               <!-- Modal footer -->
                               <div class="modal-footer justify-content-between">
-                                  <button type="button" class="btn btn-default" data-bs-dismiss="modal">ফিরে যান</button>
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">ফিরে যান</button>
                                   <input type="hidden" name="amount" value="{{ $package->price }}" required>
                                   <input type="hidden" name="package_id" value="{{ $package->id }}" required>
                                   <button type="submit" class="btn btn-success btn-lg">
