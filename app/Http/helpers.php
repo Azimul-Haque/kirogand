@@ -1,5 +1,6 @@
 <?php 
 
+use Illuminate\Support\Carbon;
 
 	function limit_text($text, $limit) {
       // $pos=strpos($text, ' ', $limit);
