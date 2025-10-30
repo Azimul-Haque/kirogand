@@ -126,9 +126,9 @@
                       {{-- মূল্য প্রদর্শন --}}
                       <div class="card-body text-center pt-2">
                           <div class="price mb-3">
-                              <h2 class="amount">
+                              <h2 class="">
                                   {{-- স্ট্রাইক-থ্রু মূল্য ছোট করে --}}
-                                  <span class=" strike-through">
+                                  <span class="currency strike-through">
                                       <strike>৳ {{ bangla($package->strike_price) }}</strike>
                                   </span>
                                   {{-- মূল মূল্য বড় করে --}}
