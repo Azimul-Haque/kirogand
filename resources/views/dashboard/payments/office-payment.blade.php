@@ -231,7 +231,7 @@
                                       >
                                   </div> --}}
 
-                                  <input type="hidden" name="user_number" value="{{ Auth::user()->mobile }}">
+                                  {{-- <input type="hidden" name="user_number" value="{{ Auth::user()->mobile }}"> --}}
 
                                   <small class="mt-3 d-block">
                                       <a href="{{ route('index.terms-and-conditions') }}" target="_blank">শর্তাবলী</a>, <a href="{{ route('index.privacy-policy') }}" target="_blank">গোপনীয়তা নীতি</a> & <a href="{{ route('index.refund-policy') }}" target="_blank">ফেরত নীতি</a> দেখুন।
