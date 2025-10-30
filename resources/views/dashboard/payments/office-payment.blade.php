@@ -249,7 +249,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <div class="adminlte-card-shadow rounded-lg  border-l-4 border-green-500 bg-white">
+          <div class="adminlte-card-shadow rounded-lg p-4  border-l-4 border-green-500 bg-white">
               <div class="flex items-start space-x-3">
                   
                   <!-- Icon: AdminLTE uses a prominent icon -->
