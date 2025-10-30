@@ -55,7 +55,7 @@
 <li class="nav-item">
     <a href="{{ route('dashboard.payments.office.list') }}" class="nav-link {{ Request::is('dashboard/payments/office/payment/list') ? 'active' : '' }}">
         <i class="nav-icon fas fa-coins"></i>
-        <p>প্যাকেজ নবায়ন</p>
+        <p>পেমেন্ট তালিকা</p>
     </a>
 </li>
 @endif
