@@ -641,7 +641,7 @@ class DashboardController extends Controller
         return view('dashboard.payments.payment-list')->withPackages($packages);
     }
 
-    public function getOfficePaymentsList ()
+    public function getOfficePaymentsList()
     {
         $payments = Payment::orderBy('id', 'desc')->paginate(15);
         
