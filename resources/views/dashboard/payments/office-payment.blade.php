@@ -162,8 +162,7 @@
                               data-target="#packageModal{{ $package->id }}" 
                               class="btn btn-block @if($package->suggested == 1) btn-primary @else btn-outline-primary @endif btn-lg"
                           >
-                              শুরু করুন!
-                          </button>
+                              এই প্যাকেজটি কিনুন
                       </div>
                   </div>
               </div>
