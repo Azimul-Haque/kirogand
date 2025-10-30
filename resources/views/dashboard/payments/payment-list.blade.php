@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-	@section('page-header') পেমেন্ট @endsection
+  @section('page-header') পেমেন্ট @endsection
   @section('page-header-right')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
@@ -19,14 +19,14 @@
     </ol>
   @endsection
     <div class="container-fluid">
-		<div class="card">
+    <div class="card">
           <div class="card-header">
             <h3 class="card-title">পেমেন্ট তালিকা</h3>
 
             <div class="card-tools">
-            	{{-- <button type="button" class="btn btn-success btn-sm"  data-toggle="modal" data-target="#addPackageModal" title="" rel="tooltip" data-original-title="পেমেন্ট যোগ করুন">
-            		<i class="fas fa-clipboard-check"></i> নতুন পেমেন্ট
-            	</button> --}}
+              {{-- <button type="button" class="btn btn-success btn-sm"  data-toggle="modal" data-target="#addPackageModal" title="" rel="tooltip" data-original-title="পেমেন্ট যোগ করুন">
+                <i class="fas fa-clipboard-check"></i> নতুন পেমেন্ট
+              </button> --}}
               <div class="card-tools">
                 <form class="form-inline form-group-lg" action="">
                   <div class="form-group">
@@ -56,7 +56,7 @@
               </thead>
               <tbody>
                 @foreach($payments as $payment)
-                	<tr>
+                  <tr>
                     <td>
                       <a href="#!">{{ $payment->localOffice->name_bn }}</a>
                       <small>({{ $payment->localOffice->payments->count() }} বার)</small><br/>
@@ -67,8 +67,8 @@
                     <td>{{ $payment->card_type }}</td>
                     <td>{{ $payment->trx_id }}</td>
                     <td><b>৳ {{ $payment->store_amount }}</b> <small>(৳ {{ $payment->amount }})</small></td>
-                		<td>{{ date('F d, Y h:i A', strtotime($payment->created_at)) }}</td>
-                	</tr>
+                    <td>{{ date('F d, Y h:i A', strtotime($payment->created_at)) }}</td>
+                  </tr>
                 @endforeach
               </tbody>
             </table>
@@ -84,5 +84,31 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="module">
 
+      $(document).on('click', '#search-button', function() {
+        if($('#search-param').val() != '') {
+          var urltocall = '{{ route('dashboard.payments') }}' +  '/' + $('#search-param').val();
+          location.href= urltocall;
+        } else {
+          $('#search-param').css({ "border": '#FF0000 2px solid'});
+          Toast.fire({
+              icon: 'warning',
+              title: 'কিছু লিখে খুঁজুন!'
+          })
+        }
+      });
+      $("#search-param").keyup(function(e) {
+        if(e.which == 13) {
+          if($('#search-param').val() != '') {
+            var urltocall = '{{ route('dashboard.payments') }}' +  '/' + $('#search-param').val();
+            location.href= urltocall;
+          } else {
+            $('#search-param').css({ "border": '#FF0000 2px solid'});
+            Toast.fire({
+                icon: 'warning',
+                title: 'কিছু লিখে খুঁজুন!'
+            })
+          }
+        }
+      });
     </script>
 @endsection
