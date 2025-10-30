@@ -63,7 +63,7 @@
 
         .card{
             
-            width:300px;
+            width:400px;
             height:200px;
         }
 
