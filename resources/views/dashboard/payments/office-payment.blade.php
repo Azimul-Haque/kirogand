@@ -60,8 +60,7 @@
             padding: 1rem;
             border-top: none;
         }
-
-        /* বৈশিষ্ট্য তালিকা সরল করা হয়েছে */
+        
         .feature-list {
             list-style: none;
             padding: 0;
