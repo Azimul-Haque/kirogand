@@ -56,8 +56,8 @@ class IndexController extends Controller
     {
         // return redirect('https://play.google.com/store/apps/details?id=com.orbachinujbuk.bcs');
         
-        $packages = Package::where('status', 1)->get();
-        $blogs = Blog::orderBy('id', 'desc')->get()->take(3);
+        // $packages = Package::where('status', 1)->get();
+        // $blogs = Blog::orderBy('id', 'desc')->get()->take(3);
 
         return view('index.index')
                     ->withPackages($packages)
