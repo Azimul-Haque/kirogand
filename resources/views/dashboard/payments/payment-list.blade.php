@@ -39,7 +39,7 @@
                         <tr>
                             <th style="width: 10px">#</th>
                             <th>প্যাকেজ</th>
-                            <th>Trx ID</th>
+                            <th>ট্রানজেকশন আইডি</th>
                             <th>Date/Time</th>
                             <th>Amount (Store / Actual)</th>
                             <th>Card Type</th>
