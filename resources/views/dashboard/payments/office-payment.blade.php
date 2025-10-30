@@ -274,6 +274,8 @@
                       <div class="mt-4 p-3 bg-green-50 rounded-md border border-green-200">
                           <p class="bn-text text-sm text-gray-700">
                               **উদাহরণ:** আপনার প্যাকেজের মেয়াদ শেষ হতে যদি <span class="text-green-600 font-bold">১০ দিন</span> বাকি থাকে এবং আপনি নতুন <span class="text-green-600 font-bold">৩০ দিনের</span> প্যাকেজ যোগ করেন, তাহলে আপনার **মোট মেয়াদ** হবে ১০ + ৩০ = **৪০ দিন**।
+                          </p><p class="bn-text text-sm text-gray-700">
+                              **উদাহরণ:** আপনার প্যাকেজের মেয়াদ শেষ হতে যদি <span class="text-green-600 font-bold">১০ দিন</span> বাকি থাকে এবং আপনি নতুন <span class="text-green-600 font-bold">৩০ দিনের</span> প্যাকেজ যোগ করেন, তাহলে আপনার **মোট মেয়াদ** হবে ১০ + ৩০ = **৪০ দিন**।
                           </p>
                       </div>
                   </div>
