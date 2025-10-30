@@ -62,6 +62,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        dd(Auth::user);
         // if user is a manager, redirect him to his profile
         // if user is a manager, redirect him to his profile
         if(Auth::user()->role == 'user') {
