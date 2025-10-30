@@ -134,7 +134,7 @@
                                   {{-- মূল মূল্য বড় করে --}}
                                   <span class="price-value">৳ {{ bangla($package->price) }}</span>
                                   {{-- সময়কাল --}}
-                                  <small class="text-muted duration">/{{ $package->duration }}</small>
+                                  <span class="text-muted duration">/{{ $package->duration }}</span>
                               </h2>
                           </div>
 
