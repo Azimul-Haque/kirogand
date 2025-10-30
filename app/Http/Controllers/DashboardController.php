@@ -75,7 +75,7 @@ class DashboardController extends Controller
           $packageexpirycheck = isPackageExpired(Auth::user()->localOffice->package_expiry_date);
           if($packageexpirycheck) {
             Session::flash('warning', 'আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শেষ, প্যাকেজ কিনুন!');
-            }
+          }
         }
 
         // $totalsites = Site::count();
