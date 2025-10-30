@@ -225,7 +225,7 @@ class BkashController extends Controller
     public function bkashSuccessPageWeb()
     {
         Session::flash('swalsuccess', 'পেমেন্ট সফল হয়েছে। মেয়াদ বাড়ানো হয়েছে। সফটওয়্যারটি ব্যবহার করুন। ধন্যবাদ!');
-            return redirect()->route('dashboard.payments.office');
+            return redirect()->route('dashboard.index');
     }
 
     public function bkashFailedPageWeb()
