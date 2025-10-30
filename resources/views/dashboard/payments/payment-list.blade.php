@@ -40,10 +40,10 @@
                             <th style="width: 10px">#</th>
                             <th>প্যাকেজ</th>
                             <th>ট্রানজেকশন আইডি</th>
-                            <th>সময়</th>
                             <th>Amount (Store / Actual)</th>
                             <th>Card Type</th>
                             <th>Status</th>
+                            <th>সময়</th>
                         </tr>
                     </thead>
                     <tbody id="payment-history-body">
