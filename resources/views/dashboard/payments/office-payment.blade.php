@@ -251,37 +251,37 @@
         <div class="col-md-6">
           <!-- Main AdminLTE 3 Callout using Bootstrap 4 classes -->
             <div class="callout callout-success shadow">
-                <div class="callout-content">
-                    <!-- Icon (using a bold, relevant icon) -->
-                    <div class="callout-icon text-success">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    
-                    <div>
-                        <!-- Title -->
-                        <h4 class="font-weight-bold">গুরুত্বপূর্ণ ঘোষণা (Important Announcement)</h4>
-                        
-                        <!-- Main Bengali Message -->
-                        <p class="mb-2">
-                            সম্মানিত ইউজার, আপনার প্যাকেজ রিনিউ সংক্রান্ত একটি বিশেষ তথ্য:
-                        </p>
-                        <p class="font-weight-bold mb-3">
-                            আপনি যখনই **নতুন পেমেন্ট বা প্যাকেজ যোগ করবেন**, তখন আপনার
-                            **বর্তমান অবশিষ্ট মেয়াদ** এর সাথে **নতুন প্যাকেজের দিনগুলো যোগ হয়ে যাবে**।
-                        </p>
-                        
-                        <!-- Example Section for Clarity -->
-                        <div class="p-2 border border-success rounded bg-white text-muted small">
-                            **উদাহরণ:** আপনার প্যাকেজের মেয়াদ শেষ হতে যদি <span class="text-dark font-weight-bold">১০ দিন</span> বাকি থাকে এবং আপনি নতুন <span class="text-dark font-weight-bold">৩০ দিনের</span> প্যাকেজ যোগ করেন, তাহলে আপনার **মোট মেয়াদ** হবে ১০ + ৩০ = **৪০ দিন**।
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <div class="callout-content">
+                  <!-- Icon (using a bold, relevant icon) -->
+                  <div class="callout-icon text-success">
+                      <i class="fas fa-bullhorn"></i>
+                  </div>
+                  
+                  <div>
+                      <!-- Title -->
+                      <h4 class="font-weight-bold">গুরুত্বপূর্ণ ঘোষণা (Important Announcement)</h4>
+                      
+                      <!-- Main Bengali Message -->
+                      <p class="mb-2">
+                          সম্মানিত ইউজার, আপনার প্যাকেজ রিনিউ সংক্রান্ত একটি বিশেষ তথ্য:
+                      </p>
+                      <p class="font-weight-bold mb-3">
+                          আপনি যখনই **নতুন পেমেন্ট বা প্যাকেজ যোগ করবেন**, তখন আপনার
+                          **বর্তমান অবশিষ্ট মেয়াদ** এর সাথে **নতুন প্যাকেজের দিনগুলো যোগ হয়ে যাবে**।
+                      </p>
+                      
+                      <!-- Example Section for Clarity -->
+                      <div class="p-2 border border-success rounded bg-white text-muted small">
+                          **উদাহরণ:** আপনার প্যাকেজের মেয়াদ শেষ হতে যদি <span class="text-dark font-weight-bold">১০ দিন</span> বাকি থাকে এবং আপনি নতুন <span class="text-dark font-weight-bold">৩০ দিনের</span> প্যাকেজ যোগ করেন, তাহলে আপনার **মোট মেয়াদ** হবে ১০ + ৩০ = **৪০ দিন**।
+                      </div>
+                  </div>
+              </div>
+          </div>
 
-            <!-- Optionally, a standard Bootstrap Alert (for context) -->
-            <div class="alert alert-info" role="alert">
-                <i class="fas fa-info-circle mr-2"></i> এটি একটি সাধারণ Bootstrap 4 Alert বক্স। উপরেরটি AdminLTE স্টাইলের 'Callout'।
-            </div>
+          <!-- Optionally, a standard Bootstrap Alert (for context) -->
+          <div class="alert alert-info" role="alert">
+              <i class="fas fa-info-circle mr-2"></i> এটি একটি সাধারণ Bootstrap 4 Alert বক্স। উপরেরটি AdminLTE স্টাইলের 'Callout'।
+          </div>
         </div>
       </div>
     </div>
