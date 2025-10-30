@@ -59,9 +59,10 @@ class IndexController extends Controller
         // $packages = Package::where('status', 1)->get();
         // $blogs = Blog::orderBy('id', 'desc')->get()->take(3);
 
-        return view('index.index')
-                    ->withPackages($packages)
-                    ->withBlogs($blogs);
+        return view('index.index');
+        
+                    // ->withPackages($packages)
+                    // ->withBlogs($blogs);
     }
 
     public function getServices()
