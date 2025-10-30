@@ -198,7 +198,7 @@
                                   <b>ফিচারসমূহ:</b>
                                   <div class="table-content">
                                       <ul class="feature-list">
-                                          <li> <span class="feature-check">✓</span> অ্যাপের ফিচারসমূহের এক্সেস</li>
+                                          <li> <span class="feature-check">✓</span> সফটওয়্যারের সকল ফিচারের এক্সেস</li>
                                           <li> <span class="feature-check">✓</span> সম্পূর্ণ বিসিএস কোর্স এক্সেস</li>
                                           <li> <span class="feature-check">✓</span> অন্যান্য চাকরির কোর্স এক্সেস</li>
                                           <li> <span class="feature-check">✓</span> মডেল টেস্ট ও সাবজেক্টিভ প্রস্তুতি</li>
