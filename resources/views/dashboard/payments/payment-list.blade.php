@@ -41,7 +41,7 @@
                             <th>প্যাকেজ</th>
                             <th>ট্রানজেকশন আইডি</th>
                             <th>Amount (Store / Actual)</th>
-                            <th>Card Type</th>
+                            <th>কার্ডের ধ্রন</th>
                             <th>স্ট্যাটাস</th>
                             <th>সময়</th>
                         </tr>
