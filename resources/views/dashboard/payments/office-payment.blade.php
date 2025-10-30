@@ -282,8 +282,6 @@
         </div>
       </div>
     </div>
-
-
 @endsection
 
 @section('third_party_scripts')
