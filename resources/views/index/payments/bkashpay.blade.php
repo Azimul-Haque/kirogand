@@ -52,30 +52,5 @@
 @include('index.payments.bkashscript')
 
 <style type="text/css">
-        body{
-            background-color:#dce3f0;
-        }
-
-        .height{
-            
-            height:100vh;
-        }
-
-        .card{
-            
-            width:300px;
-            height:150px;
-        }
-
-        .image{
-            position:absolute;
-            right:12px;
-            top:10px;
-        }
-
-        .btn-danger{
-            
-            height:48px;
-            font-size:18px;
-        }
+        
 </style>
