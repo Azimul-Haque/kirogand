@@ -72,6 +72,11 @@ class DashboardController extends Controller
             }
         }
 
+        if(Auth::user()->local_office_id) {
+          $localoffice = LocalOffice::findOrFail(Auth::user()->local_office_id);
+          $packageexpirycheck = isPackageExpired($localoffice->package_expiry_date);
+        }
+
         // $totalsites = Site::count();
         $totalusers = User::count();
 
