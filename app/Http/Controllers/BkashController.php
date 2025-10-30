@@ -177,7 +177,7 @@ class BkashController extends Controller
         $payment = new Payment;
         $payment->local_office_id = $user->local_office_id;
         $payment->package_id = $request->package_id;
-        $payment->uid = $user->uid;
+        // $payment->uid = $user->uid;
         $payment->payment_status = 1;
         $payment->card_type = 'bKash';
         $payment->trx_id = $request->payment_info['trxID'];
