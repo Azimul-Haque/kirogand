@@ -35,7 +35,7 @@
         }
 
         .price-value {
-            font-size: 2.5rem; /* মূল্য বড় করে দেখানো */
+            font-size: 2.0rem; /* মূল্য বড় করে দেখানো */
             font-weight: 700;
             color: #28a745; /* AdminLTE Success Color */
             margin-bottom: 0.5rem;
