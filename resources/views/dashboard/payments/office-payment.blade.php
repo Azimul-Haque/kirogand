@@ -19,7 +19,153 @@
     </ol>
   @endsection
     <div class="container-fluid">
-		  
+		  <div class="row">
+          @foreach($packages as $package)
+              {{-- কলাম সাইজ: ডেস্কটপে ৪টি কার্ড, ট্যাবলেটে ২ টি, মোবাইলে ১ টি --}}
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4">
+                  <div class="card package-card @if($package->suggested == 1) suggested-card @endif">
+                      
+                      {{-- হেডার ও ব্যাজ --}}
+                      <div class="card-header text-center p-0 @if($package->suggested == 1) card-header-suggested @endif">
+                          @if($package->suggested == 1)
+                              {{-- 'জনপ্রিয়' ব্যাজটি কার্ডের উপরে থাকবে --}}
+                              <span class="badge badge-warning p-2" style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); font-size: 0.8rem;">
+                                  জনপ্রিয়
+                              </span>
+                              <div class="pt-4 pb-3">
+                          @else
+                              <div class="pt-3 pb-2">
+                          @endif
+                              <h4 class="mb-1 @if($package->suggested != 1) text-primary @endif">
+                                  {{ $package->name }}
+                              </h4>
+                              <p class="text-sm m-0 @if($package->suggested == 1) text-white-50 @else text-muted @endif">
+                                  {{ $package->tagline }}
+                              </p>
+                          </div>
+                      </div>
+
+                      {{-- মূল্য প্রদর্শন --}}
+                      <div class="card-body text-center pt-2">
+                          <div class="price mb-3">
+                              <h2 class="amount">
+                                  {{-- স্ট্রাইক-থ্রু মূল্য ছোট করে --}}
+                                  <span class="currency strike-through">
+                                      <strike>৳ {{ bangla($package->strike_price) }}</strike>
+                                  </span>
+                                  {{-- মূল মূল্য বড় করে --}}
+                                  <span class="price-value">৳ {{ bangla($package->price) }}</span>
+                                  {{-- সময়কাল --}}
+                                  <small class="text-muted duration">/{{ $package->duration }}</small>
+                              </h2>
+                          </div>
+
+                          {{-- বৈশিষ্ট্য তালিকা --}}
+                          <div class="table-content text-left">
+                              <ul class="feature-list">
+                                  <li> <span class="feature-check">✓</span> অ্যাপের ফিচারসমূহের এক্সেস</li>
+                                  <li> <span class="feature-check">✓</span> সম্পূর্ণ বিসিএস কোর্স এক্সেস</li>
+                                  <li> <span class="feature-check">✓</span> অন্যান্য চাকরির কোর্স এক্সেস</li>
+                                  <li> <span class="feature-check">✓</span> মডেল টেস্ট ও সাবজেক্টিভ প্রস্তুতি</li>
+                                  {{-- আপনি এখানে আপনার লজিক দিয়ে ফিচারগুলো যোগ/বাদ করতে পারেন --}}
+                                  {{-- উদাহরণ: <li> <span class="feature-check text-danger">✖</span> সীমিত সাপোর্ট</li> --}}
+                              </ul>
+                          </div>
+                      </div>
+
+                      {{-- বাটন --}}
+                      <div class="card-footer text-center">
+                          <button 
+                              type="button" 
+                              data-bs-toggle="modal" 
+                              data-bs-target="#packageModal{{ $package->id }}" 
+                              class="btn btn-block @if($package->suggested == 1) btn-primary @else btn-outline-primary @endif btn-lg"
+                          >
+                              শুরু করুন!
+                          </button>
+                      </div>
+                  </div>
+              </div>
+
+              {{-- প্যাকেজ মডাল (বিদ্যমান লজিক, সামান্য স্টাইল পরিবর্তন) --}}
+              <div class="modal fade" id="packageModal{{ $package->id }}" data-bs-backdrop="static">
+                  <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+
+                          <!-- Modal Header -->
+                          <div class="modal-header bg-primary text-white">
+                              <h4 class="modal-title">{{ $package->name }} প্ল্যান সাবস্ক্রাইব করুন</h4>
+                              <button type="button" class="close text-white" data-bs-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+
+                          <form method="post" action="{{ route('index.payment.proceed') }}">
+                              @csrf
+                              <!-- Modal body -->
+                              <div class="modal-body">
+                                  <h5 class="text-primary">{{ $package->name }} ({{ $package->tagline }})</h5>
+                                  <p>
+                                      <b>প্যাকেজের মেয়াদ:</b> <span class="text-bold">{{ $package->duration }}</span>
+                                  </p>
+                                  
+                                  <h3 class="my-3">
+                                      <b>মূল্য:</b> 
+                                      <span class="text-muted"><strike>৳ {{ bangla($package->strike_price) }}</strike></span> 
+                                      <span class="text-success ml-2">৳ {{ bangla($package->price) }}</span>
+                                  </h3>
+
+                                  <hr>
+
+                                  <b>ফিচারসমূহ:</b>
+                                  <div class="table-content">
+                                      <ul class="feature-list">
+                                          <li> <span class="feature-check">✓</span> অ্যাপের ফিচারসমূহের এক্সেস</li>
+                                          <li> <span class="feature-check">✓</span> সম্পূর্ণ বিসিএস কোর্স এক্সেস</li>
+                                          <li> <span class="feature-check">✓</span> অন্যান্য চাকরির কোর্স এক্সেস</li>
+                                          <li> <span class="feature-check">✓</span> মডেল টেস্ট ও সাবজেক্টিভ প্রস্তুতি</li>
+                                      </ul>
+                                  </div><br/>
+                                  
+                                  <div class="form-group">
+                                      <label for="user_number_{{ $package->id }}" class="font-weight-bold">
+                                          অ্যাপে ব্যবহৃত ১১ ডিজিটের মোবাইল নম্বরটি লিখুন:
+                                      </label>
+                                      @if(Auth::guest())
+                                          <p class="text-success text-sm m-0">রেজিস্ট্রেশন না করে থাকলে <a href="#!" class="text-primary font-weight-bold">এখানে ক্লিক করুন</a></p>
+                                      @endif
+                                      <input 
+                                          type="number" 
+                                          name="user_number" 
+                                          id="user_number_{{ $package->id }}"
+                                          onkeypress="if(this.value.length==11) return false;" 
+                                          class="form-control form-control-lg" 
+                                          placeholder="অ্যাপে ব্যবহৃত মোবাইল নাম্বারটি লিখুন" 
+                                          @if(!Auth::guest()) value="{{ Auth::user()->mobile }}" @endif 
+                                          required
+                                      >
+                                  </div>
+
+                                  <small class="mt-3 d-block">
+                                      <a href="{{ route('index.terms-and-conditions') }}" target="_blank">শর্তাবলী</a>, <a href="{{ route('index.privacy-policy') }}" target="_blank">গোপনীয়তা নীতি</a> & <a href="{{ route('index.refund-policy') }}" target="_blank">ফেরত নীতি</a> দেখুন।
+                                  </small>
+                              </div>
+
+                              <!-- Modal footer -->
+                              <div class="modal-footer justify-content-between">
+                                  <button type="button" class="btn btn-default" data-bs-dismiss="modal">ফিরে যান</button>
+                                  <input type="hidden" name="amount" value="{{ $package->price }}" required>
+                                  <input type="hidden" name="package_id" value="{{ $package->id }}" required>
+                                  <button type="submit" class="btn btn-success btn-lg">
+                                      ৳ {{ bangla($package->price) }} পরিশোধ করুন
+                                  </button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          @endforeach
+      </div>
 
     </div>
 @endsection
