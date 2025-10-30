@@ -279,9 +279,9 @@
           </div>
 
           <!-- Optionally, a standard Bootstrap Alert (for context) -->
-          <div class="alert alert-info" role="alert">
+          {{-- <div class="alert alert-info" role="alert">
               <i class="fas fa-info-circle mr-2"></i> এটি একটি সাধারণ Bootstrap 4 Alert বক্স। উপরেরটি AdminLTE স্টাইলের 'Callout'।
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
