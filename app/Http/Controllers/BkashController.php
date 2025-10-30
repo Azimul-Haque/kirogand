@@ -103,7 +103,7 @@ class BkashController extends Controller
 
         $token = session()->get('bkash_token');
 
-        $request['amount'] = '1.00';
+        // $request['amount'] = '1.00'; // টেস্ট করার সময় এটা ব্যয়বহার করতে হবে...
         $request['orgName'] = 'D-Nagorik';
         $request['intent'] = 'sale';
         $request['currency'] = 'BDT';
