@@ -151,7 +151,7 @@
                     আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শীঘ্রই শেষ হতে চলেছে।
                 </p>
                 <p class="text-white text-lg font-weight-bold">
-                    মেয়াদ শেষ: {{ date('d F, Y', strtotime('+20 days')) }}
+                    মেয়াদ শেষ: {{ date('d F, Y', strtotime(Auth::user()->localOffice->packageexpirydate)) }}
                 </p>
                 <a href="{{ route('dashboard.payments.office') }}" class="btn btn-outline-light btn-sm mt-2">প্যাকেজ নবায়ন করুন <i class="fas fa-arrow-circle-right"></i></a>
             </div>
