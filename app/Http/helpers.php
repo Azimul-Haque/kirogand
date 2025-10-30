@@ -94,6 +94,9 @@ function isPackageExpired(?string $expiryDate): bool
         $expiry = Carbon::parse($expiryDate);
         
         $now = Carbon::now();
+
+        // 4. Compare: If the expiry date is before the current time, it is expired.
+        // Using ->isPast() is a simple and reliable method.
         return $expiry->isPast();
 
     } catch (\Exception $e) {
