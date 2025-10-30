@@ -31,6 +31,8 @@ use Illuminate\Support\Carbon;
         $str = str_replace( $en_short, $bn_short, $str );
         $en = array( 'am', 'pm' );
         $bn = array( 'পূর্বাহ্ন', 'অপরাহ্ন' );
+        $en = array( 'AM', 'PM' );
+        $bn = array( 'পূর্বাহ্ন', 'অপরাহ্ন' );
         $str = str_replace( $en, $bn, $str );
         return $str;
   }
