@@ -116,7 +116,7 @@ Route::post('/dashboard/profile/update/{id}/localoffice', 'DashboardController@u
 
 Route::get('/dashboard/payments', 'DashboardController@getPayments')->name('dashboard.payments');
 Route::get('/dashboard/payments/{search}', 'DashboardController@getPaymentsSearch')->name('dashboard.payments.search');
-Route::get('/dashboard/payments/office-payment', 'DashboardController@getOfficePayment')->name('dashboard.payments.office');
+Route::get('/dashboard/payments/office/payment', 'DashboardController@getOfficePayment')->name('dashboard.payments.office');
 
 Route::get('/dashboard/packages', 'DashboardController@getPackages')->name('dashboard.packages');
 Route::post('/dashboard/packages/store', 'DashboardController@storePackage')->name('dashboard.packages.store');
