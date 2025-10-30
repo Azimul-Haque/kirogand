@@ -108,7 +108,7 @@
                           @if($package->suggested == 1)
                               {{-- 'জনপ্রিয়' ব্যাজটি কার্ডের উপরে থাকবে --}}
                               <span class="badge badge-warning p-1" style="position: absolute; top: 5px; left: 50%; transform: translateX(-50%); font-size: 0.8rem; z-index: 9999999999;">
-                                  জনপ্রিয়
+                                  সর্বাধিক জনপ্রিয় প্যাকেজ
                               </span>
                               <div class="pt-4 pb-3">
                           @else
