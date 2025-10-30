@@ -74,6 +74,9 @@ class DashboardController extends Controller
 
         if(Auth::user()->local_office_id) {
           $packageexpirycheck = isPackageExpired(Auth::user()->localOffice->package_expiry_date);
+          if($packageexpirycheck) {
+            
+          }
         }
 
         // $totalsites = Site::count();
