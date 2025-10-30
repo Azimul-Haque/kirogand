@@ -20,11 +20,6 @@ class Controller extends BaseController
     {
       // etake cache korte hobe sathe sathe reported question gular cound dhukaite hobe
       $unresolvedmessagecount = Message::where('status', 0)->count();
-      dd(Auth::user());
-      if(Auth::user()->local_office_id) {
-        $localoffice = LocalOffice::findOrFail(Auth::user()->local_office_id);
-        $packageexpirycheck = isPackageExpired($localoffice->package_expiry_date);
-      }
       View::share('unresolvedmessagecount', $unresolvedmessagecount);
     }
 }
