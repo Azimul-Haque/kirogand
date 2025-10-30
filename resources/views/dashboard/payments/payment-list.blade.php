@@ -47,7 +47,7 @@
                         </tr>
                     </thead>
                     <tbody id="payment-history-body">
-                      @foreach($payments as $payment)
+                      @foreach($payments as $i => $payment)
                         <tr>
                           <td>
                             <a href="#!">{{ $payment->localOffice->name_bn }}</a>
