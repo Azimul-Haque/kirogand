@@ -218,18 +218,18 @@ class BkashController extends Controller
     public function bkashCancelPageWeb()
     {
         Session::flash('info','পেমেন্টটি ক্যানসেল করা হয়েছে!');
-        return redirect()->route('index.index');
+        return redirect()->route('dashboard.index');
     }
 
     public function bkashSuccessPageWeb()
     {
         Session::flash('swalsuccess', 'পেমেন্ট সফল হয়েছে। অ্যাপটি ব্যবহার করুন। ধন্যবাদ!');
-            return redirect()->route('index.index');
+            return redirect()->route('dashboard.index');
     }
 
     public function bkashFailedPageWeb()
     {
         Session::flash('info','পেমেন্টটি ব্যর্থ হয়েছে! অনুগ্রহ করে যোগাযোগ করুন।');
-        return redirect()->route('index.index');
+        return redirect()->route('dashboard.index');
     }
 }
