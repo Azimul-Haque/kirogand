@@ -168,7 +168,7 @@
       {
       "@context": "https://schema.org",
       "@type": "Website",
-      "headline": "BCS Exam Aid",
+      "headline": "D-Nagorik",
       "description": "BCS Exam Aid - বিসিএস ও সরকারি চাকরির সেরা প্ল্যাটফর্ম",
       "image": "{{ asset('images/bcs-exam-aid-banner.png') }}",
       "url": "{{ url()->current() }}",
