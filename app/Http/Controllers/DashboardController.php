@@ -645,7 +645,7 @@ class DashboardController extends Controller
     {
         $payments = Payment::orderBy('id', 'desc')->paginate(15);
         
-        return view('dashboard.payments.office.list')->withPayments($payments);
+        return view('dashboard.payments.payment-list')->withPayments($payments);
     }
 
     // public function getExamsToday()
