@@ -102,7 +102,7 @@ function isPackageExpired(?string $expiryDate): bool
     } catch (\Exception $e) {
         // Handle parsing errors gracefully (e.g., if the date format is invalid)
         // You might log the error here.
-        \Log::error("Date parsing error for package expiry: " . $e->getMessage());
+        // \Log::error("Date parsing error for package expiry: " . $e->getMessage()); 
         // Treat as expired if the date is unparseable for safety.
         return true; 
     }
