@@ -624,6 +624,7 @@ class DashboardController extends Controller
     {
         $payments = Payment::where('trx_id', 'LIKE', "%$search%")->orWhereHas('LocalOffice', function($q) use ($search){
                         $q->where('name', 'like', '%' . $search . '%');
+                        $q->where('name_bn', 'like', '%' . $search . '%');
                         $q->orWhere('mobile', 'like', '%' . $search . '%');
                         $q->orWhere('amount', 'like', '%' . $search . '%');
                         $q->orWhere('store_amount', 'like', '%' . $search . '%');
