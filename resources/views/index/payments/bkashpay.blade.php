@@ -45,6 +45,7 @@
         
         <button class="btn btn-danger" id="bKash_button" onclick="BkashPayment()" style="background: url({{ asset('images/bkash_payment_logo.png') }}); background-size: 100%; background-size: 250px auto; background-repeat: no-repeat;">
         </button>
+        <span id="changeTextonLoad">উপরের বাটনে ক্লিক করুন</span>
     </div>
 </div>
 
@@ -64,7 +65,7 @@
             width:300px;
             height:150px;
 
-            
+
         }
 
         .image{
