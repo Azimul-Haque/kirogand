@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title') ড্যাশবোর্ড | পেমেন্ট @endsection
+@section('title') ড্যাশবোর্ড | পেমেন্ট তালিকা @endsection
 
 @section('third_party_stylesheets')
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css">
@@ -11,11 +11,11 @@
 @endsection
 
 @section('content')
-  @section('page-header') পেমেন্ট @endsection
+  @section('page-header') পেমেন্ট তালিকা @endsection
   @section('page-header-right')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
-        <li class="breadcrumb-item active">পেমেন্ট</li>
+        <li class="breadcrumb-item active">পেমেন্ট তালিকা</li>
     </ol>
   @endsection
     <div class="container-fluid">
