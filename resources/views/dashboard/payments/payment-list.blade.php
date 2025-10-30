@@ -50,11 +50,6 @@
                       @foreach($payments as $i => $payment)
                         <tr>
                           <td>{{ bangla(++$i) }}</td>
-                          <td>
-                            <a href="#!">{{ $payment->localOffice->name_bn }}</a>
-                            <small>({{ $payment->localOffice->payments->count() }} বার)</small><br/>
-                            <small class="text-black-50">{{ $payment->localOffice->mobile }}</small>
-                          </td>
                           <td>{{ $payment->package->name }}</td>
                           <td>{{ $payment->payment_status == 1 ? 'Successfull' : 'Failed' }}</td>
                           <td>{{ $payment->card_type }}</td>
