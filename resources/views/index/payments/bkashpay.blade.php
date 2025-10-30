@@ -89,8 +89,6 @@
             margin-top:2px;
         }
 
-        
-
         .btn-danger{
             
             height:48px;
