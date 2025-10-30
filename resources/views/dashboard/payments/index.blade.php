@@ -58,7 +58,7 @@
                 @foreach($payments as $payment)
                 	<tr>
                     <td>
-                      <a href="#!">{{ $payment->localOffice->name }}</a>
+                      <a href="#!">{{ $payment->localOffice->name_bn }}</a>
                       <small>({{ $payment->localOffice->payments->count() }} বার)</small><br/>
                       <small class="text-black-50">{{ $payment->localOffice->mobile }}</small>
                     </td>
