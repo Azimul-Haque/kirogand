@@ -15,7 +15,7 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
+            $table->integer('local_office_id')->unsigned();
             $table->integer('package_id')->unsigned();
             $table->string('uid');
             $table->integer('payment_status')->unsigned();
@@ -23,7 +23,7 @@ class CreatePaymentsTable extends Migration
             $table->string('trx_id');
             $table->string('amount');
             $table->string('store_amount');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('local_office_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
