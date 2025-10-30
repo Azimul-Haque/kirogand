@@ -192,7 +192,7 @@
                                   
                                   <h3 class="my-3">
                                       <b>মূল্য:</b> 
-                                      <span class="text-muted" style="font-size: 20px;""><small><strike>৳ {{ bangla($package->strike_price) }}</strike></small></span> 
+                                      <span class="text-muted" style="font-size: 20px;"><small><strike>৳ {{ bangla($package->strike_price) }}</strike></small></span> 
                                       <span class="text-success ml-2">৳ {{ bangla($package->price) }}</span>
                                   </h3>
 
