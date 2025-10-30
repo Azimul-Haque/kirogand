@@ -49,7 +49,7 @@
                     <tbody id="payment-history-body">
                       @foreach($payments as $i => $payment)
                         <tr>
-                          <td>{{ $i++ }}</td>
+                          <td>{{ ++$i }}</td>
                           <td>
                             <a href="#!">{{ $payment->localOffice->name_bn }}</a>
                             <small>({{ $payment->localOffice->payments->count() }} বার)</small><br/>
