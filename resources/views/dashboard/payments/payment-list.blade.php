@@ -18,28 +18,6 @@
         <li class="breadcrumb-item active">পেমেন্ট তালিকা</li>
     </ol>
   @endsection
-    <div class="container-fluid">
-      <div class="card-body p-0">
-        <div class="table-responsive">
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th style="width: 10px">#</th>
-                        <th>Package</th>
-                        <th>Trx ID</th>
-                        <th>Date/Time</th>
-                        <th>Amount (Store / Actual)</th>
-                        <th>Card Type</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody id="payment-history-body">
-                    <!-- Data will be injected here by JavaScript -->
-                </tbody>
-            </table>
-        </div>
-        <!-- /.table-responsive -->
-    </div>
     <div class="card">
           <div class="card-header">
             <h3 class="card-title">পেমেন্ট তালিকা</h3>
