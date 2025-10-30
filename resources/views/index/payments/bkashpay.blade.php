@@ -52,5 +52,15 @@
 @include('index.payments.bkashscript')
 
 <style type="text/css">
+        body{
+            background-color:#dce3f0;
+        }
+
         
+
+        .btn-danger{
+            
+            height:48px;
+            font-size:18px;
+        }
 </style>
