@@ -638,10 +638,8 @@ class DashboardController extends Controller
     {
         $packages = Package::all();
         
-        return view('dashboard.payments.office-payment')->withPackages($packages);
+        return view('dashboard.payments.index')->withPackages($packages);
     }
-
-    
 
     public function getOfficePaymentsList ()
     {
