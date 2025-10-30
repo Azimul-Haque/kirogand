@@ -65,22 +65,6 @@
                     </tbody>
                 </table>
             </div>
-            <table class="table">
-              <thead>
-                <thead>
-                  <th>প্রতিষ্ঠান</th>
-                  <th>প্যাকেজ</th>
-                  <th>পেমেন্ট স্ট্যাটাস</th>
-                  <th>কার্ডের ধরন</th>
-                  <th>ট্রানজেকশন আইডি</th>
-                  <th>পরিমাণ</th>
-                  <th>সময়</th>
-                </thead>
-              </thead>
-              <tbody>
-                
-              </tbody>
-            </table>
           </div>
           <!-- /.card-body -->
         </div>
