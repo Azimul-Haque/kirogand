@@ -212,8 +212,13 @@
               </a>
               <!-- Replaced 'সহায়তা ডেস্ক' with two new account buttons -->
               <div class="d-none d-md-flex gap-3">
+                @if(Auth::user())
+                 <a href="{{ route('dashboard.index') }}" class="btn btn-outline-light rounded-pill"><i class="fas fa-tachometer-alt me-2"></i> ড্যাশবোর্ড</a>
+                @else
                   <a href="{{ route('register.citizen') }}" class="btn btn-outline-light rounded-pill"><i class="fas fa-user me-2"></i> নাগরিক একাউন্ট</a>
                   <a href="{{ route('register.authority') }}" class="btn btn-outline-info rounded-pill"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a>
+                @endif
+                  
               </div>
           </div>
       </div>
@@ -268,9 +273,11 @@
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdownMobile">
                     @if(Auth::user())
-                     <li><a class="dropdown-item text-primary fw-bold" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-sign-out me-2"></i> লগআউট</a></li>
+                      <li><a class="dropdown-item text-primary fw-bold" href="{{ route('dashboard.index') }}"><i class="fas fa-tachometer-alt me-2"></i> ড্যাশবোর্ড</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item text-primary fw-bold" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-sign-out me-2"></i> লগআউট</a></li>
                     @else
-                     <li><a class="dropdown-item text-primary fw-bold" href="/citizen-login"><i class="fas fa-user me-2"></i> নাগরিক লগইন</a></li>
+                      <li><a class="dropdown-item text-primary fw-bold" href="/citizen-login"><i class="fas fa-user me-2"></i> নাগরিক লগইন</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item text-info fw-bold" href="{{ route('office.login') }}"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a></li>
                     @endif
