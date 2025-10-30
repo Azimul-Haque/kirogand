@@ -103,7 +103,8 @@ class BkashController extends Controller
 
         $token = session()->get('bkash_token');
 
-        // $request['amount'] = '1.00';
+        $request['amount'] = '1.00';
+        $request['orgName'] = '1.00';
         $request['intent'] = 'sale';
         $request['currency'] = 'BDT';
         $request['merchantInvoiceNumber'] = 'BCS' . random_string(10) . date('Ymd');
