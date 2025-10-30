@@ -249,36 +249,52 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <div class="adminlte-card-shadow rounded-lg p-3 mb-6 border-l-4 border-green-500 bg-white">
-              <div class="flex items-start space-x-3">
-                  
-                  <!-- Icon: AdminLTE uses a prominent icon -->
-                  <i class="fas fa-circle-info text-2xl text-green-500 mt-0.5"></i>
-                  
-                  <div class="flex-1">
-                      <!-- Title in AdminLTE style -->
-                      <h4 class="text-xl font-bold text-gray-700 mb-2">
-                          গুরুত্বপূর্ণ ঘোষণা (Important Notice)
-                      </h4>
-                      
-                      <!-- Main Bengali Notification Text -->
-                      <p class="bn-text text-gray-600 leading-relaxed">
-                          সম্মানিত ইউজার, আপনার প্যাকেজ সংক্রান্ত একটি বিশেষ তথ্য:
-                      </p>
-                      <p class="bn-text text-gray-800 mt-2 font-semibold">
-                          আপনি যখনই **নতুন পেমেন্ট বা প্যাকেজ যোগ করবেন**, তখন আপনার
-                          **বর্তমান অবশিষ্ট মেয়াদ** এর সাথে **নতুন প্যাকেজের দিনগুলো যোগ হয়ে যাবে**।
-                      </p>
+          <div class="max-w-4xl mx-auto">
+                  <!-- AdminLTE Style Callout/Alert Box (Using Success/Info Color) -->
+                  <div class="adminlte-card-shadow rounded-lg p-4 mb-6 border-l-4 border-green-500 bg-white">
+                      <div class="flex items-start space-x-3">
+                          
+                          <!-- Icon: AdminLTE uses a prominent icon -->
+                          <i class="fas fa-circle-info text-2xl text-green-500 mt-0.5"></i>
+                          
+                          <div class="flex-1">
+                              <!-- Title in AdminLTE style -->
+                              <h4 class="text-xl font-bold text-gray-700 mb-2">
+                                  গুরুত্বপূর্ণ ঘোষণা (Important Notice)
+                              </h4>
+                              
+                              <!-- Main Bengali Notification Text -->
+                              <p class="bn-text text-gray-600 leading-relaxed">
+                                  সম্মানিত ইউজার, আপনার প্যাকেজ সংক্রান্ত একটি বিশেষ তথ্য:
+                              </p>
+                              <p class="bn-text text-gray-800 mt-2 font-semibold">
+                                  আপনি যখনই **নতুন পেমেন্ট বা প্যাকেজ যোগ করবেন**, তখন আপনার
+                                  **বর্তমান অবশিষ্ট মেয়াদ** এর সাথে **নতুন প্যাকেজের দিনগুলো যোগ হয়ে যাবে**।
+                              </p>
 
-                      <!-- Example for Clarity -->
-                      <div class="mt-4 p-3 bg-green-50 rounded-md border border-green-200">
-                          <p class="bn-text text-sm text-gray-700">
-                              **উদাহরণ:** আপনার প্যাকেজের মেয়াদ শেষ হতে যদি <span class="text-green-600 font-bold">১০ দিন</span> বাকি থাকে এবং আপনি নতুন <span class="text-green-600 font-bold">৩০ দিনের</span> প্যাকেজ যোগ করেন, তাহলে আপনার **মোট মেয়াদ** হবে ১০ + ৩০ = **৪০ দিন**।
-                          </p>
+                              <!-- Example for Clarity -->
+                              <div class="mt-4 p-3 bg-green-50 rounded-md border border-green-200">
+                                  <p class="bn-text text-sm text-gray-700">
+                                      **উদাহরণ:** আপনার প্যাকেজের মেয়াদ শেষ হতে যদি <span class="text-green-600 font-bold">১০ দিন</span> বাকি থাকে এবং আপনি নতুন <span class="text-green-600 font-bold">৩০ দিনের</span> প্যাকেজ যোগ করেন, তাহলে আপনার **মোট মেয়াদ** হবে ১০ + ৩০ = **৪০ দিন**।
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Optional: A Secondary Alert Box (using warning color) -->
+                  <div class="adminlte-card-shadow rounded-lg p-4 border-l-4 border-yellow-500 bg-white mt-6">
+                      <div class="flex items-start space-x-3">
+                          <i class="fas fa-exclamation-triangle text-2xl text-yellow-500 mt-0.5"></i>
+                          <div class="flex-1">
+                              <h4 class="text-xl font-bold text-gray-700 mb-2">সতর্কতা (Caution)</h4>
+                              <p class="bn-text text-gray-600">
+                                  দয়া করে নিশ্চিত করুন যে আপনার পেমেন্টটি সফলভাবে সম্পন্ন হয়েছে। কোনো সমস্যা হলে সাপোর্টে যোগাযোগ করুন।
+                              </p>
+                          </div>
                       </div>
                   </div>
               </div>
-          </div>
         </div>
       </div>
     </div>
