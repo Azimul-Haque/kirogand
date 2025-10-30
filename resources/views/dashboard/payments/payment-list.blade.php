@@ -52,9 +52,9 @@
                           <td>{{ bangla(++$i) }}</td>
                           <td>{{ $payment->package->name }}</td>
                           <td>{{ $payment->trx_id }}</td>
+                          <td><b>৳ {{ $payment->store_amount }}</b> <small>(৳ {{ $payment->amount }})</small></td>
                           <td>{{ $payment->payment_status == 1 ? 'Successfull' : 'Failed' }}</td>
                           <td>{{ $payment->card_type }}</td>
-                          <td><b>৳ {{ $payment->store_amount }}</b> <small>(৳ {{ $payment->amount }})</small></td>
                           <td>{{ date('F d, Y h:i A', strtotime($payment->created_at)) }}</td>
                         </tr>
                       @endforeach
