@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Payment extends Model
 {
     public function localOffice() {
-      return $this->belongsTo('App\User');
+      return $this->belongsTo('App\LocalOffice');
     }
 
     public function package() {
