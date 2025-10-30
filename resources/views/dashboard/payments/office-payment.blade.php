@@ -100,7 +100,7 @@
 		  <div class="row">
           @foreach($packages as $package)
               {{-- কলাম সাইজ: ডেস্কটপে ৪টি কার্ড, ট্যাবলেটে ২ টি, মোবাইলে ১ টি --}}
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4">
+              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
                   <div class="card package-card @if($package->suggested == 1) suggested-card @endif">
                       
                       {{-- হেডার ও ব্যাজ --}}
