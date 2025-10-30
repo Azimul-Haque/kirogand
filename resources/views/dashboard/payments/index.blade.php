@@ -59,7 +59,7 @@
                 	<tr>
                     <td>
                       <a href="#!">{{ $payment->localOffice->name }}</a>
-                      <small>({{ $payment->user->payments->count() }} বার)</small><br/>
+                      <small>({{ $payment->localOffice->payments->count() }} বার)</small><br/>
                       <small class="text-black-50">{{ $payment->user->mobile }}</small>
                     </td>
                     <td>{{ $payment->package->name }}</td>
