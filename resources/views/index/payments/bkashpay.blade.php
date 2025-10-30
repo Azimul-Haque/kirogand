@@ -52,7 +52,9 @@
 @include('index.payments.bkashscript')
 
 <style type="text/css">
-        
+        body{
+            background-color:#dce3f0;
+        }
 
         .height{
             height:100vh;
