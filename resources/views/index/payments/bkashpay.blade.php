@@ -91,7 +91,7 @@
 
         .btn-danger{
             
-            height:48px;
+            height:80px;
             font-size:20px;
         }
 </style>
