@@ -148,14 +148,14 @@
             </div>
             <div class="card-body pt-0 pb-3">
                 @if(Auth::user()->localOffice)
-                <p class="text-white">
+                    <p class="text-white">
 
-                    আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শীঘ্রই শেষ হতে চলেছে।
-                </p>
-                <p class="text-white text-lg font-weight-bold">
-                    মেয়াদ শেষ: {{ Auth::user()->localOffice->package_expiry_date != null ? date('d F, Y', strtotime(Auth::user()->localOffice->package_expiry_date)) : 'কোন প্যাকেজ কেনা নেই!' }}
-                </p>
-                <a href="{{ route('dashboard.payments.office') }}" class="btn btn-outline-light btn-sm mt-2">প্যাকেজ নবায়ন করুন <i class="fas fa-arrow-circle-right"></i></a>
+                        আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শীঘ্রই শেষ হতে চলেছে।
+                    </p>
+                    <p class="text-white text-lg font-weight-bold">
+                        মেয়াদ শেষ: {{ Auth::user()->localOffice->package_expiry_date != null ? date('d F, Y', strtotime(Auth::user()->localOffice->package_expiry_date)) : 'কোন প্যাকেজ কেনা নেই!' }}
+                    </p>
+                    <a href="{{ route('dashboard.payments.office') }}" class="btn btn-outline-light btn-sm mt-2">প্যাকেজ নবায়ন করুন <i class="fas fa-arrow-circle-right"></i></a>
                 @endif
             </div>
         </div>
