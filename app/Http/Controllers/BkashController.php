@@ -195,6 +195,7 @@ class BkashController extends Controller
         }
         // dd($package_expiry_date);
         $user->localOffice->package_expiry_date = $package_expiry_date;
+        $user->localOffice->save();
         $user->save();
         return response()->json(['status' => true]);
         
