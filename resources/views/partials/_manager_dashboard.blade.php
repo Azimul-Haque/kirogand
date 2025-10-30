@@ -150,7 +150,8 @@
                 @if(Auth::user()->localOffice)
                     <p class="text-white">
                         @if(isPackageExpired(Auth::user()->localOffice->package_expiry_date))
-                        আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শীঘ্রই শেষ হতে চলেছে।
+                            আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শীঘ্রই শেষ হতে চলেছে।
+                        @endif
                     </p>
                     <p class="text-white text-lg font-weight-bold">
                         মেয়াদ শেষ: {{ Auth::user()->localOffice->package_expiry_date != null ? date('d F, Y', strtotime(Auth::user()->localOffice->package_expiry_date)) : 'কোন প্যাকেজ কেনা নেই!' }}
