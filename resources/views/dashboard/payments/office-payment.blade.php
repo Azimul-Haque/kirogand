@@ -213,13 +213,13 @@
                                       </ul>
                                   </div><br/>
                                   
-                                  <div class="form-group">
+                                  {{-- <div class="form-group">
                                       <label for="user_number_{{ $package->id }}" class="font-weight-bold">
                                           অ্যাপে ব্যবহৃত ১১ ডিজিটের মোবাইল নম্বরটি লিখুন:
                                       </label>
-                                      {{-- @if(Auth::guest())
+                                      @if(Auth::guest())
                                           <p class="text-success text-sm m-0">রেজিস্ট্রেশন না করে থাকলে <a href="#!" class="text-primary font-weight-bold">এখানে ক্লিক করুন</a></p>
-                                      @endif --}}
+                                      @endif
                                       <input 
                                           type="number" 
                                           name="user_number" 
@@ -230,7 +230,7 @@
                                           @if(!Auth::guest()) value="{{ Auth::user()->mobile }}" @endif 
                                           required
                                       >
-                                  </div>
+                                  </div> --}}
 
                                   <small class="mt-3 d-block">
                                       <a href="{{ route('index.terms-and-conditions') }}" target="_blank">শর্তাবলী</a>, <a href="{{ route('index.privacy-policy') }}" target="_blank">গোপনীয়তা নীতি</a> & <a href="{{ route('index.refund-policy') }}" target="_blank">ফেরত নীতি</a> দেখুন।
