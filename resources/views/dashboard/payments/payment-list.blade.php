@@ -42,7 +42,7 @@
                             <th>ট্রানজেকশন আইডি</th>
                             <th>Amount (Store / Actual)</th>
                             <th>Card Type</th>
-                            <th>Status</th>
+                            <th>স্ট্যাটাস</th>
                             <th>সময়</th>
                         </tr>
                     </thead>
