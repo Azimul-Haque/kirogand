@@ -231,6 +231,17 @@
                                       >
                                   </div> --}}
 
+                                  <input 
+                                      type="hidden" 
+                                      name="user_number" 
+                                      id="user_number_{{ $package->id }}"
+                                      onkeypress="if(this.value.length==11) return false;" 
+                                      class="form-control form-control-lg" 
+                                      placeholder="অ্যাপে ব্যবহৃত মোবাইল নাম্বারটি লিখুন" 
+                                      @if(!Auth::guest()) value="{{ Auth::user()->mobile }}" @endif 
+                                      required
+                                  >
+
                                   <small class="mt-3 d-block">
                                       <a href="{{ route('index.terms-and-conditions') }}" target="_blank">শর্তাবলী</a>, <a href="{{ route('index.privacy-policy') }}" target="_blank">গোপনীয়তা নীতি</a> & <a href="{{ route('index.refund-policy') }}" target="_blank">ফেরত নীতি</a> দেখুন।
                                   </small>
