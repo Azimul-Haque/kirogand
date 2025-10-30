@@ -63,8 +63,8 @@
 
         .card{
             
-            width:400px;
-            height:200px;
+            width:300px;
+            height:150px;
         }
 
         .image{
