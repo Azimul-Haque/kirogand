@@ -91,10 +91,8 @@ function isPackageExpired(?string $expiryDate): bool
     }
 
     try {
-        // 2. Convert the database date string into a Carbon object.
         $expiry = Carbon::parse($expiryDate);
         
-        // 3. Get the current time (now).
         $now = Carbon::now();
 
         // 4. Compare: If the expiry date is before the current time, it is expired.
