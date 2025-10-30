@@ -75,18 +75,23 @@
             {{--request['amount'] = "{{ Session::get('bkash')['invoice_amount'] }}";--}} 
 
 
-            const targetElement = document.querySelector('.merchant__details__name');
+            document.addEventListener('DOMContentLoaded', function() {
                         
-            // 2. Check if the element was found to prevent errors
-            if (targetElement) {
-                // 3. Update the text content of the element
-                targetElement.textContent = 'D-Nagorik Payment';
-                console.log('Successfully changed text to: D-Nagorik Payment');
-            } else {
-                console.error('Element with class "merchant__details__name" not found.');
-            }
+                // 1. Select the element using its class name
+                // querySelector will find the *first* element that matches the selector
+                const targetElement = document.querySelector('.merchant__details__name');
+                
+                // 2. Check if the element was found to prevent errors
+                if (targetElement) {
+                    // 3. Update the text content of the element
+                    targetElement.textContent = 'D-Nagorik Payment';
+                    console.log('Successfully changed text to: D-Nagorik Payment');
+                } else {
+                    console.error('Element with class "merchant__details__name" not found.');
+                }
+            });
 
-            
+
             request['amount'] = {{ $amount ? $amount : 0 }}; // max two decimal points allowed
             $.ajax({
                 url: '{{ route('bkash-create-payment') }}',
