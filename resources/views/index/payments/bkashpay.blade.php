@@ -40,7 +40,7 @@
     
     <div class="card p-3">
         <center><big>পেমেন্ট ৳ {{ bangla($amount) }}</big></center>
-        <div class="d-flex justify-content-between align-items-center mt-2 mb-2">
+        <div class="d-flex justify-content-between align-items-center mt-4 mb-4">
         </div>
         
         <button class="btn btn-danger" id="bKash_button" onclick="BkashPayment()" style="background: url({{ asset('images/bkash_payment_logo.png') }}); background-size: 100%; background-size: 250px auto; background-repeat: no-repeat;">
