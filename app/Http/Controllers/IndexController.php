@@ -458,7 +458,7 @@ class IndexController extends Controller
 
     public function getCitizenRegister()
     {
-        Session::flash('warning', 'নাগরিক নিবন্ধন এর কাজ চলমান। কিছুদিন অপেক্ষা করুন!');
+        Session::flash('warning', 'নাগরিক নিবন্ধন এর কাজ চলমান। আপনার নিকটস্থ ইউনিয়ন/পৌরসভায় যোগাযোগ করুন, তারা ড্যাশবোর্ড থেকে সনদ প্রদান করবে!');
         return redirect()->route('index.index');
         return view('index.auth.register-citizen');
     }
