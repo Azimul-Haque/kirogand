@@ -44,7 +44,7 @@
 
 @if(Auth::user()->role == 'admin' || Auth::user()->role == 'manager')
 <li class="nav-item">
-    <a href="{{ route('dashboard.payments.office') }}" class="nav-link {{ Request::is('dashboard/apply-for-certificate') ? 'active' : '' }} {{ Request::is('dashboard/apply-for-certificate/*') ? 'active' : '' }}">
+    <a href="{{ route('dashboard.payments.office') }}" class="nav-link {{ Request::is('dashboard/payments/office') ? 'active' : '' }} {{ Request::is('dashboard/payments/office/*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-certificate"></i>
         <p>সনদের আবেদনসমূহ</p>
     </a>
