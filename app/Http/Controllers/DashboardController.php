@@ -643,7 +643,7 @@ class DashboardController extends Controller
 
     public function getOfficePaymentsList()
     {
-        $payments = Payment::orderBy('id', 'desc')->paginate(15);
+        $payments = Payment::where()->orderBy('id', 'desc')->paginate(15);
         
         return view('dashboard.payments.payment-list')->withPayments($payments);
     }
