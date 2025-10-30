@@ -151,7 +151,7 @@
                     <p class="text-white">
                         @if(isPackageExpired(Auth::user()->localOffice->package_expiry_date))
                             আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শেষ, প্যাকেজ কিনুন!
-                        @elseif()
+                        @elseif(isPackageExpired(Auth::user()->localOffice->package_expiry_date))
                             আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শীঘ্রই শেষ হতে চলেছে।
                         @endif
                     </p>
