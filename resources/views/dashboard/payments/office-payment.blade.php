@@ -124,7 +124,7 @@
                       </div>
 
                       {{-- মূল্য প্রদর্শন --}}
-                      <div class=" pt-2">
+                      <div class="card-body text-center pt-2">
                           <div class="price mb-3">
                               <h2 class="amount">
                                   {{-- স্ট্রাইক-থ্রু মূল্য ছোট করে --}}
