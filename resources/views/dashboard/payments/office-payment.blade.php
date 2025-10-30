@@ -129,7 +129,7 @@
                               <h2 class="amount">
                                   {{-- স্ট্রাইক-থ্রু মূল্য ছোট করে --}}
                                   <span class="currency strike-through">
-                                      <strike>৳ {{ bangla($package->strike_price) }}</strike>
+                                      <small><strike>৳ {{ bangla($package->strike_price) }}</strike></small>
                                   </span>
                                   {{-- মূল মূল্য বড় করে --}}
                                   <span class="price-value">৳ {{ bangla($package->price) }}</span>
@@ -192,7 +192,7 @@
                                   
                                   <h3 class="my-3">
                                       <b>মূল্য:</b> 
-                                      <span class="text-muted"><strike>৳ {{ bangla($package->strike_price) }}</strike></span> 
+                                      <span class="text-muted"><small><strike>৳ {{ bangla($package->strike_price) }}</strike></small></span> 
                                       <span class="text-success ml-2">৳ {{ bangla($package->price) }}</span>
                                   </h3>
 
