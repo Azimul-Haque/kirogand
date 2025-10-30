@@ -128,7 +128,7 @@ function isPackageExpiringSoon(?string $expiryDate, int $days = 10): bool
         return $expiry->lte($warningThreshold);
 
     } catch (\Exception $e) {
-        \Log::error("Date parsing error for package expiry check (soon): " . $e->getMessage());
+        // \Log::error("Date parsing error for package expiry check (soon): " . $e->getMessage());
         return false; 
     }
 }
