@@ -114,7 +114,6 @@ function isPackageExpiringSoon(?string $expiryDate, int $days = 10): bool
         return false;
     }
     
-    // If date is empty but not expired (shouldn't happen due to previous check, but for robustness)
     if (empty($expiryDate)) {
         return false;
     }
