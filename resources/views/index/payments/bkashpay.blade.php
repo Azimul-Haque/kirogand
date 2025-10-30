@@ -40,7 +40,7 @@
     
     <div class="card p-3">
         <center><big>পেমেন্ট ৳ {{ bangla($amount) }}</big></center>
-        <div class="d-flex justify-content-between align-items-center mt-4 mb-4">
+        <div class="d-flex justify-content-between align-items-center mt-2 mb-2">
         </div>
         
         <button class="btn btn-danger" id="bKash_button" onclick="BkashPayment()" style="background: url({{ asset('images/bkash_payment_logo.png') }}); background-size: 100%; background-size: 250px auto; background-repeat: no-repeat;">
@@ -87,6 +87,44 @@
 
         .user-ratings h6{
             margin-top:2px;
+        }
+
+        .colors{
+            display:flex;
+            margin-top:2px;
+        }
+
+        .colors span{
+            width:15px;
+            height:15px;
+            border-radius:50%;
+            cursor:pointer;
+            display:flex;
+            margin-right:6px;
+        }
+
+        .colors span:nth-child(1) {
+            
+            background-color:red;
+            
+        }
+
+        .colors span:nth-child(2) {
+            
+            background-color:blue;
+            
+        }
+
+        .colors span:nth-child(3) {
+            
+            background-color:yellow;
+            
+        }
+
+        .colors span:nth-child(4) {
+            
+            background-color:purple;
+            
         }
 
         .btn-danger{
