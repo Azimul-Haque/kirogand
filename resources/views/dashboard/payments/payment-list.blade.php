@@ -38,7 +38,7 @@
                     <thead>
                         <tr>
                             <th style="width: 10px">#</th>
-                            <th>Package</th>
+                            <th>প্যাকেজ</th>
                             <th>Trx ID</th>
                             <th>Date/Time</th>
                             <th>Amount (Store / Actual)</th>
