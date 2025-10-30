@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Payment extends Model
 {
-    public function user() {
+    public function localOffice() {
       return $this->belongsTo('App\User');
     }
 
