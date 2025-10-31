@@ -161,7 +161,7 @@
                             <i class="fas fa-print"></i> অনুমোদন করুন
                         </button>
                         <script type="text/javascript">
-                          const Toast = Swal.mixin({
+                          const ToastAprv = Swal.mixin({
                             toast: false,
                             position: 'center',
                             showConfirmButton: false,
