@@ -544,7 +544,7 @@ class DashboardController extends Controller
                          ->with('success', 'Local office details updated successfully.');
     }
 
-    public function addLocalOfficePayment (Request $request, $id)
+    public function addLocalOfficePayment(Request $request, $id)
     {
         $this->validate($request, [
             'amount'            => 'required|string|max:255',
