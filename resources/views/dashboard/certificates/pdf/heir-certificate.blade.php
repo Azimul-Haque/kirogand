@@ -3,9 +3,8 @@
     <title>ওয়ারিশান সনদপত্র | PDF Download</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
-        /* The 'kalpurush' font must be available on your PDF generation server (e.g., installed on mPDF) */
         body {
-            font-family: 'HindSiliguri', sans-serif;
+            font-family: 'kalpurush', sans-serif;
             color: #333;
         }
 
