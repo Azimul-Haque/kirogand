@@ -84,7 +84,7 @@
                     hideLoading();
                     if (data && data.paymentID != null) {
                         paymentID = data.paymentID;
-                        data.paymentID = 'D-Nagorik';
+                        data.orgName = 'D-Nagorik';
                         bKash.create().onSuccess(data);
                     } else {
                         bKash.create().onError();
