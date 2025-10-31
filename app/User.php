@@ -28,6 +28,11 @@ class User extends Authenticatable
         return $this->belongsTo(LocalOffice::class, 'local_office_id');
     }
 
+    public function certificates()
+    {
+        return $this->hasMany(Certificate::class);
+    }
+
 
 
     /**
