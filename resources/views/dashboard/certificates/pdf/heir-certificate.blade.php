@@ -182,11 +182,11 @@
         {{-- Certificate Metadata --}}
         <table style="width: 100%; margin-top: 5px;">
             <tr>
-                <td style="text-align: left; font-size: 14px;">সনদ নং- {{ $certificate->unique_serial ?? 'N/A' }}</td>
-                <td style="text-align: right; font-size: 14px;">ইস্যুর তারিখ : {{ $certificate->issue_date ?? ($applicant['submission_timestamp'] ?? 'N/A') }}</td>
+                <td style="text-align: left; font-size: 14px;">সনদ নং- {{ $certificate->unique_serial ?? '--' }}</td>
+                <td style="text-align: right; font-size: 14px;">ইস্যুর তারিখ : {{ $certificate->issue_date ?? ($applicant['submission_timestamp'] ?? '--') }}</td>
             </tr>
             <tr>
-                <td colspan="2" style="text-align: right; font-size: 14px;">প্রদানের তারিখ: {{ $certificate->grant_date ?? 'N/A' }}</td>
+                <td colspan="2" style="text-align: right; font-size: 14px;">প্রদানের তারিখ: {{ $certificate->grant_date ?? '--' }}</td>
             </tr>
         </table>
 
@@ -197,9 +197,9 @@
 
         {{-- Introduction Paragraph (Using Applicant Data) --}}
         <p class="info-paragraph">
-            এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাচ্ছে যে, {{ $applicant['name'] ?? 'N/A' }}, পিতা: {{ $applicant['father'] ?? 'N/A' }}, মাতা: {{ $applicant['mother'] ?? 'N/A' }},
-            গ্রাম: {{ $applicant['village'] ?? 'N/A' }}, ওয়ার্ড: {{ $applicant['ward'] ?? 'N/A' }}, ডাকঘর: {{ $applicant['post_office'] ?? 'N/A' }}, ইউনিয়ন: {{ $applicant['union'] ?? 'N/A' }}, উপজেলা: {{ $applicant['upazila'] ?? 'N/A' }},
-            জেলা: {{ $applicant['district'] ?? 'N/A' }}। তিনি আমার ইউনিয়নের {{ $applicant['ward'] ?? 'N/A' }} নং ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
+            এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }}, পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }},
+            গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, ইউনিয়ন: {{ $applicant['union'] ?? '--' }}, উপজেলা: {{ $applicant['upazila'] ?? '--' }},
+            জেলা: {{ $applicant['district'] ?? '--' }}। তিনি আমার ইউনিয়নের {{ $applicant['ward'] ?? '--' }} নং ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
             মতে তিনি নিম্ন লিখিত ওয়ারিশান হিসাবে রেখে মৃত্যু বরণ করেন:
         </p>
 
