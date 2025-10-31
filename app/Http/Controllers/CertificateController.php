@@ -71,9 +71,9 @@ class CertificateController extends Controller
         return view('dashboard.certificates.create')->with('certificate_type', $certificate_type);
     }
 
-    public function storeCertificate(Request $requests, $certificate_type)
+    public function storeCertificate(Request $request, $certificate_type)
     {
-        // dd($requests->all());
+        // dd($request->all());
         $validatedData = $request->validate([
         'name' => ['required', 'string', 'max:255'],
         'father' => ['required', 'string', 'max:255'],
