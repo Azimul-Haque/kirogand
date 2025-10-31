@@ -553,6 +553,7 @@ class DashboardController extends Controller
 
         $localoffice                    = LocalOffice::findOrFail($id);
         
+        $
 
         $localoffice->save();
 
