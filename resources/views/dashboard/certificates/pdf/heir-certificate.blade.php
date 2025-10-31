@@ -3,7 +3,7 @@
     <title>ওয়ারিশান সনদ | PDF Download</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
-        /* This font family must be available on your PDF generation server (e.g., installed on mPDF) */
+        /* The 'kalpurush' font must be available on your PDF generation server (e.g., installed on mPDF) */
         body {
             font-family: 'kalpurush', sans-serif;
             color: #333;
@@ -15,13 +15,14 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
-            margin: 40px 60px 50px 60px; /* Reduced top/bottom margin for better content display */
+            /* Reduced top/bottom margin for better content display */
+            margin: 40px 60px 50px 60px;
         }
 
         .header-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         .header-table td {
             vertical-align: top;
@@ -101,19 +102,33 @@
 
     {{-- HEADER CONTENT - Modified to fit the certificate image --}}
     <htmlpageheader name="page-header">
+        @php
+            // Extract the applicant data for easier access (assuming it's nested)
+            $applicant = $certificate['applicant'] ?? [
+                'name' => 'রফিক মিয়া', 'father' => 'করিম মিয়া', 'mother' => 'রহিমা বেগম',
+                'village' => 'শংকরপুর', 'ward' => bangla(০৪), 'paurashava' => 'কালিকাকা-০৩৮০',
+                'union' => 'ইপ্রোত্তয়ন', 'upazila' => 'নাগরপুর', 'district' => 'টাঙ্গাইল',
+            ];
+            // Placeholder data for Union information (if not in $certificate)
+            $union_info = $certificate['union_info'] ?? [
+                'union_name' => '০২ নং ইপ্রোত্তয়ন ইউনিয়ন', 'upazila' => 'নাগরপুর', 'district' => 'টাঙ্গাইল',
+                'chairman_name' => 'নজরুল ইসলাম', 'email' => 'admin@eprottyon.com', 'phone' => '০১৭০০০০০০০০',
+            ];
+        @endphp
+
         <table class="header-table">
             <tr>
                 <td style="width: 30%;">
-                    {{-- Logo/Flag Left (Assuming you have an image path for the flag) --}}
+                    {{-- Logo/Flag Left --}}
                     <img src="{{ public_path('images/bangladesh-flag.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
                 </td>
                 <td style="width: 40%; text-align: center;">
                     <span style="font-size: 14px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span><br/>
-                    <span style="font-size: 18px; font-weight: bold;">{{ $data['union_name'] ?? '০২ নং ইপ্রোত্তয়ন ইউনিয়ন' }}</span><br/>
-                    <span style="font-size: 13px;">উপজেলা : {{ $data['upazila_name'] ?? 'নাগরপুর' }}, জেলা : {{ $data['district_name'] ?? 'টাঙ্গাইল' }}।</span><br/>
-                    <span style="font-size: 13px;">চেয়ারম্যান : মো: {{ $data['chairman_name'] ?? 'নজরুল ইসলাম' }}</span><br/>
-                    <span style="font-size: 13px;">ইমেইল : {{ $data['email'] ?? 'admin@eprottyon.com' }}</span><br/>
-                    <span style="font-size: 13px;">ফোন নম্বর : {{ $data['phone'] ?? '০১৭00000000' }}</span>
+                    <span style="font-size: 18px; font-weight: bold;">{{ $union_info['union_name'] }}</span><br/>
+                    <span style="font-size: 13px;">উপজেলা : {{ $union_info['upazila'] }}, জেলা : {{ $union_info['district'] }}।</span><br/>
+                    <span style="font-size: 13px;">চেয়ারম্যান : মো: {{ $union_info['chairman_name'] }}</span><br/>
+                    <span style="font-size: 13px;">ইমেইল : {{ $union_info['email'] }}</span><br/>
+                    <span style="font-size: 13px;">ফোন নম্বর : {{ $union_info['phone'] }}</span>
                 </td>
                 <td style="width: 30%; text-align: right;">
                     {{-- e-Prottayon Logo Right --}}
@@ -131,11 +146,11 @@
         {{-- Certificate Metadata --}}
         <table style="width: 100%; margin-top: 5px;">
             <tr>
-                <td style="text-align: left; font-size: 14px;">সনদ নং- **{{ $data['cert_number'] ?? '০৪৫৮২৭' }}**</td>
-                <td style="text-align: right; font-size: 14px;">ইস্যুর তারিখ : **{{ $data['issue_date'] ?? '০৪-০৭-২০২৪' }}**</td>
+                <td style="text-align: left; font-size: 14px;">সনদ নং- **{{ $certificate['cert_id'] ?? '০৪৫৮২৭' }}**</td>
+                <td style="text-align: right; font-size: 14px;">ইস্যুর তারিখ : **{{ $certificate['issue_date'] ?? '০৪-০৭-২০২৪' }}**</td>
             </tr>
             <tr>
-                <td colspan="2" style="text-align: right; font-size: 14px;">প্রদানের তারিখ: **{{ $data['grant_date'] ?? '১০-০৮-২০২৫' }}**</td>
+                <td colspan="2" style="text-align: right; font-size: 14px;">প্রদানের তারিখ: **{{ $certificate['grant_date'] ?? '১০-০৮-২০২৫' }}**</td>
             </tr>
         </table>
 
@@ -145,26 +160,10 @@
         </div>
 
         {{-- Introduction Paragraph --}}
-        @php
-            // Example data for the applicant/sender
-            $applicant = [
-                'name' => 'রফিক মিয়া',
-                'father' => 'করিম মিয়া',
-                'mother' => 'রহিমা বেগম',
-                'village' => 'শংকরপুর',
-                'ward' => 'শংকরপুর', // Helper function assumed for Bengali numerals
-                'paurashava' => 'কালিকাকা-০৩৮০',
-                'union' => 'ইপ্রোত্তয়ন',
-                'upazila' => 'নাগরপুর',
-                'district' => 'টাঙ্গাইল',
-            ];
-            // You will pass the actual $data array from your controller.
-            $a = $data['applicant'] ?? $applicant;
-        @endphp
         <p class="info-paragraph">
-            এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাইতেছে যে, **{{ $a['name'] }}**, পিতা: **{{ $a['father'] }}**, মাতা: **{{ $a['mother'] }}**,
-            গ্রাম: **{{ $a['village'] }}**, ওয়ার্ড: **{{ $a['ward'] }}**, ডাকঘর: **{{ $a['paurashava'] }}**, ইউনিয়ন: **{{ $a['union'] }}**, উপজেলা: **{{ $a['upazila'] }}**,
-            জেলা: **{{ $a['district'] }}**। তিনি আমার ইউনিয়নের **{{ $a['ward'] }}** নং ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
+            এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাইতেছে যে, **{{ $applicant['name'] }}**, পিতা: **{{ $applicant['father'] }}**, মাতা: **{{ $applicant['mother'] }}**,
+            গ্রাম: **{{ $applicant['village'] }}**, ওয়ার্ড: **{{ $applicant['ward'] }}**, ডাকঘর: **{{ $applicant['paurashava'] }}**, ইউনিয়ন: **{{ $applicant['union'] }}**, উপজেলা: **{{ $applicant['upazila'] }}**,
+            জেলা: **{{ $applicant['district'] }}**। তিনি আমার ইউনিয়নের **{{ $applicant['ward'] }}** নং ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
             মতে তিনি নিম্ন লিখিত ওয়ারিশান হিসাবে রেখে মৃত্যু বরণ করেন:
         </p>
 
@@ -184,15 +183,8 @@
                 </tr>
             </thead>
             <tbody>
-                @php
-                    // Example data for the beneficiaries array
-                    $beneficiaries = [
-                        ['id' => 1, 'name' => 'কল্পনা', 'relation' => 'মেয়ে', 'voter_id' => '১০১২২৫২৫৩৩২৫', 'dob' => '২৫/১১/১৯৯৯', 'remarks' => ''],
-                        ['id' => 2, 'name' => 'সুরজ', 'relation' => 'ছেলে', 'voter_id' => '১০১২৩৫২৪৪৭৯৩', 'dob' => '০৫/০৭/১৯৯২', 'remarks' => ''],
-                    ];
-                @endphp
                 {{-- Loop over the actual beneficiaries data passed to the template --}}
-                @foreach($data['beneficiaries'] ?? $beneficiaries as $beneficiary)
+                @foreach($certificate['beneficiaries'] ?? [] as $beneficiary)
                     <tr>
                         <td>{{ bangla($beneficiary['id']) }}</td>
                         <td>{{ $beneficiary['name'] }}</td>
@@ -202,6 +194,26 @@
                         <td>{{ $beneficiary['remarks'] }}</td>
                     </tr>
                 @endforeach
+
+                @if(empty($certificate['beneficiaries']))
+                {{-- Placeholder rows if no actual data is present --}}
+                    <tr>
+                        <td>{{ bangla(1) }}</td>
+                        <td>কল্পনা</td>
+                        <td>মেয়ে</td>
+                        <td>১০১২২৫২৫৩৩২৫</td>
+                        <td>২৫/১১/১৯৯৯</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>{{ bangla(2) }}</td>
+                        <td>সুরজ</td>
+                        <td>ছেলে</td>
+                        <td>১০১২৩৫২৪৪৭৯৩</td>
+                        <td>০৫/০৭/১৯৯২</td>
+                        <td></td>
+                    </tr>
+                @endif
             </tbody>
         </table>
 
