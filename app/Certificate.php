@@ -50,9 +50,9 @@ class Certificate extends Model
     {
         return $this->belongsTo(User::class, 'recipient_user_id');
     }
-    public function recipient()
+    public function localOffice()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(LocalOffice::class);
     }
 
     /**
