@@ -98,7 +98,7 @@ class CertificateController extends Controller
     ]);
 
     $newuser = User::create([
-        'local_office_id ' => $validatedData['certificate_type'],
+        'local_office_id ' => Auth::user()->local_office_id,
         'recipient_user_id' => Auth::check() ? Auth::id() : null,
         'status' => 0, // 0 = draft, 1 = published
         'unique_serial' => $uniqueSerial,
