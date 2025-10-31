@@ -145,7 +145,7 @@ class CertificateController extends Controller
                                   ->where('unique_serial', $unique_serial)
                                   ->first();
 
-        return view('dashboard.certificates.draft')->with('certificate_type', $certificate_type);
+        return view('dashboard.certificates.draft')->withCertificate($certificate);
     }
     
 }
