@@ -49,7 +49,7 @@
     <span style="font-size: 20px;"><strong>{{ $certificate['name'] }}</strong></span><br/>
   </p>
   <div style="padding-top: -30px; text-align: center;">
-    <p style="position: relative;">পূর্ণমান - {{ bangla($certificate['examquestions']->count() * $certificate['qsweight']) }}, কাটমার্ক - {{ bangla($certificate['cutmark']) }}, সময় - {{ bangla($certificate['duration']) }} মিনিট
+    <p style="position: relative;">পূর্ণমান -, কাটমার্ক - {{ bangla($certificate['cutmark']) }}, সময় - {{ bangla($certificate['duration']) }} মিনিট
     </p> 
   </div>
   
