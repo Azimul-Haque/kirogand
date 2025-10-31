@@ -223,6 +223,7 @@
     </script>
 
     <script type="text/javascript">
+      pulsePrintButton({{ session('justapproved') }});
       function pulsePrintButton(serial) {
           // Convert the serial (e.g., C-2024-00301) into the ID format (C202400301)
           const cleanedSerial = serial.replace(/-/g, ''); 
@@ -252,7 +253,7 @@
           }
       }
       
-      pulsePrintButton({{ session('justapproved') }});
+      
       
     </script>
 @endsection
