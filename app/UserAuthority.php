@@ -39,8 +39,8 @@ class UserAuthority extends Model
         $names = [];
 
         foreach ($ancestors as $level => $model) {
-            // Extract the name, preferring the Bengali name (name_bn)
-            $names[$level] = $model->name_bn ?? $model->name;
+            // Extract the name, preferring the Bengali name (bn_name)
+            $names[$level] = $model->bn_name ?? $model->name;
         }
 
         return $names;
@@ -59,8 +59,8 @@ class UserAuthority extends Model
 
         // Traverse upwards until the Division is reached (or the current object has no parent)
         while ($current) {
-            // Use the Bengali name (name_bn) if available, otherwise use the English name (name)
-            $name = $current->name_bn ?? $current->name;
+            // Use the Bengali name (bn_name) if available, otherwise use the English name (name)
+            $name = $current->bn_name ?? $current->name;
             $hierarchy[] = $name;
 
             // Check for the parent relationship based on the model class
