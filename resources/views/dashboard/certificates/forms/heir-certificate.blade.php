@@ -31,12 +31,12 @@
                                 <option value="জন্ম সনদ" {{ old('id_type') == 'জন্ম সনদ' ? 'selected' : '' }}>জন্ম সনদ</option>
                             </select>
                         </div>
-                        <!-- Input for Value: name="nid_value" -->
-                        <input type="text" class="form-control @error('nid_value') is-invalid @enderror" name="nid_value" placeholder="নম্বর দিন" value="{{ old('nid_value') }}" required>
+                        <!-- Input for Value: name="id_value" -->
+                        <input type="text" class="form-control @error('id_value') is-invalid @enderror" name="id_value" placeholder="নম্বর দিন" value="{{ old('id_value') }}" required>
                     </div>
                     <!-- Display combined error messages if needed -->
                     @error('id_type') <span class="text-danger d-block mt-1">{{ $message }}</span> @enderror
-                    @error('nid_value') <span class="text-danger d-block mt-1">{{ $message }}</span> @enderror
+                    @error('id_value') <span class="text-danger d-block mt-1">{{ $message }}</span> @enderror
                 </div>
             </div>
 
