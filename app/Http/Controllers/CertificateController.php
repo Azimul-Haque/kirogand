@@ -108,7 +108,7 @@ class CertificateController extends Controller
     $certificate = Certificate::create([
         'certificate_type' => $validatedData['certificate_type'],
         'recipient_user_id' => Auth::check() ? Auth::id() : null,
-        'status' => 1,
+        'status' => 0, // 0 = draft, 1 = published
         'unique_serial' => $uniqueSerial,
         'issued_at' => now(),
         'data_payload' => $dataPayload,
