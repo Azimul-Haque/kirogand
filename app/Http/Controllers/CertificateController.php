@@ -60,6 +60,7 @@ class CertificateController extends Controller
 
     public function getApplicationbyCType($certificate_type)
     {
+        dd($certificate_type);
         if(Auth::user()->role == 'manager') {
             if (Auth::user()->is_active === 0) {
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
