@@ -70,7 +70,7 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="post_office">ডাকঘর <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('post_office') is-invalid @enderror" id="post_office" name="post_office" value="{{ old('post_office') }}" required>
+                    <input type="text" class="form-control @error('post_office') is-invalid @enderror" id="post_office" name="post_office" value="{{ old('post_office') }}" placeholder="ডাকঘর" required>
                     @error('post_office') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-3">
