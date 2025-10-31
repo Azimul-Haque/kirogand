@@ -189,21 +189,8 @@
           <!-- /.card-body -->
         </div>
         {{ $certificates->links() }}
-        @php
-            
 
-
-            $authorityObject = (new \ReflectionClass($auth->authority_type))->getShortName();
-            // 2. Instantiate the Resolver and call the method
-            // Pass the starting object (e.g., the Union model instance) to the resolver.
-            $resolver = (App\Services\AuthorityResolver($authorityObject));
-            
-            // This returns the clean array: ['Division' => 'ঢাকা', 'District' => 'টাঙ্গাইল', ...]
-            $hierarchyNames = $resolver->getHierarchyNamesByLevel();
-
-            
-        @endphp
-        {{ $hierarchyNames }}
+        {{ getgovlevels() }}
 
     </div>
 @endsection
