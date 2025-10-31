@@ -101,6 +101,8 @@ class CertificateController extends Controller
         'local_office_id ' => Auth::user()->local_office_id,
         'is_active ' => 0,
         'nid ' => $request->id_value,
+        'name ' => $request->name,
+        'name ' => $request->name,
 
         'recipient_user_id' => Auth::check() ? Auth::id() : null,
         'status' => 0, // 0 = draft, 1 = published
