@@ -250,6 +250,7 @@
                 <td>
                     <div style="padding-top: 15px;">প্রস্তুতকারীর সিল ও স্বাক্ষর</div>
                     <div class="signature-line"></div>
+                    <div style="border-top: 2px solid green; margin-top: 5px;"></div>
                 </td>
                 <td>
                     <div style="padding-top: 15px;">অনুমোদনকারীর সিল ও স্বাক্ষর</div>
