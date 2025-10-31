@@ -483,8 +483,6 @@ class DashboardController extends Controller
                           ->orWhere('name', 'LIKE', "%$search%")
                           ->orWhere('email', 'LIKE', "%$search%")
                           ->orWhere('mobile', 'LIKE', "%$search%")
-                          ->orWhere('nid', 'LIKE', "%$search%")
-                          ->orWhere('onesignal_id', 'LIKE', "%$search%")
                           ->orderBy('id', 'desc')
                           ->count();
         $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
