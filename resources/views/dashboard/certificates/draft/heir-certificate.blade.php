@@ -176,7 +176,7 @@
                            
                         @if (Session::has('success'))
                           <script type="text/javascript">
-                            Toast.fire({
+                            ToastAprv.fire({
                               icon: 'success',
                               title: '{{Session::get('success')}}'
                             })
