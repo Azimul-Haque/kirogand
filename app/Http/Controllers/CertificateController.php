@@ -107,12 +107,6 @@ class CertificateController extends Controller
         'designation' => 'নাগরিক',
         'mobile' => $request->mobile,
         'mobile' => Hash::make('123456'),
-
-        'recipient_user_id' => Auth::check() ? Auth::id() : null,
-        'status' => 0, // 0 = draft, 1 = published
-        'unique_serial' => $uniqueSerial,
-        'issued_at' => now(),
-        'data_payload' => $dataPayload,
     ]);
 
     $dataPayload = [
