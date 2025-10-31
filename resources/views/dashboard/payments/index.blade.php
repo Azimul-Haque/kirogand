@@ -64,7 +64,7 @@
                     </td>
                     <td>{{ $payment->package->name }}</td>
                     <td>{{ $payment->payment_status == 1 ? 'Successfull' : 'Failed' }}</td>
-                    <td>{{ $payment->card_type }}</td>
+                    <td><span>{{ $payment->card_type }}</span></td>
                     <td>{{ $payment->trx_id }}</td>
                     <td><b>৳ {{ $payment->store_amount }}</b> <small>(৳ {{ $payment->amount }})</small></td>
                 		<td>{{ date('F d, Y h:i A', strtotime($payment->created_at)) }}</td>
