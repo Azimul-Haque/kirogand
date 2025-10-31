@@ -485,13 +485,12 @@ class DashboardController extends Controller
                           ->orWhere('mobile', 'LIKE', "%$search%")
                           ->orderBy('id', 'desc')
                           ->count();
-        $localoffices = LocalOffice::where('name', 'LIKE', "%$search%")
-                     ->orWhere('email', 'LIKE', "%$search%")
-                     ->orWhere('mobile', 'LIKE', "%$search%")
-                     ->orWhere('nid', 'LIKE', "%$search%")
-                     ->orWhere('onesignal_id', 'LIKE', "%$search%")
-                     ->orderBy('id', 'desc')
-                     ->paginate(10);
+        $localoffices = LocalOffice::where('name_bn', 'LIKE', "%$search%")
+                          ->orWhere('name', 'LIKE', "%$search%")
+                          ->orWhere('email', 'LIKE', "%$search%")
+                          ->orWhere('mobile', 'LIKE', "%$search%")
+                          ->orderBy('id', 'desc')
+                          ->paginate(10);
 
         return view('dashboard.localoffices.index')
                     ->withLocalofficescount($localofficescount)
