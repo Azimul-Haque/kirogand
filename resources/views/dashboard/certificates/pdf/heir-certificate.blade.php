@@ -152,7 +152,7 @@
                 'father' => 'করিম মিয়া',
                 'mother' => 'রহিমা বেগম',
                 'village' => 'শংকরপুর',
-                'ward' => bangla(০৪), // Helper function assumed for Bengali numerals
+                'ward' => 'শংকরপুর', // Helper function assumed for Bengali numerals
                 'paurashava' => 'কালিকাকা-০৩৮০',
                 'union' => 'ইপ্রোত্তয়ন',
                 'upazila' => 'নাগরপুর',
