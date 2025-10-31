@@ -245,6 +245,22 @@ class CertificateController extends Controller
         return $pdf->stream($fileName); // download/stream
     }
 
+    public function downloadCertificate($unique_serial)
+    {
+        if(Auth::user()->role == 'manager') {
+            if (Auth::user()->is_active === 0) {
+                Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
+                return redirect()->route('index.index');
+            }
+        }
+
+        $certificate = Certificate::where('unique_serial', $unique_serial)->first();
+
+        $pdf = PDF::loadView('dashboard.certificates.pdf.heir-certificate', ['certificate' => $certificate]);
+        $fileName = 'Cert-' . $certificate->unique_serial . '.pdf';
+        return $pdf->download($fileName); // download/stream
+    }
+
     public function getCertificateList()
     {
         if(Auth::user()->role == 'manager') {
