@@ -92,7 +92,7 @@
       <!-- BS5 'g-4' (gutter) is removed, relying on default BS4 column padding and custom CSS margin-bottom on service boxes -->
       <div class="row" id="serviceGrid">
 
-        {{-- , অবিবাহিত, প্রত্যয়ন --}}
+        {{-- , , প্রত্যয়ন --}}
 
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
             <a href="{{ route('dashboard.certificates.certificate_type', 'heir-certificate') }}" class="text-decoration-none text-dark d-block">
@@ -143,7 +143,7 @@
             <a href="{{ route('dashboard.certificates.certificate_type', 'character-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #ff9800;"><i class="fas fa-user-shield"></i></div> 
-                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">চারিত্রিক সনদ</h3>
+                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">অবিবাহিত সনদ</h3>
                 </div>
             </a>
         </div>
