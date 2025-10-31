@@ -93,7 +93,7 @@
 
                                       {{-- Edit Button (If status allows, typically only for Draft/Pending) --}}
                                       @if ($certificate->status == 0)
-                                          <a href="{{ route('dashboard.certificates.edit', $certificate->id) }}" class="btn btn-warning" title="সম্পাদনা">
+                                          <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning" title="সম্পাদনা">
                                               <i class="fas fa-edit"></i>
                                           </a>
                                       @endif
