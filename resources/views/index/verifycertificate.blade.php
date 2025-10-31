@@ -65,7 +65,7 @@
 @section('third_party_scripts')
   <script type="text/javascript">
     $('#verifyButton').click({
-      
+      console.log('clicked');
     });
   </script>
 
