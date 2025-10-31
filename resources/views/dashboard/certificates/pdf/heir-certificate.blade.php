@@ -46,17 +46,17 @@
     Test    
   </h2> --}}
   <p align="center" style="padding-top: 0px;">
-    <span style="font-size: 20px;"><strong>{{ $exam['name'] }}</strong></span><br/>
+    <span style="font-size: 20px;"><strong>{{ $certificate['name'] }}</strong></span><br/>
   </p>
   <div style="padding-top: -30px; text-align: center;">
-    <p style="position: relative;">পূর্ণমান - {{ bangla($exam['examquestions']->count() * $exam['qsweight']) }}, কাটমার্ক - {{ bangla($exam['cutmark']) }}, সময় - {{ bangla($exam['duration']) }} মিনিট
+    <p style="position: relative;">পূর্ণমান - {{ bangla($certificate['examquestions']->count() * $certificate['qsweight']) }}, কাটমার্ক - {{ bangla($certificate['cutmark']) }}, সময় - {{ bangla($certificate['duration']) }} মিনিট
     </p> 
   </div>
   
   @php
     $counter = 1;
   @endphp
-  @foreach($exam['examquestions'] as $question)
+  @foreach($certificate['examquestions'] as $question)
     <div style="margin-bottom: 15px;">
       <h4><b>{{ bangla($counter) }}. {!! $question->question->question !!}</b></h4>
       <table cellspacing="0" cellpadding="0">
