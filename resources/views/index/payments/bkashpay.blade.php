@@ -80,10 +80,3 @@
             font-size:18px;
         }
 </style>
-
-
-
-<script>
-    const targetElement = document.querySelector('.merchant__details__name');
-    targetElement.innerHtml = 'D-Nagorik Payment';
-</script>
