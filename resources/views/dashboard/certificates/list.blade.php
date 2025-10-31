@@ -199,12 +199,7 @@
             // This returns the clean array: ['Division' => 'ঢাকা', 'District' => 'টাঙ্গাইল', ...]
             $hierarchyNames = $resolver->getHierarchyNamesByLevel();
 
-            // 3. Pass the clean array to the view
-            return view('certificate.details', [
-                'certificate' => $certificate,
-                // This is the variable you will use in your Blade file
-                'adminNames' => $hierarchyNames,
-            ]);
+            
         @endphp
         {{ getHierarchyNamesByLevel }}
 
