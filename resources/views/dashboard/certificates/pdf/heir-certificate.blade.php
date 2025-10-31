@@ -89,6 +89,19 @@
             font-weight: normal;
         }
 
+        .seal-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 1px solid #9ca3af; /* gray-400 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-size: 14px;
+            margin: 0 auto;
+        }
+
         .signature-block {
             margin-top: 50px;
             width: 100%;
