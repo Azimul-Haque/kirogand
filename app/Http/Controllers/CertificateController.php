@@ -77,8 +77,8 @@ class CertificateController extends Controller
         'name' => ['required', 'string', 'max:255'],
         'father' => ['required', 'string', 'max:255'],
         'mother' => ['required', 'string', 'max:255'],
-        'nid_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
-        'nid_value' => ['required', 'string', 'max:100'],
+        'id_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
+        'id_value' => ['required', 'string', 'max:100'],
         'village' => ['required', 'string', 'max:255'],
         'ward' => ['required', 'integer', 'min:1', 'max:99'],
         'post_office' => ['required', 'string', 'max:255'],
@@ -88,12 +88,12 @@ class CertificateController extends Controller
         'heirs_data.*.relation' => ['required', 'string', 'max:255'],
         'heirs_data.*.dob' => ['required', 'date'],
         'heirs_data.*.remark' => ['nullable', 'string', 'max:255'],
-        'heirs_data.*.nid_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
-        'heirs_data.*.nid_value' => ['required', 'string', 'max:100'],
+        'heirs_data.*.id_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
+        'heirs_data.*.id_value' => ['required', 'string', 'max:100'],
     ]);
 
     $applicantData = $request->only([
-        'name', 'father', 'mother', 'nid_type', 'nid_value',
+        'name', 'father', 'mother', 'id_type', 'id_value',
         'village', 'ward', 'post_office', 'union'
     ]);
 
