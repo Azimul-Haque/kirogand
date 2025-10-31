@@ -116,7 +116,7 @@
             ];
         @endphp
 
-        <table class="header-table">
+        <table class="">
             <tr>
                 <td style="width: 30%;">
                     {{-- Logo/Flag Left --}}
