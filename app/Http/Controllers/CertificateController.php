@@ -275,4 +275,23 @@ class CertificateController extends Controller
 
         return view('dashboard.certificates.list')->withCertificates($certificates);
     }
+
+    public function showCertificateQr()
+    {
+        // 1. Define the data you want to encode (e.g., the verification link)
+        $dataToEncode = "https://eprottoyon.com/verify/0455827";
+
+        // 2. Generate the QR code as an SVG string.
+        // We set the size (200px) and a color (4, 137, 102 - a nice green).
+        // The generate() method returns an SVG string, perfect for embedding directly in HTML.
+        $qrCodeSvg = QrCode::size(200)
+                            ->color(4, 137, 102) // Green color for the code lines
+                            ->generate($dataToEncode);
+
+        // 3. Pass the SVG string to the view
+        return view('certificate-qr', [
+            'qrCodeSvg' => $qrCodeSvg,
+            'verificationLink' => $dataToEncode
+        ]);
+    }
 }
