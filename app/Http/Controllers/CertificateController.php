@@ -119,6 +119,7 @@ class CertificateController extends Controller
     $uniqueSerial = mt_rand(100000, 999999) . now()->format('ymd');
 
     $certificate = Certificate::create([
+        'local_office_id' => $validatedData['certificate_type'],
         'certificate_type' => $validatedData['certificate_type'],
         'recipient_user_id' => Auth::check() ? Auth::id() : null,
         'status' => 0, // 0 = draft, 1 = published
