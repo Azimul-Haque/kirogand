@@ -98,6 +98,7 @@ class CertificateController extends Controller
         'village', 'ward', 'post_office', 'union'
     ]);
 
+    // create new user
     $newuser = User::create([
         'local_office_id ' => Auth::user()->local_office_id,
         'is_active ' => 0,
