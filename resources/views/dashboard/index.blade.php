@@ -67,9 +67,9 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h4>{{ $totalusers }}</h4>
+                <h4>{{ $totallocaloffices }}</h4>
 
-                <p>মোট ব্যবহারকারী</p>
+                <p>মোট ইউনিয়ন/পৌরসভা</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>

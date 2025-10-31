@@ -80,6 +80,7 @@ class DashboardController extends Controller
 
         // $totalsites = Site::count();
         $totalusers = User::count();
+        $totallocaloffices = LocalOffice::count();
 
         $totalpayment = Payment::sum('store_amount');
         // $totalbalance = Balance::sum('store_amount');
@@ -123,7 +124,8 @@ class DashboardController extends Controller
                                       ->withTotalmonthlypayment($totalmonthlypayment)
                                       ->withDaysforchartc($daysforchartc)
                                       ->withTotalusersforchartc($totalusersforchartc)
-                                      ->withTotaluserscumulitiveforchartc($totaluserscumulitiveforchartc);
+                                      ->withTotaluserscumulitiveforchartc($totaluserscumulitiveforchartc)
+                                      ->withTotallocaloffices($totallocaloffices);
                                     // ->withTotalbalance($totalbalance)
                                     // ->withTotalexpense($totalexpense)
                                     // ->withTodaystotalexpense($todaystotalexpense)
