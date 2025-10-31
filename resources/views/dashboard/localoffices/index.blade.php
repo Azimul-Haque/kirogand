@@ -101,7 +101,6 @@
                                   <div class="col-md-6">
                                     <div class="input-group mb-3">
                                         <input type="text"
-                                               name="name_bn"
                                                class="form-control"
                                                value="{{ $localoffice->name_bn }}"
                                                placeholder="নাম" required>
