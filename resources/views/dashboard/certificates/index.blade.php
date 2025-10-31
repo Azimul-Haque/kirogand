@@ -83,7 +83,7 @@
                       <span class="input-group-text bg-white border-right-0 rounded-left"><i class="fas fa-search text-muted"></i></span>
                   </div>
                   <!-- BS5 'border-start-0' becomes BS4 'border-left-0'. 'rounded-end-pill' becomes 'rounded-right' -->
-                  <input type="text" id="serviceSearch" class="form-control border-left-0 rounded-right" placeholder="সেবা অনুসন্ধান করুন (যেমন: জন্ম)">
+                  <input type="text" id="serviceSearch" class="form-control border-left-0 rounded-right" placeholder="সনদ অনুসন্ধান করুন (যেমন: ওয়ারিশ বা জন্ম লিখুন)">
               </div>
           </div>
       </div>
