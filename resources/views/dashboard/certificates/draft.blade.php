@@ -12,12 +12,12 @@
 @endsection
 
 @section('content')
-  @section('page-header') সনদের ড্রাফট  {{ certificate_type $certificate->certificate_type }} @endsection
+  @section('page-header') সনদের ড্রাফট  {{ checkcertificatetype $certificate->certificate_type }} @endsection
   @section('page-header-right')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
         <li class="breadcrumb-item active"><a href="{{ route('dashboard.certificates.index') }}">সনদের ড্রাফট</a></li>
-        <li class="breadcrumb-item active">{{ certificate_type $certificate->certificate_type }}</li>
+        <li class="breadcrumb-item active">{{ certificatetype $certificate->certificate_type }}</li>
     </ol>
   @endsection
     <div class="container-fluid">
