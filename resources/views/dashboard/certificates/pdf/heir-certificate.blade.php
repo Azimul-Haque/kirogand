@@ -154,10 +154,12 @@
                 <span style="font-size: 13px;">ফোন নম্বর : {{ $union_info['phone'] }}</span>
             </td>
             <td style="width: 30%; text-align: right;">
-                $image_path = public_path('images/localoffices/'. $localoffice->monogram);
-                if(File::exists($image_path)) {
-                    File::delete($image_path);
-                }
+                @php
+                    $image_path = public_path('images/localoffices/'. $localoffice->monogram);
+                    if(File::exists($image_path)) {
+                        File::delete($image_path);
+                    }
+                @endphp
                 <div class="logo-box" style="float: right;">
                      <img src="{{ public_path('images/eprottyon-logo.png') }}" style="height: 100px; width: auto; object-fit: contain;">
                 </div>
