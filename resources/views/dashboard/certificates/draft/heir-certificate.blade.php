@@ -150,7 +150,7 @@
                     <i class="fas fa-print"></i> খসড়া প্রিন্ট
                 </button>
                 <button type="button" class="btn btn-info" onclick="window.print()">
-                    <i class="fas fa-print"></i> খসড়া প্রিন্ট
+                    <i class="fas fa-print"></i> অনুমোদন করুন
                 </button>
                 <button type="button" class="btn btn-info" onclick="window.print()">
                     <i class="fas fa-print"></i> খসড়া প্রিন্ট
