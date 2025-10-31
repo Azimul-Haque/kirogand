@@ -2,11 +2,15 @@
 <div class="card card-primary card-outline">
     <div class="card-header">
         <h3 class="card-title">
-            <i class="fas fa-file-alt"></i> Heirship Declaration Certificate Form
+            <i class="fas fa-file-alt"></i> ওয়ারিশান সনদপত্র ফরম
         </h3>
     </div>
     
-    <form action="{{ route('dashboard.certificates.store', $certificate_type) }}" method="POST">
+    <!--
+        গুরুত্বপূর্ণ: ফর্মের 'name' অ্যাট্রিবিউটগুলো (যেমন name, father, heirs_data[...][name]) 
+        পিএইচপি/লার্ভেল ব্যাকএন্ডের জন্য ইংরেজিতে রাখা হয়েছে।
+    -->
+    <form action="{{ route('certificates.store') }}" method="POST">
         @csrf
         
         <!-- Hidden field for type recognition in the Controller -->
@@ -14,58 +18,58 @@
 
         <div class="card-body">
             
-            <!-- 1. FIXED MANDATORY APPLICANT DETAILS (Deceased/Applicant Info) -->
-            <h4 class="mb-4 text-primary">Applicant/Deceased Mandatory Details</h4>
-            <div class="row col-md-10 offset-md-1">
-                <!-- Name -->
+            <!-- ১. আবেদনকারী/মৃত ব্যক্তির আবশ্যিক বিবরণ -->
+            <h4 class="mb-4 text-primary">আবেদনকারী/মৃত ব্যক্তির আবশ্যিক বিবরণ</h4>
+            <div class="row">
+                <!-- নাম -->
                 <div class="form-group col-md-6">
-                    <label for="name">Name (Deceased or Applicant) <span class="text-danger">*</span></label>
+                    <label for="name">নাম (মৃত বা আবেদনকারী) <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" required>
                     @error('name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
-                <!-- NID/Birth Registration -->
+                <!-- জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন -->
                 <div class="form-group col-md-6">
-                    <label for="nid_birth_registration">NID / Birth Registration No. <span class="text-danger">*</span></label>
+                    <label for="nid_birth_registration">জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন নং <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('nid_birth_registration') is-invalid @enderror" id="nid_birth_registration" name="nid_birth_registration" value="{{ old('nid_birth_registration') }}" required>
                     @error('nid_birth_registration') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
 
             <div class="row">
-                <!-- Father's Name -->
+                <!-- পিতার নাম -->
                 <div class="form-group col-md-6">
-                    <label for="father">Father's Name <span class="text-danger">*</span></label>
+                    <label for="father">পিতার নাম <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('father') is-invalid @enderror" id="father" name="father" value="{{ old('father') }}" required>
                     @error('father') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
-                <!-- Mother's Name -->
+                <!-- মাতার নাম -->
                 <div class="form-group col-md-6">
-                    <label for="mother">Mother's Name <span class="text-danger">*</span></label>
+                    <label for="mother">মাতার নাম <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('mother') is-invalid @enderror" id="mother" name="mother" value="{{ old('mother') }}" required>
                     @error('mother') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
 
-            <!-- Address Details -->
-            <h5 class="mt-3 mb-3 text-secondary">Address Details</h5>
+            <!-- ঠিকানা বিবরণ -->
+            <h5 class="mt-3 mb-3 text-secondary">ঠিকানা বিবরণ</h5>
             <div class="row">
                 <div class="form-group col-md-3">
-                    <label for="village">Village <span class="text-danger">*</span></label>
+                    <label for="village">গ্রাম <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('village') is-invalid @enderror" id="village" name="village" value="{{ old('village') }}" required>
                     @error('village') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="ward">Ward No. <span class="text-danger">*</span></label>
+                    <label for="ward">ওয়ার্ড নং <span class="text-danger">*</span></label>
                     <input type="number" class="form-control @error('ward') is-invalid @enderror" id="ward" name="ward" value="{{ old('ward') }}" required>
                     @error('ward') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="post_office">Post Office <span class="text-danger">*</span></label>
+                    <label for="post_office">ডাকঘর <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('post_office') is-invalid @enderror" id="post_office" name="post_office" value="{{ old('post_office') }}" required>
                     @error('post_office') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="union">Union / Upazila <span class="text-danger">*</span></label>
+                    <label for="union">ইউনিয়ন / উপজেলা <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('union') is-invalid @enderror" id="union" name="union" value="{{ old('union') }}" required>
                     @error('union') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
@@ -73,19 +77,19 @@
 
             <hr class="my-4">
 
-            <!-- 2. DYNAMIC TABULAR DATA (Heirs List) -->
-            <h4 class="mb-4 text-success">List of Heirs</h4>
+            <!-- ২. ওয়ারিশগণের তালিকা -->
+            <h4 class="mb-4 text-success">ওয়ারিশগণের তালিকা</h4>
 
             <table class="table table-bordered table-striped" id="heirs-table">
                 <thead class="bg-success">
                     <tr>
-                        <th style="width: 1%;">#</th>
-                        <th>Name</th>
-                        <th>Relation</th>
-                        <th>NID / Birth Reg.</th>
-                        <th>DOB</th>
-                        <th>Remark</th>
-                        <th style="width: 5%;">Action</th>
+                        <th style="width: 1%;">ক্রমিক নং</th>
+                        <th>নাম</th>
+                        <th>সম্পর্ক</th>
+                        <th>জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন</th>
+                        <th>জন্ম তারিখ</th>
+                        <th>মন্তব্য</th>
+                        <th style="width: 5%;">কার্যসম্পাদন</th>
                     </tr>
                 </thead>
                 <tbody id="heirs-container">
@@ -94,7 +98,7 @@
             </table>
             
             <button type="button" class="btn btn-success mt-3" id="add-heir-button">
-                <i class="fas fa-plus"></i> নতুন ওয়ারিশ যোগ (Add New Heir)
+                <i class="fas fa-plus"></i> নতুন ওয়ারিশ যোগ করুন
             </button>
 
         </div>
@@ -102,7 +106,7 @@
         
         <div class="card-footer">
             <button type="submit" class="btn btn-lg btn-primary float-right">
-                Generate Heir Certificate
+                ওয়ারিশান সনদপত্র তৈরি করুন
             </button>
         </div>
     </form>
