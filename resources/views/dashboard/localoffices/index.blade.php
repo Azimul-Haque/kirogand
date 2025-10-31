@@ -138,7 +138,7 @@
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="input-group mb-3">
-                                      <input type="text"
+                                      <input type="number"
                                              name="amount"
                                              autocomplete="off"
                                              class="form-control"
@@ -150,7 +150,7 @@
                                   </div>
                                   <div class="col-md-6">
                                     <div class="input-group mb-3">
-                                        <input type="email"
+                                        <input type="text"
                                                name="email"
                                                value="{{ $localoffice->email }}"
                                                autocomplete="off"
