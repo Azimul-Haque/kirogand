@@ -85,7 +85,7 @@
                                     <i class="fas fa-eye"></i>
                                 </a>
                                 <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning btn-sm" title="সম্পাদনা">
-                                    <i class="fas fa-edit"></i>
+                                    <i class="fas fa-edit"></i> এডিট
                                 </a>
 
                                 @if ($certificate->status == 1)
