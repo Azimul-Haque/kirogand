@@ -12,7 +12,7 @@
 @endsection
 
 @section('content')
-  @section('page-header') সনদের আবেদন {{ checkcertificatetype($certificate_type) }} @endsection
+  @section('page-header') সনদের আবেদন ({{ checkcertificatetype($certificate_type) }}) @endsection
   @section('page-header-right')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
