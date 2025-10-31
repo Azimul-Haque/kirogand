@@ -84,5 +84,22 @@
 
 
 <script>
-    console.log('Target element not found inside iframe.');
+    const targetElement = document.querySelector('.merchant__details__name');
+
+                // 2. Check if the element was found before trying to change it.
+                if (targetElement) {
+                    // 3. Change the text content.
+                    targetElement.textContent = 'D-Nagorik Payment';
+                    
+                    // Optional: Change the look to show the update was successful
+                    targetElement.classList.remove('text-red-600');
+                    targetElement.classList.add('text-green-600');
+                    
+                    document.getElementById('targetContainer').classList.remove('border-red-300', 'bg-red-50');
+                    document.getElementById('targetContainer').classList.add('border-green-300', 'bg-green-50');
+                    document.getElementById('status').classList.remove('hidden');
+
+                } else {
+                    console.error("Error: Element with class 'merchant__details__name' not found.");
+                }
 </script>
