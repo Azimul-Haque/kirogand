@@ -180,7 +180,7 @@
 
                       Swal.fire({
                           title: 'আপনি কি নিশ্চিত?',
-                          text: 'You are about to submit this form.',
+                          text: 'এই সনদটি অনুমোদন করা হবে।',
                           icon: 'warning',
                           showCancelButton: true,
                           confirmButtonText: 'Yes, submit it!',
