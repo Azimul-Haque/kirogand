@@ -257,7 +257,7 @@
         <table class="signature-block">
             <tr>
                 <td>
-                    <div style="padding-top: 15px;">কায়ালয়াল সিল</div>
+                    <div style="padding-top: 15px;" class="seal-placeholder">কায়ালয়াল সিল</div>
                 </td>
                 <td>
                     <div style="padding-top: 15px;">প্রস্তুতকারীর সিল ও স্বাক্ষর</div>
