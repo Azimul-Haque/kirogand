@@ -256,12 +256,12 @@
                     <img src="{{ public_path('images/seal-placeholder.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
                 </td>
                 <td>
-                    <div style="padding-top: 15px;">প্রস্তুতকারীর সিল ও স্বাক্ষর</div>
+                    <div style="padding-top: 10px;">প্রস্তুতকারীর সিল ও স্বাক্ষর</div>
                     <div class="signature-line"></div>
                     <div style="border-top: 2px solid green; margin-top: 5px;"></div>
                 </td>
                 <td>
-                    <div style="padding-top: 15px;">অনুমোদনকারীর সিল ও স্বাক্ষর</div>
+                    <div style="padding-top: 10px;">অনুমোদনকারীর সিল ও স্বাক্ষর</div>
                     <div class="signature-line"></div>
                 </td>
             </tr>
