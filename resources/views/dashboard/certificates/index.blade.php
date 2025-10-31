@@ -142,7 +142,7 @@
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
             <a href="{{ route('dashboard.certificates.certificate_type', 'character-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
-                    <div class="icon-circle" style="background-color: #ff9800;"><i class="fas fa-user-shield"></i></div> 
+                    <div class="icon-circle" style="background-color: var(--light-primary-color);"><i class="fas fa-user-shield"></i></div> 
                     <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">অবিবাহিত সনদ</h3>
                 </div>
             </a>
@@ -170,7 +170,7 @@
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="2">
               <a href="/service/death-certificate" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
-                      <div class="icon-circle" style="background-color: var(--light-primary-color);;"><i class="fas fa-cross"></i></div> 
+                      <div class="icon-circle" style="background-color: #dc3545;"><i class="fas fa-cross"></i></div> 
                       <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">মৃত্যু নিবন্ধন সনদ</h3>
                   </div>
               </a>
