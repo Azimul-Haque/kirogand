@@ -43,7 +43,7 @@
           <!-- /.card-header -->
           <div class="card-body p-0">
             <div class="table-responsive">
-              <table class="table table-bordered table-striped table-hover table-sm">
+              <table class="table">
                   <thead class="bg-primary">
                       <tr>
                           <th style="width: 5%;">ক্রমিক নং</th>
