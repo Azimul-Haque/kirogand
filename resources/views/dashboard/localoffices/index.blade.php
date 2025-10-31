@@ -291,28 +291,25 @@
                                         </div>
                                     </div> --}}
 
-                                    <div class="col-md-6">
-                                      <div class="form-group">
-                                          
-                                          <!-- Bootstrap 4 Custom File Input -->
-                                          <div class="custom-file">
-                                              <!-- 
-                                                  The 'accept' attribute restricts the file picker 
-                                                  to show only common image types.
-                                              -->
-                                              <input 
-                                                  type="file" 
-                                                  class="custom-file-input" 
-                                                  id="monogram{{ $localoffice->id }}" 
-                                                  name="monogram"
-                                                  
-                                                  accept="image/png, image/jpeg, image/gif"
-                                                  @if($localoffice->monogram == null) required @endif
-                                              >
-                                              <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
-                                          </div>
-                                          <small class="form-text text-muted">Max file size 300KB. Accepts PNG, JPG, GIF. (300px X 300px)</small>
+                                    <div class="form-group">                                       
+                                      <!-- Bootstrap 4 Custom File Input -->
+                                      <div class="custom-file">
+                                          <!-- 
+                                              The 'accept' attribute restricts the file picker 
+                                              to show only common image types.
+                                          -->
+                                          <input 
+                                              type="file" 
+                                              class="custom-file-input" 
+                                              id="monogram{{ $localoffice->id }}" 
+                                              name="monogram"
+                                              
+                                              accept="image/png, image/jpeg, image/gif"
+                                              @if($localoffice->monogram == null) required @endif
+                                          >
+                                          <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
                                       </div>
+                                      <small class="form-text text-muted">Max file size 300KB. Accepts PNG, JPG, GIF. (300px X 300px)</small>
                                     </div>
                                   </div>
                                 </div>
