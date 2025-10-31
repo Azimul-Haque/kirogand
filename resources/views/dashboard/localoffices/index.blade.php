@@ -77,7 +77,7 @@
                       <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editLocalOfficeModal{{ $localoffice->id }}">
                         <i class="fas fa-pen"></i>
                       </button>
-                      <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editLocalOfficeModal{{ $localoffice->id }}">
+                      <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#addPaymentModal{{ $localoffice->id }}">
                         <i class="fas fa-pen"></i>
                       </button>
                     </td>
