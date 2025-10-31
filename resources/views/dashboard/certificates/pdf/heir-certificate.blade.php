@@ -16,7 +16,7 @@
             background-repeat: no-repeat;
             background-position: center center;
             /* Reduced top/bottom margin for better content display */
-            margin: 40px 60px 50px 60px;
+            margin: 60px 60px 60px 60px;
         }
 
         /* --- Custom Styles for Certificate Layout --- */
