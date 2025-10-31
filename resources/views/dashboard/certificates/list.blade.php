@@ -96,7 +96,7 @@
                                 <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
                                     @csrf
                                     <button type="submit" class="btn btn-success no-print" onclick="return confirmSubmission(event);">
-                                        <i class="fas fa-print"></i> অনুমোদন করুন
+                                        <i class="fas fa-check"></i> অনুমোদন
                                     </button>
                                 </form>
                                 @endif
