@@ -42,36 +42,81 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body p-0">
-            <table class="table">
-              <thead>
-                <thead>
-                  <th>প্রতিষ্ঠান</th>
-                  <th>প্যাকেজ</th>
-                  <th>সনদ স্ট্যাটাস</th>
-                  <th>পরিশোধের মাধ্যম</th>
-                  <th>ট্রানজেকশন আইডি</th>
-                  <th>পরিমাণ</th>
-                  <th>সময়</th>
-                </thead>
-              </thead>
-              <tbody>
-                @foreach($payments as $payment)
-                  <tr>
-                    <td>
-                      <a href="#!">{{ $payment->localOffice->name_bn }}</a>
-                      <small>({{ $payment->localOffice->payments->count() }} বার)</small><br/>
-                      <small class="text-black-50">{{ $payment->localOffice->mobile }}</small>
-                    </td>
-                    <td>{{ $payment->package->name }}</td>
-                    <td>{{ $payment->payment_status == 1 ? 'Successfull' : 'Failed' }}</td>
-                    <td><span class="badge @if($payment->card_type == 'bKash') badge-success @else badge-primary @endif">{{ $payment->card_type }}</span></td>
-                    <td>{{ $payment->trx_id }}</td>
-                    <td><b>৳ {{ $payment->store_amount }}</b> <small>(৳ {{ $payment->amount }})</small></td>
-                    <td>{{ date('F d, Y h:i A', strtotime($payment->created_at)) }}</td>
-                  </tr>
-                @endforeach
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped table-hover table-sm">
+                  <thead class="bg-primary">
+                      <tr>
+                          <th style="width: 5%;">ক্রমিক নং</th>
+                          <th>সনদপত্রের ধরণ</th>
+                          <th>অনন্য সিরিয়াল</th>
+                          <th>আবেদনকারীর নাম</th>
+                          <th>স্থিতি</th>
+                          <th style="width: 15%;">ইস্যু তারিখ</th>
+                          <th style="width: 15%;">কার্যসম্পাদন</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      @php $serial = 1; @endphp
+                      @forelse ($certificates as $certificate)
+                          <tr>
+                              <td>{{ $serial++ }}</td>
+                              {{-- Convert the slug to a more readable Bengali name --}}
+                              <td>
+                                  {{ $certificate->certificate_type == 'heir-certificate' ? 'ওয়ারিশান সনদপত্র' : 'অন্যান্য' }}
+                              </td>
+                              <td>
+                                  <strong>{{ $certificate->unique_serial }}</strong>
+                              </td>
+                              <td>
+                                  {{-- Assuming the recipient's name is in the related User model or data_payload --}}
+                                  {{ $certificate->recipientUser->name ?? ($certificate->data_payload['applicant']['name'] ?? 'N/A') }}
+                              </td>
+                              <td>
+                                  @if ($certificate->status == 1)
+                                      <span class="badge badge-success">অনুমোদিত</span>
+                                  @elseif ($certificate->status == 0)
+                                      <span class="badge badge-warning">ড্রাফট / অপেক্ষমাণ</span>
+                                  @else
+                                      <span class="badge badge-danger">বাতিল</span>
+                                  @endif
+                              </td>
+                              <td>
+                                  {{ $certificate->issued_at ? \Carbon\Carbon::parse($certificate->issued_at)->format('d-m-Y') : 'N/A' }}
+                              </td>
+                              <td>
+                                  <!-- Action Buttons -->
+                                  <div class="btn-group btn-group-sm" role="group">
+                                      {{-- View/Draft Button --}}
+                                      <a href="{{ route('dashboard.certificates.draft', $certificate->unique_serial) }}" class="btn btn-info" title="দেখুন/ড্রাফট">
+                                          <i class="fas fa-eye"></i>
+                                      </a>
+
+                                      {{-- Edit Button (If status allows, typically only for Draft/Pending) --}}
+                                      @if ($certificate->status == 0)
+                                          <a href="{{ route('dashboard.certificates.edit', $certificate->id) }}" class="btn btn-warning" title="সম্পাদনা">
+                                              <i class="fas fa-edit"></i>
+                                          </a>
+                                      @endif
+
+                                      {{-- Delete Button (Example using a form for DELETE method) --}}
+                                      <form action="{{ route('dashboard.certificates.destroy', $certificate->id) }}" method="POST" style="display:inline;">
+                                          @csrf
+                                          @method('DELETE')
+                                          <button type="submit" class="btn btn-danger" title="ডিলেট" onclick="return confirm('আপনি কি নিশ্চিত? এই তথ্য স্থায়ীভাবে মুছে ফেলা হবে।')">
+                                              <i class="fas fa-trash"></i>
+                                          </button>
+                                      </form>
+                                  </div>
+                              </td>
+                          </tr>
+                      @empty
+                          <tr>
+                              <td colspan="7" class="text-center">কোনো সনদপত্র পাওয়া যায়নি।</td>
+                          </tr>
+                      @endforelse
+                  </tbody>
+              </table>
+          </div>
           </div>
           <!-- /.card-body -->
         </div>
