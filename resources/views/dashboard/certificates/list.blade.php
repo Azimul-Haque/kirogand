@@ -226,7 +226,7 @@
       pulsePrintButton({{ session('justapproved') }});
       function pulsePrintButton(serial) {
           // Convert the serial (e.g., C-2024-00301) into the ID format (C202400301)
-          const cleanedSerial = serial.replace(/-/g, ''); 
+          const cleanedSerial = serial; 
           const buttonId = `#pulseThis${cleanedSerial}`;
           const $button = $(buttonId);
           
