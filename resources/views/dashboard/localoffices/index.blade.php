@@ -151,7 +151,7 @@
                                   <div class="col-md-6">
                                     <div class="input-group mb-3">
                                         <input type="text"
-                                               name="packageexpirydate2"
+                                               name="packageexpirydate"
                                                id="packageexpirydate2{{ $localoffice->id }}" 
                                                value="{{ $localoffice->package_expiry_date ? date('F d, Y', strtotime($localoffice->package_expiry_date)) : '' }}"
                                                autocomplete="off"
