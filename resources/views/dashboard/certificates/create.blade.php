@@ -55,12 +55,11 @@
                         <label for="certificate_type" class="text-lg font-bold text-indigo-800 mb-2 block">1. Select Certificate Type</label>
                         
                         <!-- Hidden input to carry the selected type for the POST request if the form is submitted via the button -->
-                        {{-- <input type="hidden" name="certificate_type" value="{{ $certificate_type }}"> --}}
+                        <input type="hidden" name="certificate_type" value="{{ old('certificate_type', $selectedType ?? '') }}">
                         
                         <!-- Selector sends a GET request to reload the form with the new schema -->
-                        <input name="certificate_type_selector" value="{{ $certificate_type }}">
                         <select name="certificate_type_selector" id="certificate_type_selector" 
-                                
+                                onchange="window.location.href = '{{ route('certificates.create') }}?certificate_type=' + this.value"
                                 class="form-input-field text-lg appearance-none bg-white cursor-pointer">
                             
                             <option value="">-- Select Certificate to Begin --</option>
