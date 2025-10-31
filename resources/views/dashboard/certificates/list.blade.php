@@ -96,7 +96,7 @@
                                 @endif
 
                                 <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-primary btn-sm" title="সম্পাদনা">
-                                    <i class="fas fa-print"></i>
+                                    <i class="fas fa-print"></i> প্রিন্ট
                                 </a>
 
                                 {{-- Delete Button (Example using a form for DELETE method) --}}
