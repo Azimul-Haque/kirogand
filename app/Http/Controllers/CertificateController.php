@@ -29,7 +29,7 @@ use OneSignal;
 use Purifier;
 use Cache;
 use PDF;
-use QrCode;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class CertificateController extends Controller
 {
