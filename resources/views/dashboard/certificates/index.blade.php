@@ -102,6 +102,15 @@
                 </div>
             </a>
         </div>
+
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
+            <a href="/service/character-certificate" class="text-decoration-none text-dark d-block">
+                <div class="service-box">
+                    <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-user-check"></i></div> 
+                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">চারিত্রিক সনদপত্র</h3>
+                </div>
+            </a>
+        </div>
           
           <!-- Service 1: জন্ম নিবন্ধন সনদ -->
           <!-- BS4 equivalent classes for the grid are used -->
@@ -136,14 +145,7 @@
           </div>
 
           <!-- Service 4: চারিত্রিক সনদপত্র -->
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
-              <a href="/service/character-certificate" class="text-decoration-none text-dark d-block">
-                  <div class="service-box">
-                      <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-user-check"></i></div> 
-                      <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">চারিত্রিক সনদপত্র</h3>
-                  </div>
-              </a>
-          </div>
+          
           
           <!-- Service 5: ওয়ারিশ সনদ -->
           
@@ -217,64 +219,7 @@
                       <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ভূমির খাজনা প্রত্যয়ন</h3>
                   </div>
               </a>
-          </div>
-          
-          <!-- Duplicate services for demonstration (original had 24 total) -->
-           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
-              <a href="/service/birth-certificate" class="text-decoration-none text-dark d-block">
-                  <div class="service-box">
-                      <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-baby"></i></div>
-                      <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">জন্ম নিবন্ধন সনদ</h3>
-                  </div>
-              </a>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="2">
-              <a href="/service/death-certificate" class="text-decoration-none text-dark d-block">
-                  <div class="service-box">
-                      <div class="icon-circle" style="background-color: #dc3545;"><i class="fas fa-cross"></i></div> 
-                      <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">মৃত্যু নিবন্ধন সনদ</h3>
-                  </div>
-              </a>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="3">
-              <a href="/service/income-certificate" class="text-decoration-none text-dark d-block">
-                  <div class="service-box">
-                      <div class="icon-circle" style="background-color: var(--medium-color);"><i class="fas fa-sack-dollar"></i></div>
-                      <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">বার্ষিক আয়ের সনদ</h3>
-                  </div>
-              </a>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
-              <a href="/service/character-certificate" class="text-decoration-none text-dark d-block">
-                  <div class="service-box">
-                      <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-user-check"></i></div> 
-                      <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">চারিত্রিক সনদপত্র</h3>
-                  </div>
-              </a>
-          </div>
-          
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-              <a href="/service/heir-certificate" class="text-decoration-none text-dark d-block">
-                  <div class="service-box">
-                      <div class="icon-circle" style="background-color: #6f42c1;"><i class="fas fa-handshake"></i></div>
-                      <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ওয়ারিশ সনদ</h3>
-                  </div>
-              </a>
-          </div>
-          
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="6">
-              <a href="/service/address-certificate" class="text-decoration-none text-dark d-block">
-                  <div class="service-box">
-                      <div class="icon-circle" style="background-color: var(--light-primary-color);"><i class="fas fa-map-marker-alt"></i></div>
-                      <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ঠিকানার প্রত্যয়ন</h3>
-                  </div>
-              </a>
-          </div>
-
-          
+          </div>          
       </div>
 
           
