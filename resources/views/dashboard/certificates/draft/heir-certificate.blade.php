@@ -37,7 +37,7 @@
     <div class="col-lg-10 offset-lg-1">
         <div class="card card-primary card-outline">
             <div class="card-header">
-                <h3 class="card-title">Draft: Heir Certificate Application</h3>
+                <h3 class="card-title">খসড়া - ওয়ারিশ সনদ</h3>
                 <div class="card-tools">
                     <span class="badge badge-info">Status: {{ $certificate->status_text ?? 'Draft' }}</span>
                 </div>
