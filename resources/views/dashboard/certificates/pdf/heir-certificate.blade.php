@@ -123,8 +123,9 @@
         $heirs = $payload['heirs'] ?? [];
 
         //get levels data
+        $lglevels = [];
         if(count(getgovlevels() > 0) {
-            
+
         }
         //get levels data
         $union_info = [
