@@ -152,9 +152,15 @@
                 <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning no-print">
                     <i class="fas fa-print"></i> সংশোধন করুন
                 </a>
-                <button type="button" class="btn btn-success no-print" onclick="window.print()">
-                    <i class="fas fa-print"></i> অনুমোদন করুন
-                </button>
+                
+
+                <form action="{{ route('dashboard.certificates.destroy', $certificate->id) }}" method="POST" style="display:inline;">
+                    @csrf
+                    @method('DELETE')
+                    <button type="button" class="btn btn-success no-print" onclick="window.print()">
+                        <i class="fas fa-print"></i> অনুমোদন করুন
+                    </button>
+                </form>
                 <!-- Add your edit/approve/reject buttons here -->
             </div>
         </div>
