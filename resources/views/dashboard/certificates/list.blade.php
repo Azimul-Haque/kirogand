@@ -119,8 +119,8 @@
                                     <a href="{{ route('dashboard.certificates.print', $certificate->unique_serial) }}" id="pulseThis{{ $certificate->id }}" class="btn btn-primary btn-sm" data-toggle="tooltip" title="প্রিন্ট করুন">
                                         <i class="fas fa-print"></i> প্রিন্ট
                                     </a>
-                                    <a href="{{ route('dashboard.certificates.download', $certificate->unique_serial) }}" id="pulseThis{{ $certificate->id }}" class="btn btn-primary btn-sm" data-toggle="tooltip" title="প্রিন্ট করুন">
-                                        <i class="fas fa-print"></i> প্রিন্ট
+                                    <a href="{{ route('dashboard.certificates.download', $certificate->unique_serial) }}" class="btn btn-primary btn-sm" data-toggle="tooltip" title="ডাউনলোড করুন">
+                                        <i class="fas fa-print"></i> ডাউনলোড
                                     </a>
                                 @else
                                 <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
