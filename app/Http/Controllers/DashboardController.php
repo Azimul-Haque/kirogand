@@ -560,7 +560,7 @@ class DashboardController extends Controller
         $payment->card_type = 'manual';
         $payment->trx_id = 'Ma-' . random_string(5);
         $payment->amount = $request->amount;
-        $payment->amount = $request->amount;
+        $payment->store_amount = $request->amount;
 
         $localoffice->save();
 
