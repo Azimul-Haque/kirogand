@@ -115,7 +115,7 @@
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
             <a href="{{ route('dashboard.certificates.certificate_type', 'permanent-resident') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
-                    <div class="icon-circle" style="background-color: #795548;"><i class="fas fa-user-check"></i></div> 
+                    <div class="icon-circle" style="background-color: #795548;"><i class="fas fa-house-user"></i></div> 
                     <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">স্থায়ী বাসিন্দা সনদ</h3>
                 </div>
             </a>
@@ -134,7 +134,7 @@
 
 
 
-        
+
           
           <!-- Service 1: জন্ম নিবন্ধন সনদ -->
           <!-- BS4 equivalent classes for the grid are used -->
