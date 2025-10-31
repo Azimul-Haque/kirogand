@@ -16,7 +16,7 @@
             
             <!-- 1. FIXED MANDATORY APPLICANT DETAILS (Deceased/Applicant Info) -->
             <h4 class="mb-4 text-primary">Applicant/Deceased Mandatory Details</h4>
-            <div class="row">
+            <div class="row col-md-10 offset-md-1">
                 <!-- Name -->
                 <div class="form-group col-md-6">
                     <label for="name">Name (Deceased or Applicant) <span class="text-danger">*</span></label>
