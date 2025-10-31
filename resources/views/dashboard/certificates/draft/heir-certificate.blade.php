@@ -55,7 +55,7 @@
                     <div class="draft-container">
                         <div class="draft-watermark">DRAFT</div>
                         <div class="certificate-info">
-                            <h4 class="text-center mb-4 text-primary">ওয়ারিশান সনদপত্র আবেদন</h4>
+                            <h4 class="text-center mb-4 text-primary">ওয়ারিশান সনদপত্র</h4>
                             <hr>
 
                             <!-- Applicant Information Section -->
