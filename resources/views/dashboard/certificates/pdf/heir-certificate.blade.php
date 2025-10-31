@@ -158,7 +158,7 @@
                 <span style="font-size: 18px; font-weight: bold; color: #15803D;">{{ $union_info['union_name'] }}</span><br/>
                 <span style="font-size: 14px;">উপজেলা: {{ $union_info['upazila'] }}, জেলা: {{ $union_info['district'] }}।</span><br/>
                 {{-- <span style="font-size: 14px;">চেয়ারম্যান: মো: {{ $union_info['chairman_name'] }}</span><br/> --}}
-                <span style="font-size: 14px; color: #;">ইমেইল: {{ $union_info['email'] }}</span><br/>
+                <span style="font-size: 14px; color: #2563EB;">ইমেইল: {{ $union_info['email'] }}</span><br/>
                 <span style="font-size: 14px;">ফোন নম্বর: {{ $union_info['phone'] }}</span>
             </td>
             <td style="width: 30%; text-align: right;">
