@@ -95,7 +95,7 @@
         {{-- , , প্রত্যয়ন --}}
 
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
-            <a href="{{ route('dashboard.certificates.certificate_type', 'heir-certificate') }}" class="text-decoration-none text-dark d-block">
+            <a href="{{ route('dashboard.certificates.create', 'heir-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-users"></i></div>
                     <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ওয়ারিশ সনদ</h3>
@@ -104,7 +104,7 @@
         </div>
 
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="2">
-            <a href="{{ route('dashboard.certificates.certificate_type', 'citizen-certificate') }}" class="text-decoration-none text-dark d-block">
+            <a href="{{ route('dashboard.certificates.create', 'citizen-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-user-check"></i></div> 
                     <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">নাগরিকত্ব সনদ</h3>
@@ -113,7 +113,7 @@
         </div>
 
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="3">
-            <a href="{{ route('dashboard.certificates.certificate_type', 'permanent-resident') }}" class="text-decoration-none text-dark d-block">
+            <a href="{{ route('dashboard.certificates.create', 'permanent-resident') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #795548;"><i class="fas fa-house-user"></i></div> 
                     <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">স্থায়ী বাসিন্দা সনদ</h3>
@@ -122,7 +122,7 @@
         </div>
 
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
-            <a href="{{ route('dashboard.certificates.certificate_type', 'same-person') }}" class="text-decoration-none text-dark d-block">
+            <a href="{{ route('dashboard.certificates.create', 'same-person') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: var(--medium-color);"><i class="fas fa-people-arrows"></i></div> 
                     <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">একই ব্যক্তির প্রত্যয়ন</h3>
@@ -131,7 +131,7 @@
         </div>
 
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-            <a href="{{ route('dashboard.certificates.certificate_type', 'character-certificate') }}" class="text-decoration-none text-dark d-block">
+            <a href="{{ route('dashboard.certificates.create', 'character-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #ff9800;"><i class="fas fa-user-shield"></i></div> 
                     <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">চারিত্রিক সনদ</h3>
@@ -140,7 +140,7 @@
         </div>
 
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-            <a href="{{ route('dashboard.certificates.certificate_type', 'unmarried-certificate') }}" class="text-decoration-none text-dark d-block">
+            <a href="{{ route('dashboard.certificates.create', 'unmarried-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: var(--light-primary-color);"><i class="fas fa-male"></i></div> 
                     <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">অবিবাহিত সনদ</h3>
@@ -149,7 +149,7 @@
         </div>
 
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-            <a href="{{ route('dashboard.certificates.certificate_type', 'unmarried-certificate') }}" class="text-decoration-none text-dark d-block">
+            <a href="{{ route('dashboard.certificates.create', 'unmarried-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-address-book"></i></div> 
                     <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">প্রত্যয়নপত্র</h3>
