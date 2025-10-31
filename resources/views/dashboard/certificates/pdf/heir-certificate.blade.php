@@ -132,7 +132,7 @@
             'union_name' => $certificate->localOffice->name_bn ?? 'তথ্য নেই',
             'upazila' => $lglevels['Upazila'] ?? 'তথ্য নেই',
             'district' => $lglevels['District'] ?? 'তথ্য নেই',
-            'chairman_name' => 'নজরুল ইসলাম',
+            'chairman_name' => $certificate->localOffice->name_bn,
             'email' => 'admin@eprottyon.com',
             'phone' => '০১৭০০০০০০০০',
         ];
