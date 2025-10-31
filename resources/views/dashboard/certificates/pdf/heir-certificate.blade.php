@@ -252,7 +252,7 @@
         {{-- Signature and Seal Block --}}
         <table class="signature-block">
             <tr>
-                <td width="25%">
+                <td>
                     <img src="{{ public_path('images/seal-placeholder.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
                 </td>
                 <td>
