@@ -244,7 +244,7 @@
         <table class="signature-block">
             <tr>
                 <td>
-                    <img src="{{ public_path('images/govt-logo.png') }}" style="height: 100px; width: auto; display: block; margin: 0 auto;">
+                    <img src="{{ public_path('images/govt-logo.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
                 </td>
                 <td>
                     <div style="padding-top: 15px;">প্রস্তুতকারীর সিল ও স্বাক্ষর</div>
