@@ -82,7 +82,7 @@
                               </td>
                               <td>
                                 <a href="{{ route('dashboard.certificates.draft', $certificate->unique_serial) }}" class="btn btn-info btn-sm" title="দেখুন/ড্রাফট">
-                                    <i class="fas fa-eye"></i> দেখুন
+                                    <i class="fas fa-eye"></i>
                                 </a>
                                 <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning btn-sm" title="সম্পাদনা">
                                     <i class="fas fa-edit"></i> এডিট
