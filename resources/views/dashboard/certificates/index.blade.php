@@ -92,7 +92,7 @@
       <!-- BS5 'g-4' (gutter) is removed, relying on default BS4 column padding and custom CSS margin-bottom on service boxes -->
       <div class="row" id="serviceGrid">
 
-        {{-- , নাগরিকত্ব, স্থায়ী, একই ব্যক্তি, চারিত্রিক, অবিবাহিত, প্রত্যয়ন --}}
+        {{-- , , স্থায়ী, একই ব্যক্তি, চারিত্রিক, অবিবাহিত, প্রত্যয়ন --}}
 
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
             <a href="/certificates/heir-certificate" class="text-decoration-none text-dark d-block">
@@ -107,7 +107,7 @@
             <a href="/service/character-certificate" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-user-check"></i></div> 
-                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">চারিত্রিক সনদপত্র</h3>
+                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">নাগরিকত্ব সনদপত্র</h3>
                 </div>
             </a>
         </div>
