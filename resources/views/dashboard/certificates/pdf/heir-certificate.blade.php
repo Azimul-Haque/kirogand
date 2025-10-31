@@ -3,7 +3,10 @@
     <title>ওয়ারিশান সনদপত্র | PDF Download</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
-        
+        body {
+            font-family: 'kalpurush', sans-serif;
+            color: #333;
+        }
 
         @page {
             header: page-header;
