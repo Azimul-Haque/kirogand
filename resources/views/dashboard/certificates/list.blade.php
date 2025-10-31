@@ -44,7 +44,7 @@
           <div class="card-body p-0">
             <div class="table-responsive">
               <table class="table">
-                  <thead class="bg-primary">
+                  <thead>
                       <tr>
                           <th style="width: 5%;">ক্রমিক নং</th>
                           <th>সনদপত্রের ধরণ</th>
