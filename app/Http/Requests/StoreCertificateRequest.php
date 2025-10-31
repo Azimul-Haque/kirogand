@@ -30,7 +30,7 @@ class StoreCertificateRequest extends FormRequest
         $rules = [
             // Standard rule to ensure type selection is valid
             'certificate_type' => ['required', 'string', 'in:' . implode(',', array_keys(config('certificate_schemas')))], 
-            'recipient_user_id' => ['required', 'exists:users,id'], // Standard rule for recipient
+            // 'recipient_user_id' => ['required', 'exists:users,id'],
         ];
 
         foreach ($schema['fields'] as $field) {
