@@ -42,7 +42,7 @@
         .header-table td {
             vertical-align: top;
             padding: 5px 0px;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .logo-box {
@@ -77,7 +77,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 0px;
-            font-size: 14px;
+            font-size: 13px;
         }
         .beneficiary-table th, .beneficiary-table td {
             border: 1px solid #999;
@@ -96,7 +96,7 @@
         .signature-block td {
             width: 25%; /* Four columns for signatures */
             text-align: center;
-            font-size: 14px;
+            font-size: 13px;
             padding-top: 15px;
         }
         .signature-line {
