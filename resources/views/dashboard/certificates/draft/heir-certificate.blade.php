@@ -18,7 +18,7 @@
         font-weight: bold;
         pointer-events: none;
         user-select: none;
-        z-index: 20;
+        z-index: 10;
     }
     .certificate-info {
         position: relative;
