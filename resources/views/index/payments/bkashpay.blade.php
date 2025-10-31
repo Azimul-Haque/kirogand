@@ -116,7 +116,7 @@
                     console.error('Security Error (Same-Origin Policy violation):', error);
                 }
             };
-
+            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
             const targetElement = iframeDocument.querySelector('.merchant__details__name');
             
             if (targetElement) {
