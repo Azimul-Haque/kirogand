@@ -132,7 +132,7 @@
             'union_name' => $certificate->localOffice->name_bn ?? 'তথ্য নেই',
             'upazila' => $lglevels['Upazila'] ?? 'তথ্য নেই',
             'district' => $lglevels['District'] ?? 'তথ্য নেই',
-            'chairman_name' => $certificate->localOffice->name_bn,
+            // 'chairman_name' => $certificate->localOffice->name_bn,
             'email' => $certificate->localOffice->email ?? '',
             'phone' => $certificate->localOffice->mobile ?? '',
         ];
