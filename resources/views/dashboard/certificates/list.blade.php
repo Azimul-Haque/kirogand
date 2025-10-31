@@ -120,7 +120,7 @@
                                 </a>
 
                                 @if ($certificate->status == 1)
-                                    <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" id="pulseThis{{ $certificate->id }}" class="btn btn-primary btn-sm" data-toggle="tooltip" title="প্রিন্ট করুন">
+                                    <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" id="pulseThis{{ $certificate->id }}" class="btn btn-primary btn-sm btn-pulse" data-toggle="tooltip" title="প্রিন্ট করুন">
                                         <i class="fas fa-print"></i> প্রিন্ট
                                     </a>
                                 @else
