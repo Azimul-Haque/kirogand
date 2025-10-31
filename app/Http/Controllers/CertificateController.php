@@ -28,6 +28,7 @@ use Artisan;
 use OneSignal;
 use Purifier;
 use Cache;
+use PDF;
 
 class CertificateController extends Controller
 {
