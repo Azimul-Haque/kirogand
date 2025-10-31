@@ -31,14 +31,6 @@
                 <!-- Load Tailwind CSS -->
                 <script src="https://cdn.tailwindcss.com"></script>
                 <style>
-                    /* General styling for a professional look */
-                    body {
-                        font-family: 'Inter', sans-serif;
-                        padding: 20px;
-                        background-color: #f4f7f9;
-                        max-width: 900px;
-                        margin: 0 auto;
-                    }
                     /* Style for inputs and textareas */
                     .form-input-field {
                         width: 100%; 
