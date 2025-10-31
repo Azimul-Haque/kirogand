@@ -58,7 +58,7 @@
                 @foreach($localoffices as $localoffice)
                   <tr>
                     <td>
-                      {{ $localoffice->name_bn }} ({{ $localoffice->payments->count() }})</br>
+                      {{ $localoffice->name_bn }} <small></small></br>
                       <span class="badge badge-primary">📞 {{ $localoffice->mobile }}</span>
                       <span class="badge badge-warning">✉ {{ $localoffice->email }}</span>
                     </td>
