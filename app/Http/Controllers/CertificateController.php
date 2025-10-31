@@ -237,7 +237,7 @@ class CertificateController extends Controller
             }
         }
 
-        $certificate = Certificate::findOrFail($request->id);
+        $certificate = Certificate::where('unique_serial', $unique_serial)
         $certificate->status = 1;
         $certificate->save();
 
