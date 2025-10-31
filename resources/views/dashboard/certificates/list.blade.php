@@ -90,14 +90,11 @@
                                     </a>
                                 @endif
                                 @if ($certificate->status == 1)
-                                    <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning btn-sm" title="সম্পাদনা">
-                                        <i class="fas fa-edit"></i>
+                                    <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-primary btn-sm" title="সম্পাদনা">
+                                        <i class="fas fa-print"></i> প্রিন্ট
                                     </a>
                                 @endif
-
-                                <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-primary btn-sm" title="সম্পাদনা">
-                                    <i class="fas fa-print"></i> প্রিন্ট
-                                </a>
+                                
 
                                 {{-- Delete Button (Example using a form for DELETE method) --}}
                                 {{-- <form action="{{ route('dashboard.certificates.destroy', $certificate->id) }}" method="POST" style="display:inline;">
