@@ -564,7 +564,6 @@ class DashboardController extends Controller
         $payment->save();
 
         $localoffice->package_expiry_date = date('Y-m-d', strtotime($request->packageexpirydate)) . ' 23:59:59';
-
         $localoffice->save();
 
         return redirect()->back()
