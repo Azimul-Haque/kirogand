@@ -1,7 +1,6 @@
 <?php 
 
 use Illuminate\Support\Carbon;
-use App\Services\AuthorityResolver;
 
 	function limit_text($text, $limit) {
       // $pos=strpos($text, ' ', $limit);
@@ -76,7 +75,6 @@ use App\Services\AuthorityResolver;
   function getgovlevels() {
       $auth = Auth::user()->authorities->first();
       $hierarchyNames = $auth->getHierarchyNamesByLevel();
-
       return $hierarchyNames;
   }
 
