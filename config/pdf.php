@@ -44,7 +44,7 @@ return [
       //'useKashida' => 75,  // required for complicated langs like Persian, Arabic and Chinese
     ],
     'HindSiliguri' => [
-      'R'  => 'HindSiliguri-Regular.ttf.ttf',    // regular font
+      'R'  => 'HindSiliguri-Regular.ttf',    // regular font
       'B'  => 'HindSiliguri-Regular.ttf',       // optional: bold font
       'I'  => 'HindSiliguri-Regular.ttf',     // optional: italic font
       'BI' => 'HindSiliguri-Regular.ttf', // optional: bold-italic font
