@@ -132,10 +132,10 @@ Route::get('/dashboard/messages/delete/{id}', 'DashboardController@deleteMessage
 // Certificate routes are here
 Route::get('/dashboard/certificates', 'CertificateController@index')->name('dashboard.certificates.index');
 Route::get('/dashboard/certificates/create/{certificate_type}', 'CertificateController@createCertificate')->name('dashboard.certificates.create');
+Route::post('/dashboard/certificates/store/{certificate_type}', 'CertificateController@storeCertificate')->name('dashboard.certificates.store');
 Route::get('/dashboard/certificates/draft/{unique_serial}', 'CertificateController@getDraftCertificate')->name('dashboard.certificates.draft');
 Route::get('/dashboard/certificates/edit/{unique_serial}', 'CertificateController@editCertificate')->name('dashboard.certificates.edit');
-Route::post('/dashboard/certificates/store/{certificate_type}', 'CertificateController@storeCertificate')->name('dashboard.certificates.store');
-Route::post('/dashboard/certificates/update/{unique_serial}', 'CertificateController@storeCertificate')->name('dashboard.certificates.update');
+Route::post('/dashboard/certificates/update/{unique_serial}', 'CertificateController@updateCertificate')->name('dashboard.certificates.update');
 
 Route::get('/dashboard/certificates-list', 'CertificateController@getCertificateList')->name('dashboard.certificates.list');
 // Certificate routes are here
