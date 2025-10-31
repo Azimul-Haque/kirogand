@@ -140,3 +140,109 @@
             $("body").removeClass("loading"); 
         }
 </script>
+
+
+<script>
+        // Function to convert base64 to ArrayBuffer (required for the environment)
+        const base64ToArrayBuffer = (base64) => {
+            const binaryString = atob(base64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return bytes.buffer;
+        };
+
+        // Function to create WAV blob from PCM data (required for the environment)
+        const pcmToWav = (pcm16, sampleRate) => {
+            const numChannels = 1;
+            const bytesPerSample = 2;
+            const blockAlign = numChannels * bytesPerSample;
+            const byteRate = sampleRate * blockAlign;
+            const dataSize = pcm16.length * bytesPerSample;
+            const buffer = new ArrayBuffer(44 + dataSize);
+            const view = new DataView(buffer);
+
+            let offset = 0;
+
+            const writeString = (str) => {
+                for (let i = 0; i < str.length; i++) {
+                    view.setUint8(offset + i, str.charCodeAt(i));
+                }
+                offset += str.length;
+            };
+
+            // RIFF chunk
+            writeString('RIFF');
+            view.setUint32(4, 36 + dataSize, true);
+            writeString('WAVE');
+
+            // FMT sub-chunk
+            writeString('fmt ');
+            view.setUint32(16, 16, true); // Sub-chunk size: 16
+            view.setUint16(20, 1, true);  // Audio format (1 for PCM)
+            view.setUint16(22, numChannels, true);
+            view.setUint32(24, sampleRate, true);
+            view.setUint32(28, byteRate, true);
+            view.setUint16(32, blockAlign, true);
+            view.setUint16(34, 16, true); // Bits per sample
+
+            // DATA sub-chunk
+            writeString('data');
+            view.setUint32(40, dataSize, true);
+
+            // PCM data
+            const dataView = new DataView(buffer, 44);
+            for (let i = 0; i < pcm16.length; i++) {
+                dataView.setInt16(i * 2, pcm16[i], true);
+            }
+
+            return new Blob([buffer], { type: 'audio/wav' });
+        };
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. SELECT THE IFRAME using the name attribute
+            const iframe = document.querySelector('iframe[name="bKash_checkout_app"]');
+            const status = document.getElementById('statusMessage');
+
+            if (!iframe) {
+                 status.innerHTML = '<span class="text-red-600">Error: Iframe not found.</span>';
+                 return;
+            }
+
+            // 2. WAIT FOR THE IFRAME TO LOAD
+            iframe.onload = function() {
+                try {
+                    // 3. GET THE IFRAME'S CONTENT DOCUMENT
+                    // This only works if it's Same-Origin
+                    const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+                    if (!iframeDocument) {
+                        status.innerHTML = '<span class="text-red-600">Error: Could not access iframe document. (Is it cross-origin?)</span>';
+                        return;
+                    }
+
+                    // 4. QUERY FOR THE TARGET ELEMENT *INSIDE* THE IFRAME'S DOCUMENT
+                    const targetElement = iframeDocument.querySelector('.merchant__details__name');
+                    
+                    if (targetElement) {
+                        // 5. CHANGE THE VALUE/TEXT
+                        targetElement.textContent = 'D-Nagorik Payment Services';
+                        targetElement.style.color = '#10b981'; // Success Green
+                        status.innerHTML = '<span class="text-green-600">Status: Success! Element inside iframe was updated.</span>';
+                        console.log('Iframe content successfully updated.');
+                    } else {
+                        status.innerHTML = '<span class="text-red-600">Error: Target element (.merchant__details__name) not found inside iframe.</span>';
+                        console.error('Target element not found inside iframe.');
+                    }
+
+                } catch (error) {
+                    // This catches the Same-Origin Policy security error
+                    status.innerHTML = `<span class="text-red-600">SECURITY BLOCKED: Cannot access content. Iframe is likely cross-origin: ${error.message}</span>`;
+                    console.error('Security Error (Same-Origin Policy violation):', error);
+                }
+            };
+        });
+    </script>
