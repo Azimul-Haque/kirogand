@@ -142,7 +142,7 @@ class CertificateController extends Controller
         }
 
         $certificate = Certificate::where('local_office_id', Auth::user()->local_office_id)
-                                  ->where('unique_serial', )
+                                  ->where('unique_serial', $unique_serial)
 
         return view('dashboard.certificates.create')->with('certificate_type', $certificate_type);
     }
