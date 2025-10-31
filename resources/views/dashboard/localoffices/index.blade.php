@@ -85,7 +85,7 @@
                   {{-- Add Payment Modal Code --}}
                   {{-- Add Payment Modal Code --}}
                   <!-- Modal -->
-                  <div class="modal fade" id="editLocalOfficeModal{{ $localoffice->id }}" tabindex="-1" role="dialog" aria-labelledby="editLocalOfficeModalLabel" aria-hidden="true" data-backdrop="static">
+                  <div class="modal fade" id="addPaymentModal{{ $localoffice->id }}" tabindex="-1" role="dialog" aria-labelledby="editLocalOfficeModalLabel" aria-hidden="true" data-backdrop="static">
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
                         <div class="modal-header bg-warning">
