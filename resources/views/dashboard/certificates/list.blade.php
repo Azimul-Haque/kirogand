@@ -189,7 +189,6 @@
           <!-- /.card-body -->
         </div>
         {{ $certificates->links() }}
-
     </div>
 @endsection
 
