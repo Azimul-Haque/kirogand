@@ -103,7 +103,8 @@ class CertificateController extends Controller
         'nid ' => $request->id_value,
         'name ' => $request->name,
         'role ' => 'user', // this is important
-        'designation ' => 'user', // this is important
+        'designation ' => 'নাগরিক',
+        'designation ' => 'নাগরিক',
 
         'recipient_user_id' => Auth::check() ? Auth::id() : null,
         'status' => 0, // 0 = draft, 1 = published
