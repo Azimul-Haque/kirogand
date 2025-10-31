@@ -163,8 +163,6 @@
 
 
           
-          <!-- Service 1: জন্ম নিবন্ধন সনদ -->
-          <!-- BS4 equivalent classes for the grid are used -->
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
               <a href="/service/birth-certificate" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
@@ -175,7 +173,6 @@
               </a>
           </div>
 
-          <!-- Service 2: মৃত্যু নিবন্ধন সনদ -->
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="2">
               <a href="/service/death-certificate" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
@@ -185,7 +182,6 @@
               </a>
           </div>
 
-          <!-- Service 3: বার্ষিক আয়ের সনদ -->
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="3">
               <a href="/service/income-certificate" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
@@ -194,14 +190,6 @@
                   </div>
               </a>
           </div>
-
-          <!-- Service 4: চারিত্রিক সনদপত্র -->
-          
-          
-          <!-- Service 5: ওয়ারিশ সনদ -->
-          
-          
-          <!-- Service 6: ঠিকানার প্রত্যয়ন -->
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="6">
               <a href="/service/address-certificate" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
