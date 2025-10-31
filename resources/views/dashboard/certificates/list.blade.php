@@ -190,7 +190,7 @@
         </div>
         {{ $certificates->links() }}
 
-        {{ getgovlevels()['Division'] }}
+        {{ getgovlevels() }}
 
     </div>
 @endsection
