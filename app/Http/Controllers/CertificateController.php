@@ -173,7 +173,7 @@ class CertificateController extends Controller
 
         $certificates = Certificate::where('local_office_id', Auth::user()->local_office_id) // this is important
 
-        return view('dashboard.certificates.edit')->withCertificate($certificate);
+        return view('dashboard.certificates.list')->withCertificates($certificates);
     }
     
 }
