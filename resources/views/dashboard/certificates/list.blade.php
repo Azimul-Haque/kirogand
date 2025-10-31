@@ -252,7 +252,7 @@
               console.error(`Error: Print button element not found with selector: ${buttonId}`);
           }
       }
-      @if($justapproved)
+      @if(!isEmpty($justapproved))
         pulsePrintButton({{$justapproved->id}});
       @endif
     </script>
