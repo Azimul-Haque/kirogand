@@ -76,8 +76,8 @@
         .beneficiary-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 25px;
-            font-size: 13px;
+            margin-top: 15px;
+            font-size: 14px;
         }
         .beneficiary-table th, .beneficiary-table td {
             border: 1px solid #999;
