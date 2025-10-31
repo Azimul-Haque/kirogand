@@ -67,7 +67,18 @@
                         
                         <!-- Selector sends a GET request to reload the form with the new schema -->
                         <input name="certificate_type_selector" value="$certificate_type">
-                        
+                        <select name="certificate_type_selector" id="certificate_type_selector" 
+                                
+                                class="form-input-field text-lg appearance-none bg-white cursor-pointer">
+                            
+                            <option value="">-- Select Certificate to Begin --</option>
+                            {{-- Loop through all available schema keys (e.g., 'heir_certificate') --}}
+                            @foreach($allSchemas ?? [] as $type => $schemaConfig)
+                                <option value="{{ $type }}" {{ ($selectedType ?? '') == $type ? 'selected' : '' }}>
+                                    {{ $schemaConfig['title'] ?? Str::title(str_replace('_', ' ', $type)) }}
+                                </option>
+                            @endforeach
+                        </select>
                         @error('certificate_type') <span class="text-sm text-red-600 mt-1 block">Please select a valid certificate type.</span> @enderror
                     </div>
 
