@@ -68,6 +68,18 @@
       var urltocall = '{{ route('index.verify') }}' +  '/' + $('#verificationInput').val();
       location.href= urltocall;
     });
+    $(document).on('click', '#search-button', function() {
+      if($('#search-param').val() != '') {
+        var urltocall = '{{ route('dashboard.local-offices') }}' +  '/' + $('#search-param').val();
+        location.href= urltocall;
+      } else {
+        $('#search-param').css({ "border": '#FF0000 2px solid'});
+        Toast.fire({
+            icon: 'warning',
+            title: 'কিছু লিখে খুঁজুন!'
+        })
+      }
+    });
   </script>
 @endsection
     
