@@ -23,7 +23,7 @@
         "niklasravnsborg/laravel-pdf": "^4.1",
         "rap2hpoutre/fast-excel": "^4.1",
         "shipu/php-aamarpay-payment": "^2.0",
-        "simplesoftwareio/simple-qrcode": "*"
+        "simplesoftwareio/simple-qrcode": "^4.2"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
