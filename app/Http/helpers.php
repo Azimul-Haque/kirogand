@@ -63,6 +63,17 @@ use Illuminate\Support\Carbon;
           return $text;
   }
 
+  function checkcertificatetype($text) {
+      if ($text == 'heir-certificate')
+          return 'এডমিন';
+      else if ($text == 'manager')
+          return 'প্রতিনিধি';
+      else if ($text == 'user')
+        return 'ব্যবহারকারী';
+      else
+          return $text;
+  }
+
   function local_currency($num) {
     $explrestunits = "" ;
     if(strlen($num)>3) {
