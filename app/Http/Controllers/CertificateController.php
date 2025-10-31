@@ -278,10 +278,7 @@ class CertificateController extends Controller
 
     public function showCertificateQr($unique_serial)
     {
-        $dataToEncode = url("/verify/{$unique_serial}");
-        $qrCodeSvg = QrCode::size(200)
-                            ->color(4, 137, 102) // Green color for the code lines
-                            ->generate($dataToEncode);
+        
 
         // 3. Pass the SVG string to the view
         return view('certificate-qr', [
