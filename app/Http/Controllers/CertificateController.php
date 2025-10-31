@@ -128,7 +128,7 @@ class CertificateController extends Controller
     ]);
 
     return redirect()->route('dashboard.certificates.draft', $uniqueSerial)
-                     ->with('success', 'ওয়ারিশান সনদপত্রের আবেদন সফলভাবে জমা দেওয়া হয়েছে। সিরিয়াল নং: ' . $certificate->unique_serial);
+                     ->with('success', 'ওয়ারিশান সনদপত্রের সফলভাবে ড্রাফট করা হয়েছে। সিরিয়াল নং: ' . $certificate->unique_serial);
         return view('dashboard.certificates.create');
     }
 
