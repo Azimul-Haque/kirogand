@@ -163,7 +163,7 @@
 
 
           
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
+        {{--   <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
               <a href="/service/birth-certificate" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
                       <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-baby"></i></div>
@@ -199,7 +199,6 @@
               </a>
           </div>
           
-          <!-- Service 7: অবিবাহিত সনদ -->
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="7">
               <a href="/service/unmarried" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
@@ -209,7 +208,6 @@
               </a>
           </div>
 
-          <!-- Service 8: নতুন ট্রেড লাইসেন্স -->
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="8">
               <a href="/service/trade-license-new" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
@@ -219,7 +217,6 @@
               </a>
           </div>
 
-          <!-- Service 9: ট্রেড লাইসেন্স নবায়ন -->
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="9">
               <a href="/service/trade-license-renewal" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
@@ -229,7 +226,6 @@
               </a>
           </div>
 
-          <!-- Service 10: কৃষি ভর্তুকির প্রত্যয়ন -->
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="10">
               <a href="/service/agriculture-subsidy" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
@@ -238,19 +234,7 @@
                   </div>
               </a>
           </div>
-          
-          <!-- Service 11: নাগরিকত্ব সনদ -->
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="11">
-              <a href="/service/citizenship-certificate" class="text-decoration-none text-dark d-block">
-                  <div class="service-box">
-                      <div class="icon-circle" style="background-color: #ff9800;"><i class="fas fa-flag"></i></div>
-                      <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">নাগরিকত্ব সনদ</h3>
-                  </div>
-              </a>
-          </div>
 
-
-          <!-- Service 12: ভূমির খাজনা প্রত্যয়ন -->
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="12">
               <a href="/service/land-tax-certificate" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
@@ -258,7 +242,7 @@
                       <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ভূমির খাজনা প্রত্যয়ন</h3>
                   </div>
               </a>
-          </div>          
+          </div>   --}}        
       </div>
 
           
