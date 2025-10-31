@@ -130,7 +130,7 @@
         //get levels data
         $union_info = [
             'union_name' => $certificate->localOffice->name_bn ?? 'তথ্য নেই',
-            'upazila' => 'নাগরপুর',
+            'upazila' => $lglevels['Upazila']'নাগরপুর',
             'district' => 'টাঙ্গাইল',
             'chairman_name' => 'নজরুল ইসলাম',
             'email' => 'admin@eprottyon.com',
