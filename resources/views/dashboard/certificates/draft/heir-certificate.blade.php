@@ -164,7 +164,7 @@
                           const ToastAprv = Swal.mixin({
                             toast: false,
                             position: 'center',
-                            showConfirmButton: false,
+                            showConfirmButton: true,
                             timer: 4000,
                             timerProgressBar: true,
                             didOpen: (toast) => {
