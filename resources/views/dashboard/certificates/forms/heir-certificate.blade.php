@@ -5,7 +5,7 @@
             <i class="fas fa-file-alt"></i> ওয়ারিশান সনদপত্র ফরম
         </h3>
     </div>
-    <form action="{{ route('dashboard.certificates.store', $certificate_type) }}" method="POST">
+    <form action="{{ route('dashboard.certificates.store', 'heir-certificate') }}" method="POST">
         @csrf
         
         <!-- Hidden field for type recognition in the Controller -->
