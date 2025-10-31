@@ -48,8 +48,11 @@ class Certificate extends Model
      */
     public function recipient()
     {
-        // Assuming your recipients are stored in the 'User' model
         return $this->belongsTo(User::class, 'recipient_user_id');
+    }
+    public function recipient()
+    {
+        return $this->belongsTo(User::class);
     }
 
     /**
