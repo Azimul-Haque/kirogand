@@ -84,46 +84,5 @@
 
 
 <script>
-        
-
-
-            // 1. SELECT THE IFRAME using the name attribute
-            const iframe = document.querySelector('iframe[name="bKash_checkout_app"]');
-            
-
-            // 2. WAIT FOR THE IFRAME TO LOAD
-            iframe.onload = function() {
-                try {
-                    // 3. GET THE IFRAME'S CONTENT DOCUMENT
-                    // This only works if it's Same-Origin
-                    const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-
-                    
-
-                    // 4. QUERY FOR THE TARGET ELEMENT *INSIDE* THE IFRAME'S DOCUMENT
-                    const targetElement = iframeDocument.querySelector('.merchant__details__name');
-                    
-                    if (targetElement) {
-                        // 5. CHANGE THE VALUE/TEXT
-                        targetElement.textContent = 'D-Nagorik Payment Services';
-                        targetElement.style.color = '#10b981'; // Success Green
-                        console.log('Iframe content successfully updated.');
-                    } else {
-                        console.log('Target element not found inside iframe.');
-                    }
-
-                }
-            };
-            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-            const targetElement = iframeDocument.querySelector('.merchant__details__name');
-            
-            if (targetElement) {
-                // 5. CHANGE THE VALUE/TEXT
-                targetElement.textContent = 'D-Nagorik Payment Services';
-                targetElement.style.color = '#10b981'; // Success Green
-                console.log('Iframe content successfully updated.');
-            } else {
-                console.log('Target element not found inside iframe.');
-            }
-            console.log('Target element not found inside iframe.');
-    </script>
+    console.log('Target element not found inside iframe.');
+</script>
