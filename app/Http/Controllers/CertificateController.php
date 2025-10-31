@@ -220,7 +220,7 @@ class CertificateController extends Controller
             }
         }
 
-        $certificate = Certificate::findOrFail($id);
+        $certificate = Certificate::findOrFail($request->id);
 
         return view('dashboard.certificates.list')->withCertificates($certificates);
     }
