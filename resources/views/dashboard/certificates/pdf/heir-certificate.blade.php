@@ -120,7 +120,7 @@
             <tr>
                 <td style="width: 30%;">
                     {{-- Logo/Flag Left --}}
-                    
+                    <img src="{{ public_path('images/bangladesh-flag.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
                 </td>
                 <td style="width: 40%; text-align: center;">
                     <span style="font-size: 14px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span><br/>
