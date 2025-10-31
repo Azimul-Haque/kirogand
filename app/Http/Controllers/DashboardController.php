@@ -558,7 +558,7 @@ class DashboardController extends Controller
         $payment->package_id = 1; // এমনি দেওয়া
         $payment->payment_status = 1;
         $payment->card_type = 'manual';
-        $payment->trx_id = 'Manual' . random_string(4);
+        $payment->trx_id = 'Mnl' . random_string(4);
 
         $localoffice->save();
 
