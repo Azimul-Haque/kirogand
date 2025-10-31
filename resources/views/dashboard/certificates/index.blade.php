@@ -98,7 +98,7 @@
             <a href="/service/heir-certificate" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #6f42c1;"><i class="fas fa-handshake"></i></div>
-                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ওয়ারিশ সনদ</h3>
+                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ওয়ারিশ সনদ</h3>
                 </div>
             </a>
         </div>
