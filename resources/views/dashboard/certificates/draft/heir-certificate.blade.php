@@ -171,6 +171,8 @@
                           toast.addEventListener('mouseleave', Swal.resumeTimer)
                         }
                       })
+
+                      ToastAprv.fire({ icon: 'warning', title: 'আপনি কি নিশ্চিত? এই সনদ স্থায়ীভাবে অনুমোদন করা হবে।' })
                     </script>
                     <button type="button" class="btn btn-success no-print" onclick="return return confirmSubmission(event);">
                         <i class="fas fa-print"></i> অনুমোদন করুন
