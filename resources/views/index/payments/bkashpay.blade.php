@@ -112,8 +112,6 @@
                         console.log('Target element not found inside iframe.');
                     }
 
-                } catch (log) {
-                    console.log('Security Error (Same-Origin Policy violation):', log);
                 }
             };
             const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
