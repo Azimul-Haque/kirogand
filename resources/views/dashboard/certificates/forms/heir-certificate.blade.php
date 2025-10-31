@@ -60,7 +60,7 @@
             <div class="row">
                 <div class="form-group col-md-3">
                     <label for="village">গ্রাম <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('village') is-invalid @enderror" id="village" name="village" value="{{ old('village') }}" required>
+                    <input type="text" class="form-control @error('village') is-invalid @enderror" id="village" name="village" value="{{ old('village') }}" placeholder="গ্রাম" required>
                     @error('village') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-3">
