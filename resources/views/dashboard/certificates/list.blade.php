@@ -5,8 +5,36 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css">
 
     <style>
-    
+      /* ------------------------------------------- */
+      /* PULSE ANIMATION STYLES */
+      /* ------------------------------------------- */
 
+      /* Define the keyframe animation */
+      @keyframes pulse-print {
+          0% {
+              transform: scale(1);
+              box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); /* Success green */
+          }
+          70% {
+              transform: scale(1.05);
+              box-shadow: 0 0 0 15px rgba(40, 167, 69, 0);
+          }
+          100% {
+              transform: scale(1);
+              box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+          }
+      }
+
+      /* Class to apply the animation to the button */
+      .btn-pulse {
+          /* Ensure the button has a distinct background and border for the pulse to show */
+          background-color: #28a745 !important; 
+          border-color: #28a745 !important;
+          color: #fff !important;
+          animation: pulse-print 1.5s infinite; /* 1.5 seconds, repeats infinitely */
+          /* Add margin to ensure shadow doesn't clip */
+          margin-right: 5px; 
+      }
     </style>
 @endsection
 
