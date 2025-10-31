@@ -54,7 +54,7 @@
                   {{-- {{ $totalexamsattendedtoday }} বার --}}
                 </h4>
 
-                <p>আজ মোট পরীক্ষায়  অংশগ্রহণ ({{ date("F d, Y") }})</p>
+                <p>আজ মোট পরীক্ষায় অংশগ্রহণ ({{ date("F d, Y") }})</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
