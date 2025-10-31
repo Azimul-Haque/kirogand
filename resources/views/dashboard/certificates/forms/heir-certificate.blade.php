@@ -123,7 +123,7 @@
             <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][dob]" placeholder="জন্মতারিখ">
         </td>
         <td>
-            <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][remark]" placeholder="Notes">
+            <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][remark]" placeholder="যেমন: মৃত">
         </td>
         <td>
             <button type="button" class="btn btn-danger btn-sm remove-heir-button" title="Remove Row">
