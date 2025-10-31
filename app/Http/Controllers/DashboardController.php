@@ -554,7 +554,8 @@ class DashboardController extends Controller
         $localoffice = LocalOffice::findOrFail($id);
         
         $payment = new Payment;
-        $payment->local_office_id = 
+        $payment->local_office_id = $localoffice->id;
+        $payment->local_office_id = $localoffice->id;
 
         $localoffice->save();
 
