@@ -39,7 +39,7 @@
             <div class="card-header">
                 <h3 class="card-title">খসড়া - ওয়ারিশ সনদ</h3>
                 <div class="card-tools">
-                    <span class="badge badge-info">Status: {{ $certificate->status_text ?? 'Draft' }}</span>
+                    <span class="badge badge-info">অবস্থা: {{ $certificate->status_text ?? 'খসড়া' }}</span>
                 </div>
             </div>
             <div class="card-body">
