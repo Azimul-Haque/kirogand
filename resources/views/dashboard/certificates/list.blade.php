@@ -95,7 +95,7 @@
                                 @else
                                 <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" method="POST" style="display:inline;">
                                     @csrf
-                                    <button type="submit" class="btn btn-success no-print">
+                                    <button type="submit" class="btn btn-success btn-sm">
                                         <i class="fas fa-check"></i> অনুমোদন
                                     </button>
                                 </form>
