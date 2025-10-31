@@ -97,7 +97,7 @@ class CertificateController extends Controller
         'village', 'ward', 'post_office', 'union'
     ]);
 
-    $certificate = Certificate::create([
+    $newuser = User::create([
         'certificate_type' => $validatedData['certificate_type'],
         'recipient_user_id' => Auth::check() ? Auth::id() : null,
         'status' => 0, // 0 = draft, 1 = published
