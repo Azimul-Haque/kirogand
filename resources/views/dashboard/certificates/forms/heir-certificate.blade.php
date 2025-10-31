@@ -143,7 +143,7 @@
             <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][remark]" placeholder="যেমন: মৃত">
         </td>
         <td>
-            <button type="button" class="btn btn-danger btn-sm remove-heir-button" title="Remove Row">
+            <button type="button" class="btn btn-danger btn-sm remove-heir-button" title="ডিলেট করুন">
                 <i class="fas fa-trash"></i>
             </button>
         </td>
