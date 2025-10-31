@@ -17,7 +17,6 @@
         <input type="hidden" name="certificate_type" value="heir-certificate">
 
         <div class="card-body">
-            
             {{-- <h4 class="mb-4 text-success">আবেদনকারী/মৃত ব্যক্তির আবশ্যিক বিবরণ</h4> --}}
             <div class="row">
                 <!-- নাম -->
