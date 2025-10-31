@@ -124,7 +124,7 @@
 
         //get levels data
         $lglevels = [];
-        if(count(getgovlevels()_ > 0) {
+        if(count(getgovlevels()) > 0) {
             $lglevels = getgovlevels();
         }
         //get levels data
