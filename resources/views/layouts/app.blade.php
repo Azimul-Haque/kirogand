@@ -173,6 +173,7 @@
       $('[data-toggle="tooltip"]').tooltip();
       $("[rel='tooltip']").tooltip();
     });
+    
     function bangla(str) {
       // English to Bangla digits
       const enDigits = ['1','2','3','4','5','6','7','8','9','0'];
