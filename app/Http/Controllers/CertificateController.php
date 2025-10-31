@@ -121,7 +121,7 @@ class CertificateController extends Controller
     $certificate = Certificate::create([
         'local_office_id' => Auth::user()->local_office_id,
         'certificate_type' => $certificate_type,
-        'recipient_user_id' => Auth::check() ? Auth::id() : null,
+        'recipient_user_id' => $newuser->id,
         'status' => 0, // 0 = draft, 1 = published
         'unique_serial' => $uniqueSerial,
         'issued_at' => now(),
