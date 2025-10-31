@@ -37,7 +37,7 @@
     <div class="col-lg-10 offset-lg-1">
         <div class="card card-primary card-outline">
             <div class="card-header no-print">
-                <h3 class="card-title">@if($certificate->status == 0) খসড়া - @endif ওয়ারিশ সনদ</h3>
+                <h3 class="card-title">@if($certificate->status == 0) খসড়া @endif ওয়ারিশ সনদ</h3>
                 <div class="card-tools">
                     <span class="badge @if($certificate->status == 0) badge-warning @else badge-success @endif">অবস্থা: {{ $certificate->status == 0 ? 'খসড়া' : 'অনুমোদিত' }}</span>
                 </div>
@@ -53,7 +53,7 @@
 
                 @if ($payload)
                     <div class="draft-container">
-                        <div class="draft-watermark">খসড়া খসড়া খসড়া</div>
+                        @if($certificate->status == 0)<div class="draft-watermark">খসড়া খসড়া খসড়া</div>@endif
                         <div class="certificate-info">
                             <h4 class="text-center mb-4 text-primary">ওয়ারিশান সনদপত্র</h4>
                             <hr>
