@@ -116,7 +116,7 @@ class CertificateController extends Controller
         'submission_timestamp' => now()->toDateTimeString(),
     ];
 
-    $uniqueSerial = 'CERT-' . Str::upper(Str::random(6)) . '-' . now()->format('ymd');
+    $uniqueSerial = Str::upper(Str::random(6)) . '-' . now()->format('ymd');
 
     $certificate = Certificate::create([
         'certificate_type' => $validatedData['certificate_type'],
