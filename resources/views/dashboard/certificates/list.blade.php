@@ -46,7 +46,6 @@
               <table class="table">
                   <thead>
                       <tr>
-                          <th style="width: 5%;">ক্রমিক নং</th>
                           <th>সনদপত্রের ধরণ</th>
                           <th>অনন্য সিরিয়াল</th>
                           <th>আবেদনকারীর নাম</th>
@@ -59,7 +58,6 @@
                       @php $serial = 1; @endphp
                       @forelse ($certificates as $certificate)
                           <tr>
-                              <td>{{ $serial++ }}</td>
                               <td>
                                   {{ checkcertificatetype($certificate->certificate_type) }}
                               </td>
