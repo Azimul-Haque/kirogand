@@ -67,8 +67,8 @@
                                     <p><span class="info-label">মাতা (Mother):</span> {{ $applicant['mother'] ?? 'N/A' }}</p>
                                 </div>
                                 <div class="col-md-6">
-                                    <p><span class="info-label">পরিচয়পত্র (ID Type):</span> {{ $applicant['nid_type'] ?? 'N/A' }}</p>
-                                    <p><span class="info-label">পরিচয় নং (ID No.):</span> {{ $applicant['nid_value'] ?? 'N/A' }}</p>
+                                    <p><span class="info-label">পরিচয়পত্র (ID Type):</span> {{ $applicant['id_type'] ?? 'N/A' }}</p>
+                                    <p><span class="info-label">পরিচয় নং (ID No.):</span> {{ $applicant['id_value'] ?? 'N/A' }}</p>
                                     <p><span class="info-label">ইউনিয়ন/পৌরসভা:</span> {{ $applicant['union'] ?? 'N/A' }}</p>
                                 </div>
                             </div>
@@ -105,7 +105,7 @@
                                                 <td>{{ $heir['name'] ?? 'N/A' }}</td>
                                                 <td>{{ $heir['relation'] ?? 'N/A' }}</td>
                                                 <td>{{ $heir['dob'] ?? 'N/A' }}</td>
-                                                <td>{{ $heir['nid_value'] ?? 'N/A' }} ({{ $heir['nid_type'] ?? 'N/A' }})</td>
+                                                <td>{{ $heir['id_value'] ?? 'N/A' }} ({{ $heir['id_type'] ?? 'N/A' }})</td>
                                                 <td>{{ $heir['remark'] ?? '-' }}</td>
                                             </tr>
                                         @empty
