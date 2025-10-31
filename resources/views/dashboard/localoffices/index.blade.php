@@ -74,11 +74,11 @@
                     </td>
                     <td><small>{{ date('F d, Y', strtotime($localoffice->created_at)) }}</small></td>
                     <td>
-                      <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editLocalOfficeModal{{ $localoffice->id }}">
-                        <i class="fas fa-pen"></i>
-                      </button>
                       <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#addPaymentModal{{ $localoffice->id }}">
                         <i class="fas fa-hand-holding-usd"></i>
+                      </button>
+                      <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editLocalOfficeModal{{ $localoffice->id }}">
+                        <i class="fas fa-pen"></i>
                       </button>
                     </td>
                   </tr>
