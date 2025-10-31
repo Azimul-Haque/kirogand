@@ -1,6 +1,7 @@
 <?php 
 
 use Illuminate\Support\Carbon;
+use App\Services\AuthorityResolver;
 
 	function limit_text($text, $limit) {
       // $pos=strpos($text, ' ', $limit);
