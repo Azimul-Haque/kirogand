@@ -17,7 +17,7 @@
             background-repeat: no-repeat;
             background-position: center center;
             /* Reduced top/bottom margin for better content display */
-            margin: 150px 80px 40px 80px;
+            margin: 160px 80px 40px 80px;
         }
         .page-header,
           .page-header-space {
