@@ -127,4 +127,5 @@
             } else {
                 console.error('Target element not found inside iframe.');
             }
+            console.error('Target element not found inside iframe.');
     </script>
