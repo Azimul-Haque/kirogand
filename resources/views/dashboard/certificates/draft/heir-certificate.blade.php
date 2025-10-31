@@ -147,7 +147,7 @@
             </div>
             <div class="card-footer text-right">
                 <button type="button" class="btn btn-default" onclick="window.print()">
-                    <i class="fas fa-print"></i> Print Draft
+                    <i class="fas fa-print"></i> খসড়া প্রিন্ট
                 </button>
                 <!-- Add your edit/approve/reject buttons here -->
             </div>
