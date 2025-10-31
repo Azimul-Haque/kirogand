@@ -51,7 +51,7 @@
                           <th>আবেদনকারীর নাম</th>
                           <th>অবস্থা</th>
                           <th style="width: 15%;">ইস্যু তারিখ</th>
-                          <th style="width: 15%;">কার্যসম্পাদন</th>
+                          <th style="width: 20%;">কার্যসম্পাদন</th>
                       </tr>
                   </thead>
                   <tbody>
