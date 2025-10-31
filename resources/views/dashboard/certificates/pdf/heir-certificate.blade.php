@@ -159,7 +159,7 @@
                     if(File::exists($image_path)) {
                         $image_url = $image_path;
                     } else {
-                        $image_url = public_path('images/govt-logo.png');
+                        $image_url = public_path('images/icon.png');
                     }
                 @endphp
                 <div class="logo-box" style="float: right;">
