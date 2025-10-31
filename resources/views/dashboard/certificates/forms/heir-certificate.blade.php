@@ -114,7 +114,7 @@
             <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][name]" placeholder="ওয়ারিশের নাম" required>
         </td>
         <td>
-            <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][relation]" placeholder="e.g., Son, Wife" required>
+            <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][relation]" placeholder="যেমন: স্ত্রী, পুত্র, কন্যা ইত্যাদি" required>
         </td>
         <td>
             <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][nid_birth_registration]" placeholder="NID/BR No." required>
