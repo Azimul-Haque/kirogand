@@ -195,10 +195,6 @@
                       return false; // Prevent default submission initially
                   }
                 </script>
-
-                <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning no-print">
-                    <i class="fas fa-print"></i> সংশোধন করুন
-                </a>
             </div>
         </div>
     </div>
