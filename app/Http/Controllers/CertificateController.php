@@ -188,6 +188,9 @@ class CertificateController extends Controller
             'village', 'ward', 'post_office', 'union'
         ]);
 
+        // Preserve the original submission timestamp from the existing payload
+        $submissionTimestamp = $certificate->data_payload['submission_timestamp'] ?? now()->toDateTimeString();
+
         // create new user
         $newuser = User::create([
             'local_office_id ' => Auth::user()->local_office_id,
