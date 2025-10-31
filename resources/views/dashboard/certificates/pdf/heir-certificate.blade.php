@@ -85,7 +85,7 @@
             text-align: center;
         }
         .beneficiary-table th {
-            #background-color: #4472C4;
+            background-color: #4472C4;
             color: white;
             font-weight: normal;
         }
