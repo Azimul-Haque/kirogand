@@ -71,18 +71,6 @@ class CertificateController extends Controller
         return view('dashboard.certificates.create')->with('certificate_type', $certificate_type);
     }
 
-    public function getDraftCertificate($certificate_type)
-    {
-        if(Auth::user()->role == 'manager') {
-            if (Auth::user()->is_active === 0) {
-                Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
-                return redirect()->route('index.index');
-            }
-        }
-
-        return view('dashboard.certificates.create')->with('certificate_type', $certificate_type);
-    }
-
     public function storeCertificate(Request $requests, $certificate_type)
     {
         dd($requests->all());
@@ -143,5 +131,16 @@ class CertificateController extends Controller
                      ->with('success', 'ওয়ারিশান সনদপত্রের সফলভাবে ড্রাফট করা হয়েছে। সিরিয়াল নং: ' . $certificate->unique_serial);
     }
 
+    public function getDraftCertificate($certificate_type)
+    {
+        if(Auth::user()->role == 'manager') {
+            if (Auth::user()->is_active === 0) {
+                Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
+                return redirect()->route('index.index');
+            }
+        }
+
+        return view('dashboard.certificates.create')->with('certificate_type', $certificate_type);
+    }
     
 }
