@@ -53,7 +53,7 @@
 
                 @if ($payload)
                     <div class="draft-container">
-                        <div class="draft-watermark">খসড়া খসড়া খসড়া খসড়া খসড়া খসড়া</div>
+                        <div class="draft-watermark">খসড়া খসড়া খসড়া</div>
                         <div class="certificate-info">
                             <h4 class="text-center mb-4 text-primary">ওয়ারিশান সনদপত্র</h4>
                             <hr>
