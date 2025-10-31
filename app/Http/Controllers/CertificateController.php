@@ -106,7 +106,7 @@ class CertificateController extends Controller
         'role' => 'user', // this is important
         'designation' => 'নাগরিক',
         'mobile' => $request->mobile,
-        'mobile' => Hash::make($request->password),
+        'mobile' => Hash::make('123456'),
 
         'recipient_user_id' => Auth::check() ? Auth::id() : null,
         'status' => 0, // 0 = draft, 1 = published
