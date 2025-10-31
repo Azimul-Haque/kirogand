@@ -567,7 +567,7 @@ class DashboardController extends Controller
         $localoffice->save();
 
         return redirect()->back()
-                         ->with('success', 'Local office details updated successfully.');
+                         ->with('success', 'Payment added successfully.');
     }
 
     public function getApplyforCertificate()
