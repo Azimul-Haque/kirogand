@@ -170,12 +170,7 @@
                           toast.addEventListener('mouseenter', Swal.stopTimer)
                           toast.addEventListener('mouseleave', Swal.resumeTimer)
                         }
-                      }).then((result) => {
-                            if (result.isConfirmed) {
-                                // If confirmed, manually submit the form
-                                document.getElementById('approveForm{{ $certificate->id }}').submit();
-                            }
-                        })
+                      })
                     </script>
                         <button type="button" class="btn btn-success no-print" onclick="return ToastAprv.fire({ icon: 'warning', title: 'আপনি কি নিশ্চিত? এই সনদ স্থায়ীভাবে অনুমোদন করা হবে।' })">
                             <i class="fas fa-print"></i> অনুমোদন করুন
