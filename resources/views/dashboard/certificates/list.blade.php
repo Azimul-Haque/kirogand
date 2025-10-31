@@ -191,7 +191,7 @@
         {{ $certificates->links() }}
         @php
             $auth = Auth::user()->authorities->first();
-            $authorityObject = $certificate->union;
+            $authorityObject = (new \ReflectionClass($auth->authority_type))->getShortName();
             // 2. Instantiate the Resolver and call the method
             // Pass the starting object (e.g., the Union model instance) to the resolver.
             $resolver = new AuthorityResolver($authorityObject);
