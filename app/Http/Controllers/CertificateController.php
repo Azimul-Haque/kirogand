@@ -161,5 +161,19 @@ class CertificateController extends Controller
 
         return view('dashboard.certificates.edit')->withCertificate($certificate);
     }
+
+    public function getCertificateList()
+    {
+        if(Auth::user()->role == 'manager') {
+            if (Auth::user()->is_active === 0) {
+                Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
+                return redirect()->route('index.index');
+            }
+        }
+
+        $certificate = Certificate::where('unique_serial', $unique_serial)->first();
+
+        return view('dashboard.certificates.edit')->withCertificate($certificate);
+    }
     
 }
