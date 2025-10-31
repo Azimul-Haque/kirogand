@@ -241,10 +241,10 @@
                   $button.addClass('btn-pulse');
                   console.log('Pulse class applied.');
                   
-                  // OPTIONAL: Remove the pulse after 5 cycles (7.5 seconds) to stop the flashing
+                  // OPTIONAL: Remove the pulse after 5 cycles (20 seconds) to stop the flashing
                   setTimeout(() => {
                       $button.removeClass('btn-pulse');
-                      console.log('Pulse animation stopped after 7.5 seconds.');
+                      console.log('Pulse animation stopped after 20 seconds.');
                   }, 20000); 
                   
               }, 50); // Small delay to force re-render
