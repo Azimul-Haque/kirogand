@@ -476,7 +476,7 @@ class DashboardController extends Controller
                     ->withLocaloffices($localoffices);
     }
 
-    public function getLocalOfficesSearch()
+    public function getLocalOfficesSearch($search)
     {
         // ONLY ADMIN
         $localofficescount = LocalOffice::count();
