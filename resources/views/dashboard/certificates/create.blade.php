@@ -22,7 +22,7 @@
     <div class="container-fluid">
       <div class="card">
           <div class="card-header">
-            <h3 class="card-title">সনদের আবেদন তালিকা (মোট: {{ $localofficescount }})</h3>
+            <h3 class="card-title">সনদের আবেদন</h3>
 
             
           </div>
