@@ -104,7 +104,7 @@
         </div>
 
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
-            <a href="/certificates/citizen-certificate" class="text-decoration-none text-dark d-block">
+            <a href="{{ route('dashboard.certificates.certificate_type', 'citizen-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-user-check"></i></div> 
                     <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">নাগরিকত্ব সনদপত্র</h3>
