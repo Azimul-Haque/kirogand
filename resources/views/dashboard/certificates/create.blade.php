@@ -59,7 +59,7 @@
                         
                         <!-- Selector sends a GET request to reload the form with the new schema -->
                         <select name="certificate_type_selector" id="certificate_type_selector" 
-                                onchange="window.location.href = '{{ route('certificates.create') }}?certificate_type=' + this.value"
+                                onchange="window.location.href = '{{ route('certificates.createform') }}?certificate_type=' + this.value"
                                 class="form-input-field text-lg appearance-none bg-white cursor-pointer">
                             
                             <option value="">-- Select Certificate to Begin --</option>
