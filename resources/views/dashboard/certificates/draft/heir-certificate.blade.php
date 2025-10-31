@@ -150,7 +150,7 @@
                     <i class="fas fa-print"></i> খসড়া প্রিন্ট
                 </button>
                 <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning no-print">
-                    <i class="fas fa-print"></i> সংশোধন করুন
+                    <i class="fas fa-pen"></i> সংশোধন করুন
                 </a>
                 
 
