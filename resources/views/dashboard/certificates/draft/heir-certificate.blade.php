@@ -36,7 +36,7 @@
 <div class="row">
     <div class="col-lg-10 offset-lg-1">
         <div class="card card-primary card-outline">
-            <div class="card-header">
+            <div class="card-header no-print">
                 <h3 class="card-title">খসড়া - ওয়ারিশ সনদ</h3>
                 <div class="card-tools">
                     <span class="badge badge-warning">অবস্থা: {{ $certificate->status == 0 ? 'খসড়া' : 'অনুমোদিত' }}</span>
