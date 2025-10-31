@@ -177,7 +177,7 @@
               <a href="/service/death-certificate" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
                       <div class="icon-circle" style="background-color: #dc3545;"><i class="fas fa-cross"></i></div> 
-                      <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">মৃত্যু নিবন্ধন সনদ</h3>
+                      <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">জাতীয়তা সনদ</h3>
                   </div>
               </a>
           </div>
