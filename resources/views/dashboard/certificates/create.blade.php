@@ -25,7 +25,7 @@
             <h3 class="card-title">সনদের আবেদন</h3>
 
             <!-- resources/views/dashboard/certificate_form.blade.php -->
-            <form method="POST" action="{{ route('dashboard.certificates.store') }}">
+            <form method="POST" action="{{ route('dashboard.certificates.store', $certificate_type) }}">
                 @csrf
 
                 <!-- Load Tailwind CSS -->
