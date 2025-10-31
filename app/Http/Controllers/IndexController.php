@@ -79,7 +79,7 @@ class IndexController extends Controller
     public function verifyCertificate($unique_serial)
     {
         $certificate = Certificate::where('unique_serial', $unique_serial)->first();
-        return view('index.verify');
+        return view('index.verify')->withCertificate($certificate);
     }
 
     public function getApplicationStatus()
