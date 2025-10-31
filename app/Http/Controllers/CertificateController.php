@@ -98,10 +98,10 @@ class CertificateController extends Controller
             'name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
             'village', 'ward', 'post_office', 'union'
         ]);
-        dd(Auth::user()->local_office_id);
+
         // create new user
         $newuser = User::create([
-            'local_office_id ' => Auth::user()->local_office_id,
+            'local_office_id' => Auth::user()->local_office_id,
             'is_active ' => 0,
             'nid' => $request->id_value,
             'name' => $request->name,
