@@ -157,6 +157,8 @@
                 <form action="{{ route('dashboard.certificates.update', $certificate->id) }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
+
+                    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
                     <script type="text/javascript">
                       const ToastAprv = Swal.mixin({
                         toast: false,
