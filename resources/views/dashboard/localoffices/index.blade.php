@@ -82,6 +82,165 @@
                       </button>
                     </td>
                   </tr>
+                  {{-- Add Payment Modal Code --}}
+                  {{-- Add Payment Modal Code --}}
+                  <!-- Modal -->
+                  <div class="modal fade" id="editLocalOfficeModal{{ $localoffice->id }}" tabindex="-1" role="dialog" aria-labelledby="editLocalOfficeModalLabel" aria-hidden="true" data-backdrop="static">
+                    <div class="modal-dialog modal-lg" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header bg-primary">
+                          <h5 class="modal-title" id="editLocalOfficeModalLabel">স্থানীয় সরকার কার্যালয় তথ্য হালনাগাদ</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <form method="post" action="{{ route('dashboard.local-offices.update', $localoffice->id) }}" enctype="multipart/form-data">
+                          <div class="modal-body">
+                            @php
+                              $authlevel = '';
+                              if($localoffice->users && $localoffice->users->count() > 0) {
+                                if($localoffice->users[0]->authorities->isNotEmpty()) {
+                                  $auth = $localoffice->users[0]->authorities->first();
+                                  // $authlevel = (new \ReflectionClass($auth->authority_type))->getShortName();
+                                  $authlevel = $auth->getFullHierarchy();
+                                }
+                              }
+                            @endphp
+                            <small>{!! $authlevel !!}</small><br/><br/>
+                            
+                                @csrf
+
+                                <div class="custom-control custom-switch mb-3">
+                                  <input type="checkbox" class="custom-control-input" name="is_active" {{ $localoffice->is_active ? 'checked' : '' }} id="switchIsActive{{ $localoffice->id }}">
+                                  <label class="custom-control-label" for="switchIsActive{{ $localoffice->id }}">একটিভ স্ট্যাটাস</label>
+                                </div>
+
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                        <input type="text"
+                                               name="name_bn"
+                                               class="form-control"
+                                               value="{{ $localoffice->name_bn }}"
+                                               placeholder="নাম" required>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><span class="fas fa-user"></span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                        <input type="text"
+                                               name="name"
+                                               class="form-control"
+                                               value="{{ $localoffice->name }}"
+                                               placeholder="ইংরেজি নাম (OPTIONAL)">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><span class="fas fa-user"></span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                      <input type="text"
+                                             name="mobile"
+                                             value="{{ $localoffice->mobile }}"
+                                             autocomplete="off"
+                                             class="form-control"
+                                             placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><span class="fas fa-phone"></span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                        <input type="email"
+                                               name="email"
+                                               value="{{ $localoffice->email }}"
+                                               autocomplete="off"
+                                               class="form-control"
+                                               placeholder="অফিস ইমেইল এড্রেস" required>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><span class="fas fa-envelope"></span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                      <select name="office_type" class="form-control" required>
+                                        <option disabled="" value="">ধরন নির্ধারণ করুন</option>
+                                        <option value="up" @if($localoffice->office_type == 'up') selected="" @endif>ইউনিয়ন পরিষদ</option>
+                                        <option value="poura" @if($localoffice->office_type == 'poura') selected="" @endif>পৌরসভা</option>
+                                      </select>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><span class="fas fa-landmark"></span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                        <input type="text"
+                                               name="packageexpirydate"
+                                               id="packageexpirydate{{ $localoffice->id }}" 
+                                               value="{{ $localoffice->package_expiry_date ? date('F d, Y', strtotime($localoffice->package_expiry_date)) : '' }}"
+                                               autocomplete="off"
+                                               class="form-control"
+                                               placeholder="প্যাকেজের মেয়াদ বৃদ্ধি">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><span class="fas fa-calendar-check"></span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                        
+                                        <!-- Bootstrap 4 Custom File Input -->
+                                        <div class="custom-file">
+                                            <!-- 
+                                                The 'accept' attribute restricts the file picker 
+                                                to show only common image types.
+                                            -->
+                                            <input 
+                                                type="file" 
+                                                class="custom-file-input" 
+                                                id="monogram{{ $localoffice->id }}" 
+                                                name="monogram"
+                                                
+                                                accept="image/png, image/jpeg, image/gif"
+                                                @if($localoffice->monogram == null) required @endif
+                                            >
+                                            <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
+                                        </div>
+                                        <small class="form-text text-muted">Max file size 300KB. Accepts PNG, JPG, GIF. (300px X 300px)</small>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    
+                                  </div>
+                                </div>
+                                
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">ফিরে যান</button>
+                            <button type="submit" class="btn btn-primary">দাখিল করুন</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  {{-- Add Payment Modal Code --}}
+                  {{-- Add Payment Modal Code --}}
+
                   {{-- Edit Modal Code --}}
                   {{-- Edit Modal Code --}}
                   <!-- Modal -->
