@@ -172,9 +172,9 @@
                         }
                       })
                     </script>
-                        <button type="button" class="btn btn-success no-print" onclick="return ToastAprv.fire({ icon: 'warning', title: 'আপনি কি নিশ্চিত? এই সনদ স্থায়ীভাবে অনুমোদন করা হবে।' })">
-                            <i class="fas fa-print"></i> অনুমোদন করুন
-                        </button>
+                    <button type="button" class="btn btn-success no-print" onclick="return ToastAprv.fire({ icon: 'warning', title: 'আপনি কি নিশ্চিত? এই সনদ স্থায়ীভাবে অনুমোদন করা হবে।' })">
+                        <i class="fas fa-print"></i> অনুমোদন করুন
+                    </button>
                         
                     </form>
                 <!-- Add your edit/approve/reject buttons here -->
