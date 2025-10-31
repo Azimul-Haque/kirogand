@@ -160,6 +160,28 @@
                         <button type="submit" class="btn btn-success no-print" onclick="return confirm('আপনি কি নিশ্চিত? এই তথ্য স্থায়ীভাবে অনুমোদন করা হবে।')">
                             <i class="fas fa-print"></i> অনুমোদন করুন
                         </button>
+                        <script type="text/javascript">
+                          const Toast = Swal.mixin({
+                            toast: false,
+                            position: 'center',
+                            showConfirmButton: false,
+                            timer: 4000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                              toast.addEventListener('mouseenter', Swal.stopTimer)
+                              toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            }
+                          })
+                        </script>
+                           
+                        @if (Session::has('success'))
+                          <script type="text/javascript">
+                            Toast.fire({
+                              icon: 'success',
+                              title: '{{Session::get('success')}}'
+                            })
+                          </script>
+                        @endif
                     </form>
                 <!-- Add your edit/approve/reject buttons here -->
             </div>
