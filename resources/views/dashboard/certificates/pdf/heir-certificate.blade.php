@@ -186,7 +186,7 @@
                 <td style="text-align: right; font-size: 14px;">ইস্যুর তারিখ : {{ $certificate['issue_date'] ?? ($applicant['submission_timestamp'] ?? '--') }}</td>
             </tr>
             <tr>
-                <td colspan="2" style="text-align: right; font-size: 14px;">প্রদানের তারিখ: {{ date('d-m-Y') ?? '--' }}</td>
+                <td colspan="2" style="text-align: right; font-size: 14px;">প্রদানের তারিখ: {{ bangla(date('d-m-Y')) ?? '--' }}</td>
             </tr>
         </table>
 
