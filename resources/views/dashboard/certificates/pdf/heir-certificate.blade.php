@@ -144,7 +144,7 @@
         <tr>
             <td style="width: 30%;">
                 {{-- Logo/Flag Left (Assuming you have an image path for the flag) --}}
-                <center><img src="{{ public_path('images/govt-logo.png') }}" style="height: 100px; width: auto; display: block; margin: 0 auto;"></center>
+                <img src="{{ public_path('images/govt-logo.png') }}" style="height: 100px; width: auto; display: block; margin: 0 auto;">
             </td>
             <td style="width: 40%; text-align: center;">
                 <span style="font-size: 14px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span><br/>
