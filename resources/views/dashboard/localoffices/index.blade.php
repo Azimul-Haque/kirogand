@@ -78,7 +78,7 @@
                         <i class="fas fa-pen"></i>
                       </button>
                       <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#addPaymentModal{{ $localoffice->id }}">
-                        <i class="fas fa-hand-holding-usd"></i>
+                        <i class="fas fa-hand-holding-bdt"></i>
                       </button>
                     </td>
                   </tr>
