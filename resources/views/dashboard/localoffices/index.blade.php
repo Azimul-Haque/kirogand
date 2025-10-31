@@ -97,8 +97,6 @@
                         <form method="post" action="{{ route('dashboard.local-offices.payment.add', $localoffice->id) }}">
                           <div class="modal-body">
                                 @csrf
-
-                                
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="input-group mb-3">
