@@ -41,7 +41,7 @@
         }
         .header-table td {
             vertical-align: top;
-            padding: 0px 0px 50px 5px;
+            padding: 0px 0px;
             font-size: 14px;
         }
 
