@@ -258,7 +258,7 @@
         <table class="signature-block">
             <tr>
                 <td>
-                    <div style="padding-top: 15px;" class="seal-placeholder">কায়ালয়াল সিল</div>
+                    <img src="{{ public_path('images/govt-logo.png') }}" style="height: 100px; width: auto; display: block; margin: 0 auto;">
                 </td>
                 <td>
                     <div style="padding-top: 15px;">প্রস্তুতকারীর সিল ও স্বাক্ষর</div>
