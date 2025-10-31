@@ -65,7 +65,7 @@
 @section('third_party_scripts')
   <script type="text/javascript">
     $('#verifyButton').click(function(e) {
-      var urltocall = '{{ route('index.verify') }}' +  '/' + $('#search-param').val();
+      var urltocall = '{{ route('index.verify') }}' +  '/' + $('#verificationInput').val();
       location.href= urltocall;
     });
   </script>
