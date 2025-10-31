@@ -37,7 +37,7 @@
     <div class="col-lg-10 offset-lg-1">
         <div class="card card-primary card-outline">
             <div class="card-header no-print">
-                <h3 class="card-title">খসড়া - ওয়ারিশ সনদ</h3>
+                <h3 class="card-title">@if($certificate->status == 0) খসড়া -  @else badge-success @endifওয়ারিশ সনদ</h3>
                 <div class="card-tools">
                     <span class="badge @if($certificate->status == 0) badge-warning @else badge-success @endif">অবস্থা: {{ $certificate->status == 0 ? 'খসড়া' : 'অনুমোদিত' }}</span>
                 </div>
