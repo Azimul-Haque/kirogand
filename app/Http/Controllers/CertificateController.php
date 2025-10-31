@@ -278,12 +278,7 @@ class CertificateController extends Controller
 
     public function showCertificateQr($unique_serial)
     {
-        // 1. Define the data you want to encode (e.g., the verification link)
         $dataToEncode = url("/verify/{$unique_serial}");
-
-        // 2. Generate the QR code as an SVG string.
-        // We set the size (200px) and a color (4, 137, 102 - a nice green).
-        // The generate() method returns an SVG string, perfect for embedding directly in HTML.
         $qrCodeSvg = QrCode::size(200)
                             ->color(4, 137, 102) // Green color for the code lines
                             ->generate($dataToEncode);
