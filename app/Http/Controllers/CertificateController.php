@@ -208,7 +208,7 @@ class CertificateController extends Controller
         ]);
 
         return redirect()->route('dashboard.certificates.draft', $certificate->unique_serial)
-                         ->with('success', 'ওয়ারিশান সনদপত্র সফলভাবে আপডেট করা হয়েছে। সিরিয়াল নং: ' . $certificate->unique_serial);
+                         ->with('success', 'সনদপত্র সফলভাবে আপডেট করা হয়েছে। সিরিয়াল নং: ' . $certificate->unique_serial);
     }
 
     public function approveCertificate(Request $request)
