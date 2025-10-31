@@ -155,12 +155,12 @@
                 <img src="{{ public_path('images/govt-logo.png') }}" style="height: 100px; width: auto; display: block; margin: 0 auto;">
             </td>
             <td style="width: 40%; text-align: center;">
-                <p style="font-size: 16px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</p><br/>
-                <p style="font-size: 18px; font-weight: bold;">{{ $union_info['union_name'] }}</p><br/>
-                <p style="font-size: 14px;">উপজেলা: {{ $union_info['upazila'] }}, জেলা: {{ $union_info['district'] }}।</p><br/>
-                {{-- <p style="font-size: 14px;">চেয়ারম্যান: মো: {{ $union_info['chairman_name'] }}</p><br/> --}}
-                <p style="font-size: 14px;">ইমেইল: {{ $union_info['email'] }}</p><br/>
-                <p style="font-size: 14px;">ফোন নম্বর: {{ $union_info['phone'] }}</p>
+                <span style="font-size: 16px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span><br/>
+                <span style="font-size: 18px; font-weight: bold;">{{ $union_info['union_name'] }}</span><br/>
+                <span style="font-size: 14px;">উপজেলা: {{ $union_info['upazila'] }}, জেলা: {{ $union_info['district'] }}।</span><br/>
+                {{-- <span style="font-size: 14px;">চেয়ারম্যান: মো: {{ $union_info['chairman_name'] }}</span><br/> --}}
+                <span style="font-size: 14px;">ইমেইল: {{ $union_info['email'] }}</span><br/>
+                <span style="font-size: 14px;">ফোন নম্বর: {{ $union_info['phone'] }}</span>
             </td>
             <td style="width: 30%; text-align: right;">
                 @php
