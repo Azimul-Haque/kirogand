@@ -42,6 +42,7 @@
         .header-table {
             width: 100%;
             border-collapse: collapse;
+            padding-top: 20px;
             margin-bottom: 5px;
         }
         .header-table td {
