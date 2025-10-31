@@ -44,8 +44,8 @@
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
         <li class="breadcrumb-item active">সনদ তালিকা</li>
-        @if(isset($justapprovedcertificate))
-          {{ $justapprovedcertificate->id }}
+        @if(isset($certificate))
+          {{ $certificate->id }}
         @endif
     </ol>
   @endsection
