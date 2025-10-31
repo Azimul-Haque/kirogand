@@ -109,11 +109,11 @@
                         targetElement.style.color = '#10b981'; // Success Green
                         console.log('Iframe content successfully updated.');
                     } else {
-                        console.error('Target element not found inside iframe.');
+                        console.log('Target element not found inside iframe.');
                     }
 
-                } catch (error) {
-                    console.error('Security Error (Same-Origin Policy violation):', error);
+                } catch (log) {
+                    console.log('Security Error (Same-Origin Policy violation):', log);
                 }
             };
             const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
@@ -125,7 +125,7 @@
                 targetElement.style.color = '#10b981'; // Success Green
                 console.log('Iframe content successfully updated.');
             } else {
-                console.error('Target element not found inside iframe.');
+                console.log('Target element not found inside iframe.');
             }
             console.log('Target element not found inside iframe.');
     </script>
