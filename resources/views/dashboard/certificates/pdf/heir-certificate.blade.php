@@ -154,8 +154,7 @@
     <htmlpageheader name="page-header">
         <table class="header-table">
             <tr>
-                <td style="width: 30%;">
-                </td>
+                <td style="width: 1000%;"></td>
             </tr>
             <tr>
                 <td style="width: 30%;">
