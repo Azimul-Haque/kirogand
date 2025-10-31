@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
         body {
-            font-family: 'Shonar', sans-serif;
+            font-family: 'ShonarAA', sans-serif;
             color: #333;
         }
 
