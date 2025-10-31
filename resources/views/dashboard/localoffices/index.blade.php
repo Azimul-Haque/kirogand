@@ -388,6 +388,11 @@
                       todayHighlight: true,
                       autoclose: true,
                     });
+                    $("#packageexpirydate2{{ $localoffice->id }}").datepicker({
+                      format: 'MM dd, yyyy',
+                      todayHighlight: true,
+                      autoclose: true,
+                    });
                   </script>
                   <script>
                     // JavaScript to update the label text of the custom file input
