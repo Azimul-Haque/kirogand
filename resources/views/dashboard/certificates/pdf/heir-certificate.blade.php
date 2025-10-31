@@ -155,6 +155,7 @@
         <table class="header-table">
             <tr><td style="width: 30%;"></td></tr>
             <tr><td style="width: 30%;"></td></tr>
+            <tr><td style="width: 30%;"></td></tr>
             <tr>
                 <td style="width: 30%;">
                     <img src="{{ public_path('images/govt-logo.png') }}" style="height: 100px; width: auto; display: block; margin: 0 auto;">
