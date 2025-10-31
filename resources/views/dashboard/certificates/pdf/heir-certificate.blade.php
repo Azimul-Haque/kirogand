@@ -175,7 +175,7 @@
             </td>
         </tr>
     </table>
-    <div style="border-top: 2px solid green; margin-top: 5px;"></div>
+    <div style="border-top: 2px solid green; margin-top: 20px;"></div>
 
     {{-- CERTIFICATE BODY --}}
     <div>
