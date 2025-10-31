@@ -157,7 +157,7 @@
                 <form action="{{ route('dashboard.certificates.update', $certificate->id) }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
-                        <button type="submit" class="btn btn-success no-print" onclick="return ToastAprv.fire({ icon: 'success', title: 'আপনি কি নিশ্চিত? এই তথ্য স্থায়ীভাবে অনুমোদন করা হবে।' })">
+                        <button type="button" class="btn btn-success no-print" onclick="return ToastAprv.fire({ icon: 'success', title: 'আপনি কি নিশ্চিত? এই তথ্য স্থায়ীভাবে অনুমোদন করা হবে।' })">
                             <i class="fas fa-print"></i> অনুমোদন করুন
                         </button>
                         <script type="text/javascript">
