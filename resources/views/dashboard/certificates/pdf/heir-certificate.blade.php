@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>ওয়ারিশান সনদ | PDF Download</title>
+    <title>সনদ | PDF Download</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
         /* The 'kalpurush' font must be available on your PDF generation server (e.g., installed on mPDF) */
