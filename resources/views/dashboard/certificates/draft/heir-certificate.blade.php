@@ -149,7 +149,7 @@
                 <button type="button" class="btn btn-info no-print" onclick="window.print()">
                     <i class="fas fa-print"></i> খসড়া প্রিন্ট
                 </button>
-                <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning no-print" onclick="window.print()">
+                <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning no-print">
                     <i class="fas fa-print"></i> সংশোধন করুন
                 </a>
                 <button type="button" class="btn btn-success no-print" onclick="window.print()">
