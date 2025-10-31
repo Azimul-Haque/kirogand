@@ -66,7 +66,7 @@ class UserAuthority extends Model
         $hierarchy = array_reverse($hierarchy);
 
         // Implode and return the formatted string with the right arrow
-        return implode(' &rarr; ', $hierarchy);
+        return $hierarchy;
     }
 
     public function getFullHierarchy(): string
