@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title') ড্যাশবোর্ড | পেমেন্ট @endsection
+@section('title') ড্যাশবোর্ড | সনদ @endsection
 
 @section('third_party_stylesheets')
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css">
@@ -11,26 +11,26 @@
 @endsection
 
 @section('content')
-  @section('page-header') পেমেন্ট @endsection
+  @section('page-header') সনদ @endsection
   @section('page-header-right')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
-        <li class="breadcrumb-item active">পেমেন্ট</li>
+        <li class="breadcrumb-item active">সনদ</li>
     </ol>
   @endsection
     <div class="container-fluid">
     <div class="card">
           <div class="card-header">
-            <h3 class="card-title">পেমেন্ট তালিকা</h3>
+            <h3 class="card-title">সনদ তালিকা</h3>
 
             <div class="card-tools">
-              {{-- <button type="button" class="btn btn-success btn-sm"  data-toggle="modal" data-target="#addPackageModal" title="" rel="tooltip" data-original-title="পেমেন্ট যোগ করুন">
-                <i class="fas fa-clipboard-check"></i> নতুন পেমেন্ট
+              {{-- <button type="button" class="btn btn-success btn-sm"  data-toggle="modal" data-target="#addPackageModal" title="" rel="tooltip" data-original-title="সনদ যোগ করুন">
+                <i class="fas fa-clipboard-check"></i> নতুন সনদ
               </button> --}}
               <div class="card-tools">
                 <form class="form-inline form-group-lg" action="">
                   <div class="form-group">
-                    <input type="search-param" class="form-control form-control-sm" placeholder="পেমেন্ট খুঁজুন" id="search-param" required>
+                    <input type="search-param" class="form-control form-control-sm" placeholder="সনদ খুঁজুন" id="search-param" required>
                   </div>
                   <button type="button" id="search-button" class="btn btn-default btn-sm" style="margin-left: 5px;">
                     <i class="fas fa-search"></i> খুঁজুন
@@ -47,7 +47,7 @@
                 <thead>
                   <th>প্রতিষ্ঠান</th>
                   <th>প্যাকেজ</th>
-                  <th>পেমেন্ট স্ট্যাটাস</th>
+                  <th>সনদ স্ট্যাটাস</th>
                   <th>পরিশোধের মাধ্যম</th>
                   <th>ট্রানজেকশন আইডি</th>
                   <th>পরিমাণ</th>
