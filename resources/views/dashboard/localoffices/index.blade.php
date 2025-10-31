@@ -115,7 +115,7 @@
                                         <input type="text"
                                                class="form-control"
                                                value="{{ $localoffice->name_bn }}"
-                                               placeholder="নাম" readonly="">
+                                               placeholder="নাম" disabled>
                                         <div class="input-group-append">
                                             <div class="input-group-text"><span class="fas fa-user"></span></div>
                                         </div>
@@ -125,7 +125,7 @@
                                     <div class="input-group mb-3">
                                         <input type="text"
                                                class="form-control"
-                                               placeholder="ইংরেজি নাম (OPTIONAL)" readonly="">
+                                               placeholder="ইংরেজি নাম (OPTIONAL)" disabled>
                                         <div class="input-group-append">
                                             <div class="input-group-text"><span class="fas fa-user"></span></div>
                                         </div>
