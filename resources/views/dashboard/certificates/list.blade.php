@@ -252,7 +252,7 @@
           }
       }
       
-      pulsePrintButton({{ isset(session('justapproved')) }});
+      pulsePrintButton({{ session('justapproved') }});
       
     </script>
 @endsection
