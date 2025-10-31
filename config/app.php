@@ -181,6 +181,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
         Mews\Purifier\PurifierServiceProvider::class,
+        SimpleSoftwareIO\QrCode\ServiceProvider::class,
 
     ],
 
