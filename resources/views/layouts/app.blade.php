@@ -167,11 +167,7 @@
 
 <script src="{{ mix('js/app.js') }}" defer></script>
 <script src="{{ asset('js/pace.min.js') }}"></script>
-<!-- 1. jQuery (REQUIRED for Bootstrap and AdminLTE) -->
-<script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
 
-<!-- 2. Bootstrap 4 (Requires jQuery) -->
-<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script>
     Pace.restart();
     $(document).ready(function(){
