@@ -88,7 +88,7 @@
                   <div class="modal fade" id="editLocalOfficeModal{{ $localoffice->id }}" tabindex="-1" role="dialog" aria-labelledby="editLocalOfficeModalLabel" aria-hidden="true" data-backdrop="static">
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
-                        <div class="modal-header bg-primary">
+                        <div class="modal-header bg-warning">
                           <h5 class="modal-title" id="editLocalOfficeModalLabel">স্থানীয় সরকার কার্যালয় তথ্য হালনাগাদ</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -232,7 +232,7 @@
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">ফিরে যান</button>
-                            <button type="submit" class="btn btn-primary">দাখিল করুন</button>
+                            <button type="submit" class="btn btn-warning">দাখিল করুন</button>
                           </div>
                         </form>
                       </div>
