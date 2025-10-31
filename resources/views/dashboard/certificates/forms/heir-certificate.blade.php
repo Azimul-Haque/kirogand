@@ -23,9 +23,9 @@
     </div>
     <form action="{{ $route }}" method="POST">
         @csrf
-        @if ($isEdit)
+        {{-- @if ($isEdit)
             @method('PUT')
-        @endif
+        @endif --}}
 
         <!-- Hidden field for type recognition in the Controller (only needed for create/store) -->
         @if (!$isEdit)
