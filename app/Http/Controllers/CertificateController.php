@@ -246,7 +246,7 @@ class CertificateController extends Controller
                             ->color(4, 137, 102)
                             ->generate($dataToEncode);
 
-        $pdf = PDF::loadView('dashboard.certificates.pdf.heir-certificate', ['certificate' => $certificate]);
+        $pdf = PDF::loadView('dashboard.certificates.pdf.heir-certificate', ['certificate' => $certificate, '']);
         $fileName = 'Cert-' . $certificate->unique_serial . '.pdf';
         return $pdf->stream($fileName); // download/stream
     }
