@@ -20,11 +20,23 @@
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" required>
                     @error('name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
-                <!-- জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন -->
+                <!-- জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন (Updated Field) -->
                 <div class="form-group col-md-6">
-                    <label for="nid_birth_registration">জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন নং <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('nid_birth_registration') is-invalid @enderror" id="nid_birth_registration" name="nid_birth_registration" value="{{ old('nid_birth_registration') }}" required>
-                    @error('nid_birth_registration') <span class="invalid-feedback">{{ $message }}</span> @enderror
+                    <label for="nid_type">জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন নং <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <!-- Select for Type: name="nid_type" -->
+                        <div class="input-group-prepend">
+                            <select class="custom-select @error('nid_type') is-invalid @enderror" id="nid_type" name="nid_type" required style="width: 110px;">
+                                <option value="এনআইডি" {{ old('nid_type') == 'এনআইডি' ? 'selected' : '' }}>এনআইডি</option>
+                                <option value="জন্ম সনদ" {{ old('nid_type') == 'জন্ম সনদ' ? 'selected' : '' }}>জন্ম সনদ</option>
+                            </select>
+                        </div>
+                        <!-- Input for Value: name="nid_value" -->
+                        <input type="text" class="form-control @error('nid_value') is-invalid @enderror" name="nid_value" placeholder="নম্বর দিন" value="{{ old('nid_value') }}" required>
+                    </div>
+                    <!-- Display combined error messages if needed -->
+                    @error('nid_type') <span class="text-danger d-block mt-1">{{ $message }}</span> @enderror
+                    @error('nid_value') <span class="text-danger d-block mt-1">{{ $message }}</span> @enderror
                 </div>
             </div>
 
