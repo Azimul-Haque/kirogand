@@ -91,6 +91,8 @@
       <!-- Service Cards Container -->
       <!-- BS5 'g-4' (gutter) is removed, relying on default BS4 column padding and custom CSS margin-bottom on service boxes -->
       <div class="row" id="serviceGrid">
+
+        ওয়ারিশ, নাগরিকত্ব, স্থায়ী, একই ব্যক্তি, চারিত্রিক, অবিবাহিত, প্রত্যয়ন
           
           <!-- Service 1: জন্ম নিবন্ধন সনদ -->
           <!-- BS4 equivalent classes for the grid are used -->
