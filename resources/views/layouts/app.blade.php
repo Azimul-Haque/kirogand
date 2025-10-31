@@ -173,6 +173,49 @@
       $('[data-toggle="tooltip"]').tooltip();
       $("[rel='tooltip']").tooltip();
     });
+    function bangla(str) {
+      // English to Bangla digits
+      const enDigits = ['1','2','3','4','5','6','7','8','9','0'];
+      const bnDigits = ['১','২','৩','৪','৫','৬','৭','৮','৯','০'];
+      enDigits.forEach((digit, i) => {
+        str = str.replace(new RegExp(digit, 'g'), bnDigits[i]);
+      });
+
+      // English to Bangla months
+      const enMonths = ['January', 'February', 'March', 'April', 'May', 'June', 
+                        'July', 'August', 'September', 'October', 'November', 'December'];
+      const enMonthsShort = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+                             'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const bnMonths = ['জানুয়ারি', 'ফেব্রুয়ারি', 'মার্চ', 'এপ্রিল', 'মে', 'জুন', 
+                        'জুলাই', 'অগাস্ট', 'সেপ্টেম্বর', 'অক্টোবর', 'নভেম্বর', 'ডিসেম্বর'];
+      enMonths.forEach((m, i) => {
+        str = str.replace(new RegExp(m, 'g'), bnMonths[i]);
+      });
+      enMonthsShort.forEach((m, i) => {
+        str = str.replace(new RegExp(m, 'g'), bnMonths[i]);
+      });
+
+      // English to Bangla weekdays
+      const enDays = ['Saturday','Sunday','Monday','Tuesday','Wednesday','Thursday','Friday'];
+      const enDaysShort = ['Sat','Sun','Mon','Tue','Wed','Thu','Fri'];
+      const bnDays = ['শনিবার','রবিবার','সোমবার','মঙ্গলবার','বুধবার','বৃহস্পতিবার','শুক্রবার'];
+      const bnDaysShort = ['শনি','রবি','সোম','মঙ্গল','বুধ','বৃহঃ','শুক্র'];
+      enDays.forEach((d, i) => {
+        str = str.replace(new RegExp(d, 'g'), bnDays[i]);
+      });
+      enDaysShort.forEach((d, i) => {
+        str = str.replace(new RegExp(d, 'g'), bnDaysShort[i]);
+      });
+
+      // AM/PM
+      const enAmPm = ['am', 'pm', 'AM', 'PM'];
+      const bnAmPm = ['পূর্বাহ্ন', 'অপরাহ্ন', 'পূর্বাহ্ন', 'অপরাহ্ন'];
+      enAmPm.forEach((p, i) => {
+        str = str.replace(new RegExp(p, 'g'), bnAmPm[i]);
+      });
+
+      return str;
+    }
 </script>
 
 @yield('third_party_scripts')
