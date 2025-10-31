@@ -241,7 +241,7 @@ class CertificateController extends Controller
 
         $certificate = Certificate::where('unique_serial', $unique_serial)->first();
 
-        $dataToEncode = url("/verify/{$unique_serial}");
+        $dataToEncode = url("/verify/{$certificate->unique_serial}");
         $qrCodeSvg = QrCode::size(200)
                             ->color(4, 137, 102)
                             ->generate($dataToEncode);
