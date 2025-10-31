@@ -561,6 +561,7 @@ class DashboardController extends Controller
         $payment->trx_id = 'Ma-' . random_string(5);
         $payment->amount = $request->amount;
         $payment->store_amount = $request->amount - ($request->amount * 0.02);
+        $payment->save();
 
         $localoffice->save();
 
