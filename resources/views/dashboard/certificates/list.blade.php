@@ -84,17 +84,18 @@
                                 <a href="{{ route('dashboard.certificates.draft', $certificate->unique_serial) }}" class="btn btn-info" title="দেখুন/ড্রাফট">
                                     <i class="fas fa-eye"></i>
                                 </a>
+                                @if ($certificate->status == 0)
+                                    <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning" title="সম্পাদনা">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                @endif
                                   <!-- Action Buttons -->
                                   <div class="btn-group btn-group-sm" role="group">
                                       {{-- View/Draft Button --}}
                                       
 
                                       {{-- Edit Button (If status allows, typically only for Draft/Pending) --}}
-                                      @if ($certificate->status == 0)
-                                          <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning" title="সম্পাদনা">
-                                              <i class="fas fa-edit"></i>
-                                          </a>
-                                      @endif
+                                      
 
                                       {{-- Delete Button (Example using a form for DELETE method) --}}
                                       {{-- <form action="{{ route('dashboard.certificates.destroy', $certificate->id) }}" method="POST" style="display:inline;">
