@@ -132,7 +132,7 @@ Route::get('/dashboard/messages/delete/{id}', 'DashboardController@deleteMessage
 // Certificate routes are here
 Route::get('/dashboard/certificates', 'CertificateController@index')->name('dashboard.certificates.index');
 Route::get('/dashboard/certificates/{certificate_type}', 'CertificateController@getApplicationbyCType')->name('dashboard.certificates.certificate_type');
-Route::get('/dashboard/certificates/{certificate_type}', 'CertificateController@storeCertificate')->name('dashboard.certificates.store');
+Route::post('/dashboard/certificates/{certificate_type}', 'CertificateController@storeCertificate')->name('dashboard.certificates.store');
 // Certificate routes are here
 // Certificate routes are here
 // Certificate routes are here
