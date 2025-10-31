@@ -101,7 +101,7 @@
             padding-top: 15px;
         }
         .signature-line {
-            border-top: 1px dashed #666;
+            border-top: 3px dashed #666;
             width: 80%;
             margin: 0 auto;
             margin-top: 5px;
