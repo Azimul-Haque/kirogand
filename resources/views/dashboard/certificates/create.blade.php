@@ -66,7 +66,7 @@
                         <input type="hidden" name="certificate_type" value="{{ $certificate_type }}">
                         
                         <!-- Selector sends a GET request to reload the form with the new schema -->
-                        <input name="certificate_type_selector" value="$certificate_type">
+                        <input name="certificate_type_selector" value="{{ $certificate_type }}">
                         <select name="certificate_type_selector" id="certificate_type_selector" 
                                 
                                 class="form-input-field text-lg appearance-none bg-white cursor-pointer">
