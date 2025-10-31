@@ -183,6 +183,8 @@ class CertificateController extends Controller
             'heirs_data.*.remark' => ['nullable', 'string', 'max:255'],
         ]);
 
+        $certificate = Certificate::findOrFail($id);
+
         $applicantData = $request->only([
             'name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
             'village', 'ward', 'post_office', 'union'
