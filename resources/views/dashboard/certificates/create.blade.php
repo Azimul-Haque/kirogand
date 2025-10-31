@@ -21,7 +21,9 @@
     </ol>
   @endsection
     <div class="container-fluid">
-      @include('dashboard.certificates.forms.heir-certificate')
+      <div class="row">
+        @include('dashboard.certificates.forms.heir-certificate')
+      </div>
     </div>
 @endsection
 
