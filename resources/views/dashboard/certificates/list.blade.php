@@ -190,6 +190,8 @@
         </div>
         {{ $certificates->links() }}
 
+        {{ getHierarchyNamesByLevel }}
+
     </div>
 @endsection
 
