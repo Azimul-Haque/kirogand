@@ -125,7 +125,6 @@
                                     <div class="input-group mb-3">
                                         <input type="text"
                                                class="form-control"
-                                               value="{{ $localoffice->name }}"
                                                placeholder="ইংরেজি নাম (OPTIONAL)" readonly="">
                                         <div class="input-group-append">
                                             <div class="input-group-text"><span class="fas fa-user"></span></div>
@@ -141,7 +140,6 @@
                                     <div class="input-group mb-3">
                                       <input type="text"
                                              name="amount"
-                                             value="{{ $localoffice->amount }}"
                                              autocomplete="off"
                                              class="form-control"
                                              placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
