@@ -93,12 +93,47 @@
                                         <i class="fas fa-print"></i> প্রিন্ট
                                     </a>
                                 @else
-                                <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" method="POST" style="display:inline;">
+                                <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
                                     @csrf
-                                    <button type="submit" class="btn btn-success btn-sm">
-                                        <i class="fas fa-check"></i> অনুমোদন
+                                    <button type="button" class="btn btn-success no-print" onclick="return confirmSubmission(event);">
+                                        <i class="fas fa-check"></i> অনুমোদন করুন
                                     </button>
                                 </form>
+                                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+                                <script type="text/javascript">
+                                  const ToastAprv = Swal.mixin({
+                                    toast: false,
+                                    position: 'center',
+                                    showConfirmButton: true,
+                                    showCancelButton: true,
+                                    timerProgressBar: true,
+                                    didOpen: (toast) => {
+                                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                    }
+                                  })
+
+                                  function confirmSubmission(event) {
+                                      event.preventDefault(); // Prevent default form submission
+
+                                      Swal.fire({
+                                          title: 'আপনি কি নিশ্চিত?',
+                                          text: 'এই সনদটি অনুমোদন করা হবে।',
+                                          icon: 'warning',
+                                          showCancelButton: true,
+                                          confirmButtonText: 'অনুমোদন করুন',
+                                          cancelButtonText: 'ফিরে যান',
+                                          reverseButtons: true
+                                      }).then((result) => {
+                                          if (result.isConfirmed) {
+                                              // If confirmed, manually submit the form
+                                              document.getElementById('approveForm{{ $certificate->id }}').submit();
+                                          }
+                                      });
+
+                                      return false; // Prevent default submission initially
+                                  }
+                                </script>
                                 @endif
                                 
 
