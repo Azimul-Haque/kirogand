@@ -476,6 +476,17 @@ class DashboardController extends Controller
                     ->withLocaloffices($localoffices);
     }
 
+    public function getLocalOfficesSearch()
+    {
+        // ONLY ADMIN
+        $localofficescount = LocalOffice::count();
+        $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
+
+        return view('dashboard.localoffices.index')
+                    ->withLocalofficescount($localofficescount)
+                    ->withLocaloffices($localoffices);
+    }
+
     public function updateLocalOffices(Request $request, $id)
     {
         $this->validate($request, [
