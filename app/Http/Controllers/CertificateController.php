@@ -72,6 +72,31 @@ class CertificateController extends Controller
         return view('dashboard.certificates.create')->with('certificate_type', $certificate_type);
     }
 
+    public function create(Request $request)
+        {
+            $selectedType = $request->get('certificate_type');
+            $schema = null;
+            $availableSchemas = config('certificate_schemas', []); // Load all schemas from config
+
+            if ($selectedType && array_key_exists($selectedType, $availableSchemas)) {
+                // Load the schema if a valid type is selected
+                $schema = $availableSchemas[$selectedType];
+            } else {
+                // If no type is selected, select the first one by default for the initial load
+                $firstType = key($availableSchemas);
+                if ($firstType) {
+                    $selectedType = $firstType;
+                    $schema = $availableSchemas[$firstType];
+                }
+            }
+
+            return view('dashboard.certificate_form', [
+                'selectedType' => $selectedType,
+                'schema' => $schema,
+                'allSchemas' => $availableSchemas,
+            ]);
+        }
+
     public function storeCertificate(Request $requests, $certificate_type)
     {
         if(Auth::user()->role == 'manager') {
