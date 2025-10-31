@@ -90,7 +90,7 @@
         }
 
         .signature-block {
-            margin-top: 50px;
+            margin-top: 20px;
             width: 100%;
         }
         .signature-block td {
