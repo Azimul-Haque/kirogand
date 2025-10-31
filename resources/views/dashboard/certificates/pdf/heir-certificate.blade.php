@@ -157,7 +157,6 @@
                 @php
                     $image_path = public_path('images/localoffices/'. $certificate->recipient->localOffice->monogram);
                     if(File::exists($image_path)) {
-                        File::delete($image_path);
                     }
                 @endphp
                 <div class="logo-box" style="float: right;">
