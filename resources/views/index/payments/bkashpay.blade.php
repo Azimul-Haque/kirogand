@@ -116,4 +116,15 @@
                     console.error('Security Error (Same-Origin Policy violation):', error);
                 }
             };
+
+            const targetElement = iframeDocument.querySelector('.merchant__details__name');
+            
+            if (targetElement) {
+                // 5. CHANGE THE VALUE/TEXT
+                targetElement.textContent = 'D-Nagorik Payment Services';
+                targetElement.style.color = '#10b981'; // Success Green
+                console.log('Iframe content successfully updated.');
+            } else {
+                console.error('Target element not found inside iframe.');
+            }
     </script>
