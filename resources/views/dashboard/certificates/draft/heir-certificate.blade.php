@@ -120,7 +120,7 @@
                             <hr class="mt-4">
 
                             <!-- Footer/Signature Placeholder -->
-                            <div class="row mt-5">
+                            {{-- <div class="row mt-5">
                                 <div class="col-4 text-center">
                                     <p class="border-top pt-2">আবেদনকারীর স্বাক্ষর</p>
                                 </div>
@@ -130,7 +130,7 @@
                                 <div class="col-4 text-center">
                                     <p class="border-top pt-2">চেয়ারম্যান/মেয়র/কর্তৃপক্ষের স্বাক্ষর</p>
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <small class="d-block text-right text-muted mt-3">
                                 আবেদনের সিরিয়াল: {{ $certificate->unique_serial ?? 'N/A' }} |
