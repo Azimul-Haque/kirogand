@@ -106,7 +106,7 @@
             // Extract the applicant data for easier access (assuming it's nested)
             $applicant = $certificate['applicant'] ?? [
                 'name' => 'রফিক মিয়া', 'father' => 'করিম মিয়া', 'mother' => 'রহিমা বেগম',
-                'village' => 'শংকরপুর', 'ward' => bangla(08), 'paurashava' => 'কালিকাকা-০৩৮০',
+                'village' => 'শংকরপুর', 'ward' => bangla(7), 'paurashava' => 'কালিকাকা-০৩৮০',
                 'union' => 'ইপ্রোত্তয়ন', 'upazila' => 'নাগরপুর', 'district' => 'টাঙ্গাইল',
             ];
             // Placeholder data for Union information (if not in $certificate)
