@@ -547,13 +547,8 @@ class DashboardController extends Controller
     public function addLocalOfficePayment (Request $request, $id)
     {
         $this->validate($request, [
-            'amount'           => 'required|string|max:255',
-            'name'              => 'nullable|string|max:255',
-            'mobile'            => 'required|string|digits:11',
-            'email'             => 'required|email|max:255',
-            'office_type'       => 'required|in:up,poura',
+            'amount'            => 'required|string|max:255',
             'packageexpirydate' => 'nullable|date',
-            'monogram'          => 'sometimes|image|max:300',
         ]);
 
         $localoffice                    = LocalOffice::findOrFail($id);
