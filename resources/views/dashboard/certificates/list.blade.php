@@ -225,7 +225,7 @@
           }
       }
       @if($justapproved)
-        pulsePrintButton(serial);
+        pulsePrintButton({{$justapproved->id}});
       @endif
     </script>
 @endsection
