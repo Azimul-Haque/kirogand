@@ -74,6 +74,7 @@ use Illuminate\Support\Carbon;
 
   function getgovlevels() {
       $auth = Auth::user()->authorities->first();
+      dd($auth);
       $hierarchyNames = $auth->getHierarchyNamesByLevel();
       return $hierarchyNames;
   }
