@@ -279,7 +279,7 @@ class CertificateController extends Controller
     public function showCertificateQr()
     {
         // 1. Define the data you want to encode (e.g., the verification link)
-        $dataToEncode = "https://eprottoyon.com/verify/0455827";
+        $dataToEncode = url('/verify');
 
         // 2. Generate the QR code as an SVG string.
         // We set the size (200px) and a color (4, 137, 102 - a nice green).
