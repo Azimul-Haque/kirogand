@@ -162,7 +162,7 @@ class CertificateController extends Controller
         return view('dashboard.certificates.edit')->withCertificate($certificate);
     }
 
-    public function storeCertificate(Request $request, $certificate_type)
+    public function updateCertificate(Request $request, $certificate_type)
     {
         // dd($request->all());
         $validatedData = $request->validate([
