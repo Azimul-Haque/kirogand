@@ -74,7 +74,6 @@ class CertificateController extends Controller
     {
         dd($requests->all());
         $validatedData = $request->validate([
-        'certificate_type' => ['required', 'string', 'in:heir-certificate'],
         'name' => ['required', 'string', 'max:255'],
         'father' => ['required', 'string', 'max:255'],
         'mother' => ['required', 'string', 'max:255'],
