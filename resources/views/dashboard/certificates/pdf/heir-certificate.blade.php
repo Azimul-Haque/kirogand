@@ -104,6 +104,7 @@
 
         .signature-block {
             margin-top: 50px;
+            height: 100%;
             width: 100%;
         }
         .signature-block td {
