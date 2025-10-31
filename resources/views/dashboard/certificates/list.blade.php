@@ -192,8 +192,9 @@
         @php
             $auth = Auth::user()->authorities->first();
             $authorityModelInstance = $auth->authority;
+            $resolver = new AuthorityResolver($authorityModelInstance);
 
-            
+
             $authorityObject = (new \ReflectionClass($auth->authority_type))->getShortName();
             // 2. Instantiate the Resolver and call the method
             // Pass the starting object (e.g., the Union model instance) to the resolver.
