@@ -194,4 +194,35 @@
         }
       });
     </script>
+
+    <script type="text/javascript">
+      function pulsePrintButton(serial) {
+          // Convert the serial (e.g., C-2024-00301) into the ID format (C202400301)
+          const cleanedSerial = serial.replace(/-/g, ''); 
+          const buttonId = `#print-btn-${cleanedSerial}`;
+          const $button = $(buttonId);
+          
+          console.log(`Attempting to pulse button with ID: ${buttonId}`);
+
+          if ($button.length) {
+              // Ensure the animation is removed and reapplied to trigger a fresh pulse
+              $button.removeClass('btn-pulse');
+              
+              // Re-apply the class after a slight delay to ensure the animation restarts
+              setTimeout(() => {
+                  $button.addClass('btn-pulse');
+                  console.log('Pulse class applied.');
+                  
+                  // OPTIONAL: Remove the pulse after 5 cycles (7.5 seconds) to stop the flashing
+                  setTimeout(() => {
+                      $button.removeClass('btn-pulse');
+                      console.log('Pulse animation stopped after 7.5 seconds.');
+                  }, 7500); 
+                  
+              }, 50); // Small delay to force re-render
+          } else {
+              console.error(`Error: Print button element not found with selector: ${buttonId}`);
+          }
+      }
+    </script>
 @endsection
