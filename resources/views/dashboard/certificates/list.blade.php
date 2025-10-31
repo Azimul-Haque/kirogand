@@ -50,7 +50,9 @@
     <div class="card">
           <div class="card-header">
             <h3 class="card-title">সনদ তালিকা</h3>
-
+            @if(isset($justapproved))
+              {{ $justapproved->id }}
+            @endif
             <div class="card-tools">
               {{-- <button type="button" class="btn btn-success btn-sm"  data-toggle="modal" data-target="#addPackageModal" title="" rel="tooltip" data-original-title="সনদ যোগ করুন">
                 <i class="fas fa-clipboard-check"></i> নতুন সনদ
