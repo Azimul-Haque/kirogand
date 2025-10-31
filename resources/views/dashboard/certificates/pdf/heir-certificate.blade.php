@@ -123,7 +123,7 @@
         $heirs = $payload['heirs'] ?? [];
 
         //get levels data
-        $lglevels = [];
+        $lglevels = array;
         if(count(getgovlevels() > 0) {
             $lglevels = getgovlevels();
         }
