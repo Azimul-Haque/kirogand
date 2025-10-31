@@ -154,7 +154,6 @@
                 <span style="font-size: 13px;">ফোন নম্বর : {{ $union_info['phone'] }}</span>
             </td>
             <td style="width: 30%; text-align: right;">
-                {{-- e-Prottayon Logo Right --}}
                 <div class="logo-box" style="float: right;">
                      <img src="{{ public_path('images/eprottyon-logo.png') }}" style="height: 100px; width: auto; object-fit: contain;">
                 </div>
