@@ -92,7 +92,7 @@
       <!-- BS5 'g-4' (gutter) is removed, relying on default BS4 column padding and custom CSS margin-bottom on service boxes -->
       <div class="row" id="serviceGrid">
 
-        ওয়ারিশ, নাগরিকত্ব, স্থায়ী, একই ব্যক্তি, চারিত্রিক, অবিবাহিত, প্রত্যয়ন
+        {{-- , নাগরিকত্ব, স্থায়ী, একই ব্যক্তি, চারিত্রিক, অবিবাহিত, প্রত্যয়ন --}}
 
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
             <a href="/service/heir-certificate" class="text-decoration-none text-dark d-block">
