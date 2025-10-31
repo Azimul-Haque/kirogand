@@ -136,7 +136,6 @@ Route::get('/dashboard/certificates/draft/{unique_serial}', 'CertificateControll
 Route::get('/dashboard/certificates/edit/{unique_serial}', 'CertificateController@editCertificate')->name('dashboard.certificates.edit');
 Route::post('/dashboard/certificates/store/{certificate_type}', 'CertificateController@storeCertificate')->name('dashboard.certificates.store');
 
-
 Route::get('/dashboard/certificates-list', 'CertificateController@index')->name('dashboard.certificates.index');
 // Certificate routes are here
 // Certificate routes are here
