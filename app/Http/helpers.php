@@ -76,6 +76,7 @@ use App\Services\AuthorityResolver;
   function getgovlevels() {
       $auth = Auth::user()->authorities->first();
       $authorityModelInstance = $auth->authority;
+      dd($authorityModelInstance);
       $resolver = new AuthorityResolver($authorityModelInstance);
       $hierarchyNames = $resolver->getHierarchyNamesByLevel();
 
