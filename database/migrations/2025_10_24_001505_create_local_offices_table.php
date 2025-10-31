@@ -15,7 +15,7 @@ class CreateLocalOfficesTable extends Migration
     {
         Schema::create('local_offices', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('package_expiry_date')->nullable()->(6);
+            $table->timestamp('package_expiry_date', 6)->nullable();
             // Office Contact & Visual Information
             $table->string('email')->nullable()->unique();
             $table->string('mobile', 20)->nullable();
@@ -25,8 +25,6 @@ class CreateLocalOfficesTable extends Migration
             $table->string('name_bn', 191); // Office's full name in Bengali
             $table->string('name', 191)->nullable();
             $table->string('office_type', 50); // E.g., 'Union Parishad', 'Pourasava', 'District Council'
-            // $table->integer('registration_fee', 10);
-            // $table->integer('monthly_rate', 10);
             $table->boolean('is_active')->default(true);
             
             $table->timestamps();

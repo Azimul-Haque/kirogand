@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'IndexController@index')->name('index.index');
 Route::get('/services', 'IndexController@getServices')->name('index.services');
-Route::get('/verify-certificate', 'IndexController@getVerifyCertificate')->name('index.verify-certificate');
-Route::get('/application-status', 'IndexController@getApplicationStatus')->name('index.application-status');
+Route::get('/verify', 'IndexController@getVerifyCertificate')->name('index.verify-certificate');
+Route::get('/status', 'IndexController@getApplicationStatus')->name('index.application-status');
 Route::get('/notices', 'IndexController@getNotices')->name('index.notices');
 Route::get('/contact', 'IndexController@getContact')->name('index.contact');
 Route::get('/captcha', 'IndexController@generateCaptcha')->name('captcha.image');
