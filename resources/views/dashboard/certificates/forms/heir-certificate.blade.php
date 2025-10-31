@@ -1,5 +1,5 @@
 <!-- Card structure common in AdminLTE 3 -->
-<div class="card card-primary card-outline col-md-10 ">
+<div class="card card-primary card-outline col-md-10 offset-md-1">
     <div class="card-header">
         <h3 class="card-title">
             <i class="fas fa-file-alt"></i> ওয়ারিশান সনদপত্র ফরম
