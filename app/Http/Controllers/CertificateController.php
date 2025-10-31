@@ -29,6 +29,7 @@ use OneSignal;
 use Purifier;
 use Cache;
 use PDF;
+use QrCode;;
 
 class CertificateController extends Controller
 {
