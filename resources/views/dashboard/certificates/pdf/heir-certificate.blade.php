@@ -134,7 +134,7 @@
             'district' => $lglevels['District'] ?? 'তথ্য নেই',
             'chairman_name' => $certificate->localOffice->name_bn,
             'email' => $certificate->localOffice->email ?? '',
-            'phone' => $certificate->localOffice->name_bn ?? '',
+            'phone' => $certificate->localOffice->mobile ?? '',
         ];
 
         // Conditional Draft Watermark
