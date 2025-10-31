@@ -23,7 +23,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-10 offset-md-1">
-          @if($certificate_type == 'heir-certificate')
+          @if($certificate->certificate_type == 'heir-certificate')
             @include('dashboard.certificates.draft.heir-certificate')
           @endif
         </div>
