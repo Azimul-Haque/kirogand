@@ -93,6 +93,15 @@
       <div class="row" id="serviceGrid">
 
         ওয়ারিশ, নাগরিকত্ব, স্থায়ী, একই ব্যক্তি, চারিত্রিক, অবিবাহিত, প্রত্যয়ন
+
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
+            <a href="/service/heir-certificate" class="text-decoration-none text-dark d-block">
+                <div class="service-box">
+                    <div class="icon-circle" style="background-color: #6f42c1;"><i class="fas fa-handshake"></i></div>
+                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ওয়ারিশ সনদ</h3>
+                </div>
+            </a>
+        </div>
           
           <!-- Service 1: জন্ম নিবন্ধন সনদ -->
           <!-- BS4 equivalent classes for the grid are used -->
@@ -137,14 +146,7 @@
           </div>
           
           <!-- Service 5: ওয়ারিশ সনদ -->
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-              <a href="/service/heir-certificate" class="text-decoration-none text-dark d-block">
-                  <div class="service-box">
-                      <div class="icon-circle" style="background-color: #6f42c1;"><i class="fas fa-handshake"></i></div>
-                      <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ওয়ারিশ সনদ</h3>
-                  </div>
-              </a>
-          </div>
+          
           
           <!-- Service 6: ঠিকানার প্রত্যয়ন -->
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="6">
