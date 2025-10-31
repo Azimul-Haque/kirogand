@@ -171,7 +171,7 @@ class CertificateController extends Controller
             }
         }
 
-        $certificates = Certificate::where('local_office_id', Auth::user()->local_office_id)->first(); // this is important
+        $certificates = Certificate::where('local_office_id', Auth::user()->local_office_id)->first();
 
         return view('dashboard.certificates.list')->withCertificates($certificates);
     }
