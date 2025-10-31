@@ -264,7 +264,7 @@
                 <tr>
                     <td style="width: 20%;">
                         {{-- Placeholder for QR Code image --}}
-                        <img src="{{ public_path('images/qrcode-placeholder.png') }}" style="width: 100px; height: 100px;">
+                        <img src="{{ public_path('images/govt-logo.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
                     </td>
                     <td style="width: 80%; padding-left: 20px;">
                         <span style="font-weight: bold; font-size: 14px;">
