@@ -76,7 +76,7 @@
             <table class="table table-bordered table-striped table-sm" id="heirs-table">
                 <thead class="bg-success">
                     <tr>
-                        <th style="width: 1%;">ক্রমিক নং</th>
+                        {{-- <th style="width: 1%;">ক্রমিক নং</th> --}}
                         <th>নাম</th>
                         <th>সম্পর্ক</th>
                         <th>জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন</th>
