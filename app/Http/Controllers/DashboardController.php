@@ -479,7 +479,8 @@ class DashboardController extends Controller
     public function getLocalOfficesSearch($search)
     {
         // ONLY ADMIN
-        $localofficescount = LocalOffice::where('name', 'LIKE', "%$search%")
+        $localofficescount = LocalOffice::where('name_bn', 'LIKE', "%$search%")
+                          ->orWhere('name', 'LIKE', "%$search%")
                           ->orWhere('email', 'LIKE', "%$search%")
                           ->orWhere('mobile', 'LIKE', "%$search%")
                           ->orWhere('nid', 'LIKE', "%$search%")
