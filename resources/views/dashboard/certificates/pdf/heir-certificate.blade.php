@@ -86,7 +86,7 @@
         }
         .beneficiary-table th {
             background-color: #E5E7EB;
-            color: white;
+{{--             color: white; --}}
             font-weight: normal;
         }
 
