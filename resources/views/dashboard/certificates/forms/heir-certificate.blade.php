@@ -39,8 +39,8 @@
                     @error('id_value') <span class="text-danger d-block mt-1">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="name">মোবাইল নং <span class="text-danger">*</span></label>
-                    <input type="number" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" placeholder="১১ ডিজিটের মোবাইল নাম্বার" required>
+                    <label for="mobile">মোবাইল নং <span class="text-danger">*</span></label>
+                    <input type="number" class="form-control @error('mobile') is-invalid @enderror" id="mobile" name="mobile" value="{{ old('mobile') }}" placeholder="১১ ডিজিটের মোবাইল নাম্বার" required>
                     @error('name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
