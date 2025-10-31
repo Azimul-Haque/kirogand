@@ -69,7 +69,7 @@ class CertificateController extends Controller
         // $localofficescount = LocalOffice::count();
         // $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
 
-        return view('dashboard.certificates.create');
+        return view('dashboard.certificates.create')->with($certificate_type);
     }
 
     public function storeCertificate(Request $requests, $certificate_type)
