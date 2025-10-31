@@ -228,7 +228,7 @@ class CertificateController extends Controller
         return redirect()->route('dashboard.certificates.list')->withJustapproved($certificate);
     }
 
-    public function getCertificateList()
+    public function getCertificateList($certificate)
     {
         if(Auth::user()->role == 'manager') {
             if (Auth::user()->is_active === 0) {
