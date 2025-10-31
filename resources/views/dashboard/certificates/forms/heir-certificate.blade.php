@@ -5,11 +5,6 @@
             <i class="fas fa-file-alt"></i> ওয়ারিশান সনদপত্র ফরম
         </h3>
     </div>
-    
-    <!--
-        গুরুত্বপূর্ণ: ফর্মের 'name' অ্যাট্রিবিউটগুলো (যেমন name, father, heirs_data[...][name]) 
-        পিএইচপি/লার্ভেল ব্যাকএন্ডের জন্য ইংরেজিতে রাখা হয়েছে।
-    -->
     <form action="{{ route('dashboard.certificates.store', $certificate_type) }}" method="POST">
         @csrf
         
