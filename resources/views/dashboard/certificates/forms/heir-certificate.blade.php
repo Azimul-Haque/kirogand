@@ -40,7 +40,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="name">মোবাইল নং <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" placeholder="আবেদনকারীর নাম" required>
+                    <input type="number" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" placeholder="আবেদনকারীর নাম" required>
                     @error('name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
