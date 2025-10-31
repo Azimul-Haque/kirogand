@@ -146,10 +146,10 @@
 
             </div>
             <div class="card-footer text-right">
-                <button type="button" class="btn btn-info" onclick="window.print()">
+                <button type="button" class="btn btn-info no-print" onclick="window.print()">
                     <i class="fas fa-print"></i> খসড়া প্রিন্ট
                 </button>
-                <button type="button" class="btn btn-warning" onclick="window.print()">
+                <button type="button" class="btn btn-warning no-print" onclick="window.print()">
                     <i class="fas fa-print"></i> সংশোধন করুন
                 </button>
                 <button type="button" class="btn btn-success no-print" onclick="window.print()">
