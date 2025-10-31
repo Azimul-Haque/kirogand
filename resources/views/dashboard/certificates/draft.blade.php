@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title') ড্যাশবোর্ড | সনদের আবেদন @endsection
+@section('title') ড্যাশবোর্ড | সনদের ড্রাফট @endsection
 
 @section('third_party_stylesheets')
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css"> --}}
@@ -12,11 +12,11 @@
 @endsection
 
 @section('content')
-  @section('page-header') সনদের আবেদন {{ $certificate_type }} @endsection
+  @section('page-header') সনদের ড্রাফট {{ $certificate_type }} @endsection
   @section('page-header-right')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
-        <li class="breadcrumb-item active"><a href="{{ route('dashboard.certificates.index') }}">সনদের আবেদন</a></li>
+        <li class="breadcrumb-item active"><a href="{{ route('dashboard.certificates.index') }}">সনদের ড্রাফট</a></li>
         <li class="breadcrumb-item active">{{ $certificate_type }}</li>
     </ol>
   @endsection
