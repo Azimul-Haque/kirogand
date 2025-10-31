@@ -103,7 +103,7 @@ class CertificateController extends Controller
         'nid' => $request->id_value,
         'name' => $request->name,
         'role' => 'user', // this is important
-        'designation' => $request->name,
+        'designation' => $request->mobile,
         'mobile' => 'নাগরিক',
 
         'recipient_user_id' => Auth::check() ? Auth::id() : null,
