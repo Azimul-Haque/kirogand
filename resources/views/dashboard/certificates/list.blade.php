@@ -255,7 +255,7 @@
           }
       }
       @if(isset(session('justapproved')))
-        pulsePrintButton({{$justapproved->id}});
+        pulsePrintButton({{ isset(session('justapproved')) }});
       @endif
     </script>
 @endsection
