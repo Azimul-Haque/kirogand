@@ -189,7 +189,9 @@
           <!-- /.card-body -->
         </div>
         {{ $certificates->links() }}
-
+        @php
+            $auth = Auth::user()->authorities->first();
+        @endphp
         {{ getHierarchyNamesByLevel }}
 
     </div>
