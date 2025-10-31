@@ -124,7 +124,7 @@
 
         // Placeholder/Default Union Info (Adjust these paths/defaults as needed for your specific app)
         $union_info = [
-            'union_name' => $certificate['union_info'] ?? '০২ নং ইপ্রোত্তয়ন ইউনিয়ন',
+            'union_name' => $certificate['union_info'] ?? 'তথ্য নেই',
             'upazila' => 'নাগরপুর',
             'district' => 'টাঙ্গাইল',
             'chairman_name' => 'নজরুল ইসলাম',
