@@ -268,7 +268,7 @@
                     </td>
                     <td style="width: 80%; padding-left: 20px;">
                         <span style="font-weight: bold; font-size: 14px;">
-                            সনদটি যাচাই করতে আপনার মোবাইলে থাকা QR CODE অ্যাপ দিয়ে স্ক্যান করুন<br/>
+                            সনদটি যাচাই করতে QR CODE অ্যাপ দিয়ে স্ক্যান করুন<br/>
                             অথবা ভিজিট করুন eprottyon.com
                         </span>
                         <p style="font-size: 10px; margin-top: 10px; line-height: 1.5;">
