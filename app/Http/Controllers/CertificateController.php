@@ -72,7 +72,7 @@ class CertificateController extends Controller
         return view('dashboard.certificates.create');
     }
 
-    public function storeCertificate($certificate_type)
+    public function storeCertificate(Request $requests, $certificate_type)
     {
         if(Auth::user()->role == 'manager') {
             if (Auth::user()->is_active === 0) {
