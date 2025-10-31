@@ -22,6 +22,7 @@ class Certificate extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'local_office_id',
         'certificate_type',
         'status',
         'recipient_user_id',
