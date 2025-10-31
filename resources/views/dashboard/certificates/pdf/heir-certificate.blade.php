@@ -133,8 +133,8 @@
             'upazila' => $lglevels['Upazila'] ?? 'তথ্য নেই',
             'district' => $lglevels['District'] ?? 'তথ্য নেই',
             'chairman_name' => $certificate->localOffice->name_bn,
-            'email' => $certificate->localOffice->name_bn ?? '',
-            'phone' => '০১৭০০০০০০০০',
+            'email' => $certificate->localOffice->email ?? '',
+            'phone' => $certificate->localOffice->name_bn ?? '',
         ];
 
         // Conditional Draft Watermark
