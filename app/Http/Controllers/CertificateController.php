@@ -28,7 +28,7 @@ use OneSignal;
 use Purifier;
 use Cache;
 
-class DashboardController extends Controller
+class CertificateController extends Controller
 {
     /**
      * Create a new controller instance.
