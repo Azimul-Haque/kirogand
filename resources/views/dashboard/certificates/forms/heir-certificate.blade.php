@@ -64,7 +64,7 @@
                     @error('village') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="ward">ওয়ার্ড নং <span class="text-danger">*</span></label>
+                    <label for="ward">ওয়ার্ড <span class="text-danger">*</span></label>
                     <input type="number" class="form-control @error('ward') is-invalid @enderror" id="ward" name="ward" value="{{ old('ward') }}" required>
                     @error('ward') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
