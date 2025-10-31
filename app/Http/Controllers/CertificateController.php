@@ -100,10 +100,10 @@ class CertificateController extends Controller
     $newuser = User::create([
         'local_office_id ' => Auth::user()->local_office_id,
         'is_active ' => 0,
-        'nid ' => $request->id_value,
-        'name ' => $request->name,
-        'role ' => 'user', // this is important
-        'designation ' => 'নাগরিক',
+        'nid' => $request->id_value,
+        'name' => $request->name,
+        'role' => 'user', // this is important
+        'designation' => 'নাগরিক',
         'mobile' => 'নাগরিক',
 
         'recipient_user_id' => Auth::check() ? Auth::id() : null,
