@@ -18,8 +18,7 @@
 
         <div class="card-body">
             
-            <!-- ১. আবেদনকারী/মৃত ব্যক্তির আবশ্যিক বিবরণ -->
-            <h4 class="mb-4 text-success">আবেদনকারী/মৃত ব্যক্তির আবশ্যিক বিবরণ</h4>
+            {{-- <h4 class="mb-4 text-success">আবেদনকারী/মৃত ব্যক্তির আবশ্যিক বিবরণ</h4> --}}
             <div class="row">
                 <!-- নাম -->
                 <div class="form-group col-md-6">
