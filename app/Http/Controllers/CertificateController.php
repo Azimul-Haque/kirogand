@@ -72,8 +72,8 @@ class CertificateController extends Controller
 
     public function storeCertificate(Request $requests, $certificate_type)
     {
+        dd($requests->all());
         
-
         return view('dashboard.certificates.create');
     }
 
