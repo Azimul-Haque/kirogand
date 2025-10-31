@@ -272,7 +272,7 @@
                         <img src="{{ public_path('images/govt-logo.png') }}" style="height: 80px; width: auto; display: block; margin: 0 auto;">
                     </td>
                     <td style="width: 85%; padding-left: 20px;">
-                        <span style="font-weight: bold; font-size: 13px;">
+                        <span style=" font-size: 13px;">
                             সনদটি যাচাই করতে QR CODE টি স্ক্যান করুন<br/>
                             অথবা <span style="font-family: Calibri;">www.dnagorik.com</span> ভিজিট করুন এই আইডিটি যাচাই করুন: <span style="font-family: Calibri;">{{ $certificate->unique_serial ?? '--' }}</span>
                         </span>
