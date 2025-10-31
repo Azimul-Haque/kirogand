@@ -237,7 +237,8 @@ class CertificateController extends Controller
             }
         }
 
-        $certificate = Certificate::where('unique_serial', $unique_serial)->first()
+        $certificate = Certificate::where('unique_serial', $unique_serial)->first();
+        
         $pdf = PDF::loadView('index.pdf.examsolvepdf', ['exam' => $exam]);
         $fileName = 'Single-Exam-Solve-Sheet-' . $exam->id . '.pdf';
         return $pdf->stream($fileName); // download/stream
