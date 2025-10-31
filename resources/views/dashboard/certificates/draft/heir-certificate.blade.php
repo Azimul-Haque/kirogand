@@ -105,7 +105,7 @@
                                                 <td>{{ $heir['name'] ?? 'N/A' }}</td>
                                                 <td>{{ $heir['relation'] ?? 'N/A' }}</td>
                                                 <td>{{ $heir['dob'] ?? 'N/A' }}</td>
-                                                <td>{{ $heir['id_value'] ?? 'N/A' }} ({{ $heir['id_type'] ?? 'N/A' }})</td>
+                                                <td>{{ $heir['id_data'] ?? 'N/A' }} ({{ $heir['id_type'] ?? 'N/A' }})</td>
                                                 <td>{{ $heir['remark'] ?? '-' }}</td>
                                             </tr>
                                         @empty
