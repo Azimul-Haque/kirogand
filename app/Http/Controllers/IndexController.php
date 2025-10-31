@@ -75,6 +75,11 @@ class IndexController extends Controller
         return view('index.verifycertificate');
     }
 
+    public function verifyCertificate()
+    {
+        return view('index.verifycertificate');
+    }
+
     public function getApplicationStatus()
     {
         return view('index.applicationstatus');
