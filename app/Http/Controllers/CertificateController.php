@@ -242,10 +242,7 @@ class CertificateController extends Controller
         $certificate = Certificate::where('unique_serial', $unique_serial)->first();
 
         $dataToEncode = url("/verify/{$certificate->unique_serial}");
-        $qrCodeSvg = QrCode::size(200)
-                            ->color(4, 137, 102)
-                            ->generate($dataToEncode);
-                            bse64_encode(QrCode::format('png')->size(200)->generate($dataToEncode);
+        $qrCodeSvg = bse64_encode(QrCode::format('png')->size(200)->generate($dataToEncode));
 
         $pdf = PDF::loadView('dashboard.certificates.pdf.heir-certificate', ['certificate' => $certificate, 'qrCodeSvg' => $qrCodeSvg]);
         $fileName = 'Cert-' . $certificate->unique_serial . '.pdf';
