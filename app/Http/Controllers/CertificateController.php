@@ -157,7 +157,7 @@ class CertificateController extends Controller
             }
         }
 
-        $certificate
+        $certificate = Certificate::findOrfail()
 
         return view('dashboard.certificates.create')->with('certificate_type', $certificate_type);
     }
