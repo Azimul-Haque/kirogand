@@ -201,7 +201,7 @@
 
             
         @endphp
-        {{ getHierarchyNamesByLevel }}
+        {{ $hierarchyNames }}
 
     </div>
 @endsection
