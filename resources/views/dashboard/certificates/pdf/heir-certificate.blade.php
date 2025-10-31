@@ -147,34 +147,34 @@
 
     {{-- HEADER CONTENT - Modified to fit the certificate image --}}
     <htmlpageheader name="page-header">
-        
+        <table class="header-table">
+            <tr>
+                <td style="width: 30%;">
+                    <img src="{{ public_path('images/govt-logo.png') }}" style="height: 100px; width: auto; display: block; margin: 0 auto;">
+                </td>
+                <td style="width: 40%; text-align: center;">
+                    <span style="font-size: 16px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span><br/>
+                    <span style="font-size: 18px; font-weight: bold; color: #15803D;">{{ $union_info['union_name'] }}</span><br/>
+                    <span style="font-size: 14px;">উপজেলা: {{ $union_info['upazila'] }}, জেলা: {{ $union_info['district'] }}।</span><br/>
+                    {{-- <span style="font-size: 14px;">চেয়ারম্যান: মো: {{ $union_info['chairman_name'] }}</span><br/> --}}
+                    <span style="font-size: 14px;">ইমেইল: {{ $union_info['email'] }}</span><br/>
+                    <span style="font-size: 14px;">ফোন নম্বর: {{ $union_info['phone'] }}</span>
+                </td>
+                <td style="width: 30%; text-align: right;">
+                    @php
+                        $image_path = public_path('images/localoffices/'. $certificate->localOffice->monogram);
+                        if(File::exists($image_path)) {
+                            $image_url = $image_path;
+                        } else {
+                            $image_url = public_path('images/icon.png');
+                        }
+                    @endphp
+                    <img src="{{ $image_url }}" style="height: 100px; width: auto; object-fit: contain;">
+                </td>
+            </tr>
+        </table>
     </htmlpageheader>
-    <table class="header-table">
-        <tr>
-            <td style="width: 30%;">
-                <img src="{{ public_path('images/govt-logo.png') }}" style="height: 100px; width: auto; display: block; margin: 0 auto;">
-            </td>
-            <td style="width: 40%; text-align: center;">
-                <span style="font-size: 16px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span><br/>
-                <span style="font-size: 18px; font-weight: bold; color: #15803D;">{{ $union_info['union_name'] }}</span><br/>
-                <span style="font-size: 14px;">উপজেলা: {{ $union_info['upazila'] }}, জেলা: {{ $union_info['district'] }}।</span><br/>
-                {{-- <span style="font-size: 14px;">চেয়ারম্যান: মো: {{ $union_info['chairman_name'] }}</span><br/> --}}
-                <span style="font-size: 14px;">ইমেইল: {{ $union_info['email'] }}</span><br/>
-                <span style="font-size: 14px;">ফোন নম্বর: {{ $union_info['phone'] }}</span>
-            </td>
-            <td style="width: 30%; text-align: right;">
-                @php
-                    $image_path = public_path('images/localoffices/'. $certificate->localOffice->monogram);
-                    if(File::exists($image_path)) {
-                        $image_url = $image_path;
-                    } else {
-                        $image_url = public_path('images/icon.png');
-                    }
-                @endphp
-                <img src="{{ $image_url }}" style="height: 100px; width: auto; object-fit: contain;">
-            </td>
-        </tr>
-    </table>
+    
     <div style="border-top: 2px solid green; margin-top: 5px;"></div>
 
     {{-- CERTIFICATE BODY --}}
