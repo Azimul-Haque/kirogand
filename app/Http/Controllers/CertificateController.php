@@ -116,7 +116,7 @@ class CertificateController extends Controller
         'submission_timestamp' => now()->toDateTimeString(),
     ];
 
-    $uniqueSerial = now()->format('ymd'); . $newuser->id . mt_rand(100000, 999999) . 
+    $uniqueSerial = now()->format('ymd') . $newuser->id . mt_rand(100000, 999999); 
 
     $certificate = Certificate::create([
         'local_office_id' => Auth::user()->local_office_id,
