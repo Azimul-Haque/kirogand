@@ -191,7 +191,7 @@
         {{ $certificates->links() }}
         @php
             $auth = Auth::user()->authorities->first();
-            $authorityModelInstance = $authLink->authority;
+            $authorityModelInstance = $auth->authority;
 
             
             $authorityObject = (new \ReflectionClass($auth->authority_type))->getShortName();
