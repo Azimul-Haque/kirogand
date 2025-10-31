@@ -60,7 +60,7 @@ class UserAuthority extends Model
         // Traverse upwards until the Division is reached (or the current object has no parent)
         while ($current) {
             // Use the Bengali name (bn_name) if available, otherwise use the English name (name)
-            $name = $current->name_bn ?? $current->name;
+            $name = $current->bn_name ?? $current->name;
             $hierarchy[] = $name;
 
             // Check for the parent relationship based on the model class
