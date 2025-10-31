@@ -72,6 +72,13 @@ use Illuminate\Support\Carbon;
           return $text;
   }
 
+  function getgovlevels() {
+      $auth = Auth::user()->authorities->first();
+      $authorityModelInstance = $auth->authority;
+      $resolver = new AuthorityResolver($authorityModelInstance);
+      $hierarchyNames = $resolver->getHierarchyNamesByLevel();
+  }
+
   function local_currency($num) {
     $explrestunits = "" ;
     if(strlen($num)>3) {
