@@ -15,13 +15,13 @@
             {{-- <h4 class="mb-4 text-success">আবেদনকারী/মৃত ব্যক্তির আবশ্যিক বিবরণ</h4> --}}
             <div class="row">
                 <!-- নাম -->
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="name">নাম (আবেদনকারী) <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" placeholder="আবেদনকারীর নাম" required>
                     @error('name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <!-- জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন (Updated Field) -->
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="id_type">জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন নং <span class="text-danger">*</span></label>
                     <div class="input-group">
                         <!-- Select for Type: name="id_type" -->
@@ -37,6 +37,11 @@
                     <!-- Display combined error messages if needed -->
                     @error('id_type') <span class="text-danger d-block mt-1">{{ $message }}</span> @enderror
                     @error('id_value') <span class="text-danger d-block mt-1">{{ $message }}</span> @enderror
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="name">নাম (আবেদনকারী) <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" placeholder="আবেদনকারীর নাম" required>
+                    @error('name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
 
