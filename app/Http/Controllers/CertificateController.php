@@ -106,7 +106,7 @@ class CertificateController extends Controller
         'name' => $request->name,
         'role' => 'user', // this is important
         'designation' => 'নাগরিক',
-        'mobile' => $request->mobile,
+        'mobile' => mt_rand(100000, 999999),
         'password' => Hash::make('123456'),
     ]);
 
