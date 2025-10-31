@@ -89,7 +89,7 @@
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
                         <div class="modal-header bg-warning">
-                          <h5 class="modal-title" id="editLocalOfficeModalLabel">এই কার্যালয়ের পেমেন্ট এড করুন</h5>
+                          <h5 class="modal-title" id="editLocalOfficeModalLabel"><b>ম্যানুয়ালি</b> পেমেন্ট এড করুন</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
@@ -117,7 +117,7 @@
                                                value="{{ $localoffice->name_bn }}"
                                                placeholder="নাম" disabled>
                                         <div class="input-group-append">
-                                            <div class="input-group-text"><span class="fas fa-user"></span></div>
+                                            <div class="input-group-text"><span class="fas fa-landmark"></span></div>
                                         </div>
                                     </div>
                                   </div>
@@ -127,13 +127,11 @@
                                                class="form-control"
                                                placeholder="ইংরেজি নাম" disabled>
                                         <div class="input-group-append">
-                                            <div class="input-group-text"><span class="fas fa-user"></span></div>
+                                            <div class="input-group-text"><span class="fas fa-landmark"></span></div>
                                         </div>
                                     </div>
                                   </div>
                                 </div>
-
-
 
                                 <div class="row">
                                   <div class="col-md-6">
@@ -162,6 +160,12 @@
                                         </div>
                                     </div>
                                   </div>
+                                </div>
+
+                                <div class="form-check">
+                                  <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="" required>আরেকবার দেখে নিশ্চিত করুন
+                                  </label>
                                 </div>
                           </div>
                           <div class="modal-footer">
@@ -217,7 +221,7 @@
                                                value="{{ $localoffice->name_bn }}"
                                                placeholder="নাম" required>
                                         <div class="input-group-append">
-                                            <div class="input-group-text"><span class="fas fa-user"></span></div>
+                                            <div class="input-group-text"><span class="fas fa-landmark"></span></div>
                                         </div>
                                     </div>
                                   </div>
@@ -229,7 +233,7 @@
                                                value="{{ $localoffice->name }}"
                                                placeholder="ইংরেজি নাম (OPTIONAL)">
                                         <div class="input-group-append">
-                                            <div class="input-group-text"><span class="fas fa-user"></span></div>
+                                            <div class="input-group-text"><span class="fas fa-landmark"></span></div>
                                         </div>
                                     </div>
                                   </div>
