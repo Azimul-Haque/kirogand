@@ -78,6 +78,8 @@ use App\Services\AuthorityResolver;
       $authorityModelInstance = $auth->authority;
       $resolver = new AuthorityResolver($authorityModelInstance);
       $hierarchyNames = $resolver->getHierarchyNamesByLevel();
+
+      return $hierarchyNames;
   }
 
   function local_currency($num) {
