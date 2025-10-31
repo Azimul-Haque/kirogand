@@ -544,6 +544,53 @@ class DashboardController extends Controller
                          ->with('success', 'Local office details updated successfully.');
     }
 
+    public function addLocalOfficePayment (Request $request, $id)
+    {
+        $this->validate($request, [
+            'amount'           => 'required|string|max:255',
+            'name'              => 'nullable|string|max:255',
+            'mobile'            => 'required|string|digits:11',
+            'email'             => 'required|email|max:255',
+            'office_type'       => 'required|in:up,poura',
+            'packageexpirydate' => 'nullable|date',
+            'monogram'          => 'sometimes|image|max:300',
+        ]);
+
+        $localoffice                    = LocalOffice::findOrFail($id);
+        $localoffice->name_bn           = $request->name_bn;
+        $localoffice->name              = $request->name;
+        $localoffice->mobile            = $request->mobile;
+        $localoffice->email             = $request->email;
+        $localoffice->office_type       = $request->office_type;
+        if($request->packageexpirydate) {
+            $localoffice->package_expiry_date = date('Y-m-d', strtotime($request->packageexpirydate)) . ' 23:59:59';
+        } else {
+            $localoffice->package_expiry_date = Carbon::now()->format('Y-m-d') . ' 23:59:59';;
+        }
+        
+
+        $localoffice->is_active = $request->has('is_active') ? 1 : 0;
+
+        // image upload
+        if($request->hasFile('monogram')) {
+            $image_path = public_path('images/localoffices/'. $localoffice->monogram);
+            if(File::exists($image_path)) {
+                File::delete($image_path);
+            }
+            $image      = $request->file('monogram');
+            $filename   = strtolower($request->office_type) . '-monogram-' .time() . '.' . "webp";
+            $location   = public_path('images/localoffices/'. $filename);
+            // Image::make($image)->resize(600, null, function ($constraint) { $constraint->aspectRatio(); })->save($location);
+            Image::make($image)->fit(300, 300)->save($location);
+            $localoffice->monogram = $filename;
+        }
+
+        $localoffice->save();
+
+        return redirect()->back()
+                         ->with('success', 'Local office details updated successfully.');
+    }
+
     public function getApplyforCertificate()
     {
         if(Auth::user()->role == 'manager') {
