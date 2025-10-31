@@ -110,8 +110,6 @@ Route::get('/dashboard/local-offices/{search}', 'DashboardController@getLocalOff
 Route::post('/dashboard/local-offices/{id}/update/', 'DashboardController@updateLocalOffices')->name('dashboard.local-offices.update');
 Route::post('/dashboard/local-offices/{id}/add/payment', 'DashboardController@addLocalOfficePayment')->name('dashboard.local-offices.payment.add');
 
-Route::get('/dashboard/apply-for-certificate', 'DashboardController@getApplyforCertificate')->name('dashboard.apply-for-certificate');
-
 Route::get('/dashboard/profile', 'DashboardController@getProfile')->name('dashboard.profile');
 Route::post('/dashboard/profile/update/{id}/user', 'DashboardController@updateProfileUser')->name('dashboard.profile.update.user');
 Route::post('/dashboard/profile/update/{id}/localoffice', 'DashboardController@updateProfileLocalOffice')->name('dashboard.profile.update.localoffice');
@@ -132,7 +130,7 @@ Route::get('/dashboard/messages/delete/{id}', 'DashboardController@deleteMessage
 // Certificate routes are here
 // Certificate routes are here
 // Certificate routes are here
-
+Route::get('/dashboard/certificates', 'DashboardController@getApplyforCertificate')->name('dashboard.apply-for-certificate');
 // Certificate routes are here
 // Certificate routes are here
 // Certificate routes are here
