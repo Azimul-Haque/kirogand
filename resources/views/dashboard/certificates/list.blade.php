@@ -87,16 +87,18 @@
                                 <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning btn-sm" title="সম্পাদনা">
                                     <i class="fas fa-edit"></i>
                                 </a>
+
+                                @if ($certificate->status == 1)
+                                    <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-primary btn-sm" title="সম্পাদনা">
+                                        <i class="fas fa-print"></i> প্রিন্ট
+                                    </a>
+                                @else
                                 <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
                                     @csrf
                                     <button type="button" class="btn btn-success no-print" onclick="return confirmSubmission(event);">
                                         <i class="fas fa-print"></i> অনুমোদন করুন
                                     </button>
                                 </form>
-                                @if ($certificate->status == 1)
-                                    <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-primary btn-sm" title="সম্পাদনা">
-                                        <i class="fas fa-print"></i> প্রিন্ট
-                                    </a>
                                 @endif
                                 
 
