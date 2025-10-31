@@ -88,6 +88,7 @@ class CertificateController extends Controller
         'heirs_data.*.name' => ['required', 'string', 'max:255'],
         'heirs_data.*.relation' => ['required', 'string', 'max:255'],
         'heirs_data.*.dob' => ['nullable', 'date'],
+        'heirs_data.*.id_data' => ['nullable', 'date'],
         'heirs_data.*.remark' => ['nullable', 'string', 'max:255'],
         'heirs_data.*.id_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
         'heirs_data.*.id_value' => ['required', 'string', 'max:100'],
