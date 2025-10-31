@@ -198,12 +198,6 @@ class CertificateController extends Controller
             'updated_timestamp' => now()->toDateTimeString(),
         ];
 
-        $dataPayload = [
-            'applicant' => $applicantData,
-            'heirs' => array_values($request->heirs_data),
-            'submission_timestamp' => now()->toDateTimeString(),
-        ];
-
         $uniqueSerial = now()->format('ymd') . Auth::user()->local_office_id . mt_rand(100000, 999999); 
 
         $certificate = Certificate::create([
