@@ -149,6 +149,12 @@
                 <button type="button" class="btn btn-info" onclick="window.print()">
                     <i class="fas fa-print"></i> খসড়া প্রিন্ট
                 </button>
+                <button type="button" class="btn btn-info" onclick="window.print()">
+                    <i class="fas fa-print"></i> খসড়া প্রিন্ট
+                </button>
+                <button type="button" class="btn btn-info" onclick="window.print()">
+                    <i class="fas fa-print"></i> খসড়া প্রিন্ট
+                </button>
                 <!-- Add your edit/approve/reject buttons here -->
             </div>
         </div>
