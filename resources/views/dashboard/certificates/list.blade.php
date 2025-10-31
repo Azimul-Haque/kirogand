@@ -89,6 +89,11 @@
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 @endif
+                                @if ($certificate->status == 1)
+                                    <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning btn-sm" title="সম্পাদনা">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                @endif
 
                                 {{-- Delete Button (Example using a form for DELETE method) --}}
                                 {{-- <form action="{{ route('dashboard.certificates.destroy', $certificate->id) }}" method="POST" style="display:inline;">
