@@ -184,9 +184,9 @@
      */
     function updateRowNumbers() {
         const rows = document.querySelectorAll('#heirs-container .heir-row');
-        rows.forEach((row, index) => {
+        {{-- rows.forEach((row, index) => {
             row.querySelector('.row-number').textContent = index + 1;
-        });
+        }); --}}
     }
 
     // Initialize: Add one row when the page loads
