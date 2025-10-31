@@ -102,11 +102,11 @@
                                         @forelse ($heirs as $index => $heir)
                                             <tr>
                                                 <td>{{ bangla($index + 1) }}</td>
-                                                <td>{{ $heir['name'] ?? 'N/A' }}</td>
-                                                <td>{{ $heir['relation'] ?? 'N/A' }}</td>
-                                                <td>{{ $heir['dob'] ?? 'N/A' }}</td>
-                                                <td>{{ $heir['id_data'] ?? 'N/A' }}</td>
-                                                <td>{{ $heir['remark'] ?? '-' }}</td>
+                                                <td>{{ $heir['name'] ?? '--' }}</td>
+                                                <td>{{ $heir['relation'] ?? '--' }}</td>
+                                                <td>{{ $heir['dob'] ?? '--' }}</td>
+                                                <td>{{ $heir['id_data'] ?? '--' }}</td>
+                                                <td>{{ $heir['remark'] ?? '--' }}</td>
                                             </tr>
                                         @empty
                                             <tr>
