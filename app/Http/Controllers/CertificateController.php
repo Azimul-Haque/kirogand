@@ -237,9 +237,8 @@ class CertificateController extends Controller
             }
         }
 
-        $certificate = Certificate::where('unique_serial', $unique_serial)
-        $certificate->status = 1;
-        $certificate->save();
+        $certificate = Certificate::where('unique_serial', $unique_serial)->first()
+        
 
         Session::flash('success', 'সনদ অনুমোদন করা হয়েছে, প্রিন্ট করুন।');
         return redirect()->route('dashboard.certificates.list')->with('justapproved', $certificate->id);
