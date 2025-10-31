@@ -157,48 +157,45 @@
                 <form action="{{ route('dashboard.certificates.update', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
-
-                    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-                    <script type="text/javascript">
-                      const ToastAprv = Swal.mixin({
-                        toast: false,
-                        position: 'center',
-                        showConfirmButton: true,
-                        showCancelButton: true,
-                        timerProgressBar: true,
-                        didOpen: (toast) => {
-                          toast.addEventListener('mouseenter', Swal.stopTimer)
-                          toast.addEventListener('mouseleave', Swal.resumeTimer)
-                        }
-                      })
-
-                      function confirmSubmission(event) {
-                          event.preventDefault(); // Prevent default form submission
-
-                          Swal.fire({
-                              title: 'Are you sure?',
-                              text: 'You are about to submit this form.',
-                              icon: 'warning',
-                              showCancelButton: true,
-                              confirmButtonText: 'Yes, submit it!',
-                              cancelButtonText: 'No, cancel',
-                              reverseButtons: true
-                          }).then((result) => {
-                              if (result.isConfirmed) {
-                                  // If confirmed, manually submit the form
-                                  document.getElementById('myForm').submit();
-                              }
-                          });
-
-                          return false; // Prevent default submission initially
-                      }
-                    </script>
                     <button type="button" class="btn btn-success no-print" onclick="return return confirmSubmission(event);">
                         <i class="fas fa-print"></i> অনুমোদন করুন
                     </button>
-                        
-                    </form>
-                <!-- Add your edit/approve/reject buttons here -->
+                </form>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+                <script type="text/javascript">
+                  const ToastAprv = Swal.mixin({
+                    toast: false,
+                    position: 'center',
+                    showConfirmButton: true,
+                    showCancelButton: true,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                  })
+
+                  function confirmSubmission(event) {
+                      event.preventDefault(); // Prevent default form submission
+
+                      Swal.fire({
+                          title: 'Are you sure?',
+                          text: 'You are about to submit this form.',
+                          icon: 'warning',
+                          showCancelButton: true,
+                          confirmButtonText: 'Yes, submit it!',
+                          cancelButtonText: 'No, cancel',
+                          reverseButtons: true
+                      }).then((result) => {
+                          if (result.isConfirmed) {
+                              // If confirmed, manually submit the form
+                              document.getElementById('myForm').submit();
+                          }
+                      });
+
+                      return false; // Prevent default submission initially
+                  }
+                </script>
             </div>
         </div>
     </div>
