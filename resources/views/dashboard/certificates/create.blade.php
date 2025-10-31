@@ -17,10 +17,11 @@
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
         <li class="breadcrumb-item active">সনদের আবেদন</li>
+        <li class="breadcrumb-item active">{{ $certificate_type }}</li>
     </ol>
   @endsection
     <div class="container-fluid">
-      @include('dashboard.certificates.forms.heir-certificate')
+      {{-- @include('dashboard.certificates.forms.heir-certificate') --}}
     </div>
 @endsection
 
