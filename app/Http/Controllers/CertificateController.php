@@ -228,6 +228,23 @@ class CertificateController extends Controller
         return redirect()->route('dashboard.certificates.list')->with('justapproved', $certificate->id);
     }
 
+    public function printCertificate(Request $request)
+    {
+        if(Auth::user()->role == 'manager') {
+            if (Auth::user()->is_active === 0) {
+                Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
+                return redirect()->route('index.index');
+            }
+        }
+
+        $certificate = Certificate::findOrFail($request->id);
+        $certificate->status = 1;
+        $certificate->save();
+
+        Session::flash('success', 'সনদ অনুমোদন করা হয়েছে, প্রিন্ট করুন।');
+        return redirect()->route('dashboard.certificates.list')->with('justapproved', $certificate->id);
+    }
+
     public function getCertificateList()
     {
         if(Auth::user()->role == 'manager') {
