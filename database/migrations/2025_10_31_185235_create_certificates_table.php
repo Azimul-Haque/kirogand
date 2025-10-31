@@ -20,7 +20,7 @@ class CreateCertificatesTable extends Migration
             
             // Key fields for lookup and template selection
             $table->string('certificate_type', 50)->comment('e.g., birth_standard, academic_transcript, etc.');
-            $table->string('status', 2)->comment('e.g., birth_standard, academic_transcript, etc.');
+            $table->integer('status', 2)->comment('e.g., birth_standard, academic_transcript, etc.');
             $table->string('unique_serial', 100)->unique();
             
             // The JSON column that holds all variable data
