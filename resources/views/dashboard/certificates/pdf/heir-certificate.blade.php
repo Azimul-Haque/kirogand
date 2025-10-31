@@ -269,7 +269,7 @@
                     <td style="width: 80%; padding-left: 20px;">
                         <span style="font-weight: bold; font-size: 14px;">
                             সনদটি যাচাই করতে QR CODE টি স্ক্যান করুন<br/>
-                            অথবা ভিজিট করুন www.dnagorik.com 
+                            অথবা www.dnagorik.com ভিজিট করুন এই আইডিটি যাচাই করুন: 
                         </span>
                         <p style="font-size: 10px; margin-top: 10px; line-height: 1.5;">
                             বি:দ্র: তথ্য গোপন বা ভুল দিলে আবেদনকারী দায়ী থাকবেন, কর্তৃপক্ষ দায়ী নয়, সনদ বাতিলযোগ্য।
