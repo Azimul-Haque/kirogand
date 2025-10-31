@@ -73,7 +73,50 @@ class CertificateController extends Controller
     public function storeCertificate(Request $requests, $certificate_type)
     {
         dd($requests->all());
-        
+        $validatedData = $request->validate([
+        'certificate_type' => ['required', 'string', 'in:heir-certificate'],
+        'name' => ['required', 'string', 'max:255'],
+        'father' => ['required', 'string', 'max:255'],
+        'mother' => ['required', 'string', 'max:255'],
+        'nid_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
+        'nid_value' => ['required', 'string', 'max:100'],
+        'village' => ['required', 'string', 'max:255'],
+        'ward' => ['required', 'integer', 'min:1', 'max:99'],
+        'post_office' => ['required', 'string', 'max:255'],
+        'union' => ['required', 'string', 'max:255'],
+        'heirs_data' => ['required', 'array', 'min:1'],
+        'heirs_data.*.name' => ['required', 'string', 'max:255'],
+        'heirs_data.*.relation' => ['required', 'string', 'max:255'],
+        'heirs_data.*.dob' => ['required', 'date'],
+        'heirs_data.*.remark' => ['nullable', 'string', 'max:255'],
+        'heirs_data.*.nid_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
+        'heirs_data.*.nid_value' => ['required', 'string', 'max:100'],
+    ]);
+
+    $applicantData = $request->only([
+        'name', 'father', 'mother', 'nid_type', 'nid_value',
+        'village', 'ward', 'post_office', 'union'
+    ]);
+
+    $dataPayload = [
+        'applicant' => $applicantData,
+        'heirs' => array_values($request->heirs_data),
+        'submission_timestamp' => now()->toDateTimeString(),
+    ];
+
+    $uniqueSerial = 'CERT-' . Str::upper(Str::random(6)) . '-' . now()->format('Ymd');
+
+    $certificate = Certificate::create([
+        'certificate_type' => $validatedData['certificate_type'],
+        'recipient_user_id' => Auth::check() ? Auth::id() : null,
+        'status' => 1,
+        'unique_serial' => $uniqueSerial,
+        'issued_at' => now(),
+        'data_payload' => $dataPayload,
+    ]);
+
+    return redirect()->route('dashboard.index')
+                     ->with('success', 'ওয়ারিশান সনদপত্রের আবেদন সফলভাবে জমা দেওয়া হয়েছে। সিরিয়াল নং: ' . $certificate->unique_serial);
         return view('dashboard.certificates.create');
     }
 
