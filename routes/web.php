@@ -130,7 +130,7 @@ Route::get('/dashboard/messages/delete/{id}', 'DashboardController@deleteMessage
 // Certificate routes are here
 // Certificate routes are here
 // Certificate routes are here
-Route::get('/dashboard/certificates', 'CertificateController@index')->name('dashboard.apply-for-certificate');
+Route::get('/dashboard/certificates', 'CertificateController@index')->name('dashboard.certificates.index');
 // Certificate routes are here
 // Certificate routes are here
 // Certificate routes are here
