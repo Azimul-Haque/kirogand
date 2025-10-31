@@ -224,5 +224,8 @@
               console.error(`Error: Print button element not found with selector: ${buttonId}`);
           }
       }
+      @if($justapproved)
+        pulsePrintButton(serial);
+      @endif
     </script>
 @endsection
