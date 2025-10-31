@@ -211,7 +211,7 @@ class CertificateController extends Controller
                          ->with('success', 'ওয়ারিশান সনদপত্র সফলভাবে আপডেট করা হয়েছে। সিরিয়াল নং: ' . $certificate->unique_serial);
     }
 
-    public function approveCertificate()
+    public function approveCertificate(Request $request)
     {
         if(Auth::user()->role == 'manager') {
             if (Auth::user()->is_active === 0) {
@@ -220,7 +220,7 @@ class CertificateController extends Controller
             }
         }
 
-        $certificates = Certificate::where('local_office_id', Auth::user()->local_office_id)->paginate(10);
+        $certificate = Certificate::findOrFail($id);
 
         return view('dashboard.certificates.list')->withCertificates($certificates);
     }
