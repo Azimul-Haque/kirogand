@@ -172,16 +172,11 @@
                               toast.addEventListener('mouseleave', Swal.resumeTimer)
                             }
                           })
+                          ToastAprv.fire({
+                            icon: 'success',
+                            title: '{{Session::get('success')}}'
+                          })
                         </script>
-                           
-                        @if (Session::has('success'))
-                          <script type="text/javascript">
-                            ToastAprv.fire({
-                              icon: 'success',
-                              title: '{{Session::get('success')}}'
-                            })
-                          </script>
-                        @endif
                     </form>
                 <!-- Add your edit/approve/reject buttons here -->
             </div>
