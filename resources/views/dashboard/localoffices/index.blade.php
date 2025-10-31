@@ -106,7 +106,7 @@
                                 }
                               }
                             @endphp
-                            <small>{!! $authlevel . getHierarchyNamesByLevel() !!}</small><br/><br/>
+                            <small>{!! $authlevel !!}</small><br/><br/>
                             
                                 @csrf
                                 <div class="row">
