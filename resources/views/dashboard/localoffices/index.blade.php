@@ -94,7 +94,7 @@
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
-                        <form method="post" action="{{ route('dashboard.local-offices.update', $localoffice->id) }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ route('dashboard.local-offices.payment.add', $localoffice->id) }}" enctype="multipart/form-data">
                           <div class="modal-body">
                             @php
                               $authlevel = '';
