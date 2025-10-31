@@ -148,7 +148,7 @@ class CertificateController extends Controller
         return view('dashboard.certificates.draft')->withCertificate($certificate);
     }
 
-    public function createCertificate($certificate_type)
+    public function editCertificate($certificate_type)
     {
         if(Auth::user()->role == 'manager') {
             if (Auth::user()->is_active === 0) {
