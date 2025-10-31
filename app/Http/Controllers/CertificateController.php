@@ -107,7 +107,7 @@ class CertificateController extends Controller
         'role' => 'user', // this is important
         'designation' => 'নাগরিক',
         'mobile' => $request->mobile,
-        'mobile' => Hash::make('123456'),
+        'password' => Hash::make('123456'),
     ]);
 
     $dataPayload = [
