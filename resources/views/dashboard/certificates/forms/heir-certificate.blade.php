@@ -173,8 +173,7 @@
     function updateRowNumbers() {
         const rows = document.querySelectorAll('#heirs-container .heir-row');
         rows.forEach((row, index) => {
-            var currentSerial = index + 1;
-            row.querySelector('.row-number').textContent = bangla(currentSerial);
+            row.querySelector('.row-number').textContent = index + 1;
         });
     }
 
