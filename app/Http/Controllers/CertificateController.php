@@ -276,7 +276,7 @@ class CertificateController extends Controller
         return view('dashboard.certificates.list')->withCertificates($certificates);
     }
 
-    public function showCertificateQr()
+    public function showCertificateQr($unique_serial)
     {
         // 1. Define the data you want to encode (e.g., the verification link)
         $dataToEncode = url("/verify/{$unique_serial}");
