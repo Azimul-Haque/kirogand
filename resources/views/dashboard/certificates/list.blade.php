@@ -190,7 +190,7 @@
         </div>
         {{ $certificates->links() }}
 
-        {{ dd(getgovlevels()) }}
+        {{ dd(getgovlevels()->count()) }}
 
     </div>
 @endsection
