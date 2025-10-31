@@ -183,8 +183,8 @@
                           text: 'এই সনদটি অনুমোদন করা হবে।',
                           icon: 'warning',
                           showCancelButton: true,
-                          confirmButtonText: 'Yes, submit it!',
-                          cancelButtonText: 'No, cancel',
+                          confirmButtonText: 'অনুমোদন করুন',
+                          cancelButtonText: 'ফিরে যান',
                           reverseButtons: true
                       }).then((result) => {
                           if (result.isConfirmed) {
