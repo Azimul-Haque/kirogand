@@ -154,7 +154,7 @@
                 </a>
                 
 
-                <form action="{{ route('dashboard.certificates.update', $certificate->id) }}" method="POST" style="display:inline;">
+                <form action="{{ route('dashboard.certificates.update', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
 
