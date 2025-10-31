@@ -41,7 +41,7 @@
                 <div class="form-group col-md-4">
                     <label for="mobile">মোবাইল নং <span class="text-danger">*</span></label>
                     <input type="number" class="form-control @error('mobile') is-invalid @enderror" id="mobile" name="mobile" value="{{ old('mobile') }}" placeholder="১১ ডিজিটের মোবাইল নাম্বার" required>
-                    @error('name') <span class="invalid-feedback">{{ $message }}</span> @enderror
+                    @error('mobile') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
 
