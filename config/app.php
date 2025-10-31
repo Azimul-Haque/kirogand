@@ -241,7 +241,6 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class,
         'Purifier' => Mews\Purifier\Facades\Purifier::class,
-        'QrCode' => SimpleSoftwareIO\QrCode\ServiceProvider::class,
 
     ],
 
