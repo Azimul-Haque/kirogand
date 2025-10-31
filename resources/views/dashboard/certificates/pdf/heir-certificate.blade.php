@@ -19,6 +19,10 @@
             /* Reduced top/bottom margin for better content display */
             margin: 60px 80px 40px 80px;
         }
+        .page-header,
+          .page-header-space {
+            height: 250px;
+          }
 
         /* --- Custom Styles for Certificate Layout --- */
 
