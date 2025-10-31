@@ -59,7 +59,7 @@ class CertificateController extends Controller
         return view('dashboard.certificates.index');
     }
 
-    public function getApplicationbyCType($certificate_type)
+    public function createCertificate($certificate_type)
     {
         if(Auth::user()->role == 'manager') {
             if (Auth::user()->is_active === 0) {
