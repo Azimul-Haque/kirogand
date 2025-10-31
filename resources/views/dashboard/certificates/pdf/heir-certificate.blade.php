@@ -162,9 +162,7 @@
                         $image_url = public_path('images/icon.png');
                     }
                 @endphp
-                <div class="logo-box" style="float: right;">
-                     <img src="{{ $image_url }}" style="height: 100px; width: auto; object-fit: contain;">
-                </div>
+                <img src="{{ $image_url }}" style="height: 100px; width: auto; object-fit: contain;">
             </td>
         </tr>
     </table>
