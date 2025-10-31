@@ -76,7 +76,7 @@
         .beneficiary-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
+            margin-top: 10px;
             font-size: 14px;
         }
         .beneficiary-table th, .beneficiary-table td {
