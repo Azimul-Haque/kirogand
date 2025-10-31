@@ -75,61 +75,61 @@ class CertificateController extends Controller
     {
         // dd($request->all());
         $validatedData = $request->validate([
-        'name' => ['required', 'string', 'max:255'],
-        'father' => ['required', 'string', 'max:255'],
-        'mother' => ['required', 'string', 'max:255'],
-        'id_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
-        'id_value' => ['required', 'string', 'max:100'],
-        'mobile' => ['required', 'string', 'max:255'],
-        'village' => ['required', 'string', 'max:255'],
-        'ward' => ['required', 'string', 'min:1', 'max:99'],
-        'post_office' => ['required', 'string', 'max:255'],
-        'union' => ['required', 'string', 'max:255'],
-        'heirs_data' => ['required', 'array', 'min:1'],
-        'heirs_data.*.name' => ['required', 'string', 'max:255'],
-        'heirs_data.*.relation' => ['required', 'string', 'max:255'],
-        'heirs_data.*.id_data' => ['nullable', 'string'],
-        'heirs_data.*.dob' => ['nullable', 'string'],
-        'heirs_data.*.remark' => ['nullable', 'string', 'max:255'],
-    ]);
+            'name' => ['required', 'string', 'max:255'],
+            'father' => ['required', 'string', 'max:255'],
+            'mother' => ['required', 'string', 'max:255'],
+            'id_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
+            'id_value' => ['required', 'string', 'max:100'],
+            'mobile' => ['required', 'string', 'max:255'],
+            'village' => ['required', 'string', 'max:255'],
+            'ward' => ['required', 'string', 'min:1', 'max:99'],
+            'post_office' => ['required', 'string', 'max:255'],
+            'union' => ['required', 'string', 'max:255'],
+            'heirs_data' => ['required', 'array', 'min:1'],
+            'heirs_data.*.name' => ['required', 'string', 'max:255'],
+            'heirs_data.*.relation' => ['required', 'string', 'max:255'],
+            'heirs_data.*.id_data' => ['nullable', 'string'],
+            'heirs_data.*.dob' => ['nullable', 'string'],
+            'heirs_data.*.remark' => ['nullable', 'string', 'max:255'],
+        ]);
 
-    $applicantData = $request->only([
-        'name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
-        'village', 'ward', 'post_office', 'union'
-    ]);
+        $applicantData = $request->only([
+            'name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
+            'village', 'ward', 'post_office', 'union'
+        ]);
 
-    // create new user
-    $newuser = User::create([
-        'local_office_id ' => Auth::user()->local_office_id,
-        'is_active ' => 0,
-        'nid' => $request->id_value,
-        'name' => $request->name,
-        'role' => 'user', // this is important
-        'designation' => 'নাগরিক',
-        'mobile' => mt_rand(100000, 999999),
-        'password' => Hash::make('123456'),
-    ]);
+        // create new user
+        $newuser = User::create([
+            'local_office_id ' => Auth::user()->local_office_id,
+            'is_active ' => 0,
+            'nid' => $request->id_value,
+            'name' => $request->name,
+            'role' => 'user', // this is important
+            'designation' => 'নাগরিক',
+            'mobile' => mt_rand(100000, 999999),
+            'password' => Hash::make('123456'),
+        ]);
 
-    $dataPayload = [
-        'applicant' => $applicantData,
-        'heirs' => array_values($request->heirs_data),
-        'submission_timestamp' => now()->toDateTimeString(),
-    ];
+        $dataPayload = [
+            'applicant' => $applicantData,
+            'heirs' => array_values($request->heirs_data),
+            'submission_timestamp' => now()->toDateTimeString(),
+        ];
 
-    $uniqueSerial = now()->format('ymd') . Auth::user()->local_office_id . mt_rand(100000, 999999); 
+        $uniqueSerial = now()->format('ymd') . Auth::user()->local_office_id . mt_rand(100000, 999999); 
 
-    $certificate = Certificate::create([
-        'local_office_id' => Auth::user()->local_office_id,
-        'certificate_type' => $certificate_type,
-        'recipient_user_id' => $newuser->id,
-        'status' => 0, // 0 = draft, 1 = published
-        'unique_serial' => $uniqueSerial,
-        'issued_at' => now(),
-        'data_payload' => $dataPayload,
-    ]);
+        $certificate = Certificate::create([
+            'local_office_id' => Auth::user()->local_office_id,
+            'certificate_type' => $certificate_type,
+            'recipient_user_id' => $newuser->id,
+            'status' => 0, // 0 = draft, 1 = published
+            'unique_serial' => $uniqueSerial,
+            'issued_at' => now(),
+            'data_payload' => $dataPayload,
+        ]);
 
-    return redirect()->route('dashboard.certificates.draft', $uniqueSerial)
-                     ->with('success', 'ওয়ারিশান সনদপত্রের সফলভাবে ড্রাফট করা হয়েছে। সিরিয়াল নং: ' . $certificate->unique_serial);
+        return redirect()->route('dashboard.certificates.draft', $uniqueSerial)
+                         ->with('success', 'ওয়ারিশান সনদপত্রের সফলভাবে ড্রাফট করা হয়েছে। সিরিয়াল নং: ' . $certificate->unique_serial);
     }
 
     public function getDraftCertificate($unique_serial)
