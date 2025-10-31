@@ -76,8 +76,9 @@ class IndexController extends Controller
         return view('index.verifycertificate');
     }
 
-    public function verifyCertificate()
+    public function verifyCertificate($unique_serial)
     {
+        
         return view('index.verifycertificate');
     }
 
