@@ -31,6 +31,21 @@ class UserAuthority extends Model
         return $this->morphTo();
     }
 
+    public function getHierarchyNamesByLevel(): array
+    {
+        // Use the existing method to get the model objects keyed by level
+        $ancestors = $this->getAncestorsByLevel();
+
+        $names = [];
+
+        foreach ($ancestors as $level => $model) {
+            // Extract the name, preferring the Bengali name (bn_name)
+            $names[$level] = $model->bn_name ?? $model->name;
+        }
+
+        return $names;
+    }
+
     public function getFullHierarchy(): string
     {
         $authority = $this->authority; // Gets the specific object (Union, Upazila, etc.)
