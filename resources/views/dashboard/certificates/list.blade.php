@@ -89,22 +89,15 @@
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 @endif
-                                  <div class="btn-group btn-group-sm" role="group">
-                                      {{-- View/Draft Button --}}
-                                      
 
-                                      {{-- Edit Button (If status allows, typically only for Draft/Pending) --}}
-                                      
-
-                                      {{-- Delete Button (Example using a form for DELETE method) --}}
-                                      {{-- <form action="{{ route('dashboard.certificates.destroy', $certificate->id) }}" method="POST" style="display:inline;">
-                                          @csrf
-                                          @method('DELETE')
-                                          <button type="submit" class="btn btn-danger" title="ডিলেট" onclick="return confirm('আপনি কি নিশ্চিত? এই তথ্য স্থায়ীভাবে মুছে ফেলা হবে।')">
-                                              <i class="fas fa-trash"></i>
-                                          </button>
-                                      </form> --}}
-                                  </div>
+                                {{-- Delete Button (Example using a form for DELETE method) --}}
+                                {{-- <form action="{{ route('dashboard.certificates.destroy', $certificate->id) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger" title="ডিলেট" onclick="return confirm('আপনি কি নিশ্চিত? এই তথ্য স্থায়ীভাবে মুছে ফেলা হবে।')">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form> --}}
                               </td>
                           </tr>
                       @empty
