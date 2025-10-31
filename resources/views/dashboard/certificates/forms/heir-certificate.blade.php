@@ -10,7 +10,7 @@
         গুরুত্বপূর্ণ: ফর্মের 'name' অ্যাট্রিবিউটগুলো (যেমন name, father, heirs_data[...][name]) 
         পিএইচপি/লার্ভেল ব্যাকএন্ডের জন্য ইংরেজিতে রাখা হয়েছে।
     -->
-    <form action="{{ route('dashboard.certificates.store') }}" method="POST">
+    <form action="{{ route('dashboard.certificates.store', $certificate_type) }}" method="POST">
         @csrf
         
         <!-- Hidden field for type recognition in the Controller -->
