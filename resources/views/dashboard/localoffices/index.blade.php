@@ -144,7 +144,7 @@
                                              class="form-control"
                                              placeholder="টাকার পরিমাণ" required>
                                         <div class="input-group-append">
-                                            <div class="input-group-text"><span class="fas fa-phone"></span></div>
+                                            <div class="input-group-text"><span class="fas fa-coins"></span></div>
                                         </div>
                                     </div>
                                   </div>
