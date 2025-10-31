@@ -1,5 +1,5 @@
 <!-- Card structure common in AdminLTE 3 -->
-<div class="card card-primary card-outline">
+<div class="card card-success card-outline">
     <div class="card-header">
         <h3 class="card-title">
             <i class="fas fa-file-alt"></i> ওয়ারিশান সনদপত্র ফরম
@@ -19,7 +19,7 @@
         <div class="card-body">
             
             <!-- ১. আবেদনকারী/মৃত ব্যক্তির আবশ্যিক বিবরণ -->
-            <h4 class="mb-4 text-primary">আবেদনকারী/মৃত ব্যক্তির আবশ্যিক বিবরণ</h4>
+            <h4 class="mb-4 text-success">আবেদনকারী/মৃত ব্যক্তির আবশ্যিক বিবরণ</h4>
             <div class="row">
                 <!-- নাম -->
                 <div class="form-group col-md-6">
