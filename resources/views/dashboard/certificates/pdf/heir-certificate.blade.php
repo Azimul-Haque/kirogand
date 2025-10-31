@@ -73,7 +73,7 @@
         }
 
         .info-paragraph {
-            line-height: 1.8;
+            line-height: 1.5;
             text-align: justify;
             margin-top: 20px;
             font-size: 15px;
