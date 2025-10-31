@@ -238,8 +238,9 @@ class CertificateController extends Controller
         }
 
         $certificate = Certificate::where('unique_serial', $unique_serial)->first()
-        
-        return redirect()->route('dashboard.certificates.list')->with('justapproved', $certificate->id);
+        $pdf = PDF::loadView('index.pdf.examsolvepdf', ['exam' => $exam]);
+        $fileName = 'Single-Exam-Solve-Sheet-' . $exam->id . '.pdf';
+        return $pdf->stream($fileName); // download/stream
     }
 
     public function getCertificateList()
