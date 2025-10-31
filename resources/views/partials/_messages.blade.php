@@ -72,3 +72,10 @@
     })
   </script>
 @endif
+
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    $("[rel='tooltip']").tooltip();
+  });
+</script>
