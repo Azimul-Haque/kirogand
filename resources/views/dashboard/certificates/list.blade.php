@@ -199,7 +199,7 @@
       function pulsePrintButton(serial) {
           // Convert the serial (e.g., C-2024-00301) into the ID format (C202400301)
           const cleanedSerial = serial.replace(/-/g, ''); 
-          const buttonId = `#print-btn-${cleanedSerial}`;
+          const buttonId = `#printThis${cleanedSerial}`;
           const $button = $(buttonId);
           
           console.log(`Attempting to pulse button with ID: ${buttonId}`);
