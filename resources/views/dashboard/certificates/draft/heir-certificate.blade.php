@@ -157,7 +157,7 @@
                 <form action="{{ route('dashboard.certificates.destroy', $certificate->id) }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
-                    <button type="button" class="btn btn-success no-print" onclick="window.print()">
+                    <button type="submit" class="btn btn-success no-print" onclick="window.print()">
                         <i class="fas fa-print"></i> অনুমোদন করুন
                     </button>
                 </form>
