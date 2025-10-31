@@ -82,7 +82,7 @@ class CertificateController extends Controller
         'id_value' => ['required', 'string', 'max:100'],
         'mobile' => ['required', 'string', 'max:255'],
         'village' => ['required', 'string', 'max:255'],
-        'ward' => ['required', 'integer', 'min:1', 'max:99'],
+        'ward' => ['required', 'string', 'min:1', 'max:99'],
         'post_office' => ['required', 'string', 'max:255'],
         'union' => ['required', 'string', 'max:255'],
         'heirs_data' => ['required', 'array', 'min:1'],
