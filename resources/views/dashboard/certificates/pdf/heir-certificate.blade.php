@@ -104,8 +104,9 @@
 
         .signature-block {
             margin-top: 50px;
-            height: 100%;
-            width: 100%;
+            
+            width: 120px;
+            height: 120px;
         }
         .signature-block td {
             width: 25%; /* Four columns for signatures */
