@@ -74,14 +74,7 @@ class CertificateController extends Controller
 
     public function storeCertificate(Request $requests, $certificate_type)
     {
-        if(Auth::user()->role == 'manager') {
-            if (Auth::user()->is_active === 0) {
-                Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
-                return redirect()->route('index.index');
-            }
-        }
-        // $localofficescount = LocalOffice::count();
-        // $localoffices = LocalOffice::where('name_bn', '!=', '')->orderBy('id', 'desc')->paginate(10);
+        
 
         return view('dashboard.certificates.create');
     }
