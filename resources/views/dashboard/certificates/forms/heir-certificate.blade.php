@@ -108,3 +108,103 @@
     </form>
 </div>
 <!-- /.card -->
+
+<!-- Row Template (Hidden) -->
+<script type="text/template" id="heir-row-template">
+    <tr class="heir-row" data-row-id="__INDEX__">
+        <td><span class="row-number">1</span></td>
+        <td>
+            <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][name]" placeholder="Heir Name" required>
+        </td>
+        <td>
+            <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][relation]" placeholder="e.g., Son, Wife" required>
+        </td>
+        <td>
+            <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][nid_birth_registration]" placeholder="NID/BR No." required>
+        </td>
+        <td>
+            <input type="date" class="form-control form-control-sm" name="heirs_data[__INDEX__][dob]" required>
+        </td>
+        <td>
+            <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][remark]" placeholder="Notes">
+        </td>
+        <td>
+            <button type="button" class="btn btn-danger btn-sm remove-heir-button" title="Remove Row">
+                <i class="fas fa-trash"></i>
+            </button>
+        </td>
+    </tr>
+</script>
+
+<script>
+    // Global counter to ensure unique array indices (crucial for PHP/Laravel processing)
+    let rowCounter = 0;
+
+    /**
+     * Adds a new dynamic row to the heirs table.
+     */
+    function addHeirRow() {
+        // 1. Get the template content
+        const template = document.getElementById('heir-row-template').innerHTML;
+        
+        // 2. Replace the placeholder with the current unique index
+        const newRowHtml = template.replace(/__INDEX__/g, rowCounter);
+        
+        // 3. Create a new table row element
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = newRowHtml;
+        newRow.classList.add('heir-row');
+        newRow.dataset.rowId = rowCounter;
+
+        // 4. Append the new row to the container
+        document.getElementById('heirs-container').appendChild(newRow);
+        
+        // 5. Update row numbering and counter
+        updateRowNumbers();
+        rowCounter++;
+        
+        // 6. Attach remove event listener to the new button
+        newRow.querySelector('.remove-heir-button').addEventListener('click', function() {
+            newRow.remove();
+            updateRowNumbers();
+        });
+    }
+
+    /**
+     * Updates the visible row numbers (1, 2, 3...) after adding or removing a row.
+     */
+    function updateRowNumbers() {
+        const rows = document.querySelectorAll('#heirs-container .heir-row');
+        rows.forEach((row, index) => {
+            row.querySelector('.row-number').textContent = index + 1;
+        });
+    }
+
+    // Initialize: Add one row when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add the first row automatically
+        addHeirRow(); 
+
+        // Attach event listener to the "Add New Heir" button
+        document.getElementById('add-heir-button').addEventListener('click', addHeirRow);
+
+        // Include Font Awesome (AdminLTE uses it)
+        const faScript = document.createElement('script');
+        faScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js';
+        faScript.crossOrigin = 'anonymous';
+        document.head.appendChild(faScript);
+
+        // Include Bootstrap JS dependencies (required for full Bootstrap functionality, though minimal for this form)
+        const jqueryScript = document.createElement('script');
+        jqueryScript.src = 'https://code.jquery.com/jquery-3.5.1.slim.min.js';
+        document.head.appendChild(jqueryScript);
+
+        const popperScript = document.createElement('script');
+        popperScript.src = 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js';
+        document.head.appendChild(popperScript);
+
+        const bsScript = document.createElement('script');
+        bsScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js';
+        document.head.appendChild(bsScript);
+    });
+</script>
