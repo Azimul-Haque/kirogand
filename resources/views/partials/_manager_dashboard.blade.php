@@ -115,7 +115,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-6">
-                        <a href="#" class="btn btn-app bg-primary quick-action-card w-full rounded-lg">
+                        <a href="{{ route('dashboard.certificates.index') }}" class="btn btn-app bg-primary quick-action-card w-full rounded-lg">
                             <i class="fas fa-file-signature"></i> সনদ তৈরি করুন
                         </a>
                     </div>
