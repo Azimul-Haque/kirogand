@@ -20,21 +20,7 @@
     </ol>
   @endsection
     <div class="container-fluid">
-      <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">সনদের আবেদন</h3>
-
-            <!-- resources/views/dashboard/certificate_form.blade.php -->
-            
-
-            
-          </div>
-          <!-- /.card-header -->
-          <div class="card-body p-0">
-          
-          </div>
-          <!-- /.card-body -->
-        </div>
+      @include('dashboard.certificates.forms.heir-certificate')
     </div>
 @endsection
 
