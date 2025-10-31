@@ -200,14 +200,9 @@ class CertificateController extends Controller
 
         $uniqueSerial = now()->format('ymd') . Auth::user()->local_office_id . mt_rand(100000, 999999); 
 
-        $certificate = Certificate::create([
-            'local_office_id' => Auth::user()->local_office_id,
-            'certificate_type' => $certificate_type,
-            'recipient_user_id' => $newuser->id,
-            'status' => 0, // 0 = draft, 1 = published
-            'unique_serial' => $uniqueSerial,
-            'issued_at' => now(),
-            'data_payload' => $dataPayload,
+        $certificate->update([
+            'data_payload' => $updatedDataPayload,
+            'status' => 0, // Keep status as draft after an edit
         ]);
 
         return redirect()->route('dashboard.certificates.draft', $uniqueSerial)
