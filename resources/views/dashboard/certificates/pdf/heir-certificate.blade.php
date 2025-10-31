@@ -124,8 +124,12 @@
 
         // Placeholder/Default Union Info (Adjust these paths/defaults as needed for your specific app)
         $union_info = $certificate['union_info'] ?? [
-            'union_name' => '০২ নং ইপ্রোত্তয়ন ইউনিয়ন', 'upazila' => 'নাগরপুর', 'district' => 'টাঙ্গাইল',
-            'chairman_name' => 'নজরুল ইসলাম', 'email' => 'admin@eprottyon.com', 'phone' => '০১৭০০০০০০০০',
+            'union_name' => '০২ নং ইপ্রোত্তয়ন ইউনিয়ন',
+            'upazila' => 'নাগরপুর',
+            'district' => 'টাঙ্গাইল',
+            'chairman_name' => 'নজরুল ইসলাম',
+            'email' => 'admin@eprottyon.com',
+            'phone' => '০১৭০০০০০০০০',
         ];
 
         // Conditional Draft Watermark
