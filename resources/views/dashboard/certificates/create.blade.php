@@ -23,7 +23,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-10 offset-md-1">
+          @if($certificate_type == 'heir-certificate')
           @include('dashboard.certificates.forms.heir-certificate')
+          @endif
         </div>
       </div>
     </div>
