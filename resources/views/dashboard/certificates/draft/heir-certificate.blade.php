@@ -157,21 +157,22 @@
                 <form action="{{ route('dashboard.certificates.update', $certificate->id) }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
+                    <script type="text/javascript">
+                      const ToastAprv = Swal.mixin({
+                        toast: false,
+                        position: 'center',
+                        showConfirmButton: true,
+                        timerProgressBar: false,
+                        didOpen: (toast) => {
+                          toast.addEventListener('mouseenter', Swal.stopTimer)
+                          toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                      })
+                    </script>
                         <button type="button" class="btn btn-success no-print" onclick="return ToastAprv.fire({ icon: 'success', title: 'আপনি কি নিশ্চিত? এই তথ্য স্থায়ীভাবে অনুমোদন করা হবে।' })">
                             <i class="fas fa-print"></i> অনুমোদন করুন
                         </button>
-                        <script type="text/javascript">
-                          const ToastAprv = Swal.mixin({
-                            toast: false,
-                            position: 'center',
-                            showConfirmButton: true,
-                            timerProgressBar: false,
-                            didOpen: (toast) => {
-                              toast.addEventListener('mouseenter', Swal.stopTimer)
-                              toast.addEventListener('mouseleave', Swal.resumeTimer)
-                            }
-                          })
-                        </script>
+                        
                     </form>
                 <!-- Add your edit/approve/reject buttons here -->
             </div>
