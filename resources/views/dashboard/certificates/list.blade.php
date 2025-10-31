@@ -254,8 +254,7 @@
               console.error(`Error: Print button element not found with selector: ${buttonId}`);
           }
       }
-      @if(isset(justapproved{}))
-      @if(isset(justapproved('')))
+      @if(isset(session('justapproved')))
         pulsePrintButton({{$justapproved->id}});
       @endif
     </script>
