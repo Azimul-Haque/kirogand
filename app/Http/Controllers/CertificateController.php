@@ -97,6 +97,15 @@ class CertificateController extends Controller
         'village', 'ward', 'post_office', 'union'
     ]);
 
+    $certificate = Certificate::create([
+        'certificate_type' => $validatedData['certificate_type'],
+        'recipient_user_id' => Auth::check() ? Auth::id() : null,
+        'status' => 0, // 0 = draft, 1 = published
+        'unique_serial' => $uniqueSerial,
+        'issued_at' => now(),
+        'data_payload' => $dataPayload,
+    ]);
+
     $dataPayload = [
         'applicant' => $applicantData,
         'heirs' => array_values($request->heirs_data),
