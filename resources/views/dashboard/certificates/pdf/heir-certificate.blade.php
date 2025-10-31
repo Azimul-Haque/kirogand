@@ -163,7 +163,7 @@
                     }
                 @endphp
                 <div class="logo-box" style="float: right;">
-                     <img src="{{ public_path('images/eprottyon-logo.png') }}" style="height: 100px; width: auto; object-fit: contain;">
+                     <img src="{{ $image_url }}" style="height: 100px; width: auto; object-fit: contain;">
                 </div>
             </td>
         </tr>
