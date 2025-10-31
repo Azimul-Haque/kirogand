@@ -58,7 +58,7 @@
             text-align: center;
             background-color: #e5ffe5; /* Light green background */
             border: 1px solid #c2e6c2;
-            padding: 10px 30px;
+            padding: 10px 20px;
             margin: 20px auto;
             width: 40%;
             border-radius: 20px;
