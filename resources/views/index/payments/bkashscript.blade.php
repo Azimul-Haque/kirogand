@@ -85,6 +85,7 @@
                     if (data && data.paymentID != null) {
                         paymentID = data.paymentID;
                         data.orgName = 'D-Nagorik';
+                        console.log(data.orgName);
                         bKash.create().onSuccess(data);
                     } else {
                         bKash.create().onError();
