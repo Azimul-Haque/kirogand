@@ -6,7 +6,7 @@
         </h3>
     </div>
     
-    <form action="{{ route('certificates.store') }}" method="POST">
+    <form action="{{ route('dashboard.certificates.store') }}" method="POST">
         @csrf
         
         <!-- Hidden field for type recognition in the Controller -->
