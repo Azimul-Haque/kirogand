@@ -173,7 +173,7 @@
                           })
                           ToastAprv.fire({
                             icon: 'success',
-                            title: '{{Session::get('success')}}'
+                            title: 'আপনি কি নিশ্চিত? এই তথ্য স্থায়ীভাবে অনুমোদন করা হবে।'
                           })
                         </script>
                     </form>
