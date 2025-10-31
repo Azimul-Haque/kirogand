@@ -211,6 +211,20 @@ class CertificateController extends Controller
                          ->with('success', 'ওয়ারিশান সনদপত্র সফলভাবে আপডেট করা হয়েছে। সিরিয়াল নং: ' . $certificate->unique_serial);
     }
 
+    public function approveCertificate()
+    {
+        if(Auth::user()->role == 'manager') {
+            if (Auth::user()->is_active === 0) {
+                Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
+                return redirect()->route('index.index');
+            }
+        }
+
+        $certificates = Certificate::where('local_office_id', Auth::user()->local_office_id)->paginate(10);
+
+        return view('dashboard.certificates.list')->withCertificates($certificates);
+    }
+
     public function getCertificateList()
     {
         if(Auth::user()->role == 'manager') {
@@ -224,5 +238,4 @@ class CertificateController extends Controller
 
         return view('dashboard.certificates.list')->withCertificates($certificates);
     }
-    
 }
