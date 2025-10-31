@@ -158,7 +158,7 @@
                 <span style="font-size: 16px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span><br/>
                 <span style="font-size: 18px; font-weight: bold;">{{ $union_info['union_name'] }}</span><br/>
                 <span style="font-size: 13px;">উপজেলা: {{ $union_info['upazila'] }}, জেলা: {{ $union_info['district'] }}।</span><br/>
-                <span style="font-size: 13px;">চেয়ারম্যান: মো: {{ $union_info['chairman_name'] }}</span><br/>
+                {{-- <span style="font-size: 13px;">চেয়ারম্যান: মো: {{ $union_info['chairman_name'] }}</span><br/> --}}
                 <span style="font-size: 13px;">ইমেইল: {{ $union_info['email'] }}</span><br/>
                 <span style="font-size: 13px;">ফোন নম্বর: {{ $union_info['phone'] }}</span>
             </td>
