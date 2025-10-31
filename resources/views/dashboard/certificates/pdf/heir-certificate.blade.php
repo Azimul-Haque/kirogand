@@ -157,7 +157,7 @@
             <td style="width: 30%; text-align: right;">
                 {{-- e-Prottayon Logo Right --}}
                 <div class="logo-box" style="float: right;">
-                     <img src="{{ public_path('images/eprottyon-logo.png') }}" style="height: 100%; width: 100%; object-fit: contain;">
+                     <img src="{{ public_path('images/eprottyon-logo.png') }}" style="height: 100px; width: auto; object-fit: contain;">
                 </div>
             </td>
         </tr>
