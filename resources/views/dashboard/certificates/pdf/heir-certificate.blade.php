@@ -122,7 +122,11 @@
         $applicant = $payload['applicant'] ?? [];
         $heirs = $payload['heirs'] ?? [];
 
-        // Placeholder/Default Union Info (Adjust these paths/defaults as needed for your specific app)
+        //get levels data
+        if(count(getgovlevels() > 0) {
+            
+        }
+        //get levels data
         $union_info = [
             'union_name' => $certificate->localOffice->name_bn ?? 'তথ্য নেই',
             'upazila' => 'নাগরপুর',
