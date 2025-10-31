@@ -179,7 +179,7 @@
                       event.preventDefault(); // Prevent default form submission
 
                       Swal.fire({
-                          title: 'Are you sure?',
+                          title: 'আপনি কি নিশ্চিত?',
                           text: 'You are about to submit this form.',
                           icon: 'warning',
                           showCancelButton: true,
