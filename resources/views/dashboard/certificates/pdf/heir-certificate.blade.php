@@ -248,10 +248,6 @@
                     <div style="padding-top: 15px;">কায়ালয়াল সিল</div>
                 </td>
                 <td>
-                    <div style="padding-top: 15px;">যাচাইকারী স্বাক্ষর</div>
-                    <div class="signature-line"></div>
-                </td>
-                <td>
                     <div style="padding-top: 15px;">প্রস্তুতকারীর সিল ও স্বাক্ষর</div>
                     <div class="signature-line"></div>
                 </td>
