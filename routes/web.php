@@ -138,6 +138,7 @@ Route::get('/dashboard/certificates/edit/{unique_serial}', 'CertificateControlle
 Route::post('/dashboard/certificates/update/{id}', 'CertificateController@updateCertificate')->name('dashboard.certificates.update');
 Route::post('/dashboard/certificates/approve/{id}', 'CertificateController@approveCertificate')->name('dashboard.certificates.approve');
 Route::get('/dashboard/certificates/print/{unique_serial}', 'CertificateController@printCertificate')->name('dashboard.certificates.print');
+Route::get('/dashboard/certificates/download/{unique_serial}', 'CertificateController@downloadCertificate')->name('dashboard.certificates.download');
 
 Route::get('/dashboard/certificates-list', 'CertificateController@getCertificateList')->name('dashboard.certificates.list');
 // Certificate routes are here
