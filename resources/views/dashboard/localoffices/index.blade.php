@@ -103,7 +103,7 @@
                                         <input type="text"
                                                class="form-control"
                                                value="{{ $localoffice->name_bn }}"
-                                               placeholder="নাম" required>
+                                               placeholder="নাম" readonly="">
                                         <div class="input-group-append">
                                             <div class="input-group-text"><span class="fas fa-user"></span></div>
                                         </div>
