@@ -44,8 +44,8 @@
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
         <li class="breadcrumb-item active">সনদ তালিকা</li>
-        @if(isset($certificate))
-          {{ $certificate->id }}
+        @if(isset($justapproved))
+          {{ $justapproved->id }}
         @endif
     </ol>
   @endsection
@@ -255,8 +255,8 @@
               console.error(`Error: Print button element not found with selector: ${buttonId}`);
           }
       }
-      @if(isset($justapprovedcertificate))
-        pulsePrintButton({{$justapprovedcertificate->id}});
+      @if(isset($justapproved))
+        pulsePrintButton({{$justapproved->id}});
       @endif
     </script>
 @endsection
