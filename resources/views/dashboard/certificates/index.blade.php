@@ -94,7 +94,7 @@
 
         {{-- , অবিবাহিত, প্রত্যয়ন --}}
 
-        <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
             <a href="{{ route('dashboard.certificates.certificate_type', 'heir-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-users"></i></div>
