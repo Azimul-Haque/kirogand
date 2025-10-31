@@ -33,40 +33,17 @@ class UserAuthority extends Model
 
     public function getHierarchyNamesByLevel(): array
     {
-        $authority = $this->authority; // Gets the specific object (Union, Upazila, etc.)
+        // Use the existing method to get the model objects keyed by level
+        $ancestors = $this->getAncestorsByLevel();
 
-        if (!$authority) {
-            return 'N/A';
+        $names = [];
+
+        foreach ($ancestors as $level => $model) {
+            // Extract the name, preferring the Bengali name (bn_name)
+            $names[$level] = $model->bn_name ?? $model->name;
         }
 
-        $hierarchy = [];
-        $current = $authority;
-
-        // Traverse upwards until the Division is reached (or the current object has no parent)
-        while ($current) {
-            // Use the Bengali name (bn_name) if available, otherwise use the English name (name)
-            $name = $current->bn_name ?? $current->name;
-            $hierarchy[] = $name;
-
-            // Check for the parent relationship based on the model class
-            // Note: Using \App\ModelName syntax for Laravel 7
-            if ($current instanceof \App\Union) {
-                $current = $current->upazila;
-            } elseif ($current instanceof \App\Upazila) {
-                $current = $current->district;
-            } elseif ($current instanceof \App\District) {
-                $current = $current->division;
-            } else {
-                // Must be the top level (Division) or an unknown type, stop traversal
-                $current = null;
-            }
-        }
-
-        // Reverse the array to get Division -> District -> ... -> Assigned Level
-        $hierarchy = array_reverse($hierarchy);
-
-        // Implode and return the formatted string with the right arrow
-        return $hierarchy;
+        return $names;
     }
 
     public function getFullHierarchy(): string
