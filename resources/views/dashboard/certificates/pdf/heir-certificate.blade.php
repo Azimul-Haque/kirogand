@@ -266,7 +266,7 @@
                         {{-- Placeholder for QR Code image --}}
                         <img src="{{ public_path('images/govt-logo.png') }}" style="height: 80px; width: auto; display: block; margin: 0 auto;">
                     </td>
-                    <td style="width: 80%; padding-left: 15px;">
+                    <td style="width: 80%; padding-left: 20px;">
                         <span style="font-weight: bold; font-size: 13px;">
                             সনদটি যাচাই করতে QR CODE টি স্ক্যান করুন<br/>
                             অথবা www.dnagorik.com ভিজিট করুন এই আইডিটি যাচাই করুন: {{ $certificate->unique_serial ?? '--' }}
