@@ -89,7 +89,6 @@
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 @endif
-                                  <!-- Action Buttons -->
                                   <div class="btn-group btn-group-sm" role="group">
                                       {{-- View/Draft Button --}}
                                       
