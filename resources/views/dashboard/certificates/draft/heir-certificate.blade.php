@@ -34,7 +34,7 @@
 </style>
 
 <div class="row">
-    <div class="col-lg-10">
+    <div class="col-md-10">
         <div class="card card-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title">খসড়া - ওয়ারিশ সনদ</h3>
