@@ -148,7 +148,7 @@ class CertificateController extends Controller
         return view('dashboard.certificates.draft')->withCertificate($certificate);
     }
 
-    public function editCertificate($certificate_type)
+    public function editCertificate($unique_serial)
     {
         if(Auth::user()->role == 'manager') {
             if (Auth::user()->is_active === 0) {
@@ -156,6 +156,8 @@ class CertificateController extends Controller
                 return redirect()->route('index.index');
             }
         }
+
+        $certificate
 
         return view('dashboard.certificates.create')->with('certificate_type', $certificate_type);
     }
