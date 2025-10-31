@@ -157,7 +157,7 @@
                 <form action="{{ route('dashboard.certificates.update', $certificate->id) }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-success no-print" onclick="window.print()">
+                    <button type="submit" class="btn btn-success no-print"onclick="return confirm('আপনি কি নিশ্চিত? এই তথ্য স্থায়ীভাবে মুছে ফেলা হবে।')">
                         <i class="fas fa-print"></i> অনুমোদন করুন
                     </button>
                 </form>
