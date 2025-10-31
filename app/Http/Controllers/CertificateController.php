@@ -225,7 +225,7 @@ class CertificateController extends Controller
         $certificate->save();
 
         Session::flash('success', 'সনদ অনুমোদন করা হয়েছে, প্রিন্ট করুন।');
-        return redirect()->route('dashboard.certificates.list')->withJustapproved($certificate);
+        return redirect()->route('dashboard.certificates.list')->withJustapprovedcertificate($certificate);
     }
 
     public function getCertificateList()
