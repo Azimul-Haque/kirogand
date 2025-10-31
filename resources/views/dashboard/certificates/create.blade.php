@@ -22,7 +22,9 @@
   @endsection
     <div class="container-fluid">
       <div class="row">
-        @include('dashboard.certificates.forms.heir-certificate')
+        <div class="row">
+          @include('dashboard.certificates.forms.heir-certificate')
+        </div>
       </div>
     </div>
 @endsection
