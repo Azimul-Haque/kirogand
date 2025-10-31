@@ -37,7 +37,7 @@
         .header-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .header-table td {
             vertical-align: top;
