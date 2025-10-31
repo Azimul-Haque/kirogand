@@ -152,7 +152,6 @@
                                     <div class="input-group mb-3">
                                         <input type="text"
                                                name="packageexpirydate"
-                                               id="packageexpirydate{{ $localoffice->id }}" 
                                                value="{{ $localoffice->package_expiry_date ? date('F d, Y', strtotime($localoffice->package_expiry_date)) : '' }}"
                                                autocomplete="off"
                                                class="form-control"
