@@ -193,6 +193,7 @@
             $auth = Auth::user()->authorities->first();
             $authorityModelInstance = $auth->authority;
             $resolver = new AuthorityResolver($authorityModelInstance);
+            $hierarchyNames = $resolver->getHierarchyNamesByLevel();
 
 
             $authorityObject = (new \ReflectionClass($auth->authority_type))->getShortName();
