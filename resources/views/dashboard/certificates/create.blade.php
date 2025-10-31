@@ -20,7 +20,7 @@
         <li class="breadcrumb-item active">{{ $certificate_type }}</li>
     </ol>
   @endsection
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
       @include('dashboard.certificates.forms.heir-certificate')
     </div>
 @endsection
