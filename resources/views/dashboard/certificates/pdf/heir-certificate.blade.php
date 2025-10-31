@@ -125,7 +125,7 @@
         //get levels data
         $lglevels = [];
         if(count(getgovlevels() > 0) {
-
+            $lglevels = getgovlevels();
         }
         //get levels data
         $union_info = [
