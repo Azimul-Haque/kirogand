@@ -12,18 +12,18 @@
 @endsection
 
 @section('content')
-  @section('page-header') সনদের আবেদন {{ checkcertificatetype($certificate->unique_serial) }} @endsection
+  @section('page-header') সনদের আবেদন {{ checkcertificatetype($certificate->certificate_type) }} @endsection
   @section('page-header-right')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
         <li class="breadcrumb-item active"><a href="{{ route('dashboard.certificates.index') }}">সনদের আবেদন</a></li>
-        <li class="breadcrumb-item active">{{ checkcertificatetype($certificate->unique_serial) }}</li>
+        <li class="breadcrumb-item active">{{ checkcertificatetype($certificate->certificate_type) }}</li>
     </ol>
   @endsection
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-10 offset-md-1">
-          @if($certificate->unique_serial == 'heir-certificate')
+          @if($certificate->certificate_type == 'heir-certificate')
             @include('dashboard.certificates.forms.heir-certificate')
           @endif
         </div>
