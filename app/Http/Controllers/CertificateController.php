@@ -224,7 +224,7 @@ class CertificateController extends Controller
         $certificate->status = 1;
         $certificate->save()
         Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
-        return view('dashboard.certificates.list')->withCertificates($certificates);
+        return redirect()->route('dashboard.certificates.list');
     }
 
     public function getCertificateList()
