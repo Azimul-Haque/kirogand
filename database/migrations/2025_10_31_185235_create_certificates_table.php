@@ -16,7 +16,7 @@ class CreateCertificatesTable extends Migration
         Schema::create('certificates', function (Blueprint $table) {
             $table->id();
             // This links to your main users table
-            $table->foreignId('recipient_user_id')->constrained('users')->onDelete('cascade'); 
+            $table->foreignId('recipient_user_id')->nullable()->constrained('users')->onDelete('cascade'); 
             
             // Key fields for lookup and template selection
             $table->string('certificate_type', 50)->comment('e.g., birth_standard, academic_transcript, etc.');
