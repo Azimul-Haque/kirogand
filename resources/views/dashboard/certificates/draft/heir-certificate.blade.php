@@ -152,7 +152,7 @@
                 <button type="button" class="btn btn-warning" onclick="window.print()">
                     <i class="fas fa-print"></i> সংশোধন করুন
                 </button>
-                <button type="button" class="btn btn-success" onclick="window.print()">
+                <button type="button" class="btn btn-success no-print" onclick="window.print()">
                     <i class="fas fa-print"></i> অনুমোদন করুন
                 </button>
                 <!-- Add your edit/approve/reject buttons here -->
