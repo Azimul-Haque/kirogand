@@ -14,7 +14,7 @@
         left: 50%;
         transform: translate(-50%, -50%) rotate(-45deg);
         color: rgba(220, 53, 69, 0.15); /* Semi-transparent red */
-        font-size: 100px;
+        font-size: 120px;
         font-weight: bold;
         pointer-events: none;
         user-select: none;
