@@ -75,7 +75,7 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="union">ইউনিয়ন / পৌরসভা <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('union') is-invalid @enderror" id="union" name="union" value="{{ Auth::user()->localOffice->name_bn }}" placeholder="" required>
+                    <input type="text" class="form-control @error('union') is-invalid @enderror" id="union" name="union" value="{{ Auth::user()->localOffice->name_bn }}" placeholder="ইউনিয়ন / পৌরসভা" required>
                     @error('union') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
