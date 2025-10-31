@@ -162,9 +162,9 @@ class CertificateController extends Controller
         return view('dashboard.certificates.edit')->withCertificate($certificate);
     }
 
-    public function updateCertificate(Request $request, $unique_serial)
+    public function updateCertificate(Request $request, $id)
     {
-        // dd($request->all());
+        
         $validatedData = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'father' => ['required', 'string', 'max:255'],
