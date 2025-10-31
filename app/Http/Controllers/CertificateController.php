@@ -90,7 +90,7 @@ class CertificateController extends Controller
             }
         }
 
-        return view('dashboard.certificate_form', [
+        return view('dashboard.certificates.forms.create', [
             'selectedType' => $selectedType,
             'schema' => $schema,
             'allSchemas' => $availableSchemas,
