@@ -650,7 +650,7 @@ class DashboardController extends Controller
             }
 
             $image      = $request->file('monogram');
-            $filename   = strtolower($localoffice->office_type) . '-monogram-' . time() . '.' . "webp";
+            $filename   = strtolower($localoffice->office_type) . '-monogram-' . time() . '.' . "png";
             $location   = public_path('images/localoffices/' . $filename);
             Image::make($image)->fit(300, 300)->save($location);
             $localoffice->monogram = $filename;
