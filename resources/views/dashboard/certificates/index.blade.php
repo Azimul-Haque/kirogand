@@ -107,7 +107,7 @@
             <a href="{{ route('dashboard.certificates.certificate_type', 'citizen-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-user-check"></i></div> 
-                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">নাগরিকত্ব সনদপত্র</h3>
+                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">নাগরিকত্ব সনদ</h3>
                 </div>
             </a>
         </div>
