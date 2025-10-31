@@ -271,7 +271,7 @@
                             সনদটি যাচাই করতে QR CODE টি স্ক্যান করুন<br/>
                             অথবা www.dnagorik.com ভিজিট করুন এই আইডিটি যাচাই করুন: {{ $certificate->unique_serial ?? '--' }}
                         </span>
-                        <p style="font-size: 10px; margin-top: 10px; line-height: 1.5;">
+                        <p style="font-size: 10px; margin-top: 20px; line-height: 1.5;">
                             বি:দ্র: তথ্য গোপন বা ভুল দিলে আবেদনকারী দায়ী থাকবেন, কর্তৃপক্ষ দায়ী নয়, সনদ বাতিলযোগ্য।
                         </p>
                     </td>
