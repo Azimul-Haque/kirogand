@@ -5,7 +5,7 @@
     <style>
         /* The 'kalpurush' font must be available on your PDF generation server (e.g., installed on mPDF) */
         body {
-            font-family: 'kalpurush', sans-serif;
+            font-family: 'HindSiliguri', sans-serif;
             color: #333;
         }
 
