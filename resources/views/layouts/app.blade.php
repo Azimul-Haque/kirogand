@@ -169,7 +169,10 @@
 <script src="{{ asset('js/pace.min.js') }}"></script>
 <script>
     Pace.restart();
-    
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+      $("[rel='tooltip']").tooltip();
+    });
     
     function bangla(str) {
       // English to Bangla digits
