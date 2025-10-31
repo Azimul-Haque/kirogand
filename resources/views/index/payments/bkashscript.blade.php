@@ -88,47 +88,6 @@
                     } else {
                         bKash.create().onError();
                     }
-
-                    const iframe = document.querySelector('iframe[name="bKash_checkout_app"]');
-                                const status = document.getElementById('statusMessage');
-
-                                if (!iframe) {
-                                     status.innerHTML = '<span class="text-red-600">Error: Iframe with name "bKash_checkout_app" not found in the DOM.</span>';
-                                     return;
-                                }
-
-                                // Attach the function to the iframe's load event
-                                iframe.onload = function() {
-                                    try {
-                                        // 1. Get the iframe's content document
-                                        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-
-                                        if (!iframeDocument) {
-                                            status.innerHTML = '<span class="text-red-600">Error: Could not access iframe document. (Is it cross-origin?)</span>';
-                                            return;
-                                        }
-
-                                        // 2. Query for the target element *within* the iframe's document
-                                        const targetElement = iframeDocument.querySelector('.merchant__details__name');
-                                        
-                                        if (targetElement) {
-                                            // 3. Update the text content and style
-                                            targetElement.textContent = 'D-Nagorik Payment';
-                                            targetElement.style.color = '#10b981'; // Tailwind green-500
-                                            status.innerHTML = '<span class="text-green-600">Status: Successfully updated element inside iframe!</span>';
-                                            console.log('Iframe content successfully updated.');
-                                        } else {
-                                            status.innerHTML = '<span class="text-red-600">Error: Target element (.merchant__details__name) not found inside iframe.</span>';
-                                            console.error('Target element not found inside iframe.');
-                                        }
-
-                                    } catch (error) {
-                                        // This catches the security error if the iframe is cross-origin
-                                        status.innerHTML = `<span class="text-red-600">Error: Same-Origin Policy violation. Cannot access content (is it on a different domain?): ${error.message}</span>`;
-                                        console.error('Security Error (Same-Origin Policy violation):', error);
-                                    }
-                                };
-                    
                 },
                 error: function (err) {
                     hideLoading();
