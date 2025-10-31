@@ -111,7 +111,7 @@
     <tr class="heir-row" data-row-id="__INDEX__">
         <td><span class="row-number">1</span></td>
         <td>
-            <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][name]" placeholder="Heir Name" required>
+            <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][name]" placeholder="ওয়ারিশের নাম" required>
         </td>
         <td>
             <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][relation]" placeholder="e.g., Son, Wife" required>
