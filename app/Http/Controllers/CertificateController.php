@@ -164,7 +164,6 @@ class CertificateController extends Controller
 
     public function updateCertificate(Request $request, $id)
     {
-        
         $validatedData = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'father' => ['required', 'string', 'max:255'],
