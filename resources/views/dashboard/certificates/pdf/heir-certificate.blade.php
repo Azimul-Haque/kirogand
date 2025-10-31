@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>সনদ | PDF Download</title>
+    <title>ওয়ারিশান সনদপত্র | PDF Download</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
         /* The 'kalpurush' font must be available on your PDF generation server (e.g., installed on mPDF) */
@@ -17,6 +17,21 @@
             background-position: center center;
             /* Reduced top/bottom margin for better content display */
             margin: 40px 60px 50px 60px;
+        }
+
+        /* --- Custom Styles for Certificate Layout --- */
+
+        .draft-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            color: rgba(255, 0, 0, 0.2);
+            font-size: 100px;
+            font-weight: bold;
+            z-index: 1000;
+            width: 100%;
+            text-align: center;
         }
 
         .header-table {
@@ -62,7 +77,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 25px;
-            font-size: 14px;
+            font-size: 13px;
         }
         .beneficiary-table th, .beneficiary-table td {
             border: 1px solid #999;
@@ -80,7 +95,7 @@
             width: 100%;
         }
         .signature-block td {
-            width: 33.33%;
+            width: 25%; /* Four columns for signatures */
             text-align: center;
             font-size: 14px;
             padding-top: 15px;
@@ -100,26 +115,33 @@
 </head>
 <body>
 
+    {{-- Data Extraction (Replicating the PHP block from your input) --}}
+    @php
+        // Accessing the payload from the certificate object
+        $payload = $certificate->data_payload ?? [];
+        $applicant = $payload['applicant'] ?? [];
+        $heirs = $payload['heirs'] ?? [];
+
+        // Placeholder/Default Union Info (Adjust these paths/defaults as needed for your specific app)
+        $union_info = $certificate['union_info'] ?? [
+            'union_name' => '০২ নং ইপ্রোত্তয়ন ইউনিয়ন', 'upazila' => 'নাগরপুর', 'district' => 'টাঙ্গাইল',
+            'chairman_name' => 'নজরুল ইসলাম', 'email' => 'admin@eprottyon.com', 'phone' => '০১৭০০০০০০০০',
+        ];
+
+        // Conditional Draft Watermark
+        $is_draft = ($certificate->status ?? 0) == 0;
+    @endphp
+
+    @if ($is_draft)
+        <div class="draft-watermark">খসড়া খসড়া খসড়া</div>
+    @endif
+
     {{-- HEADER CONTENT - Modified to fit the certificate image --}}
     <htmlpageheader name="page-header">
-        @php
-            // Extract the applicant data for easier access (assuming it's nested)
-            $applicant = $certificate['applicant'] ?? [
-                'name' => 'রফিক মিয়া', 'father' => 'করিম মিয়া', 'mother' => 'রহিমা বেগম',
-                'village' => 'শংকরপুর', 'ward' => bangla(7), 'paurashava' => 'কালিকাকা-০৩৮০',
-                'union' => 'ইপ্রোত্তয়ন', 'upazila' => 'নাগরপুর', 'district' => 'টাঙ্গাইল',
-            ];
-            // Placeholder data for Union information (if not in $certificate)
-            $union_info = $certificate['union_info'] ?? [
-                'union_name' => '০২ নং ইপ্রোত্তয়ন ইউনিয়ন', 'upazila' => 'নাগরপুর', 'district' => 'টাঙ্গাইল',
-                'chairman_name' => 'নজরুল ইসলাম', 'email' => 'admin@eprottyon.com', 'phone' => '০১৭০০০০০০০০',
-            ];
-        @endphp
-
-        <table >
+        <table class="header-table">
             <tr>
                 <td style="width: 30%;">
-                    {{-- Logo/Flag Left --}}
+                    {{-- Logo/Flag Left (Assuming you have an image path for the flag) --}}
                     <img src="{{ public_path('images/bangladesh-flag.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
                 </td>
                 <td style="width: 40%; text-align: center;">
@@ -146,11 +168,11 @@
         {{-- Certificate Metadata --}}
         <table style="width: 100%; margin-top: 5px;">
             <tr>
-                <td style="text-align: left; font-size: 14px;">সনদ নং- **{{ $certificate['cert_id'] ?? '০৪৫৮২৭' }}**</td>
-                <td style="text-align: right; font-size: 14px;">ইস্যুর তারিখ : **{{ $certificate['issue_date'] ?? '০৪-০৭-২০২৪' }}**</td>
+                <td style="text-align: left; font-size: 14px;">সনদ নং- **{{ $certificate->unique_serial ?? 'N/A' }}**</td>
+                <td style="text-align: right; font-size: 14px;">ইস্যুর তারিখ : **{{ $certificate->issue_date ?? ($applicant['submission_timestamp'] ?? 'N/A') }}**</td>
             </tr>
             <tr>
-                <td colspan="2" style="text-align: right; font-size: 14px;">প্রদানের তারিখ: **{{ $certificate['grant_date'] ?? '১০-০৮-২০২৫' }}**</td>
+                <td colspan="2" style="text-align: right; font-size: 14px;">প্রদানের তারিখ: **{{ $certificate->grant_date ?? 'N/A' }}**</td>
             </tr>
         </table>
 
@@ -159,15 +181,15 @@
             ওয়ারিশান সনদ
         </div>
 
-        {{-- Introduction Paragraph --}}
+        {{-- Introduction Paragraph (Using Applicant Data) --}}
         <p class="info-paragraph">
-            এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাইতেছে যে, **{{ $applicant['name'] }}**, পিতা: **{{ $applicant['father'] }}**, মাতা: **{{ $applicant['mother'] }}**,
-            গ্রাম: **{{ $applicant['village'] }}**, ওয়ার্ড: **{{ $applicant['ward'] }}**, ডাকঘর: **{{ $applicant['paurashava'] }}**, ইউনিয়ন: **{{ $applicant['union'] }}**, উপজেলা: **{{ $applicant['upazila'] }}**,
-            জেলা: **{{ $applicant['district'] }}**। তিনি আমার ইউনিয়নের **{{ $applicant['ward'] }}** নং ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
+            এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাইতেছে যে, **{{ $applicant['name'] ?? 'N/A' }}**, পিতা: **{{ $applicant['father'] ?? 'N/A' }}**, মাতা: **{{ $applicant['mother'] ?? 'N/A' }}**,
+            গ্রাম: **{{ $applicant['village'] ?? 'N/A' }}**, ওয়ার্ড: **{{ $applicant['ward'] ?? 'N/A' }}**, ডাকঘর: **{{ $applicant['post_office'] ?? 'N/A' }}**, ইউনিয়ন: **{{ $applicant['union'] ?? 'N/A' }}**, উপজেলা: **{{ $applicant['upazila'] ?? 'N/A' }}**,
+            জেলা: **{{ $applicant['district'] ?? 'N/A' }}**। তিনি আমার ইউনিয়নের **{{ $applicant['ward'] ?? 'N/A' }}** নং ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
             মতে তিনি নিম্ন লিখিত ওয়ারিশান হিসাবে রেখে মৃত্যু বরণ করেন:
         </p>
 
-        {{-- Beneficiary Table --}}
+        {{-- Beneficiary Table (Using Heirs Data) --}}
         <div style="text-align: center; margin-bottom: 5px; font-weight: bold; font-size: 14px; margin-top: 30px;">
             ওয়ারিশগণের নাম
         </div>
@@ -183,37 +205,20 @@
                 </tr>
             </thead>
             <tbody>
-                {{-- Loop over the actual beneficiaries data passed to the template --}}
-                @foreach($certificate['beneficiaries'] ?? [] as $beneficiary)
+                @forelse ($heirs as $index => $heir)
                     <tr>
-                        <td>{{ bangla($beneficiary['id']) }}</td>
-                        <td>{{ $beneficiary['name'] }}</td>
-                        <td>{{ $beneficiary['relation'] }}</td>
-                        <td>{{ $beneficiary['voter_id'] }}</td>
-                        <td>{{ $beneficiary['dob'] }}</td>
-                        <td>{{ $beneficiary['remarks'] }}</td>
+                        <td>{{ bangla($index + 1) }}</td>
+                        <td>{{ $heir['name'] ?? '--' }}</td>
+                        <td>{{ $heir['relation'] ?? '--' }}</td>
+                        <td>{{ $heir['id_data'] ?? '--' }}</td> {{-- Mapping ID No. to the 'ভোটার আইডি' column --}}
+                        <td>{{ $heir['dob'] ?? '--' }}</td>
+                        <td>{{ $heir['remark'] ?? '--' }}</td>
                     </tr>
-                @endforeach
-
-                @if(empty($certificate['beneficiaries']))
-                {{-- Placeholder rows if no actual data is present --}}
+                @empty
                     <tr>
-                        <td>{{ bangla(1) }}</td>
-                        <td>কল্পনা</td>
-                        <td>মেয়ে</td>
-                        <td>১০১২২৫২৫৩৩২৫</td>
-                        <td>২৫/১১/১৯৯৯</td>
-                        <td></td>
+                        <td colspan="6" style="color: red;">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
                     </tr>
-                    <tr>
-                        <td>{{ bangla(2) }}</td>
-                        <td>সুরজ</td>
-                        <td>ছেলে</td>
-                        <td>১০১২৩৫২৪৪৭৯৩</td>
-                        <td>০৫/০৭/১৯৯২</td>
-                        <td></td>
-                    </tr>
-                @endif
+                @endforelse
             </tbody>
         </table>
 
