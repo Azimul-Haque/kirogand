@@ -73,7 +73,7 @@
             <!-- ২. ওয়ারিশগণের তালিকা -->
             <h4 class="mb-4 text-success">ওয়ারিশগণের তালিকা</h4>
 
-            <table class="table table-bordered table-condensed" id="heirs-table">
+            <table class="table table-bordered table-striped" id="heirs-table">
                 <thead class="bg-success">
                     <tr>
                         <th style="width: 1%;">ক্রমিক নং</th>
