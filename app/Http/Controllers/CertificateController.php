@@ -73,7 +73,7 @@ class CertificateController extends Controller
 
     public function storeCertificate(Request $requests, $certificate_type)
     {
-        dd($requests->all());
+        // dd($requests->all());
         $validatedData = $request->validate([
         'name' => ['required', 'string', 'max:255'],
         'father' => ['required', 'string', 'max:255'],
