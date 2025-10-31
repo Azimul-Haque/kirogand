@@ -134,14 +134,14 @@
                                   </div>
                                 </div>
 
-                                
+
 
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="input-group mb-3">
                                       <input type="text"
-                                             name="mobile"
-                                             value="{{ $localoffice->mobile }}"
+                                             name="amount"
+                                             value="{{ $localoffice->amount }}"
                                              autocomplete="off"
                                              class="form-control"
                                              placeholder="মোবাইল নম্বর (১১ ডিজিট)" required>
