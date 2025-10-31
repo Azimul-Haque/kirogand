@@ -236,7 +236,7 @@
         </table>
 
         {{-- Closing Remark --}}
-        <p class="info-paragraph" style="margin-top: 30px;">
+        <p class="info-paragraph" style="margin-top: 15px;">
             আমি তার বিদেহি আত্মার মাগফিরাত/শান্তি ও জীবনদের সার্বিক উন্নতি ও মঙ্গল কামনা করছি।
         </p>
 
