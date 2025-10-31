@@ -197,7 +197,7 @@
 
         {{-- Introduction Paragraph (Using Applicant Data) --}}
         <p class="info-paragraph">
-            এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাইতেছে যে, {{ $applicant['name'] ?? 'N/A' }}, পিতা: {{ $applicant['father'] ?? 'N/A' }}, মাতা: {{ $applicant['mother'] ?? 'N/A' }},
+            এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাচ্ছে যে, {{ $applicant['name'] ?? 'N/A' }}, পিতা: {{ $applicant['father'] ?? 'N/A' }}, মাতা: {{ $applicant['mother'] ?? 'N/A' }},
             গ্রাম: {{ $applicant['village'] ?? 'N/A' }}, ওয়ার্ড: {{ $applicant['ward'] ?? 'N/A' }}, ডাকঘর: {{ $applicant['post_office'] ?? 'N/A' }}, ইউনিয়ন: {{ $applicant['union'] ?? 'N/A' }}, উপজেলা: {{ $applicant['upazila'] ?? 'N/A' }},
             জেলা: {{ $applicant['district'] ?? 'N/A' }}। তিনি আমার ইউনিয়নের {{ $applicant['ward'] ?? 'N/A' }} নং ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
             মতে তিনি নিম্ন লিখিত ওয়ারিশান হিসাবে রেখে মৃত্যু বরণ করেন:
