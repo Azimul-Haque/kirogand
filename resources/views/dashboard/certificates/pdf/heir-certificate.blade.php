@@ -155,7 +155,7 @@
             </td>
             <td style="width: 30%; text-align: right;">
                 @php
-                    $image_path = public_path('images/localoffices/'. $certificate->user->localOffice->monogram);
+                    $image_path = public_path('images/localoffices/'. $certificate->recipient->localOffice->monogram);
                     if(File::exists($image_path)) {
                         File::delete($image_path);
                     }
