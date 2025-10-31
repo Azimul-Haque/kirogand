@@ -103,7 +103,7 @@
             </a>
         </div>
 
-        <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="2">
             <a href="{{ route('dashboard.certificates.certificate_type', 'citizen-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-user-check"></i></div> 
@@ -112,7 +112,7 @@
             </a>
         </div>
 
-        <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="3">
             <a href="{{ route('dashboard.certificates.certificate_type', 'permanent-resident') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #795548;"><i class="fas fa-house-user"></i></div> 
@@ -130,7 +130,7 @@
             </a>
         </div>
 
-        <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
             <a href="{{ route('dashboard.certificates.certificate_type', 'character-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #ff9800;"><i class="fas fa-user-shield"></i></div> 
