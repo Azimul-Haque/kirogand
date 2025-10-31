@@ -113,7 +113,7 @@
         }
         .qr-code-section {
             width: 100%;
-            margin-top: 40px;
+            margin-top: 30px;
         }
 
     </style>
