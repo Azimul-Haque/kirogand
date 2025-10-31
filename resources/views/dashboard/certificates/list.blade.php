@@ -81,11 +81,11 @@
                                   {{ $certificate->issued_at ? \Carbon\Carbon::parse($certificate->issued_at)->format('d-m-Y') : 'N/A' }}
                               </td>
                               <td>
-                                <a href="{{ route('dashboard.certificates.draft', $certificate->unique_serial) }}" class="btn btn-info" title="দেখুন/ড্রাফট">
+                                <a href="{{ route('dashboard.certificates.draft', $certificate->unique_serial) }}" class="btn btn-info btn-sm" title="দেখুন/ড্রাফট">
                                     <i class="fas fa-eye"></i>
                                 </a>
                                 @if ($certificate->status == 0)
-                                    <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning" title="সম্পাদনা">
+                                    <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning btn-sm" title="সম্পাদনা">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 @endif
