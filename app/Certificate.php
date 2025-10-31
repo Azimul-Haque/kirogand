@@ -20,9 +20,9 @@ class Certificate extends Model
      */
     protected $fillable = [
         'local_office_id',
-        'certificate_type',
+        'certificate_type'
+        'recipient_user_id',,
         'status',
-        'recipient_user_id',
         'unique_serial',
         'data_payload',
         'issued_at',
