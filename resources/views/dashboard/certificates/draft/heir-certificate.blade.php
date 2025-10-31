@@ -1,282 +1,201 @@
-<html>
-<head>
-    <title>ওয়ারিশান সনদপত্র | PDF Download</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-        /* The 'kalpurush' font must be available on your PDF generation server (e.g., installed on mPDF) */
-        body {
-            font-family: 'kalpurush', sans-serif;
-            color: #333;
-        }
+<style>
+    .draft-container {
+        position: relative;
+        padding: 20px;
+        border: 2px dashed #007bff; /* Primary color border */
+        border-radius: 10px;
+        background-color: #ffffff;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .draft-watermark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        color: rgba(220, 53, 69, 0.15); /* Semi-transparent red */
+        font-size: 120px;
+        font-weight: bold;
+        pointer-events: none;
+        user-select: none;
+        z-index: 10;
+    }
+    .certificate-info {
+        position: relative;
+        z-index: 20; /* Ensure text is above watermark */
+    }
+    .info-label {
+        font-weight: 600;
+        color: #495057;
+    }
+    .heir-table th {
+        background-color: #f8f9fa;
+    }
+</style>
 
-        @page {
-            /* Background image and margins from your original code */
-            background-image: url({{ public_path('images/logo-background.png') }});
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            /* Reduced top/bottom margin for better content display */
-            margin: 40px 60px 50px 60px;
-        }
+<div class="row">
+    <div class="col-lg-10 offset-lg-1">
+        <div class="card card-primary card-outline">
+            <div class="card-header no-print">
+                <h3 class="card-title">@if($certificate->status == 0) খসড়া @endif ওয়ারিশ সনদ</h3>
+                <div class="card-tools">
+                    <span class="badge @if($certificate->status == 0) badge-warning @else badge-success @endif">অবস্থা: {{ $certificate->status == 0 ? 'খসড়া' : 'অনুমোদিত' }}</span>
+                </div>
+            </div>
+            <div class="card-body">
 
-        /* --- Custom Styles for Certificate Layout --- */
+                @php
+                    // Check if data payload exists and is accessible
+                    $payload = $certificate->data_payload ?? null;
+                    $applicant = $payload['applicant'] ?? [];
+                    $heirs = $payload['heirs'] ?? [];
+                @endphp
 
-        .draft-watermark {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-            color: rgba(255, 0, 0, 0.2);
-            font-size: 100px;
-            font-weight: bold;
-            z-index: 1000;
-            width: 100%;
-            text-align: center;
-        }
+                @if ($payload)
+                    <div class="draft-container">
+                        @if($certificate->status == 0)<div class="draft-watermark">খসড়া খসড়া খসড়া</div>@endif
+                        <div class="certificate-info">
+                            <h4 class="text-center mb-4 text-primary">ওয়ারিশান সনদপত্র</h4>
+                            <hr>
 
-        .header-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 10px;
-        }
-        .header-table td {
-            vertical-align: top;
-            padding: 5px 0;
-            font-size: 14px;
-        }
+                            <!-- Applicant Information Section -->
+                            <h5 class="mb-3">আবেদনকারীর তথ্য (Applicant Details)</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><span class="info-label">নাম (Name):</span> {{ $applicant['name'] ?? 'N/A' }}</p>
+                                    <p><span class="info-label">পিতা (Father):</span> {{ $applicant['father'] ?? 'N/A' }}</p>
+                                    <p><span class="info-label">মাতা (Mother):</span> {{ $applicant['mother'] ?? 'N/A' }}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><span class="info-label">পরিচয়পত্র (ID Type):</span> {{ $applicant['id_type'] ?? 'N/A' }}</p>
+                                    <p><span class="info-label">পরিচয় নং (ID No.):</span> {{ $applicant['id_value'] ?? 'N/A' }}</p>
+                                    <p><span class="info-label">ইউনিয়ন/পৌরসভা:</span> {{ $applicant['union'] ?? 'N/A' }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p><span class="info-label">ঠিকানা (Address):</span>
+                                        গ্রাম: {{ $applicant['village'] ?? 'N/A' }},
+                                        ওয়ার্ড: {{ $applicant['ward'] ?? 'N/A' }},
+                                        পোস্ট অফিস: {{ $applicant['post_office'] ?? 'N/A' }}
+                                    </p>
+                                </div>
+                            </div>
 
-        .logo-box {
-            width: 120px;
-            height: 120px;
-            border: 1px solid #1a8b1a; /* Green border around e-Prottayon logo */
-            border-radius: 50%;
-            padding: 5px;
-            display: inline-block;
-        }
+                            <hr class="mt-4 mb-4">
 
-        .cert-title {
-            text-align: center;
-            background-color: #e5ffe5; /* Light green background */
-            border: 1px solid #c2e6c2;
-            padding: 10px 30px;
-            margin: 20px auto;
-            width: 40%;
-            border-radius: 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
+                            <!-- Heirs Data Section -->
+                            <h5 class="mb-3">ওয়ারিশগণের তালিকা (List of Heirs)</h5>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-sm heir-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 5%">ক্রমিক</th>
+                                            <th style="width: 25%">নাম</th>
+                                            <th style="width: 20%">সম্পর্ক</th>
+                                            <th style="width: 20%">জন্ম তারিখ</th>
+                                            <th style="width: 20%">পরিচয় নং</th>
+                                            <th style="width: 10%">মন্তব্য</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @forelse ($heirs as $index => $heir)
+                                            <tr>
+                                                <td>{{ bangla($index + 1) }}</td>
+                                                <td>{{ $heir['name'] ?? '--' }}</td>
+                                                <td>{{ $heir['relation'] ?? '--' }}</td>
+                                                <td>{{ $heir['dob'] ?? '--' }}</td>
+                                                <td>{{ $heir['id_data'] ?? '--' }}</td>
+                                                <td>{{ $heir['remark'] ?? '--' }}</td>
+                                            </tr>
+                                        @empty
+                                            <tr>
+                                                <td colspan="6" class="text-center text-danger">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
+                                            </tr>
+                                        @endforelse
+                                    </tbody>
+                                </table>
+                            </div>
 
-        .info-paragraph {
-            line-height: 1.8;
-            text-align: justify;
-            margin-top: 20px;
-            font-size: 15px;
-        }
+                            <hr class="mt-4">
 
-        .beneficiary-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 25px;
-            font-size: 13px;
-        }
-        .beneficiary-table th, .beneficiary-table td {
-            border: 1px solid #999;
-            padding: 8px 10px;
-            text-align: center;
-        }
-        .beneficiary-table th {
-            background-color: #4472C4; /* Blue header background */
-            color: white;
-            font-weight: normal;
-        }
+                            <!-- Footer/Signature Placeholder -->
+                            {{-- <div class="row mt-5">
+                                <div class="col-4 text-center">
+                                    <p class="border-top pt-2">আবেদনকারীর স্বাক্ষর</p>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <p class="border-top pt-2">চেয়ারম্যান/মেয়র/কর্তৃপক্ষের স্বাক্ষর</p>
+                                </div>
+                            </div> --}}
 
-        .signature-block {
-            margin-top: 50px;
-            width: 100%;
-        }
-        .signature-block td {
-            width: 25%; /* Four columns for signatures */
-            text-align: center;
-            font-size: 14px;
-            padding-top: 15px;
-        }
-        .signature-line {
-            border-top: 1px dashed #666;
-            width: 80%;
-            margin: 0 auto;
-            margin-top: 5px;
-        }
-        .qr-code-section {
-            width: 100%;
-            margin-top: 40px;
-        }
-
-    </style>
-</head>
-<body>
-
-    {{-- Data Extraction (Replicating the PHP block from your input) --}}
-    @php
-        // Accessing the payload from the certificate object
-        $payload = $certificate->data_payload ?? [];
-        $applicant = $payload['applicant'] ?? [];
-        $heirs = $payload['heirs'] ?? [];
-
-        // Placeholder/Default Union Info (Adjust these paths/defaults as needed for your specific app)
-        $union_info = $certificate['union_info'] ?? [
-            'union_name' => '০২ নং ইপ্রোত্তয়ন ইউনিয়ন', 'upazila' => 'নাগরপুর', 'district' => 'টাঙ্গাইল',
-            'chairman_name' => 'নজরুল ইসলাম', 'email' => 'admin@eprottyon.com', 'phone' => '০১৭০০০০০০০০',
-        ];
-
-        // Conditional Draft Watermark
-        $is_draft = ($certificate->status ?? 0) == 0;
-    @endphp
-
-    @if ($is_draft)
-        <div class="draft-watermark">খসড়া খসড়া খসড়া</div>
-    @endif
-
-    {{-- HEADER CONTENT - Modified to fit the certificate image --}}
-    <htmlpageheader name="page-header">
-        <table class="header-table">
-            <tr>
-                <td style="width: 30%;">
-                    {{-- Logo/Flag Left (Assuming you have an image path for the flag) --}}
-                    <img src="{{ public_path('images/bangladesh-flag.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
-                </td>
-                <td style="width: 40%; text-align: center;">
-                    <span style="font-size: 14px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span><br/>
-                    <span style="font-size: 18px; font-weight: bold;">{{ $union_info['union_name'] }}</span><br/>
-                    <span style="font-size: 13px;">উপজেলা : {{ $union_info['upazila'] }}, জেলা : {{ $union_info['district'] }}।</span><br/>
-                    <span style="font-size: 13px;">চেয়ারম্যান : মো: {{ $union_info['chairman_name'] }}</span><br/>
-                    <span style="font-size: 13px;">ইমেইল : {{ $union_info['email'] }}</span><br/>
-                    <span style="font-size: 13px;">ফোন নম্বর : {{ $union_info['phone'] }}</span>
-                </td>
-                <td style="width: 30%; text-align: right;">
-                    {{-- e-Prottayon Logo Right --}}
-                    <div class="logo-box" style="float: right;">
-                         <img src="{{ public_path('images/eprottyon-logo.png') }}" style="height: 100%; width: 100%; object-fit: contain;">
+                            <small class="d-block text-right text-muted mt-3">
+                                আবেদনের সিরিয়াল: {{ $certificate->unique_serial ?? 'N/A' }} |
+                                জমা দেওয়ার সময়: {{ $certificate->data_payload['submission_timestamp'] ?? 'N/A' }}
+                            </small>
+                        </div>
                     </div>
-                </td>
-            </tr>
-        </table>
-        <div style="border-top: 2px solid green; margin-top: 5px;"></div>
-    </htmlpageheader>
+                @else
+                    <div class="alert alert-danger">
+                        Certificate data payload is missing or invalid.
+                    </div>
+                @endif
 
-    {{-- CERTIFICATE BODY --}}
-    <div>
-        {{-- Certificate Metadata --}}
-        <table style="width: 100%; margin-top: 5px;">
-            <tr>
-                <td style="text-align: left; font-size: 14px;">সনদ নং- **{{ $certificate->unique_serial ?? 'N/A' }}**</td>
-                <td style="text-align: right; font-size: 14px;">ইস্যুর তারিখ : **{{ $certificate->issue_date ?? ($applicant['submission_timestamp'] ?? 'N/A') }}**</td>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align: right; font-size: 14px;">প্রদানের তারিখ: **{{ $certificate->grant_date ?? 'N/A' }}**</td>
-            </tr>
-        </table>
+            </div>
+            <div class="card-footer text-right">
+                <button type="button" class="btn btn-info no-print" onclick="window.print()">
+                    <i class="fas fa-print"></i> খসড়া প্রিন্ট
+                </button>
+                <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning no-print">
+                    <i class="fas fa-pen"></i> সংশোধন করুন
+                </a>
+                
 
-        {{-- Certificate Title --}}
-        <div class="cert-title">
-            ওয়ারিশান সনদ
+                <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
+                    @csrf
+                    <button type="button" class="btn btn-success no-print" onclick="return confirmSubmission(event);">
+                        <i class="fas fa-check"></i> অনুমোদন করুন
+                    </button>
+                </form>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+                <script type="text/javascript">
+                  const ToastAprv = Swal.mixin({
+                    toast: false,
+                    position: 'center',
+                    showConfirmButton: true,
+                    showCancelButton: true,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                  })
+
+                  function confirmSubmission(event) {
+                      event.preventDefault(); // Prevent default form submission
+
+                      Swal.fire({
+                          title: 'আপনি কি নিশ্চিত?',
+                          text: 'এই সনদটি অনুমোদন করা হবে।',
+                          icon: 'warning',
+                          showCancelButton: true,
+                          confirmButtonText: 'অনুমোদন করুন',
+                          cancelButtonText: 'ফিরে যান',
+                          reverseButtons: true
+                      }).then((result) => {
+                          if (result.isConfirmed) {
+                              // If confirmed, manually submit the form
+                              document.getElementById('approveForm{{ $certificate->id }}').submit();
+                          }
+                      });
+
+                      return false; // Prevent default submission initially
+                  }
+                </script>
+            </div>
         </div>
-
-        {{-- Introduction Paragraph (Using Applicant Data) --}}
-        <p class="info-paragraph">
-            এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাইতেছে যে, **{{ $applicant['name'] ?? 'N/A' }}**, পিতা: **{{ $applicant['father'] ?? 'N/A' }}**, মাতা: **{{ $applicant['mother'] ?? 'N/A' }}**,
-            গ্রাম: **{{ $applicant['village'] ?? 'N/A' }}**, ওয়ার্ড: **{{ $applicant['ward'] ?? 'N/A' }}**, ডাকঘর: **{{ $applicant['post_office'] ?? 'N/A' }}**, ইউনিয়ন: **{{ $applicant['union'] ?? 'N/A' }}**, উপজেলা: **{{ $applicant['upazila'] ?? 'N/A' }}**,
-            জেলা: **{{ $applicant['district'] ?? 'N/A' }}**। তিনি আমার ইউনিয়নের **{{ $applicant['ward'] ?? 'N/A' }}** নং ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
-            মতে তিনি নিম্ন লিখিত ওয়ারিশান হিসাবে রেখে মৃত্যু বরণ করেন:
-        </p>
-
-        {{-- Beneficiary Table (Using Heirs Data) --}}
-        <div style="text-align: center; margin-bottom: 5px; font-weight: bold; font-size: 14px; margin-top: 30px;">
-            ওয়ারিশগণের নাম
-        </div>
-        <table class="beneficiary-table">
-            <thead>
-                <tr>
-                    <th style="width: 8%;">ক্রমিক নং</th>
-                    <th style="width: 25%;">নাম</th>
-                    <th style="width: 15%;">সম্পর্ক</th>
-                    <th style="width: 25%;">ভোটার আইডি/জন্ম সনদ</th>
-                    <th style="width: 15%;">জন্ম তারিখ</th>
-                    <th style="width: 12%;">মন্তব্য</th>
-                </tr>
-            </thead>
-            <tbody>
-                @forelse ($heirs as $index => $heir)
-                    <tr>
-                        <td>{{ bangla($index + 1) }}</td>
-                        <td>{{ $heir['name'] ?? '--' }}</td>
-                        <td>{{ $heir['relation'] ?? '--' }}</td>
-                        <td>{{ $heir['id_data'] ?? '--' }}</td> {{-- Mapping ID No. to the 'ভোটার আইডি' column --}}
-                        <td>{{ $heir['dob'] ?? '--' }}</td>
-                        <td>{{ $heir['remark'] ?? '--' }}</td>
-                    </tr>
-                @empty
-                    <tr>
-                        <td colspan="6" style="color: red;">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
-                    </tr>
-                @endforelse
-            </tbody>
-        </table>
-
-        {{-- Closing Remark --}}
-        <p class="info-paragraph" style="margin-top: 30px;">
-            আমি তার বিদেহি আত্মার মাগফিরাত/শান্তি ও জীবনদের সার্বিক উন্নতি ও মঙ্গল কামনা করছি।
-        </p>
-
-        {{-- Signature and Seal Block --}}
-        <table class="signature-block">
-            <tr>
-                <td>
-                    <div style="padding-top: 15px;">কায়ালয়াল সীল</div>
-                </td>
-                <td>
-                    <div style="padding-top: 15px;">যাচাইকারী স্বাক্ষর</div>
-                    <div class="signature-line"></div>
-                </td>
-                <td>
-                    <div style="padding-top: 15px;">প্রস্তুতকারীর সীল ও স্বাক্ষর</div>
-                    <div class="signature-line"></div>
-                </td>
-                <td>
-                    <div style="padding-top: 15px;">অনুমোদনকারীর সীল ও স্বাক্ষর</div>
-                    <div class="signature-line"></div>
-                </td>
-            </tr>
-        </table>
-
-        {{-- QR Code and Verification Text --}}
-        <div class="qr-code-section">
-            <table style="width: 100%;">
-                <tr>
-                    <td style="width: 20%;">
-                        {{-- Placeholder for QR Code image --}}
-                        <img src="{{ public_path('images/qrcode-placeholder.png') }}" style="width: 100px; height: 100px;">
-                    </td>
-                    <td style="width: 80%; padding-left: 20px;">
-                        <span style="font-weight: bold; font-size: 14px;">
-                            সনদটি যাচাই করতে আপনার মোবাইলে থাকা QR CODE অ্যাপ দিয়ে স্ক্যান করুন<br/>
-                            অথবা ভিজিট করুন eprottyon.com
-                        </span>
-                        <p style="font-size: 10px; margin-top: 10px; line-height: 1.5;">
-                            বি:দ্র: তথ্য গোপন বা ভুল দিলে আবেদনকারী দায়ী থাকবেন, কর্তৃপক্ষ দায়ী নয়, সনদ বাতিলযোগ্য।
-                        </p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
     </div>
-
-    {{-- FOOTER CONTENT - Re-used from your original code --}}
-    <htmlpagefooter name="page-footer">
-        <small>ডাউনলোডের সময়কালঃ <span style="font-family: Calibri;">{{ date('F d, Y, h:i A') }}</span></small><br/>
-        <small style="font-family: Calibri; color: #4472C4;">Generated by: https://bcsexamaid.com | Download Android App: BCS Exam Aid – </small>
-        <small style="color: #4472C4;">বিসিএস এক্সাম</small>
-    </htmlpagefooter>
-
-</body>
-</html>
+</div>
