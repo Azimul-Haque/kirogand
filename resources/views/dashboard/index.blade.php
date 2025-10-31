@@ -74,7 +74,7 @@
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
-              <a href="{{ route('dashboard.users') }}" class="small-box-footer">ব্যবহারকারীগণ <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{ route('dashboard.local-offices') }}" class="small-box-footer">ব্যবহারকারীগণ <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>
