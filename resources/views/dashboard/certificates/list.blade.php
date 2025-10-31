@@ -245,7 +245,7 @@
                   setTimeout(() => {
                       $button.removeClass('btn-pulse');
                       console.log('Pulse animation stopped after 20 seconds.');
-                  }, 20000); 
+                  }, 1800); 
                   
               }, 50); // Small delay to force re-render
           } else {
