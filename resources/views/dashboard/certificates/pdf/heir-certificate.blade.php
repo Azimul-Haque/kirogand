@@ -154,8 +154,8 @@
                 <img src="{{ public_path('images/govt-logo.png') }}" style="height: 100px; width: auto; display: block; margin: 0 auto;">
             </td>
             <td style="width: 40%; text-align: center;">
-                <span style="font-size: 16px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span><br/>
-                <span style="font-size: 18px; font-weight: bold; color: #15803D;">{{ $union_info['union_name'] }}</span><br/>
+                <span style="font-size: 16px; line-height: 1.5;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span><br/>
+                <span style="font-size: 18px; font-weight: bold; color: #15803D; line-height: 1.5;">{{ $union_info['union_name'] }}</span><br/>
                 <span style="font-size: 14px;">উপজেলা: {{ $union_info['upazila'] }}, জেলা: {{ $union_info['district'] }}।</span><br/>
                 {{-- <span style="font-size: 14px;">চেয়ারম্যান: মো: {{ $union_info['chairman_name'] }}</span><br/> --}}
                 <span style="font-size: 14px;">ইমেইল: {{ $union_info['email'] }}</span><br/>
