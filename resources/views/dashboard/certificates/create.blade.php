@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title') ড্যাশবোর্ড | ইউনিয়ন/পৌরসভা @endsection
+@section('title') ড্যাশবোর্ড | সনদের আবেদন @endsection
 
 @section('third_party_stylesheets')
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css"> --}}
@@ -12,26 +12,26 @@
 @endsection
 
 @section('content')
-  @section('page-header') ইউনিয়ন/পৌরসভা @endsection
+  @section('page-header') সনদের আবেদন @endsection
   @section('page-header-right')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
-        <li class="breadcrumb-item active">ইউনিয়ন/পৌরসভা</li>
+        <li class="breadcrumb-item active">সনদের আবেদন</li>
     </ol>
   @endsection
     <div class="container-fluid">
       <div class="card">
           <div class="card-header">
-            <h3 class="card-title">ইউনিয়ন/পৌরসভা তালিকা (মোট: {{ $localofficescount }})</h3>
+            <h3 class="card-title">সনদের আবেদন তালিকা (মোট: {{ $localofficescount }})</h3>
 
             <div class="card-tools">
-              {{-- <button type="button" class="btn btn-success btn-sm"  data-toggle="modal" data-target="#addPackageModal" title="" rel="tooltip" data-original-title="ইউনিয়ন/পৌরসভা যোগ করুন">
-                <i class="fas fa-clipboard-check"></i> নতুন ইউনিয়ন/পৌরসভা
+              {{-- <button type="button" class="btn btn-success btn-sm"  data-toggle="modal" data-target="#addPackageModal" title="" rel="tooltip" data-original-title="সনদের আবেদন যোগ করুন">
+                <i class="fas fa-clipboard-check"></i> নতুন সনদের আবেদন
               </button> --}}
               <div class="card-tools">
                 <form class="form-inline form-group-lg" action="">
                   <div class="form-group">
-                    <input type="search-param" class="form-control form-control-sm" placeholder="ইউনিয়ন/পৌরসভা খুঁজুন" id="search-param" required>
+                    <input type="search-param" class="form-control form-control-sm" placeholder="সনদের আবেদন খুঁজুন" id="search-param" required>
                   </div>
                   <button type="button" id="search-button" class="btn btn-default btn-sm" style="margin-left: 5px;">
                     <i class="fas fa-search"></i> খুঁজুন
