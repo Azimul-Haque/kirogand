@@ -551,7 +551,7 @@ class DashboardController extends Controller
             'packageexpirydate' => 'nullable|date',
         ]);
 
-        $localoffice                    = LocalOffice::findOrFail($id);
+        $localoffice = LocalOffice::findOrFail($id);
         
         $payment = new Payment;
         $payment->local_office_id = 
