@@ -183,7 +183,7 @@
         <table style="width: 100%; margin-top: 5px;">
             <tr>
                 <td style="text-align: left; font-size: 14px;">সনদ নং- {{ $certificate->unique_serial ?? '--' }}</td>
-                <td style="text-align: right; font-size: 14px;">ইস্যুর তারিখ : {{ $certificate->issue_date ?? ($applicant['submission_timestamp'] ?? '--') }}</td>
+                <td style="text-align: right; font-size: 14px;">ইস্যুর তারিখ : {{ $certificate->issued_at ?? ($applicant['submission_timestamp'] ?? '--') }}</td>
             </tr>
             <tr>
                 <td colspan="2" style="text-align: right; font-size: 14px;">প্রদানের তারিখ: {{ bangla(date('d-m-Y')) ?? '--' }}</td>
