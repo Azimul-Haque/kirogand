@@ -138,30 +138,31 @@
 
     {{-- HEADER CONTENT - Modified to fit the certificate image --}}
     <htmlpageheader name="page-header">
-        <table class="header-table">
-            <tr>
-                <td style="width: 30%;">
-                    {{-- Logo/Flag Left (Assuming you have an image path for the flag) --}}
-                    <img src="{{ public_path('images/bangladesh-flag.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
-                </td>
-                <td style="width: 40%; text-align: center;">
-                    <span style="font-size: 14px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span><br/>
-                    <span style="font-size: 18px; font-weight: bold;">{{ $union_info['union_name'] }}</span><br/>
-                    <span style="font-size: 13px;">উপজেলা : {{ $union_info['upazila'] }}, জেলা : {{ $union_info['district'] }}।</span><br/>
-                    <span style="font-size: 13px;">চেয়ারম্যান : মো: {{ $union_info['chairman_name'] }}</span><br/>
-                    <span style="font-size: 13px;">ইমেইল : {{ $union_info['email'] }}</span><br/>
-                    <span style="font-size: 13px;">ফোন নম্বর : {{ $union_info['phone'] }}</span>
-                </td>
-                <td style="width: 30%; text-align: right;">
-                    {{-- e-Prottayon Logo Right --}}
-                    <div class="logo-box" style="float: right;">
-                         <img src="{{ public_path('images/eprottyon-logo.png') }}" style="height: 100%; width: 100%; object-fit: contain;">
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <div style="border-top: 2px solid green; margin-top: 5px;"></div>
+        
     </htmlpageheader>
+    <table class="header-table">
+        <tr>
+            <td style="width: 30%;">
+                {{-- Logo/Flag Left (Assuming you have an image path for the flag) --}}
+                <img src="{{ public_path('images/bangladesh-flag.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
+            </td>
+            <td style="width: 40%; text-align: center;">
+                <span style="font-size: 14px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span><br/>
+                <span style="font-size: 18px; font-weight: bold;">{{ $union_info['union_name'] }}</span><br/>
+                <span style="font-size: 13px;">উপজেলা : {{ $union_info['upazila'] }}, জেলা : {{ $union_info['district'] }}।</span><br/>
+                <span style="font-size: 13px;">চেয়ারম্যান : মো: {{ $union_info['chairman_name'] }}</span><br/>
+                <span style="font-size: 13px;">ইমেইল : {{ $union_info['email'] }}</span><br/>
+                <span style="font-size: 13px;">ফোন নম্বর : {{ $union_info['phone'] }}</span>
+            </td>
+            <td style="width: 30%; text-align: right;">
+                {{-- e-Prottayon Logo Right --}}
+                <div class="logo-box" style="float: right;">
+                     <img src="{{ public_path('images/eprottyon-logo.png') }}" style="height: 100%; width: 100%; object-fit: contain;">
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div style="border-top: 2px solid green; margin-top: 5px;"></div>
 
     {{-- CERTIFICATE BODY --}}
     <div>
