@@ -60,7 +60,6 @@
                       @forelse ($certificates as $certificate)
                           <tr>
                               <td>{{ $serial++ }}</td>
-                              {{-- Convert the slug to a more readable Bengali name --}}
                               <td>
                                   {{ checkcertificatetype($certificate->certificate_type) }}
                               </td>
