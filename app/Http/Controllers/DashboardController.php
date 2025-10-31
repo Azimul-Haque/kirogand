@@ -557,7 +557,7 @@ class DashboardController extends Controller
         $payment->local_office_id = $localoffice->id;
         $payment->package_id = 1; // এমনি দেওয়া
         $payment->payment_status = 1;
-        $payment->payment_status = 1;
+        $payment->card_type = 'manual';
 
         $localoffice->save();
 
