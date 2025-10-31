@@ -23,6 +23,7 @@ class Certificate extends Model
      */
     protected $fillable = [
         'certificate_type',
+        'status',
         'recipient_user_id',
         'unique_serial',
         'data_payload',
