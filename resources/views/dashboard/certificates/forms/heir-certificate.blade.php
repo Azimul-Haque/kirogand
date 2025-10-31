@@ -120,7 +120,7 @@
             <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][nid_birth_registration]" placeholder="এনআইডি/জন্ম নিবন্ধন">
         </td>
         <td>
-            <input type="date" class="form-control form-control-sm" name="heirs_data[__INDEX__][dob]" required>
+            <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][dob]" required>
         </td>
         <td>
             <input type="text" class="form-control form-control-sm" name="heirs_data[__INDEX__][remark]" placeholder="Notes">
