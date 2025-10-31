@@ -1,5 +1,5 @@
 <!-- resources/views/dashboard/certificate_form.blade.php -->
-<form method="POST" action="{{ route('certificates.store') }}">
+<form method="POST" action="{{ route('dashboard.certificates.store') }}">
     @csrf
 
     <!-- Load Tailwind CSS -->
