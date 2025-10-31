@@ -87,7 +87,6 @@
         
 
 
-        document.addEventListener('DOMContentLoaded', () => {
             // 1. SELECT THE IFRAME using the name attribute
             const iframe = document.querySelector('iframe[name="bKash_checkout_app"]');
             
@@ -117,5 +116,4 @@
                     console.error('Security Error (Same-Origin Policy violation):', error);
                 }
             };
-        });
     </script>
