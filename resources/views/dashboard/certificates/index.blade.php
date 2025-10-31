@@ -163,16 +163,7 @@
 
 
           
-        {{--   <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
-              <a href="/service/birth-certificate" class="text-decoration-none text-dark d-block">
-                  <div class="service-box">
-                      <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-baby"></i></div>
-                      <!-- BS5 'fw-bolder' becomes BS4 'font-weight-bold' -->
-                      <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">জন্ম নিবন্ধন সনদ</h3>
-                  </div>
-              </a>
-          </div>
-
+        {{--
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="2">
               <a href="/service/death-certificate" class="text-decoration-none text-dark d-block">
                   <div class="service-box">
@@ -181,6 +172,8 @@
                   </div>
               </a>
           </div>
+
+          
 
           <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="3">
               <a href="/service/income-certificate" class="text-decoration-none text-dark d-block">
