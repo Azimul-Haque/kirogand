@@ -46,7 +46,7 @@
 <li class="nav-item">
     <a href="{{ route('dashboard.certificates.list') }}" class="nav-link {{ Request::is('dashboard/certificates-list') ? 'active' : '' }} {{ Request::is('dashboard/certificates-list/*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-certificate"></i>
-        <p>সনদের আবেদনসমূহ</p>
+        <p>সনদ তালিকা</p>
     </a>
 </li>
 @endif
