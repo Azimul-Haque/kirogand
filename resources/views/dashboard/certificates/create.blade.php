@@ -21,7 +21,7 @@
     </ol>
   @endsection
     <div class="container-fluid">
-      {{-- @include('dashboard.certificates.forms.heir-certificate') --}}
+      @include('dashboard.certificates.forms.heir-certificate')
     </div>
 @endsection
 
