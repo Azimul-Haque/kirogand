@@ -228,7 +228,7 @@ class CertificateController extends Controller
         return redirect()->route('dashboard.certificates.list')->with('justapproved', $certificate->id);
     }
 
-    public function printCertificate(Request $request)
+    public function printCertificate($unique_serial)
     {
         if(Auth::user()->role == 'manager') {
             if (Auth::user()->is_active === 0) {
