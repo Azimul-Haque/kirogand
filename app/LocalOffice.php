@@ -43,4 +43,9 @@ class LocalOffice extends Model
     public function payments(){
         return $this->hasMany('App\Payment');
     }
+
+    public function certificates()
+    {
+        return $this->hasMany(Certificate::class);
+    }
 }
