@@ -85,5 +85,5 @@
 
 <script>
     const targetElement = document.querySelector('.merchant__details__name');
-    targetElement.textContent = 'D-Nagorik Payment';
+    targetElement.innerHtml = 'D-Nagorik Payment';
 </script>
