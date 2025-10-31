@@ -131,7 +131,7 @@ class CertificateController extends Controller
                      ->with('success', 'ওয়ারিশান সনদপত্রের সফলভাবে ড্রাফট করা হয়েছে। সিরিয়াল নং: ' . $certificate->unique_serial);
     }
 
-    public function getDraftCertificate($certificate_type)
+    public function getDraftCertificate($unique_serial)
     {
         if(Auth::user()->role == 'manager') {
             if (Auth::user()->is_active === 0) {
