@@ -120,7 +120,7 @@
                                         <i class="fas fa-print"></i> প্রিন্ট
                                     </a>
                                     <a href="{{ route('dashboard.certificates.download', $certificate->unique_serial) }}" class="btn btn-success btn-sm" data-toggle="tooltip" title="ডাউনলোড করুন">
-                                        <i class="fas fa-print"></i> ডাউনলোড
+                                        <i class="fas fa-download"></i> ডাউনলোড
                                     </a>
                                 @else
                                 <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
