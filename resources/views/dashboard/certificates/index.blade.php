@@ -134,7 +134,7 @@
             <a href="{{ route('dashboard.certificates.certificate_type', 'same-person') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #ff9800;"><i class="fas fa-people-arrows"></i></div> 
-                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">একই ব্যক্তির প্রত্যয়ন</h3>
+                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">চারিত্রিক সনদ</h3>
                 </div>
             </a>
         </div>
