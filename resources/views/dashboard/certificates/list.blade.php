@@ -120,7 +120,7 @@
           </div>
           <!-- /.card-body -->
         </div>
-        {{ $payments->links() }}
+        {{ $certificates->links() }}
 
     </div>
 @endsection
