@@ -62,7 +62,7 @@
                               <td>{{ $serial++ }}</td>
                               {{-- Convert the slug to a more readable Bengali name --}}
                               <td>
-                                  {{ $certificate->certificate_type == 'heir-certificate' ? 'ওয়ারিশান সনদপত্র' : 'অন্যান্য' }}
+                                  {{ checkcertificatetype($certificate->certificate_type) }}
                               </td>
                               <td>
                                   <strong>{{ $certificate->unique_serial }}</strong>
