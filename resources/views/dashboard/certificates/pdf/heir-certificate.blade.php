@@ -129,8 +129,8 @@
         //get levels data
         $lglevels = [];
         $auth = Auth::user()->authorities->first();
-        if(count(getgovlevels()) > 0) {
-            $lglevels = getgovlevels();
+        if(count(getgovlevels($auth)) > 0) {
+            $lglevels = getgovlevels($auth);
         }
         //get levels data
         $union_info = [
