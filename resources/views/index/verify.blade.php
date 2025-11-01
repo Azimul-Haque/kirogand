@@ -23,7 +23,7 @@
       <!-- Centered Row for 6-Column Form -->
       <div class="row @if(!isset($certificate)) justify-content-center @endif">
           <!-- Applies 6-column width on large screens and 8-column on medium screens -->
-          <div class="col-md-6 col-lg-6"> 
+          <div class="@if(!isset($certificate)) col-md-6 col-lg-6 @else col-md-6 col-lg-6 @endif "> 
               <!-- Verification Form Card -->
               <div class="card p-4 p-md-5 shadow-lg rounded-3">
                   <div class="card-body">
