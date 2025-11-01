@@ -127,12 +127,34 @@
                         <!-- HEIR LIST SECTION (Bootstrap Table) -->
                         <h6 class="text-lg font-bold text-gray-800 mb-3 border-bottom pb-2">বৈধ উত্তরাধিকারীদের তালিকা</h6>
                         <div id="heirsListContainer" class="table-responsive">
-                            <!-- Heir list table will be generated here by JavaScript -->
-                        </div>
-                        
-                        <div class="mt-4">
-                            <div class="fw-semibold text-gray-700 mb-2">সংযুক্ত ভূমি রেকর্ড:</div>
-                            <p id="landRecordsDisplay" class="alert alert-info mb-0 p-3 text-bn"></p>
+                            <table class="beneficiary-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 8%;">ক্রমিক নং</th>
+                                        <th style="width: 25%;">নাম</th>
+                                        <th style="width: 15%;">সম্পর্ক</th>
+                                        <th style="width: 25%;">ভোটার আইডি/জন্ম সনদ</th>
+                                        <th style="width: 15%;">জন্ম তারিখ</th>
+                                        <th style="width: 12%;">মন্তব্য</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse ($heirs as $index => $heir)
+                                        <tr>
+                                            <td>{{ bangla($index + 1) }}</td>
+                                            <td>{{ $heir['name'] ?? '--' }}</td>
+                                            <td>{{ $heir['relation'] ?? '--' }}</td>
+                                            <td>{{ $heir['id_data'] ?? '--' }}</td> {{-- Mapping ID No. to the 'ভোটার আইডি' column --}}
+                                            <td>{{ $heir['dob'] ?? '--' }}</td>
+                                            <td>{{ $heir['remark'] ?? '--' }}</td>
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="6" style="color: red;">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
+                                        </tr>
+                                    @endforelse
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                     
