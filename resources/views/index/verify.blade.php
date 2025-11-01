@@ -33,7 +33,7 @@
                             @if(isset($certificate))
                               <span class="text-success">সনদটি বৈধ!</span>
                             @else
-                              <span class="text-danger">সনদটি বৈধ!</span>
+                              <span class="text-danger">সনদটি জাল!</span>
                             @endif
                           </span>
                       </div>
