@@ -73,7 +73,7 @@
                 <div id="dataCard" class="card shadow border-0 rounded-xl">
                     <div class="card-header card-header-custom rounded-top-xl py-3 px-4">
                         <h5 class="mb-0 text-white d-flex align-items-center">
-                            <i class="@if(isset($certificate)) fas fa-check-circle me-3  text-success @else fas fa-times-circle me-3 text-danger @endif"></i>
+                            <i class="fas fa-check-circle me-3 "></i>
                             যাচাই সফল: উত্তরাধিকারী সনদের বিবরণ
                         </h5>
                     </div>
