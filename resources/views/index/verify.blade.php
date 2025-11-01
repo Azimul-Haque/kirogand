@@ -11,6 +11,20 @@
         border-left: 5px solid #dc3545;
         background-color: #fce4ec;
     }
+
+    .card-header-custom {
+        background-color: #007bff; /* Primary color - Bootstrap Blue */
+        color: white;
+        font-weight: 700;
+    }
+    /* Ensure Bangla text uses the correct display rules */
+    .text-bn {
+        direction: ltr; /* Ensure left-to-right display for Bangla content */
+    }
+    /* Custom class for rounded corners slightly larger than default */
+    .rounded-xl {
+        border-radius: 1rem !important; 
+    }
   </style>
 @endsection
 
