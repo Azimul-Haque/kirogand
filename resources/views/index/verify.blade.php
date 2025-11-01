@@ -27,19 +27,16 @@
               <!-- Verification Form Card -->
               <div class="card p-4 p-md-5 shadow-lg rounded-3">
                   <div class="card-body">
-                      <p class="lead text-muted mb-4 text-center">
-                      সনদটি যাচাই করতে অনুগ্রহ করে 'সনদ নং'/'আবেদন আইডি নং' দিন অথবা QR কোডটি স্ক্যান করুন
-                      </p>
+                      
                       <div class="mb-5">
                           <span for="verificationInput" class="fw-bold h4">সনদ নং / আবেদন আইডি নং</span>
                       </div>
+
+                      <p class="lead text-muted mb-4 text-center">
+                      সনদটি যাচাই করতে অনুগ্রহ করে 'সনদ নং'/'আবেদন আইডি নং' দিন অথবা QR কোডটি স্ক্যান করুন
+                      </p>
                       
-                      <div class="d-grid">
-                          <button type="button" id="verifyButton" class="btn btn-primary btn-lg rounded-pill fw-bold text-uppercase shadow-sm">
-                              <i class="fas fa-search me-2"></i> সনদ যাচাই করুন
-                          </button>
-                          <a href="#" class="mt-3 text-center fw-bold text-decoration-none" data-bs-toggle="tooltip" title="সনদ নং খুঁজে না পেলে আবেদন আইডি ব্যবহার করুন।">সহায়তা প্রয়োজন?</a>
-                      </div>
+                      
                   </div>
               </div>
           </div>
