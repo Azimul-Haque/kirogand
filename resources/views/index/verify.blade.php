@@ -118,7 +118,9 @@
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center py-3 bg-light">
                                 <span class="fw-semibold text-gray-700">বর্তমান অবস্থা:</span>
-                                <span id="statusDisplay" class="badge bg-success text-white px-3 py-2 rounded-pill text-bn"></span>
+                                <span id="statusDisplay" class="badge bg-success text-white px-3 py-2 rounded-pill text-bn">
+                                  {{ $certificate->status == 0 ?  'সক্রিয় (Verified)' : 'স্থগিত (Suspended)' }}
+                                </span>
                             </li>
                         </ul>
 
