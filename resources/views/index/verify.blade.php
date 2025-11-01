@@ -110,7 +110,7 @@
                         <ul class="list-group list-group-flush border rounded-lg mb-4">
                             <li class="list-group-item d-flex justify-content-between align-items-center py-3 bg-light">
                                 <span class="fw-semibold text-gray-700">নাম:</span>
-                                <span id="deceasedNameDisplay" class="text-primary fw-bold text-bn">{{ $certificate->data_payload }}</span>
+                                <span id="deceasedNameDisplay" class="text-primary fw-bold text-bn">{{ $applicant['name'] ?? '--' }}</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center py-3">
                                 <span class="fw-semibold text-gray-700">জারির তারিখ:</span>
