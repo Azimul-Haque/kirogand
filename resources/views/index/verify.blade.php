@@ -31,7 +31,7 @@
                       সনদটি যাচাই করতে অনুগ্রহ করে 'সনদ নং'/'আবেদন আইডি নং' দিন অথবা QR কোডটি স্ক্যান করুন
                       </p>
                       <div class="mb-5">
-                          <label for="verificationInput" class="form-label fw-bold h4">সনদ নং / আবেদন আইডি নং <span class="text-danger">*</span></label>
+                          <span for="verificationInput" class="form-label fw-bold h4">সনদ নং / আবেদন আইডি নং <span class="text-danger">*</span></span>
                           <input type="text" class="form-control form-control-lg rounded-pill" id="verificationInput" 
                                  placeholder="যেমন: BC-2024-123456 বা APP-0098765" required 
                                  aria-label="সনদ নং বা আবেদন আইডি নং ইনপুট">
