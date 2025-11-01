@@ -74,12 +74,12 @@
                     <div class="card-header card-header-custom rounded-top-xl py-3 px-4">
                         <h5 class="mb-0 text-white d-flex align-items-center">
                             <i class="fas fa-check-circle me-3"></i>
-                            যাচাই সফল: উত্তরাধিকারী সনদের বিবরণ
+                            যাচাই সফল: ওয়ারিশ সনদের বিবরণ
                         </h5>
                     </div>
                     <div class="card-body p-4 p-md-5">
                         <p class="text-success fw-bold text-center mb-4 text-xl">
-                            সনদ নম্বর: <span id="certIdDisplay" class="text-decoration-underline text-primary"></span>
+                            সনদ নম্বর: <span class="text-decoration-underline text-primary"></span>
                         </p>
                         
                         <!-- Main Details List (Bootstrap List Group) -->
