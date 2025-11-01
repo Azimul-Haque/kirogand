@@ -86,10 +86,10 @@
                         //get levels data
                         $lglevels = [];
                         $auth = $certificate->localOffice->users[0]->authorities->first();
-                        dd($auth);
-                        // if(count(getgovlevels($auth)) > 0) {
-                        //     $lglevels = getgovlevels($auth);
-                        // }
+                        
+                        if(count(getgovlevels($auth)) > 0) {
+                            $lglevels = getgovlevels($auth);
+                        }
                         //get levels data
                         $union_info = [
                             'union_name' => $certificate->localOffice->name_bn ?? 'তথ্য নেই',
