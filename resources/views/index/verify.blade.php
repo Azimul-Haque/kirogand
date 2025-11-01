@@ -41,11 +41,11 @@
 
                       <p class="lead text-muted mb-4 text-center">
                         @if(isset($certificate))
-                          <span class="text-success">সনদটি বৈধ!</span>
+                          সনদটি যাচাই করতে অনুগ্রহ করে 'সনদ নং'/'আবেদন আইডি নং' দিন অথবা QR কোডটি স্ক্যান করুন
                         @else
                           <span class="text-danger">সনদটি জাল!</span>
                         @endif
-                        সনদটি যাচাই করতে অনুগ্রহ করে 'সনদ নং'/'আবেদন আইডি নং' দিন অথবা QR কোডটি স্ক্যান করুন
+                        
                       </p>
                       
                       
