@@ -32,7 +32,6 @@
                       </p>
                       <div class="mb-5">
                           <span for="verificationInput" class="fw-bold h4">সনদ নং / আবেদন আইডি নং</span>
-                          
                       </div>
                       
                       <div class="d-grid">
