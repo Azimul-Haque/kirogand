@@ -142,8 +142,6 @@
                                             <td>{{ bangla($index + 1) }}</td>
                                             <td>{{ $heir['name'] ?? '--' }}</td>
                                             <td>{{ $heir['relation'] ?? '--' }}</td>
-                                            <td>{{ $heir['id_data'] ?? '--' }}</td> {{-- Mapping ID No. to the 'ভোটার আইডি' column --}}
-                                            <td>{{ $heir['dob'] ?? '--' }}</td>
                                             <td>{{ $heir['remark'] ?? '--' }}</td>
                                         </tr>
                                     @empty
