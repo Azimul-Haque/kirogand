@@ -43,7 +43,7 @@
                         @if(isset($certificate))
                           সনদটি যাচাই করে এর সত্যতা পাওয়া গিয়েছে।
                         @else
-                          <span class="text-danger">সনদটি জাল!</span>
+                          সনদটি যাচাই করে এর সত্যতা পাওয়া গিয়েছে।
                         @endif
                         
                       </p>
