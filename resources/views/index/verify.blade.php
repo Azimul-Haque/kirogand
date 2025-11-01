@@ -28,7 +28,7 @@
               <div class="card p-4 p-md-5 shadow-lg rounded-3">
                   <div class="card-body">
                       
-                      <div class="mb-5">
+                      <div class="mb-5 text-center">
                           <span for="verificationInput" class="fw-bold h4">সনদ নং / আবেদন আইডি নং</span>
                       </div>
 
