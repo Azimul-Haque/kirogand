@@ -29,7 +29,9 @@
                   <div class="card-body">
                       
                       <div class="mb-5 text-center">
-                          <span for="verificationInput" class="fw-bold h4">সনদ নং / আবেদন আইডি নং</span>
+                          <span for="verificationInput" class="fw-bold h4">
+                            @if(isset($certificate))
+                          </span>
                       </div>
 
                       <p class="lead text-muted mb-4 text-center">
