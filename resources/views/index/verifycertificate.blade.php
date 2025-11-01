@@ -68,7 +68,7 @@
       var urltocall = '{{ route('index.verify') }}' +  '/' + $('#verificationInput').val();
       location.href= urltocall;
     });
-    $(document).on('click', '#search-button', function() {
+    $(document).on('click', '#verifyButton', function() {
       if($('#search-param').val() != '') {
         var urltocall = '{{ route('dashboard.local-offices') }}' +  '/' + $('#search-param').val();
         location.href= urltocall;
