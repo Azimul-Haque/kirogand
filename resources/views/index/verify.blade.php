@@ -70,7 +70,7 @@
             <div class="col-md-8 col-lg-8 pm-3">
                             
                 <!-- Card to display the verified data -->
-                <div id="dataCard" class="card shadow-lg border-0 rounded-xl">
+                <div id="dataCard" class="card shadow border-0 rounded-xl">
                     <div class="card-header card-header-custom rounded-top-xl py-3 px-4">
                         <h5 class="mb-0 text-white d-flex align-items-center">
                             <!-- Bootstrap Icon Placeholder (Check Circle) -->
