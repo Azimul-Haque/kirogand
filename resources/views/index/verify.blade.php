@@ -85,6 +85,7 @@
 
                         //get levels data
                         $lglevels = [];
+                        $auth = $applicant
                         if(count(getgovlevels()) > 0) {
                             $lglevels = getgovlevels();
                         }
