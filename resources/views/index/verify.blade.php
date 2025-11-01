@@ -67,7 +67,7 @@
               </div>
           </div>
           @if(isset($certificate))
-            <div class="col-md-8 col-lg-8">
+            <div class="col-lg-8 col-md-8">
                             
                 <!-- Card to display the verified data -->
                 <div id="dataCard" class="card shadow border-0 rounded-xl">
