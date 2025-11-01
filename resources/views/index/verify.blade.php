@@ -31,7 +31,7 @@
                       <div class="mb-5 text-center">
                           <span for="verificationInput" class="fw-bold h4">
                             @if(isset($certificate))
-                              <span>সনদটি বৈধ!</span>
+                              <span class="text-success">সনদটি বৈধ!</span>
                             @else
 
                             @endif
