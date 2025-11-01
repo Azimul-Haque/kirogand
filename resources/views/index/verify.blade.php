@@ -127,7 +127,7 @@
                         <!-- HEIR LIST SECTION (Bootstrap Table) -->
                         <h6 class="text-lg font-bold text-gray-800 mb-3 border-bottom pb-2">বৈধ উত্তরাধিকারীদের তালিকা</h6>
                         <div id="heirsListContainer" class="table-responsive">
-                            <table class="beneficiary-table">
+                            <table class="table">
                                 <thead>
                                     <tr>
                                         <th style="width: 8%;">ক্রমিক নং</th>
