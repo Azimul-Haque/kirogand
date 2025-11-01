@@ -69,11 +69,11 @@
       location.href= urltocall;
     });
     $(document).on('click', '#verifyButton', function() {
-      if($('#search-param').val() != '') {
-        var urltocall = '{{ route('dashboard.local-offices') }}' +  '/' + $('#search-param').val();
+      if($('#verificationInput').val() != '') {
+        var urltocall = '{{ route('dashboard.local-offices') }}' +  '/' + $('#verificationInput').val();
         location.href= urltocall;
       } else {
-        $('#search-param').css({ "border": '#FF0000 2px solid'});
+        $('#verificationInput').css({ "border": '#FF0000 2px solid'});
         Toast.fire({
             icon: 'warning',
             title: 'কিছু লিখে খুঁজুন!'
