@@ -41,7 +41,7 @@
 
                       <p class="lead text-muted mb-4 text-center">
                         @if(isset($certificate))
-                          সনদটি যাচাই করতে অনুগ্রহ করে 'সনদ নং'/'আবেদন আইডি নং' দিন অথবা QR কোডটি স্ক্যান করুন
+                          সনদটি যাচাই করে এর সত্যতা পাওয়া গিয়েছে।
                         @else
                           <span class="text-danger">সনদটি জাল!</span>
                         @endif
