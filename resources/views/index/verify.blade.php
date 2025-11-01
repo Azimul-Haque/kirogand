@@ -73,10 +73,7 @@
                 <div id="dataCard" class="card shadow border-0 rounded-xl">
                     <div class="card-header card-header-custom rounded-top-xl py-3 px-4">
                         <h5 class="mb-0 text-white d-flex align-items-center">
-                            <!-- Bootstrap Icon Placeholder (Check Circle) -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill me-2" viewBox="0 0 16 16">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.429 10.47l-1.63-1.63a.75.75 0 1 0-1.06 1.06l2.17 2.17a.75.75 0 0 0 1.08-.022l4.5-5.5a.75.75 0 0 0-.022-1.08z"/>
-                            </svg>
+                            <i class="@if(isset($certificate)) fas fa-check-circle me-3  text-success @else fas fa-times-circle me-3 text-danger @endif"></i>
                             যাচাই সফল: উত্তরাধিকারী সনদের বিবরণ
                         </h5>
                     </div>
