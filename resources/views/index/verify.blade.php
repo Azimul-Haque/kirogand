@@ -77,6 +77,30 @@
                             যাচাই সফল: ওয়ারিশ সনদের বিবরণ
                         </h5>
                     </div>
+                    @php
+                        // Accessing the payload from the certificate object
+                        $payload = $certificate->data_payload ?? [];
+                        $applicant = $payload['applicant'] ?? [];
+                        $heirs = $payload['heirs'] ?? [];
+
+                        //get levels data
+                        $lglevels = [];
+                        if(count(getgovlevels()) > 0) {
+                            $lglevels = getgovlevels();
+                        }
+                        //get levels data
+                        $union_info = [
+                            'union_name' => $certificate->localOffice->name_bn ?? 'তথ্য নেই',
+                            'upazila' => $lglevels['Upazila'] ?? 'তথ্য নেই',
+                            'district' => $lglevels['District'] ?? 'তথ্য নেই',
+                            // 'chairman_name' => $certificate->localOffice->name_bn,
+                            'email' => $certificate->localOffice->email ?? '',
+                            'phone' => $certificate->localOffice->mobile ?? '',
+                        ];
+
+                        // Conditional Draft Watermark
+                        $is_draft = ($certificate->status ?? 0) == 0;
+                    @endphp
                     <div class="card-body p-4 p-md-5">
                         <p class="text-success fw-bold text-center mb-4 text-xl">
                             সনদ নম্বর: <span class="text-decoration-underline text-primary">{{ $certificate->unique_serial }}</span>
