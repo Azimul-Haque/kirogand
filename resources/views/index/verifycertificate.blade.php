@@ -72,7 +72,7 @@
         $('#verificationInput').css({ "border": '#FF0000 2px solid'});
         Toast.fire({
             icon: 'warning',
-            title: 'কিছু লিখে খুঁজুন!'
+            title: 'সনদ আইডি লিখে যাচাই করুন!'
         })
       }
     });
