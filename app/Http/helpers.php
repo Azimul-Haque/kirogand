@@ -72,7 +72,7 @@ use Illuminate\Support\Carbon;
           return $text;
   }
 
-  function getgovlevels() {
+  function getgovlevels($auth) {
       $hierarchyNames = $auth->getHierarchyNamesByLevel();
       return $hierarchyNames;
   }
