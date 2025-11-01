@@ -128,6 +128,7 @@
 
         //get levels data
         $lglevels = [];
+        $auth = Auth::user()->authorities->first();
         if(count(getgovlevels()) > 0) {
             $lglevels = getgovlevels();
         }
