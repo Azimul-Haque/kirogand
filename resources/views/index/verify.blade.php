@@ -27,7 +27,9 @@
               <!-- Verification Form Card -->
               <div class="card p-4 p-md-5 shadow-lg rounded-3">
                   <div class="card-body">
-                      <p class="lead text-muted mb-4 text-center">সনদটি যাচাই করতে অনুগ্রহ করে 'সনদ নং'/'আবেদন আইডি নং' দিন অথবা QR কোডটি স্ক্যান করুন</p>
+                      <p class="lead text-muted mb-4 text-center">
+                      সনদটি যাচাই করতে অনুগ্রহ করে 'সনদ নং'/'আবেদন আইডি নং' দিন অথবা QR কোডটি স্ক্যান করুন
+                      </p>
                       <div class="mb-5">
                           <label for="verificationInput" class="form-label fw-bold h4">সনদ নং / আবেদন আইডি নং <span class="text-danger">*</span></label>
                           <input type="text" class="form-control form-control-lg rounded-pill" id="verificationInput" 
