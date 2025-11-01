@@ -85,8 +85,8 @@
 
                         //get levels data
                         $lglevels = [];
-                        $auth = $certificate->localOffice->users[0]->authorities->first();
-                        
+                        $auth = $certificate->recipient->authorities->first();
+
                         if(count(getgovlevels($auth)) > 0) {
                             $lglevels = getgovlevels($auth);
                         }
