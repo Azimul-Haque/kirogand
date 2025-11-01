@@ -66,7 +66,7 @@
   <script type="text/javascript">
     $(document).on('click', '#verifyButton', function() {
       if($('#verificationInput').val() != '') {
-        var urltocall = '{{ route('index.verify') }}' +  '/' + $('#verificationInput').val();
+        var urltocall = '{{ url('/verify') }}' +  '/' + $('#verificationInput').val();
         location.href= urltocall;
       } else {
         $('#verificationInput').css({ "border": '#FF0000 2px solid'});
