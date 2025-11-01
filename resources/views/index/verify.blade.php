@@ -23,7 +23,7 @@
       <!-- Centered Row for 6-Column Form -->
       <div class="row justify-content-center">
           <!-- Applies 6-column width on large screens and 8-column on medium screens -->
-          <div class="col-md-8 col-lg-6"> 
+          <div class="col-md-8 col-lg-8"> 
               <!-- Verification Form Card -->
               <div class="card p-4 p-md-5 shadow-lg rounded-3">
                   <div class="card-body">
