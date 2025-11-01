@@ -154,7 +154,7 @@
                         </div>
                     </div>
                     
-                    <div class="card-footer text-center text-muted py-3">
+                    <div class="card-footer text-center text-muted ">
                         তথ্য জাতীয় রেকর্ড ডেটাবেস থেকে পুনরুদ্ধার করা হয়েছে।
                     </div>
                 </div>
