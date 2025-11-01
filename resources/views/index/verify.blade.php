@@ -30,6 +30,7 @@
                       
                       <div class="mb-5 text-center">
                           <span for="verificationInput" class="fw-bold h4">
+                            <i class="@if(isset($certificate)) fas fa-check-circle me-3  text-success @else fas fa-times-circle me-3 text-danger @endif"></i>
                             @if(isset($certificate))
                               <span class="text-success">সনদটি বৈধ!</span>
                             @else
