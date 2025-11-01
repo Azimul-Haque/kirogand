@@ -18,7 +18,7 @@
   <!-- Services List Section (Dynamic Show/Hide Logic) -->
   <section id="services" class="service-section section-gap">
     <div class="container">
-      <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="fas fa-check-circle me-3 @if(isset($certificate)) text-success @else @endif"></i> সনদপত্র যাচাই ফলাফল</h1>
+      <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="fas fa-check-circle me-3 @if(isset($certificate)) text-success @else text-danger @endif"></i> সনদপত্র যাচাই ফলাফল</h1>
       
       <!-- Centered Row for 6-Column Form -->
       <div class="row justify-content-center">
