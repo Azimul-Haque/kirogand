@@ -64,13 +64,9 @@
 
 @section('third_party_scripts')
   <script type="text/javascript">
-    $('#verifyButton').click(function(e) {
-      var urltocall = '{{ route('index.verify') }}' +  '/' + $('#verificationInput').val();
-      location.href= urltocall;
-    });
     $(document).on('click', '#verifyButton', function() {
       if($('#verificationInput').val() != '') {
-        var urltocall = '{{ route('dashboard.local-offices') }}' +  '/' + $('#verificationInput').val();
+        var urltocall = '{{ route('index.verify') }}' +  '/' + $('#verificationInput').val();
         location.href= urltocall;
       } else {
         $('#verificationInput').css({ "border": '#FF0000 2px solid'});
