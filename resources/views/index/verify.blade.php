@@ -21,7 +21,7 @@
       <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="@if(isset($certificate)) fas fa-check-circle me-3  text-success @else fas fa-times-circle me-3 text-danger @endif"></i> সনদপত্র যাচাই ফলাফল</h1>
       
       <!-- Centered Row for 6-Column Form -->
-      <div class="row justify-content-center">
+      <div class="row ">
           <!-- Applies 6-column width on large screens and 8-column on medium screens -->
           <div class="col-md-6 col-lg-6"> 
               <!-- Verification Form Card -->
