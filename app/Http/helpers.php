@@ -1,7 +1,18 @@
 <?php 
 
 use Illuminate\Support\Carbon;
-
+    
+    function checkcertificatetype($text) {
+        if ($text == 'heir-certificate')
+            return 'ওয়ারিশ সনদ';
+        else if ($text == 'citizen-certificate')
+          return 'নাগরিকত্ব সনদ';
+      else if ($text == 'permanent-resident')
+          return 'নাগরিকত্ব সনদs';
+        else
+            return $text;
+    }
+    
 	function limit_text($text, $limit) {
       // $pos=strpos($text, ' ', $limit);
       // $text = substr($text,0,$pos ); 
@@ -59,17 +70,6 @@ use Illuminate\Support\Carbon;
           return 'প্রতিনিধি';
       else if ($text == 'user')
         return 'ব্যবহারকারী';
-      else
-          return $text;
-  }
-
-  function checkcertificatetype($text) {
-      if ($text == 'heir-certificate')
-          return 'ওয়ারিশ সনদ';
-      else if ($text == 'citizen-certificate')
-        return 'নাগরিকত্ব সনদ';
-    else if ($text == 'permanent-resident')
-        return 'নাগরিকত্ব সনদs';
       else
           return $text;
   }
