@@ -195,7 +195,7 @@
                     <td align="center">
                         <div style="padding-top: 10px;"></div>
                     </td>
-                    <td align="right" style="padding-right: 0px;" class="line-border-top">
+                    <td align="right" style="padding-right: 20px;" class="line-border-top">
                         <div style="padding-top: 10px;">অনুমোদনকারীর সিল ও স্বাক্ষর</div>
                     </td>
                 @endif
@@ -341,7 +341,6 @@
     .line-border-top {
         border-top: 1px solid #666;
         display: block;
-        width: 100%;
         padding-bottom: 5px;
     }
     .signature-block td {
