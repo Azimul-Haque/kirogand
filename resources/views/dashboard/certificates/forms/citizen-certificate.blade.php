@@ -243,21 +243,5 @@
         }
     });
 
-
-
-    // A simple replacement for alert that looks better with AdminLTE (optional, but better)
-    function alert(message) {
-        const alertHtml = `
-            <div class="alert alert-success alert-dismissible fade show" role="alert" style="position:fixed; top:20px; right:20px; z-index:1050;">
-                <i class="icon fas fa-check"></i> ${message}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        `;
-        $('body').append(alertHtml);
-        setTimeout(() => $('.alert').alert('close'), 5000); // Auto-close after 5 seconds
-    }
-
 </script>
 
