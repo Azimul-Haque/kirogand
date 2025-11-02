@@ -46,7 +46,7 @@
                           <span for="verificationInput" class="fw-bold h4">
                             <i class="@if(isset($certificate)) fas fa-check-circle me-3  text-success @else fas fa-times-circle me-3 text-danger @endif"></i>
                             @if(isset($certificate))
-                              <span class="text-success">সনদটি @if($certificate == 1) বৈধ! @else প্রক্রিয়াধীন @end</span>
+                              <span class="text-success">সনদটি @if($certificate == 1) বৈধ! @else প্রক্রিয়াধীন @endif</span>
                             @else
                               <span class="text-danger">সনদটি জাল!</span>
                             @endif
@@ -55,7 +55,7 @@
 
                       <p class="lead text-muted mb-4 text-center">
                         @if(isset($certificate))
-                            @if($certificate == 1) সনদটি যাচাই করে এর সত্যতা পাওয়া গিয়েছে। @else সনদটি যাচাই করে প্রক্রিয়াধীন অবস্থায় পাওয়া গিয়েছে।@end
+                            @if($certificate == 1) সনদটি যাচাই করে এর সত্যতা পাওয়া গিয়েছে। @else সনদটি যাচাই করে প্রক্রিয়াধীন অবস্থায় পাওয়া গিয়েছে। @endif
                           
                         @else
                           সনদটি যাচাই করে এর সত্যতা পাওয়া যায়নি!
