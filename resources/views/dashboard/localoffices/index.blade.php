@@ -270,6 +270,9 @@
 
                                 <div class="row">
                                   <div class="col-md-6">
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-6">
                                     <div class="input-group mb-3">
                                       <select name="office_type" class="form-control" required>
                                         <option disabled="" value="">ধরন নির্ধারণ করুন</option>
