@@ -173,3 +173,133 @@
     }
 </style>
 
+<script>
+    // --- JAVASCRIPT LOGIC FOR PROTECTED TOKENS ---
+    
+    const editor = document.getElementById('editor');
+
+    /**
+     * Inserts a new token (span) at the current cursor position in the contenteditable div.
+     * @param {string} tokenText - The text of the token (e.g., '[NAME]').
+     */
+    function insertToken(tokenText) {
+        // Create the non-editable token element
+        const tokenSpan = document.createElement('span');
+        tokenSpan.className = 'protected-token';
+        tokenSpan.setAttribute('contenteditable', 'false'); // KEY: Makes the content non-editable
+        tokenSpan.textContent = tokenText;
+
+        // Use the browser's Range/Selection API to insert the element
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+            const range = selection.getRangeAt(0);
+            range.deleteContents(); // Delete any selected content first
+            
+            // Insert the token and a trailing space for better usability
+            range.insertNode(tokenSpan);
+            range.insertNode(document.createTextNode('\u00A0')); // Non-breaking space
+            
+            // Move the cursor after the inserted element
+            range.setStartAfter(tokenSpan);
+            range.collapse(true);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        } else {
+            // If no selection, just append (less ideal, but a fallback)
+            editor.appendChild(document.createTextNode('\u00A0'));
+            editor.appendChild(tokenSpan);
+            editor.appendChild(document.createTextNode('\u00A0'));
+        }
+        editor.focus(); // Ensure the editor stays focused
+    }
+
+    /**
+     * Prevents partial deletion of a token by forcing the deletion of the entire token.
+     * This improves the user experience for protected fields.
+     */
+    editor.addEventListener('keydown', function(event) {
+        const selection = window.getSelection();
+        if (!selection.rangeCount) return;
+
+        const range = selection.getRangeAt(0);
+        
+        // 1. Check for Backspace (key: 8)
+        if (event.key === 'Backspace') {
+            // Check if the caret is immediately after a protected token
+            let node = range.startContainer;
+            let offset = range.startOffset;
+
+            // If the cursor is at the beginning of a text node, check the previous element
+            if (node.nodeType === 3 && offset === 0) {
+                node = node.previousSibling;
+                offset = node ? node.textContent.length : 0;
+            }
+            
+            // Look for a token right before the cursor
+            if (node && node.nodeType === 1 && node.classList.contains('protected-token')) {
+                // Prevent default backspace behavior
+                event.preventDefault();
+                
+                // Get the parent element and remove the whole token
+                const parent = node.parentNode;
+                parent.removeChild(node);
+                
+                // Set cursor position back where the token was
+                range.setStart(parent, Array.from(parent.childNodes).indexOf(node));
+                range.collapse(true);
+                selection.removeAllRanges();
+                selection.addRange(range);
+                
+                return;
+            }
+        }
+        
+        // 2. Check for Delete (key: 46) - Less common but good practice
+        if (event.key === 'Delete') {
+            // Check if the caret is immediately before a protected token
+            let node = range.startContainer;
+            let offset = range.startOffset;
+            
+            // Look for a token right after the cursor
+            let nextNode = node.childNodes ? node.childNodes[offset] : null;
+
+            if (nextNode && nextNode.nodeType === 1 && nextNode.classList.contains('protected-token')) {
+                event.preventDefault();
+                nextNode.parentNode.removeChild(nextNode);
+            }
+        }
+    });
+
+    /**
+     * Example function to show what happens when the admin saves the template.
+     * It extracts the full HTML content. On the server side, you would parse the
+     * HTML, identify the tokens, and save the result (or the HTML itself) to the database.
+     */
+    function saveTemplate() {
+        const contentHtml = editor.innerHTML;
+        console.log("--- Certificate Template HTML Content ---");
+        console.log(contentHtml);
+        
+        // For demonstration, we show a success message
+        const message = `Template saved successfully! Content length: ${contentHtml.length} characters. Check the console for the HTML output.`;
+        
+        // Use a clean, AdminLTE-style replacement for alert()
+        alert(message); // Using alert here for simplicity in this file, but in a real dashboard, use a toast or modal!
+    }
+
+    // A simple replacement for alert that looks better with AdminLTE (optional, but better)
+    function alert(message) {
+        const alertHtml = `
+            <div class="alert alert-success alert-dismissible fade show" role="alert" style="position:fixed; top:20px; right:20px; z-index:1050;">
+                <i class="icon fas fa-check"></i> ${message}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        `;
+        $('body').append(alertHtml);
+        setTimeout(() => $('.alert').alert('close'), 5000); // Auto-close after 5 seconds
+    }
+
+</script>
+
