@@ -66,7 +66,7 @@ use Illuminate\Support\Carbon;
   function checkcertificatetype($text) {
       if ($text == 'heir-certificate')
           return 'ওয়ারিশ সনদ';
-      else if ($text == 'user')
+      else if ($text == 'citizen-certificate')
         return 'ব্যবহারকারী';
       else
           return $text;
