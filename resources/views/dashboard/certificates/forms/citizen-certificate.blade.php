@@ -157,7 +157,7 @@
 <style>
     /* Custom styles for the editor and tokens */
     #editor {
-        min-height: 300px;
+        min-height: 200px;
         padding: 15px;
         border: 1px solid #ced4da;
         border-radius: .25rem;
