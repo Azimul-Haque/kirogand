@@ -73,6 +73,11 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col-md-6">
+                                    <p><span class="info-label">নাম (Name):</span> {{ $applicant['name'] ?? 'N/A' }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-12">
                                     <p><span class="info-label">ঠিকানা (Address):</span>
                                         গ্রাম: {{ $applicant['village'] ?? 'N/A' }},
