@@ -127,7 +127,7 @@ class CertificateController extends Controller
         }
 
         $applicantData = $request->only([
-            'name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
+            'name', 'same_name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
             'village', 'ward', 'post_office', 'union'
         ]);
 
