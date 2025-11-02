@@ -142,7 +142,7 @@ class CertificateController extends Controller
                 'heirs' => array_values($request->heirs_data),
                 'submission_timestamp' => now()->toDateTimeString(),
             ];
-        } elseif($certificate_type == 'citizen-certificate' || $certificate_type == 'permanent-resident' || $certificate_type == 'same-person') {
+        } else {
             $dataPayload = [
                 'applicant' => $applicantData,
                 'submission_timestamp' => now()->toDateTimeString(),
