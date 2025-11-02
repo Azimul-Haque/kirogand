@@ -36,10 +36,10 @@
             <div class="row">
                 <!-- পিতার নাম -->
                 <div class="form-group col-md-6">
-                    <label for="father">স্মারক <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('father') is-invalid @enderror" id="father" name="father"
-                           value="{{ old('father', $applicant['father'] ?? '') }}" placeholder="পিতার নাম" required>
-                    @error('father') <span class="invalid-feedback">{{ $message }}</span> @enderror
+                    <label for="memo">স্মারক <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control @error('memo') is-invalid @enderror" id="memo" name="memo"
+                           value="{{ old('memo', $applicant['memo'] ?? '') }}" placeholder="পিতার নাম" required>
+                    @error('memo') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <!-- মাতার নাম -->
                 <div class="form-group col-md-6">
