@@ -157,7 +157,7 @@
                                         }).then((result) => {
                                             if (result.isConfirmed) {
                                                 // If confirmed, manually submit the form
-                                                document.getElementById('approveForm{{ $certificate->id }}').submit();
+                                                document.getElementById('approveForm' + id).submit();
                                             }
                                         });
 
