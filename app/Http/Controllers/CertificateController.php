@@ -195,8 +195,8 @@ class CertificateController extends Controller
     public function updateCertificate(Request $request, $id)
     {
         $certificate = Certificate::findOrFail($id);
-        
-        if($certificate_type == 'heir-certificate') {
+
+        if($certificate->certificate_type == 'heir-certificate') {
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
                 'father' => ['required', 'string', 'max:255'],
@@ -216,7 +216,7 @@ class CertificateController extends Controller
                 'heirs_data.*.dob' => ['nullable', 'string'],
                 'heirs_data.*.remark' => ['nullable', 'string', 'max:255'],
             ]); 
-        } elseif($certificate_type == 'citizen-certificate') {
+        } elseif($certificate->certificate_type == 'citizen-certificate') {
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
                 'father' => ['required', 'string', 'max:255'],
@@ -243,14 +243,14 @@ class CertificateController extends Controller
         $submissionTimestamp = $certificate->data_payload['submission_timestamp'] ?? now()->toDateTimeString();
 
         
-        if($certificate_type == 'heir-certificate') {
+        if($certificate->certificate_type == 'heir-certificate') {
             $updatedDataPayload = [
                 'applicant' => $applicantData,
                 'heirs' => array_values($request->heirs_data),
                 'submission_timestamp' => $submissionTimestamp,
                 'updated_timestamp' => now()->toDateTimeString(),
             ];
-        } elseif($certificate_type == 'citizen-certificate') {
+        } elseif($certificate->certificate_type == 'citizen-certificate') {
             $updatedDataPayload = [
                 'applicant' => $applicantData,
                 'submission_timestamp' => $submissionTimestamp,
