@@ -233,7 +233,7 @@
         position: absolute;
         top: 20%;
         left: 0%;
-        transform: translate(-40%, -30%) rotate(-4deg);
+        transform: translate(-20%, -0%) rotate(-4deg);
         color: rgba(255, 0, 0, 0, 0.2) !important;
         font-size: 100px;
         font-weight: bold;
