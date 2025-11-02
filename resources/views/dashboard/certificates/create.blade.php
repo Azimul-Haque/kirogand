@@ -27,8 +27,10 @@
             @include('dashboard.certificates.forms.heir-certificate')
           @elseif($certificate_type == 'citizen-certificate')
             @include('dashboard.certificates.forms.citizen-certificate')
-            @elseif($certificate_type == 'permanent-resident')
+          @elseif($certificate_type == 'permanent-resident')
             @include('dashboard.certificates.forms.permanent-resident')
+          @elseif($certificate_type == 'same-person')
+            @include('dashboard.certificates.forms.same-person')
           @endif
         </div>
       </div>
