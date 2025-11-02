@@ -25,6 +25,8 @@
         <div class="col-md-10 offset-md-1">
           @if($certificate->certificate_type == 'heir-certificate')
             @include('dashboard.certificates.forms.heir-certificate')
+          @elseif($certificate->certificate_type == 'citizen-certificate')
+            @include('dashboard.certificates.forms.citizen-certificate')
           @endif
         </div>
       </div>
