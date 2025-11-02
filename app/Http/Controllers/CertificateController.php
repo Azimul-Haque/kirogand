@@ -131,6 +131,8 @@ class CertificateController extends Controller
                 'mobile' => $request->mobile,
                 'password' => Hash::make('123456'),
             ]);
+        } else {
+            $newuser = $ifolduser;
         }
         
         // check or create new user
@@ -147,8 +149,6 @@ class CertificateController extends Controller
                 'submission_timestamp' => now()->toDateTimeString(),
             ];
         }
-
-        
 
         $uniqueSerial = now()->format('ymd') . Auth::user()->local_office_id . mt_rand(100000, 999999); 
 
