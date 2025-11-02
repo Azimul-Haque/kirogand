@@ -183,7 +183,7 @@
                             <div class="product-info">
                                 <a href="javascript:void(0)" class="product-title font-weight-bold">{{ checkcertificatetype($cert->certificate_type) }} - আইডি: #{{ bangla($cert->unique_serial) }}</a>
                                 <span class="product-description">
-                                    ইস্যু কর্তৃপক্ষ: ({{ $cert->issued_at }}), সময়: {{ date('H:i A', strtotime($cert->issued_at)) }}
+                                    ইস্যু কর্তৃপক্ষ: ({{ $cert->localOffice->name_bn }}), সময়: {{ date('H:i A', strtotime($cert->issued_at)) }}
                                 </span>
                             </div>
                         </li>
