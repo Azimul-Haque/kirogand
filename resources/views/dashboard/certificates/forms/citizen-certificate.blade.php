@@ -30,7 +30,7 @@
 
         <!-- Hidden field for type recognition in the Controller (only needed for create/store) -->
         @if (!$isEdit)
-            <input type="hidden" name="certificate_type" value="citizen-certificate">
+            <input type="hidden" name="certificate_type" value="{{ $certificatetype }}">
         @endif
 
         <div class="card-body">
