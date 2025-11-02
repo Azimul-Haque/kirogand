@@ -117,6 +117,8 @@ class CertificateController extends Controller
         ]);
 
         // check or create new user
+        $ifolduser == User::where('mobile', $request->mobile)
+                          ->where('nid', $request->mobile)
         $newuser = User::create([
             'local_office_id' => Auth::user()->local_office_id,
             'is_active ' => 0,
