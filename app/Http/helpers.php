@@ -215,7 +215,6 @@ function get_certificate_icon_data_en(string $certificate_type): array
         'whomever-it-may-concern'           => 'fa-ellipsis-h',            // যাহার জন্য প্রযোজ্য (Whomever it may concern)
     ];
 
-    
     $available_colors = ['text-success', 'text-primary', 'text-info', 'text-warning', 'text-danger'];
     
     do {
