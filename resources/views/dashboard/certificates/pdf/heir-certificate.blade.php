@@ -12,14 +12,14 @@
             if(File::exists($back_image)) {
                 $back_image = $back_image;
             } else {
-                $back_image = public_path('images/icon.png');
+                $back_image = public_path('images/logo-background.png');
             }
         @endphp
 
         @page {
             header: page-header;
             footer: page-footer;
-            background-image: url({{ public_path('images/logo-background.png') }});
+            background-image: url({{  }});
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
