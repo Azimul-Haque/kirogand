@@ -138,7 +138,7 @@
             <p class="info-paragraph" style="margin-top: 15px;">
                 আমি উক্ত ওয়ারিশগণের সার্বিক উন্নতি ও মঙ্গল কামনা করছি।
             </p>
-        @elseif()
+        @elseif($certificate->certificate_type == 'citizen-certificate')
             <p class="info-paragraph">
                 এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাচ্ছে যে, , পিতা: , মাতা: ,
                 গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, ইউনিয়ন: {{ $applicant['union'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }},
