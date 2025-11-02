@@ -9,8 +9,8 @@
         }
         @php
             $back_image = public_path('images/localoffices/background-'. $certificate->localOffice->monogram);
-            if(File::exists($image_path)) {
-                $back_image = $image_path;
+            if(File::exists($back_image)) {
+                $back_image = $back_image;
             } else {
                 $image_url = public_path('images/icon.png');
             }
