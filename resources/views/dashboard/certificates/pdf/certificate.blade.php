@@ -95,7 +95,7 @@
         @if($certificate->certificate_type == 'heir-certificate')
             {{-- Introduction Paragraph (Using Applicant Data) --}}
             <p class="info-paragraph">
-                এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }}, পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }},
+                এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }},
                 গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, ইউনিয়ন: {{ $applicant['union'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }},
                 জেলা: {{ $union_info['district'] ?? '--' }}। তিনি আমার ইউনিয়নের {{ $applicant['ward'] ?? '--' }} নং ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
                 মতে তিনি নিম্ন লিখিত ওয়ারিশান হিসাবে রেখে মৃত্যু বরণ করেন।
