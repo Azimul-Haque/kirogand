@@ -78,7 +78,10 @@ class IndexController extends Controller
 
     public function verifyCertificate($unique_serial)
     {
-        $certificate = Certificate::where('unique_serial', $unique_serial)->where('status', 1)->first();
+        $certificate = Certificate::where('unique_serial', $unique_serial)
+                                  ->where('status', 1) // নাগরিক আবেদন করলে দেখা যাবে তখন
+                                  ->first();
+                                  
         return view('index.verify')->withCertificate($certificate);
     }
 
