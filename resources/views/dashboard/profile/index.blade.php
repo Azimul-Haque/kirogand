@@ -176,7 +176,7 @@
                                            name="name_bn"
                                            class="form-control"
                                            value="{{ Auth::user()->localOffice->name_bn }}"
-                                           placeholder="নাম" required>
+                                           placeholder="নাম" readonly="">
                                     <div class="input-group-append">
                                         <div class="input-group-text"><span class="fas fa-home"></span></div>
                                     </div>
