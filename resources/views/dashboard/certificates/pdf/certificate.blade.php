@@ -339,7 +339,6 @@
     }
 
     .line-border-top {
-        /* 1. Set the border property */
         border-top: 2px solid #000000;
         
         /* 2. CRITICAL FIX: Make it a block-level element */
