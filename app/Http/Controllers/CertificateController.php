@@ -134,7 +134,6 @@ class CertificateController extends Controller
         } else {
             $newuser = $ifolduser;
         }
-        
         // check or create new user
 
         if($certificate_type == 'heir-certificate') {
