@@ -44,16 +44,11 @@
                     @error('memo') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-6">
-                  <div class="input-group mb-3">
                     <select name="signatory" class="form-control" required>
                       <option disabled="" value="">সনদে স্বাক্ষর সংখ্যা</option>
                       <option value="1" @if($localoffice->signatory == 1) selected="" @endif>শুধু অনুমোদনকারী (চেয়ারম্যান/মেয়র ইত্যাদি)</option>
                       <option value="2" @if($localoffice->signatory == 2) selected="" @endif>প্রস্তুতকারী ও অনুমোদনকারী</option>
                     </select>
-                      <div class="input-group-append">
-                          <div class="input-group-text"><span class="fas fa-hand-writing"></span></div>
-                      </div>
-                  </div>
                 </div>
             </div>
 
