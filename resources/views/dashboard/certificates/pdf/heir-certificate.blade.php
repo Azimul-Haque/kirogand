@@ -19,7 +19,7 @@
         @page {
             header: page-header;
             footer: page-footer;
-            background-image: url({{  }});
+            background-image: url({{ $back_image }});
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
