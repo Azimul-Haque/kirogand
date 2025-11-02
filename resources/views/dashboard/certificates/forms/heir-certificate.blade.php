@@ -43,13 +43,6 @@
                            value="{{ $memoValue }}" placeholder="স্মারক নাম্বার" required>
                     @error('memo') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
-                <div class="form-group col-md-6">
-                    <select name="signatory" class="form-control" required>
-                      <option disabled="" value="">সনদে স্বাক্ষর সংখ্যা</option>
-                      <option value="1" @if($localoffice->signatory == 1) selected="" @endif>শুধু অনুমোদনকারী (চেয়ারম্যান/মেয়র ইত্যাদি)</option>
-                      <option value="2" @if($localoffice->signatory == 2) selected="" @endif>প্রস্তুতকারী ও অনুমোদনকারী</option>
-                    </select>
-                </div>
             </div>
 
             <div class="row">
