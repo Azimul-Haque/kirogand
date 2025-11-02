@@ -652,6 +652,7 @@ class DashboardController extends Controller
         if ($request->hasFile('monogram')) {
             if ($localoffice->monogram) {
                 $image_path = public_path('images/localoffices/' . $localoffice->monogram);
+                $image_path_back = public_path('images/localoffices/' . $localoffice->monogram);
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
