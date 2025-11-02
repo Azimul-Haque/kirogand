@@ -125,14 +125,6 @@
                 <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning no-print">
                     <i class="fas fa-pen"></i> সংশোধন করুন
                 </a>
-                
-
-                <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
-                    @csrf
-                    <button type="button" class="btn btn-success no-print" onclick="return confirmSubmission(event);">
-                        <i class="fas fa-check"></i> অনুমোদন করুন
-                    </button>
-                </form>
                 @if($certificate->status == 0)
                     <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
                         @csrf
