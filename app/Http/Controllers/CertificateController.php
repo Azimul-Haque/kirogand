@@ -130,7 +130,7 @@ class CertificateController extends Controller
                 'designation' => 'নাগরিক',
                 'mobile' => $request->mobile,
                 'password' => Hash::make('123456'),
-            ])
+            ]);
         } else {
             $newuser = $ifolduser;
         }
