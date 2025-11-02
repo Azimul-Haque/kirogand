@@ -135,7 +135,6 @@ class CertificateController extends Controller
                           ->orWhere('nid', $request->id_value)
                           ->first();
         
-        dd($request->all());
         if($ifolduser == null) {
             $newuser = User::create([
                 'local_office_id' => Auth::user()->local_office_id,
