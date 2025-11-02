@@ -238,6 +238,7 @@ class CertificateController extends Controller
         } elseif($certificate->certificate_type == 'same-person') {
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
+                'same_name' => ['required', 'string', 'max:255'],
                 'father' => ['required', 'string', 'max:255'],
                 'mother' => ['required', 'string', 'max:255'],
                 'id_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
@@ -268,7 +269,7 @@ class CertificateController extends Controller
         
 
         $applicantData = $request->only([
-            'name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
+            'name', 'same_name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
             'village', 'ward', 'post_office', 'union'
         ]);
 
