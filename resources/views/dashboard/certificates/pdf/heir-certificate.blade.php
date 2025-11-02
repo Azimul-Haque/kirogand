@@ -7,6 +7,14 @@
             font-family: 'kalpurush', sans-serif;
             color: #333;
         }
+        @php
+            $image_path = public_path('images/localoffices/'. $certificate->localOffice->monogram);
+            if(File::exists($image_path)) {
+                $image_url = $image_path;
+            } else {
+                $image_url = public_path('images/icon.png');
+            }
+        @endphp
 
         @page {
             header: page-header;
