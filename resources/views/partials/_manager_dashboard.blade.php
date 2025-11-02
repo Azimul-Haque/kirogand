@@ -187,7 +187,7 @@
                                 </span>
                             </div>
                         </li>
-                    @endif
+                        @endforeach
                     <li class="item">
                         <div class="product-img">
                             <i class="fas fa-user-edit fa-2x text-info"></i>
