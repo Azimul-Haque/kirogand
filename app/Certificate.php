@@ -19,6 +19,7 @@ class Certificate extends Model
         'certificate_type',
         'recipient_user_id',
         'memo',
+        'signatory',
         'status',
         'unique_serial',
         'data_payload',
