@@ -120,17 +120,19 @@ class CertificateController extends Controller
         $ifolduser == User::where('mobile', $request->mobile)
                           ->where('nid', $request->id_value)
                           ->firstOrFail();
-        $if()
-        $newuser = User::create([
-            'local_office_id' => Auth::user()->local_office_id,
-            'is_active ' => 0,
-            'nid' => $request->id_value,
-            'name' => $request->name,
-            'role' => 'user', // this is important
-            'designation' => 'নাগরিক',
-            'mobile' => $request->mobile,
-            'password' => Hash::make('123456'),
-        ]);
+        $if($ifolduser != null) {
+            $newuser = User::create([
+                'local_office_id' => Auth::user()->local_office_id,
+                'is_active ' => 0,
+                'nid' => $request->id_value,
+                'name' => $request->name,
+                'role' => 'user', // this is important
+                'designation' => 'নাগরিক',
+                'mobile' => $request->mobile,
+                'password' => Hash::make('123456'),
+            ]);
+        }
+        
         // check or create new user
 
         if($certificate_type == 'heir-certificate') {
