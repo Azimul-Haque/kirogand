@@ -18,6 +18,11 @@
             /* Reduced top/bottom margin for better content display */
             margin: 180px 80px 40px 70px;
         }
+        @page {
+            /* Place the image on all subsequent pages */
+            background: element(page-background-image) no-repeat 0 0;
+        }
+        
         .page-header,
           .page-header-space {
             height: 250px;
