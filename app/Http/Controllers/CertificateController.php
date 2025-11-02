@@ -95,6 +95,25 @@ class CertificateController extends Controller
             'heirs_data.*.dob' => ['nullable', 'string'],
             'heirs_data.*.remark' => ['nullable', 'string', 'max:255'],
         ]);
+        $validatedData = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'father' => ['required', 'string', 'max:255'],
+            'mother' => ['required', 'string', 'max:255'],
+            'id_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
+            'id_value' => ['required', 'string', 'max:100'],
+            'mobile' => ['required', 'string', 'max:255'],
+            'village' => ['required', 'string', 'max:255'],
+            'ward' => ['required', 'string', 'min:1', 'max:99'],
+            'post_office' => ['required', 'string', 'max:255'],
+            'union' => ['required', 'string', 'max:255'],
+            'memo' => ['nullable', 'string'],
+            'heirs_data' => ['required', 'array', 'min:1'],
+            'heirs_data.*.name' => ['required', 'string', 'max:255'],
+            'heirs_data.*.relation' => ['required', 'string', 'max:255'],
+            'heirs_data.*.id_data' => ['nullable', 'string'],
+            'heirs_data.*.dob' => ['nullable', 'string'],
+            'heirs_data.*.remark' => ['nullable', 'string', 'max:255'],
+        ]);
 
         $applicantData = $request->only([
             'name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
