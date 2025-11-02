@@ -644,6 +644,8 @@ class DashboardController extends Controller
         $localoffice->name              = $request->name;
         $localoffice->mobile            = $request->mobile;
         $localoffice->email             = $request->email;
+        $localoffice->draft_memo        = $request->draft_memo;
+        $localoffice->signatory         = $request->signatory;
 
         if ($request->hasFile('monogram')) {
             if ($localoffice->monogram) {
