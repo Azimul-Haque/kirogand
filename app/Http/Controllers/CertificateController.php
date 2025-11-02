@@ -240,12 +240,21 @@ class CertificateController extends Controller
         // Preserve the original submission timestamp from the existing payload
         $submissionTimestamp = $certificate->data_payload['submission_timestamp'] ?? now()->toDateTimeString();
 
-        $updatedDataPayload = [
-            'applicant' => $applicantData,
-            'heirs' => array_values($request->heirs_data),
-            'submission_timestamp' => $submissionTimestamp,
-            'updated_timestamp' => now()->toDateTimeString(),
-        ];
+        
+        if($certificate_type == 'heir-certificate') {
+            $updatedDataPayload = [
+                'applicant' => $applicantData,
+                'heirs' => array_values($request->heirs_data),
+                'submission_timestamp' => $submissionTimestamp,
+                'updated_timestamp' => now()->toDateTimeString(),
+            ];
+        } elseif($certificate_type == 'citizen-certificate') {
+            $updatedDataPayload = [
+                'applicant' => $applicantData,
+                'submission_timestamp' => $submissionTimestamp,
+                'updated_timestamp' => now()->toDateTimeString(),
+            ];
+        }
 
         $uniqueSerial = now()->format('ymd') . Auth::user()->local_office_id . mt_rand(100000, 999999); 
 
