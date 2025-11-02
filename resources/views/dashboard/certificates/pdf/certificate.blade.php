@@ -339,6 +339,7 @@
     }
 
     .line-border-top {
+        border-top: 1px solid #666;
         display: block;
         width: 100%;
         padding-bottom: 5px;
