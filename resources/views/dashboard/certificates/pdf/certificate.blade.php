@@ -234,7 +234,7 @@
         top: 40%;
         left: 30%;
         transform: translate(-40%, -30%) rotate(-45deg);
-        color: rgba(255, 0, 0, 0.2);
+        color: rgba(255, 0, 0, 0.8);
         font-size: 100px;
         font-weight: bold;
         z-index: 1000;
