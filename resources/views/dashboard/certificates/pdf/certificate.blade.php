@@ -35,7 +35,7 @@
     @endphp
 
     @if ($is_draft)
-        <div class="draft-watermark">খসড়া খসড়া খসড়া</div>
+        <div class="draft-watermark">খসড়া খসড়া</div>
     @endif
     
 
