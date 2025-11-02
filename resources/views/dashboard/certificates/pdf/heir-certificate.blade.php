@@ -265,6 +265,9 @@
                     <div style="padding-top: 10px;">অনুমোদনকারীর সিল ও স্বাক্ষর</div>
                     <div class="signature-line"></div>
                 </td>
+                @else
+
+                @endif
             </tr>
         </table>
 
