@@ -132,6 +132,23 @@
                 </div>
             </div>
 
+            <div id="editor" contenteditable="true" spellcheck="false">
+                <p>
+                    This certifies that <span class="protected-token" contenteditable="false">[NAME]</span> 
+                    has successfully completed the 
+                    <span class="protected-token" contenteditable="false">[COURSE]</span> 
+                    at our main campus located at 
+                    <span class="protected-token" contenteditable="false">[ADDRESS]</span>.
+                </p>
+                <p>
+                    This award is presented on this day: 
+                    <span class="protected-token" contenteditable="false">[DATE]</span>.
+                </p>
+                <p>
+                    The remaining text is fully editable. You can delete the spaces around the tokens, but you cannot edit the text inside the blue box.
+                </p>
+            </div>
+
             
 
         </div>
