@@ -156,7 +156,7 @@
                     <img src="{{ public_path('images/seal-placeholder.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
                 </td>
                 @if($certificate->localOffice->signatory == 2)
-                    <td align="left" style="padding-left: 20px;">
+                    <td align="center">
                         <div style="padding-top: 10px;">প্রস্তুতকারীর সিল ও স্বাক্ষর</div>
                         <div class="signature-line"></div>
                         <div style="border-top: 2px solid green; margin-top: 5px;"></div>
