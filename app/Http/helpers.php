@@ -185,7 +185,7 @@ function get_certificate_icon_data_en(string $certificate_type_key): array
         'non-rohingya-confirmation'         => 'fa-globe-asia',            // রোহিঙ্গা নয় প্রত্যয়ন (Non-Rohingya)
         'birth-cert-absence'                => 'fa-calendar-times',        // জন্মসনদ না থাকা সংক্রান্ত প্রত্যয়ন (No Birth Cert)
         'same-person'                       => 'fa-people-arrows',         // একই ব্যক্তি মর্মে সনদ
-        'same-person'                       => 'fa-house-user',            // স্থায়ী বাসিন্দা সনদ
+        'permanent-resident'                       => 'fa-house-user',            // স্থায়ী বাসিন্দা সনদ
         
         // Financial & Economic Status
         'annual-income-certificate'         => 'fa-money-check-alt',       // বাৎসরিক আয়ের সনদপত্র (Annual Income)
