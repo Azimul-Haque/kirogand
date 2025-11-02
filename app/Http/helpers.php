@@ -160,7 +160,7 @@ function isPackageExpiringSoon(?string $expiryDate, int $days = 10): bool
 function get_certificate_icon_data_en(string $certificate_type): array
 {
     static $last_color = null;
-    
+
     $icon_map = [
         // Family & Personal Status
         'heir-certificate'                  => 'fa-users',                 // ওয়ারিশ সনদ (Heir)
@@ -215,13 +215,15 @@ function get_certificate_icon_data_en(string $certificate_type): array
         'whomever-it-may-concern'           => 'fa-ellipsis-h',            // যাহার জন্য প্রযোজ্য (Whomever it may concern)
     ];
 
-    // 2. Color Selection Logic (Guaranteed No Repeat)
+    
     $available_colors = ['text-success', 'text-primary', 'text-info', 'text-warning', 'text-danger'];
-    // Find a color that is NOT the last used color
+    
     do {
         $random_key = array_rand($available_colors);
         $current_color = $available_colors[$random_key];
-    } while ($current_color === $last_color && count($available_colors) > 1); // Loop only if we have more than one color
+    } while ($current_color === $last_color && count($available_colors) > 1);
+
+    $last_color = $current_color;
 
     // 3. Get the icon class, defaulting to 'fa-file-alt' if the key is not found
     $icon_class = $icon_map[$certificate_type] ?? 'fa-file-alt';
