@@ -509,6 +509,7 @@ class DashboardController extends Controller
             'office_type'       => 'required|in:up,poura',
             'packageexpirydate' => 'nullable|date',
             'monogram'          => 'sometimes|image|max:300',
+            'monogram'          => 'sometimes|image|max:300',
         ]);
 
         $localoffice                    = LocalOffice::findOrFail($id);
