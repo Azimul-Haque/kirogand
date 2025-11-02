@@ -129,33 +129,33 @@
 
                         @if($certificate->certificate_type == 'heir-certificate')
                         <!-- HEIR LIST SECTION (Bootstrap Table) -->
-                        <h6 class="text-lg font-bold text-gray-800 mb-3 border-bottom pb-2">বৈধ উত্তরাধিকারীদের তালিকা</h6>
-                        <div id="heirsListContainer" class="table-responsive">
-                            <table class="table table-responsive table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 8%;">ক্রমিক নং</th>
-                                        <th style="width: 25%;">নাম</th>
-                                        <th style="width: 15%;">সম্পর্ক</th>
-                                        <th style="width: 12%;">মন্তব্য</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @forelse ($heirs as $index => $heir)
+                            <h6 class="text-lg font-bold text-gray-800 mb-3 border-bottom pb-2">বৈধ উত্তরাধিকারীদের তালিকা</h6>
+                            <div id="heirsListContainer" class="table-responsive">
+                                <table class="table table-responsive table-bordered">
+                                    <thead>
                                         <tr>
-                                            <td>{{ bangla($index + 1) }}</td>
-                                            <td>{{ $heir['name'] ?? '--' }}</td>
-                                            <td>{{ $heir['relation'] ?? '--' }}</td>
-                                            <td>{{ $heir['remark'] ?? '--' }}</td>
+                                            <th style="width: 8%;">ক্রমিক নং</th>
+                                            <th style="width: 25%;">নাম</th>
+                                            <th style="width: 15%;">সম্পর্ক</th>
+                                            <th style="width: 12%;">মন্তব্য</th>
                                         </tr>
-                                    @empty
-                                        <tr>
-                                            <td colspan="6" style="color: red;">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
-                                        </tr>
-                                    @endforelse
-                                </tbody>
-                            </table>
-                        </div>
+                                    </thead>
+                                    <tbody>
+                                        @forelse ($heirs as $index => $heir)
+                                            <tr>
+                                                <td>{{ bangla($index + 1) }}</td>
+                                                <td>{{ $heir['name'] ?? '--' }}</td>
+                                                <td>{{ $heir['relation'] ?? '--' }}</td>
+                                                <td>{{ $heir['remark'] ?? '--' }}</td>
+                                            </tr>
+                                        @empty
+                                            <tr>
+                                                <td colspan="6" style="color: red;">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
+                                            </tr>
+                                        @endforelse
+                                    </tbody>
+                                </table>
+                            </div>
                         @endif
                     </div>
                     
