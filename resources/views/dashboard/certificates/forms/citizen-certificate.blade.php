@@ -132,62 +132,7 @@
                 </div>
             </div>
 
-            <hr class="my-4">
-
-            <!-- ২. ওয়ারিশগণের তালিকা -->
-            <h4 class="mb-4 text-success">ওয়ারিশগণের তালিকা</h4>
-
-            <table class="table table-bordered table-striped table-sm" id="heirs-table">
-                <thead class="bg-success">
-                    <tr>
-                        <th>নাম</th>
-                        <th>সম্পর্ক</th>
-                        <th>জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন</th>
-                        <th>জন্ম তারিখ</th>
-                        <th>মন্তব্য</th>
-                        <th style="width: 5%;">কার্যসম্পাদন</th>
-                    </tr>
-                </thead>
-                <tbody id="heirs-container">
-                    @if ($isEdit && !empty($heirs))
-                        {{-- Pre-populate existing heirs in Edit mode --}}
-                        @foreach (old('heirs_data', $heirs) as $index => $heir)
-                            <tr class="heir-row" data-row-id="{{ $index }}">
-                                <td>
-                                    <input type="text" class="form-control form-control-sm" name="heirs_data[{{ $index }}][name]"
-                                           placeholder="ওয়ারিশের নাম" value="{{ $heir['name'] ?? '' }}" required>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control form-control-sm" name="heirs_data[{{ $index }}][relation]"
-                                           placeholder="যেমন: স্ত্রী, পুত্র, কন্যা ইত্যাদি" value="{{ $heir['relation'] ?? '' }}" required>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control form-control-sm" name="heirs_data[{{ $index }}][id_data]"
-                                           placeholder="এনআইডি/জন্ম নিবন্ধন" value="{{ $heir['id_data'] ?? '' }}">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control form-control-sm" name="heirs_data[{{ $index }}][dob]"
-                                           placeholder="জন্মতারিখ" value="{{ $heir['dob'] ?? '' }}">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control form-control-sm" name="heirs_data[{{ $index }}][remark]"
-                                           placeholder="যেমন: মৃত" value="{{ $heir['remark'] ?? '' }}">
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-danger btn-sm remove-heir-button" title="ডিলেট করুন">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        @endforeach
-                    @endif
-                    <!-- Dynamic rows will be added here via JS -->
-                </tbody>
-            </table>
-
-            <button type="button" class="btn btn-success mt-3" id="add-heir-button">
-                <i class="fas fa-plus"></i> নতুন ওয়ারিশ যোগ করুন
-            </button>
+            
 
         </div>
         <!-- /.card-body -->
