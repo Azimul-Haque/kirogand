@@ -95,7 +95,7 @@ class CertificateController extends Controller
                 'heirs_data.*.dob' => ['nullable', 'string'],
                 'heirs_data.*.remark' => ['nullable', 'string', 'max:255'],
             ]); 
-        } elseif($certificate_type == 'citizen-certificate' || $certificate_type == 'permanent-resident' || $certificate_type == 'same-person') {
+        } else {
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
                 'father' => ['required', 'string', 'max:255'],
