@@ -8,11 +8,11 @@ use Illuminate\Support\Carbon;
         else if ($text == 'citizen-certificate')
           return 'নাগরিকত্ব সনদ';
       else if ($text == 'permanent-resident')
-          return 'নাগরিকত্ব সনদ';
+          return 'স্থায়ী বাসিন্দা সনদ সনদ';
         else
             return $text;
     }
-    
+
 	function limit_text($text, $limit) {
       // $pos=strpos($text, ' ', $limit);
       // $text = substr($text,0,$pos ); 
