@@ -284,7 +284,7 @@
                                   <div class="col-md-6">
                                     <div class="input-group mb-3">
                                       <select name="office_type" class="form-control" required>
-                                        <option disabled="" value="">ধরন নির্ধারণ করুন</option>
+                                        <option disabled="" value="">স্বাক্ষর সংখ্যা</option>
                                         <option value="up" @if($localoffice->office_type == 'up') selected="" @endif>ইউনিয়ন পরিষদ</option>
                                         <option value="poura" @if($localoffice->office_type == 'poura') selected="" @endif>পৌরসভা</option>
                                       </select>
