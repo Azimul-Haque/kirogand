@@ -10,7 +10,7 @@ use Illuminate\Support\Carbon;
         else if ($text == 'permanent-resident')
           return 'স্থায়ী বাসিন্দা মর্মে সনদ';
         else if ($text == 'same-person')
-          return 'একই ব্যক্তি মর্মে সনদ';
+          return 'একই ব্যক্তি মর্মে প্রত্যয়ন';
         else
             return $text;
     }
