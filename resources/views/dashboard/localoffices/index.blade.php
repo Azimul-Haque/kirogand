@@ -275,7 +275,7 @@
                                                name="draft_memo"
                                                value="{{ $localoffice->draft_memo }}"
                                                class="form-control"
-                                               placeholder="স্মারকের টেমপ্লেট ()" required>
+                                               placeholder="স্মারকের টেমপ্লেট (রহি/ইউপি/ওয়ারিশান/২০২৫/)" required>
                                         <div class="input-group-append">
                                             <div class="input-group-text"><span class="fas fa-tag"></span></div>
                                         </div>
