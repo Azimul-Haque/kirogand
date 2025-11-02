@@ -11,8 +11,8 @@
     $route = $isEdit
         ? route('dashboard.certificates.update', $certificate->id)
         : route('dashboard.certificates.store', 'citizen-certificate');
-    $buttonText = $isEdit ? checkcertificatetype($certificate) . ' আপডেট করুন' : checkcertificatetype($certificate) . ' তৈরি করুন';
-    $title = $isEdit ? checkcertificatetype($certificate) . ' সম্পাদনা' : checkcertificatetype($certificate) . ' ফরম';
+    $buttonText = $isEdit ? checkcertificatetype($certificatetype) . ' আপডেট করুন' : checkcertificatetype($certificatetype) . ' তৈরি করুন';
+    $title = $isEdit ? checkcertificatetype($certificatetype) . ' সম্পাদনা' : checkcertificatetype($certificatetype) . ' ফরম';
 @endphp
 
 <!-- Card structure common in AdminLTE 3 -->
