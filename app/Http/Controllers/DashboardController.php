@@ -656,6 +656,9 @@ class DashboardController extends Controller
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
+                if (File::exists($image_path_back)) {
+                    File::delete($image_path_back);
+                }
             }
 
             $image      = $request->file('monogram');
