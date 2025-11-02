@@ -34,9 +34,10 @@
         $is_draft = ($certificate->status ?? 0) == 0;
     @endphp
 
-    @if ($is_draft = 0)
+    @if ($is_draft)
         <div class="draft-watermark">খসড়া খসড়া খসড়া</div>
     @endif
+    <div class="draft-watermark">খসড়া খসড়া খসড়া</div>
 
     {{-- HEADER CONTENT - Modified to fit the certificate image --}}
     <htmlpageheader name="page-header">
