@@ -270,17 +270,15 @@
 
                                 <div class="row">
                                   <div class="col-md-6">
-                                    <div class="col-md-6">
-                                      <div class="input-group mb-3">
-                                          <input type="draft_memo"
-                                                 name="draft_memo"
-                                                 value="{{ $localoffice->draft_memo }}"
-                                                 class="form-control"
-                                                 placeholder="স্মারক নাম্বারের টেমপ্লেট" required>
-                                          <div class="input-group-append">
-                                              <div class="input-group-text"><span class="fas fa-tag"></span></div>
-                                          </div>
-                                      </div>
+                                    <div class="input-group mb-3">
+                                        <input type="draft_memo"
+                                               name="draft_memo"
+                                               value="{{ $localoffice->draft_memo }}"
+                                               class="form-control"
+                                               placeholder="স্মারক নাম্বারের টেমপ্লেট" required>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><span class="fas fa-tag"></span></div>
+                                        </div>
                                     </div>
                                   </div>
                                 </div>
