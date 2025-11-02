@@ -226,6 +226,33 @@
                             </div>
                         </div>
 
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <input type="draft_memo"
+                                       name="draft_memo"
+                                       value="{{ $localoffice->draft_memo }}"
+                                       class="form-control"
+                                       placeholder="স্মারকের টেমপ্লেট (রহি/ইউপি/ওয়ারিশান/২০২৫/)" required>
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><span class="fas fa-tag"></span></div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="input-group mb-3">
+                              <select name="signatory" class="form-control" required>
+                                <option disabled="" value="">সনদে স্বাক্ষর সংখ্যা</option>
+                                <option value="1" @if($localoffice->signatory == 1) selected="" @endif>শুধু অনুমোদনকারী (চেয়ারম্যান/মেয়র ইত্যাদি)</option>
+                                <option value="2" @if($localoffice->signatory == 2) selected="" @endif>প্রস্তুতকারী ও অনুমোদনকারী</option>
+                              </select>
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><span class="fas fa-hand-writing"></span></div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
                         <!-- Row 3: Monogram File Upload -->
                         @php
                             // 1. Define the full local path to the file.
