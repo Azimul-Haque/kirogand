@@ -159,8 +159,8 @@ function isPackageExpiringSoon(?string $expiryDate, int $days = 10): bool
 
 function get_certificate_icon_data_en(string $certificate_type): array
 {
-    // 1. Standardized English Key Mapping to Font Awesome 5 Icons
-    // Note: 'fas' prefix is added when used in the HTML/Blade template.
+    static $last_color = null;
+    
     $icon_map = [
         // Family & Personal Status
         'heir-certificate'                  => 'fa-users',                 // ওয়ারিশ সনদ (Heir)
