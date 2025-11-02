@@ -230,7 +230,7 @@
     /* --- Custom Styles for Certificate Layout --- */
 
     .draft-watermark {
-        position: absolute;
+        position: absolute;rotate:90;
         top: 20%;
         left: 0%;
         transform: translate(-20%, -0%) rotate(-4deg);
