@@ -54,6 +54,12 @@
                            value="{{ old('name', $applicant['name'] ?? '') }}" placeholder="আবেদনকারীর নাম" required>
                     @error('name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
+                <div class="form-group col-md-6">
+                    <label for="name">নাম (আবেদনকারী) <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name"
+                           value="{{ old('name', $applicant['name'] ?? '') }}" placeholder="আবেদনকারীর নাম" required>
+                    @error('name') <span class="invalid-feedback">{{ $message }}</span> @enderror
+                </div>
                 <!-- জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন -->
                 <div class="form-group col-md-6">
                     <label for="id_type">জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন নং <span class="text-danger">*</span></label>
