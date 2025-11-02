@@ -34,7 +34,7 @@
         $is_draft = ($certificate->status ?? 0) == 0;
     @endphp
 
-    @if ($is_draft)
+    @if ($is_draft = 0)
         <div class="draft-watermark">খসড়া খসড়া খসড়া</div>
     @endif
 
