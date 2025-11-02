@@ -55,7 +55,7 @@
                     <div class="draft-container">
                         @if($certificate->status == 0)<div class="draft-watermark">খসড়া খসড়া খসড়া</div>@endif
                         <div class="certificate-info">
-                            <h4 class="text-center mb-4 text-primary">ওয়ারিশান সনদপত্র</h4>
+                            <h4 class="text-center mb-4 text-primary">{{ checkcertificatetype($certificate->certificate_type) }}</h4>
                             <hr>
 
                             <!-- Applicant Information Section -->
