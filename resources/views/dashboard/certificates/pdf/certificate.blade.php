@@ -89,7 +89,7 @@
 
         {{-- Certificate Title --}}
         <div class="cert-title">
-            ওয়ারিশান সনদ
+            {{ checkcertificatetype($certificate->certificate_type) }}
         </div>
 
         {{-- Introduction Paragraph (Using Applicant Data) --}}
