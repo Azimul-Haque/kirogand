@@ -243,21 +243,7 @@
         }
     });
 
-    /**
-     * Example function to show what happens when the admin saves the template.
-     * It extracts the full HTML content. On the server side, you would parse the
-     * HTML, identify the tokens, and save the result (or the HTML itself) to the database.
-     */
-    function saveTemplate() {
-        const contentHtml = editor.innerHTML;
-        console.log(contentHtml);
-        
-        // For demonstration, we show a success message
-        const message = `Template saved successfully! Content length: ${contentHtml.length} characters. Check the console for the HTML output.`;
-        
-        // Use a clean, AdminLTE-style replacement for alert()
-        alert(message); // Using alert here for simplicity in this file, but in a real dashboard, use a toast or modal!
-    }
+
 
     // A simple replacement for alert that looks better with AdminLTE (optional, but better)
     function alert(message) {
