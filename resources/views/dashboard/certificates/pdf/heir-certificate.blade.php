@@ -297,7 +297,7 @@
                     <td style="width: 85%; padding-left: 20px;">
                         <span style=" font-size: 13px;">
                             সনদটি যাচাই করতে <span style="font-family: Calibri;">QR CODE</span> টি স্ক্যান করুন<br/>
-                            অথবা <span style="font-family: Calibri;">www.dnagorik.com</span> ভিজিট করুন এই আইডিটি যাচাই করুন: <span style="font-family: Calibri;">{{ $certificate->unique_serial ?? '--' }}</span>
+                            অথবা <span style="font-family: Calibri;">www.dnagorik.com</span> ভিজিট করে এই আইডিটি যাচাই করুন: <span style="font-family: Calibri;">{{ $certificate->unique_serial ?? '--' }}</span>
                         </span>
                         <p style="font-size: 10px; margin-top: 10px; line-height: 1.5;">
                             বি:দ্র: তথ্য গোপন বা ভুল দিলে আবেদনকারী দায়ী থাকবেন, কর্তৃপক্ষ দায়ী নয়, সনদ বাতিলযোগ্য।
