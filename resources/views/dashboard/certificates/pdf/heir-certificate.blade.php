@@ -8,9 +8,9 @@
             color: #333;
         }
         @php
-            $back_image = public_path('images/localoffices/'. $certificate->localOffice->monogram);
+            $back_image = public_path('images/localoffices/background-'. $certificate->localOffice->monogram);
             if(File::exists($image_path)) {
-                $image_url = $image_path;
+                $back_image = $image_path;
             } else {
                 $image_url = public_path('images/icon.png');
             }
