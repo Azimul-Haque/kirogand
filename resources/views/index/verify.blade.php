@@ -32,7 +32,7 @@
   <!-- Services List Section (Dynamic Show/Hide Logic) -->
   <section id="services" class="service-section section-gap">
     <div class="container">
-      <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="@if(isset($certificate)) fas @if($certificate->status == 1) fa-check-circle me-3  text-success @else fas fa-times-circle me-3 text-danger @endif"></i> সনদপত্র যাচাই ফলাফল</h1>
+      <h1 class="text-center display-6 fw-bold mb-5" style="color: var(--darker-color);"><i class="@if(isset($certificate)) fas @if($certificate->status == 1) fa-check-circle @else @endif me-3  text-success @else fas fa-times-circle me-3 text-danger @endif"></i> সনদপত্র যাচাই ফলাফল</h1>
       
       <!-- Centered Row for 6-Column Form -->
       <div class="row @if(!isset($certificate)) justify-content-center @endif g-5">
