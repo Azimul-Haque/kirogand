@@ -270,7 +270,19 @@
 
                                 <div class="row">
                                   <div class="col-md-6">
-
+                                    <div class="col-md-6">
+                                      <div class="input-group mb-3">
+                                          <input type="email"
+                                                 name="email"
+                                                 value="{{ $localoffice->email }}"
+                                                 autocomplete="off"
+                                                 class="form-control"
+                                                 placeholder="অফিস ইমেইল এড্রেস" required>
+                                          <div class="input-group-append">
+                                              <div class="input-group-text"><span class="fas fa-envelope"></span></div>
+                                          </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                                 
