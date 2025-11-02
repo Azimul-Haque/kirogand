@@ -11,7 +11,10 @@
         @page {
             header: page-header;
             footer: page-footer;
-            
+            background-image: url({{ public_path('images/logo-background.png') }});
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
             /* Reduced top/bottom margin for better content display */
             margin: 180px 80px 40px 70px;
         }
