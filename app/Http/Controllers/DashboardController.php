@@ -120,6 +120,10 @@ class DashboardController extends Controller
         $totaluserscumulitiveforchartc = json_encode($totaluserscumulitiveforchartc);
         // dd($totaluserscumulitiveforchartc);
 
+        $last5certs = Certificate::orderBy('created_at', 'DESC')
+                                    ->take(14)
+                                    ->get();
+
         return view('dashboard.index')->withTotalusers($totalusers)
                                       ->withTotalpayment($totalpayment)
                                       ->withTotalmonthlypayment($totalmonthlypayment)
