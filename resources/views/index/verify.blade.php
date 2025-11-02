@@ -122,7 +122,7 @@
                             <li class="list-group-item d-flex justify-content-between align-items-center py-3 bg-light">
                                 <span class="fw-semibold text-gray-700">বর্তমান অবস্থা:</span>
                                 <span id="statusDisplay" class="badge @if($certificate->status == 1) bg-success @else bg-warning  @endif text-white px-3 py-2 rounded-pill text-bn">
-                                  {{ $certificate->status == 1 ?  'সক্রিয় (Verified)' : 'প্রক্রিয়াধীন (Pending)' }}
+                                  {{ $certificate->status == 1 ?  'অনুমোদিত (Verified)' : 'প্রক্রিয়াধীন (Pending)' }}
                                 </span>
                             </li>
                         </ul>
