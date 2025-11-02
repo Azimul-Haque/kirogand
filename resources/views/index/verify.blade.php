@@ -44,7 +44,7 @@
                       
                       <div class="mb-5 text-center">
                           <span for="verificationInput" class="fw-bold h4">
-                            <i class="@if(isset($certificate)) fas @if($certificate->status == 1) fa-check-circle me-3 text-success @else fas fa-times-circle text-warning @endif @else fas fa-times-circle me-3 text-danger @endif"></i>
+                            <i class="@if(isset($certificate)) fas @if($certificate->status == 1) fa-check-circle me-3 text-success @else fas fa-info text-warning @endif @else fas fa-times-circle me-3 text-danger @endif"></i>
                             @if(isset($certificate))
                               <span class="@if($certificate->status == 1) text-success @else text-warning @endif ">সনদটি @if($certificate->status == 1) বৈধ! @else প্রক্রিয়াধীন @endif</span>
                             @else
