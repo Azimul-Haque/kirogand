@@ -202,6 +202,7 @@
         font-family: 'kalpurush', sans-serif;
         color: #333;
         border: 2px solid black; /* Adjust thickness and color as needed */
+        padding: 10mm; /* Add padding to prevent content from touching the border */
     }
     @php
         $back_image = public_path('images/localoffices/background-'. $certificate->localOffice->monogram);
