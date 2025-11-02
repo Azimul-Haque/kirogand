@@ -17,7 +17,7 @@ return [
       'I'  => 'kalpurush.ttf',     // optional: italic font
       'BI' => 'kalpurush.ttf', // optional: bold-italic font
       'useOTL' => 0xFF,    // required for complicated langs like Persian, Arabic and Chinese
-      //'useKashida' => 75,  // required for complicated langs like Persian, Arabic and Chinese
+      'useKashida' => 75,  // required for complicated langs like Persian, Arabic and Chinese
     ],
     'Nikosh' => [
       'R'  => 'Nikosh.ttf',    // regular font
