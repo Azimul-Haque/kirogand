@@ -270,7 +270,10 @@
 
                                 <div class="row">
                                   <div class="col-md-6">
+
+                                  </div>
                                 </div>
+                                
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="input-group mb-3">
