@@ -652,7 +652,7 @@ class DashboardController extends Controller
         if ($request->hasFile('monogram')) {
             if ($localoffice->monogram) {
                 $image_path = public_path('images/localoffices/' . $localoffice->monogram);
-                $image_path_back = public_path('images/localoffices/' . $localoffice->monogram);
+                $image_path_back = public_path('images/localoffices/background-' . $localoffice->monogram);
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
@@ -660,7 +660,7 @@ class DashboardController extends Controller
 
             $image      = $request->file('monogram');
             $filename   = strtolower($localoffice->office_type) . '-monogram-' . time() . '.' . "png";
-            $filename_back   = 'background' . strtolower($localoffice->office_type) . '-monogram-' . time() . '.' . "png";
+            $filename_back   = 'background-' . strtolower($localoffice->office_type) . '-monogram-' . time() . '.' . "png";
             $location   = public_path('images/localoffices/' . $filename);
             $location_back   = public_path('images/localoffices/' . $filename_back);
             Image::make($image)->fit(300, 300)->save($location);
