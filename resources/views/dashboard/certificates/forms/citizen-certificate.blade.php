@@ -187,41 +187,6 @@
     const editor = document.getElementById('editor');
 
     /**
-     * Inserts a new token (span) at the current cursor position in the contenteditable div.
-     * @param {string} tokenText - The text of the token (e.g., '[NAME]').
-     */
-    function insertToken(tokenText) {
-        // Create the non-editable token element
-        const tokenSpan = document.createElement('span');
-        tokenSpan.className = 'protected-token';
-        tokenSpan.setAttribute('contenteditable', 'false'); // KEY: Makes the content non-editable
-        tokenSpan.textContent = tokenText;
-
-        // Use the browser's Range/Selection API to insert the element
-        const selection = window.getSelection();
-        if (selection.rangeCount > 0) {
-            const range = selection.getRangeAt(0);
-            range.deleteContents(); // Delete any selected content first
-            
-            // Insert the token and a trailing space for better usability
-            range.insertNode(tokenSpan);
-            range.insertNode(document.createTextNode('\u00A0')); // Non-breaking space
-            
-            // Move the cursor after the inserted element
-            range.setStartAfter(tokenSpan);
-            range.collapse(true);
-            selection.removeAllRanges();
-            selection.addRange(range);
-        } else {
-            // If no selection, just append (less ideal, but a fallback)
-            editor.appendChild(document.createTextNode('\u00A0'));
-            editor.appendChild(tokenSpan);
-            editor.appendChild(document.createTextNode('\u00A0'));
-        }
-        editor.focus(); // Ensure the editor stays focused
-    }
-
-    /**
      * Prevents partial deletion of a token by forcing the deletion of the entire token.
      * This improves the user experience for protected fields.
      */
