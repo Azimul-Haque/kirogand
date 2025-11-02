@@ -229,9 +229,9 @@ class CertificateController extends Controller
                 'post_office' => ['required', 'string', 'max:255'],
                 'union' => ['required', 'string', 'max:255'],
                 'memo' => ['nullable', 'string'],
-                'main_content' => ['required', 'string'],
             ]);
         }
+
         
 
         $applicantData = $request->only([
@@ -253,7 +253,6 @@ class CertificateController extends Controller
         } elseif($certificate->certificate_type == 'citizen-certificate') {
             $updatedDataPayload = [
                 'applicant' => $applicantData,
-                'main_content' => $request->main_content,
                 'submission_timestamp' => $submissionTimestamp,
                 'updated_timestamp' => now()->toDateTimeString(),
             ];
