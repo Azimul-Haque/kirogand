@@ -92,51 +92,55 @@
             {{ checkcertificatetype($certificate->certificate_type) }}
         </div>
 
-        {{-- Introduction Paragraph (Using Applicant Data) --}}
-        <p class="info-paragraph">
-            এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }}, পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }},
-            গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, ইউনিয়ন: {{ $applicant['union'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }},
-            জেলা: {{ $union_info['district'] ?? '--' }}। তিনি আমার ইউনিয়নের {{ $applicant['ward'] ?? '--' }} নং ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
-            মতে তিনি নিম্ন লিখিত ওয়ারিশান হিসাবে রেখে মৃত্যু বরণ করেন।
-        </p>
+        @if()
+            {{-- Introduction Paragraph (Using Applicant Data) --}}
+            <p class="info-paragraph">
+                এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }}, পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }},
+                গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, ইউনিয়ন: {{ $applicant['union'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }},
+                জেলা: {{ $union_info['district'] ?? '--' }}। তিনি আমার ইউনিয়নের {{ $applicant['ward'] ?? '--' }} নং ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
+                মতে তিনি নিম্ন লিখিত ওয়ারিশান হিসাবে রেখে মৃত্যু বরণ করেন।
+            </p>
 
-        {{-- Beneficiary Table (Using Heirs Data) --}}
-        <div style="text-align: center; margin-bottom: 5px; font-weight: bold; font-size: 16px; margin-top: 7px; font-weight: bold;">
-            ওয়ারিশগণের নাম
-        </div>
-        <table class="beneficiary-table">
-            <thead>
-                <tr>
-                    <th style="width: 8%;">ক্রমিক নং</th>
-                    <th style="width: 25%;">নাম</th>
-                    <th style="width: 15%;">সম্পর্ক</th>
-                    <th style="width: 25%;">এনআইডি/জন্ম সনদ</th>
-                    <th style="width: 15%;">জন্ম তারিখ</th>
-                    <th style="width: 12%;">মন্তব্য</th>
-                </tr>
-            </thead>
-            <tbody>
-                @forelse ($heirs as $index => $heir)
+            {{-- Beneficiary Table (Using Heirs Data) --}}
+            <div style="text-align: center; margin-bottom: 5px; font-weight: bold; font-size: 16px; margin-top: 7px; font-weight: bold;">
+                ওয়ারিশগণের নাম
+            </div>
+            <table class="beneficiary-table">
+                <thead>
                     <tr>
-                        <td>{{ bangla($index + 1) }}</td>
-                        <td>{{ $heir['name'] ?? '--' }}</td>
-                        <td>{{ $heir['relation'] ?? '--' }}</td>
-                        <td>{{ $heir['id_data'] ?? '--' }}</td> {{-- Mapping ID No. to the 'ভোটার আইডি' column --}}
-                        <td>{{ $heir['dob'] ?? '--' }}</td>
-                        <td>{{ $heir['remark'] ?? '--' }}</td>
+                        <th style="width: 8%;">ক্রমিক নং</th>
+                        <th style="width: 25%;">নাম</th>
+                        <th style="width: 15%;">সম্পর্ক</th>
+                        <th style="width: 25%;">এনআইডি/জন্ম সনদ</th>
+                        <th style="width: 15%;">জন্ম তারিখ</th>
+                        <th style="width: 12%;">মন্তব্য</th>
                     </tr>
-                @empty
-                    <tr>
-                        <td colspan="6" style="color: red;">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
-                    </tr>
-                @endforelse
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @forelse ($heirs as $index => $heir)
+                        <tr>
+                            <td>{{ bangla($index + 1) }}</td>
+                            <td>{{ $heir['name'] ?? '--' }}</td>
+                            <td>{{ $heir['relation'] ?? '--' }}</td>
+                            <td>{{ $heir['id_data'] ?? '--' }}</td> {{-- Mapping ID No. to the 'ভোটার আইডি' column --}}
+                            <td>{{ $heir['dob'] ?? '--' }}</td>
+                            <td>{{ $heir['remark'] ?? '--' }}</td>
+                        </tr>
+                    @empty
+                        <tr>
+                            <td colspan="6" style="color: red;">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
+                        </tr>
+                    @endforelse
+                </tbody>
+            </table>
 
-        {{-- Closing Remark --}}
-        <p class="info-paragraph" style="margin-top: 15px;">
-            আমি উক্ত ওয়ারিশগণের সার্বিক উন্নতি ও মঙ্গল কামনা করছি।
-        </p>
+            {{-- Closing Remark --}}
+            <p class="info-paragraph" style="margin-top: 15px;">
+                আমি উক্ত ওয়ারিশগণের সার্বিক উন্নতি ও মঙ্গল কামনা করছি।
+            </p>
+        @elseif()
+
+        @endif
 
         <p class="info-paragraph">
             এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাচ্ছে যে, , পিতা: , মাতা: ,
