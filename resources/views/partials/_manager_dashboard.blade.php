@@ -175,17 +175,19 @@
             </div>
             <div class="card-body p-0">
                 <ul class="products-list product-list-in-card pr-2 pl-2">
-                    <li class="item">
-                        <div class="product-img">
-                            <i class="fas fa-user-check fa-2x text-success"></i>
-                        </div>
-                        <div class="product-info">
-                            <a href="javascript:void(0)" class="product-title font-weight-bold">নাগরিক সনদ - আইডি: #৯৮৭৬</a>
-                            <span class="product-description">
-                                ইস্যু করেছেন: আপনি (প্রশাসনিক কর্মকর্তা), সময়: {{ date('H:i A') }}
-                            </span>
-                        </div>
-                    </li>
+                    @foreach($last5certs as $cert)
+                        <li class="item">
+                            <div class="product-img">
+                                <i class="fas fa-user-check fa-2x text-success"></i>
+                            </div>
+                            <div class="product-info">
+                                <a href="javascript:void(0)" class="product-title font-weight-bold">নাগরিক সনদ - আইডি: #৯৮৭৬</a>
+                                <span class="product-description">
+                                    ইস্যু করেছেন: আপনি (প্রশাসনিক কর্মকর্তা), সময়: {{ date('H:i A') }}
+                                </span>
+                            </div>
+                        </li>
+                    @endif
                     <li class="item">
                         <div class="product-img">
                             <i class="fas fa-user-edit fa-2x text-info"></i>
