@@ -285,8 +285,8 @@
                                     <div class="input-group mb-3">
                                       <select name="signatory" class="form-control" required>
                                         <option disabled="" value="">সনদে স্বাক্ষর সংখ্যা</option>
-                                        <option value="up" @if($localoffice->signatory == 1) selected="" @endif>ইউনিয়ন পরিষদ</option>
-                                        <option value="poura" @if($localoffice->signatory == 2) selected="" @endif>পৌরসভা</option>
+                                        <option value="up" @if($localoffice->signatory == 1) selected="" @endif>শুধু অনুমোদনকারী (চেয়ারম্যান/মেয়র ইত্যাদি)</option>
+                                        <option value="poura" @if($localoffice->signatory == 2) selected="" @endif>প্রস্তুতকারী ও অনুমোদনকারী</option>
                                       </select>
                                         <div class="input-group-append">
                                             <div class="input-group-text"><span class="fas fa-landmark"></span></div>
