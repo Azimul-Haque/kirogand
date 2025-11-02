@@ -217,7 +217,11 @@ function get_certificate_icon_data_en(string $certificate_type): array
 
     // 2. Color Selection Logic (Guaranteed No Repeat)
     $available_colors = ['text-success', 'text-primary', 'text-info', 'text-warning', 'text-danger'];
-    $random_color = $colors[array_rand($colors)];
+    // Find a color that is NOT the last used color
+    do {
+        $random_key = array_rand($available_colors);
+        $current_color = $available_colors[$random_key];
+    } while ($current_color === $last_color && count($available_colors) > 1); // Loop only if we have more than one color
 
     // 3. Get the icon class, defaulting to 'fa-file-alt' if the key is not found
     $icon_class = $icon_map[$certificate_type] ?? 'fa-file-alt';
