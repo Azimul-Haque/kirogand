@@ -127,6 +127,7 @@
                             </li>
                         </ul>
 
+                        @if($certificate->certificate_type == 'heir-certificate')
                         <!-- HEIR LIST SECTION (Bootstrap Table) -->
                         <h6 class="text-lg font-bold text-gray-800 mb-3 border-bottom pb-2">বৈধ উত্তরাধিকারীদের তালিকা</h6>
                         <div id="heirsListContainer" class="table-responsive">
