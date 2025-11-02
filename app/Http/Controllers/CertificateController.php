@@ -254,7 +254,7 @@ class CertificateController extends Controller
                 'submission_timestamp' => $submissionTimestamp,
                 'updated_timestamp' => now()->toDateTimeString(),
             ];
-        } elseif($certificate->certificate_type == 'citizen-certificate' || $certificate->certificate_type == 'permanent-resident') {
+        } else {
             $updatedDataPayload = [
                 'applicant' => $applicantData,
                 'submission_timestamp' => $submissionTimestamp,
