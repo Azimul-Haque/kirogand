@@ -45,7 +45,7 @@ class DashboardController extends Controller
         $this->middleware('auth')->except('clear');
         $this->middleware(['admin'])->only('getUsers', 'storeUser', 'updateUser', 'deleteUser', 'getUser', 'getLocalOffices', 'getLocalOfficesSearch', 'updateLocalOffices', 'addLocalOfficePayment', 'getPackages', 'storePackage', 'updatePackage', 'deletePackage', 'getPayments', 'getPaymentsSearch', 'getMessages', 'updateMessage', 'getNotifications', 'sendSingleNotification', 'sendSingleSMS', 'getBlogs', 'getBlogsSearch', 'storeBlog', 'storeBlogCategory', 'updateBlog', 'getExamSolvePDF');
 
-        $this->middleware(['admin_or_manager'])->only('getApplyforCertificate');
+        $this->middleware(['admin_or_manager'])->only('getApplyforCertificate', 'getProfile', 'updateProfileUser', 'updateProfileLocalOffice');
     }
 
     /**
@@ -630,7 +630,7 @@ class DashboardController extends Controller
     {
         // 1. Validation for LocalOffice fields
         $request->validate([
-            'name_bn'           => 'required|string|max:255',
+            // 'name_bn'           => 'required|string|max:255',
             'name'              => 'nullable|string|max:255',
             'mobile'            => 'required|string|digits:11',
             'email'             => 'required|email|max:255',
@@ -642,7 +642,7 @@ class DashboardController extends Controller
         $localoffice = LocalOffice::findOrFail($id);
 
         // 3. Update scalar fields
-        $localoffice->name_bn           = $request->name_bn;
+        // $localoffice->name_bn           = $request->name_bn;
         $localoffice->name              = $request->name;
         $localoffice->mobile            = $request->mobile;
         $localoffice->email             = $request->email;
