@@ -75,7 +75,6 @@ class CertificateController extends Controller
 
     public function storeCertificate(Request $request, $certificate_type)
     {
-        
         if($certificate_type == 'heir-certificate') {
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
