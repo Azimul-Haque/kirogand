@@ -176,7 +176,7 @@ function get_certificate_icon_data_en(string $certificate_type): array
         'death-certificate'                 => 'fa-skull-crossbones',      // মৃত্যু সনদ (Death)
 
         // Identity, Citizenship & Verification
-        'citizen-certificate'           => 'fa-id-card-alt',           // নাগরিকত্ব সনদ (Citizenship)
+        'citizen-certificate'               => 'fa-id-card-alt',           // নাগরিকত্ব সনদ (Citizenship)
         'nationality-certificate'           => 'fa-flag',                  // জাতীয়তা সনদ (Nationality)
         'new-voter-confirmation'            => 'fa-user-plus',             // নতুন ভোটার প্রত্যয়ন (New Voter)
         'nid-correction-certificate'        => 'fa-sync-alt',              // জাতীয় পরিচয় তথ্য সংশোধন (NID Correction)
