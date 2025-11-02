@@ -116,7 +116,7 @@ class CertificateController extends Controller
             'village', 'ward', 'post_office', 'union'
         ]);
 
-        // create new user
+        // check or create new user
         $newuser = User::create([
             'local_office_id' => Auth::user()->local_office_id,
             'is_active ' => 0,
@@ -127,6 +127,7 @@ class CertificateController extends Controller
             'mobile' => $request->mobile,
             'password' => Hash::make('123456'),
         ]);
+        // check or create new user
 
         if($certificate_type == 'heir-certificate') {
             $dataPayload = [
