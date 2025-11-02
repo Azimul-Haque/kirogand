@@ -35,7 +35,7 @@
     @endphp
 
     @if ($is_draft)
-        <div class="draft-watermark">খসড়া<br/>খসড়া<br/>খসড়া</div>
+        <div class="draft-watermark" style="color: rgba(200, 0, 0, 0.8) !important;">খসড়া<br/>খসড়া<br/>খসড়া</div>
     @endif
     
 
