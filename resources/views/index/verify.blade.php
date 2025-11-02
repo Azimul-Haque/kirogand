@@ -104,7 +104,7 @@
                         $is_draft = ($certificate->status ?? 0) == 0;
                     @endphp
                     <div class="card-body p-4 p-md-5">
-                        <h4>asdas</h4>
+                        <h3>asdas</h3>
                         <p class="text-success fw-bold text-center mb-4 text-xl">
                             সনদ নম্বর: <span class="text-decoration-underline text-primary">{{ $certificate->unique_serial }}</span>
                         </p>
