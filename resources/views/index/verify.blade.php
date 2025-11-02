@@ -22,7 +22,9 @@
         direction: ltr; /* Ensure left-to-right display for Bangla content */
     }
     /* Custom class for rounded corners slightly larger than default */
-    
+    {{-- .rounded-xl {
+        border-radius: 1rem !important; 
+    } --}}
   </style>
 @endsection
 
