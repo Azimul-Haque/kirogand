@@ -14,7 +14,7 @@ use Illuminate\Support\Carbon;
         else if ($text == 'character-certificate')
           return 'চারিত্রিক সনদপত্র';
         else if ($text == 'unmarried-certificate')
-          return 'চারিত্রিক সনদপত্র';
+          return 'অবিবাহিত সনদপত্র';
         else
             return $text;
     }
