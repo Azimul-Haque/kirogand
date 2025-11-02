@@ -108,12 +108,6 @@ class CertificateController extends Controller
                 'post_office' => ['required', 'string', 'max:255'],
                 'union' => ['required', 'string', 'max:255'],
                 'memo' => ['nullable', 'string'],
-                'heirs_data' => ['required', 'array', 'min:1'],
-                'heirs_data.*.name' => ['required', 'string', 'max:255'],
-                'heirs_data.*.relation' => ['required', 'string', 'max:255'],
-                'heirs_data.*.id_data' => ['nullable', 'string'],
-                'heirs_data.*.dob' => ['nullable', 'string'],
-                'heirs_data.*.remark' => ['nullable', 'string', 'max:255'],
             ]);
         }
         
