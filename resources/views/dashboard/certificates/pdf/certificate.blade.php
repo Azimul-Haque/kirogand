@@ -92,7 +92,7 @@
             {{ checkcertificatetype($certificate->certificate_type) }}
         </div>
 
-        @if($certificate->certificate_type)
+        @if($certificate->certificate_type == 'heir-certificate')
             {{-- Introduction Paragraph (Using Applicant Data) --}}
             <p class="info-paragraph">
                 এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }}, পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }},
