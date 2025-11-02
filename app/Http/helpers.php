@@ -230,6 +230,6 @@ function get_certificate_icon_data_en(string $certificate_type): array
     // 4. Return the data
     return [
         'icon_class' => $icon_class,
-        'color_class' => $random_color,
+        'color_class' => $current_color,
     ];
 }
