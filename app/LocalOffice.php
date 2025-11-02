@@ -25,7 +25,7 @@ class LocalOffice extends Model
         'package_expiry_date',
         'office_type',
         'is_active',
-        'memo',
+        'draft_memo',
 
         // Contact and Visuals
         'email',
