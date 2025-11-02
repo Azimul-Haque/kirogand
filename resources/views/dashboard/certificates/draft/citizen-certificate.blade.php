@@ -133,6 +133,19 @@
                         <i class="fas fa-check"></i> অনুমোদন করুন
                     </button>
                 </form>
+                @if($certificate->status == 0)
+                    <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
+                        @csrf
+                        <button type="button" class="btn btn-success no-print" onclick="return confirmSubmission(event);">
+                            <i class="fas fa-check"></i> অনুমোদন করুন
+                        </button>
+                    </form>
+                @else
+                    <a href="{{ route('dashboard.certificates.print', $certificate->unique_serial) }}" class="btn btn-primary btn-sm" target="_blank" data-toggle="tooltip" title="প্রিন্ট করুন">
+                        <i class="fas fa-print"></i> প্রিন্ট করুন
+                    </a>
+                @endif
+                
                 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
                 <script type="text/javascript">
                   const ToastAprv = Swal.mixin({
