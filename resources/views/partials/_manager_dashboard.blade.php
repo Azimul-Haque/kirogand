@@ -178,7 +178,7 @@
                     @foreach($last5certs as $cert)
                         <li class="item">
                             <div class="product-img">
-                                <i class="fas fa-user-check fa-2x {{ get_certificate_icon_data_en($cert->certificate_type)['color_class'] }}"></i>
+                                <i class="fas {{ get_certificate_icon_data_en($cert->certificate_type)['color_class'] }} fa-2x {{ get_certificate_icon_data_en($cert->certificate_type)['color_class'] }}"></i>
                             </div>
                             <div class="product-info">
                                 <a href="javascript:void(0)" class="product-title font-weight-bold">নাগরিক সনদ - আইডি: #৯৮৭৬</a>
