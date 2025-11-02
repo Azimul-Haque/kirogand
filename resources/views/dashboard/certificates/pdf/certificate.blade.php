@@ -340,7 +340,7 @@
 
     .line-border-top {
         border-top: 1px solid #666;
-        display: block;
+        display: ;
         padding-bottom: 5px;
     }
     .signature-block td {
