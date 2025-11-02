@@ -117,7 +117,7 @@
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center py-3">
                                 <span class="fw-semibold text-gray-700">ই্যসুর তারিখ:</span>
-                                <span id="issueDateDisplay" class="text-dark text-bn">{{ $certificate->issued_at != null ?  bangla(date('d-m-Y', strtotime($certificate->issued_at))) : bangla(date('d-m-Y')) }}</span>
+                                <span id="issueDateDisplay" class="text-dark text-bn">{{ $certificate->issued_at != null ?  bangla(date('d M Y', strtotime($certificate->issued_at))) : bangla(date('d-m-Y')) }}</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center py-3 bg-light">
                                 <span class="fw-semibold text-gray-700">বর্তমান অবস্থা:</span>
