@@ -146,3 +146,30 @@
 </div>
 <!-- /.card -->
 
+<style>
+    /* Custom styles for the editor and tokens */
+    #editor {
+        min-height: 300px;
+        padding: 15px;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        background-color: #ffffff;
+        font-size: 1rem;
+        line-height: 1.6;
+        outline: none; /* Remove default focus outline */
+    }
+    
+    /* Style for the protected (non-editable) tokens */
+    .protected-token {
+        display: inline-block;
+        background-color: #007bff; /* Primary blue from Bootstrap */
+        color: white;
+        padding: 2px 8px;
+        margin: 0 2px;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: default;
+        user-select: none; /* Prevent selection of internal text */
+    }
+</style>
+
