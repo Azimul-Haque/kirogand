@@ -62,7 +62,7 @@
                             <h5 class="mb-3">আবেদনকারীর তথ্য (Applicant Details)</h5>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p><span class="info-label">স্মারক:</span> {{ $applicant['name'] ?? 'N/A' }}</p>
+                                    <p><span class="info-label">স্মারক:</span> {{ $certificate->memo ?? 'N/A' }}</p>
                                 </div>
                             </div>
                             <div class="row">
