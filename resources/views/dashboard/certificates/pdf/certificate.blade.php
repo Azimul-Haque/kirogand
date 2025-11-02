@@ -232,7 +232,7 @@
     .draft-watermark {
         position: absolute;
         top: 40%;
-        left: 20%;
+        left: 10%;
         transform: translate(-40%, -30%) rotate(-45deg);
         color: rgba(255, 0, 0, 0.8);
         font-size: 100px;
