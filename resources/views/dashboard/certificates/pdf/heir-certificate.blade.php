@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
         body {
-            font-family: 'kalpurush', sans-serif;
+            font-family: 'solaimanlipi', sans-serif;
             color: #333;
         }
         @php
