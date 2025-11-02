@@ -48,8 +48,8 @@ return [
       'B'  => 'HindSiliguri-Regular.ttf',       // optional: bold font
       'I'  => 'HindSiliguri-Regular.ttf',     // optional: italic font
       'BI' => 'HindSiliguri-Regular.ttf', // optional: bold-italic font
-      'useOTL' => 0xFF,    // required for complicated langs like Persian, Arabic and Chinese
-      //'useKashida' => 75,  // required for complicated langs like Persian, Arabic and Chinese
+      // 'useOTL' => 0xFF,    // required for complicated langs like Persian, Arabic and Chinese
+      'useKashida' => 75,  // required for complicated langs like Persian, Arabic and Chinese
     ],
     // ...add as many as you want.
   ]
