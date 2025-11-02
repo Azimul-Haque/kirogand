@@ -127,12 +127,12 @@
                 </a>
                 
                 @if($certificate->status == 0)
-                <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
-                    @csrf
-                    <button type="button" class="btn btn-success no-print" onclick="return confirmSubmission(event);">
-                        <i class="fas fa-check"></i> অনুমোদন করুন
-                    </button>
-                </form>
+                    <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
+                        @csrf
+                        <button type="button" class="btn btn-success no-print" onclick="return confirmSubmission(event);">
+                            <i class="fas fa-check"></i> অনুমোদন করুন
+                        </button>
+                    </form>
                 @else
 
                 @endif
