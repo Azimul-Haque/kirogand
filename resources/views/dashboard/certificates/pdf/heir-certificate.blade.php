@@ -255,7 +255,7 @@
                 <td>
                     <img src="{{ public_path('images/seal-placeholder.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
                 </td>
-                @if()
+                @if($certificate->signatory)
                 <td>
                     <div style="padding-top: 10px;">প্রস্তুতকারীর সিল ও স্বাক্ষর</div>
                     <div class="signature-line"></div>
