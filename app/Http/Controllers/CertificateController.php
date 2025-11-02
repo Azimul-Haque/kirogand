@@ -110,8 +110,6 @@ class CertificateController extends Controller
                 'memo' => ['nullable', 'string'],
             ]);
         }
-        
-        
 
         $applicantData = $request->only([
             'name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
