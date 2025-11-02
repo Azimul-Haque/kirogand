@@ -275,7 +275,6 @@
                                           <input type="draft_memo"
                                                  name="draft_memo"
                                                  value="{{ $localoffice->draft_memo }}"
-                                                 autocomplete="off"
                                                  class="form-control"
                                                  placeholder="অফিস ইমেইল এড্রেস" required>
                                           <div class="input-group-append">
