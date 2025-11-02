@@ -250,7 +250,6 @@
      */
     function saveTemplate() {
         const contentHtml = editor.innerHTML;
-        console.log("--- Certificate Template HTML Content ---");
         console.log(contentHtml);
         
         // For demonstration, we show a success message
