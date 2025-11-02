@@ -13,7 +13,7 @@ return [
   'font_data' => [
     'kalpurush' => [
       'R'  => 'kalpurush.ttf',    // regular font
-      'B'  => 'kalpurush.ttf',       // optional: bold font
+      'B'  => '',       // optional: bold font
       'I'  => 'kalpurush.ttf',     // optional: italic font
       'BI' => 'kalpurush.ttf', // optional: bold-italic font
       'useOTL' => 0xFF,    // required for complicated langs like Persian, Arabic and Chinese
