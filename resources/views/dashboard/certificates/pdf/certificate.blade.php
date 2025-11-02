@@ -340,13 +340,8 @@
 
     .line-border-top {
         border-top: 2px solid #000000;
-        
-        /* 2. CRITICAL FIX: Make it a block-level element */
-        display: block; /* Ensures the border takes the full width and renders correctly */
-        
-        /* 3. Optional: Fine-tune spacing */
-        width: 100%;
-        padding-top: 5px; /* Add padding between the border and the text */
+        display: block;
+        padding-top: 3px;
     }
     .signature-block td {
         width: 25%; /* Four columns for signatures */
