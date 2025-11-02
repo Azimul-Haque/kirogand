@@ -188,28 +188,6 @@
                             </div>
                         </li>
                     @endforeach
-                    <li class="item">
-                        <div class="product-img">
-                            <i class="fas fa-user-edit fa-2x text-info"></i>
-                        </div>
-                        <div class="product-info">
-                            <a href="javascript:void(0)" class="product-title font-weight-bold">চারিত্রিক সনদ - আইডি: #৯৮৭৫</a>
-                            <span class="product-description">
-                                অনুমোদিত: চেয়ারম্যান, সময়: {{ date('H:i A', strtotime('-1 hour')) }}
-                            </span>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <div class="product-img">
-                            <i class="fas fa-money-bill-wave fa-2x text-warning"></i>
-                        </div>
-                        <div class="product-info">
-                            <a href="javascript:void(0)" class="product-title font-weight-bold">ট্যাক্স আদায় - রসিদ: #৫৬০</a>
-                            <span class="product-description">
-                                জমা হয়েছে: ৳ ১,২০০, সময়: {{ date('H:i A', strtotime('-3 hours')) }}
-                            </span>
-                        </div>
-                    </li>
                 </ul>
             </div>
             <div class="card-footer text-center">
