@@ -10,8 +10,8 @@
     $route = $isEdit
         ? route('dashboard.certificates.update', $certificate->id)
         : route('dashboard.certificates.store', 'citizen-certificate');
-    $buttonText = $isEdit ? 'ওয়ারিশান সনদপত্র আপডেট করুন' : 'ওয়ারিশান সনদপত্র তৈরি করুন';
-    $title = $isEdit ? 'ওয়ারিশান সনদপত্র সম্পাদনা' : 'ওয়ারিশান সনদপত্র ফরম';
+    $buttonText = $isEdit ? 'নাগরিকত্ব সনদ আপডেট করুন' : 'নাগরিকত্ব সনদ তৈরি করুন';
+    $title = $isEdit ? 'নাগরিকত্ব সনদ সম্পাদনা' : 'নাগরিকত্ব সনদ ফরম';
 @endphp
 
 <!-- Card structure common in AdminLTE 3 -->
