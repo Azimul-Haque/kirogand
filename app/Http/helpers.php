@@ -7,7 +7,9 @@ use Illuminate\Support\Carbon;
             return 'ওয়ারিশ সনদ';
         else if ($text == 'citizen-certificate')
           return 'নাগরিকত্ব সনদ';
-      else if ($text == 'permanent-resident')
+        else if ($text == 'permanent-resident')
+          return 'স্থায়ী বাসিন্দা মর্মে সনদ';
+        else if ($text == 'same-person')
           return 'স্থায়ী বাসিন্দা মর্মে সনদ';
         else
             return $text;
