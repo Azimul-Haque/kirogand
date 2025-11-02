@@ -35,7 +35,7 @@ return [
       // 'useOTL' => 0xFF,    // required for complicated langs like Persian, Arabic and Chinese
       'useKashida' => 75,  // required for complicated langs like Persian, Arabic and Chinese
     ],
-    'solaimanlipi' => [
+    'SolaimanLipi' => [
       'R'  => 'SolaimanLipi_20-04-07.ttf',    // regular font
       'B'  => 'SolaimanLipi_20-04-07b.ttf',       // optional: bold font
       'I'  => 'SolaimanLipi_20-04-07.ttf',     // optional: italic font
