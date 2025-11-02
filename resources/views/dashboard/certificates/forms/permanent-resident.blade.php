@@ -2,7 +2,7 @@
 @php
     // Determine if we are in Edit or Create mode based on $certificate object
     $isEdit = isset($certificate) && $certificate->exists;
-    $certificatetype = $isEdit ? $certificate->certificate_type : $certificate_type
+    $certificatetype = $isEdit ? $certificate->certificate_type : $certificate_type;
     $data = $isEdit ? ($certificate->data_payload ?? []) : [];
     $applicant = $data['applicant'] ?? [];
     $heirs = $data['heirs'] ?? [];
