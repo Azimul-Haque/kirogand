@@ -55,7 +55,7 @@
 
                       <p class="lead text-muted mb-4 text-center">
                         @if(isset($certificate))
-                            @if($certificate == 1) সনদটি যাচাই করে এর সত্যতা পাওয়া গিয়েছে। @else সনদটি যাচাই করে প্রক্রিয়াধীন অবস্থায় পাওয়া গিয়েছে। @endif
+                            @if($certificate->status == 1) সনদটি যাচাই করে এর সত্যতা পাওয়া গিয়েছে। @else সনদটি যাচাই করে প্রক্রিয়াধীন অবস্থায় পাওয়া গিয়েছে। @endif
                           
                         @else
                           সনদটি যাচাই করে এর সত্যতা পাওয়া যায়নি!
