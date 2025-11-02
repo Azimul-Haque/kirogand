@@ -231,7 +231,7 @@
 
     .draft-watermark {
         position: absolute;
-        top: 40%;
+        top: 20%;
         left: 0%;
         transform: translate(-40%, -30%) rotate(-45deg);
         color: rgba(255, 0, 0, 0.8);
