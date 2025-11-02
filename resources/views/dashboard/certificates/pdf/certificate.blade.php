@@ -233,7 +233,7 @@
         position: fixed;rotate:90;
         top: 10%;
         left: 0%;
-        color: rgba(200, 0, 0, 0, 0.2) !important;
+        color: rgba(200, 0, 0, 0.2) !important;
         font-size: 100px;
         font-weight: bold;
         z-index: 1000;
