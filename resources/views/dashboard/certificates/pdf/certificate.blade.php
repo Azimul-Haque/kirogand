@@ -139,7 +139,7 @@
                 আমি উক্ত ওয়ারিশগণের সার্বিক উন্নতি ও মঙ্গল কামনা করছি।
             </p>
         @elseif($certificate->certificate_type == 'citizen-certificate')
-            <p class="info-paragraph" style="margin-top: 50px;">
+            <p class="info-paragraph" style="margin-top: 30px;">
                 এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }}, পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক। আমার জানামতে, তিনি কোন প্রকার সমাজবিরোধী বা রাষ্ট্রবিদ্রোহমূলক কর্মকাণ্ডের সাথে জড়িত ছিলেন না বা নেই।
             </p>
             <p class="info-paragraph" style="margin-top: 15px;">
