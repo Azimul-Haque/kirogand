@@ -289,7 +289,7 @@
                                         <option value="poura" @if($localoffice->signatory == 2) selected="" @endif>প্রস্তুতকারী ও অনুমোদনকারী</option>
                                       </select>
                                         <div class="input-group-append">
-                                            <div class="input-group-text"><span class="fas fa-landmark"></span></div>
+                                            <div class="input-group-text"><span class="fas fa-hand-writing"></span></div>
                                         </div>
                                     </div>
                                   </div>
