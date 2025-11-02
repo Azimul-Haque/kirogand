@@ -11,6 +11,8 @@ use Illuminate\Support\Carbon;
           return 'স্থায়ী বাসিন্দা মর্মে সনদ';
         else if ($text == 'same-person')
           return 'একই ব্যক্তি মর্মে প্রত্যয়ন';
+        else if ($text == 'character-certificate')
+          return 'একই ব্যক্তি মর্মে প্রত্যয়ন';
         else
             return $text;
     }
