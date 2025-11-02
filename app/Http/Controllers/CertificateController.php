@@ -303,7 +303,7 @@ class CertificateController extends Controller
 
         // dd($qrCodeSvg);
 
-        $pdf = PDF::loadView('dashboard.certificates.pdf.heir-certificate', ['certificate' => $certificate, 'qrCodeSvg' => $qrCodeSvg]);
+        $pdf = PDF::loadView('dashboard.certificates.pdf.certificate', ['certificate' => $certificate, 'qrCodeSvg' => $qrCodeSvg]);
         $fileName = 'Cert-' . $certificate->unique_serial . '.pdf';
         return $pdf->stream($fileName); // download/stream
     }
@@ -319,7 +319,7 @@ class CertificateController extends Controller
 
         $certificate = Certificate::where('unique_serial', $unique_serial)->first();
 
-        $pdf = PDF::loadView('dashboard.certificates.pdf.heir-certificate', ['certificate' => $certificate]);
+        $pdf = PDF::loadView('dashboard.certificates.pdf.certificate', ['certificate' => $certificate]);
         $fileName = 'Cert-' . $certificate->unique_serial . '.pdf';
         return $pdf->download($fileName); // download/stream
     }
