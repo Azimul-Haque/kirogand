@@ -74,7 +74,7 @@
                     <div class="card-header card-header-custom rounded-top-xl py-3 px-4">
                         <h5 class="mb-0 text-white d-flex align-items-center">
                             <i class="fas fa-check-circle me-3"></i>
-                            যাচাই সফল: ওয়ারিশ সনদের বিবরণ
+                            যাচাই সফল: {{ checkcertificatetype($certificate->certificate_type) }} বিবরণ
                         </h5>
                     </div>
                     @php
