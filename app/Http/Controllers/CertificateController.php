@@ -44,7 +44,7 @@ class CertificateController extends Controller
         $this->middleware('auth')->except('clear');
         // $this->middleware(['admin'])->only();
 
-        $this->middleware(['admin_or_manager'])->only('index', 'createCertificate');
+        $this->middleware(['admin_or_manager'])->only('index', 'createCertificate', 'storeCertificate');
     }
 
     public function index()
@@ -134,7 +134,7 @@ class CertificateController extends Controller
         $ifolduser = User::where('mobile', $request->mobile)
                           ->orWhere('nid', $request->id_value)
                           ->first();
-        
+
         if($ifolduser == null) {
             $newuser = User::create([
                 'local_office_id' => Auth::user()->local_office_id,
