@@ -121,8 +121,8 @@ class DashboardController extends Controller
         // dd($totaluserscumulitiveforchartc);
 
         $last5certs = Certificate::orderBy('created_at', 'DESC')
-                                    ->take(14)
-                                    ->get();
+                                 ->take(14)
+                                 ->get();
 
         return view('dashboard.index')->withTotalusers($totalusers)
                                       ->withTotalpayment($totalpayment)
