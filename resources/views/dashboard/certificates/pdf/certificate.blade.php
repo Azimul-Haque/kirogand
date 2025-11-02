@@ -152,7 +152,7 @@
         {{-- Signature and Seal Block --}}
         <table class="signature-block">
             <tr>
-                <td>
+                <td align="left">
                     <img src="{{ public_path('images/seal-placeholder.png') }}" style="height: 70px; width: auto; display: block; margin: 0 auto;">
                 </td>
                 @if($certificate->localOffice->signatory == 2)
