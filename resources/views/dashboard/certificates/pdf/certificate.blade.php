@@ -166,7 +166,7 @@
                         <div class="signature-line"></div>
                     </td>
                 @else
-                    <td>
+                    <td align="center">
                         <div style="padding-top: 10px;"></div>
                     </td>
                     <td >
