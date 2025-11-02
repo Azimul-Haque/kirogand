@@ -544,8 +544,8 @@ class DashboardController extends Controller
             $localoffice->monogram = $filename;
 
             $image      = $request->file('monogram');
-            $filename   = strtolower($localoffice->office_type) . '-monogram-' . time() . '.' . "png";
-            $filename_back   = 'background-' . strtolower($localoffice->office_type) . '-monogram-' . time() . '.' . "png";
+            $filename   = strtolower($request->office_type) . '-monogram-' . time() . '.' . "png";
+            $filename_back   = 'background-' . strtolower($request->office_type) . '-monogram-' . time() . '.' . "png";
             $location   = public_path('images/localoffices/' . $filename);
             $location_back   = public_path('images/localoffices/' . $filename_back);
             Image::make($image)->fit(300, 300)->save($location);
