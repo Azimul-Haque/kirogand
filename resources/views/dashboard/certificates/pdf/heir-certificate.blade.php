@@ -18,23 +18,6 @@
             /* Reduced top/bottom margin for better content display */
             margin: 180px 80px 40px 70px;
         }
-        @page {
-            /* Place the image on all subsequent pages */
-            background: element(page-background-image) no-repeat 0 0;
-        }
-        #page-background-image {
-            /* Mandatory: Assign a named page element property */
-            position: running(page-background-image);
-
-            /* --- The Magic: The opacity value must be between 0.0 and 1.0 --- */
-            /* 0.8 means 80% visible (20% transparent) */
-            opacity: 0.8; 
-
-            /* Ensure it covers the full viewport (the whole page area) */
-            width: 100%;
-            height: 100%;
-        }
-
         .page-header,
           .page-header-space {
             height: 250px;
