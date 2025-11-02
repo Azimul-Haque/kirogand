@@ -99,7 +99,7 @@
             জেলা: {{ $union_info['district'] ?? '--' }}। তিনি আমার ইউনিয়নের {{ $applicant['ward'] ?? '--' }} নং ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
             মতে তিনি নিম্ন লিখিত ওয়ারিশান হিসাবে রেখে মৃত্যু বরণ করেন।
 
-            <p>এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, <span class="protected-token" contenteditable="false">[নাম]</span>, পিতা: <span class="protected-token" contenteditable="false">[পিতার নাম]</span>, মাতা: <span class="protected-token" contenteditable="false">[মাতার নাম]</span>, গ্রাম: <span class="protected-token" contenteditable="false">[গ্রাম]</span>, ওয়ার্ড: <span class="protected-token" contenteditable="false">[ওয়ার্ড]</span>, ডাকঘর: <span class="protected-token" contenteditable="false">[ডাকঘর]</span>, উপজেলা: <span class="protected-token" contenteditable="false">[উপজেলা]</span>, জেলা: <span class="protected-token" contenteditable="false">[জেলা]</span>-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র <span class="protected-token" contenteditable="false">[ইউনিয়ন]</span>-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক। আমার জানামতে, তিনি কোন প্রকার সমাজবিরোধী বা রাষ্ট্রবিদ্রোহমূলক কর্মকাণ্ডের সাথে জড়িত ছিলেন না বা নেই।
+            <p>এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, [নাম] পিতা: [পিতার নাম] মাতা: [মাতার নাম] গ্রাম: [গ্রাম] ওয়ার্ড: [ওয়ার্ড] ডাকঘর: [ডাকঘর] উপজেলা: [উপজেলা] জেলা: [জেলা]-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র [ইউনিয়ন]-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক। আমার জানামতে, তিনি কোন প্রকার সমাজবিরোধী বা রাষ্ট্রবিদ্রোহমূলক কর্মকাণ্ডের সাথে জড়িত ছিলেন না বা নেই।
             </p>
             <p>
                 তার নৈতিক চরিত্র ভালো। আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
