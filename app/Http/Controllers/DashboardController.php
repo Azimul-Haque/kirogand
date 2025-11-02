@@ -130,7 +130,8 @@ class DashboardController extends Controller
                                       ->withDaysforchartc($daysforchartc)
                                       ->withTotalusersforchartc($totalusersforchartc)
                                       ->withTotaluserscumulitiveforchartc($totaluserscumulitiveforchartc)
-                                      ->withTotallocaloffices($totallocaloffices);
+                                      ->withTotallocaloffices($totallocaloffices)
+                                      ->withLast5certs($last5certs);
                                     // ->withTotalbalance($totalbalance)
                                     // ->withTotalexpense($totalexpense)
                                     // ->withTodaystotalexpense($todaystotalexpense)
