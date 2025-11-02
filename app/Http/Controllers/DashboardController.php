@@ -635,7 +635,8 @@ class DashboardController extends Controller
             'mobile'            => 'required|string|digits:11',
             'email'             => 'required|email|max:255',
             'monogram'          => 'sometimes|image|max:300', // max 300KB
-            'draft_memo'          => 'sometimes|image|max:300', // max 300KB
+            'draft_memo'          => 'sometimes', // max 300KB
+            'signatory'          => 'sometimes', // max 300KB
         ]);
 
         $localoffice = LocalOffice::findOrFail($id);
