@@ -272,9 +272,9 @@
                                   <div class="col-md-6">
                                     <div class="col-md-6">
                                       <div class="input-group mb-3">
-                                          <input type="email"
-                                                 name="email"
-                                                 value="{{ $localoffice->email }}"
+                                          <input type="draft_memo"
+                                                 name="draft_memo"
+                                                 value="{{ $localoffice->draft_memo }}"
                                                  autocomplete="off"
                                                  class="form-control"
                                                  placeholder="অফিস ইমেইল এড্রেস" required>
@@ -285,7 +285,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                
+
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="input-group mb-3">
