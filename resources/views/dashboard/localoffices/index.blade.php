@@ -278,7 +278,7 @@
                                                  class="form-control"
                                                  placeholder="স্মারক নাম্বারের টেমপ্লেট" required>
                                           <div class="input-group-append">
-                                              <div class="input-group-text"><span class="fas fa-envelope"></span></div>
+                                              <div class="input-group-text"><span class="fas fa-tag"></span></div>
                                           </div>
                                       </div>
                                     </div>
