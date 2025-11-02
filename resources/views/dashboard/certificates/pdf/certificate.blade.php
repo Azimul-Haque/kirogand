@@ -75,8 +75,6 @@
     <div style="border-top: 2px solid green; margin-top: 5px;"></div>
 
     {{-- CERTIFICATE BODY --}}
-    {{-- CERTIFICATE BODY --}}
-    {{-- CERTIFICATE BODY --}}
     <div>
         {{-- Certificate Metadata --}}
         <table style="width: 100%; margin-top: 5px;">
