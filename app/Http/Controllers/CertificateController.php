@@ -127,7 +127,7 @@ class CertificateController extends Controller
             'recipient_user_id' => $newuser->id,
             'status' => 0, // 0 = draft, 1 = published
             'unique_serial' => $uniqueSerial,
-            'memo' => $uniqueSerial,
+            'memo' => $request->id_value,
             'issued_at' => now(),
             'data_payload' => $dataPayload,
         ]);
