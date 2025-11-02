@@ -595,7 +595,7 @@
         'B' => 'SolaimanLipi_20-04-07b.ttf',
         'I' => 'SolaimanLipi_20-04-07.ttf',
         'BI' => 'SolaimanLipi_20-04-07.ttf',
-        'useOTL' => 255,
+        'useKashida' => 75,
       ),
       'HindSiliguri' => 
       array (
@@ -603,7 +603,7 @@
         'B' => 'HindSiliguri-Regular.ttf',
         'I' => 'HindSiliguri-Regular.ttf',
         'BI' => 'HindSiliguri-Regular.ttf',
-        'useOTL' => 255,
+        'useKashida' => 75,
       ),
     ),
   ),
