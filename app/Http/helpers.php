@@ -215,9 +215,8 @@ function get_certificate_icon_data_en(string $certificate_type): array
         'whomever-it-may-concern'           => 'fa-ellipsis-h',            // যাহার জন্য প্রযোজ্য (Whomever it may concern)
     ];
 
-    // 2. Select a random color class from the approved list
-    // 'text-success' and 'text-primary' are mandatory, adding 'text-info' and 'text-warning' for better variety.
-    $colors = ['text-success', 'text-primary', 'text-info', 'text-warning'];
+    // 2. Color Selection Logic (Guaranteed No Repeat)
+    $available_colors = ['text-success', 'text-primary', 'text-info', 'text-warning', 'text-danger'];
     $random_color = $colors[array_rand($colors)];
 
     // 3. Get the icon class, defaulting to 'fa-file-alt' if the key is not found
