@@ -182,66 +182,6 @@
 </style>
 
 <script>
-    // --- JAVASCRIPT LOGIC FOR PROTECTED TOKENS ---
     
-    const editor = document.getElementById('editor');
-
-    /**
-     * Prevents partial deletion of a token by forcing the deletion of the entire token.
-     * This improves the user experience for protected fields.
-     */
-    editor.addEventListener('keydown', function(event) {
-        const selection = window.getSelection();
-        if (!selection.rangeCount) return;
-
-        const range = selection.getRangeAt(0);
-        
-        // 1. Check for Backspace (key: 8)
-        if (event.key === 'Backspace') {
-            // Check if the caret is immediately after a protected token
-            let node = range.startContainer;
-            let offset = range.startOffset;
-
-            // If the cursor is at the beginning of a text node, check the previous element
-            if (node.nodeType === 3 && offset === 0) {
-                node = node.previousSibling;
-                offset = node ? node.textContent.length : 0;
-            }
-            
-            // Look for a token right before the cursor
-            if (node && node.nodeType === 1 && node.classList.contains('protected-token')) {
-                // Prevent default backspace behavior
-                event.preventDefault();
-                
-                // Get the parent element and remove the whole token
-                const parent = node.parentNode;
-                parent.removeChild(node);
-                
-                // Set cursor position back where the token was
-                range.setStart(parent, Array.from(parent.childNodes).indexOf(node));
-                range.collapse(true);
-                selection.removeAllRanges();
-                selection.addRange(range);
-                
-                return;
-            }
-        }
-        
-        // 2. Check for Delete (key: 46) - Less common but good practice
-        if (event.key === 'Delete') {
-            // Check if the caret is immediately before a protected token
-            let node = range.startContainer;
-            let offset = range.startOffset;
-            
-            // Look for a token right after the cursor
-            let nextNode = node.childNodes ? node.childNodes[offset] : null;
-
-            if (nextNode && nextNode.nodeType === 1 && nextNode.classList.contains('protected-token')) {
-                event.preventDefault();
-                nextNode.parentNode.removeChild(nextNode);
-            }
-        }
-    });
-
 </script>
 
