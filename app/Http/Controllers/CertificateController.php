@@ -253,6 +253,7 @@ class CertificateController extends Controller
         } elseif($certificate->certificate_type == 'citizen-certificate') {
             $updatedDataPayload = [
                 'applicant' => $applicantData,
+                'main_content' => $applicantData,
                 'submission_timestamp' => $submissionTimestamp,
                 'updated_timestamp' => now()->toDateTimeString(),
             ];
