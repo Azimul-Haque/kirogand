@@ -22,7 +22,7 @@ class CreateCertificatesTable extends Migration
             // Key fields for lookup and template selection
             $table->string('certificate_type', 50)->comment('e.g., birth_standard, academic_transcript, etc.');
             $table->string('memo')->nullable();
-            $table->string('signatory')->nullable();
+            $table->integer('signatory', 2)->nullable();
             $table->integer('status', 2);
             $table->string('unique_serial', 100)->unique();
             
