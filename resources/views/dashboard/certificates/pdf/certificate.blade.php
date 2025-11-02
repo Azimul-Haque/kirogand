@@ -37,7 +37,7 @@
     @if ($is_draft)
         <div class="draft-watermark">খসড়া খসড়া খসড়া</div>
     @endif
-    <div class="draft-watermark">খসড়া খসড়া খসড়া</div>
+    <div class="draft-watermark">খসড়া</div>
 
     {{-- HEADER CONTENT - Modified to fit the certificate image --}}
     <htmlpageheader name="page-header">
