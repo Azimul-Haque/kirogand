@@ -287,9 +287,6 @@ class CertificateController extends Controller
 
     public function showCertificateQr($unique_serial)
     {
-        
-
-        // 3. Pass the SVG string to the view
         return view('certificate-qr', [
             'qrCodeSvg' => $qrCodeSvg,
             'verificationLink' => $dataToEncode
