@@ -347,7 +347,7 @@
         width: 25%; /* Four columns for signatures */
         text-align: center;
         font-size: 13px;
-        padding-top: 15px;   border-top: 3px dashed #666;
+        padding-top: 15px;
         width: 80%;
         margin: 0 auto;
         margin-top: 5px;
