@@ -161,7 +161,7 @@
                         <div class="signature-line"></div>
                         <div style="border-top: 2px solid green; margin-top: 5px;"></div>
                     </td>
-                    <td align="right">
+                    <td align="right" style="padding-right: 20px;">
                         <div style="padding-top: 10px;">অনুমোদনকারীর সিল ও স্বাক্ষর</div>
                         <div class="signature-line"></div>
                     </td>
