@@ -572,8 +572,9 @@
         'I' => 'kalpurush.ttf',
         'BI' => 'kalpurush.ttf',
         'useOTL' => 255,
+        'useKashida' => 75,
       ),
-      'Nikosh' => 
+      'nikosh' => 
       array (
         'R' => 'Nikosh.ttf',
         'B' => 'Nikosh.ttf',
