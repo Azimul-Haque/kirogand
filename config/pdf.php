@@ -24,7 +24,7 @@ return [
       'B'  => 'Nikosh.ttf',       // optional: bold font
       'I'  => 'Nikosh.ttf',     // optional: italic font
       'BI' => 'Nikosh.ttf', // optional: bold-italic font
-      'useOTL' => 0xFF,    // required for complicated langs like Persian, Arabic and Chinese
+      // 'useOTL' => 0xFF,    // required for complicated langs like Persian, Arabic and Chinese
       'useKashida' => 75,  // required for complicated langs like Persian, Arabic and Chinese
     ],
     'Shonar' => [
