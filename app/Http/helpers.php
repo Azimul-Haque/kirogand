@@ -68,8 +68,8 @@ use Illuminate\Support\Carbon;
           return 'ওয়ারিশ সনদ';
       else if ($text == 'citizen-certificate')
         return 'নাগরিকত্ব সনদ';
-    else if ($text == 'citizen-certificate')
-        return 'নাগরিকত্ব সনদ';
+    else if ($text == 'citizens-certificate')
+        return 'নাগরিকত্ব সনদs';
       else
           return $text;
   }
