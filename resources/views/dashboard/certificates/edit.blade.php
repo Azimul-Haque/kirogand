@@ -29,6 +29,8 @@
             @include('dashboard.certificates.forms.citizen-certificate')
           @elseif($certificate->certificate_type == 'permanent-resident')
             @include('dashboard.certificates.forms.permanent-resident')
+          @elseif($certificate->certificate_type == 'same-person')
+            @include('dashboard.certificates.forms.same-person')
           @endif
         </div>
       </div>
