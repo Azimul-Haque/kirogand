@@ -138,9 +138,6 @@
                 <p>
                     তার নৈতিক চরিত্র ভালো। আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
                 </p>
-                <p>
-                    The remaining text is fully editable. You can delete the spaces around the tokens, but you cannot edit the text inside the blue box.
-                </p>
             </div>
 
             
