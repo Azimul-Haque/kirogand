@@ -341,7 +341,7 @@
     .line-border-top {
         border-top: 1px solid #000000;
         display: block;
-        padding-bottom: 3px;
+        padding-bottom: 5px;
     }
     .signature-block td {
         width: 25%; /* Four columns for signatures */
