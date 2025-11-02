@@ -565,45 +565,12 @@
     'font_path' => 'C:\\wamp\\www\\dnagorik\\vendor\\mpdf\\mpdf\\ttfonts',
     'font_data' => 
     array (
-      'kalpurush' => 
-      array (
-        'R' => 'kalpurush.ttf',
-        'B' => 'kalpurush.ttf',
-        'I' => 'kalpurush.ttf',
-        'BI' => 'kalpurush.ttf',
-        'useOTL' => 255,
-        'useKashida' => 75,
-      ),
       'nikosh' => 
       array (
-        'R' => 'Nikosh.ttf',
-        'B' => 'Nikosh.ttf',
-        'I' => 'Nikosh.ttf',
-        'BI' => 'Nikosh.ttf',
-      ),
-      'Shonar' => 
-      array (
-        'R' => 'Shonar.ttf',
-        'B' => 'Shonarb.ttf',
-        'I' => 'Shonar.ttf',
-        'BI' => 'Shonar.ttf',
-        'useOTL' => 255,
-      ),
-      'SolaimanLipi' => 
-      array (
-        'R' => 'SolaimanLipi_20-04-07.ttf',
-        'B' => 'SolaimanLipi_20-04-07b.ttf',
-        'I' => 'SolaimanLipi_20-04-07.ttf',
-        'BI' => 'SolaimanLipi_20-04-07.ttf',
-        'useOTL' => 255,
-      ),
-      'HindSiliguri' => 
-      array (
-        'R' => 'HindSiliguri-Regular.ttf',
-        'B' => 'HindSiliguri-Regular.ttf',
-        'I' => 'HindSiliguri-Regular.ttf',
-        'BI' => 'HindSiliguri-Regular.ttf',
-        'useOTL' => 255,
+        'R' => 'nikosh.ttf',
+        'B' => 'nikosh.ttf',
+        'I' => 'nikosh.ttf',
+        'BI' => 'nikosh.ttf',
       ),
     ),
   ),
