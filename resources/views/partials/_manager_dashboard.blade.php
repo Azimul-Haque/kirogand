@@ -181,7 +181,7 @@
                                 <i class="fas {{ get_certificate_icon_data_en($cert->certificate_type)['icon_class'] }} fa-2x {{ get_certificate_icon_data_en($cert->certificate_type)['color_class'] }}"></i>
                             </div>
                             <div class="product-info">
-                                <a href="{{ route('dashboard.certificates.draft', $certificate->unique_serial) }}" class="product-title font-weight-bold">{{ checkcertificatetype($cert->certificate_type) }} - আইডি: #{{ bangla($cert->unique_serial) }}</a>
+                                <a href="{{ route('dashboard.certificates.draft', $cert->unique_serial) }}" class="product-title font-weight-bold">{{ checkcertificatetype($cert->certificate_type) }} - আইডি: #{{ bangla($cert->unique_serial) }}</a>
                                 <span class="product-description">
                                     ইস্যু কর্তৃপক্ষ: ({{ $cert->localOffice->name_bn }}), সময়: {{ date('H:i A', strtotime($cert->issued_at)) }}
                                 </span>
