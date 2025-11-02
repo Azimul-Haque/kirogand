@@ -19,7 +19,7 @@ return [
       'useOTL' => 0xFF,    // required for complicated langs like Persian, Arabic and Chinese
       //'useKashida' => 75,  // required for complicated langs like Persian, Arabic and Chinese
     ],
-    'Nikosh' => [
+    'nikosh' => [
       'R'  => 'Nikosh.ttf',    // regular font
       'B'  => 'Nikosh.ttf',       // optional: bold font
       'I'  => 'Nikosh.ttf',     // optional: italic font
