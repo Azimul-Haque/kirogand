@@ -44,7 +44,7 @@ class CertificateController extends Controller
         $this->middleware('auth')->except('clear');
         // $this->middleware(['admin'])->only();
 
-        $this->middleware(['admin_or_manager'])->only('index', 'getApplicationbyCType');
+        $this->middleware(['admin_or_manager'])->only('index', 'createCertificate');
     }
 
     public function index()
