@@ -232,7 +232,6 @@ class CertificateController extends Controller
                 'main_content' => ['required', 'string'],
             ]);
         }
-
         
 
         $applicantData = $request->only([
