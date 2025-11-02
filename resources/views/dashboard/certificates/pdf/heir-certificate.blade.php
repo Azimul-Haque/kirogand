@@ -201,10 +201,7 @@
     body {
         font-family: 'kalpurush', sans-serif;
         color: #333;
-        border: 2mm solid black; /* Adjust thickness and color as needed */
-                        margin: 0; /* Remove default body margin */
-                        padding: 10mm; /* Add padding to bring content inside the border */
-                        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        
     }
     @php
         $back_image = public_path('images/localoffices/background-'. $certificate->localOffice->monogram);
