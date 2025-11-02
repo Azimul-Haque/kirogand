@@ -21,6 +21,7 @@ class CreateLocalOfficesTable extends Migration
             $table->string('mobile', 20)->nullable();
             $table->string('monogram', 255)->nullable();
             $table->string('draft_memo', 255)->nullable();
+            $table->integer('signatory', 2)->nullable();
             
             // Office Identification
             $table->string('name_bn', 191); // Office's full name in Bengali
