@@ -185,8 +185,8 @@
                 </td>
                 @if($certificate->localOffice->signatory == 2)
                     <td align="center">
-                        <div style="padding-top: 10px;" class="line-border-top">প্রস্তুতকারীর সিল ও স্বাক্ষর</div>
                         <div style="border-top: 2px solid green; margin-top: 15px;"></div>
+                        <div style="padding-top: 10px;" class="line-border-top">প্রস্তুতকারীর সিল ও স্বাক্ষর</div>
                     </td>
                     <td align="right" style="padding-right: 20px;" class="line-border-top">
                         <div style="padding-top: 10px;">অনুমোদনকারীর সিল ও স্বাক্ষর</div>
