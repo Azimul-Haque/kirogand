@@ -10,7 +10,7 @@
     // Set form parameters
     $route = $isEdit
         ? route('dashboard.certificates.update', $certificate->id)
-        : route('dashboard.certificates.store', 'heir-certificate');
+        : route('dashboard.certificates.store', '{{ $certificatetype }}');
     $buttonText = $isEdit ? checkcertificatetype($certificatetype) . ' আপডেট করুন' : checkcertificatetype($certificatetype) . ' তৈরি করুন';
     $title = $isEdit ? checkcertificatetype($certificatetype) . ' সম্পাদনা' : checkcertificatetype($certificatetype) . ' ফরম';
 @endphp
@@ -30,7 +30,7 @@
 
         <!-- Hidden field for type recognition in the Controller (only needed for create/store) -->
         @if (!$isEdit)
-            <input type="hidden" name="certificate_type" value="heir-certificate">
+            <input type="hidden" name="certificate_type" value="{{ $certificatetype }}">
         @endif
 
         <div class="card-body">
