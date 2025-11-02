@@ -520,6 +520,7 @@ class DashboardController extends Controller
         $localoffice->email             = $request->email;
         $localoffice->office_type       = $request->office_type;
         $localoffice->draft_memo       = $request->draft_memo;
+        $localoffice->signatory       = $request->signatory;
         // if($request->packageexpirydate) {
         //     $localoffice->package_expiry_date = date('Y-m-d', strtotime($request->packageexpirydate)) . ' 23:59:59';
         // } else {
