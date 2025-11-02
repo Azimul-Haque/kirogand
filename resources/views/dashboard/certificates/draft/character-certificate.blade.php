@@ -134,7 +134,7 @@
                         </button>
                     </form>
                 @else
-                    <a href="{{ route('dashboard.certificates.print', $certificate->unique_serial) }}" class="btn btn-primary btn-sm no-print" target="_blank" data-toggle="tooltip" title="প্রিন্ট করুন">
+                    <a href="{{ route('dashboard.certificates.print', $certificate->unique_serial) }}" class="btn btn-primary no-print" target="_blank" data-toggle="tooltip" title="প্রিন্ট করুন">
                         <i class="fas fa-print"></i> প্রিন্ট করুন
                     </a>
                 @endif
