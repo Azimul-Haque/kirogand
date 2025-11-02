@@ -200,7 +200,7 @@
 <style>
     body {
         font-family: 'kalpurush', sans-serif;
-        color: #333;
+        
     }
     @php
         $back_image = public_path('images/localoffices/background-'. $certificate->localOffice->monogram);
