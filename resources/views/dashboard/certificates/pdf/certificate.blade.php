@@ -189,7 +189,7 @@
                         @endif
 
                     </td>
-                    <td style="width: 85%; padding-left: 50px;">
+                    <td style="width: 85%; padding-left: 20px;">
                         <span style=" font-size: 13px;">
                             সনদটি যাচাই করতে <span style="font-family: Calibri;">QR CODE</span> টি স্ক্যান করুন<br/>
                             অথবা <span style="font-family: Calibri;">www.dnagorik.com</span> ভিজিট করে এই আইডিটি যাচাই করুন: <span style="font-family: Calibri;">{{ $certificate->unique_serial ?? '--' }}</span>
