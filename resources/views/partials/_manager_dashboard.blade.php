@@ -191,7 +191,7 @@
                 </ul>
             </div>
             <div class="card-footer text-center">
-                <a href="{{ route('dashboard.certificates-list') }}" class="uppercase">সকল কার্যকলাপ দেখুন</a>
+                <a href="{{ route('dashboard.certificates.list') }}" class="uppercase">সকল কার্যকলাপ দেখুন</a>
             </div>
         </div>
         {{-- <div class="card shadow">
