@@ -659,7 +659,7 @@ class DashboardController extends Controller
 
             $image      = $request->file('monogram');
             $filename   = strtolower($localoffice->office_type) . '-monogram-' . time() . '.' . "png";
-            $filename_back   = strtolower($localoffice->office_type) . 'background-monogram-' . time() . '.' . "png";
+            $filename_back   = strtolower($localoffice->office_type) . '-monogram-' . time() . '.' . "png";
             $location   = public_path('images/localoffices/' . $filename);
             Image::make($image)->fit(300, 300)->save($location);
             Image::make($image)->fit(300, 300)->opacity(15)->save($location);
