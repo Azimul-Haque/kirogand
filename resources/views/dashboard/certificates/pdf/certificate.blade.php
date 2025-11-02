@@ -190,6 +190,7 @@
                     </td>
                     <td align="right" style="padding-right: 20px;" class="line-border-top">
                         <div style="padding-top: 10px;">অনুমোদনকারীর সিল ও স্বাক্ষর</div>
+                        <div style="border-top: 2px solid green; margin-top: 15px;"></div>
                     </td>
                 @else
                     <td align="center">
@@ -197,6 +198,7 @@
                     </td>
                     <td align="right" style="padding-right: 20px;" class="line-border-top">
                         <div style="padding-top: 10px;">অনুমোদনকারীর সিল ও স্বাক্ষর</div>
+                        <div style="border-top: 2px solid green; margin-top: 15px;"></div>
                     </td>
                 @endif
             </tr>
