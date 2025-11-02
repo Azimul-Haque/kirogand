@@ -125,7 +125,6 @@ class CertificateController extends Controller
                 'memo' => ['nullable', 'string'],
             ]);
         }
-        dd($request->all());
         $applicantData = $request->only([
             'name', 'same_name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
             'village', 'ward', 'post_office', 'union'
@@ -135,6 +134,8 @@ class CertificateController extends Controller
         $ifolduser = User::where('mobile', $request->mobile)
                           ->orWhere('nid', $request->id_value)
                           ->firstOrFail();
+        
+        dd($request->all());
         if($ifolduser == null) {
             $newuser = User::create([
                 'local_office_id' => Auth::user()->local_office_id,
