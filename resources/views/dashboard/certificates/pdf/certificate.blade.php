@@ -348,7 +348,6 @@
         font-size: 13px;
         padding-top: 15px;
         width: 80%;
-        border: 1px solid #666;
         margin: 0 auto;
         margin-top: 5px;
     }
