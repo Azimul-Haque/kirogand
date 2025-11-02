@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>ওয়ারিশান সনদপত্র | PDF Download</title>
+    <title>{{ checkcertificatetype($certificate->certificate_type) }} | PDF Download</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="icon" sizes="192x192" type="image/png" href="{{ asset('images/favicon.png') }}">
     
