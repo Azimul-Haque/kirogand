@@ -282,19 +282,6 @@
                                     </div>
                                   </div>
                                   <div class="col-md-6">
-                                    {{-- <div class="input-group mb-3">
-                                        <input type="text"
-                                               name="packageexpirydate"
-                                               id="packageexpirydate{{ $localoffice->id }}" 
-                                               value="{{ $localoffice->package_expiry_date ? date('F d, Y', strtotime($localoffice->package_expiry_date)) : '' }}"
-                                               autocomplete="off"
-                                               class="form-control"
-                                               placeholder="প্যাকেজের মেয়াদ বৃদ্ধি">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text"><span class="fas fa-calendar-check"></span></div>
-                                        </div>
-                                    </div> --}}
-
                                     <div class="form-group">                                       
                                       <!-- Bootstrap 4 Custom File Input -->
                                       <div class="custom-file">
