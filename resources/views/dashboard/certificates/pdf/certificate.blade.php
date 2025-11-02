@@ -190,7 +190,6 @@
                     </td>
                     <td align="right" style="padding-right: 20px;">
                         <div style="padding-top: 10px;">অনুমোদনকারীর সিল ও স্বাক্ষর</div>
-                        <div class="signature-line"></div>
                     </td>
                 @else
                     <td align="center">
@@ -198,7 +197,6 @@
                     </td>
                     <td align="right" style="padding-right: 20px;">
                         <div style="padding-top: 10px;">অনুমোদনকারীর সিল ও স্বাক্ষর</div>
-                        <div class="signature-line"></div>
                     </td>
                 @endif
             </tr>
@@ -340,18 +338,22 @@
         font-weight: normal;
     }
 
-    .signature-block {
-        margin-top: 10px;
+    .line-border-top {
+        /* 1. Set the border property */
+        border-top: 2px solid #000000;
+        
+        /* 2. CRITICAL FIX: Make it a block-level element */
+        display: block; /* Ensures the border takes the full width and renders correctly */
+        
+        /* 3. Optional: Fine-tune spacing */
         width: 100%;
+        padding-top: 5px; /* Add padding between the border and the text */
     }
     .signature-block td {
         width: 25%; /* Four columns for signatures */
         text-align: center;
         font-size: 13px;
-        padding-top: 15px;
-    }
-    .signature-line {
-        border-top: 3px dashed #666;
+        padding-top: 15px;   border-top: 3px dashed #666;
         width: 80%;
         margin: 0 auto;
         margin-top: 5px;
