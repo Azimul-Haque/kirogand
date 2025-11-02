@@ -294,7 +294,7 @@
         text-align: justify;
         margin-top: 20px;
         font-size: 15px;
-        text-indent: 4em;
+        text-indent: 3em;
     }
 
     .beneficiary-table {
