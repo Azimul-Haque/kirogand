@@ -156,3 +156,74 @@ function isPackageExpiringSoon(?string $expiryDate, int $days = 10): bool
         return false; 
     }
 }
+
+function get_certificate_icon_data_en(string $certificate_type_key): array
+{
+    // 1. Standardized English Key Mapping to Font Awesome 5 Icons
+    // Note: 'fas' prefix is added when used in the HTML/Blade template.
+    $icon_map = [
+        // Family & Personal Status
+        'heir-certificate'                  => 'fa-users',                 // ওয়ারিশ সনদ (Heir)
+        'family-certificate'                => 'fa-home',                  // পারিবারিক সনদ (Family)
+        'succession-certificate'            => 'fa-scroll',                // উত্তরাধিকার সনদ (Succession/Legal)
+        'unmarried-certificate'             => 'fa-user',                  // অবিবাহিত সনদ (Unmarried)
+        'married-certificate'               => 'fa-ring',                  // বিবাহিত সনদ (Married)
+        'non-remarriage-certificate'        => 'fa-heart-broken',          // পুনঃবিবাহ না হওয়া সনদ (Non-Remarriage)
+        'remarriage-confirmation'           => 'fa-heart',                 // পুনঃবিবাহ প্রত্যয়ন (Remarriage)
+        'widow-certificate'                 => 'fa-user-slash',            // বিধবা প্রত্যয়ন সনদ (Widow)
+        'orphan-certificate'                => 'fa-baby',                  // এতিম সনদ (Orphan)
+        'childless-certificate'             => 'fa-user-times',            // নিঃসন্তান প্রত্যয়ন সনদ (Childless)
+        'death-certificate'                 => 'fa-skull-crossbones',      // মৃত্যু সনদ (Death)
+
+        // Identity, Citizenship & Verification
+        'citizenship-certificate'           => 'fa-id-card-alt',           // নাগরিকত্ব সনদ (Citizenship)
+        'nationality-certificate'           => 'fa-flag',                  // জাতীয়তা সনদ (Nationality)
+        'new-voter-confirmation'            => 'fa-user-plus',             // নতুন ভোটার প্রত্যয়ন (New Voter)
+        'nid-correction-certificate'        => 'fa-sync-alt',              // জাতীয় পরিচয় তথ্য সংশোধন (NID Correction)
+        'voter-transfer-confirmation'       => 'fa-map-marked-alt',        // ভোটার এলাকা স্থানান্তর প্রত্যয়ন (Voter Transfer)
+        'character-certificate'             => 'fa-handshake',             // চারিত্রিক সনদ (Character)
+        'non-rohingya-confirmation'         => 'fa-globe-asia',            // রোহিঙ্গা নয় প্রত্যয়ন (Non-Rohingya)
+        'birth-cert-absence'                => 'fa-calendar-times',        // জন্মসনদ না থাকা সংক্রান্ত প্রত্যয়ন (No Birth Cert)
+        
+        // Financial & Economic Status
+        'annual-income-certificate'         => 'fa-money-check-alt',       // বাৎসরিক আয়ের সনদপত্র (Annual Income)
+        'monthly-income-certificate'        => 'fa-wallet',                // মাসিক আয়ের সনদ (Monthly Income)
+        'financial-solvency-certificate'    => 'fa-frown-open',            // আর্থিক অস্বচ্ছলতার সনদ (Financial Solvency/Poverty)
+        'unemployment-certificate'          => 'fa-briefcase-times',       // বেকারত্ব সনদ (Unemployment)
+        'landless-certificate'              => 'fa-house-damage',          // ভূমিহীন সনদ (Landless)
+        
+        // Business & Permits
+        'trade-license'                     => 'fa-store',                 // ট্রেড লাইসেন্স (Trade License)
+        'auto-rickshaw-license'             => 'fa-taxi',                  // অটো রিক্সা ট্রেডলাইসেন্স (Auto Rickshaw)
+        'construction-permit'               => 'fa-building',              // অবকাঠামো নির্মাণের অনুমতি সনদ (Construction)
+        'no-objection-certificate'          => 'fa-check-circle',          // অনাপত্তি সনদ (NOC)
+
+        // Special Status & Miscellaneous
+        'permanent-residence-certificate'   => 'fa-map-pin',               // স্থায়ী বাসিন্দা সনদ (Permanent Residence)
+        'disability-certificate'            => 'fa-wheelchair',            // প্রতিবন্ধী সনদ (Disability)
+        'freedom-fighter-confirmation'      => 'fa-medal',                 // মুক্তিযোদ্ধা প্রত্যয়ন সনদ (Freedom Fighter)
+        'agricultural-confirmation'         => 'fa-tractor',               // কৃষি প্রত্যয়ন সনদ (Agriculture)
+        'community-certificate'             => 'fa-hands-helping',         // সম্প্রদায় সনদ (Community)
+        'tribal-certificate'                => 'fa-praying-hands',         // উপজাতি সনদ (Tribal)
+        'miscellaneous-certificate'         => 'fa-puzzle-piece',          // বিবিধ সনদ (Miscellaneous)
+        'new-voter-pledge'                  => 'fa-clipboard-list',        // নতুন ভোটার অঙ্গিকারনামা (Pledge)
+        'general-confirmation'              => 'fa-info-circle',           // সাধারন প্রত্যয়ন (General Confirmation)
+        'confirmation-letter-name'          => 'fa-file-signature',        // প্রত্যায়ন পত্র নাম (Confirmation Letter)
+        'guardian-permission-certificate'   => 'fa-user-cog',              // অভিভাবকের অনুমতিপত্র সনদ (Guardian Permit - Added based on list)
+        'whomever-it-may-concern'           => 'fa-ellipsis-h',            // যাহার জন্য প্রযোজ্য (Whomever it may concern)
+    ];
+
+    // 2. Select a random color class from the approved list
+    // 'text-success' and 'text-primary' are mandatory, adding 'text-info' and 'text-warning' for better variety.
+    $colors = ['text-success', 'text-primary', 'text-info', 'text-warning'];
+    $random_color = $colors[array_rand($colors)];
+
+    // 3. Get the icon class, defaulting to 'fa-file-alt' if the key is not found
+    $icon_class = $icon_map[$certificate_type_key] ?? 'fa-file-alt';
+
+    // 4. Return the data
+    return [
+        'icon_class' => $icon_class,
+        'color_class' => $random_color,
+    ];
+}
