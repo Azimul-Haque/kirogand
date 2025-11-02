@@ -210,6 +210,7 @@ class CertificateController extends Controller
         $certificate->update([
             'data_payload' => $updatedDataPayload,
             'status' => 0, // Keep status as draft after an edit
+            'memo' => $request->memo,
         ]);
 
         return redirect()->route('dashboard.certificates.draft', $certificate->unique_serial)
