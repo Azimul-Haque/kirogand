@@ -194,6 +194,8 @@ class CertificateController extends Controller
 
     public function updateCertificate(Request $request, $id)
     {
+        $certificate = Certificate::findOrFail($id);
+        
         if($certificate_type == 'heir-certificate') {
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
@@ -230,7 +232,7 @@ class CertificateController extends Controller
             ]);
         }
 
-        $certificate = Certificate::findOrFail($id);
+        
 
         $applicantData = $request->only([
             'name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
