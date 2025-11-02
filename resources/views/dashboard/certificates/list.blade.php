@@ -147,7 +147,7 @@
                                       event.preventDefault(); // Prevent default form submission
 
                                       Swal.fire({
-                                          title: 'আপনি কি নিশ্চিত?',
+                                          title: 'আপনি কি নিশ্চিত? {{ $certificate->id }}',
                                           text: 'এই সনদটি অনুমোদন করা হবে।',
                                           icon: 'warning',
                                           showCancelButton: true,
