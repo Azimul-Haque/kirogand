@@ -130,11 +130,20 @@ class CertificateController extends Controller
             'password' => Hash::make('123456'),
         ]);
 
-        $dataPayload = [
-            'applicant' => $applicantData,
-            'heirs' => array_values($request->heirs_data),
-            'submission_timestamp' => now()->toDateTimeString(),
-        ];
+        if($certificate_type == 'heir-certificate') {
+            $dataPayload = [
+                'applicant' => $applicantData,
+                'heirs' => array_values($request->heirs_data),
+                'submission_timestamp' => now()->toDateTimeString(),
+            ];
+        } elseif($certificate_type == 'citizen-certificate') {
+            $dataPayload = [
+                'applicant' => $applicantData,
+                'submission_timestamp' => now()->toDateTimeString(),
+            ];
+        }
+
+        
 
         $uniqueSerial = now()->format('ymd') . Auth::user()->local_office_id . mt_rand(100000, 999999); 
 
