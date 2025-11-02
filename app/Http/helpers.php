@@ -157,7 +157,7 @@ function isPackageExpiringSoon(?string $expiryDate, int $days = 10): bool
     }
 }
 
-function get_certificate_icon_data_en(string $certificate_type_key): array
+function get_certificate_icon_data_en(string $certificate_type): array
 {
     // 1. Standardized English Key Mapping to Font Awesome 5 Icons
     // Note: 'fas' prefix is added when used in the HTML/Blade template.
@@ -221,7 +221,7 @@ function get_certificate_icon_data_en(string $certificate_type_key): array
     $random_color = $colors[array_rand($colors)];
 
     // 3. Get the icon class, defaulting to 'fa-file-alt' if the key is not found
-    $icon_class = $icon_map[$certificate_type_key] ?? 'fa-file-alt';
+    $icon_class = $icon_map[$certificate_type] ?? 'fa-file-alt';
 
     // 4. Return the data
     return [
