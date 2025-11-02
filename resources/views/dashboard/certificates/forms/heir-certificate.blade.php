@@ -2,6 +2,7 @@
 @php
     // Determine if we are in Edit or Create mode based on $certificate object
     $isEdit = isset($certificate) && $certificate->exists;
+    $certificatetype = $isEdit ? $certificate->certificate_type : $certificate_type;
     $data = $isEdit ? ($certificate->data_payload ?? []) : [];
     $applicant = $data['applicant'] ?? [];
     $heirs = $data['heirs'] ?? [];
@@ -9,9 +10,9 @@
     // Set form parameters
     $route = $isEdit
         ? route('dashboard.certificates.update', $certificate->id)
-        : route('dashboard.certificates.store', 'heir-certificate');
-    $buttonText = $isEdit ? 'ওয়ারিশান সনদপত্র আপডেট করুন' : 'ওয়ারিশান সনদপত্র তৈরি করুন';
-    $title = $isEdit ? 'ওয়ারিশান সনদপত্র সম্পাদনা' : 'ওয়ারিশান সনদপত্র ফরম';
+        : route('dashboard.certificates.store', 'citizen-certificate');
+    $buttonText = $isEdit ? checkcertificatetype($certificatetype) . ' আপডেট করুন' : checkcertificatetype($certificatetype) . ' তৈরি করুন';
+    $title = $isEdit ? checkcertificatetype($certificatetype) . ' সম্পাদনা' : checkcertificatetype($certificatetype) . ' ফরম';
 @endphp
 
 <!-- Card structure common in AdminLTE 3 -->
