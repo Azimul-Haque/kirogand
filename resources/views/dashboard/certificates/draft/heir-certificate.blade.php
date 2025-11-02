@@ -60,6 +60,12 @@
 
                             <!-- Applicant Information Section -->
                             <h5 class="mb-3">আবেদনকারীর তথ্য (Applicant Details)</h5>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><span class="info-label">নাম (Name):</span> {{ $applicant['name'] ?? 'N/A' }}</p>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <p><span class="info-label">নাম (Name):</span> {{ $applicant['name'] ?? 'N/A' }}</p>
@@ -70,11 +76,6 @@
                                     <p><span class="info-label">পরিচয়পত্র (ID Type):</span> {{ $applicant['id_type'] ?? 'N/A' }}</p>
                                     <p><span class="info-label">পরিচয় নং (ID No.):</span> {{ $applicant['id_value'] ?? 'N/A' }}</p>
                                     <p><span class="info-label">ইউনিয়ন/পৌরসভা:</span> {{ $applicant['union'] ?? 'N/A' }}</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p><span class="info-label">নাম (Name):</span> {{ $applicant['name'] ?? 'N/A' }}</p>
                                 </div>
                             </div>
                             <div class="row">
