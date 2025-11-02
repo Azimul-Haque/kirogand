@@ -125,7 +125,7 @@
                                 @else
                                   <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
                                       @csrf
-                                      <button type="button" class="btn btn-success btn-sm" onclick="return confirmSubmission(event);" data-toggle="tooltip" title="অনুমোদন করুন">
+                                      <button type="button" class="btn btn-success btn-sm" onclick="return confirmSubmission(event, {{ $certificate->id }});" data-toggle="tooltip" title="অনুমোদন করুন">
                                           <i class="fas fa-check"></i> অনুমোদন
                                       </button>
                                   </form>
@@ -143,7 +143,7 @@
                                       }
                                     })
 
-                                    function confirmSubmission(event) {
+                                    function confirmSubmission(event, id) {
                                         event.preventDefault(); // Prevent default form submission
 
                                         Swal.fire({
