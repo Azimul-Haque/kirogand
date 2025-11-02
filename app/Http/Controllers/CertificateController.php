@@ -179,6 +179,7 @@ class CertificateController extends Controller
             'ward' => ['required', 'string', 'min:1', 'max:99'],
             'post_office' => ['required', 'string', 'max:255'],
             'union' => ['required', 'string', 'max:255'],
+            'memo' => ['nullable', 'string', 'max:255'],
             'heirs_data' => ['required', 'array', 'min:1'],
             'heirs_data.*.name' => ['required', 'string', 'max:255'],
             'heirs_data.*.relation' => ['required', 'string', 'max:255'],
