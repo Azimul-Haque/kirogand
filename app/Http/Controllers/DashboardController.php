@@ -510,6 +510,7 @@ class DashboardController extends Controller
             'packageexpirydate' => 'nullable|date',
             'monogram'          => 'sometimes|image|max:300',
             'draft_memo'          => 'sometimes',
+            'signatory'          => 'sometimes',
         ]);
 
         $localoffice                    = LocalOffice::findOrFail($id);
