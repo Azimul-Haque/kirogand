@@ -40,8 +40,8 @@ return [
       'B'  => 'SolaimanLipi_20-04-07b.ttf',       // optional: bold font
       'I'  => 'SolaimanLipi_20-04-07.ttf',     // optional: italic font
       'BI' => 'SolaimanLipi_20-04-07.ttf', // optional: bold-italic font
-      'useOTL' => 0xFF,    // required for complicated langs like Persian, Arabic and Chinese
-      //'useKashida' => 75,  // required for complicated langs like Persian, Arabic and Chinese
+      // 'useOTL' => 0xFF,    // required for complicated langs like Persian, Arabic and Chinese
+      'useKashida' => 75,  // required for complicated langs like Persian, Arabic and Chinese
     ],
     'HindSiliguri' => [
       'R'  => 'HindSiliguri-Regular.ttf',    // regular font
