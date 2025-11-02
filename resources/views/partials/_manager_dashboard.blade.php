@@ -181,7 +181,7 @@
                                 <i class="fas {{ get_certificate_icon_data_en($cert->certificate_type)['icon_class'] }} fa-2x {{ get_certificate_icon_data_en($cert->certificate_type)['color_class'] }}"></i>
                             </div>
                             <div class="product-info">
-                                <a href="javascript:void(0)" class="product-title font-weight-bold">নাগরিক সনদ - আইডি: #৯৮৭৬</a>
+                                <a href="javascript:void(0)" class="product-title font-weight-bold">{{ checkcertificatetype($cert->certificate_type) }} - আইডি: #৯৮৭৬</a>
                                 <span class="product-description">
                                     ইস্যু করেছেন: আপনি (প্রশাসনিক কর্মকর্তা), সময়: {{ date('H:i A') }}
                                 </span>
