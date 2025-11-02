@@ -131,6 +131,7 @@
                     @error('union') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
+            <div class="mt-3 mb-3">
 
             <label for="editor">Edit Certificate Text:</label>
             <div id="editor" contenteditable="true" name="main_content" spellcheck="false">
