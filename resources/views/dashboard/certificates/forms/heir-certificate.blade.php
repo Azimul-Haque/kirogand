@@ -35,7 +35,7 @@
         <div class="card-body">
             <div class="row">
                 @php
-                    $unionValue = old('union', $applicant['union'] ?? (Auth::user()->localOffice->name_bn ?? ''));
+                    $memoValue = old('union', $applicant['union'] ?? (Auth::user()->localOffice->name_bn ?? ''));
                 @endphp
                 <div class="form-group col-md-6">
                     <label for="memo">স্মারক <span class="text-danger">*</span></label>
