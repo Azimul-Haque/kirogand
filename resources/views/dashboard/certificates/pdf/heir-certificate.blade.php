@@ -20,7 +20,7 @@
             header: page-header;
             footer: page-footer;
             background-image: url({{ $back_image }});
-            background-size: fit;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
             /* Reduced top/bottom margin for better content display */
