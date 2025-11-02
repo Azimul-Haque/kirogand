@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
         body {
-            font-family: 'Nikosh', sans-serif;
+            font-family: 'Nikosh';
             color: #333;
         }
         @php
