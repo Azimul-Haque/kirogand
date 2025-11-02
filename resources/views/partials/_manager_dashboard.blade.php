@@ -170,7 +170,7 @@
             <div class="card-header bg-gradient-light card-header-bangla">
                 <h3 class="card-title">
                     <i class="fas fa-history mr-1"></i>
-                    সাম্প্রতিক কার্যকলাপ (শেষ ১০টি সনদ ইস্যু)
+                    সাম্প্রতিক কার্যকলাপ (শেষ ৫টি সনদ ইস্যু)
                 </h3>
             </div>
             <div class="card-body p-0">
