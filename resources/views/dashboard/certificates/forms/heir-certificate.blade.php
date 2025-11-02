@@ -35,7 +35,7 @@
         <div class="card-body">
             <div class="row">
                 @php
-                    $memoValue = old('memo', $applicant['memo'] ?? (Auth::user()->localOffice->memo ?? ''));
+                    $memoValue = old('memo', $applicant['memo'] ?? (Auth::user()->localOffice->draft_memo ?? ''));
                 @endphp
                 <div class="form-group col-md-6">
                     <label for="memo">স্মারক <span class="text-danger">*</span></label>
