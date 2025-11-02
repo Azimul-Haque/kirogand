@@ -195,4 +195,127 @@
     </htmlpagefooter>
 
 </body>
+
+<style>
+    body {
+        font-family: 'kalpurush', sans-serif;
+        color: #333;
+    }
+    @php
+        $back_image = public_path('images/localoffices/background-'. $certificate->localOffice->monogram);
+        if(File::exists($back_image)) {
+            $back_image = $back_image;
+        } else {
+            $back_image = public_path('images/logo-background.png');
+        }
+    @endphp
+
+    @page {
+        header: page-header;
+        footer: page-footer;
+        background-image: url({{ $back_image }});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        /* Reduced top/bottom margin for better content display */
+        margin: 180px 80px 40px 70px;
+    }
+    .page-header,
+      .page-header-space {
+        height: 250px;
+      }
+
+    /* --- Custom Styles for Certificate Layout --- */
+
+    .draft-watermark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        color: rgba(255, 0, 0, 0.2);
+        font-size: 100px;
+        font-weight: bold;
+        z-index: 1000;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-table {
+        width: 100%;
+        border-collapse: collapse;
+        padding-top: 20px;
+        margin-bottom: 5px;
+    }
+    .header-table td {
+        vertical-align: top;
+        padding: 5px 0px;
+        font-size: 13px;
+    }
+
+    .logo-box {
+        width: 120px;
+        height: 120px;
+        border: 1px solid #1a8b1a; /* Green border around e-Prottayon logo */
+        border-radius: 50%;
+        padding: 5px;
+        display: inline-block;
+    }
+
+    .cert-title {
+        text-align: center;
+        background-color: #e5ffe5; /* Light green background */
+        border: 1px solid #c2e6c2;
+        padding: 10px 10px;
+        margin: 10px auto;
+        width: 40%;
+        border-radius: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .info-paragraph {
+        line-height: 1.6;
+        text-align: justify;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .beneficiary-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 0px;
+        font-size: 13px;
+    }
+    .beneficiary-table th, .beneficiary-table td {
+        border: 1px solid #999;
+        padding: 8px 10px;
+        text-align: center;
+    }
+    .beneficiary-table th {
+        background-color: #E5E7EB;
+        font-weight: normal;
+    }
+
+    .signature-block {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .signature-block td {
+        width: 25%; /* Four columns for signatures */
+        text-align: center;
+        font-size: 13px;
+        padding-top: 15px;
+    }
+    .signature-line {
+        border-top: 3px dashed #666;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+    .qr-code-section {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+</style>
 </html>
