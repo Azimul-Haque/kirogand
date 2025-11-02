@@ -169,7 +169,7 @@
                     <td align="center">
                         <div style="padding-top: 10px;"></div>
                     </td>
-                    <td >
+                    <td align="right">
                         <div style="padding-top: 10px;">অনুমোদনকারীর সিল ও স্বাক্ষর</div>
                         <div class="signature-line"></div>
                     </td>
