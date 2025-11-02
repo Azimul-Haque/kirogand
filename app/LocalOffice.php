@@ -26,6 +26,7 @@ class LocalOffice extends Model
         'office_type',
         'is_active',
         'draft_memo',
+        'signatory',
 
         // Contact and Visuals
         'email',
