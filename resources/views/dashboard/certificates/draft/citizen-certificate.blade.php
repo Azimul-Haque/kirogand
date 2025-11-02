@@ -89,39 +89,7 @@
 
                             <hr class="mt-4 mb-4">
 
-                            <!-- Heirs Data Section -->
-                            <h5 class="mb-3">ওয়ারিশগণের তালিকা (List of Heirs)</h5>
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-sm heir-table">
-                                    <thead>
-                                        <tr>
-                                            <th style="width: 5%">ক্রমিক</th>
-                                            <th style="width: 25%">নাম</th>
-                                            <th style="width: 20%">সম্পর্ক</th>
-                                            <th style="width: 20%">জন্ম তারিখ</th>
-                                            <th style="width: 20%">পরিচয় নং</th>
-                                            <th style="width: 10%">মন্তব্য</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @forelse ($heirs as $index => $heir)
-                                            <tr>
-                                                <td>{{ bangla($index + 1) }}</td>
-                                                <td>{{ $heir['name'] ?? '--' }}</td>
-                                                <td>{{ $heir['relation'] ?? '--' }}</td>
-                                                <td>{{ $heir['dob'] ?? '--' }}</td>
-                                                <td>{{ $heir['id_data'] ?? '--' }}</td>
-                                                <td>{{ $heir['remark'] ?? '--' }}</td>
-                                            </tr>
-                                        @empty
-                                            <tr>
-                                                <td colspan="6" class="text-center text-danger">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
-                                            </tr>
-                                        @endforelse
-                                    </tbody>
-                                </table>
-                            </div>
-
+                            
                             <hr class="mt-4">
 
                             <!-- Footer/Signature Placeholder -->
