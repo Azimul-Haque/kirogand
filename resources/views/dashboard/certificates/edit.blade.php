@@ -33,6 +33,8 @@
             @include('dashboard.certificates.forms.same-person')
           @elseif($certificate->certificate_type == 'character-certificate')
             @include('dashboard.certificates.forms.character-certificate')
+          @elseif($certificate->certificate_type == 'unmarried-certificate')
+            @include('dashboard.certificates.forms.unmarried-certificate')
           @endif
         </div>
       </div>
