@@ -339,8 +339,8 @@
     }
 
     .line-border-top {
-        border-top: 2px solid #000000;
-{{--         display: block; --}}
+        border-top: 1px solid #000000;
+        display: block;
         padding-top: 3px;
     }
     .signature-block td {
