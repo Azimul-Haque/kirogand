@@ -12,7 +12,7 @@ use Illuminate\Support\Carbon;
         else if ($text == 'same-person')
           return 'একই ব্যক্তি মর্মে প্রত্যয়ন';
         else if ($text == 'character-certificate')
-          return 'একই ব্যক্তি মর্মে প্রত্যয়ন';
+          return 'চারিত্রিক সনদপত্র';
         else
             return $text;
     }
