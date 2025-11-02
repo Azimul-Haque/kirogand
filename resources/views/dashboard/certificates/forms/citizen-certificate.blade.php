@@ -131,7 +131,7 @@
                     @error('union') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
-            <div class="mt-3 mb-3">
+            {{-- <div class="mt-3 mb-3">
                 <label for="editor">সনদের ভাষা: (ব্লক করা অংশগুলো বাদে এডিট করুন)</label>
                 <div id="editor" contenteditable="true" name="main_content" spellcheck="false" required>
                     <p>এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, <span class="protected-token" contenteditable="false">[নাম]</span>, পিতা: <span class="protected-token" contenteditable="false">[পিতার নাম]</span>, মাতা: <span class="protected-token" contenteditable="false">[মাতার নাম]</span>, গ্রাম: <span class="protected-token" contenteditable="false">[গ্রাম]</span>, ওয়ার্ড: <span class="protected-token" contenteditable="false">[ওয়ার্ড]</span>, ডাকঘর: <span class="protected-token" contenteditable="false">[ডাকঘর]</span>, উপজেলা: <span class="protected-token" contenteditable="false">[উপজেলা]</span>, জেলা: <span class="protected-token" contenteditable="false">[জেলা]</span>-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র <span class="protected-token" contenteditable="false">[ইউনিয়ন]</span>-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক। আমার জানামতে, তিনি কোন প্রকার সমাজবিরোধী বা রাষ্ট্রবিদ্রোহমূলক কর্মকাণ্ডের সাথে জড়িত ছিলেন না বা নেই।
@@ -140,7 +140,7 @@
                         তার নৈতিক চরিত্র ভালো। আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
                     </p>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <!-- /.card-body -->
 
