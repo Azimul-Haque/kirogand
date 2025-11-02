@@ -8,7 +8,7 @@ use Illuminate\Support\Carbon;
         else if ($text == 'citizen-certificate')
           return 'নাগরিকত্ব সনদ';
       else if ($text == 'permanent-resident')
-          return 'নাগরিকত্ব সনদs';
+          return 'নাগরিকত্ব সনদ';
         else
             return $text;
     }
