@@ -29,17 +29,17 @@ use Illuminate\Support\Carbon;
             return $text;
     }
 
-	function limit_text($text, $limit) {
-      // $pos=strpos($text, ' ', $limit);
-      // $text = substr($text,0,$pos ); 
+    function limit_text($text, $limit) {
+        // $pos=strpos($text, ' ', $limit);
+        // $text = substr($text,0,$pos ); 
 
-      if (str_word_count($text, 0) > $limit) {
-          $words = str_word_count($text, 2);
-          $pos = array_keys($words);
-          $text = substr($text, 0, $pos[$limit]) . '...';
-      }
-      return $text;
-  }
+        if (str_word_count($text, 0) > $limit) {
+            $words = str_word_count($text, 2);
+            $pos = array_keys($words);
+            $text = substr($text, 0, $pos[$limit]) . '...';
+        }
+        return $text;
+    }
 
   function bangla($str){
         $en = array(1,2,3,4,5,6,7,8,9,0);
