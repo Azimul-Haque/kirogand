@@ -24,7 +24,7 @@ use Illuminate\Support\Carbon;
         else if ($text == 'monthly-income')
           return 'মাসিক আয়ের প্রত্যয়ন';
         else if ($text == 'yearly-income')
-          return 'মাসিক আয়ের প্রত্যয়ন';
+          return 'বাৎসরিক আয়ের প্রত্যয়ন';
         else
             return $text;
     }
