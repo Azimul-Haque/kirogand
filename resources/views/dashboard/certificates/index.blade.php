@@ -157,6 +157,15 @@
             </a>
         </div>
 
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
+            <a href="{{ route('dashboard.certificates.create', 'unmarried-certificate') }}" class="text-decoration-none text-dark d-block">
+                <div class="service-box">
+                    <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-address-book"></i></div> 
+                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">প্রত্যয়নপত্র</h3>
+                </div>
+            </a>
+        </div>
+
 
 
 
