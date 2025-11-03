@@ -45,9 +45,8 @@
                     @error('memo') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="death_reg_no">আয়ের উৎস <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('death_reg_no') is-invalid @enderror" id="death_reg_no" name="death_reg_no"
-                           value="{{ old('death_reg_no', $applicant['death_reg_no'] ?? '') }}" placeholder="মৃত্যু নিবন্ধন নং" required>
+                    <label for="income_source">আয়ের উৎস <span class="text-danger">*</span></label>
+                    <select class="form-control @error('income_source') is-invalid @enderror" id="income_source" name="income_source" required <!-- Placeholder/Default Option --> <option value="" selected disabled>-- আয়ের উৎস নির্বাচন করুন --</option> <!-- Available Options --> <option value="কৃষি" {{ old('income_source') == 'কৃষি' ? 'selected' : '' }}>কৃষি (Agriculture)</option> <option value="ব্যবসায়" {{ old('income_source') == 'ব্যবসায়' ? 'selected' : '' }}>ব্যবসায় (Business)</option> <option value="চাকরি (বেসরকারি)" {{ old('income_source') == 'চাকরি (বেসরকারি)' ? 'selected' : '' }}>চাকরি (বেসরকারি - Private Job)</option> <option value="চাকরি (সরকারি)" {{ old('income_source') == 'চাকরি (সরকারি)' ? 'selected' : '' }}>চাকরি (সরকারি - Government Job)</option> <option value="বিদেশ থেকে রেমিটেন্স" {{ old('income_source') == 'বিদেশ থেকে রেমিটেন্স' ? 'selected' : '' }}>বিদেশ থেকে রেমিটেন্স (Remittance)</option> <option value="অন্যান্য" {{ old('income_source') == 'অন্যান্য' ? 'selected' : '' }}>অন্যান্য (Others)</option> </select>
                     @error('income_source')<span class="invalid-feedback">{{ $message }}</span>@enderror
                 </div>
             </div>
