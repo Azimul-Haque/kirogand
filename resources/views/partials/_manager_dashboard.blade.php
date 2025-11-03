@@ -219,7 +219,7 @@
                                 <span class="product-description">
                                     ইস্যু কর্তৃপক্ষ: ({{ $cert->localOffice->name_bn }})
                                 </span>
-                                <span class="product-description">
+                                <span class="">
                                     সময়: {{ date('H:i A', strtotime($cert->issued_at)) }}
                                 </span>
                             </div>
