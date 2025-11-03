@@ -402,7 +402,7 @@ class CertificateController extends Controller
             ]);
         } elseif($certificate->certificate_type == 'new-voter') {
             $applicantData = $request->only([
-                'name', 'earner', 'profession', 'income', 'father', 'mother', 'id_type', 'id_value', 'mobile',
+                'name', 'dob', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
             ]);
         } else {
