@@ -85,8 +85,6 @@
                                     </p>
                                 </div>
                             </div>
-
-                            
                             <div class="row">
                                 <div class="col-12">
                                     <p><span class="info-label">সমস্যার বিবরণ:</span>
@@ -94,6 +92,7 @@
                                     </p>
                                 </div>
                             </div>
+                            
                             <hr class="mt-4 mb-4">
 
                             <!-- Footer/Signature Placeholder -->
