@@ -179,7 +179,7 @@
             <a href="{{ route('dashboard.certificates.create', 'landless-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: var(--medium-color);"><i class="fas fa-id-card"></i></div> 
-                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ভূমিহীন প্রত্যয়ন</h3>
+                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">মাসিক আয়ের প্রত্যয়ন</h3>
                 </div>
             </a>
         </div>
