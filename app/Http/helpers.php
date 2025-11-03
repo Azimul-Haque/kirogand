@@ -22,7 +22,7 @@ use Illuminate\Support\Carbon;
         else if ($text == 'landless-certificate')
           return 'ভূমিহীন প্রত্যয়ন';
         else if ($text == 'monthly-income')
-          return 'ভূমিহীন প্রত্যয়ন';
+          return 'মাসিক আয়ের প্রত্যয়ন';
         else
             return $text;
     }
