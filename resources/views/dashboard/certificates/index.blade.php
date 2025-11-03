@@ -161,7 +161,7 @@
             <a href="{{ route('dashboard.certificates.create', 'death-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #dc3545;"><i class="fas fa-user-times"></i></div> 
-                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ভোটার এলাকা স্থানান্তর প্রত্যয়ন</h3>
+                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ভোটার এলাকা স্থানান্তর</h3>
                 </div>
             </a>
         </div>
