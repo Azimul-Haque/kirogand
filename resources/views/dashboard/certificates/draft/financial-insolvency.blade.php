@@ -43,7 +43,6 @@
                 </div>
             </div>
             <div class="card-body">
-
                 @php
                     // Check if data payload exists and is accessible
                     $payload = $certificate->data_payload ?? null;
