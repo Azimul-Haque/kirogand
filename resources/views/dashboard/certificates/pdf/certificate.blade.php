@@ -196,7 +196,7 @@
             </p>
         @elseif($certificate->certificate_type == 'monthly-income')
             <p class="info-paragraph" style="margin-top: 30px;">
-                এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক।
+                এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর স্থায়ী বাসিন্দা।
                 @if(($applicant['earner'] ?? '--') == 'own')
                     উল্লেখ্য যে, তার পেশা: {{ $applicant['profession'] }}। আমার জানামতে, তার মাসিক গড় আয় {{ $applicant['income'] }}। এটি আমার জানামতে সত্য।
                 @elseif(($applicant['earner'] ?? '--') == 'father')
