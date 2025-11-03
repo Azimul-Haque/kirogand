@@ -87,7 +87,15 @@
                             </div>
 
                             <hr class="mt-4 mb-4">
-                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <p><span class="info-label">ঠিকানা (Address):</span>
+                                        গ্রাম: {{ $applicant['village'] ?? 'N/A' }},
+                                        ওয়ার্ড: {{ $applicant['ward'] ?? 'N/A' }},
+                                        পোস্ট অফিস: {{ $applicant['post_office'] ?? 'N/A' }}
+                                    </p>
+                                </div>
+                            </div>
                             <hr class="mt-4 mb-4">
 
                             <!-- Footer/Signature Placeholder -->
