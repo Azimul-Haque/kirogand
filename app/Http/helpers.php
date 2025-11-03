@@ -18,7 +18,7 @@ use Illuminate\Support\Carbon;
         else if ($text == 'death-certificate')
           return 'মৃত্যু সনদ';
         else if ($text == 'voter-area-change')
-          return 'মৃত্যু সনদ';
+          return 'ভোটার এলাকা স্থানান্তর সনদ';
         else
             return $text;
     }
