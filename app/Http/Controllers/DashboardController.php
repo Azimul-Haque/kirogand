@@ -120,6 +120,9 @@ class DashboardController extends Controller
         $totaluserscumulitiveforchartc = json_encode($totaluserscumulitiveforchartc);
         // dd($totaluserscumulitiveforchartc);
 
+        $totalcertsissued = Certificate::where('local_office_id', Auth::user()->local_office_id)
+                                       ->where('status', 1)->count();
+
         $last5certs = Certificate::orderBy('created_at', 'DESC')
                                  ->take(5)
                                  ->get();
@@ -131,7 +134,8 @@ class DashboardController extends Controller
                                       ->withTotalusersforchartc($totalusersforchartc)
                                       ->withTotaluserscumulitiveforchartc($totaluserscumulitiveforchartc)
                                       ->withTotallocaloffices($totallocaloffices)
-                                      ->withLast5certs($last5certs);
+                                      ->withLast5certs($last5certs)
+                                      ->withTotalcertsissued($totalcertsissued);
                                     // ->withTotalbalance($totalbalance)
                                     // ->withTotalexpense($totalexpense)
                                     // ->withTodaystotalexpense($todaystotalexpense)
