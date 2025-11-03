@@ -311,29 +311,28 @@ class CertificateController extends Controller
             ]);
         }
 
-        // check or create new user
-        $ifolduser = User::where('mobile', $request->mobile)
-                          ->orWhere('nid', $request->id_value)
-                          ->first();
-
-        if($ifolduser == null) {
-            $newuser = User::create([
-                'local_office_id' => Auth::user()->local_office_id,
-                'is_active ' => 0,
-                'nid' => $request->id_value,
-                'name' => $request->name,
-                'role' => 'user', // this is important
-                'designation' => 'নাগরিক',
-                'mobile' => $request->mobile,
-                'password' => Hash::make('123456'),
-            ]);
-        } else {
-            $newuser = $ifolduser;
-        }
+        
         $applicantData = $request->only([
             'name', 'same_name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
             'village', 'ward', 'post_office', 'union'
         ]);
+
+        if($certificate_type == 'same-person') {
+            $applicantData = $request->only([
+                'name', 'same_name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
+                'village', 'ward', 'post_office', 'union'
+            ]);
+        } elseif($certificate_type == 'death-certificate') {
+            $applicantData = $request->only([
+                'name', 'death_reg_no', 'death_date', 'father', 'mother', 'id_type', 'id_value', 'mobile',
+                'village', 'ward', 'post_office', 'union'
+            ]);
+        } else {
+            $applicantData = $request->only([
+                'name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
+                'village', 'ward', 'post_office', 'union'
+            ]);
+        }
 
         // Preserve the original submission timestamp from the existing payload
         $submissionTimestamp = $certificate->data_payload['submission_timestamp'] ?? now()->toDateTimeString();
