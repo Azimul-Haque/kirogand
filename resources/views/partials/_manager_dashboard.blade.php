@@ -136,7 +136,7 @@
                 </div> --}}
                 <div class="row">
                     <div class="col-sm-6 col-md-4 mb-3">
-                        <a href="#" class="btn btn-app w-100 bg-primary">
+                        <a href="{{ route('dashboard.certificates.index') }}" class="btn btn-app w-100 bg-primary">
                             <i class="fas fa-plus-square"></i> নতুন সার্টিফিকেট
                         </a>
                     </div>
