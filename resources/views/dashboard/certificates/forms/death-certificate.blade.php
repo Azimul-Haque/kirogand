@@ -65,6 +65,7 @@
                     <input type="date" class="form-control @error('death_date') is-invalid @enderror" id="death_date" name="death_date"
                            value="{{ old('death_date', $applicant['death_date'] ?? '') }}" max="{{ date('Y-d-m') }}" placeholder="মৃত্যুর তারিখ" required>
                     @error('death_date') <span class="invalid-feedback">{{ $message }}</span> @enderror
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
                 </div>
                 <!-- জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন -->
                 <div class="form-group col-md-6">
