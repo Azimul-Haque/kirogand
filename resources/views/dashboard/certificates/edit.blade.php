@@ -37,6 +37,8 @@
             @include('dashboard.certificates.forms.unmarried-certificate')
           @elseif($certificate->certificate_type == 'death-certificate')
             @include('dashboard.certificates.forms.death-certificate')
+          @elseif($certificate->certificate_type == 'voter-area-change')
+            @include('dashboard.certificates.forms.voter-area-change')
           @endif
         </div>
       </div>
