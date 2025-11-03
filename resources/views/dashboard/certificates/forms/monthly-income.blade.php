@@ -62,7 +62,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="income">গড় মাসিক আয় <span class="text-danger">*</span></label>
-                    <input type="date" class="form-control @error('income') is-invalid @enderror" id="income" name="income"
+                    <input type="text" class="form-control @error('income') is-invalid @enderror" id="income" name="income"
                            value="{{ old('income', $applicant['income'] ?? '') }}" max="{{ date('Y-m-d') }}" placeholder="মৃত্যুর তারিখ" data-date="" data-date-format="DD MMMM YYYY" required>
                     @error('income') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
