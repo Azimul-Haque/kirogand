@@ -189,7 +189,7 @@ class CertificateController extends Controller
                 'name', 'earner', 'profession', 'income', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
             ]);
-        }  elseif($certificate_type == 'new-voter') {
+        } elseif($certificate_type == 'new-voter') {
             $applicantData = $request->only([
                 'name', 'dob', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
@@ -395,7 +395,12 @@ class CertificateController extends Controller
                 'name', 'death_reg_no', 'death_date', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
             ]);
-        }  elseif($certificate->certificate_type == 'monthly-income' || $certificate->certificate_type == 'yearly-income') {
+        } elseif($certificate->certificate_type == 'monthly-income' || $certificate->certificate_type == 'yearly-income') {
+            $applicantData = $request->only([
+                'name', 'earner', 'profession', 'income', 'father', 'mother', 'id_type', 'id_value', 'mobile',
+                'village', 'ward', 'post_office', 'union'
+            ]);
+        } elseif($certificate->certificate_type == 'monthly-income' || $certificate->certificate_type == 'yearly-income') {
             $applicantData = $request->only([
                 'name', 'earner', 'profession', 'income', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
