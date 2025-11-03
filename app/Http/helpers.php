@@ -79,7 +79,6 @@ use Illuminate\Support\Carbon;
   }
 
   function checkrole($text) {
-      $ends = array('th','st','nd','rd','th','th','th','th','th','th');
       if ($text == 'admin')
           return 'এডমিন';
       else if ($text == 'manager')
