@@ -43,6 +43,8 @@
             @include('dashboard.certificates.forms.landless-certificate')
           @elseif($certificate->certificate_type == 'monthly-income')
             @include('dashboard.certificates.forms.monthly-income')
+          @elseif($certificate->certificate_type == 'yearly-income')
+            @include('dashboard.certificates.forms.yearly-income')
           @endif
         </div>
       </div>
