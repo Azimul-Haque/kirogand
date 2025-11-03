@@ -98,6 +98,13 @@
                            value="{{ old('mother', $applicant['mother'] ?? '') }}" placeholder="মাতার নাম" required>
                     @error('mother') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
+                <!-- সমস্যার বিবরণ -->
+                <div class="form-group col-md-4">
+                    <label for="mother">মাতার নাম <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control @error('mother') is-invalid @enderror" id="mother" name="mother"
+                           value="{{ old('mother', $applicant['mother'] ?? '') }}" placeholder="মাতার নাম" required>
+                    @error('mother') <span class="invalid-feedback">{{ $message }}</span> @enderror
+                </div>
             </div>
 
             <!-- ঠিকানা বিবরণ -->
