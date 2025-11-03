@@ -160,7 +160,7 @@
         <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
             <a href="{{ route('dashboard.certificates.create', 'voter-area-change') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
-                    <div class="icon-circle" style="background-color: #ffc107;"><i class="far fa-id-card"></i></div> 
+                    <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-id-card"></i></div> 
                     <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ভোটার এলাকা স্থানান্তর</h3>
                 </div>
             </a>
