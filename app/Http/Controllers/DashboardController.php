@@ -129,7 +129,7 @@ class DashboardController extends Controller
         $totalcertspending = Certificate::where('local_office_id', Auth::user()->local_office_id)
                                                ->where('status', 0)
                                                ->count();
-        $totalcertspending = Certificate::where('local_office_id', Auth::user()->local_office_id)
+        $totalcitizen = Users::where('local_office_id', Auth::user()->local_office_id)
                                                ->where('status', 0)
                                                ->count();
         $last5certs = Certificate::orderBy('created_at', 'DESC')
