@@ -44,7 +44,7 @@
                            value="{{ $memoValue }}" placeholder="স্মারক নাম্বার" required>
                     @error('memo') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-3">
                     <label for="earner">উপার্জনকারী <span class="text-danger">*</span></label>
                     <select class="form-control @error('earner') is-invalid @enderror" id="earner" name="earner" required>
                         <option value="" selected disabled>আয়ের ব্যক্তি নির্বাচন করুন</option>
