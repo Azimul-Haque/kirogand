@@ -41,6 +41,10 @@
             @include('dashboard.certificates.forms.voter-area-change')
           @elseif($certificate_type == 'landless-certificate')
             @include('dashboard.certificates.forms.landless-certificate')
+          @elseif($certificate_type == 'monthly-income')
+            @include('dashboard.certificates.forms.monthly-income')
+          @elseif($certificate_type == 'yearly-income')
+            @include('dashboard.certificates.forms.yearly-income')
           @endif
         </div>
       </div>
