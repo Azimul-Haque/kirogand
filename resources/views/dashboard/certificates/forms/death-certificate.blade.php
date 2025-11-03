@@ -45,10 +45,10 @@
                     @error('memo') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="same_name">মৃত্যু নিবন্ধন নং <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('same_name') is-invalid @enderror" id="same_name" name="same_name"
-                           value="{{ old('same_name', $applicant['same_name'] ?? '') }}" placeholder="আবেদনকারীর নাম" required>
-                    @error('same_name') <span class="invalid-feedback">{{ $message }}</span> @enderror
+                    <label for="death_reg_no">মৃত্যু নিবন্ধন নং <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control @error('death_reg_no') is-invalid @enderror" id="death_reg_no" name="death_reg_no"
+                           value="{{ old('death_reg_no', $applicant['death_reg_no'] ?? '') }}" placeholder="আবেদনকারীর নাম" required>
+                    @error('death_reg_no') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
 
