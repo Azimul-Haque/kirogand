@@ -187,7 +187,7 @@
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
                 আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
             </p>
-        @elseif($certificate->certificate_type == 'voter-area-change')
+        @elseif($certificate->certificate_type == 'landless-certificate')
             <p class="info-paragraph" style="margin-top: 30px;">
                 এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক। তিনি পূর্বে অন্যত্র ভোটার নিবন্ধন করেছেন। কিন্তু, তিনি বর্মানে অত্র {{ $certificate->localOffice->office_type == 'up' ? 'ইউনিয়নে' : 'পৌরসভায়' }} ঘড়বাড়ি নির্মাণ করে স্থায়ীভাবে বসবাস করে আসছেন। এমতাবস্থায়, তার ভোটার নিবন্ধন স্থানান্তর করার জন্য জোর সুপারিশ করছি।
             </p>
