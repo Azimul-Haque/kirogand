@@ -71,7 +71,7 @@
               <div class="dropdown-divider"></div>
               <a href="{{ route('dashboard.messages') }}" class="dropdown-item">
                 <i class="fas fa-envelope mr-2"></i> 
-                {{ $unresolvedmessagecount }} new messages
+                {{ $unresolvedmessagecount }} নতুন মেসেজ
                 <span class="float-right text-muted text-sm">3 mins</span>
               </a>
               <div class="dropdown-divider"></div>
