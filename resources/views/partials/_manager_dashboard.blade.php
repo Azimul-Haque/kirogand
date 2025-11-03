@@ -76,7 +76,7 @@
                     <div class="progress-bar" style="width: 90%"></div>
                 </div>
                 <span class="progress-description">
-                    ভোটার তালিকা অনুযায়ী
+                    সিস্টেম ব্যবহারের মাধ্যমে
                 </span>
             </div>
         </div>
