@@ -157,7 +157,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 mb-3">
                         <a href="#" class="btn btn-app w-100 bg-secondary">
-                            <i class="fas fa-edit"></i> টেমপ্লেট সম্পাদনা করুন
+                            <i class="fas fa-cog"></i> প্রোফাইল সেটিংস
                         </a>
                     </div>
                     <div class="col-sm-6 col-md-4 mb-3">
