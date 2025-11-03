@@ -27,6 +27,8 @@ use Illuminate\Support\Carbon;
           return 'বাৎসরিক আয়ের প্রত্যয়ন';
         else if ($text == 'new-voter')
           return 'নতুন ভোটার প্রত্যয়ন';
+        else if ($text == 'new-voter')
+          return 'আর্থিক স্বচ্ছলতার সনদ';
         else
             return $text;
     }
