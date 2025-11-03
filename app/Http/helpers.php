@@ -26,7 +26,7 @@ use Illuminate\Support\Carbon;
         else if ($text == 'yearly-income')
           return 'বাৎসরিক আয়ের প্রত্যয়ন';
         else if ($text == 'new-voter')
-          return 'বাৎসরিক আয়ের প্রত্যয়ন';
+          return 'নতুন ভোটার প্রত্যয়ন';
         else
             return $text;
     }
