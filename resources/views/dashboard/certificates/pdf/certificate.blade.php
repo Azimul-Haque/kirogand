@@ -202,7 +202,7 @@
                 @elseif(($applicant['earner'] ?? '--') == 'father')
                     তার পিতার পেশা: {{ $applicant['profession'] }}। তার পিতাই পরিবারের একমাত্র উপার্জনক্ষম ব্যক্তি। উল্লেখ্য যে, তার পিতার গড় মাসিক আয় {{ $applicant['income'] }}। এটি আমার জানামতে সত্য।
                 @elseif(($applicant['earner'] ?? '--') == 'mother')
-                    তার পিতার পেশা: {{ $applicant['profession'] }}। তার পিতাই পরিবারের একমাত্র উপার্জনক্ষম ব্যক্তি। উল্লেখ্য যে, তার পিতার গড় মাসিক আয় {{ $applicant['income'] }}। এটি আমার জানামতে সত্য।
+                    তার মাতার পেশা: {{ $applicant['profession'] }}। তার মাতাই পরিবারের একমাত্র উপার্জনক্ষম ব্যক্তি। উল্লেখ্য যে, তার মাতার গড় মাসিক আয় {{ $applicant['income'] }}। এটি আমার জানামতে সত্য।
                 @endif
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
