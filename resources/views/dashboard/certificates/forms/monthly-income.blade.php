@@ -58,7 +58,7 @@
                 <div class="form-group col-md-3">
                     <label for="profession">পেশা <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('profession') is-invalid @enderror" id="profession" name="profession"
-                           value="{{ old('profession', $applicant['profession'] ?? '') }}" placeholder="গড় মাসিক আয়" required>
+                           value="{{ old('profession', $applicant['profession'] ?? '') }}" placeholder="পেশা (ব্যবসা, শিক্ষকতা, সরকারি চাকরি ইত্যাদি)" required>
                     @error('profession') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     @error('profession')<span class="invalid-feedback">{{ $message }}</span>@enderror
                 </div>
