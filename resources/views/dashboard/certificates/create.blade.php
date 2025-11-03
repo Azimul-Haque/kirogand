@@ -47,6 +47,8 @@
             @include('dashboard.certificates.forms.yearly-income')
           @elseif($certificate_type == 'new-voter')
             @include('dashboard.certificates.forms.new-voter')
+          @elseif($certificate_type == 'financial-insolvency')
+            @include('dashboard.certificates.forms.financial-insolvency')
           @endif
         </div>
       </div>
