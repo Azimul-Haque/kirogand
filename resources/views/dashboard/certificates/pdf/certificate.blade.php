@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>{{ checkcertificatetype($certificate->certificate_type) }} | PDF Download</title>
+    <title>{{ checkcertificatetype($certificate->certificate_type) }} | PDF Download | D-Nagorik</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="icon" sizes="192x192" type="image/png" href="{{ asset('images/favicon.png') }}">
     
