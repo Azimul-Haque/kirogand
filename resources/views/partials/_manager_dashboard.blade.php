@@ -137,12 +137,12 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-4 mb-3">
                         <a href="{{ route('dashboard.certificates.index') }}" class="btn btn-app w-100 bg-primary">
-                            <i class="fas fa-plus-square"></i> নতুন সার্টিফিকেট
+                            <i class="fas fa-plus-square"></i> নতুন সনদ
                         </a>
                     </div>
                     <div class="col-sm-6 col-md-4 mb-3">
                         <a href="{{ route('dashboard.certificates.list') }}" class="btn btn-app w-100 bg-warning">
-                            <i class="fas fa-user-check"></i> অনুমোদন পরিচালনা করুন
+                            <i class="fas fa-user-check"></i> সনদ তালিকা
                         </a>
                     </div>
                     <div class="col-sm-6 col-md-4 mb-3">
