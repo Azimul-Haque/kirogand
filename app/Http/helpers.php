@@ -15,6 +15,8 @@ use Illuminate\Support\Carbon;
           return 'চারিত্রিক সনদপত্র';
         else if ($text == 'unmarried-certificate')
           return 'অবিবাহিত সনদপত্র';
+        else if ($text == 'death-certificate')
+          return 'অবিবাহিত সনদপত্র';
         else
             return $text;
     }
