@@ -164,10 +164,6 @@
                         <a href="#" class="btn btn-app w-100 bg-danger" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt"></i> লগআউট
                         </a>
-                        <a href="#" class="btn btn-default btn-flat float-right"
-                           
-                            লগআউট
-                        </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
