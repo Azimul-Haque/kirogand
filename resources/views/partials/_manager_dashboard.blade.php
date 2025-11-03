@@ -161,11 +161,11 @@
                         </a>
                     </div>
                     <div class="col-sm-6 col-md-4 mb-3">
-                        <a href="#" class="btn btn-app w-100 bg-danger">
+                        <a href="#" class="btn btn-app w-100 bg-danger" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt"></i> লগআউট
                         </a>
                         <a href="#" class="btn btn-default btn-flat float-right"
-                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                           
                             লগআউট
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
