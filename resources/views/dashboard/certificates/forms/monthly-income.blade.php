@@ -45,7 +45,7 @@
                     @error('memo') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="income_source">আয়ের উৎস <span class="text-danger">*</span></label>
+                    <label for="income_source">উপার্জনকারী <span class="text-danger">*</span></label>
                     <select class="form-control @error('income_source') is-invalid @enderror" id="income_source" name="income_source" required>
                         <option value="" selected disabled>আয়ের ব্যক্তি নির্বাচন করুন</option>
                         <option value="কৃষি" {{ old('income_source') == 'কৃষি' ? 'selected' : '' }}>কৃষি (Agriculture)</option>
