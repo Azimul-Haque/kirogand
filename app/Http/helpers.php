@@ -16,7 +16,7 @@ use Illuminate\Support\Carbon;
         else if ($text == 'unmarried-certificate')
           return 'অবিবাহিত সনদপত্র';
         else if ($text == 'death-certificate')
-          return 'মৃত্যু সনদপত্র';
+          return 'মৃত্যু সনদ';
         else
             return $text;
     }
