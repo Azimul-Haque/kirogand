@@ -102,7 +102,7 @@
                 <div class="form-group col-md-4">
                     <label for="problem">সমস্যার বিবরণ <span class="text-danger">*</span></label>
                     <textarea class="form-control @error('problem') is-invalid @enderror" id="problem" name="problem"
-                           placeholder="সমস্যার বিবরণ" required>{{ old('problem', $applicant['problem'] ?? '') }}</textarea>
+                           placeholder="সমস্যার বিবরণ" required>{{ old('problem', $applicant['problem'] ?? 'উল্লেখ্য যে, তিনি একজন গরীব অসহায়। তিনি দীর্ঘদিন ধরে চোখের সমস্যায় ভুগছেন। তার নিজস্ব কোন জায়গা জমি না থাকায় চিকিৎসার যাবতীয় খরচাদির ব্যয়ভার বহন করা তার বা পরিবারের পক্ষে প্রায় অসম্ভব।') }}</textarea>
                     @error('problem') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
