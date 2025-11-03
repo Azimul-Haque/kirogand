@@ -90,9 +90,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <p><span class="info-label">সমস্যার বিবরণ:</span>
-                                        গ্রাম: ,
-                                        ওয়ার্ড: {{ $applicant['ward'] ?? 'N/A' }},
-                                        পোস্ট অফিস: {{ $applicant['post_office'] ?? 'N/A' }}
+                                        {{ $applicant['problem'] ?? 'N/A' }}
                                     </p>
                                 </div>
                             </div>
