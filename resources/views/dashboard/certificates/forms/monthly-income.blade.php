@@ -49,7 +49,8 @@
                     <select class="form-control @error('income_source') is-invalid @enderror" id="income_source" name="income_source" required>
                         <option value="" selected disabled>আয়ের ব্যক্তি নির্বাচন করুন</option>
                         <option value="own" {{ old('income_source') == 'own' ? 'selected' : '' }}>নিজে</option>
-                        <option value="father" {{ old('income_source') == 'father' ? 'selected' : '' }}>নিজে</option>
+                        <option value="father" {{ old('income_source') == 'father' ? 'selected' : '' }}>পিতা</option>
+                        <option value="mother" {{ old('income_source') == 'mother' ? 'selected' : '' }}>পিতা</option>
                     </select>
                     @error('income_source')<span class="invalid-feedback">{{ $message }}</span>@enderror
                 </div>
