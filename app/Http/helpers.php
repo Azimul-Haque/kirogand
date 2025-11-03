@@ -17,6 +17,8 @@ use Illuminate\Support\Carbon;
           return 'অবিবাহিত সনদপত্র';
         else if ($text == 'death-certificate')
           return 'মৃত্যু সনদ';
+        else if ($text == 'voter-area-change')
+          return 'মৃত্যু সনদ';
         else
             return $text;
     }
