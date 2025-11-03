@@ -168,7 +168,7 @@ class CertificateController extends Controller
                 'name', 'death_reg_no', 'death_date', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
             ]);
-        } elseif($certificate_type == 'death-certificate') {
+        } elseif($certificate_type == 'monthly-income') {
             $applicantData = $request->only([
                 'name', 'death_reg_no', 'death_date', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
