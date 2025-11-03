@@ -93,7 +93,7 @@ use Illuminate\Support\Carbon;
       if ($text == 'own')
           return 'নিজে';
       else if ($text == 'father')
-          return 'প্রতিনিধি';
+          return 'পিতা';
       else if ($text == 'user')
         return 'ব্যবহারকারী';
       else
