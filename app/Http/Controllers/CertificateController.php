@@ -171,7 +171,7 @@ class CertificateController extends Controller
             ]);
         } elseif($certificate_type == 'monthly-income') {
             $applicantData = $request->only([
-                'name', 'earner', 'income', 'father', 'mother', 'id_type', 'id_value', 'mobile',
+                'name', 'earner', 'profession', 'income', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
             ]);
         } else {
