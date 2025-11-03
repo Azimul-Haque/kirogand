@@ -217,7 +217,7 @@
                             <div class="product-info">
                                 <a href="{{ route('dashboard.certificates.draft', $cert->unique_serial) }}" class="product-title font-weight-bold">{{ checkcertificatetype($cert->certificate_type) }} - আইডি: #{{ bangla($cert->unique_serial) }} <i class="fas @if($cert->status == 1) fa-check-circle text-success @else fa-hourglass-half text-warning @endif"></i></a>
                                 <span class="product-description">
-                                    ইস্যু কর্তৃপক্ষ: ({{ $cert->localOffice->name_bn }}) <span>সময়: {{ $cert->issued_at->diffForHumans() }}</span>
+                                    ইস্যু কর্তৃপক্ষ: ({{ $cert->localOffice->name_bn }}) <span>{{ bangla($cert->issued_at->diffForHumans()) }}</span>
                                 </span>
                             </div>
                         </li>
