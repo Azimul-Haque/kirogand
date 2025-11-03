@@ -159,7 +159,6 @@ class CertificateController extends Controller
             ]);
         }
         
-
         // check or create new user
         $ifolduser = User::where('mobile', $request->mobile)
                           ->orWhere('nid', $request->id_value)
@@ -179,8 +178,8 @@ class CertificateController extends Controller
         } else {
             $newuser = $ifolduser;
         }
-        // check or create new user
 
+        // check or create new user
         if($certificate_type == 'heir-certificate') {
             $dataPayload = [
                 'applicant' => $applicantData,
@@ -312,8 +311,25 @@ class CertificateController extends Controller
             ]);
         }
 
-        
+        // check or create new user
+        $ifolduser = User::where('mobile', $request->mobile)
+                          ->orWhere('nid', $request->id_value)
+                          ->first();
 
+        if($ifolduser == null) {
+            $newuser = User::create([
+                'local_office_id' => Auth::user()->local_office_id,
+                'is_active ' => 0,
+                'nid' => $request->id_value,
+                'name' => $request->name,
+                'role' => 'user', // this is important
+                'designation' => 'নাগরিক',
+                'mobile' => $request->mobile,
+                'password' => Hash::make('123456'),
+            ]);
+        } else {
+            $newuser = $ifolduser;
+        }
         $applicantData = $request->only([
             'name', 'same_name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
             'village', 'ward', 'post_office', 'union'
