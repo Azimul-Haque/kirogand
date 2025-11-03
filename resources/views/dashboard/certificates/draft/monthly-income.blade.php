@@ -64,6 +64,9 @@
                                 <div class="col-md-6">
                                     <p><span class="info-label">স্মারক:</span> {{ $certificate->memo ?? 'N/A' }}</p>
                                 </div>
+                                <div class="col-md-6">
+                                    <p><span class="info-label">স্মারক:</span> {{ $certificate->memo ?? 'N/A' }}</p>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
