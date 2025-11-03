@@ -44,7 +44,7 @@
                     <div class="progress-bar" style="width: 70%"></div>
                 </div>
                 <span class="progress-description">
-                    এই মাসে ইস্যু হয়েছে: {{ bangla($totalmonthlycerts) }} টি
+                    এখন পর্যন্ত মোট প্রদানকৃত সনদ
                 </span>
             </div>
         </div>
