@@ -200,7 +200,7 @@
                 @if(($applicant['earner'] ?? '--') == 'own')
                     উল্লেখ্য যে, তার পেশা: {{ $applicant['profession'] }}। আমার জানামতে, তার মাসিক গড় আয় {{ $applicant['income'] }}। এটি আমার জানামতে সত্য।
                 @else@if(($applicant['earner'] ?? '--') == 'father')
-                    উল্লেখ্য যে, তার পেশা: {{ $applicant['profession'] }}। আমার জানামতে, তার মাসিক গড় আয় {{ $applicant['income'] }}। এটি আমার জানামতে সত্য।
+                    তার পিতা । আমার জানামতে, তার মাসিক গড় আয় {{ $applicant['income'] }}। এটি আমার জানামতে সত্য।
                 @endif
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
