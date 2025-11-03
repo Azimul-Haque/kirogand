@@ -90,6 +90,18 @@ use Illuminate\Support\Carbon;
           return $text;
   }
 
+  function earner($text) {
+      $ends = array('th','st','nd','rd','th','th','th','th','th','th');
+      if ($text == 'admin')
+          return 'এডমিন';
+      else if ($text == 'manager')
+          return 'প্রতিনিধি';
+      else if ($text == 'user')
+        return 'ব্যবহারকারী';
+      else
+          return $text;
+  }
+
   function getgovlevels($auth) {
       $hierarchyNames = $auth->getHierarchyNamesByLevel();
       return $hierarchyNames;
