@@ -66,6 +66,15 @@
                            value="{{ old('death_date', $applicant['death_date'] ?? '') }}" max="{{ date('Y-d-m') }}" placeholder="মৃত্যুর তারিখ" data-date="" data-date-format="DD MMMM YYYY" required>
                     @error('death_date') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+                    <script>
+                        $("input").on("change", function() {
+                            this.setAttribute(
+                                "data-date",
+                                moment(this.value, "YYYY-MM-DD")
+                                .format( this.getAttribute("data-date-format") )
+                            )
+                        }).trigger("change")
+                    </script>
                 </div>
                 <!-- জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন -->
                 <div class="form-group col-md-6">
