@@ -141,7 +141,7 @@
                         </a>
                     </div>
                     <div class="col-sm-6 col-md-4 mb-3">
-                        <a href="#" class="btn btn-app w-100 bg-warning">
+                        <a href="{{ route('dashboard.certificates.list') }}" class="btn btn-app w-100 bg-warning">
                             <i class="fas fa-user-check"></i> অনুমোদন পরিচালনা করুন
                         </a>
                     </div>
