@@ -63,7 +63,7 @@
                 <div class="form-group col-md-6">
                     <label for="death_date">মৃত্যুর তারিখ <span class="text-danger">*</span></label>
                     <input type="date" class="form-control @error('death_date') is-invalid @enderror" id="death_date" name="death_date"
-                           value="{{ old('death_date', $applicant['death_date'] ?? '') }}" max="2025-10-31" placeholder="মৃত্যুর তারিখ" required>
+                           value="{{ old('death_date', $applicant['death_date'] ?? '') }}" max="{{ date('d-m-Y') }}" placeholder="মৃত্যুর তারিখ" required>
                     @error('death_date') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <!-- জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন -->
