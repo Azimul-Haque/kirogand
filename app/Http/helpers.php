@@ -96,7 +96,7 @@ use Illuminate\Support\Carbon;
           return 'পিতা';
       else if ($text == 'mother')
         return 'মাতা';
-      else if ($text == 'mother')
+      else if ($text == 'other')
         return 'মাতা';
       else
           return $text;
