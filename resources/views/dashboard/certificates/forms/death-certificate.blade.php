@@ -67,7 +67,7 @@
                     @error('death_date') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
                     <script>
-                        $("input").on("change", function() {
+                        $("#death_date").on("change", function() {
                             this.setAttribute(
                                 "data-date",
                                 moment(this.value, "YYYY-MM-DD")
