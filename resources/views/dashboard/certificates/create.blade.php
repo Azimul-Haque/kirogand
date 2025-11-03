@@ -39,6 +39,8 @@
             @include('dashboard.certificates.forms.death-certificate')
           @elseif($certificate_type == 'voter-area-change')
             @include('dashboard.certificates.forms.voter-area-change')
+          @elseif($certificate_type == 'landless-certificate')
+            @include('dashboard.certificates.forms.landless-certificate')
           @endif
         </div>
       </div>
