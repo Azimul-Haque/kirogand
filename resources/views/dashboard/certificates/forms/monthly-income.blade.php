@@ -51,7 +51,7 @@
                         <option value="own" {{ old('earner', $applicant['earner'] ?? '') == 'own' ? 'selected' : '' }}>নিজে</option>
                         <option value="father" {{ old('earner', $applicant['earner'] ?? '') == 'father' ? 'selected' : '' }}>পিতা</option>
                         <option value="mother" {{ old('earner', $applicant['earner'] ?? '') == 'mother' ? 'selected' : '' }}>মাতা</option>
-                        <option value="other" {{ old('earner', $applicant['earner'] ?? '') == 'mother' ? 'selected' : '' }}>বৈধ অভিভাবক</option>
+                        <option value="other" {{ old('earner', $applicant['earner'] ?? '') == 'other' ? 'selected' : '' }}>বৈধ অভিভাবক</option>
                     </select>
                     @error('earner')<span class="invalid-feedback">{{ $message }}</span>@enderror
                 </div>
