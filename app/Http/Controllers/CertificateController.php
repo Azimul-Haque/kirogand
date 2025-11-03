@@ -298,7 +298,7 @@ class CertificateController extends Controller
         } elseif($certificate->certificate_type == 'monthly-income') {
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
-                'death_reg_no' => ['required', 'string', 'max:255'],
+                'income_source' => ['required', 'string', 'max:255'],
                 'death_date' => ['required', 'string', 'max:255'],
                 'father' => ['required', 'string', 'max:255'],
                 'mother' => ['required', 'string', 'max:255'],
