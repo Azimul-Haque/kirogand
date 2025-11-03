@@ -35,6 +35,8 @@
             @include('dashboard.certificates.draft.character-certificate')
           @elseif($certificate->certificate_type == 'unmarried-certificate')
             @include('dashboard.certificates.draft.unmarried-certificate')
+          @elseif($certificate->certificate_type == 'death-certificate')
+            @include('dashboard.certificates.draft.death-certificate')
           @endif
         </div>
       </div>
