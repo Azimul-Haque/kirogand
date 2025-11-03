@@ -45,6 +45,8 @@
             @include('dashboard.certificates.draft.monthly-income')
           @elseif($certificate->certificate_type == 'yearly-income')
             @include('dashboard.certificates.draft.yearly-income')
+          @elseif($certificate->certificate_type == 'new-voter')
+            @include('dashboard.certificates.draft.new-voter')
           @endif
         </div>
       </div>
