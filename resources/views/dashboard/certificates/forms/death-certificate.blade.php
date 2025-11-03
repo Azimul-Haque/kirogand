@@ -63,7 +63,7 @@
                 <div class="form-group col-md-6">
                     <label for="death_date">মৃত্যুর তারিখ <span class="text-danger">*</span></label>
                     <input type="date" class="form-control @error('death_date') is-invalid @enderror" id="death_date" name="death_date"
-                           value="{{ old('death_date', $applicant['death_date'] ?? date('Y-m-d')) }}" max="{{ date('Y-m-d') }}" placeholder="মৃত্যুর তারিখ" data-date="" data-date-format="DD MMMM YYYY" required>
+                           value="{{ old('death_date', $applicant['death_date'] ?? '') }}" max="{{ date('Y-m-d') }}" placeholder="মৃত্যুর তারিখ" data-date="" data-date-format="DD MMMM YYYY" required>
                     @error('death_date') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     {{-- <script type="text/javascript" src="{{ asset('js/jquery-for-dp.min.js') }}"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
