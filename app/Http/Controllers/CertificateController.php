@@ -209,6 +209,11 @@ class CertificateController extends Controller
                 'name', 'dob', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
             ]);
+        } elseif($certificate_type == 'financial-insolvency') {
+            $applicantData = $request->only([
+                'name', 'problem', 'father', 'mother', 'id_type', 'id_value', 'mobile',
+                'village', 'ward', 'post_office', 'union'
+            ]);
         } else {
             $applicantData = $request->only([
                 'name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
