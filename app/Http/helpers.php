@@ -90,8 +90,7 @@ use Illuminate\Support\Carbon;
   }
 
   function earner($text) {
-      $ends = array('th','st','nd','rd','th','th','th','th','th','th');
-      if ($text == 'admin')
+      if ($text == 'own')
           return 'এডমিন';
       else if ($text == 'manager')
           return 'প্রতিনিধি';
