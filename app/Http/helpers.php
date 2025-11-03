@@ -94,8 +94,10 @@ use Illuminate\Support\Carbon;
           return 'নিজে';
       else if ($text == 'father')
           return 'পিতা';
-      else if ($text == 'user')
-        return 'ব্যবহারকারী';
+      else if ($text == 'mother')
+        return 'মাতা';
+      else if ($text == 'mother')
+        return 'মাতা';
       else
           return $text;
   }
