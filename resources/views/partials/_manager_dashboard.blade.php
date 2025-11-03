@@ -49,6 +49,22 @@
             </div>
         </div>
     </div>
+    <!-- Revenue Collected -->
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box bg-gradient-success shadow quick-action-card">
+            <span class="info-box-icon"><i class="fas fa-hand-holding-usd"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text text-uppercase font-weight-bold">সংগৃহীত রাজস্ব (এই মাসে)</span>
+                <span class="info-box-number text-3xl font-weight-bold">৳ 80,500</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+                <span class="progress-description">
+                    গত মাসের তুলনায় ১০% বেশি
+                </span>
+            </div>
+        </div>
+    </div>
     <!-- Pending Applications -->
     <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box bg-gradient-warning shadow quick-action-card">
@@ -77,22 +93,6 @@
                 </div>
                 <span class="progress-description">
                     সিস্টেম ব্যবহারের মাধ্যমে
-                </span>
-            </div>
-        </div>
-    </div>
-    <!-- Revenue Collected -->
-    <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box bg-gradient-success shadow quick-action-card">
-            <span class="info-box-icon"><i class="fas fa-hand-holding-usd"></i></span>
-            <div class="info-box-content">
-                <span class="info-box-text text-uppercase font-weight-bold">সংগৃহীত রাজস্ব (এই মাসে)</span>
-                <span class="info-box-number text-3xl font-weight-bold">৳ 80,500</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 80%"></div>
-                </div>
-                <span class="progress-description">
-                    গত মাসের তুলনায় ১০% বেশি
                 </span>
             </div>
         </div>
