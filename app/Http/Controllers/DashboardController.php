@@ -144,7 +144,8 @@ class DashboardController extends Controller
                                       ->withLast5certs($last5certs)
                                       ->withTotalcertsissued($totalcertsissued)
                                       ->withTotalmonthlycerts($totalmonthlycerts)
-                                      ->withTotalcertspending($totalcertspending);
+                                      ->withTotalcertspending($totalcertspending)
+                                      ->withTotalcitizen($totalcitizen);
                                     // ->withTotalbalance($totalbalance)
                                     // ->withTotalexpense($totalexpense)
                                     // ->withTodaystotalexpense($todaystotalexpense)
