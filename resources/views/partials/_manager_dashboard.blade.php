@@ -71,7 +71,7 @@
             <span class="info-box-icon"><i class="fas fa-users"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text text-uppercase font-weight-bold">সেবাপ্রাপ্ত নাগরিক</span>
-                <span class="info-box-number text-3xl font-weight-bold">৩০,২০০</span>
+                <span class="info-box-number text-3xl font-weight-bold">{{ bangla($totalcitizen) }} জন</span>
                 <div class="progress">
                     <div class="progress-bar" style="width: 90%"></div>
                 </div>
