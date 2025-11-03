@@ -48,7 +48,7 @@
                     <label for="income_source">উপার্জনকারী <span class="text-danger">*</span></label>
                     <select class="form-control @error('income_source') is-invalid @enderror" id="income_source" name="income_source" required>
                         <option value="" selected disabled>আয়ের ব্যক্তি নির্বাচন করুন</option>
-                        <option value="কৃষি" {{ old('income_source') == 'কৃষি' ? 'selected' : '' }}>কৃষি (Agriculture)</option>
+                        <option value="own" {{ old('income_source') == 'কৃষি' ? 'selected' : '' }}>কৃষি (Agriculture)</option>
                         <option value="ব্যবসায়" {{ old('income_source') == 'ব্যবসায়' ? 'selected' : '' }}>ব্যবসায় (Business)</option>
                         <option value="চাকরি (বেসরকারি)" {{ old('income_source') == 'চাকরি (বেসরকারি)' ? 'selected' : '' }}>চাকরি (বেসরকারি - Private Job)</option>
                     </select>
