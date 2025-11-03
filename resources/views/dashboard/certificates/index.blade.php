@@ -206,7 +206,7 @@
             <a href="{{ route('dashboard.certificates.create', 'financial-insolvency') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-frown"></i></div> 
-                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">আর্থিক অস্বচ্ছলতার সনদ</h3>
+                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">আর্থিক অস্বচ্ছলতার প্রত্যয়ন</h3>
                 </div>
             </a>
         </div>
