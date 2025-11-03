@@ -55,7 +55,7 @@
                     @error('name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="same_name">ছদ্দ নাম (বা ওরফে নাম) <span class="text-danger">*</span></label>
+                    <label for="same_name">মৃত্যুর তারিখ <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('same_name') is-invalid @enderror" id="same_name" name="same_name"
                            value="{{ old('same_name', $applicant['same_name'] ?? '') }}" placeholder="আবেদনকারীর নাম" required>
                     @error('same_name') <span class="invalid-feedback">{{ $message }}</span> @enderror
