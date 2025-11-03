@@ -85,14 +85,14 @@
 
             <div class="row">
                 <!-- পিতার নাম -->
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="father">পিতার নাম <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('father') is-invalid @enderror" id="father" name="father"
                            value="{{ old('father', $applicant['father'] ?? '') }}" placeholder="পিতার নাম" required>
                     @error('father') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <!-- মাতার নাম -->
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="mother">মাতার নাম <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('mother') is-invalid @enderror" id="mother" name="mother"
                            value="{{ old('mother', $applicant['mother'] ?? '') }}" placeholder="মাতার নাম" required>
