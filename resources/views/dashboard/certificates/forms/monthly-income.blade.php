@@ -60,7 +60,6 @@
                     <input type="text" class="form-control @error('profession') is-invalid @enderror" id="profession" name="profession"
                            value="{{ old('profession', $applicant['profession'] ?? '') }}" placeholder="ব্যবসা, শিক্ষকতা, সরকারি চাকরি ইত্যাদি" required>
                     @error('profession') <span class="invalid-feedback">{{ $message }}</span> @enderror
-                    @error('profession')<span class="invalid-feedback">{{ $message }}</span>@enderror
                 </div>
             </div>
 
