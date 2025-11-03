@@ -110,7 +110,7 @@ class CertificateController extends Controller
                 'union' => ['required', 'string', 'max:255'],
                 'memo' => ['nullable', 'string'],
             ]);
-        } elseif($certificate_type == 'same-person') {
+        } elseif($certificate_type == 'death-certificate') {
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
                 'same_name' => ['required', 'string', 'max:255'],
