@@ -91,8 +91,8 @@ use Illuminate\Support\Carbon;
 
   function earner($text) {
       if ($text == 'own')
-          return 'এডমিন';
-      else if ($text == 'manager')
+          return 'নিজে';
+      else if ($text == 'father')
           return 'প্রতিনিধি';
       else if ($text == 'user')
         return 'ব্যবহারকারী';
