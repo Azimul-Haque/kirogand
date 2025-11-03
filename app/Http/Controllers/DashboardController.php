@@ -125,7 +125,8 @@ class DashboardController extends Controller
                                        ->count();
         $totalmonthlycerts = DB::table('certificates')
                                 ->where(DB::raw("DATE_FORMAT(created_at, '%Y-%m')"), "=", Carbon::now()->format('Y-m'))
-                                ->where('status', 1)->count();
+                                ->where('status', 1)
+                                ->count();
         $totalcertspending = Certificate::where('local_office_id', Auth::user()->local_office_id)
                                                ->where('status', 0)
                                                ->count();
