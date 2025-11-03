@@ -55,6 +55,17 @@
                     </select>
                     @error('earner')<span class="invalid-feedback">{{ $message }}</span>@enderror
                 </div>
+                <div class="form-group col-md-3">
+                    <label for="earner">উপার্জনকারী <span class="text-danger">*</span></label>
+                    <select class="form-control @error('earner') is-invalid @enderror" id="earner" name="earner" required>
+                        <option value="" selected disabled>আয়ের ব্যক্তি নির্বাচন করুন</option>
+                        <option value="own" {{ old('earner', $applicant['earner'] ?? '') == 'own' ? 'selected' : '' }}>নিজে</option>
+                        <option value="father" {{ old('earner', $applicant['earner'] ?? '') == 'father' ? 'selected' : '' }}>পিতা</option>
+                        <option value="mother" {{ old('earner', $applicant['earner'] ?? '') == 'mother' ? 'selected' : '' }}>মাতা</option>
+                        <option value="other" {{ old('earner', $applicant['earner'] ?? '') == 'mother' ? 'selected' : '' }}>বৈধ অভিভাবক</option>
+                    </select>
+                    @error('earner')<span class="invalid-feedback">{{ $message }}</span>@enderror
+                </div>
             </div>
 
             <div class="row">
