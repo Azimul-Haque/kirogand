@@ -21,6 +21,8 @@ use Illuminate\Support\Carbon;
           return 'ভোটার এলাকা স্থানান্তর সনদ';
         else if ($text == 'landless-certificate')
           return 'ভূমিহীন প্রত্যয়ন';
+        else if ($text == 'monthly-income')
+          return 'ভূমিহীন প্রত্যয়ন';
         else
             return $text;
     }
