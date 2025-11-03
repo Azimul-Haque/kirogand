@@ -48,10 +48,10 @@
                     <label for="income_source">উপার্জনকারী <span class="text-danger">*</span></label>
                     <select class="form-control @error('income_source') is-invalid @enderror" id="income_source" name="income_source" required>
                         <option value="" selected disabled>আয়ের ব্যক্তি নির্বাচন করুন</option>
-                        <option value="own" {{ old('income_source', $applicant['income_source']) == 'own' ? 'selected' : '' }}>নিজে</option>
-                        <option value="father" {{ old('income_source', $applicant['income_source']) == 'father' ? 'selected' : '' }}>পিতা</option>
-                        <option value="mother" {{ old('income_source', $applicant['income_source']) == 'mother' ? 'selected' : '' }}>মাতা</option>
-                        <option value="other" {{ old('income_source', $applicant['income_source']) == 'mother' ? 'selected' : '' }}>অভিভাবক</option>
+                        <option value="own" {{ old('income_source', $applicant['income_source'] ?? '') == 'own' ? 'selected' : '' }}>নিজে</option>
+                        <option value="father" {{ old('income_source', $applicant['income_source'] ?? '') == 'father' ? 'selected' : '' }}>পিতা</option>
+                        <option value="mother" {{ old('income_source', $applicant['income_source'] ?? '') == 'mother' ? 'selected' : '' }}>মাতা</option>
+                        <option value="other" {{ old('income_source', $applicant['income_source'] ?? '') == 'mother' ? 'selected' : '' }}>অভিভাবক</option>
                     </select>
                     @error('income_source')<span class="invalid-feedback">{{ $message }}</span>@enderror
                 </div>
