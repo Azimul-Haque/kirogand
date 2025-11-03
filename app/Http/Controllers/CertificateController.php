@@ -317,7 +317,7 @@ class CertificateController extends Controller
                 'union' => ['required', 'string', 'max:255'],
                 'memo' => ['nullable', 'string'],
             ]);
-        } elseif($certificate->certificate_type == 'monthly-income') {
+        } elseif($certificate->certificate_type == 'monthly-income' || $certificate->certificate_type == 'yearly-income') {
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
                 'earner' => ['required', 'string', 'max:255'],
@@ -360,7 +360,7 @@ class CertificateController extends Controller
                 'name', 'death_reg_no', 'death_date', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
             ]);
-        }  elseif($certificate->certificate_type == 'monthly-income') {
+        }  elseif($certificate->certificate_type == 'monthly-income' || $certificate->certificate_type == 'yearly-income') {
             $applicantData = $request->only([
                 'name', 'earner', 'profession', 'income', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
