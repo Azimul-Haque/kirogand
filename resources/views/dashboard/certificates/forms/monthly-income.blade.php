@@ -51,7 +51,7 @@
                         <option value="own" {{ old('income_source') == 'own' ? 'selected' : '' }}>নিজে</option>
                         <option value="father" {{ old('income_source') == 'father' ? 'selected' : '' }}>পিতা</option>
                         <option value="mother" {{ old('income_source') == 'mother' ? 'selected' : '' }}>মাতা</option>
-                        <option value="other" {{ old('income_source') == 'mother' ? 'selected' : '' }}>মাতা</option>
+                        <option value="other" {{ old('income_source') == 'mother' ? 'selected' : '' }}>অভিভাবক</option>
                     </select>
                     @error('income_source')<span class="invalid-feedback">{{ $message }}</span>@enderror
                 </div>
