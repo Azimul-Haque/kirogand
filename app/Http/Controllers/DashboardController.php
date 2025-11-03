@@ -124,8 +124,7 @@ class DashboardController extends Controller
                                        ->where('status', 1)->count();
         $totalmonthlycerts = DB::table('certificates')
                                 ->where(DB::raw("DATE_FORMAT(created_at, '%Y-%m')"), "=", Carbon::now()->format('Y-m'))
-                                // ->groupBy(DB::raw("DATE_FORMAT(created_at, '%Y-%m')"))
-                                ->first();
+                                ->where('status', 1)->count();
 
         $last5certs = Certificate::orderBy('created_at', 'DESC')
                                  ->take(5)
