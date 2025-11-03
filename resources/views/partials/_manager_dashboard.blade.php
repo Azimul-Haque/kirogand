@@ -112,7 +112,7 @@
                 </h3>
             </div>
             <div class="card-body">
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-6">
                         <a href="{{ route('dashboard.certificates.index') }}" class="btn btn-app bg-primary quick-action-card w-full rounded-lg">
                             <i class="fas fa-file-signature"></i> সনদ তৈরি করুন
@@ -133,7 +133,7 @@
                             <i class="fas fa-cog"></i> প্রোফাইল সেটিংস
                         </a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="row">
                     <div class="col-sm-6 col-md-4 mb-3">
                         <a href="#" class="btn btn-app w-100 bg-primary">
