@@ -59,7 +59,7 @@
                     <div class="progress-bar" style="width: 80%"></div>
                 </div>
                 <span class="progress-description">
-                    গত মাসের তুলনায় ১০% বেশি
+                    {{ bangla(date(F Y, )) }}
                 </span>
             </div>
         </div>
