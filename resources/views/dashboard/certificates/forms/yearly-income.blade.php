@@ -72,9 +72,9 @@
                     @error('name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="income">গড় মাসিক আয় <span class="text-danger">*</span></label>
+                    <label for="income">গড় বাৎসরিক আয় <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('income') is-invalid @enderror" id="income" name="income"
-                           value="{{ old('income', $applicant['income'] ?? '') }}" placeholder="গড় মাসিক আয়" required>
+                           value="{{ old('income', $applicant['income'] ?? '') }}" placeholder="গড় বাৎসরিক আয়" required>
                     @error('income') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <!-- জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন -->
