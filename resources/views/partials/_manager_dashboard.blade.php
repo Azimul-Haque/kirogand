@@ -44,7 +44,7 @@
                     <div class="progress-bar" style="width: 70%"></div>
                 </div>
                 <span class="progress-description">
-                    এখন পর্যন্ত মোট প্রদানকৃত সনদ
+                    <small>এখন পর্যন্ত মোট প্রদানকৃত সনদ</small>
                 </span>
             </div>
         </div>
@@ -59,7 +59,7 @@
                     <div class="progress-bar" style="width: 80%"></div>
                 </div>
                 <span class="progress-description">
-                    {{ bangla(date('F Y')) }} মাসে প্রদানকৃত সনদ
+                    <small>{{ bangla(date('F Y')) }} মাসে প্রদানকৃত সনদ</small>
                 </span>
             </div>
         </div>
@@ -75,7 +75,7 @@
                     <div class="progress-bar" style="width: 50%"></div>
                 </div>
                 <span class="progress-description">
-                    দ্রুত পর্যালোচনা প্রয়োজন
+                    <small>দ্রুত পর্যালোচনা প্রয়োজন</small>
                 </span>
             </div>
         </div>
@@ -91,7 +91,7 @@
                     <div class="progress-bar" style="width: 90%"></div>
                 </div>
                 <span class="progress-description">
-                    সিস্টেম ব্যবহারের মাধ্যমে
+                    <small>সিস্টেম ব্যবহারের মাধ্যমে</small>
                 </span>
             </div>
         </div>
