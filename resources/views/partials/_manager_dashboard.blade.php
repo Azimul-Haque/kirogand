@@ -59,7 +59,7 @@
                     <div class="progress-bar" style="width: 80%"></div>
                 </div>
                 <span class="progress-description">
-                    <small>{{ bangla(date('F y')) }} মাসে প্রদানকৃত সনদ</small>
+                    <small>{{ bangla(date("F 'y")) }} মাসে প্রদানকৃত সনদ</small>
                 </span>
             </div>
         </div>
