@@ -51,7 +51,7 @@
     </div>
     <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box bg-gradient-success shadow quick-action-card">
-            <span class="info-box-icon"><i class="fas fa-hand-holding-usd"></i></span>
+            <span class="info-box-icon"><i class="fas fa-calendar-check"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text text-uppercase font-weight-bold">এ মাসে ইস্যুকৃত সনদ</span>
                 <span class="info-box-number text-3xl font-weight-bold">{{ bangla($totalmonthlycerts) }} টি</span>
