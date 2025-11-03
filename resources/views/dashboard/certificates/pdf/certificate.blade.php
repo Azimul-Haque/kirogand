@@ -173,7 +173,7 @@
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
                 আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
             </p>
-        @elseif($certificate->certificate_type == 'unmarried-certificate')
+        @elseif($certificate->certificate_type == 'death-certificate')
             <p class="info-paragraph" style="margin-top: 30px;">
                 এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর {{ $applicant['ward'] ?? '--' }} ওয়ার্ডের স্থায়ী বাসিন্দা। উল্লেখ্য যে, সে বর্তমানে অবিবাহিত। এটি আমার জানামতে সত্য।
             </p>
