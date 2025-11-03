@@ -134,6 +134,38 @@
                         </a>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 mb-3">
+                        <a href="#" class="btn btn-app w-100 bg-primary">
+                            <i class="fas fa-plus-square"></i> নতুন সার্টিফিকেট
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-3">
+                        <a href="#" class="btn btn-app w-100 bg-warning">
+                            <i class="fas fa-user-check"></i> অনুমোদন পরিচালনা করুন
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-3">
+                        <a href="#" class="btn btn-app w-100 bg-success">
+                            <i class="fas fa-search"></i> সার্টিফিকেট যাচাই করুন
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-3">
+                        <a href="#" class="btn btn-app w-100 bg-info">
+                            <i class="fas fa-chart-line"></i> রিপোর্ট দেখুন
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-3">
+                        <a href="#" class="btn btn-app w-100 bg-secondary">
+                            <i class="fas fa-edit"></i> টেমপ্লেট সম্পাদনা করুন
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-3">
+                        <a href="#" class="btn btn-app w-100 bg-danger">
+                            <i class="fas fa-sign-out-alt"></i> লগআউট
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
