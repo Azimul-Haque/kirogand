@@ -23,6 +23,8 @@ use Illuminate\Support\Carbon;
           return 'ভূমিহীন প্রত্যয়ন';
         else if ($text == 'monthly-income')
           return 'মাসিক আয়ের প্রত্যয়ন';
+        else if ($text == 'yearly-income')
+          return 'মাসিক আয়ের প্রত্যয়ন';
         else
             return $text;
     }
