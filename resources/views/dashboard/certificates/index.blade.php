@@ -152,7 +152,7 @@
             <a href="{{ route('dashboard.certificates.create', 'death-certificate') }}" class="text-decoration-none text-dark d-block">
                 <div class="service-box">
                     <div class="icon-circle" style="background-color: #dc3545;"><i class="fas fa-user-times"></i></div> 
-                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">প্রত্যয়নপত্র</h3>
+                    <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">মৃত্যু সনদ</h3>
                 </div>
             </a>
         </div>
