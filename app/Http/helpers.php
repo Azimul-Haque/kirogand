@@ -97,7 +97,7 @@ use Illuminate\Support\Carbon;
       else if ($text == 'mother')
         return 'মাতা';
       else if ($text == 'other')
-        return 'অভিভাবক';
+        return 'বৈধ অভিভাবক';
       else
           return $text;
   }
