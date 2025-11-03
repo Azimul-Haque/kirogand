@@ -119,7 +119,7 @@
                                     <a href="{{ route('dashboard.certificates.print', $certificate->unique_serial) }}" id="pulseThis{{ $certificate->id }}" class="btn btn-primary btn-sm" target="_blank" data-toggle="tooltip" title="প্রিন্ট করুন">
                                         <i class="fas fa-print"></i> প্রিন্ট
                                     </a>
-                                    <a href="{{ route('dashboard.certificates.download', $certificate->unique_serial) }}" class="btn btn-success btn-sm" data-toggle="tooltip" title="সার্টিফিকেট ডাউনলোড করুন">
+                                    <a href="{{ route('dashboard.certificates.download', $certificate->unique_serial) }}" class="btn btn-success btn-sm" data-toggle="tooltip" title="সনদ ডাউনলোড করুন">
                                         <i class="fas fa-download"></i>
                                     </a>
                                 @else
