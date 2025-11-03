@@ -147,6 +147,11 @@ class CertificateController extends Controller
                 'name', 'same_name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
             ]);
+        } else {
+            $applicantData = $request->only([
+                'name', 'same_name', 'father', 'mother', 'id_type', 'id_value', 'mobile',
+                'village', 'ward', 'post_office', 'union'
+            ]);
         }
         
 
