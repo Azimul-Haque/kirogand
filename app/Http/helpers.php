@@ -19,6 +19,8 @@ use Illuminate\Support\Carbon;
           return 'মৃত্যু সনদ';
         else if ($text == 'voter-area-change')
           return 'ভোটার এলাকা স্থানান্তর সনদ';
+        else if ($text == 'landless-certificate')
+          return 'ভোটার এলাকা স্থানান্তর সনদ';
         else
             return $text;
     }
