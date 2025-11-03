@@ -28,7 +28,7 @@ use Illuminate\Support\Carbon;
         else if ($text == 'new-voter')
           return 'নতুন ভোটার প্রত্যয়ন';
         else if ($text == 'financial-insolvency')
-          return 'আর্থিক স্বচ্ছলতার প্রত্যয়ন';
+          return 'আর্থিক অস্বচ্ছলতার সনদ';
         else
             return $text;
     }
