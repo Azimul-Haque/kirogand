@@ -10,7 +10,7 @@
     // Set form parameters
     $route = $isEdit
         ? route('dashboard.certificates.update', $certificate->id)
-        : route('dashboard.certificates.store', 'death-certificate');
+        : route('dashboard.certificates.store', 'monthly-income');
     $buttonText = $isEdit ? checkcertificatetype($certificatetype) . ' আপডেট করুন' : checkcertificatetype($certificatetype) . ' তৈরি করুন';
     $title = $isEdit ? checkcertificatetype($certificatetype) . ' সম্পাদনা' : checkcertificatetype($certificatetype) . ' ফরম';
 @endphp
