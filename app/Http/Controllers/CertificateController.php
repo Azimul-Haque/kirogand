@@ -283,7 +283,8 @@ class CertificateController extends Controller
         } elseif($certificate->certificate_type == 'death-certificate') {
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
-                'same_name' => ['required', 'string', 'max:255'],
+                'death_reg_no' => ['required', 'string', 'max:255'],
+                'death_date' => ['required', 'string', 'max:255'],
                 'father' => ['required', 'string', 'max:255'],
                 'mother' => ['required', 'string', 'max:255'],
                 'id_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
