@@ -88,9 +88,6 @@
 
                             <hr class="mt-4 mb-4">
 
-                            
-                            <hr class="mt-4">
-
                             <!-- Footer/Signature Placeholder -->
                             {{-- <div class="row mt-5">
                                 <div class="col-4 text-center">
