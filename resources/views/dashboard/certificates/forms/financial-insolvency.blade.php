@@ -102,7 +102,7 @@
                 <div class="form-group col-md-4">
                     <label for="problem">সমস্যার বিবরণ <span class="text-danger">*</span></label>
                     <textarea class="form-control @error('problem') is-invalid @enderror" id="problem" name="problem"
-                           value="{{ old('problem', $applicant['problem'] ?? '') }}" placeholder="মাতার নাম" required></textarea>
+                           placeholder="মাতার নাম" required>{{ old('problem', $applicant['problem'] ?? '') }}</textarea>
                     @error('problem') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
