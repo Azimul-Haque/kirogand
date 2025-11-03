@@ -62,7 +62,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="death_date">মৃত্যুর তারিখ <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('death_date') is-invalid @enderror" id="death_date" name="death_date"
+                    <input type="date" class="form-control @error('death_date') is-invalid @enderror" id="death_date" name="death_date"
                            value="{{ old('death_date', $applicant['death_date'] ?? '') }}" placeholder="আবেদনকারীর নাম" required>
                     @error('death_date') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
