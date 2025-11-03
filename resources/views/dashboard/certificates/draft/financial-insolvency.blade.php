@@ -86,7 +86,7 @@
                                 </div>
                             </div>
 
-                            <hr class="mt-4 mb-4">
+                            
                             <div class="row">
                                 <div class="col-12">
                                     <p><span class="info-label">সমস্যার বিবরণ:</span>
@@ -94,7 +94,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <hr class="mb-4">
+                            <hr class="mt-4 mb-4">
 
                             <!-- Footer/Signature Placeholder -->
                             {{-- <div class="row mt-5">
