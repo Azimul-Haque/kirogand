@@ -39,7 +39,7 @@
             <span class="info-box-icon"><i class="fas fa-check-circle"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text text-uppercase font-weight-bold">মোট ইস্যুকৃত সনদ</span>
-                <span class="info-box-number text-3xl font-weight-bold">{{ bangla($totalcertsissued) }}</span>
+                <span class="info-box-number text-3xl font-weight-bold">{{ bangla($totalcertsissued) }} টি</span>
                 <div class="progress">
                     <div class="progress-bar" style="width: 70%"></div>
                 </div>
