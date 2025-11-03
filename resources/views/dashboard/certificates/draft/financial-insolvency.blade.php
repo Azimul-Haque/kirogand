@@ -94,7 +94,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <hr class="mt-4">
+                            <hr class="mb-4">
 
                             <!-- Footer/Signature Placeholder -->
                             {{-- <div class="row mt-5">
