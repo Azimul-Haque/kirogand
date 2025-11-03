@@ -130,7 +130,7 @@ class CertificateController extends Controller
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
                 'earner' => ['required', 'string', 'max:255'],
-                'death_date' => ['required', 'string', 'max:255'],
+                'income' => ['required', 'string', 'max:255'],
                 'father' => ['required', 'string', 'max:255'],
                 'mother' => ['required', 'string', 'max:255'],
                 'id_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
