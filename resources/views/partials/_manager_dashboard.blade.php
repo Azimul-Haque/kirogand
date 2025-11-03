@@ -65,7 +65,38 @@
             </div>
         </div>
     </div>
-   
+    <!-- Total Citizens -->
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box bg-gradient-info shadow quick-action-card">
+            <span class="info-box-icon"><i class="fas fa-users"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text text-uppercase font-weight-bold">মোট নাগরিক (ইউনিয়ন)</span>
+                <span class="info-box-number text-3xl font-weight-bold">৩০,২০০</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%"></div>
+                </div>
+                <span class="progress-description">
+                    ভোটার তালিকা অনুযায়ী
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Revenue Collected -->
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box bg-gradient-success shadow quick-action-card">
+            <span class="info-box-icon"><i class="fas fa-hand-holding-usd"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text text-uppercase font-weight-bold">সংগৃহীত রাজস্ব (এই মাসে)</span>
+                <span class="info-box-number text-3xl font-weight-bold">৳ 80,500</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+                <span class="progress-description">
+                    গত মাসের তুলনায় ১০% বেশি
+                </span>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- /.row (Info Boxes) -->
 
