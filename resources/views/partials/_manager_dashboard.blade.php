@@ -55,7 +55,7 @@
             <span class="info-box-icon"><i class="fas fa-clock"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text text-uppercase font-weight-bold">অপেক্ষমাণ আবেদন</span>
-                <span class="info-box-number text-3xl font-weight-bold">২০</span>
+                <span class="info-box-number text-3xl font-weight-bold">{{ bangla($totalcertspending) }} টি</span>
                 <div class="progress">
                     <div class="progress-bar" style="width: 50%"></div>
                 </div>
