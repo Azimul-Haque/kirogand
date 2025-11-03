@@ -45,15 +45,15 @@
                     @error('memo') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="income_source">উপার্জনকারী <span class="text-danger">*</span></label>
-                    <select class="form-control @error('income_source') is-invalid @enderror" id="income_source" name="income_source" required>
+                    <label for="earner">উপার্জনকারী <span class="text-danger">*</span></label>
+                    <select class="form-control @error('earner') is-invalid @enderror" id="earner" name="earner" required>
                         <option value="" selected disabled>আয়ের ব্যক্তি নির্বাচন করুন</option>
-                        <option value="own" {{ old('income_source', $applicant['income_source'] ?? '') == 'own' ? 'selected' : '' }}>নিজে</option>
-                        <option value="father" {{ old('income_source', $applicant['income_source'] ?? '') == 'father' ? 'selected' : '' }}>পিতা</option>
-                        <option value="mother" {{ old('income_source', $applicant['income_source'] ?? '') == 'mother' ? 'selected' : '' }}>মাতা</option>
-                        <option value="other" {{ old('income_source', $applicant['income_source'] ?? '') == 'mother' ? 'selected' : '' }}>অভিভাবক</option>
+                        <option value="own" {{ old('earner', $applicant['earner'] ?? '') == 'own' ? 'selected' : '' }}>নিজে</option>
+                        <option value="father" {{ old('earner', $applicant['earner'] ?? '') == 'father' ? 'selected' : '' }}>পিতা</option>
+                        <option value="mother" {{ old('earner', $applicant['earner'] ?? '') == 'mother' ? 'selected' : '' }}>মাতা</option>
+                        <option value="other" {{ old('earner', $applicant['earner'] ?? '') == 'mother' ? 'selected' : '' }}>অভিভাবক</option>
                     </select>
-                    @error('income_source')<span class="invalid-feedback">{{ $message }}</span>@enderror
+                    @error('earner')<span class="invalid-feedback">{{ $message }}</span>@enderror
                 </div>
             </div>
 
