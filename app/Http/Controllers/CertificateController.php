@@ -374,10 +374,25 @@ class CertificateController extends Controller
                 'union' => ['required', 'string', 'max:255'],
                 'memo' => ['nullable', 'string'],
             ]);
-        }  elseif($certificate->certificate_type == 'new-voter') {
+        } elseif($certificate->certificate_type == 'new-voter') {
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
                 'dob' => ['required', 'string', 'max:255'],
+                'father' => ['required', 'string', 'max:255'],
+                'mother' => ['required', 'string', 'max:255'],
+                'id_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
+                'id_value' => ['required', 'string', 'max:100'],
+                'mobile' => ['required', 'string', 'max:255'],
+                'village' => ['required', 'string', 'max:255'],
+                'ward' => ['required', 'string', 'min:1', 'max:99'],
+                'post_office' => ['required', 'string', 'max:255'],
+                'union' => ['required', 'string', 'max:255'],
+                'memo' => ['nullable', 'string'],
+            ]);
+        } elseif($certificate->certificate_type == 'financial-insolvency') {
+            $validatedData = $request->validate([
+                'name' => ['required', 'string', 'max:255'],
+                'problem' => ['required', 'string', 'max:255'],
                 'father' => ['required', 'string', 'max:255'],
                 'mother' => ['required', 'string', 'max:255'],
                 'id_type' => ['required', 'string', 'in:এনআইডি,জন্ম সনদ'],
@@ -421,6 +436,11 @@ class CertificateController extends Controller
                 'village', 'ward', 'post_office', 'union'
             ]);
         } elseif($certificate->certificate_type == 'new-voter') {
+            $applicantData = $request->only([
+                'name', 'dob', 'father', 'mother', 'id_type', 'id_value', 'mobile',
+                'village', 'ward', 'post_office', 'union'
+            ]);
+        } elseif($certificate->certificate_type == 'financial-insolvency') {
             $applicantData = $request->only([
                 'name', 'dob', 'father', 'mother', 'id_type', 'id_value', 'mobile',
                 'village', 'ward', 'post_office', 'union'
