@@ -61,7 +61,7 @@
 
     @font-face {
         font-family: 'kalpurushs'; 
-        font-weight: 400;
+        font-weight: 100;
         font-style: normal;
         src: url('{{ asset('fonts/kalpurush-webfont.woff2') }}') format('woff2'),
              url('{{ asset('fonts/kalpurush-webfont.woff') }}') format('woff');
