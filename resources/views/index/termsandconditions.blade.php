@@ -249,5 +249,44 @@
 @endsection
 
 @section('third_party_scripts')
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+	<script>
+	    // JavaScript for Language Toggle functionality
+	    function switchLanguage(lang) {
+	        const bnContent = document.getElementById('bangla-content');
+	        const enContent = document.getElementById('english-content');
+	        const btnBn = document.getElementById('btnBangla');
+	        const btnEn = document.getElementById('btnEnglish');
+	        const mainTitle = document.getElementById('mainTitle');
+	        const mainSubtitle = document.getElementById('mainSubtitle');
+
+	        if (lang === 'en') {
+	            bnContent.style.display = 'none';
+	            enContent.style.display = 'block';
+	            btnEn.classList.add('active');
+	            btnBn.classList.remove('active');
+	            mainTitle.innerText = 'D-Nagorik Policies & Terms';
+	            mainSubtitle.innerText = 'Simple and user-friendly rules for the national online certificate system';
+	            document.documentElement.lang = 'en';
+	        } else {
+	            bnContent.style.display = 'block';
+	            enContent.style.display = 'none';
+	            btnBn.classList.add('active');
+	            btnEn.classList.remove('active');
+	            mainTitle.innerText = 'ডি-নাগরিক নীতিমালা ও শর্তাবলী';
+	            mainSubtitle.innerText = 'দেশের অনলাইন সার্টিফিকেট ব্যবস্থার জন্য তৈরি সহজ এবং ব্যবহারকারী-বান্ধব নিয়ম';
+	            document.documentElement.lang = 'bn';
+	        }
+	    }
+
+	    // Initial state setup and event listeners
+	    window.onload = function() {
+	        // Set Bangla as default (bn) and visually activate the button
+	        switchLanguage('bn');
+	        
+	        document.getElementById('btnBangla').addEventListener('click', () => switchLanguage('bn'));
+	        document.getElementById('btnEnglish').addEventListener('click', () => switchLanguage('en'));
+	    };
+	</script>
 @endsection
