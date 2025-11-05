@@ -134,7 +134,7 @@
               </div>
 
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
-                  <a href="{{ route('dashboard.certificates.create', 'same-person') }}" class="text-decoration-none text-dark d-block">
+                  <a href="#!" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: var(--medium-color); width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-people-arrows"></i></div> 
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">একই ব্যক্তির প্রত্যয়ন</h3>
@@ -143,7 +143,7 @@
               </div>
 
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                  <a href="{{ route('dashboard.certificates.create', 'character-certificate') }}" class="text-decoration-none text-dark d-block">
+                  <a href="#!" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: #ff9800; width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-user-shield"></i></div> 
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">চারিত্রিক সনদ</h3>
