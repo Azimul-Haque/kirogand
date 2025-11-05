@@ -237,8 +237,8 @@
                 @if(Auth::user())
                  <a href="{{ route('dashboard.index') }}" class="btn btn-outline-light rounded-pill"><i class="fas fa-tachometer-alt me-2"></i> ড্যাশবোর্ড</a>
                 @else
-                  <a href="{{ route('register.citizen') }}" class="btn btn-outline-light rounded-pill"><i class="fas fa-user me-2"></i> নাগরিক একাউন্ট</a>
-                  <a href="{{ route('register.authority') }}" class="btn btn-outline-info rounded-pill"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a>
+                  {{-- <a href="{{ route('register.citizen') }}" class="btn btn-outline-info rounded-pill"><i class="fas fa-user me-2"></i> নাগরিক একাউন্ট</a> --}}
+                  <a href="{{ route('register.authority') }}" class="btn btn-outline-light rounded-pill"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a>
                 @endif
                   
               </div>
