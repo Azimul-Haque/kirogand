@@ -50,7 +50,7 @@
                           <i class="fas fa-file-alt me-2"></i> সনদ আবেদন করুন
                       </a> --}}
                       {{-- <a href="{{ route('index.verify-certificate') }}" class="btn btn-outline-primary btn-lg rounded-pill shadow" style="">
-                          সনদ যাচাই করুন <i class="fas fa-check-double me-2"></i>
+                          <i class="fas fa-check-double me-2"></i> সনদ যাচাই করুন
                       </a> --}}
                       <a href="{{ route('index.verify-certificate') }}" class="btn btn-primary btn-lg rounded-pill shadow-lg" style="">
                           <i class="fas fa-check-double me-2"></i> সনদ যাচাই করুন
