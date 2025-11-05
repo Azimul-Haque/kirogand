@@ -352,7 +352,7 @@
               <div class="col-md-3 mb-4 mb-md-0">
                   <h5 class="fw-bold text-uppercase">গুরুত্বপূর্ণ লিংকসমূহ</h5>
                   <ul class="list-unstyled mt-3">
-                      <li><a href="#services">সেবা তালিকা</a></li>
+                      <li><a href="{{ route('index.services') }}">সেবা তালিকা</a></li>
                       <li><a href="/verification">সনদ যাচাই</a></li>
                       <li><a href="#notices">নোটিশ বোর্ড</a></li>
                       <li><a href="{{ route('blogs.index') }}">ব্লগ</a></li>
