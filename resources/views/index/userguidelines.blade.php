@@ -108,7 +108,7 @@
                                       <strong>৫: </strong> মাসিক/ছয় মাসের/এক বছরের প্যাকেজ প্রয়োজন হতে পারে।
                                   </li>
                               </ol>
-                              <a href="/citizen-registration" class="btn btn-sm btn-primary rounded-pill mt-3 align-self-start"><i class="fas fa-hand-point-right me-2"></i> আবেদন শুরু করুন</a>
+                              <a href="{{ route('register.authority') }}" class="btn btn-sm btn-primary rounded-pill mt-3 align-self-start"><i class="fas fa-hand-point-right me-2"></i> আবেদন শুরু করুন</a>
                           </div>
 
                           {{-- <div class="card p-4 manual-card bg-white">
