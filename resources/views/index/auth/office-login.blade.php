@@ -46,7 +46,7 @@
       </h1>
       
 
-      <div class="row justify-content-center g-4">
+      <div class="row justify-content-center g-2">
           
           <div class="col-md-6">
               <div class="card card p-4 p-md-5 shadow-lg rounded-3">
