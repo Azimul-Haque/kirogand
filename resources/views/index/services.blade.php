@@ -126,7 +126,7 @@
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
                   <a href="#!" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
-                          <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: var(--light-primary-color); width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-money-bill-alt"></i></div> 
+                          <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: var(--light-primary-color); width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-id-card-alt"></i></div> 
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">নতুন ভোটার প্রত্যয়ন</h3>
                       </div>
                   </a>
