@@ -311,10 +311,10 @@
                               <hr class="my-2 text-muted">
                               
                               <!-- Button 2: Union Registration (Green - Grassroots) -->
-                              <a href="/union-registration" class="btn text-white rounded-pill btn-sm fw-bold" style="background-color: #28a745; border-color: #28a745;"><i class="fas fa-map-marker-alt me-1"></i> ইউনিয়ন রেজিস্ট্রেশন করুন</a>
+                              <a href="{{ route('office.login') }}" class="btn text-white rounded-pill btn-sm fw-bold" style="background-color: #28a745; border-color: #28a745;"><i class="fas fa-map-marker-alt me-1"></i> ইউনিয়ন রেজিস্ট্রেশন করুন</a>
                               
                               <!-- Button 3: Pourashava Registration (Teal - Municipal) -->
-                              <a href="/pouroshova-registration" class="btn text-white rounded-pill btn-sm fw-bold" style="background-color: #17a2b8; border-color: #17a2b8;"><i class="fas fa-city me-1"></i> পৌরসভা রেজিস্ট্রেশন করুন</a>
+                              <a href="{{ route('office.login') }}" class="btn text-white rounded-pill btn-sm fw-bold" style="background-color: #17a2b8; border-color: #17a2b8;"><i class="fas fa-city me-1"></i> পৌরসভা রেজিস্ট্রেশন করুন</a>
                               
                               <!-- Button 4: Upazila Registration (Indigo - Authority) -->
                               {{-- <a href="/upazila-registration" class="btn text-white rounded-pill btn-sm fw-bold" style="background-color: #6f42c1; border-color: #6f42c1;"><i class="fas fa-building me-1"></i> উপজেলা পরিষদ রেজিস্ট্রেশন করুন</a> --}}
