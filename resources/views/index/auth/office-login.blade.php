@@ -74,7 +74,7 @@
                     </div>
 
                     <!-- Password Input Group -->
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-4">
                         <input type="password"
                                 name="password"
                                 placeholder="পাসওয়ার্ড"
