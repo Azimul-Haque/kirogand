@@ -63,7 +63,7 @@
         font-family: 'kalpurushs'; 
         font-weight: 400;
         font-style: normal;
-        src: url('{{ asset('fonts/kalpurush-webfont.woff2') }}') format('woff2'),
+        src: url('{{ asset('fonts/') }}') format('woff2'),
              url('{{ asset('fonts/') }}') format('woff');
         font-display: swap;
     }
