@@ -93,7 +93,7 @@
                               
                               <ol class="list-group ">
                                   <li class="list-group-item align-items-start small">
-                                      <strong>১: </strong> পোর্টাল প্রবেশ ও <a href="{{ route('register.authority') }}">নিবন্ধন</a>।
+                                      <strong>১: </strong> প্রশাসনিক একাউন্ট <a href="{{ route('register.authority') }}">বাটনে ক্লিক করুন</a>।
                                   </li>
                                   <li class="list-group-item align-items-start small">
                                       <strong>২: </strong> সেবার তালিকা থেকে কাঙ্ক্ষিত সনদ নির্বাচন।
