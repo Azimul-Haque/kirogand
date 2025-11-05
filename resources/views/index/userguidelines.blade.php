@@ -102,7 +102,7 @@
                                       <strong>৩: </strong> আমাদের প্রতিনিধি কর্তৃক একাউন্ট ভেরিফিকেশন
                                   </li>
                                   <li class="list-group-item align-items-start small">
-                                      <strong>৪: </strong> প্রয়োজনীয় ডকুমেন্ট আপলোড (জাতীয় পরিচয়পত্র, ছবি ইত্যাদি)।
+                                      <strong>৪: </strong> <a href="{{ route('register.authority') }}">লগইন</a> করে 
                                   </li>
                                   <li class="list-group-item align-items-start small">
                                       <strong>৫: </strong> ফি পরিশোধ ও ট্র্যাকিং নম্বর সংগ্রহ।
