@@ -60,7 +60,7 @@
                                 name="mobile"
                                 value="{{ old('mobile') }}"
                                 placeholder="মোবাইল নম্বর (১১ ডিজিট)"
-                                class="form-control @error('mobile') is-invalid @enderror">
+                                class="form-control form-control-lg @error('mobile') is-invalid @enderror">
                         
                         <!-- BS5 change: input-group-append removed, using input-group-text -->
                         <span class="input-group-text">
@@ -78,7 +78,7 @@
                         <input type="password"
                                 name="password"
                                 placeholder="পাসওয়ার্ড"
-                                class="form-control @error('password') is-invalid @enderror">
+                                class="form-control form-control-lg @error('password') is-invalid @enderror">
                         
                         <!-- BS5 change: input-group-append removed, using input-group-text -->
                         <span class="input-group-text">
