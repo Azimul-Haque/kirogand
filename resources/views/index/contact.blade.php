@@ -31,7 +31,7 @@
                     <div class="card-body p-5">
                         <h3 class="h4 fw-bold mb-4" style="color: var(--darker-color);">সহায়তা ডেস্কের ঠিকানা</h3>
                         {{-- <p class="mb-2"><i class="fas fa-map-marker-alt me-2" style="color: var(--light-primary-color);"></i> <strong>ঠিকানা:</strong> ডিজিটাল নাগরিক, ইনোভা টেকনোলজি, ঢাকা, বাংলাদেশ।</p> --}}
-                        <p class="mb-2"><i class="fas fa-phone me-2" style="color: var(--light-primary-color);"></i> <strong>ফোন:</strong> <<a href="" title="">+88 01737 988 070 (কার্যকালীন)</a></p>
+                        <p class="mb-2"><i class="fas fa-phone me-2" style="color: var(--light-primary-color);"></i> <strong>ফোন:</strong> <<a href="tel:+8801737988070" title="">+88 01737 988 070 (কার্যকালীন)</a></p>
                         <p class="mb-4"><i class="fas fa-envelope me-2" style="color: var(--light-primary-color);"></i> <strong>ইমেইল:</strong> innovatech.frm@gmail.com</p>
                         
                         <hr>
