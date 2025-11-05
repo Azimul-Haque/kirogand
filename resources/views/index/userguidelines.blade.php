@@ -96,7 +96,7 @@
                                       <strong>১: </strong> প্রশাসনিক একাউন্ট <a href="{{ route('register.authority') }}">বাটনে ক্লিক করুন</a>।
                                   </li>
                                   <li class="list-group-item align-items-start small">
-                                      <strong>২: </strong> সাধারণ তথ্য ও 
+                                      <strong>২: </strong> সাধারণ তথ্য ও অফিস তথ্য সঠিকভাবে পূরণ করুন
                                   </li>
                                   <li class="list-group-item align-items-start small">
                                       <strong>৩: </strong> নির্ভুলভাবে সমস্ত তথ্য দিয়ে ফরম পূরণ।
