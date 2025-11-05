@@ -64,6 +64,19 @@
         background-color: var(--white-bg);
         color: var(--darker-color);
     }
+
+    body {
+        /* Google Fonts থেকে পাওয়া ফন্ট-ফ্যামিলি ব্যবহার করুন, সাথে একটি ফলব্যাক দিন */
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    /* যদি আপনি কোনো নির্দিষ্ট অংশে ভিন্ন ফন্ট ব্যবহার করতে চান */
+    h1, h2 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700; /* বোল্ড স্টাইল ব্যবহার */
+    }
     
     .section-gap {
         padding-top: 5rem;
