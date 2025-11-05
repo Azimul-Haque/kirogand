@@ -127,7 +127,7 @@
                           </div>
 
                           <!-- Section 3: আবেদনের অবস্থা জানা -->
-                          <div class="card p-4 manual-card bg-white" style="border-left-color: var(--darker-color);">
+                          {{-- <div class="card p-4 manual-card bg-white" style="border-left-color: var(--darker-color);">
                               <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-tasks"></i></span> ৩. আবেদনের অবস্থা জানা</h3>
                               <p>আবেদন করার সময় প্রাপ্ত <span class="fw-bold text-primary">ট্র্যাকিং নম্বরটি</span> ব্যবহার করে আপনার আবেদনের বর্তমান স্ট্যাটাস জানুন:</p>
                               
@@ -143,7 +143,7 @@
                                   </li>
                               </ul>
                               <a href="application_status.html" class="btn btn-sm btn-outline-dark rounded-pill mt-3 align-self-start"><i class="fas fa-map-marker-alt me-2"></i> অবস্থা দেখুন</a>
-                          </div>
+                          </div> --}}
 
                           <!-- Section 4: প্রশাসনিক প্যানেল -->
                           <div class="card p-4 manual-card bg-white" style="border-left-color: #28a745;">
