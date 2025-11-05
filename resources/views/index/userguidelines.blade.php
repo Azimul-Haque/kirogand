@@ -170,7 +170,7 @@
 
                           <!-- Section 4: প্রশাসনিক প্যানেল -->
                           <div class="card p-4 manual-card bg-white" style="border-left-color: #28a745;">
-                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2" style="background-color: #d4edda; color: #28a745;"><i class="fas fa-user-tie"></i></span> ৪. প্রশাসনিক প্যানেল</h3>
+                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2" style="background-color: #d4edda; color: #28a745;"><i class="fas fa-user-tie"></i></span> প্রশাসনিক প্যানেল</h3>
                               <p class="small mb-0">ইউনিয়ন পরিষদ, পৌরসভা এবং উপজেলা পরিষদের কর্মকর্তাদের জন্য ডেডিকেটেড প্যানেল। এই প্যানেল থেকে আবেদন অনুমোদন, বাতিলকরণ এবং প্রতিবেদন তৈরির কাজ করা হয়।</p>
                               <a href="/admin-login" class="btn btn-sm btn-success text-white rounded-pill mt-3 align-self-start"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক লগইন</a>
                           </div>
