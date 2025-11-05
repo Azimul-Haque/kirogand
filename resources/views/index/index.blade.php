@@ -307,7 +307,7 @@
                           
                           <div class="d-grid gap-2">
                               <!-- Button 1: Admin Login (Navy Blue/Primary Action) -->
-                              <a href="/admin-login" class="btn text-white rounded-pill fw-bold" style="background-color: #2c3e50; border-color: #2c3e50;"><i class="fas fa-user-cog me-2"></i> প্রশাসনিক লগইন</a>
+                              <a href="{{ route('index.office.login') }}" class="btn text-white rounded-pill fw-bold" style="background-color: #2c3e50; border-color: #2c3e50;"><i class="fas fa-user-cog me-2"></i> প্রশাসনিক লগইন</a>
                               <hr class="my-2 text-muted">
                               
                               <!-- Button 2: Union Registration (Green - Grassroots) -->
