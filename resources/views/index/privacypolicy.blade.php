@@ -4,7 +4,7 @@
 @section('third_party_stylesheets')
 	<style>
 		.policy-card {
-            
+            max-width: 900px;
             margin-top: 1rem;
             margin-bottom: 1rem;
             box-shadow: 0 10px 25px rgba(30, 64, 175, 0.1); /* Subtle blue shadow */
@@ -57,28 +57,29 @@
 
 <section class="service-section section-gap">
 	<div class="container policy-card rounded-4 bg-white">
-        <div class="">
-            <!-- Language Toggle Button (Pill Style) -->
-            <div class="d-flex justify-content-center mb-5 pt-3">
-                <div class="toggle-group-bg">
-                    <div class="btn-group" role="group">
-                        <button id="lang-bn" class="lang-toggle-btn active" data-lang="bn">
-                            বাংলা
-                        </button>
-                        <button id="lang-en" class="lang-toggle-btn" data-lang="en">
-                            English
-                        </button>
-                    </div>
-                </div>
-            </div>
+	        <div class="p-3 p-md-2">
+	            
+	            <!-- Language Toggle Button (Pill Style) -->
+	            <div class="d-flex justify-content-center mb-5 pt-3">
+	                <div class="toggle-group-bg">
+	                    <div class="btn-group" role="group">
+	                        <button id="lang-bn" class="lang-toggle-btn active" data-lang="bn">
+	                            বাংলা
+	                        </button>
+	                        <button id="lang-en" class="lang-toggle-btn" data-lang="en">
+	                            English
+	                        </button>
+	                    </div>
+	                </div>
+	            </div>
 
-            <!-- Content Area -->
-            <div id="policy-content">
-                <!-- Content will be inserted here by JavaScript -->
-            </div>
-        
-        </div>
-    </div>
+	            <!-- Content Area -->
+	            <div id="policy-content">
+	                <!-- Content will be inserted here by JavaScript -->
+	            </div>
+	        
+	        </div>
+	    </div>
 </section>
     
 @endsection
