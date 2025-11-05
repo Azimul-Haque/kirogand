@@ -1,5 +1,5 @@
 @extends('layouts.index')
-@section('title') Terms & Conditions | BCS Exam AID @endsection
+@section('title') ডিজিটাল নাগরিক - সনদ যাচাই @endsection
 
 @section('third_party_stylesheets')
 
