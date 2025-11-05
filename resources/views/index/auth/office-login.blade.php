@@ -13,7 +13,7 @@
     .guideline-card {
         background-color: #e3f2fd; /* Light blue background */
         border-radius: 12px;
-        padding: 30px;
+        padding: 25px;
         border: 1px solid #cce5ff;
     }
     .form-heading {
