@@ -53,7 +53,7 @@
                           সনদ যাচাই করুন <i class="fas fa-check-double me-2"></i>
                       </a> --}}
                       <a href="{{ route('index.verify-certificate') }}" class="btn btn-primary btn-lg rounded-pill shadow-lg" style="">
-                          <i class="fas fa-check-double me-2"></i> সনদ যাচাই করুন 
+                          <i class="fas fa-check-double me-2"></i> সনদ যাচাই করুন
                       </a>
                   </div>
               </div>
