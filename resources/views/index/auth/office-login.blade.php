@@ -51,7 +51,7 @@
           <div class="col-md-8 col-lg-6">
               <div class="card p-4 p-md-5 shadow-lg rounded-3">
                   <div class="card-body">
-                    <p class="text-center lead text-muted">ডি-নাগরিক-এ কর্তৃপক্ষ (ইউনিয়ন/পৌরসভা) লগইন</p>
+                    <p class="text-center lead text-muted">কর্তৃপক্ষ (ইউনিয়ন/পৌরসভা) লগইন</p>
                     <form method="post" action="{{ url('/login') }}">
                         @csrf
 
