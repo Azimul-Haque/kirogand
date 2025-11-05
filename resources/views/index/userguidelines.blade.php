@@ -89,7 +89,7 @@
                           
                           <div class="card p-4 manual-card bg-white">
                               <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-file-alt"></i></span> ডি-নাগরিকে প্রশাসনিক একাউন্ট</h3>
-                              <p>নাগরিক সনদ, জন্ম সনদ, ওয়ারিশ সনদ সহ যেকোনো প্রত্যয়নের জন্য আবেদন করতে নিম্নলিখিত ধাপগুলি অনুসরণ করুন:</p>
+                              <p>নাগরিক সনদ, ওয়ারিশ সনদসহ যেকোনো প্রত্যয়নের জন্য আবেদন করতে নিম্নলিখিত ধাপগুলি অনুসরণ করুন:</p>
                               
                               <ol class="list-group ">
                                   <li class="list-group-item align-items-start small">
