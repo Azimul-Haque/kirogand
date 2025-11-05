@@ -398,8 +398,7 @@
                               <input type="text" class="form-control form-control-lg" id="certificateNumber" name="cert_id" placeholder="সনদপত্র নম্বরটি এখানে লিখুন" required>
                           </div>
                           <div class="col-md-5 d-flex align-items-end">
-                              <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold" id="verifyButton
-verifyButton">
+                              <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold" id="verifyButton">
                                   <i class="fas fa-search me-2"></i> যাচাই করুন
                               </button>
                           </div>
