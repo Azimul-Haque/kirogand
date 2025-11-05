@@ -152,7 +152,7 @@
               </div>
 
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                  <a href="{{ route('dashboard.certificates.create', 'unmarried-certificate') }}" class="text-decoration-none text-dark d-block">
+                  <a href="#!" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: var(--light-primary-color); width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-male"></i></div> 
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">অবিবাহিত সনদ</h3>
@@ -161,7 +161,7 @@
               </div>
 
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                  <a href="{{ route('dashboard.certificates.create', 'death-certificate') }}" class="text-decoration-none text-dark d-block">
+                  <a href="#!" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: #dc3545; width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-user-times"></i></div> 
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">মৃত্যু সনদ</h3>
@@ -170,7 +170,7 @@
               </div>
 
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                  <a href="{{ route('dashboard.certificates.create', 'voter-area-change') }}" class="text-decoration-none text-dark d-block">
+                  <a href="#!" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: #ffc107; width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-id-card"></i></div> 
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">ভোটার এলাকা স্থানান্তর</h3>
@@ -179,7 +179,7 @@
               </div>
 
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                  <a href="{{ route('dashboard.certificates.create', 'landless-certificate') }}" class="text-decoration-none text-dark d-block">
+                  <a href="#!" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: #795548; width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-id-card"></i></div> 
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">ভূমিহীন প্রত্যয়ন</h3>
@@ -188,7 +188,7 @@
               </div>
 
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                  <a href="{{ route('dashboard.certificates.create', 'monthly-income') }}" class="text-decoration-none text-dark d-block">
+                  <a href="#!" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: var(--medium-color); width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-money-bill-alt"></i></div> 
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">মাসিক আয়ের প্রত্যয়ন</h3>
@@ -197,7 +197,7 @@
               </div>
 
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                  <a href="{{ route('dashboard.certificates.create', 'yearly-income') }}" class="text-decoration-none text-dark d-block">
+                  <a href="#!" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: #ff9800; width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-money-bill-alt"></i></div> 
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">বাৎসরিক আয়ের প্রত্যয়ন</h3>
