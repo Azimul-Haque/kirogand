@@ -59,10 +59,14 @@
         --white-bg: #ffffff; /* Explicit White */
     }
 
-    {{-- body {
-        font-family: 'Inter', sans-serif;
-        
-    } --}}
+    @font-face {
+        font-family: 'kalpurush'; 
+        font-weight: 400;
+        font-style: normal;
+        src: url('./assets/fonts/Kalpurush.woff2') format('woff2'),
+             url('./assets/fonts/Kalpurush.woff') format('woff');
+        font-display: swap;
+    }
 
     body {
         /* Google Fonts থেকে পাওয়া ফন্ট-ফ্যামিলি ব্যবহার করুন, সাথে একটি ফলব্যাক দিন */
