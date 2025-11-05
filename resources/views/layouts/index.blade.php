@@ -67,7 +67,7 @@
     body {
         /* Google Fonts থেকে পাওয়া ফন্ট-ফ্যামিলি ব্যবহার করুন, সাথে একটি ফলব্যাক দিন */
         font-family: 'Hind Siliguri', sans-serif;
-        
+        line-height: 1.6;
         background-color: var(--white-bg);
         color: var(--darker-color);
         color: #333;
