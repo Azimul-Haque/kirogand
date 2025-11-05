@@ -44,7 +44,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
 
 
   <!-- Load Bootstrap 5 CSS -->
@@ -64,7 +64,7 @@
     }
 
     @font-face {
-        font-family: 'Noto Serif Bengali'; 
+        font-family: 'Tiro Bangla'; 
         font-weight: 400;
         font-style: normal;
         src: url('https://dnagorik.com/fonts/kalpurush-webfont.woff2') format('woff2'),
@@ -73,7 +73,7 @@
     }
 
     body {
-        font-family: 'Noto Serif Bengali', Arial, sans-serif;
+        font-family: 'Tiro Bangla', Arial, sans-serif;
         line-height: 1.6;
         background-color: var(--white-bg);
         color: var(--darker-color);
