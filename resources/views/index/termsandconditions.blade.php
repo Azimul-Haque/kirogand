@@ -80,7 +80,7 @@
   <div class="container">
     <div class="card shadow-lg policy-card border-0">
             
-            <div class="header-section text-center mt-5">
+            <div class="header-section text-center">
                 <!-- Language Toggle Button -->
                 <div class="lang-toggle-container">
                     <div id="languageToggle" class="language-toggle">
