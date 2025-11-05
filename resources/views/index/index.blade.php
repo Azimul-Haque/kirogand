@@ -106,277 +106,123 @@
           <!-- Service Cards Container -->
           <div class="row g-4" id="serviceGrid">
 
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
-                <a href="{{ route('dashboard.certificates.create', 'heir-certificate') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-users"></i></div>
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ওয়ারিশ সনদ</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="2">
-                <a href="{{ route('dashboard.certificates.create', 'citizen-certificate') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-user-check"></i></div> 
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">নাগরিকত্ব সনদ</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="3">
-                <a href="{{ route('dashboard.certificates.create', 'permanent-resident') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: #795548;"><i class="fas fa-house-user"></i></div> 
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">স্থায়ী বাসিন্দা সনদ</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
-                <a href="{{ route('dashboard.certificates.create', 'same-person') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: var(--medium-color);"><i class="fas fa-people-arrows"></i></div> 
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">একই ব্যক্তির প্রত্যয়ন</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                <a href="{{ route('dashboard.certificates.create', 'character-certificate') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: #ff9800;"><i class="fas fa-user-shield"></i></div> 
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">চারিত্রিক সনদ</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                <a href="{{ route('dashboard.certificates.create', 'unmarried-certificate') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: var(--light-primary-color);"><i class="fas fa-male"></i></div> 
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">অবিবাহিত সনদ</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                <a href="{{ route('dashboard.certificates.create', 'death-certificate') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: #dc3545;"><i class="fas fa-user-times"></i></div> 
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">মৃত্যু সনদ</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                <a href="{{ route('dashboard.certificates.create', 'voter-area-change') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-id-card"></i></div> 
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ভোটার এলাকা স্থানান্তর</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                <a href="{{ route('dashboard.certificates.create', 'landless-certificate') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: #795548;"><i class="fas fa-id-card"></i></div> 
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ভূমিহীন প্রত্যয়ন</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                <a href="{{ route('dashboard.certificates.create', 'monthly-income') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: var(--medium-color);"><i class="fas fa-money-bill-alt"></i></div> 
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">মাসিক আয়ের প্রত্যয়ন</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                <a href="{{ route('dashboard.certificates.create', 'yearly-income') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: #ff9800;"><i class="fas fa-money-bill-alt"></i></div> 
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">বাৎসরিক আয়ের প্রত্যয়ন</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                <a href="{{ route('dashboard.certificates.create', 'new-voter') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: var(--light-primary-color);"><i class="fas fa-money-bill-alt"></i></div> 
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">নতুন ভোটার প্রত্যয়ন</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                <a href="{{ route('dashboard.certificates.create', 'financial-insolvency') }}" class="text-decoration-none text-dark d-block">
-                    <div class="service-box">
-                        <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-frown"></i></div> 
-                        <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">আর্থিক অস্বচ্ছলতার প্রত্যয়ন</h3>
-                    </div>
-                </a>
-            </div>
-              
-              <!-- DYNAMICALLY GENERATED SERVICE BOXES (40 TOTAL) -->
-              <!-- Note: The first 12 services will be visible, the rest will be dynamically hidden by JS -->
-              
-              <!-- Service 1: জন্ম নিবন্ধন সনদ -->
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
-                  <a href="/service/birth-certificate" class="text-decoration-none text-dark d-block">
+                  <a href="{{ route('dashboard.certificates.create', 'heir-certificate') }}" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
-                          <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-baby"></i></div>
-                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">জন্ম নিবন্ধন সনদ</h3>
+                          <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-users"></i></div>
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ওয়ারিশ সনদ</h3>
                       </div>
                   </a>
               </div>
 
-              <!-- Service 2: মৃত্যু নিবন্ধন সনদ -->
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="2">
-                  <a href="/service/death-certificate" class="text-decoration-none text-dark d-block">
-                      <div class="service-box">
-                          <div class="icon-circle" style="background-color: #dc3545;"><i class="fas fa-cross"></i></div> 
-                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">মৃত্যু নিবন্ধন সনদ</h3>
-                      </div>
-                  </a>
-              </div>
-
-              <!-- Service 3: বার্ষিক আয়ের সনদ -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="3">
-                  <a href="/service/income-certificate" class="text-decoration-none text-dark d-block">
-                      <div class="service-box">
-                          <div class="icon-circle" style="background-color: var(--medium-color);"><i class="fas fa-sack-dollar"></i></div>
-                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">বার্ষিক আয়ের সনদ</h3>
-                      </div>
-                  </a>
-              </div>
-
-              <!-- Service 4: চারিত্রিক সনদপত্র -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
-                  <a href="/service/character-certificate" class="text-decoration-none text-dark d-block">
+                  <a href="{{ route('dashboard.certificates.create', 'citizen-certificate') }}" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-user-check"></i></div> 
-                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">চারিত্রিক সনদপত্র</h3>
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">নাগরিকত্ব সনদ</h3>
                       </div>
                   </a>
               </div>
-              
-              <!-- Service 5: ওয়ারিশ সনদ -->
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="3">
+                  <a href="{{ route('dashboard.certificates.create', 'permanent-resident') }}" class="text-decoration-none text-dark d-block">
+                      <div class="service-box">
+                          <div class="icon-circle" style="background-color: #795548;"><i class="fas fa-house-user"></i></div> 
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">স্থায়ী বাসিন্দা সনদ</h3>
+                      </div>
+                  </a>
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="4">
+                  <a href="{{ route('dashboard.certificates.create', 'same-person') }}" class="text-decoration-none text-dark d-block">
+                      <div class="service-box">
+                          <div class="icon-circle" style="background-color: var(--medium-color);"><i class="fas fa-people-arrows"></i></div> 
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">একই ব্যক্তির প্রত্যয়ন</h3>
+                      </div>
+                  </a>
+              </div>
+
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                  <a href="/service/heir-certificate" class="text-decoration-none text-dark d-block">
+                  <a href="{{ route('dashboard.certificates.create', 'character-certificate') }}" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
-                          <div class="icon-circle" style="background-color: #6f42c1;"><i class="fas fa-handshake"></i></div>
-                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">ওয়ারিশ সনদ</h3>
+                          <div class="icon-circle" style="background-color: #ff9800;"><i class="fas fa-user-shield"></i></div> 
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">চারিত্রিক সনদ</h3>
+                      </div>
+                  </a>
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
+                  <a href="{{ route('dashboard.certificates.create', 'unmarried-certificate') }}" class="text-decoration-none text-dark d-block">
+                      <div class="service-box">
+                          <div class="icon-circle" style="background-color: var(--light-primary-color);"><i class="fas fa-male"></i></div> 
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">অবিবাহিত সনদ</h3>
+                      </div>
+                  </a>
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
+                  <a href="{{ route('dashboard.certificates.create', 'death-certificate') }}" class="text-decoration-none text-dark d-block">
+                      <div class="service-box">
+                          <div class="icon-circle" style="background-color: #dc3545;"><i class="fas fa-user-times"></i></div> 
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">মৃত্যু সনদ</h3>
+                      </div>
+                  </a>
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
+                  <a href="{{ route('dashboard.certificates.create', 'voter-area-change') }}" class="text-decoration-none text-dark d-block">
+                      <div class="service-box">
+                          <div class="icon-circle" style="background-color: #ffc107;"><i class="fas fa-id-card"></i></div> 
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ভোটার এলাকা স্থানান্তর</h3>
+                      </div>
+                  </a>
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
+                  <a href="{{ route('dashboard.certificates.create', 'landless-certificate') }}" class="text-decoration-none text-dark d-block">
+                      <div class="service-box">
+                          <div class="icon-circle" style="background-color: #795548;"><i class="fas fa-id-card"></i></div> 
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">ভূমিহীন প্রত্যয়ন</h3>
+                      </div>
+                  </a>
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
+                  <a href="{{ route('dashboard.certificates.create', 'monthly-income') }}" class="text-decoration-none text-dark d-block">
+                      <div class="service-box">
+                          <div class="icon-circle" style="background-color: var(--medium-color);"><i class="fas fa-money-bill-alt"></i></div> 
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">মাসিক আয়ের প্রত্যয়ন</h3>
+                      </div>
+                  </a>
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
+                  <a href="{{ route('dashboard.certificates.create', 'yearly-income') }}" class="text-decoration-none text-dark d-block">
+                      <div class="service-box">
+                          <div class="icon-circle" style="background-color: #ff9800;"><i class="fas fa-money-bill-alt"></i></div> 
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">বাৎসরিক আয়ের প্রত্যয়ন</h3>
+                      </div>
+                  </a>
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
+                  <a href="{{ route('dashboard.certificates.create', 'new-voter') }}" class="text-decoration-none text-dark d-block">
+                      <div class="service-box">
+                          <div class="icon-circle" style="background-color: var(--light-primary-color);"><i class="fas fa-money-bill-alt"></i></div> 
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">নতুন ভোটার প্রত্যয়ন</h3>
+                      </div>
+                  </a>
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
+                  <a href="{{ route('dashboard.certificates.create', 'financial-insolvency') }}" class="text-decoration-none text-dark d-block">
+                      <div class="service-box">
+                          <div class="icon-circle" style="background-color: var(--primary-color);"><i class="fas fa-frown"></i></div> 
+                          <h3 class="h5 font-weight-bold" style="color: var(--darker-color);">আর্থিক অস্বচ্ছলতার প্রত্যয়ন</h3>
                       </div>
                   </a>
               </div>
               
-              <!-- Service 6: ঠিকানার প্রত্যয়ন -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="6">
-                  <a href="/service/address-certificate" class="text-decoration-none text-dark d-block">
-                      <div class="service-box">
-                          <div class="icon-circle" style="background-color: var(--light-primary-color);"><i class="fas fa-map-marker-alt"></i></div>
-                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">ঠিকানার প্রত্যয়ন</h3>
-                      </div>
-                  </a>
-              </div>
-              
-              <!-- Service 7: অবিবাহিত সনদ -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="7">
-                  <a href="/service/unmarried" class="text-decoration-none text-dark d-block">
-                      <div class="service-box">
-                          <div class="icon-circle" style="background-color: #00bcd4;"><i class="fas fa-ring"></i></div>
-                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">অবিবাহিত সনদ</h3>
-                      </div>
-                  </a>
-              </div>
-
-              <!-- Service 8: নতুন ট্রেড লাইসেন্স -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="8">
-                  <a href="/service/trade-license-new" class="text-decoration-none text-dark d-block">
-                      <div class="service-box">
-                          <div class="icon-circle" style="background-color: #795548;"><i class="fas fa-store"></i></div>
-                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">নতুন ট্রেড লাইসেন্স</h3>
-                      </div>
-                  </a>
-              </div>
-
-              <!-- Service 9: ট্রেড লাইসেন্স নবায়ন -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="9">
-                  <a href="/service/trade-license-renewal" class="text-decoration-none text-dark d-block">
-                      <div class="service-box">
-                          <div class="icon-circle" style="background-color: #9e9e9e;"><i class="fas fa-sync-alt"></i></div>
-                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">ট্রেড লাইসেন্স নবায়ন</h3>
-                      </div>
-                  </a>
-              </div>
-
-              <!-- Service 10: কৃষি ভর্তুকির প্রত্যয়ন -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="10">
-                  <a href="/service/agriculture-subsidy" class="text-decoration-none text-dark d-block">
-                      <div class="service-box">
-                          <div class="icon-circle" style="background-color: #4caf50;"><i class="fas fa-leaf"></i></div>
-                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">কৃষি ভর্তুকির প্রত্যয়ন</h3>
-                      </div>
-                  </a>
-              </div>
-              
-              <!-- Service 11: নাগরিকত্ব সনদ -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="11">
-                  <a href="/service/citizenship-certificate" class="text-decoration-none text-dark d-block">
-                      <div class="service-box">
-                          <div class="icon-circle" style="background-color: #ff9800;"><i class="fas fa-flag"></i></div>
-                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">নাগরিকত্ব সনদ</h3>
-                      </div>
-                  </a>
-              </div>
-
-              <!-- Service 12: ভূমির খাজনা প্রত্যয়ন -->
-              <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="12">
-                  <a href="/service/land-tax-certificate" class="text-decoration-none text-dark d-block">
-                      <div class="service-box">
-                          <div class="icon-circle" style="background-color: #607d8b;"><i class="fas fa-file-invoice-dollar"></i></div>
-                          <h3 class="h5 fw-bolder" style="color: var(--darker-color);">ভূমির খাজনা প্রত্যয়ন</h3>
-                      </div>
-                  </a>
-              </div>
-
-              <!-- Additional Services (13-40) - Initially Hidden by JS -->
-              <!-- MOCK DATA LOOP START: 13 to 40 -->
-              <!-- The following script generates the remaining 28 services for demonstration -->
-              <script>
-                  // Function to generate services 13 through 40 (mock data)
-                  const serviceGrid = document.getElementById('serviceGrid');
-                  const colors = ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#009688', '#8bc34a', '#ffeb3b', '#ff5722'];
-                  
-                  for (let i = 13; i <= 40; i++) {
-                      const container = document.createElement('div');
-                      // Add d-none class for initial hiding, which JS will remove if necessary
-                      container.className = 'col-lg-2 col-md-4 col-sm-6 col-6 service-box-container d-none'; 
-                      container.dataset.serviceId = i;
-
-                      const serviceName = (i % 3 === 0) ? `বিশেষ সনদপত্র - ${i}` : (i % 2 === 0 ? `সরকারি সেবা - ${i}` : `অন্যান্য প্রত্যয়ন - ${i}`);
-                      const iconClass = (i % 5 === 0) ? 'fas fa-graduation-cap' : 'fas fa-id-card';
-                      const bgColor = colors[(i - 1) % colors.length];
-
-                      container.innerHTML = `
-                          <a href="/service/misc-${i}" class="text-decoration-none text-dark d-block">
-                              <div class="service-box">
-                                  <div class="icon-circle" style="background-color: ${bgColor};"><i class="${iconClass}"></i></div>
-                                  <h3 class="h5 fw-bolder" style="color: var(--darker-color);">${serviceName}</h3>
-                              </div>
-                          </a>
-                      `;
-                      serviceGrid.appendChild(container);
-                  }
-              </script>
-              <!-- MOCK DATA LOOP END -->
-
           </div>
           
           <!-- Show More Button -->
