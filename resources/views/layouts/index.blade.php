@@ -64,7 +64,7 @@
         font-weight: 400;
         font-style: normal;
         src: url('{{ asset('fonts/') }}') format('woff2'),
-             url('{{ asset('fonts/') }}') format('woff');
+             url('{{ asset('fonts/kalpurush-webfont.woff') }}') format('woff');
         font-display: swap;
     }
 
