@@ -342,7 +342,7 @@
               <div class="col-md-2 mb-4 mb-md-0">
                   <h5 class="fw-bold text-uppercase">জরুরী প্রয়োজনে</h5>
                   <ul class="list-unstyled mt-3">
-                      <li><a tel="+88 01737 988 070">হটলাইন: +88 01737 988 070</a></li>
+                      <li><a href="">হটলাইন: +88 01737 988 070</a></li>
                       <li><a href="/police">নিকটস্থ থানা</a></li>
                       <li><a href="/fire-service">ফায়ার সার্ভিস</a></li>
                       <li><a href="/disaster">দুর্যোগ সহায়তা</a></li>
