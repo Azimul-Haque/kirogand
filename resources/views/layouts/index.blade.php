@@ -65,7 +65,7 @@
         font-style: normal;
         src: url('https://dnagorik.com/fonts/kalpurush-webfont.woff2') format('woff2'),
              url('https://dnagorik.com/fonts/kalpurush-webfont.woff') format('woff'),
-             url('https://dnagorik.com/fonts/kalpurush-webfont.woff') format('woff');
+             url('https://dnagorik.com/fonts/kalpurush.ttf') format('ttf');
         font-display: swap;
     }
 
