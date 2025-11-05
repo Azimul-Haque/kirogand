@@ -105,7 +105,7 @@
                                       <strong>৪: </strong> <a href="{{ route('office.login') }}">লগইন</a> করে আমাদের সমস্ত সনদ সেবাগুলো ব্যবহার করুন।
                                   </li>
                                   <li class="list-group-item align-items-start small">
-                                      <strong>৫: </strong> ফি পরিশোধ ও ট্র্যাকিং নম্বর সংগ্রহ।
+                                      <strong>৫: </strong> মাসিক/ছয় মাসের/এক বছরের প্যাকেজ প্রয়োজন হতে পারে।
                                   </li>
                               </ol>
                               <a href="/citizen-registration" class="btn btn-sm btn-primary rounded-pill mt-3 align-self-start"><i class="fas fa-hand-point-right me-2"></i> আবেদন শুরু করুন</a>
