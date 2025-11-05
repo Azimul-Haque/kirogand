@@ -79,7 +79,7 @@
     /* যদি আপনি কোনো নির্দিষ্ট অংশে ভিন্ন ফন্ট ব্যবহার করতে চান */
     h1, h2 {
         font-family: 'kalpurush', sans-serif;
-        font-weight: 300;
+        font-weight: 700;
     }
     
     .section-gap {
