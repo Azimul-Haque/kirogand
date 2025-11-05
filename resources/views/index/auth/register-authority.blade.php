@@ -316,7 +316,7 @@
                       <h6 class="fw-bold text-darker mb-2">আবশ্যিক তথ্যাদি:</h6>
                       <ul class="list-unstyled small">
                           <li class="mb-1"><i class="fas fa-check-circle me-2 text-success"></i> <span class="required-asterisk">(*)</span> চিহ্নিত ক্ষেত্রগুলি পূরণ করা বাধ্যতামূলক।</li>
-                          <li class="mb-1"><i class="fas fa-check-circle me-2 text-success"></i> আপনার সঠিক ও সম্পূর্ণ ১১ ডিজিটের মোবাইল নম্বর পূরণ করুন।</li>
+                          <li class="mb-1"><i class="fas fa-check-circle me-2 text-success"></i> আপনার সঠিক ও সম্পূর্ণ ১১ ডিজিটের ইংরেজি মোবাইল নম্বর পূরণ করুন।</li>
                           <li class="mb-1"><i class="fas fa-check-circle me-2 text-success"></i> অনুগ্রহ করে সঠিক নাম্বার প্রদান করুন, কারণ এটি অ্যাকাউন্টের জন্য ব্যবহার হবে।</li>
                       </ul>
                   </div>
