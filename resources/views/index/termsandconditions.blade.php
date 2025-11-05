@@ -7,7 +7,7 @@
 
 @section('content')
 
-<section style="padding-top: 150px; padding-bottom: 50px; background-color: var(--light-3);">
+<section class="service-section section-gap">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-12">
