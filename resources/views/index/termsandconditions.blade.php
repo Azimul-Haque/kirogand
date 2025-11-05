@@ -2,7 +2,38 @@
 @section('title') ডিজিটাল নাগরিক - ব্যবহারের শর্তাবলি @endsection
 
 @section('third_party_stylesheets')
-
+	<style>
+		/* Language Toggle Styles */
+    .lang-toggle-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+    }
+    .language-toggle {
+        display: flex;
+        background-color: white;
+        border-radius: 50px;
+        padding: 4px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .toggle-button {
+        border: none;
+        padding: 8px 15px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        background-color: transparent;
+        color: #6c757d;
+        min-width: 80px;
+    }
+    .toggle-button.active {
+        background-color: var(--primary-color);
+        color: var(--active-toggle-color);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+	</style>
 @endsection
 
 @section('content')
