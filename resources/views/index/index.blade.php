@@ -109,7 +109,7 @@
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="1">
                   <a href="{{ route('dashboard.certificates.create', 'heir-certificate') }}" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
-                          <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: var(--primary-color); width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-users"></i></div>
+                          <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: var(--primary-color); width: 70px; height: 70px; border-radius: 50%;"><i class="fas fa-users"></i></div>
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">ওয়ারিশ সনদ</h3>
                       </div>
                   </a>
