@@ -105,7 +105,7 @@
 
                         <div class="col-6">
                             <!-- BS5 change: btn-block replaced with w-100 -->
-                            <button type="submit" class="btn btn-primary w-100">লগইন করুন</button>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">লগইন করুন</button>
                         </div>
 
                     </div>
