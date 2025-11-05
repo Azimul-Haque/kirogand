@@ -48,7 +48,7 @@
 
       <div class="row justify-content-center g-4">
           
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-6 col-md-6">
               <div class="card card p-4 p-md-5 shadow-lg rounded-3">
                 <p class="text-center lead  text-muted">ডি-নাগরিক-এ কর্তৃপক্ষ (ইউনিয়ন/পৌরসভা) লগইন</p>
                 <form method="post" action="{{ url('/login') }}">
