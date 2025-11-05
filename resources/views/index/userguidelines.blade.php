@@ -198,7 +198,7 @@
                       </div>
 
                       <a href="#" class="text-decoration-none d-block video-guide-card">
-                          <h5 class="fw-bold text-info mb-2">২. সনদ যাচাই করুন</h5>
+                          <h5 class="fw-bold text-info mb-2">২. সনদ যাচাই প্রক্রিয়া (ভিডিও)</h5>
                           <div class="ratio ratio-16x9 rounded-3 overflow-hidden" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);">
                               <iframe 
                                   src="https://www.youtube.com/embed/D0UnqGm_miA" 
