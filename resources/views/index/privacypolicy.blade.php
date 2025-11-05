@@ -57,29 +57,28 @@
 
 <section class="service-section section-gap">
 	<div class="container policy-card rounded-4 bg-white">
-	        <div class="p-2 p-md-2">
-	            
-	            <!-- Language Toggle Button (Pill Style) -->
-	            <div class="d-flex justify-content-center mb-5 pt-3">
-	                <div class="toggle-group-bg">
-	                    <div class="btn-group" role="group">
-	                        <button id="lang-bn" class="lang-toggle-btn active" data-lang="bn">
-	                            বাংলা
-	                        </button>
-	                        <button id="lang-en" class="lang-toggle-btn" data-lang="en">
-	                            English
-	                        </button>
-	                    </div>
-	                </div>
-	            </div>
+        <div class="p-2 p-md-2">
+            <!-- Language Toggle Button (Pill Style) -->
+            <div class="d-flex justify-content-center mb-5 pt-3">
+                <div class="toggle-group-bg">
+                    <div class="btn-group" role="group">
+                        <button id="lang-bn" class="lang-toggle-btn active" data-lang="bn">
+                            বাংলা
+                        </button>
+                        <button id="lang-en" class="lang-toggle-btn" data-lang="en">
+                            English
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-	            <!-- Content Area -->
-	            <div id="policy-content">
-	                <!-- Content will be inserted here by JavaScript -->
-	            </div>
-	        
-	        </div>
-	    </div>
+            <!-- Content Area -->
+            <div id="policy-content">
+                <!-- Content will be inserted here by JavaScript -->
+            </div>
+        
+        </div>
+    </div>
 </section>
     
 @endsection
