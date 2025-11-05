@@ -120,7 +120,7 @@
                               <ul class="list-unstyled small">
                                   <li class="mb-1"><i class="fas fa-arrow-right me-2 text-primary"></i> <a href="{{ route('index.verify-certificate') }}" class="fw-bold">সনদ যাচাই</a> পেজে প্রবেশ।</li>
                                   <li class="mb-1"><i class="fas fa-arrow-right me-2 text-primary"></i> সনদে উল্লেখিত <span class="fw-bold">ডিজিটাল সনদ নম্বরটি</span> ইনপুট করা।</li>
-                                  <li class="mb-1"><i class="fas fa-arrow-right me-2 text-primary"></i> নিরাপত্তা কোড (ক্যাপচা) সঠিকভাবে পূরণ করা।</li>
+                                  <li class="mb-1"><i class="fas fa-arrow-right me-2 text-primary"></i> সনদ যাচাই করুন বাটনে ক্লিক করুন</li>
                                   <li class="mb-1"><i class="fas fa-arrow-right me-2 text-primary"></i> যাচাই ফলাফল স্ক্রিনে প্রদর্শন।</li>
                               </ul>
                               <a href="certificate_verify.html" class="btn btn-sm btn-info text-white rounded-pill mt-3 align-self-start"><i class="fas fa-search me-2"></i> সনদ যাচাই করুন</a>
