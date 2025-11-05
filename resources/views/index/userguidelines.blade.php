@@ -123,7 +123,7 @@
                                   <li class="mb-1"><i class="fas fa-arrow-right me-2 text-primary"></i> সনদ যাচাই করুন বাটনে ক্লিক করুন</li>
                                   <li class="mb-1"><i class="fas fa-arrow-right me-2 text-primary"></i> যাচাই ফলাফল স্ক্রিনে প্রদর্শন।</li>
                               </ul>
-                              <a href="certificate_verify.html" class="btn btn-sm btn-info text-white rounded-pill mt-3 align-self-start"><i class="fas fa-search me-2"></i> সনদ যাচাই করুন</a>
+                              <a href="{{ route('index.verify-certificate') }}" class="btn btn-sm btn-info text-white rounded-pill mt-3 align-self-start"><i class="fas fa-search me-2"></i> সনদ যাচাই করুন</a>
                           </div>
 
                           <!-- Section 3: আবেদনের অবস্থা জানা -->
