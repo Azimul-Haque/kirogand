@@ -3,6 +3,44 @@
 
 @section('third_party_stylesheets')
 	<style>
+		.header-section {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 30px 20px;
+        border-radius: .75rem .75rem 0 0;
+        position: relative;
+    }
+    .card-title {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .policy-card {
+        border-radius: .75rem;
+    }
+    .card-body h3, .card-body h4 {
+        color: #343a40;
+        font-weight: 600;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    .card-body h2 {
+        font-weight: 700;
+    }
+    .card-body h3 {
+        font-size: 1.4rem;
+    }
+    .card-body h4 {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+    }
+    .list-unstyled li:before {
+        content: "•";
+        color: var(--primary-color);
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
+    }
 		/* Language Toggle Styles */
     .lang-toggle-container {
         position: absolute;
