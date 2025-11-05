@@ -74,6 +74,7 @@
         line-height: 1.6;
         background-color: var(--white-bg);
         color: var(--darker-color);
+        color: #333;
     }
 
     /* যদি আপনি কোনো নির্দিষ্ট অংশে ভিন্ন ফন্ট ব্যবহার করতে চান */
