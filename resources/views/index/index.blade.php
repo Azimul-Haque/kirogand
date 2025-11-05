@@ -394,8 +394,8 @@
                       
                       <form action="certificate_verify.html" method="GET" class="row g-3">
                           <div class="col-md-7">
-                              <label for="certificateNumber" class="form-label fw-bold">সনদপত্রের নম্বর</label>
-                              <input type="text" class="form-control form-control-lg" id="certificateNumber" name="cert_id" placeholder="সনদপত্র নম্বরটি এখানে লিখুন" required>
+                              <label for="verificationInput" class="form-label fw-bold">সনদপত্রের নম্বর</label>
+                              <input type="text" class="form-control form-control-lg" id="verificationInput" name="cert_id" placeholder="সনদপত্র নম্বরটি এখানে লিখুন" required>
                           </div>
                           <div class="col-md-5 d-flex align-items-end">
                               <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold" id="verifyButton">
