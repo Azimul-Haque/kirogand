@@ -206,7 +206,7 @@
               </div>
 
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                  <a href="{{ route('dashboard.certificates.create', 'new-voter') }}" class="text-decoration-none text-dark d-block">
+                  <a href="#!" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: var(--light-primary-color); width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-money-bill-alt"></i></div> 
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">নতুন ভোটার প্রত্যয়ন</h3>
@@ -215,7 +215,7 @@
               </div>
 
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="5">
-                  <a href="{{ route('dashboard.certificates.create', 'financial-insolvency') }}" class="text-decoration-none text-dark d-block">
+                  <a href="#!" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: var(--primary-color); width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-frown"></i></div> 
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">আর্থিক অস্বচ্ছলতার প্রত্যয়ন</h3>
