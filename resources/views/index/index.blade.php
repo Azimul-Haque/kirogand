@@ -349,28 +349,28 @@
                       <!-- Stat Card 1 -->
                       <div class="col-6">
                           <div class="card p-2 rounded-3 text-center stats-card border-0 shadow-sm" style="background-color: #e3f2fd; border-bottom: 5px solid var(--primary-color);">
-                              <h3 class="display-6 fw-bolder text-primary mb-1">২</h3>
+                              <h3 class="display-6 fw-bolder text-primary mb-1">১</h3>
                               <p class="mb-0 text-uppercase fw-bold text-muted">সিটি কর্পোরেশন</p>
                           </div>
                       </div>
                       <!-- Stat Card 2 -->
                       <div class="col-6">
                           <div class="card p-2 rounded-3 text-center stats-card border-0 shadow-sm" style="background-color: #fff3e0; border-bottom: 5px solid #ff9800;">
-                              <h3 class="display-6 fw-bolder" style="color: #ff9800;">৯</h3>
+                              <h3 class="display-6 fw-bolder" style="color: #ff9800;">৪</h3>
                               <p class="mb-0 text-uppercase fw-bold text-muted">পৌরসভা আওতাধীন</p>
                           </div>
                       </div>
                       <!-- Stat Card 3 -->
                       <div class="col-6">
                           <div class="card p-2 rounded-3 text-center stats-card border-0 shadow-sm" style="background-color: #e8f5e9; border-bottom: 5px solid #4caf50;">
-                              <h3 class="display-6 fw-bolder" style="color: #4caf50;">২৭১৭ টি</h3>
+                              <h3 class="display-6 fw-bolder" style="color: #4caf50;">১৮ টি</h3>
                               <p class="mb-0 text-uppercase fw-bold text-muted">ইউনিয়ন আওতাধীন</p>
                           </div>
                       </div>
                       <!-- Stat Card 4 -->
                       <div class="col-6">
                           <div class="card p-2 rounded-3 text-center stats-card border-0 shadow-sm" style="background-color: #fce4ec; border-bottom: 5px solid #e91e63;">
-                              <h3 class="display-6 fw-bolder" style="color: #e91e63;">৮০০৯১ টি</h3>
+                              <h3 class="display-6 fw-bolder" style="color: #e91e63;">৩১৯ টি</h3>
                               <p class="mb-0 text-uppercase fw-bold text-muted">সেবা প্রদান</p>
                           </div>
                       </div>
@@ -398,7 +398,8 @@
                               <input type="text" class="form-control form-control-lg" id="certificateNumber" name="cert_id" placeholder="সনদপত্র নম্বরটি এখানে লিখুন" required>
                           </div>
                           <div class="col-md-5 d-flex align-items-end">
-                              <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold">
+                              <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold" id="verifyButton
+verifyButton">
                                   <i class="fas fa-search me-2"></i> যাচাই করুন
                               </button>
                           </div>
