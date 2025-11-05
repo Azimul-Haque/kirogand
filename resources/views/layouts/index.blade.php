@@ -343,7 +343,7 @@
                   <h5 class="fw-bold text-uppercase">জরুরী প্রয়োজনে</h5>
                   <ul class="list-unstyled mt-3">
                       <li><a href="tel:+8801737988070">হটলাইন: 01737988070</a></li>
-                      <li><a href="https://lgd.gov.bd/" target="_blank">নিকটস্থ থানা</a></li>
+                      <li><a href="https://lgd.gov.bd/" target="_blank">স্থানীয় সরকার বিভাগ</a></li>
                       <li><a href="/fire-service">ফায়ার সার্ভিস</a></li>
                       <li><a href="/disaster">দুর্যোগ সহায়তা</a></li>
                   </ul>
