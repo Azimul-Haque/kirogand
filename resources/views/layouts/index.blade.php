@@ -277,9 +277,9 @@
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item text-primary fw-bold" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-sign-out me-2"></i> লগআউট</a></li>
                     @else
-                      {{-- <li><a class="dropdown-item text-primary fw-bold" href="/citizen-login"><i class="fas fa-user me-2"></i> নাগরিক লগইন</a></li>
+                      {{-- <li><a class="dropdown-item text-info fw-bold" href="/citizen-login"><i class="fas fa-user me-2"></i> নাগরিক লগইন</a></li>
                       <li><hr class="dropdown-divider"></li> --}}
-                      <li><a class="dropdown-item text-info fw-bold" href="{{ route('office.login') }}"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a></li>
+                      <li><a class="dropdown-item text-primary fw-bold" href="{{ route('office.login') }}"><i class="fas fa-user-tie me-2"></i> প্রশাসনিক একাউন্ট</a></li>
                     @endif
                   </ul>
                   <form id="logout-form" action="/logout" method="POST" style="display: none;">
