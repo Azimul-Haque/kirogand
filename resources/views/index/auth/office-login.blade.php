@@ -41,7 +41,7 @@
   <section id="services" class="service-section section-gap">
     <div class="container">
       <!-- Title for Registration Page -->
-      <h1 class="text-center display-6 fw-bold mb-6" style="color: var(--darker-color);">
+      <h1 class="text-center display-6 fw-bold mb-3" style="color: var(--darker-color);">
           <i class="fas fa-user-plus me-3 text-info"></i> কর্তৃপক্ষ লগইন
       </h1>
       
@@ -55,7 +55,7 @@
                     @csrf
 
                     <!-- Mobile Number Input Group -->
-                    <div class="input-group mb-6">
+                    <div class="input-group mb-3">
                         <input type="number"
                                 name="mobile"
                                 value="{{ old('mobile') }}"
@@ -74,7 +74,7 @@
                     </div>
 
                     <!-- Password Input Group -->
-                    <div class="input-group mb-6">
+                    <div class="input-group mb-3">
                         <input type="password"
                                 name="password"
                                 placeholder="পাসওয়ার্ড"
