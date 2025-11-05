@@ -63,8 +63,8 @@
         font-family: 'kalpurush2'; 
         font-weight: 400;
         font-style: normal;
-        src: url('public/fonts/kalpurush-webfont.woff2') format('woff2'),
-             url('public/fonts/kalpurush-webfont.woff') format('woff');
+        src: url('fonts/kalpurush-webfont.woff2') format('woff2'),
+             url('fonts/kalpurush-webfont.woff') format('woff');
         font-display: swap;
     }
 
