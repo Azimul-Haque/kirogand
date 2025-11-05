@@ -198,7 +198,7 @@
 	            
 	            // Generate HTML using Bootstrap classes
 	            let htmlContent = `
-	                <h3 class="display-4 fw-bolder text-center mb-1" style="color: var(--bs-primary);">${data.title}</h3>
+	                <h3 class="display-3 fw-bolder text-center mb-1" style="color: var(--bs-primary);">${data.title}</h3>
 	                <p class="text-secondary mb-5 text-center small">${data.date}</p>
 	                
 	                <p class="mb-5 lead">${data.intro}</p>
