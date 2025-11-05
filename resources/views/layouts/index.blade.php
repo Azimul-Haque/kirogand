@@ -356,6 +356,7 @@
                       <li><a href="{{ route('index.verify-certificate') }}">সনদ যাচাই</a></li>
                       <li><a href="{{ route('index.notices') }}">নোটিশ বোর্ড</a></li>
                       <li><a href="{{ route('blogs.index') }}">ব্লগ</a></li>
+                      <li><a href="/terms">ব্যবহারের শর্তাবলি</a></li>
                   </ul>
               </div>
               
