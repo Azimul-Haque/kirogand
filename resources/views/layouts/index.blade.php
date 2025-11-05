@@ -62,7 +62,7 @@
     
 
     body {
-        font-family: 'kalpurush', Arial, sans-serif;
+        font-family: 'kalpurushss', Arial, sans-serif;
         line-height: 1.6;
         background-color: var(--white-bg);
         color: var(--darker-color);
