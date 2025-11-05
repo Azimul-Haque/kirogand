@@ -50,7 +50,7 @@
           
           <div class="col-md-6">
               <div class="card card p-4 p-md-5 shadow-lg rounded-3">
-                <p class="text-center lead  text-muted">ডি-নাগরিক-এ কর্তৃপক্ষ (ইউনিয়ন/পৌরসভা) লগইন</p>
+                <p class="text-center lead text-muted">ডি-নাগরিক-এ কর্তৃপক্ষ (ইউনিয়ন/পৌরসভা) লগইন</p>
                 <form method="post" action="{{ url('/login') }}">
                     @csrf
 
