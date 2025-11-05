@@ -31,7 +31,7 @@
                     <div class="card-body p-5">
                         <h3 class="h4 fw-bold mb-4" style="color: var(--darker-color);">সহায়তা ডেস্কের ঠিকানা</h3>
                         <p class="mb-2"><i class="fas fa-map-marker-alt me-2" style="color: var(--light-primary-color);"></i> <strong>ঠিকানা:</strong> ডিজিটাল প্রত্যয়ন শাখা, স্থানীয় সরকার বিভাগ, ঢাকা, বাংলাদেশ।</p>
-                        <p class="mb-2"><i class="fas fa-phone me-2" style="color: var(--light-primary-color);"></i> <strong>ফোন:</strong> +৮৮০ ৯৬৭৮-০০০০০০ (কার্যকালীন)</p>
+                        <p class="mb-2"><i class="fas fa-phone me-2" style="color: var(--light-primary-color);"></i> <strong>ফোন:</strong> +8801737988070 (কার্যকালীন)</p>
                         <p class="mb-4"><i class="fas fa-envelope me-2" style="color: var(--light-primary-color);"></i> <strong>ইমেইল:</strong> support@esonod.gov.bd</p>
                         
                         <hr>
