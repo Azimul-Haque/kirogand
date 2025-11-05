@@ -60,7 +60,7 @@
     }
 
     @font-face {
-        font-family: 'kalpurush'; 
+        font-family: 'kalpurushs'; 
         font-weight: 400;
         font-style: normal;
         src: url('{{ asset('fonts/') }}') format('woff2'),
@@ -70,7 +70,7 @@
 
     body {
         /* Google Fonts থেকে পাওয়া ফন্ট-ফ্যামিলি ব্যবহার করুন, সাথে একটি ফলব্যাক দিন */
-        font-family: 'kalpurush', sans-serif;
+        font-family: 'kalpurushs', sans-serif;
         line-height: 1.6;
         background-color: var(--white-bg);
         color: var(--darker-color);
@@ -79,7 +79,7 @@
 
     /* যদি আপনি কোনো নির্দিষ্ট অংশে ভিন্ন ফন্ট ব্যবহার করতে চান */
     h1, h2 {
-        font-family: 'kalpurush', sans-serif;
+        font-family: 'kalpurushs', sans-serif;
         font-weight: 700; /* বোল্ড স্টাইল ব্যবহার */
     }
     
