@@ -102,7 +102,7 @@
                                       <strong>৩: </strong> আমাদের প্রতিনিধি কর্তৃক একাউন্ট ভেরিফিকেশন
                                   </li>
                                   <li class="list-group-item align-items-start small">
-                                      <strong>৪: </strong> <a href="{{ route('office.login') }}">লগইন</a> করে 
+                                      <strong>৪: </strong> <a href="{{ route('office.login') }}">লগইন</a> করে আমাদের সমস্ত সনদ সেবাগুলো ব্যবহার করুন।
                                   </li>
                                   <li class="list-group-item align-items-start small">
                                       <strong>৫: </strong> ফি পরিশোধ ও ট্র্যাকিং নম্বর সংগ্রহ।
