@@ -98,7 +98,7 @@
               <div class="col-md-6">
                    <div class="input-group input-group-lg shadow-sm rounded-pill">
                       <span class="input-group-text bg-white border-end-0 rounded-start-pill"><i class="fas fa-search text-muted"></i></span>
-                      <input type="text" id="serviceSearch" class="form-control border-start-0 rounded-end-pill" placeholder="সেবা অনুসন্ধান করুন (যেমন: জন্ম)">
+                      <input type="text" id="serviceSearch" class="form-control border-start-0 rounded-end-pill" placeholder="সেবা অনুসন্ধান করুন (যেমন: ওয়ারিশ)">
                   </div>
               </div>
           </div>
