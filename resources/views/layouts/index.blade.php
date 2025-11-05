@@ -65,7 +65,7 @@
 
     @font-face {
         font-family: 'Tiro Bangla'; 
-        font-weight: 400;
+        font-weight: 500;
         font-style: normal;
         /*src: url('https://dnagorik.com/fonts/kalpurush-webfont.woff2') format('woff2'),
              url('https://dnagorik.com/fonts/kalpurush-webfont.woff') format('woff'); */
