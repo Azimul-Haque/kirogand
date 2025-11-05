@@ -3,74 +3,53 @@
 
 @section('third_party_stylesheets')
 	<style>
-		.header-section {
-        background-color: var(--primary-color);
-        color: white;
-        padding: 30px 20px;
-        border-radius: .75rem .75rem 0 0;
-        position: relative;
-    }
-    .card-title {
-        font-size: 2rem;
-        font-weight: 700;
-    }
-    .policy-card {
-        border-radius: .75rem;
-    }
-    .card-body h3, .card-body h4 {
-        color: #343a40;
-        font-weight: 600;
-        margin-top: 25px;
-        margin-bottom: 15px;
-    }
-    .card-body h2 {
-        font-weight: 700;
-    }
-    .card-body h3 {
-        font-size: 1.4rem;
-    }
-    .card-body h4 {
-        font-size: 1.2rem;
-        color: var(--primary-color);
-    }
-    .list-unstyled li:before {
-        content: "•";
-        color: var(--primary-color);
-        font-weight: bold;
-        display: inline-block; 
-        width: 1em;
-        margin-left: -1em;
-    }
-		/* Language Toggle Styles */
-    .lang-toggle-container {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 10;
-    }
-    .language-toggle {
-        display: flex;
-        background-color: white;
-        border-radius: 50px;
-        padding: 4px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .toggle-button {
-        border: none;
-        padding: 8px 15px;
-        border-radius: 50px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        background-color: transparent;
-        color: #6c757d;
-        min-width: 80px;
-    }
-    .toggle-button.active {
-        background-color: var(--primary-color);
-        color: var(--active-toggle-color);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+		.policy-card {
+            max-width: 900px;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.1); /* Subtle blue shadow */
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .toggle-group-bg {
+            background-color: #e5e7eb; /* Light gray background for the toggle pill */
+            border-radius: 50rem;
+            padding: 0.25rem;
+            display: inline-flex;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .lang-toggle-btn {
+            border-radius: 50rem !important;
+            transition: all 0.25s ease-in-out;
+            font-weight: 600;
+            border: none;
+            color: #4b5563; /* Medium gray for inactive state */
+            padding: 0.5rem 1.25rem;
+            white-space: nowrap; /* Prevent wrapping on small screens */
+        }
+        .lang-toggle-btn.active {
+            background-color: var(--bs-primary) !important;
+            color: white !important;
+            box-shadow: 0 2px 5px rgba(30, 64, 175, 0.3);
+            transform: scale(1.02);
+        }
+        .section-title {
+            color: var(--bs-primary);
+            border-bottom: 2px solid #bfdbfe; /* Lighter primary color border */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-item {
+            transition: all 0.3s;
+            border-left: 5px solid var(--bs-primary);
+        }
+        .contact-item:hover {
+            background-color: #eef2ff; /* Very light blue on hover */
+            transform: translateY(-2px);
+        }
+        .policy-list li {
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+        }
 	</style>
 @endsection
 
