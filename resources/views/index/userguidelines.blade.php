@@ -88,7 +88,7 @@
                       <div id="manualSections" class="d-grid gap-4">
                           
                           <!-- Section 1: সনদ আবেদন প্রক্রিয়া -->
-                          <div class="card p-4 manual-card bg-white">
+                          {{-- <div class="card p-4 manual-card bg-white">
                               <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-file-alt"></i></span> ১. ডিজিটাল সনদ আবেদনের প্রক্রিয়া</h3>
                               <p>নাগরিক সনদ, জন্ম সনদ, ওয়ারিশ সনদ সহ যেকোনো প্রত্যয়নের জন্য আবেদন করতে নিম্নলিখিত ধাপগুলি অনুসরণ করুন:</p>
                               
@@ -110,7 +110,7 @@
                                   </li>
                               </ol>
                               <a href="/citizen-registration" class="btn btn-sm btn-primary rounded-pill mt-3 align-self-start"><i class="fas fa-hand-point-right me-2"></i> আবেদন শুরু করুন</a>
-                          </div>
+                          </div> --}}
                           
                           <!-- Section 2: সনদ যাচাই প্রক্রিয়া -->
                           <div class="card p-4 manual-card bg-white" style="border-left-color: var(--primary-color);">
