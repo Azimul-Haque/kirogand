@@ -392,17 +392,15 @@
                       </h2>
                       <p class="text-center text-muted mb-4">সনদপত্রের সত্যতা যাচাই করতে সনদ নম্বর ও QR কোড ব্যবহার করুন।</p>
                       
-                      <form action="certificate_verify.html" method="GET" class="row g-3">
-                          <div class="col-md-7">
-                              <label for="verificationInput" class="form-label fw-bold">সনদপত্রের নম্বর</label>
-                              <input type="text" class="form-control form-control-lg" id="verificationInput" name="cert_id" placeholder="সনদপত্র নম্বরটি এখানে লিখুন" required>
-                          </div>
-                          <div class="col-md-5 d-flex align-items-end">
-                              <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold" id="verifyButton">
-                                  <i class="fas fa-search me-2"></i> যাচাই করুন
-                              </button>
-                          </div>
-                      </form>
+                      <div class="col-md-7">
+                          <label for="verificationInput" class="form-label fw-bold">সনদপত্রের নম্বর</label>
+                          <input type="text" class="form-control form-control-lg" id="verificationInput" name="cert_id" placeholder="সনদপত্র নম্বরটি এখানে লিখুন" required>
+                      </div>
+                      <div class="col-md-5 d-flex align-items-end">
+                          <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold" id="verifyButton">
+                              <i class="fas fa-search me-2"></i> যাচাই করুন
+                          </button>
+                      </div>
                       <p class="text-center small mt-3 mb-0">বিস্তারিত যাচাইয়ের জন্য <a href="{{ route('index.verify-certificate') }}" class="text-info fw-bold">সনদ যাচাই পেজে</a> যান।</p>
                   </div>
               </div>
