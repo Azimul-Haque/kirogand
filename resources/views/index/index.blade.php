@@ -495,6 +495,20 @@
           });
       });
   </script>
+  <script type="text/javascript">
+    $(document).on('click', '#verifyButton', function() {
+      if($('#verificationInput').val() != '') {
+        var urltocall = '{{ url('/verify') }}' +  '/' + $('#verificationInput').val();
+        location.href= urltocall;
+      } else {
+        $('#verificationInput').css({ "border": '#FF0000 2px solid'});
+        Toast.fire({
+            icon: 'warning',
+            title: 'সনদ আইডি লিখে যাচাই করুন!'
+        })
+      }
+    });
+  </script>
 
 @endsection
     
