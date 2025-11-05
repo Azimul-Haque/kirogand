@@ -197,7 +197,6 @@
                           </div>
                       </div>
 
-                      <!-- Video Guide 2: Certificate Application -->
                       <a href="#" class="text-decoration-none d-block video-guide-card">
                           <h5 class="fw-bold text-info mb-2">২. জন্ম সনদ ও ওয়ারিশ সনদের জন্য অনলাইন আবেদন</h5>
                           <div class="ratio ratio-16x9 rounded-3 overflow-hidden" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);">
