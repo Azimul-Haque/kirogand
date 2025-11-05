@@ -75,8 +75,6 @@
         background-color: var(--white-bg);
         color: var(--darker-color);
     }
-
-  
     
     .section-gap {
         padding-top: 5rem;
