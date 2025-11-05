@@ -38,6 +38,11 @@
   <!--====== Favicon Icon ======-->
   <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/svg" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Khand:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@100..900&display=swap" rel="stylesheet">
+
+
   <!-- Load Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hGk+ALEwIH" crossorigin="anonymous">
     <!-- Load Font Awesome for Icons -->
