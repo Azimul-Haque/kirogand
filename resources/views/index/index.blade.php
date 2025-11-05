@@ -49,7 +49,6 @@
                       {{-- <a href="/citizen-registration" class="btn btn-primary btn-lg rounded-pill me-md-3 mb-2 mb-md-0 shadow-lg text-uppercase">
                           <i class="fas fa-file-alt me-2"></i> সনদ আবেদন করুন
                       </a> --}}
-                      <!-- Button Rename: আমাদের সকল সেবা দেখুন -> সনদ যাচাই করুন -->
                       <a href="{{ route('index.verify-certificate') }}" class="btn btn-outline-primary btn-lg rounded-pill shadow" style="">
                           সনদ যাচাই করুন <i class="fas fa-check-double me-2"></i>
                       </a>
