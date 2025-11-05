@@ -354,7 +354,7 @@
                   <ul class="list-unstyled mt-3">
                       <li><a href="{{ route('index.services') }}">সেবা তালিকা</a></li>
                       <li><a href="{{ route('index.verify-certificate') }}">সনদ যাচাই</a></li>
-                      <li><a href="#notices">নোটিশ বোর্ড</a></li>
+                      <li><a href="{{ route('index.notices') }}">নোটিশ বোর্ড</a></li>
                       <li><a href="{{ route('blogs.index') }}">ব্লগ</a></li>
                       <li><a href="/terms">শর্তাবলী</a></li>
                   </ul>
