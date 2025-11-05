@@ -125,7 +125,7 @@
               </div>
 
               <div class="col-lg-2 col-md-4 col-sm-6 col-6 service-box-container" data-service-id="3">
-                  <a href="{{ route('dashboard.certificates.create', 'permanent-resident') }}" class="text-decoration-none text-dark d-block">
+                  <a href="#!" class="text-decoration-none text-dark d-block">
                       <div class="service-box">
                           <div class="icon-circle d-flex justify-content-center align-items-center" style="background-color: #795548; width: 60px; height: 60px; border-radius: 50%;"><i class="fas fa-house-user"></i></div> 
                           <h3 class="h5 fw-bolder" style="color: var(--darker-color);">স্থায়ী বাসিন্দা সনদ</h3>
