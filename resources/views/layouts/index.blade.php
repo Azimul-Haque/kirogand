@@ -60,7 +60,7 @@
     }
 
     @font-face {
-        font-family: 'kalpurush'; 
+        font-family: 'kalpurush2'; 
         font-weight: 400;
         font-style: normal;
         src: url('{{ asset("fonts/kalpurush-webfont.woff2") }}') format('woff2'),
@@ -69,7 +69,7 @@
     }
 
     body {
-        font-family: 'kalpurush', Arial, sans-serif;
+        font-family: 'kalpurush2', Arial, sans-serif;
         line-height: 1.6;
         background-color: var(--white-bg);
         color: var(--darker-color);
