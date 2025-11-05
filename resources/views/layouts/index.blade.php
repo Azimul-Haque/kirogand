@@ -345,7 +345,7 @@
                       <li><a href="tel:+8801737988070">হটলাইন: 01737988070</a></li>
                       <li><a href="https://lgd.gov.bd/" target="_blank">স্থানীয় সরকার বিভাগ</a></li>
                       <li><a href="https://bangladesh.gov.bd/index.php" target="_blank">বাংলাদেশ পোর্টাল</a></li>
-                      <li><a href="https://bcsexamaid.com/" target="_blank">দুর্যোগ সহায়তা</a></li>
+                      <li><a href="https://bcsexamaid.com/" target="_blank">বিসিএস পরীক্ষা</a></li>
                   </ul>
               </div>
               
