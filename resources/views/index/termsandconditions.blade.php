@@ -40,7 +40,7 @@
 
 <section class="service-section section-gap">
   <div class="container">
-    <div class="card shadow-lg policy-card border-0">
+    <div class="card shadow-lg policy-card border-0 p-4">
             
             <div class="header-section text-center">
                 <!-- Language Toggle Button -->
