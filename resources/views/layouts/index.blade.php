@@ -59,14 +59,7 @@
         --white-bg: #ffffff; /* Explicit White */
     }
 
-    @font-face {
-        font-family: 'kalpurush'; 
-        font-weight: 400;
-        font-style: normal;
-        src: url('{{ asset('fonts/kalpurush-webfont.woff2') }}') format('woff2'),
-             url('{{ asset('fonts/kalpurush-webfont.woff') }}') format('woff');
-        font-display: swap;
-    }
+    
 
     body {
         /* Google Fonts থেকে পাওয়া ফন্ট-ফ্যামিলি ব্যবহার করুন, সাথে একটি ফলব্যাক দিন */
