@@ -372,7 +372,7 @@
           </div>
           <hr class="my-4 border-light">
           <div class="text-center small">
-              &copy; {{ date('Y') }}  সকল স্বত্ব সংরক্ষিত - ডি-নাগরিক, ইনোভা টেকনোলজি বাংলাদেশ
+              &copy; {{ date('Y') }}  সকল স্বত্ব সংরক্ষিত | ডি-নাগরিক, ইনোভা টেকনোলজি বাংলাদেশ
           </div>
       </div>
   </footer>
