@@ -64,7 +64,7 @@
         font-weight: 400;
         font-style: normal;
         src: url('../fonts/kalpurush-webfont.woff2') format('woff2'),
-             url('fonts/kalpurush-webfont.woff') format('woff');
+             url('../fonts/kalpurush-webfont.woff') format('woff');
         font-display: swap;
     }
 
