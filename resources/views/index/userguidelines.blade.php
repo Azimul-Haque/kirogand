@@ -184,7 +184,7 @@
                       
                       <!-- Video Guide 1: Citizen Registration -->
                       <div class="video-guide-card">
-                          <h5 class="fw-bold text-primary mb-2">১. নতুন নাগরিক একাউন্ট তৈরি ও নিবন্ধন প্রক্রিয়া (ভিডিও)</h5>
+                          <h5 class="fw-bold text-primary mb-2">১. কর্তৃপক্ষ/প্রশাসনিক একাউন্ট নিবন্ধন প্রক্রিয়া (ভিডিও)</h5>
                           <!-- YouTube Embed Code -->
                           <div class="ratio ratio-16x9 rounded-3 overflow-hidden" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);">
                               <iframe 
