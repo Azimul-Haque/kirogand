@@ -366,7 +366,7 @@
                       <li><a href="{{ route('index.contact') }}">যোগাযোগ</a></li>
                       <li><a href="/faq">প্রায়শই জিজ্ঞাসিত প্রশ্ন (FAQ)</a></li>
                       <li><a href="{{ route('index.user-guidelines') }}">ব্যবহারকারী নির্দেশিকা</a></li>
-                      <li><a href="{{ route('index.user-guidelines') }}">গোপনীয়তা নীতি</a></li>
+                      <li><a href="{{ route('index.privacy-policy') }}">গোপনীয়তা নীতি</a></li>
                   </ul>
               </div>
           </div>
