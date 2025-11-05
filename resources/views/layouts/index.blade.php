@@ -207,9 +207,12 @@
   <!--====== NAVBAR NINE PART START ======-->
 
   <!-- Main Header Container -->
-  <header class="navbar-custom ">
+  <header class="navbar-custom">
       <!-- Marquee Text (Hidden on Mobile) - COMMENTED OUT AS PER REQUEST -->
       <!-- <div class="top-bar d-none d-lg-block">
+
+        sticky-top
+
           <div class="container">
               <marquee class="small text-darker-color fw-bold">
                   <i class="fas fa-certificate text-danger me-2"></i> আপনার ডিজিটাল সনদপত্র আবেদনের জন্য জাতীয় পরিচয়পত্র নম্বর ও জন্ম তারিখ ব্যবহার করুন। সেবাসমূহ এখন আরও দ্রুত এবং নির্ভরযোগ্য।
