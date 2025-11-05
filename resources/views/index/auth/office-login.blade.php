@@ -55,7 +55,7 @@
                     @csrf
 
                     <!-- Mobile Number Input Group -->
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-4">
                         <input type="number"
                                 name="mobile"
                                 value="{{ old('mobile') }}"
