@@ -5,7 +5,7 @@
 	<style>
 		.policy-card {
             max-width: 900px;
-            margin-top: 4rem;
+            margin-top: 2rem;
             margin-bottom: 4rem;
             box-shadow: 0 10px 25px rgba(30, 64, 175, 0.1); /* Subtle blue shadow */
             border: 1px solid rgba(0, 0, 0, 0.05);
