@@ -88,7 +88,7 @@
                       <div id="manualSections" class="d-grid gap-4">
                           
                           <div class="card p-4 manual-card bg-white">
-                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-file-alt"></i></span> ১. ডিজিটাল সনদ আবেদনের প্রক্রিয়া</h3>
+                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-file-alt"></i></span> ডিজিটাল সনদ আবেদনের প্রক্রিয়া</h3>
                               <p>নাগরিক সনদ, জন্ম সনদ, ওয়ারিশ সনদ সহ যেকোনো প্রত্যয়নের জন্য আবেদন করতে নিম্নলিখিত ধাপগুলি অনুসরণ করুন:</p>
                               
                               <ol class="list-group ">
@@ -112,7 +112,7 @@
                           </div>
 
                           {{-- <div class="card p-4 manual-card bg-white">
-                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-file-alt"></i></span> ১. ডিজিটাল সনদ আবেদনের প্রক্রিয়া</h3>
+                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-file-alt"></i></span> ডিজিটাল সনদ আবেদনের প্রক্রিয়া</h3>
                               <p>নাগরিক সনদ, জন্ম সনদ, ওয়ারিশ সনদ সহ যেকোনো প্রত্যয়নের জন্য আবেদন করতে নিম্নলিখিত ধাপগুলি অনুসরণ করুন:</p>
                               
                               <ol class="list-group ">
@@ -137,7 +137,7 @@
                           
                           <!-- Section 2: সনদ যাচাই প্রক্রিয়া -->
                           <div class="card p-4 manual-card bg-white" style="border-left-color: var(--primary-color);">
-                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-check-circle"></i></span> ২. সনদ যাচাই (Verification) প্রক্রিয়া</h3>
+                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-check-circle"></i></span> সনদ যাচাই (Verification) প্রক্রিয়া</h3>
                               <p>ইস্যু হওয়া কোনো ডিজিটাল সনদপত্রের বৈধতা যাচাই করতে এই ধাপগুলি অনুসরণ করুন:</p>
                               
                               <ul class="list-unstyled small">
@@ -151,7 +151,7 @@
 
                           <!-- Section 3: আবেদনের অবস্থা জানা -->
                           {{-- <div class="card p-4 manual-card bg-white" style="border-left-color: var(--darker-color);">
-                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-tasks"></i></span> ৩. আবেদনের অবস্থা জানা</h3>
+                              <h3 class="h5 fw-bold mb-3 manual-heading"><span class="step-icon me-2"><i class="fas fa-tasks"></i></span> আবেদনের অবস্থা জানা</h3>
                               <p>আবেদন করার সময় প্রাপ্ত <span class="fw-bold text-primary">ট্র্যাকিং নম্বরটি</span> ব্যবহার করে আপনার আবেদনের বর্তমান স্ট্যাটাস জানুন:</p>
                               
                               <ul class="list-unstyled small">
