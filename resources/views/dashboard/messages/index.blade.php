@@ -43,7 +43,7 @@
                       @if($message->status == 1)
                         <i class="fas fa-calendar-check"></i>
                       @endif
-                      {{-- {{ $message->user->name }} --}}
+                      {{ $message->name }}
                     </td>
                     <td>{{ $message->mobile }}</td>
                     <td>{{ $message->payments->count() }} বার কিনেছেন</td>
