@@ -21,6 +21,7 @@ Route::get('/certificate-status', 'IndexController@getApplicationStatus')->name(
 Route::get('/notices', 'IndexController@getNotices')->name('index.notices');
 Route::get('/contact', 'IndexController@getContact')->name('index.contact');
 Route::get('/captcha', 'IndexController@generateCaptcha')->name('captcha.image');
+Route::get('/contactcaptcha', 'IndexController@generateCaptcha')->name('captcha.image');
 Route::get('/user-guidelines', 'IndexController@getUserGuidelines')->name('index.user-guidelines');
 
 
