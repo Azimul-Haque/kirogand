@@ -544,7 +544,7 @@ class IndexController extends Controller
         $image = imagecreatetruecolor($width, $height);
 
         // Define colors
-        $white = imagecolorallocate($image, 227, 242, 253);
+        $white = imagecolorallocate($image, 200, 242, 253);
         $black = imagecolorallocate($image, 0, 0, 0);
 
         // Fill the background with white
