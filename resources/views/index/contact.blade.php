@@ -38,9 +38,14 @@
                         
                         <form action="/contact-submit" method="POST">
                             <div class="row">
-                                <div class="mb-3">
-                                    <label for="contactName" class="form-label">আপনার নাম</label>
-                                    <input type="text" class="form-control rounded-pill" id="contactName" placeholder="নাম" required>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="contactName" class="form-label">আপনার নাম</label>
+                                        <input type="text" class="form-control rounded-pill" id="contactName" placeholder="নাম" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    
                                 </div>
                             </div>
                             <div class="mb-3">
