@@ -40,7 +40,7 @@
                           <button type="button" id="verifyButton" class="btn btn-primary btn-lg rounded-pill fw-bold text-uppercase shadow-sm">
                               <i class="fas fa-search me-2"></i> সনদ যাচাই করুন
                           </button>
-                          <a href="#" class="mt-3 text-center fw-bold text-decoration-none" data-bs-toggle="tooltip" title="সনদ নং খুঁজে না পেলে আবেদন আইডি ব্যবহার করুন।">সহায়তা প্রয়োজন?</a>
+                          <a href="{{ route('index.user-guidelines') }}" class="mt-3 text-center fw-bold text-decoration-none" data-bs-toggle="tooltip" title="সনদ নং খুঁজে না পেলে আবেদন আইডি ব্যবহার করুন।">সহায়তা প্রয়োজন?</a>
                       </div>
                   </div>
               </div>
