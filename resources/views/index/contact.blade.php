@@ -36,7 +36,7 @@
                         
                         <hr>
                         
-                        <form action="/contact-submit" method="POST">
+                        <form action="{{ route('store.message') }}" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
