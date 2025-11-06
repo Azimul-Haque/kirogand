@@ -46,14 +46,14 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="contactName" class="form-label">আপনার মোবাইল নম্বর</label>
-                                        <input type="text" class="form-control rounded-pill" id="contactName" placeholder="মোবাইল নম্বর" required>
+                                        <label for="mobile" class="form-label">আপনার মোবাইল নম্বর</label>
+                                        <input type="text" class="form-control rounded-pill" id="mobile" placeholder="মোবাইল নম্বর" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-4">
-                                <label for="contactMessage" class="form-label">বার্তার বিষয়বস্তু</label>
-                                <textarea class="form-control rounded-3" id="contactMessage" rows="4" placeholder="আপনার সমস্যাটি লিখুন..." required></textarea>
+                                <label for="message" class="form-label">বার্তার বিষয়বস্তু</label>
+                                <textarea class="form-control rounded-3" id="message" rows="4" placeholder="আপনার সমস্যাটি লিখুন..." required></textarea>
                             </div>
 
                             <div class="col-md-6">
