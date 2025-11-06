@@ -68,8 +68,9 @@ class CertificateController extends Controller
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
                 return redirect()->route('index.index');
             }
-            dd(isPackageExpired(Auth::user()->localOffice->package_expiry_date));
-            // if(Auth::user()->localOffice->)
+            if(isPackageExpired(Auth::user()->localOffice->package_expiry_date)) {
+                
+            }
         }
 
         return view('dashboard.certificates.create')->with('certificate_type', $certificate_type);
