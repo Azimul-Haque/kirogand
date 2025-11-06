@@ -501,7 +501,7 @@ class IndexController extends Controller
         $message->save();
         
         Session::flash('success', 'আপনার মেসেজের জন্য ধন্যবাদ। শীঘ্রই আমাদের একজন প্রতিনিধি আপনার সাথে যোগাযোগ করবেন।');
-        return redirect()->bacl();
+        return redirect()->back();
     }
 
     public function generateCaptcha()
