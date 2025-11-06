@@ -17,7 +17,7 @@ class CreateMessagesTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->nullable();
             $table->string('name');
-            $table->string('name');
+            $table->string('mobile');
             $table->string('message');
             $table->integer('status');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
