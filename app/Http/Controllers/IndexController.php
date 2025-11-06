@@ -20,6 +20,7 @@ use App\Union;
 use App\UserAuthority;
 use App\LocalOffice;
 use App\Certificate;
+use App\Message;
 
 use Carbon\Carbon;
 use DB;
