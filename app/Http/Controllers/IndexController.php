@@ -479,6 +479,25 @@ class IndexController extends Controller
         return view('index.contact');
     }
 
+    public function storeMessage(Request $request)
+    {
+        $this->validate($request,array(
+            'mobile'    =>   'required',
+            'message'    =>   'required',
+        ));
+
+        $user = User::where('mobile', $request->mobile)->first();
+
+        $message = new Message;
+        $message->user_id = $user->id;
+        $message->message = $request->message;
+        $message->save();
+        
+        return response()->json([
+            'success' => true
+        ]);
+    }
+
     public function generateCaptcha()
     {
         // Define image dimensions
