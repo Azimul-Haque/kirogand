@@ -326,7 +326,7 @@
                   <div class="card shadow-sm border-0 rounded-3 border-start border-primary border-4" style="border-left-color: var(--primary-color) !important;">
                       <div class="card-body p-4">
                           <h3 class="h4 card-title fw-bold" style="color: var(--primary-color);">নাগরিক প্যানেল</h3>
-                          <p class="card-text text-muted">আপনার সনদপত্র আবেদনের অবস্থা জানতে এবং নতুন আবেদন করতে প্রবেশ করুন।</p>
+                          <p class="card-text text-muted">আপনার সনদপত্র আবেদনের অবস্থা জানতে এবং নতুন আবেদন করতে প্রবেশ করুন। <span class="text-danger">শীঘ্রই আসছে!</span></p>
                           <a href="#!" class="btn btn-primary w-100 mb-2 rounded-pill"><i class="fas fa-sign-in-alt me-2"></i> নাগরিক লগইন</a>
                           <a href="#!" class="btn btn-link w-100 fw-bold" style="color: var(--primary-color);">নতুন নিবন্ধন করুন</a>
                       </div>
