@@ -534,6 +534,41 @@ class IndexController extends Controller
         return Response::make($imageData, 200, ['Content-Type' => 'image/png']);
     }
 
+    public function generateContactCaptcha()
+    {
+        // Define image dimensions
+        $width = 100;
+        $height = 30;
+
+        // Create a new image
+        $image = imagecreatetruecolor($width, $height);
+
+        // Define colors
+        $white = imagecolorallocate($image, 227, 242, 253);
+        $black = imagecolorallocate($image, 0, 0, 0);
+
+        // Fill the background with white
+        imagefilledrectangle($image, 0, 0, $width, $height, $white);
+
+        // Generate a random string for the CAPTCHA
+        $captchaText = substr(str_shuffle('ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'), 0, 6);
+
+        // Store the captcha in the session
+        Session::put('captcha', $captchaText);
+
+        // Draw the text on the image
+        imagestring($image, 5, 20, 7, $captchaText, $black);
+
+        // Capture the image output as a string
+        ob_start();
+        imagepng($image);
+        $imageData = ob_get_clean();
+        imagedestroy($image);
+
+        // Return the image data with the correct content type header
+        return Response::make($imageData, 200, ['Content-Type' => 'image/png']);
+    }
+
     // clear configs, routes and serve
     public function clear()
     {
