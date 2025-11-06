@@ -188,7 +188,7 @@
                           <!-- YouTube Embed Code -->
                           <div class="ratio ratio-16x9 rounded-3 overflow-hidden" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);">
                               <iframe 
-                                  src="https://www.youtube.com/watch?v=KIsT2ZNK8JQ" 
+                                  src="https://www.youtube.com/embed/KIsT2ZNK8JQ?si=uiUmopXuWAV1rSJ3" 
                                   title="ডি-নাগরিক (D-Nagorik) প্লাটফর্মে প্রশাসনিক একাউন্ট নিবন্ধন প্রক্রিয়া | ডিজিটাল প্রত্যয়ন পোর্টাল" 
                                   frameborder="0" 
                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
