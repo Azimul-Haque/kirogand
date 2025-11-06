@@ -202,12 +202,8 @@
                                         <li> <span class="feature-check">✓</span> সফটওয়্যারের সকল ফিচারের এক্সেস</li>
                                         <li> <span class="feature-check">✓</span> আনলিমিটেড সার্টিফিকেট জেনারেট</li>
                                         <li> <span class="feature-check">✓</span> একাধিক ইউজার যোগ ও ব্যবহারের সুযোগ</li>
-                                        @if($package->price > 1000)
-                                          <li> <span class="feature-check">✓</span> নতুন ফিচার অনুরোধ</li>
-                                          <li> <span class="feature-check">✓</span> পূর্ণাঙ্গ সাপোর্ট</li>
-                                        @else
-                                          <li> <span class="feature-check text-danger">✖</span> সীমিত সাপোর্ট</li>
-                                        @endif
+                                        <li> <span class="feature-check">✓</span> নতুন ফিচার অনুরোধ</li>
+                                        <li> <span class="feature-check">✓</span> পূর্ণাঙ্গ সাপোর্ট</li>
                                       </ul>
                                   </div><br/>
                                   
