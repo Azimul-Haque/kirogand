@@ -40,8 +40,8 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="contactName" class="form-label">আপনার নাম</label>
-                                        <input type="text" class="form-control rounded-pill" id="contactName" placeholder="নাম" required>
+                                        <label for="name" class="form-label">আপনার নাম</label>
+                                        <input type="text" class="form-control rounded-pill" id="name" placeholder="নাম" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
