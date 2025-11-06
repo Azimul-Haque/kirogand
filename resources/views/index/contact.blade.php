@@ -56,25 +56,24 @@
                                 <textarea class="form-control rounded-3" id="message" rows="4" placeholder="আপনার সমস্যাটি লিখুন..." required></textarea>
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="captcha" class="form-label small fw-bold">ক্যাপচা</label>
-                                        <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label small fw-bold">ক্যাপচা টেক্সট লিখুন <span class="required-asterisk">*</span></label>
-                                        <input type="text" 
-                                               class="form-control @error('captcha') is-invalid @enderror" 
-                                               name="captcha" 
-                                               placeholder="ক্যাপচা এখানে লিখুন" 
-                                               required="">
-                                        @error('captcha')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                    </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="captcha" class="form-label small fw-bold">ক্যাপচা</label>
+                                    <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">ক্যাপচা টেক্সট লিখুন <span class="required-asterisk">*</span></label>
+                                    <input type="text" 
+                                           class="form-control @error('captcha') is-invalid @enderror" 
+                                           name="captcha" 
+                                           placeholder="ক্যাপচা এখানে লিখুন" 
+                                           required="">
+                                    @error('captcha')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
+                            
                             <button type="submit" class="btn btn-primary w-100 rounded-pill text-uppercase fw-bold">বার্তা পাঠান</button>
                         </form>
                     </div>
