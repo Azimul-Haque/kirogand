@@ -33,6 +33,19 @@
             margin-top: 30px;
         }
     }
+
+    /* Video Guide Styles */
+    .video-guide-card {
+        background-color: var(--white-bg);
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 25px;
+        transition: transform 0.2s;
+    }
+    .video-guide-card:hover {
+        transform: scale(1.02);
+    }
   </style>
 @endsection
 
