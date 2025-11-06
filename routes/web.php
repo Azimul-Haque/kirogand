@@ -20,7 +20,7 @@ Route::get('/verify/{unique_serial}', 'IndexController@verifyCertificate')->name
 Route::get('/certificate-status', 'IndexController@getApplicationStatus')->name('index.application-status');
 Route::get('/notices', 'IndexController@getNotices')->name('index.notices');
 Route::get('/contact', 'IndexController@getContact')->name('index.contact');
-Route::get('/contact', 'IndexController@storeMessage')->name('index.store.message');
+Route::post('/contact', 'IndexController@storeMessage')->name('store.message');
 Route::get('/captcha', 'IndexController@generateCaptcha')->name('captcha.image');
 Route::get('/contactcaptcha', 'IndexController@generateContactCaptcha')->name('contactcaptcha.image');
 Route::get('/user-guidelines', 'IndexController@getUserGuidelines')->name('index.user-guidelines');
