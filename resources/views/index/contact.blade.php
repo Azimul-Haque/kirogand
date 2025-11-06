@@ -41,6 +41,10 @@
                                 <label for="contactName" class="form-label">আপনার নাম</label>
                                 <input type="text" class="form-control rounded-pill" id="contactName" placeholder="নাম" required>
                             </div>
+                            <div class="mb-3">
+                                <label for="contactName" class="form-label">আপনার নাম</label>
+                                <input type="text" class="form-control rounded-pill" id="contactName" placeholder="নাম" required>
+                            </div>
                             <div class="mb-4">
                                 <label for="contactMessage" class="form-label">বার্তার বিষয়বস্তু</label>
                                 <textarea class="form-control rounded-3" id="contactMessage" rows="4" placeholder="আপনার সমস্যাটি লিখুন..." required></textarea>
