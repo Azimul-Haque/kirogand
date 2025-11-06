@@ -345,6 +345,8 @@
                       </a>
                   </div>
 
+                  <hr class="border-primary opacity-50">
+
                   <div class="video-guide-card mt-4">
                       <h6 class="fw-bold text-success mb-2">কর্তৃপক্ষ/প্রশাসনিক একাউন্ট নিবন্ধন প্রক্রিয়া (ভিডিও)</h6>
                       <!-- YouTube Embed Code -->
