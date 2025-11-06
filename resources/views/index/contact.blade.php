@@ -59,7 +59,7 @@
                             <div class="row mb-4">
                                 <div class="col-md-6">
                                     <label for="captcha" class="form-label small fw-bold">ক্যাপচা</label>
-                                    <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
+                                    <img src="{{ route('contactcaptcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
                                 </div>
                                 <div class="col-md-6">
                                     {{-- <label class="form-label small fw-bold">ক্যাপচা টেক্সট লিখুন <span class="required-asterisk">*</span></label> --}}
