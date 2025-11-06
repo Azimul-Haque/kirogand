@@ -482,6 +482,7 @@ class IndexController extends Controller
     public function storeMessage(Request $request)
     {
         $this->validate($request,array(
+            'name'    =>   'required',
             'mobile'    =>   'required',
             'message'    =>   'required',
         ));
