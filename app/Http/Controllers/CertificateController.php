@@ -70,7 +70,7 @@ class CertificateController extends Controller
             }
             if(isPackageExpired(Auth::user()->localOffice->package_expiry_date)) {
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01xxxxxxxxx');
-                return redirect()->route('index.index');
+                return redirect()->route('dashboard.payments.office');
             }
         }
 
