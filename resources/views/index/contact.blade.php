@@ -46,8 +46,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="contactName" class="form-label">আপনার নাম</label>
-                                        <input type="text" class="form-control rounded-pill" id="contactName" placeholder="নাম" required>
+                                        <label for="contactName" class="form-label">আপনার মোবাইল নম্বর</label>
+                                        <input type="text" class="form-control rounded-pill" id="contactName" placeholder="মোবাইল নম্বর" required>
                                     </div>
                                 </div>
                             </div>
