@@ -487,6 +487,13 @@ class IndexController extends Controller
             'message'    =>   'required',
         ));
 
+        // Retrieve the CAPTCHA text from the session
+        $sessionCaptcha = Session::get('captcha');
+
+        if (strtolower($request->input('captcha')) != strtolower($sessionCaptcha)) {
+            // If the CAPTCHA is incorrect, redirect back with an error.
+            return redirect()->back()->withErrors(['captcha' => 'ক্যাপচাটি ভুল হয়েছে !']);
+        }
 
         $message = new Message;
         $message->name = $request->name;
