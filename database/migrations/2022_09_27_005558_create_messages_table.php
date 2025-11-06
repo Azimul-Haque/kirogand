@@ -16,8 +16,8 @@ class CreateMessagesTable extends Migration
         Schema::create('messages', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->nullable();
-            $table->string('name');
-            $table->string('mobile');
+            $table->string('name')->nullable();
+            $table->string('mobile')->nullable();
             $table->string('message');
             $table->integer('status');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
