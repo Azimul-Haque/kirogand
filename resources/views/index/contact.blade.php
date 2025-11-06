@@ -37,6 +37,7 @@
                         <hr>
                         
                         <form action="{{ route('store.message') }}" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
