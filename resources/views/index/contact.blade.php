@@ -54,7 +54,7 @@
                             </div>
                             <div class="mb-4">
                                 <label for="message" class="form-label">বার্তার বিষয়বস্তু</label>
-                                <textarea class="form-control rounded-3" id="message" rows="4" placeholder="আপনার সমস্যাটি লিখুন..." required></textarea>
+                                <textarea class="form-control rounded-3" id="message" name="message" rows="4" placeholder="আপনার সমস্যাটি লিখুন..." required></textarea>
                             </div>
 
                             <div class="row mb-4">
