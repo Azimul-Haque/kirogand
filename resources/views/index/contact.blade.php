@@ -48,13 +48,13 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="mobile" class="form-label">আপনার মোবাইল নম্বর</label>
-                                        <input type="text" class="form-control rounded-pill" id="mobile" name="mobile" placeholder="মোবাইল নম্বর" required>
+                                        <input type="text" class="form-control rounded-pill" id="mobile" name="mobile" value="{{ old('mobile') }}" placeholder="মোবাইল নম্বর" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-4">
                                 <label for="message" class="form-label">বার্তার বিষয়বস্তু</label>
-                                <textarea class="form-control rounded-3" id="message" name="message" rows="4" placeholder="আপনার সমস্যাটি লিখুন..." required></textarea>
+                                <textarea class="form-control rounded-3" id="message" name="message" value="{{ old('message') }}" rows="4" placeholder="আপনার সমস্যাটি লিখুন..." required></textarea>
                             </div>
 
                             <div class="row mb-4">
