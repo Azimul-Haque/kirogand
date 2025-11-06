@@ -482,9 +482,10 @@ class IndexController extends Controller
     public function storeMessage(Request $request)
     {
         $this->validate($request,array(
-            'name'    =>   'required',
-            'mobile'    =>   'required',
-            'message'    =>   'required',
+            'name'              =>   'required',
+            'mobile'            =>   'required',
+            'message'           =>   'required',
+            'contactcaptcha'    =>   'required',
         ));
 
         // Retrieve the CAPTCHA text from the session
