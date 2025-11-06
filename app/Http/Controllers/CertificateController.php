@@ -65,7 +65,7 @@ class CertificateController extends Controller
     {
         if(Auth::user()->role == 'manager') {
             if (Auth::user()->is_active === 0) {
-                Session::flash('success', 'আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শেষ, প্যাকেজ কিনুন!');
+                Session::flash('success', 'আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শেষ, প্যাকেজ কিনে সনদ তৈরি করুন।');
                 return redirect()->route('index.index');
             }
             if(isPackageExpired(Auth::user()->localOffice->package_expiry_date)) {
