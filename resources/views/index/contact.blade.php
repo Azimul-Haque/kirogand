@@ -42,7 +42,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="name" class="form-label">আপনার নাম</label>
-                                        <input type="text" class="form-control rounded-pill" id="name" name="name" placeholder="নাম" required>
+                                        <input type="text" class="form-control rounded-pill" id="name" name="name" value="{{ old('name') }}" placeholder="নাম" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
