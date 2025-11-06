@@ -345,7 +345,7 @@
                       </a>
                   </div>
 
-                  <div class="video-guide-card mb-4">
+                  <div class="video-guide-card mt-4">
                       <h5 class="fw-bold text-primary mb-2">১. কর্তৃপক্ষ/প্রশাসনিক একাউন্ট নিবন্ধন প্রক্রিয়া (ভিডিও)</h5>
                       <!-- YouTube Embed Code -->
                       <div class="ratio ratio-16x9 rounded-3 overflow-hidden" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);">
