@@ -45,12 +45,11 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    
+                                    <div class="mb-3">
+                                        <label for="contactName" class="form-label">আপনার নাম</label>
+                                        <input type="text" class="form-control rounded-pill" id="contactName" placeholder="নাম" required>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="contactName" class="form-label">আপনার নাম</label>
-                                <input type="text" class="form-control rounded-pill" id="contactName" placeholder="নাম" required>
                             </div>
                             <div class="mb-4">
                                 <label for="contactMessage" class="form-label">বার্তার বিষয়বস্তু</label>
