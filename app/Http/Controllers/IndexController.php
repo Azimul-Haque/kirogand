@@ -500,9 +500,7 @@ class IndexController extends Controller
         $message->message = $request->message;
         $message->save();
         
-        return response()->json([
-            'success' => true
-        ]);
+        return redirect()->route('index.index');
     }
 
     public function generateCaptcha()
