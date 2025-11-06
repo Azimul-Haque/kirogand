@@ -553,8 +553,8 @@ class IndexController extends Controller
         // Generate a random string for the CAPTCHA
         $captchaText = substr(str_shuffle('ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'), 0, 6);
 
-        // Store the captcha in the session
-        Session::put('captcha', $captchaText);
+        // Store the contactcaptcha in the session
+        Session::put('contactcaptcha', $captchaText);
 
         // Draw the text on the image
         imagestring($image, 5, 20, 7, $captchaText, $black);
