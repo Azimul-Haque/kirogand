@@ -490,7 +490,7 @@ class IndexController extends Controller
         $user = User::where('mobile', $request->mobile)->first();
 
         $message = new Message;
-        $message->name = $user->id;
+        $message->name = $user->name;
         $message->user_id = $user->id;
         $message->message = $request->message;
         $message->save();
