@@ -557,7 +557,7 @@ class IndexController extends Controller
         Session::put('captcha', $captchaText);
 
         // Draw the text on the image
-        imagestring($image, 5, 20, 7, $captchaText, $black);
+        imagestring($image, 5, 200, 7, $captchaText, $black);
 
         // Capture the image output as a string
         ob_start();
