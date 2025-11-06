@@ -489,11 +489,11 @@ class IndexController extends Controller
         ));
 
         // Retrieve the CAPTCHA text from the session
-        $sessionCaptcha = Session::get('captcha');
+        $sessionCaptcha = Session::get('contactcaptcha');
 
-        if (strtolower($request->input('captcha')) != strtolower($sessionCaptcha)) {
+        if (strtolower($request->input('contactcaptcha')) != strtolower($sessionCaptcha)) {
             // If the CAPTCHA is incorrect, redirect back with an error.
-            return redirect()->back()->withErrors(['captcha' => 'ক্যাপচাটি ভুল হয়েছে !']);
+            return redirect()->back()->withErrors(['contactcaptcha' => 'ক্যাপচাটি ভুল হয়েছে !']);
         }
 
         $message = new Message;
