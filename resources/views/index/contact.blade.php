@@ -48,7 +48,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="mobile" class="form-label">আপনার মোবাইল নম্বর</label>
-                                        <input type="text" class="form-control rounded-pill" id="mobile" placeholder="মোবাইল নম্বর" required>
+                                        <input type="text" class="form-control rounded-pill" id="mobile" name="mobile" placeholder="মোবাইল নম্বর" required>
                                     </div>
                                 </div>
                             </div>
