@@ -488,11 +488,9 @@ class IndexController extends Controller
             'contactcaptcha'    =>   'required',
         ));
 
-        // Retrieve the CAPTCHA text from the session
         $sessionCaptcha = Session::get('contactcaptcha');
 
         if (strtolower($request->input('contactcaptcha')) != strtolower($sessionCaptcha)) {
-            // If the CAPTCHA is incorrect, redirect back with an error.
             return redirect()->back()->withErrors(['contactcaptcha' => 'ক্যাপচাটি ভুল হয়েছে !']);
         }
 
