@@ -62,7 +62,7 @@
                                     <img src="{{ route('captcha.image') }}" alt="Captcha Text" style="height: auto; width: 150px;">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label small fw-bold">ক্যাপচা টেক্সট লিখুন <span class="required-asterisk">*</span></label>
+                                    {{-- <label class="form-label small fw-bold">ক্যাপচা টেক্সট লিখুন <span class="required-asterisk">*</span></label> --}}
                                     <input type="text" 
                                            class="form-control @error('captcha') is-invalid @enderror" 
                                            name="captcha" 
