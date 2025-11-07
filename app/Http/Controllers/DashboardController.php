@@ -714,7 +714,7 @@ class DashboardController extends Controller
                      ->where('role', 'user')
                      ->paginate(15);
         
-        return view('dashboard.localoffices.index')->withusers($users);
+        return view('dashboard.localoffices.users')->withusers($users);
     }
 
     public function getPackages()
