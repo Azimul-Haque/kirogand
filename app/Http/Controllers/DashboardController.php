@@ -737,13 +737,13 @@ class DashboardController extends Controller
 
         $localoffices = LocalOffice::all();
         $users = User::where('local_office_id', Auth::user()->local_office_id)
-                           ->where('role', 'user')
-                           ->where('name', 'LIKE', "%$search%")
-                           ->orWhere('email', 'LIKE', "%$search%")
-                           ->orWhere('mobile', 'LIKE', "%$search%")
-                           ->orWhere('nid', 'LIKE', "%$search%")
-                           ->orderBy('id', 'desc')
-                           ->paginate(15);
+                     ->where('role', 'user')
+                     ->where('name', 'LIKE', "%$search%")
+                     ->orWhere('email', 'LIKE', "%$search%")
+                     ->orWhere('mobile', 'LIKE', "%$search%")
+                     ->orWhere('nid', 'LIKE', "%$search%")
+                     ->orderBy('id', 'desc')
+                     ->paginate(15);
                      
         
         return view('dashboard.localoffices.users')
