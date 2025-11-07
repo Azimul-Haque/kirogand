@@ -81,9 +81,9 @@
                     </ul>
 
                     <!-- অ্যাকশন বাটন (উদাহরণ) -->
-                    <button type="button" class="btn btn-primary btn-block">
+                    {{-- <button type="button" class="btn btn-primary btn-block">
                         <i class="fas fa-edit mr-1"></i> নাগরিকের তথ্য সম্পাদনা করুন
-                    </button>
+                    </button> --}}
                 </div>
                 <!-- /.card-body -->
             </div>
