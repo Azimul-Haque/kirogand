@@ -148,7 +148,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="7" class="text-center">কোনো সনদপত্র পাওয়া যায়নি।</td>
+                                        <td colspan="4" class="text-center">কোনো সনদপত্র পাওয়া যায়নি।</td>
                                     </tr>
                                 @endforelse
                                 
