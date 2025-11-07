@@ -67,7 +67,7 @@
                     <!-- ব্যবহারকারীর বিবরণী তালিকা -->
                     <ul class="list-group list-group-unbordered mb-3">
                         <li class="list-group-item">
-                            <b><i class="fas fa-id-card mr-1 text-primary"></i> জাতীয় পরিচয়পত্র (এনআইডি)</b> 
+                            <b><i class="fas fa-id-card mr-1 text-primary"></i> এনআইডি/জন্মসনদ</b> 
                             <a class="float-right text-dark font-weight-bold"><?php echo $user->nid ?? '০১২৩৪৫৬৭৮৯'; ?></a>
                         </li>
                         <li class="list-group-item">
