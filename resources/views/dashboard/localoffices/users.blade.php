@@ -61,6 +61,11 @@
                       {{ $user->localOffice != null ? $user->localOffice->name_bn : '' }}
                     </td>
                     <td>{{ bangla($user->certificates->count()) }} টি</td>
+                    <td>
+                      <a href="{{ route('dashboard.certificates.draft', $certificate->unique_serial) }}" class="btn btn-info btn-sm" data-toggle="tooltip" title="দেখুন/ড্রাফট">
+                          <i class="fas fa-eye"></i>
+                      </a>
+                    </td>
                         {{-- Delete User Modal Code --}}
                         {{-- Delete User Modal Code --}}
                         <!-- Modal -->
