@@ -19,7 +19,8 @@
     function renderSubHeirTable($index, $heir) {
         $parentName = $heir['name'] ?? 'নামবিহীন';
         $subHeirs = $heir['sub_heirs'] ?? [];
-        $displayStyle = empty($subHeirs) ? 'display: none;' : '';
+        // Block should be visible if sub_heirs exist
+        $displayStyle = empty($subHeirs) ? 'display: none;' : 'display: block;';
 
         $html = '<div class="sub-heir-table-block card card-secondary mt-3" id="sub-heir-block-' . $index . '" data-parent-id="' . $index . '" style="' . $displayStyle . '">';
         $html .= '<div class="card-header"><h3 class="card-title"><i class="fas fa-sitemap"></i> সাব-ওয়ারিশের তালিকা (ওয়ারিশ: <strong class="parent-heir-name">' . $parentName . '</strong>)</h3></div>';
@@ -197,7 +198,7 @@
                                 </td>
                                 <td>
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-info btn-sm add-subheir-button" title="সাব-ওয়ারিশ যোগ করুন">
+                                        <button type="button" class="btn btn-info btn-sm add-subheir-button" title="সাব-ওয়ারিশ যোগ করুন" data-parent-id="{{ $index }}">
                                             <i class="fas fa-sitemap"></i>
                                         </button>
                                         <button type="button" class="btn btn-danger btn-sm remove-heir-button" title="ডিলেট করুন">
@@ -263,7 +264,7 @@
         </td>
         <td>
             <div class="btn-group">
-                <button type="button" class="btn btn-info btn-sm add-subheir-button" title="সাব-ওয়ারিশ যোগ করুন">
+                <button type="button" class="btn btn-info btn-sm add-subheir-button" title="সাব-ওয়ারিশ যোগ করুন" data-parent-id="__INDEX__">
                     <i class="fas fa-sitemap"></i>
                 </button>
                 <button type="button" class="btn btn-danger btn-sm remove-heir-button" title="ডিলেট করুন">
@@ -334,17 +335,106 @@
 
 <script>
     let rowCounter = {{ $isEdit ? count(old('heirs_data', $heirs)) : 0 }};
+    const subHeirTablesContainer = document.getElementById('sub-heir-tables-container');
+
+    /**
+     * Finds the next available array index for a sub-heir row within a specific parent's table.
+     * @param {HTMLElement} subHeirBody The <tbody> element of the sub-heir table.
+     * @returns {number} The next available index.
+     */
+    function getNextSubIndex(subHeirBody) {
+        const existingRows = subHeirBody.querySelectorAll('.sub-heir-row');
+        let maxIndex = -1;
+        existingRows.forEach(subRow => {
+            const nameAttribute = subRow.querySelector('input').name;
+            const match = nameAttribute.match(/\[sub_heirs\]\[(\d+)\]/);
+            if (match) {
+                const index = parseInt(match[1]);
+                if (index > maxIndex) {
+                    maxIndex = index;
+                }
+            }
+        });
+        return maxIndex + 1;
+    }
+
+    /**
+     * Adds one blank sub-heir row to the specified parent's sub-heir table.
+     * @param {string} parentIndex The index of the primary heir.
+     */
+    function addBlankSubHeirRow(parentIndex) {
+        const subHeirBlock = document.getElementById(`sub-heir-block-${parentIndex}`);
+        if (!subHeirBlock) {
+             console.error(`Sub-heir block not found for index ${parentIndex}`);
+             return;
+        }
+
+        const subHeirBody = subHeirBlock.querySelector('.sub-heir-body');
+        const nextSubIndex = getNextSubIndex(subHeirBody);
+        const template = document.getElementById('sub-heir-row-template').innerHTML;
+        
+        let newRowHtml = template.replace(/__PARENT_INDEX__/g, parentIndex);
+        newRowHtml = newRowHtml.replace(/__SUB_INDEX__/g, nextSubIndex);
+
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = newRowHtml;
+        const newRow = tempDiv.firstElementChild; 
+
+        subHeirBody.appendChild(newRow);
+        
+        // Attach the remove listener to the newly created button
+        const newButton = newRow.querySelector('.remove-subheir-button');
+        attachRemoveSubHeirListener(newButton);
+    }
+
+    /**
+     * Creates the external sub-heir table block if it doesn't exist, makes it visible, 
+     * and adds the first blank sub-heir row.
+     * @param {HTMLElement} primaryHeirRow The primary heir row element (<tr>).
+     */
+    function createAndAddFirstSubHeirRow(primaryHeirRow) {
+        const parentIndex = primaryHeirRow.dataset.rowId;
+        let subHeirBlock = document.getElementById(`sub-heir-block-${parentIndex}`);
+        
+        // If the block does not exist, create it
+        if (!subHeirBlock) {
+            const templateHtml = document.getElementById('sub-heir-table-template').innerHTML.replace(/__INDEX__/g, parentIndex);
+            const tempContainer = document.createElement('div');
+            tempContainer.innerHTML = templateHtml;
+            subHeirBlock = tempContainer.firstElementChild;
+            
+            // Set the parent name dynamically
+            const primaryNameInput = primaryHeirRow.querySelector('.heir-name-input');
+            const parentNameDisplay = subHeirBlock.querySelector('.parent-heir-name');
+            parentNameDisplay.textContent = primaryNameInput.value || primaryNameInput.placeholder;
+
+            // Append to the DOM and attach listeners
+            subHeirTablesContainer.appendChild(subHeirBlock);
+            attachSubHeirBlockListeners(subHeirBlock);
+            
+            // Also link the primary name input change listener again
+            primaryNameInput.addEventListener('input', function() {
+                parentNameDisplay.textContent = this.value || primaryNameInput.placeholder;
+            });
+        }
+
+        // 1. Ensure the block is visible
+        subHeirBlock.style.display = 'block';
+
+        // 2. Add the first blank row
+        addBlankSubHeirRow(parentIndex);
+    }
 
     /**
      * Attaches all listeners to a primary heir row.
      * @param {HTMLElement} row The primary heir row element (<tr>).
      */
     function attachHeirRowListeners(row) {
-        const parentIndex = row.dataset.rowId;
-        const subHeirBlock = document.getElementById(`sub-heir-block-${parentIndex}`);
-
         // --- 1. Remove Primary Heir Listener ---
         row.querySelector('.remove-heir-button').addEventListener('click', function() {
+            const parentIndex = row.dataset.rowId;
+            const subHeirBlock = document.getElementById(`sub-heir-block-${parentIndex}`);
+            
             // Remove the main row and its associated sub-heir table block
             if (subHeirBlock) {
                 subHeirBlock.remove();
@@ -352,80 +442,55 @@
             row.remove();
         });
 
-        // --- 2. Toggle Sub-Heir List Listener ---
+        // --- 2. Add/Toggle Sub-Heir List Listener (Now creates and adds a row) ---
         const subHeirToggleButton = row.querySelector('.add-subheir-button');
-        subHeirToggleButton.addEventListener('click', function() {
-            if (!subHeirBlock) return;
-            
-            // Toggle visibility of the external sub-heir table block
-            if (subHeirBlock.style.display === 'none' || subHeirBlock.style.display === '') {
-                subHeirBlock.style.display = 'block';
-            } else {
-                subHeirBlock.style.display = 'none';
-            }
-        });
+        
+        // The core fix: Attach the listener only if the button exists
+        if (subHeirToggleButton) {
+             subHeirToggleButton.addEventListener('click', function() {
+                createAndAddFirstSubHeirRow(row);
+             });
+        }
 
-        // --- 3. Link Name Change to Sub-Table Title ---
+        // --- 3. Link Name Change to Sub-Table Title (for pre-existing blocks only) ---
         const nameInput = row.querySelector('.heir-name-input');
-        const nameDisplay = subHeirBlock ? subHeirBlock.querySelector('.parent-heir-name') : null;
-
-        if (nameDisplay) {
-            // Initial update in case of existing data/old input
-            nameDisplay.textContent = nameInput.value || nameInput.placeholder;
+        const parentIndex = row.dataset.rowId;
+        const subHeirBlock = document.getElementById(`sub-heir-block-${parentIndex}`);
+        
+        if (nameInput && subHeirBlock) {
+            const nameDisplay = subHeirBlock.querySelector('.parent-heir-name');
+             // Initial sync
+            if (nameDisplay) {
+                nameDisplay.textContent = nameInput.value || nameInput.placeholder;
+            }
 
             nameInput.addEventListener('input', function() {
-                nameDisplay.textContent = this.value || nameInput.placeholder;
+                const updatedBlock = document.getElementById(`sub-heir-block-${parentIndex}`);
+                const updatedDisplay = updatedBlock ? updatedBlock.querySelector('.parent-heir-name') : null;
+                if (updatedDisplay) {
+                    updatedDisplay.textContent = this.value || nameInput.placeholder;
+                }
             });
         }
     }
 
     /**
      * Attaches listeners for adding and removing individual sub-heir rows within a sub-container.
-     * This is called for both dynamically added and pre-populated sub-heir tables.
      * @param {HTMLElement} subHeirBlock The external sub-heir table block container.
      */
     function attachSubHeirBlockListeners(subHeirBlock) {
         const parentIndex = subHeirBlock.dataset.parentId;
-        const subHeirBody = subHeirBlock.querySelector('.sub-heir-body');
 
-        // Function to find the next available sub-index (to avoid array key conflicts)
-        function getNextSubIndex() {
-            const existingRows = subHeirBody.querySelectorAll('.sub-heir-row');
-            let maxIndex = -1;
-            existingRows.forEach(subRow => {
-                const nameAttribute = subRow.querySelector('input').name;
-                const match = nameAttribute.match(/\[sub_heirs\]\[(\d+)\]/);
-                if (match) {
-                    const index = parseInt(match[1]);
-                    if (index > maxIndex) {
-                        maxIndex = index;
-                    }
-                }
+        // --- Add Sub-Heir Row Listener (for the button in the footer) ---
+        const addButton = subHeirBlock.querySelector('.add-subheir-row-button');
+        if(addButton) {
+            addButton.addEventListener('click', function() {
+                addBlankSubHeirRow(parentIndex);
             });
-            return maxIndex + 1;
         }
-
-        // --- Add Sub-Heir Row Listener ---
-        subHeirBlock.querySelector('.add-subheir-row-button').addEventListener('click', function() {
-            const nextSubIndex = getNextSubIndex();
-            const template = document.getElementById('sub-heir-row-template').innerHTML;
-            
-            let newRowHtml = template.replace(/__PARENT_INDEX__/g, parentIndex);
-            newRowHtml = newRowHtml.replace(/__SUB_INDEX__/g, nextSubIndex);
-
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = newRowHtml;
-            const newRow = tempDiv.firstElementChild; // This is the new <tr> element
-
-            subHeirBody.appendChild(newRow);
-            
-            // Attach the remove listener to the newly created button
-            const newButton = newRow.querySelector('.remove-subheir-button');
-            attachRemoveSubHeirListener(newButton);
-        });
-
-        // --- Attach Remove Listener to Pre-existing Sub-Heir Buttons ---
-        subHeirBody.querySelectorAll('.remove-subheir-button').forEach(button => {
+        
+        // --- Attach Remove Listener to all Pre-existing Sub-Heir Buttons ---
+        subHeirBlock.querySelectorAll('.remove-subheir-button').forEach(button => {
              attachRemoveSubHeirListener(button);
         });
     }
@@ -442,6 +507,7 @@
 
     /**
      * Creates a new primary heir row and its associated external sub-heir table block.
+     * Note: The sub-heir block is created but initially hidden.
      */
     function createNewHeirElements(index) {
         // 1. Create Main Heir Row
@@ -468,7 +534,6 @@
      */
     function initHeirsTable() {
         const heirsContainer = document.getElementById('heirs-container');
-        const subHeirTablesContainer = document.getElementById('sub-heir-tables-container');
         
         // 1. Attach listeners to pre-populated (edit mode) rows and external blocks
         heirsContainer.querySelectorAll('.heir-row').forEach(row => {
