@@ -136,9 +136,6 @@
                                             @endif
                                         </td>
                                         <td>
-                                            
-                                        </td>
-                                        <td>
                                           <a href="{{ route('dashboard.certificates.draft', $certificate->unique_serial) }}" class="btn btn-info btn-sm" data-toggle="tooltip" title="দেখুন/ড্রাফট">
                                               <i class="fas fa-eye"></i>
                                           </a>
