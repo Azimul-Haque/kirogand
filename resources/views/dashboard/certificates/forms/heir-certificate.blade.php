@@ -308,6 +308,7 @@
     </div>
 </script>
 
+{{-- FIXED: Added proper <tr>, <td> structure and form-control classes to match the main table inputs. --}}
 <script type="text/template" id="sub-heir-row-template">
     <tr class="sub-heir-row">
         <td>
@@ -346,6 +347,7 @@
         const existingRows = subHeirBody.querySelectorAll('.sub-heir-row');
         let maxIndex = -1;
         existingRows.forEach(subRow => {
+            // Find the index number from the input name attribute (e.g., heirs_data[0][sub_heirs][1][name])
             const nameAttribute = subRow.querySelector('input').name;
             const match = nameAttribute.match(/\[sub_heirs\]\[(\d+)\]/);
             if (match) {
@@ -376,15 +378,18 @@
         let newRowHtml = template.replace(/__PARENT_INDEX__/g, parentIndex);
         newRowHtml = newRowHtml.replace(/__SUB_INDEX__/g, nextSubIndex);
 
-        const tempDiv = document.createElement('div');
+        // We append HTML directly since we know it contains a proper <tr> structure
+        const tempDiv = document.createElement('tbody');
         tempDiv.innerHTML = newRowHtml;
-        const newRow = tempDiv.firstElementChild; 
-
+        const newRow = tempDiv.firstElementChild; // This is the new <tr> element
+        
         subHeirBody.appendChild(newRow);
         
         // Attach the remove listener to the newly created button
         const newButton = newRow.querySelector('.remove-subheir-button');
-        attachRemoveSubHeirListener(newButton);
+        if (newButton) {
+            attachRemoveSubHeirListener(newButton);
+        }
     }
 
     /**
@@ -414,14 +419,18 @@
             
             // Also link the primary name input change listener again
             primaryNameInput.addEventListener('input', function() {
-                parentNameDisplay.textContent = this.value || primaryNameInput.placeholder;
+                const updatedBlock = document.getElementById(`sub-heir-block-${parentIndex}`);
+                const updatedDisplay = updatedBlock ? updatedBlock.querySelector('.parent-heir-name') : null;
+                if (updatedDisplay) {
+                    updatedDisplay.textContent = this.value || primaryNameInput.placeholder;
+                }
             });
         }
 
         // 1. Ensure the block is visible
         subHeirBlock.style.display = 'block';
 
-        // 2. Add the first blank row
+        // 2. Add the first blank row (this is what you requested)
         addBlankSubHeirRow(parentIndex);
     }
 
@@ -430,22 +439,19 @@
      * @param {HTMLElement} row The primary heir row element (<tr>).
      */
     function attachHeirRowListeners(row) {
+        const parentIndex = row.dataset.rowId;
+        
         // --- 1. Remove Primary Heir Listener ---
         row.querySelector('.remove-heir-button').addEventListener('click', function() {
-            const parentIndex = row.dataset.rowId;
             const subHeirBlock = document.getElementById(`sub-heir-block-${parentIndex}`);
             
-            // Remove the main row and its associated sub-heir table block
-            if (subHeirBlock) {
-                subHeirBlock.remove();
-            }
+            if (subHeirBlock) { subHeirBlock.remove(); }
             row.remove();
         });
 
-        // --- 2. Add/Toggle Sub-Heir List Listener (Now creates and adds a row) ---
+        // --- 2. Add/Toggle Sub-Heir List Listener (Creates the table and adds a row) ---
         const subHeirToggleButton = row.querySelector('.add-subheir-button');
         
-        // The core fix: Attach the listener only if the button exists
         if (subHeirToggleButton) {
              subHeirToggleButton.addEventListener('click', function() {
                 createAndAddFirstSubHeirRow(row);
@@ -454,23 +460,18 @@
 
         // --- 3. Link Name Change to Sub-Table Title (for pre-existing blocks only) ---
         const nameInput = row.querySelector('.heir-name-input');
-        const parentIndex = row.dataset.rowId;
         const subHeirBlock = document.getElementById(`sub-heir-block-${parentIndex}`);
         
         if (nameInput && subHeirBlock) {
             const nameDisplay = subHeirBlock.querySelector('.parent-heir-name');
-             // Initial sync
             if (nameDisplay) {
+                // Initial sync for existing data
                 nameDisplay.textContent = nameInput.value || nameInput.placeholder;
+                
+                nameInput.addEventListener('input', function() {
+                    nameDisplay.textContent = this.value || nameInput.placeholder;
+                });
             }
-
-            nameInput.addEventListener('input', function() {
-                const updatedBlock = document.getElementById(`sub-heir-block-${parentIndex}`);
-                const updatedDisplay = updatedBlock ? updatedBlock.querySelector('.parent-heir-name') : null;
-                if (updatedDisplay) {
-                    updatedDisplay.textContent = this.value || nameInput.placeholder;
-                }
-            });
         }
     }
 
