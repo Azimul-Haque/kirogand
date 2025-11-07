@@ -93,7 +93,7 @@
                               </td>
                               <td>
                                   {{-- Assuming the recipient's name is in the related User model or data_payload --}}
-                                  {{ $certificate->recipientUser->name ?? ($certificate->data_payload['applicant']['name'] ?? 'N/A') }}<br/>
+                                  {{ $certificate->recipient->name ?? ($certificate->data_payload['applicant']['name'] ?? 'N/A') }}<br/>
                                   {{ $certificate->recipientUser->name ?? ($certificate->data_payload['applicant']['name'] ?? 'N/A') }}
                               </td>
                               <td>
