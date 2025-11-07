@@ -113,7 +113,6 @@
                                     <th>সনদপত্রের ধরণ</th>
                                     <th>সনদ আইডি</th>
                                     <th>অবস্থা</th>
-                                    <th>ইস্যুর তারিখ</th>
                                     <th style="width: 120px">পদক্ষেপ</th>
                                 </tr>
                             </thead>
@@ -129,7 +128,7 @@
                                         <td>
                                             @if ($certificate->status == 1)
                                                 <span class="badge badge-success">অনুমোদিত</span><br/>
-                                                <small>{{ $certificate->issued_at ? \Carbon\Carbon::parse($certificate->issued_at)->format('d-m-Y') : 'N/A' }}</small>
+                                                <small>ইস্যু: {{ $certificate->issued_at ? \Carbon\Carbon::parse($certificate->issued_at)->format('d-m-Y') : 'N/A' }}</small>
                                             @elseif ($certificate->status == 0)
                                                 <span class="badge badge-warning">ড্রাফট / অপেক্ষমাণ</span>
                                             @else
