@@ -43,16 +43,16 @@
           <div class="card-body p-0">
             <table class="table">
               <tbody>
-                {{-- <tr>
-                  <td>1.</td>
-                  <td>Update software</td>
-                  <td>
+                <tr>
+                  <th>1.</th>
+                  <th>Update software</th>
+                  <th>
                     <div class="progress progress-xs">
                       <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
                     </div>
-                  </td>
-                  <td><span class="badge bg-danger">55%</span></td>
-                </tr> --}}
+                  </th>
+                  <th><span class="badge bg-danger">55%</span></th>
+                </tr>
                 @foreach($users as $user)
                 	<tr>
                 		<td>
