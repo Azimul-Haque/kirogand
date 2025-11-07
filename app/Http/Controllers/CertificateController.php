@@ -654,8 +654,7 @@ class CertificateController extends Controller
 
         return view('dashboard.certificates.list')
                             ->withCertificatescount($certificatescount)
-                            ->withCertificates($certificates)
-                            ->withSearch($search);
+                            ->withCertificates($certificates);
     }
 
     public function showCertificateQr($unique_serial)
