@@ -118,6 +118,7 @@
                 </thead>
                 <tbody>
                     @forelse ($heirs as $index => $heir)
+                        {{-- Primary Heir Row --}}
                         <tr>
                             <td>{{ bangla($index + 1) }}</td>
                             <td>{{ $heir['name'] ?? '--' }}</td>
@@ -126,6 +127,39 @@
                             <td>{{ $heir['dob'] ?? '--' }}</td>
                             <td>{{ $heir['remark'] ?? '--' }}</td>
                         </tr>
+
+                        {{-- Nested Sub-Heir Row --}}
+                        @if (isset($heir['sub_heirs']) && is_array($heir['sub_heirs']) && count($heir['sub_heirs']) > 0)
+                            <tr>
+                                <td colspan="6" class="sub-heir-row">
+                                    <span class="sub-heir-header">সাব-ওয়ারিশের তালিকা (ওয়ারিশ: {{ $heir['name'] ?? 'N/A' }})</span>
+                                    <table class="sub-heir-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 8%;">ক্রমিক নং</th>
+                                                <th style="width: 25%;">নাম</th>
+                                                <th style="width: 15%;">সম্পর্ক</th>
+                                                <th style="width: 25%;">এনআইডি/জন্ম সনদ</th>
+                                                <th style="width: 15%;">জন্ম তারিখ</th>
+                                                <th style="width: 12%;">মন্তব্য</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($heir['sub_heirs'] as $sub_index => $sub_heir)
+                                                <tr>
+                                                    <td>{{ bangla($sub_index + 1) }}</td>
+                                                    <td>{{ $sub_heir['name'] ?? '--' }}</td>
+                                                    <td>{{ $sub_heir['relation'] ?? '--' }}</td>
+                                                    <td>{{ $sub_heir['id_data'] ?? '--' }}</td>
+                                                    <td>{{ $sub_heir['dob'] ?? '--' }}</td>
+                                                    <td>{{ $sub_heir['remark'] ?? '--' }}</td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        @endif
                     @empty
                         <tr>
                             <td colspan="6" style="color: red;">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
@@ -136,7 +170,7 @@
 
             {{-- Closing Remark --}}
             <p class="info-paragraph" style="margin-top: 15px;">
-                আমি উক্ত ওয়ারিশগণের সার্বিক উন্নতি ও মঙ্গল কামনা করছি।
+                আমি উক্ত ওয়ারিশগণের সার্বিক উন্নতি ও মঙ্গল কামনা করছি।
             </p>
         @elseif($certificate->certificate_type == 'citizen-certificate')
             <p class="info-paragraph" style="margin-top: 30px;">
