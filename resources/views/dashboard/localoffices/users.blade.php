@@ -60,9 +60,6 @@
                 			<br/>
                 			<small class="text-black-50">এনআইডি/জন্মসনদ: {{ $user->nid }}</small><br/>
                       <small class="text-black-50">মোবাইল: {{ $user->mobile }}</small> 
-                			<br/>
-                      <small><span>যোগদান: {{ date('d F, Y h:i A', strtotime($user->created_at)) }}</span></small><br/>
-                      {{-- <small><span>প্যাকেজ: <b>{{ $user->localOffice != null ? $user->localOffice->package_expiry_date != null ? date('d F, Y', strtotime($user->localOffice->package_expiry_date)) : 'N/A' : 'N/A' }}</b></span></small> --}}
                 		</td>
                     <td>
                       {{ $user->designation }}<br/>
