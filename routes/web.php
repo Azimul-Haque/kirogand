@@ -24,6 +24,7 @@ Route::post('/contact', 'IndexController@storeMessage')->name('store.message');
 Route::get('/captcha', 'IndexController@generateCaptcha')->name('captcha.image');
 Route::get('/contactcaptcha', 'IndexController@generateContactCaptcha')->name('contactcaptcha.image');
 Route::get('/user-guidelines', 'IndexController@getUserGuidelines')->name('index.user-guidelines');
+Route::get('/faq', 'IndexController@getFaq')->name('index.faq');
 
 
 Route::get('/terms-and-conditions', 'IndexController@termsAndConditions')->name('index.terms-and-conditions');
