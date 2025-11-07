@@ -710,7 +710,7 @@ class DashboardController extends Controller
 
     public function getOfficeUsers()
     {
-        $users = Package::all();
+        $users = User::where()
         
         return view('dashboard.packages.index')->withPackages($packages);
     }
