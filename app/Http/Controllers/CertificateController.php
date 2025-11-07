@@ -592,7 +592,7 @@ class CertificateController extends Controller
             'আর্থিক অস্বচ্ছলতার প্রত্যয়ন' => 'financial-insolvency',
         ];
 
-        $certificates = Certificate::with('recipient')
+        $certificatescount = Certificate::with('recipient')
             ->where('local_office_id', Auth::user()->local_office_id)
             ->when($searchTerm, function ($query, $search) use ($certificateTypeMap) {
                 
