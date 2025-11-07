@@ -194,10 +194,13 @@
                                         <h6>**সাব-ওয়ারিশের তালিকা** (ওয়ারিশ: <strong class="parent-heir-name">{{ $heir['name'] ?? 'নামবিহীন' }}</strong>)</h6>
                                         <table class="table table-sm table-striped sub-heir-table">
                                             <thead class="bg-secondary">
+                                                {{-- UPDATED: Added ID/Birth Cert and Remark columns --}}
                                                 <tr>
                                                     <th>নাম</th>
                                                     <th>সম্পর্ক</th>
+                                                    <th>জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন</th>
                                                     <th>জন্ম তারিখ</th>
+                                                    <th>মন্তব্য</th>
                                                     <th style="width: 5%;">কার্যসম্পাদন</th>
                                                 </tr>
                                             </thead>
@@ -215,10 +218,22 @@
                                                                     name="heirs_data[{{ $index }}][sub_heirs][{{ $sub_index }}][relation]"
                                                                     placeholder="যেমন: পুত্র, কন্যা" value="{{ $sub_heir['relation'] ?? '' }}" required>
                                                             </td>
+                                                            {{-- ADDED: ID/Birth Cert --}}
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm"
+                                                                    name="heirs_data[{{ $index }}][sub_heirs][{{ $sub_index }}][id_data]"
+                                                                    placeholder="এনআইডি/জন্ম নিবন্ধন" value="{{ $sub_heir['id_data'] ?? '' }}">
+                                                            </td>
                                                             <td>
                                                                 <input type="text" class="form-control form-control-sm"
                                                                     name="heirs_data[{{ $index }}][sub_heirs][{{ $sub_index }}][dob]"
                                                                     placeholder="জন্মতারিখ" value="{{ $sub_heir['dob'] ?? '' }}">
+                                                            </td>
+                                                            {{-- ADDED: Remark --}}
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm"
+                                                                    name="heirs_data[{{ $index }}][sub_heirs][{{ $sub_index }}][remark]"
+                                                                    placeholder="যেমন: নাবালক" value="{{ $sub_heir['remark'] ?? '' }}">
                                                             </td>
                                                             <td>
                                                                 <button type="button" class="btn btn-danger btn-xs remove-subheir-button" title="ডিলেট করুন">
@@ -294,10 +309,13 @@
                 <h6>**সাব-ওয়ারিশের তালিকা** (ওয়ারিশ: <strong class="parent-heir-name">__INDEX__</strong>)</h6>
                 <table class="table table-sm table-striped sub-heir-table">
                     <thead class="bg-secondary">
+                        {{-- UPDATED: Includes all columns as requested --}}
                         <tr>
                             <th>নাম</th>
                             <th>সম্পর্ক</th>
+                            <th>জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন</th>
                             <th>জন্ম তারিখ</th>
+                            <th>মন্তব্য</th>
                             <th style="width: 5%;">কার্যসম্পাদন</th>
                         </tr>
                     </thead>
@@ -321,8 +339,16 @@
         <td>
             <input type="text" class="form-control form-control-sm" name="heirs_data[__PARENT_INDEX__][sub_heirs][__SUB_INDEX__][relation]" placeholder="যেমন: পুত্র, কন্যা" required>
         </td>
+        {{-- ADDED: ID/Birth Cert --}}
+        <td>
+            <input type="text" class="form-control form-control-sm" name="heirs_data[__PARENT_INDEX__][sub_heirs][__SUB_INDEX__][id_data]" placeholder="এনআইডি/জন্ম নিবন্ধন">
+        </td>
         <td>
             <input type="text" class="form-control form-control-sm" name="heirs_data[__PARENT_INDEX__][sub_heirs][__SUB_INDEX__][dob]" placeholder="জন্মতারিখ">
+        </td>
+        {{-- ADDED: Remark --}}
+        <td>
+            <input type="text" class="form-control form-control-sm" name="heirs_data[__PARENT_INDEX__][sub_heirs][__SUB_INDEX__][remark]" placeholder="যেমন: নাবালক">
         </td>
         <td>
             <button type="button" class="btn btn-danger btn-xs remove-subheir-button" title="ডিলেট করুন">
@@ -365,7 +391,7 @@
         nameDisplay.textContent = nameInput.value || nameInput.placeholder;
 
         nameInput.addEventListener('input', function() {
-            nameDisplay.textContent = this.value || this.placeholder;
+            nameDisplay.textContent = this.value || nameInput.placeholder;
         });
 
         // --- 4. Attach Sub-Heir Add/Remove Listeners to the Sub-Container ---
@@ -387,6 +413,7 @@
             // Iterate over existing sub-rows to find the highest index
             existingRows.forEach(subRow => {
                 const nameAttribute = subRow.querySelector('input').name;
+                // Regex to find the [sub_heirs][X] index
                 const match = nameAttribute.match(/\[sub_heirs\]\[(\d+)\]/);
                 if (match) {
                     const index = parseInt(match[1]);
@@ -411,6 +438,7 @@
             newRow.classList.add('sub-heir-row');
             
             // Append and attach remove listener immediately
+            // Note: We use firstElementChild because innerHTML may wrap the row in a tbody
             subHeirBody.appendChild(newRow.firstElementChild);
             attachRemoveSubHeirListener(newRow.firstElementChild);
         });
@@ -456,18 +484,21 @@
      */
     function initHeirsTable() {
         const heirsContainer = document.getElementById('heirs-container');
-        const existingRows = heirsContainer.querySelectorAll('.heir-row');
-        const existingSubContainers = heirsContainer.querySelectorAll('.sub-heir-container-row');
 
         // 1. Attach listeners to pre-populated (edit mode) rows and containers
-        for (let i = 0; i < existingRows.length; i++) {
-             // The sub-container is the next sibling
-            const row = existingRows[i];
-            const subContainerRow = row.nextElementSibling;
-            if (subContainerRow && subContainerRow.classList.contains('sub-heir-container-row')) {
-                attachHeirRowListeners(row, subContainerRow);
+        // Iterate through all child elements to find paired heir and sub-heir rows
+        let currentHeirRow = null;
+        heirsContainer.childNodes.forEach(node => {
+            if (node.nodeType === 1) { // Check if it's an element node
+                if (node.classList.contains('heir-row')) {
+                    currentHeirRow = node;
+                } else if (currentHeirRow && node.classList.contains('sub-heir-container-row')) {
+                    attachHeirRowListeners(currentHeirRow, node);
+                    currentHeirRow = null; // Reset for the next pair
+                }
             }
-        }
+        });
+
 
         // 2. If it's a new form and no old data exists, add the first row
         if (rowCounter === 0) {
