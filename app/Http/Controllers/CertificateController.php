@@ -627,7 +627,7 @@ class CertificateController extends Controller
                         $qRecip->where('name', 'LIKE', '%' . $search . '%');
                     });
 
-                    $q->orWhere('certificate_type', 'LIKE', '%' . $search . '%')
+                    $q->orWhere('unique_serial', 'LIKE', '%' . $search . '%');
                     
                     if (!empty($matchingDbKeys)) {
                         $q->orWhereIn('certificate_type', $matchingDbKeys);
