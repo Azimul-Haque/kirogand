@@ -60,7 +60,7 @@
                     <td>
                       {{ $user->localOffice != null ? $user->localOffice->name_bn : '' }}
                     </td>
-                    <td></td>
+                    <td>{{ $user-> }}</td>
                         {{-- Delete User Modal Code --}}
                         {{-- Delete User Modal Code --}}
                         <!-- Modal -->
