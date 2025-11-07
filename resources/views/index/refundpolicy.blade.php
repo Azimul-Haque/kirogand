@@ -3,21 +3,6 @@
 
 @section('third_party_stylesheets')
 <style>
-    :root {
-        --primary-color: #1e40af; /* Deep Indigo Blue */
-        --light-bg: #f8fafc; /* Very light gray/blue */
-        --text-color: #2c3e50; /* Darker text for readability */
-        --card-shadow: 0 6px 16px rgba(30, 64, 175, 0.15); /* Stronger shadow */
-    }
-    body {
-        font-family: 'Inter', 'Noto Sans Bengali', sans-serif;
-        background-color: var(--light-bg);
-        color: var(--text-color);
-        line-height: 1.75;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        font-size: 16px;
-    }
     .policy-container {
         max-width: 900px;
         background-color: #ffffff;
