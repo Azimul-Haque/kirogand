@@ -148,54 +148,9 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="4" class="text-center">কোনো সনদপত্র পাওয়া যায়নি।</td>
+                                        <td colspan="4" class="text-center">এই নাগরিকের জন্য কোনো সনদপত্র পাওয়া যায়নি।</td>
                                     </tr>
                                 @endforelse
-                                
-                                <?php foreach ($certificates as $cert): ?>
-                                <tr>
-                                    <td><?php echo $cert->id; ?></td>
-                                    <td>
-                                        <div class="font-weight-bold"><?php echo $cert->type; ?></div>
-                                        <small class="text-muted">রেফারেন্স: <?php echo $cert->certificate_id; ?></small>
-                                    </td>
-                                    <td><?php echo date('d M, Y', strtotime($cert->issue_date)); ?></td>
-                                    <td>
-                                        <?php 
-                                        $statusText = '';
-                                        $badgeClass = 'secondary';
-                                        
-                                        if ($cert->status == 'Issued') {
-                                            $statusText = 'ইস্যু হয়েছে';
-                                            $badgeClass = 'success';
-                                        } elseif ($cert->status == 'Pending Review') {
-                                            $statusText = 'পর্যালোচনার অপেক্ষায়';
-                                            $badgeClass = 'warning';
-                                        } else {
-                                            $statusText = 'অন্যান্য';
-                                        }
-                                        ?>
-                                        <span class="badge badge-<?php echo $badgeClass; ?>"><?php echo $statusText; ?></span>
-                                    </td>
-                                    <td>
-                                        <button 
-                                            class="btn btn-sm btn-info btn-print" 
-                                            onclick="printCertificate('<?php echo $cert->certificate_id; ?>', '<?php echo $cert->type; ?>')"
-                                            title="সনদপত্র প্রিন্ট করুন: <?php echo $cert->certificate_id; ?>"
-                                        >
-                                            <i class="fas fa-print"></i> প্রিন্ট করুন
-                                        </button>
-                                    </td>
-                                </tr>
-                                <?php endforeach; ?>
-
-                                <?php if (empty($certificates)): ?>
-                                <tr>
-                                    <td colspan="5" class="text-center text-muted p-4">
-                                        <i class="fas fa-exclamation-circle mr-1"></i> এই নাগরিকের জন্য কোনো সনদপত্র পাওয়া যায়নি।
-                                    </td>
-                                </tr>
-                                <?php endif; ?>
                             </tbody>
                         </table>
                     </div>
