@@ -62,7 +62,7 @@
                     </td>
                     <td>{{ bangla($user->certificates->count()) }} টি</td>
                     <td>
-                      <a href="{{ route('dashboard.localoffice.users.certificates', $user->id) }}" class="btn btn-info btn-sm" data-toggle="tooltip" title="দেখুন/ড্রাফট">
+                      <a href="{{ route('dashboard.localoffice.users.certificates', $user->id) }}" class="btn btn-info btn-sm" data-toggle="tooltip" data-original-title="টেস্ট">
                           <i class="fas fa-eye"></i>
                       </a>
                     </td>
