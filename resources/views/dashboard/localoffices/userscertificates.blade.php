@@ -5,41 +5,41 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-datepicker.min.css') }}">
     <style>
-            /* General Body Styling to match AdminLTE look */
-            body {
-                background-color: #f4f6f9; /* Light grey background */
-                font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-                padding: 20px;
-            }
-            /* Custom Card Styling for a professional, AdminLTE feel */
-            .card {
-                border-radius: 0.25rem;
-                box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
-            }
-            .card-header {
-                background-color: #f8f9fa; /* Light header background */
-                border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-            }
-            .profile-image-placeholder {
-                width: 90px;
-                height: 90px;
-                background-color: #ced4da; /* Grey background */
-                color: #495057;
-                font-size: 2rem;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 auto 15px;
-                border: 3px solid #fff;
-                box-shadow: 0 0 0 2px #adb5bd;
-            }
-            .btn-print {
-                color: #fff;
-                background-color: #007bff; /* Blue for primary action */
-                border-color: #007bff;
-            }
-        </style>
+        /* General Body Styling to match AdminLTE look */
+        body {
+            background-color: #f4f6f9; /* Light grey background */
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            padding: 20px;
+        }
+        /* Custom Card Styling for a professional, AdminLTE feel */
+        .card {
+            border-radius: 0.25rem;
+            box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+        }
+        .card-header {
+            background-color: #f8f9fa; /* Light header background */
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        }
+        .profile-image-placeholder {
+            width: 90px;
+            height: 90px;
+            background-color: #ced4da; /* Grey background */
+            color: #495057;
+            font-size: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 2px #adb5bd;
+        }
+        .btn-print {
+            color: #fff;
+            background-color: #007bff; /* Blue for primary action */
+            border-color: #007bff;
+        }
+    </style>
 @endsection
 
 @section('content')
