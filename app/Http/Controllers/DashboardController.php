@@ -712,6 +712,7 @@ class DashboardController extends Controller
     {
         $users = User::where('local_office_id', Auth::user()->local_office_id)
                      ->where('role', 'user')
+                     ->paginate()
         
         return view('dashboard.packages.index')->withPackages($packages);
     }
