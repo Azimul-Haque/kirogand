@@ -161,9 +161,9 @@
                                                                 <thead>
                                                                     <tr class="bg-secondary text-white">
                                                                         <th style="width: 10%;">নং</th>
-                                                                        <th style="width: 30%;">নাম</th>
+                                                                        <th style="width: 40%;">নাম</th>
                                                                         <th style="width: 25%;">সম্পর্ক</th>
-                                                                        <th style="width: 35%;">মন্তব্য</th>
+                                                                        <th style="width: 25%;">মন্তব্য</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
