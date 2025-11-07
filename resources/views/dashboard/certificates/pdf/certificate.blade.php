@@ -435,7 +435,7 @@
     }
     .beneficiary-table th {
         background-color: #E5E7EB;
-        font-weight: normal;
+        font-weight: bold;
     }
 
     .line-border-top {
