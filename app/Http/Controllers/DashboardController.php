@@ -710,7 +710,8 @@ class DashboardController extends Controller
 
     public function getOfficeUsers()
     {
-        $users = User::where()
+        $users = User::where('local_office_id', Auth::user()->local_office_id)
+                     ->where('role', 'user')
         
         return view('dashboard.packages.index')->withPackages($packages);
     }
