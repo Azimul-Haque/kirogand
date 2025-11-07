@@ -727,11 +727,18 @@ class DashboardController extends Controller
     public function getLocalOfficeUsersSearch($search)
     {
         $userscount = User::where('local_office_id', Auth::user()->local_office_id)
-                          ->where('role', 'user')
-                          ->where('name', 'LIKE', "%$search%")
-                          ->orWhere('email', 'LIKE', "%$search%")
-                          ->orWhere('mobile', 'LIKE', "%$search%")
-                          ->orWhere('nid', 'LIKE', "%$search%")
+                            ->where('role', 'user')
+
+                            // Secondary conditions (AND must meet ONE of the following search criteria):
+                            ->where(function ($query) use ($search) {
+                                // Apply all the OR conditions only if the $search term is not empty
+                                if (!empty($search)) {
+                                    $query->where('name', 'LIKE', "%{$search}%")
+                                          ->orWhere('email', 'LIKE', "%{$search}%")
+                                          ->orWhere('mobile', 'LIKE', "%{$search}%")
+                                          ->orWhere('nid', 'LIKE', "%{$search}%");
+                                }
+                            })
                           ->orderBy('id', 'desc')
                           ->count();
 
