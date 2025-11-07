@@ -459,7 +459,7 @@ class IndexController extends Controller
                         'is_active' => 0, // by default active kora thakbe na
                     ]
                 );
-                $user->local_office_id = $localoffice->id;
+                $user->local_office_id = $localoffice->id; // IMPORTANT!!!
                 $user->save();
             }
         } else {
