@@ -926,12 +926,6 @@
               const userRole = $(this).data('user-role');
               const authTypeFull = $(this).data('user-authority'); // e.g., App\Models\Union
               const authId = $(this).data('user-authority-id'); // e.g., 5
-
-              // Set basic user data
-              $('#editUserForm').attr('action', `${baseUrl}/dashboard/users/${userId}`);
-              $('#edit_name').val(userName);
-              $('#edit_mobile').val(userMobile);
-              $('#edit_user_role').val(userRole);
               
               // Reset authority fields
               $('#edit_authority_level' + userId).val('');
