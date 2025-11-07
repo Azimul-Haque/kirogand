@@ -45,7 +45,7 @@
         border: 1px solid #dee2e6;
     }
     .nested-sub-heir-table th {
-        background-color: #e9ecef !important;
+        background-color: #f8f9fa !important;
         font-weight: normal;
         padding: 0.5rem;
     }
