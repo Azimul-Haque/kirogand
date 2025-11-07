@@ -560,7 +560,7 @@ class CertificateController extends Controller
         return view('dashboard.certificates.list')->withCertificates($certificates);
     }
 
-    public function getCertificateList()
+    public function getCertificateListSearch()
     {
         if(Auth::user()->role == 'manager') {
             if (Auth::user()->is_active === 0) {
