@@ -710,13 +710,14 @@ class DashboardController extends Controller
 
     public function getLocalOfficeUsers()
     {
-        $userscount = User::where('local_office_id', Auth::user()->local_office_id)
+        $usersuserscount = User::where('local_office_id', Auth::user()->local_office_id)
                      ->where('role', 'user')
-                     ->paginate(15);
+                     ->count();
 
         $users = User::where('local_office_id', Auth::user()->local_office_id)
                      ->where('role', 'user')
-                     ->count();
+                     ->paginate(15);
+                     
         
         return view('dashboard.localoffices.users')
                         ->withUserscount($userscount)
