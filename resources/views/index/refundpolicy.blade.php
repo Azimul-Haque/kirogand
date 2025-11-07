@@ -10,7 +10,7 @@
         --card-shadow: 0 6px 16px rgba(30, 64, 175, 0.15); /* Stronger shadow */
     }
     .policy-container {
-        max-width: 900px;
+        #max-width: 900px;
         background-color: #ffffff;
         border-radius: 1.25rem; /* More rounded corners */
         box-shadow: var(--card-shadow);
