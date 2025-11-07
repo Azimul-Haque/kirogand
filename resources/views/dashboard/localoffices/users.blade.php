@@ -45,7 +45,7 @@
               <tbody>
                 <tr>
                   <th>নাম</th>
-                  <th>Update software</th>
+                  <th>ঠিকানা</th>
                   <th>
                     <div class="progress progress-xs">
                       <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
