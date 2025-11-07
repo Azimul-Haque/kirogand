@@ -167,7 +167,6 @@
                         {{-- Delete User Modal Code --}}
                         {{-- Delete User Modal Code --}}
                 	</tr>
-
                     {{-- Activate User Modal Code --}}
                     {{-- Activate User Modal Code --}}
                     <!-- Modal -->
