@@ -139,7 +139,7 @@
                                                 <th style="width: 8%;">ক্রমিক নং</th>
                                                 <th style="width: 30%;">নাম</th>
                                                 <th style="width: 15%;">সম্পর্ক</th>
-                                                <th style="width: 25%;">এনআইডি/জন্ম সনদ</th>
+                                                <th style="width: 20%;">এনআইডি/জন্ম সনদ</th>
                                                 <th style="width: 15%;">জন্ম তারিখ</th>
                                                 <th style="width: 12%;">মন্তব্য</th>
                                             </tr>
