@@ -59,7 +59,7 @@
                             <i class="fas fa-user-circle text-primary"></i>
                         </div>
                         <h3 class="profile-username text-center font-weight-bold">
-                            <?php echo $user->name ?? 'জন ডো'; ?>
+                            <?php echo $user->name ?? 'নাম'; ?>
                         </h3>
                         <p class="text-muted text-center">নাগরিক | আইডি: <?php echo $user->id ?? '৯০০০১'; ?></p>
                         <hr>
