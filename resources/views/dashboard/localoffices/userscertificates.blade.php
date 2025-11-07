@@ -127,10 +127,6 @@
                                             <strong>{{ $certificate->unique_serial }}</strong>
                                         </td>
                                         <td>
-                                            {{-- Assuming the recipient's name is in the related User model or data_payload --}}
-                                            {{ $certificate->recipientUser->name ?? ($certificate->data_payload['applicant']['name'] ?? 'N/A') }}
-                                        </td>
-                                        <td>
                                             @if ($certificate->status == 1)
                                                 <span class="badge badge-success">অনুমোদিত</span>
                                             @elseif ($certificate->status == 0)
