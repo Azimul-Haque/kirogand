@@ -638,6 +638,35 @@ class CertificateController extends Controller
                 });
             })
             ->orderBy('id', 'desc')
+            ->count();
+
+            $certificates = Certificate::with('recipient')
+            ->where('local_office_id', Auth::user()->local_office_id)
+            ->when($searchTerm, function ($query, $search) use ($certificateTypeMap) {
+                
+                $matchingDbKeys = [];
+                foreach ($certificateTypeMap as $banglaName => $dbKey) {
+                    if (mb_stripos($banglaName, $search) !== false) {
+                        $matchingDbKeys[] = $dbKey;
+                    }
+                }
+                
+                $query->where(function ($q) use ($search, $matchingDbKeys) {
+                    $q->whereHas('recipient', function ($qRecip) use ($search) {
+                        $qRecip->where('name', 'LIKE', '%' . $search . '%');
+                    });
+
+                    $q->orWhere('unique_serial', 'LIKE', '%' . $search . '%');
+                    $q->orWhere('data_payload', 'LIKE', '%' . $search . '%');
+                    
+                    if (!empty($matchingDbKeys)) {
+                        $q->orWhereIn('certificate_type', $matchingDbKeys);
+                    }
+
+                    $q->orWhere('certificate_type', 'LIKE', '%' . $search . '%');
+                });
+            })
+            ->orderBy('id', 'desc')
             ->paginate(15);
 
         return view('dashboard.certificates.list')
