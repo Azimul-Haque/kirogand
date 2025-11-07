@@ -144,16 +144,6 @@
                                                   <i class="fas fa-download"></i>
                                               </a>
                                           @endif
-                                          
-
-                                          {{-- Delete Button (Example using a form for DELETE method) --}}
-                                          {{-- <form action="{{ route('dashboard.certificates.destroy', $certificate->id) }}" method="POST" style="display:inline;">
-                                              @csrf
-                                              @method('DELETE')
-                                              <button type="submit" class="btn btn-danger" title="ডিলেট" onclick="return confirm('আপনি কি নিশ্চিত? এই তথ্য স্থায়ীভাবে মুছে ফেলা হবে।')">
-                                                  <i class="fas fa-trash"></i>
-                                              </button>
-                                          </form> --}}
                                         </td>
                                     </tr>
                                 @empty
