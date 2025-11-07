@@ -593,7 +593,7 @@ class CertificateController extends Controller
                                    ->orderBy('id', 'desc')
                                    ->paginate(15);
 
-        $searchTerm = $request->input('search');
+        $searchTerm = $search;
 
                 $certificates = Certificate::with('recipient')
                     ->where('local_office_id', Auth::user()->local_office_id)
