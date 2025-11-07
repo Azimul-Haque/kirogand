@@ -136,13 +136,6 @@
                                             @endif
                                         </td>
                                         <td>
-                                          <a href="{{ route('dashboard.certificates.draft', $certificate->unique_serial) }}" class="btn btn-info btn-sm" data-toggle="tooltip" title="দেখুন/ড্রাফট">
-                                              <i class="fas fa-eye"></i>
-                                          </a>
-                                          <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning btn-sm" data-toggle="tooltip" title="সংশোধন করুন">
-                                              <i class="fas fa-edit"></i> এডিট
-                                          </a>
-
                                           @if ($certificate->status == 1)
                                               <a href="{{ route('dashboard.certificates.print', $certificate->unique_serial) }}" id="pulseThis{{ $certificate->id }}" class="btn btn-primary btn-sm" target="_blank" data-toggle="tooltip" title="প্রিন্ট করুন">
                                                   <i class="fas fa-print"></i> প্রিন্ট
