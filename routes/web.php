@@ -111,7 +111,7 @@ Route::get('/dashboard/users/{id}/activate', 'DashboardController@activateUser')
 
 // office dashboard users
 Route::get('/dashboard/localoffice/users', 'DashboardController@getLocalOfficeUsers')->name('dashboard.localoffice.users');
-Route::get('/dashboard/localoffice/users/{id}/certificates', 'DashboardController@getLocalOfficeUsers')->name('dashboard.localoffice.users.certificates');
+Route::get('/dashboard/localoffice/users/{id}/certificates', 'DashboardController@getLocalOfficeUsersCerts')->name('dashboard.localoffice.users.certificates');
 0
 Route::get('/dashboard/local-offices', 'DashboardController@getLocalOffices')->name('dashboard.local-offices');
 Route::get('/dashboard/local-offices/{search}', 'DashboardController@getLocalOfficesSearch')->name('dashboard.local-offices.search');
