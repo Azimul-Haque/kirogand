@@ -56,6 +56,22 @@
               </button> --}}
               <div class="card-tools">
                 <form class="form-inline form-group-lg" action="">
+                  <select id="certificateTypeFilter" class="form-control form-control-sm" data-placeholder="সনদপত্রের ধরণ ফিল্টার করুন" name="certificate_type" style="margin-right: 20px;">
+                      <option selected="" disabled="" value="">সনদপত্রের ধরণ ফিল্টার করুন</option>
+                      <option value="heir-certificate">ওয়ারিশ সনদ</option>
+                      <option value="citizen-certificate">নাগরিকত্ব সনদ</option>
+                      <option value="permanent-resident">স্থায়ী বাসিন্দা মর্মে সনদ</option>
+                      <option value="same-person">একই ব্যক্তি মর্মে প্রত্যয়ন</option>
+                      <option value="character-certificate">চারিত্রিক সনদপত্র</option>
+                      <option value="unmarried-certificate">অবিবাহিত সনদপত্র</option>
+                      <option value="death-certificate">মৃত্যু সনদ</option>
+                      <option value="voter-area-change">ভোটার এলাকা স্থানান্তর সনদ</option>
+                      <option value="landless-certificate">ভূমিহীন প্রত্যয়ন</option>
+                      <option value="monthly-income">মাসিক আয়ের প্রত্যয়ন</option>
+                      <option value="yearly-income">বাৎসরিক আয়ের প্রত্যয়ন</option>
+                      <option value="new-voter">নতুন ভোটার প্রত্যয়ন</option>
+                      <option value="financial-insolvency">আর্থিক অস্বচ্ছলতার প্রত্যয়ন</option>
+                  </select>
                   <div class="form-group">
                     <input type="search-param" class="form-control form-control-sm" placeholder="সনদ খুঁজুন" id="search-param" required>
                   </div>
