@@ -61,7 +61,7 @@
                         <h3 class="profile-username text-center font-weight-bold">
                             <?php echo $user->name ?? 'নাম'; ?>
                         </h3>
-                        <p class="text-muted text-center">নাগরিক | আইডি: <?php echo $user->id ?? '৯০০০১'; ?></p>
+                        <p class="text-muted text-center">নাগরিক</p>
                         <hr>
                     </div>
 
