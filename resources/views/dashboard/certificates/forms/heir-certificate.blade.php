@@ -293,10 +293,10 @@
         </td>
         <td>
             <div class="btn-group">
-                <button type="button" class="btn btn-info btn-sm add-subheir-button" title="সাব-ওয়ারিশ যোগ করুন" data-toggle="tooltip" data-original-title="ডিলেট করুন">
+                <button type="button" class="btn btn-info btn-sm add-subheir-button" title="সাব-ওয়ারিশ যোগ করুন" data-toggle="tooltip" data-original-title="সাব-ওয়ারিশ যোগ করুন">
                     <i class="fas fa-sitemap"></i>
                 </button>
-                <button type="button" class="btn btn-danger btn-sm remove-heir-button" title="ডিলেট করুন">
+                <button type="button" class="btn btn-danger btn-sm remove-heir-button" title="ডিলেট করুন" data-toggle="tooltip" data-original-title="ডিলেট করুন">
                     <i class="fas fa-trash"></i>
                 </button>
             </div>
