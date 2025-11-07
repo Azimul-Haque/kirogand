@@ -727,7 +727,7 @@ class DashboardController extends Controller
     public function getLocalOfficeUsersCerts($id)
     {
         $user = User::find($id);
-        return view('dashboard.localoffices.users')->withUser($user);
+        return view('dashboard.localoffices.certificates')->withUser($user);
     }
 
     public function getPackages()
