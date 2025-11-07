@@ -58,7 +58,7 @@
                 		<td>
                 			<a href="{{ route('dashboard.users.single', $user->id) }}" data-toggle="tooltip" data-original-title="টেস্ট">{{ $user->name }}</a><span class="badge @if($user->role == 'admin') bg-success @elseif($user->role == 'manager') bg-warning @else bg-info @endif">{{ checkrole($user->role) }}</span>
                 			<br/>
-                			<small class="text-black-50">এনআইডি/জন্মসনদ: {{ $user->nid }}</small> 
+                			<small class="text-black-50">এনআইডি/জন্মসনদ: {{ $user->nid }}</small><br/>
                       <small class="text-black-50">মোবাইল: {{ $user->mobile }}</small> 
                 			<br/>
                       <small><span>যোগদান: {{ date('d F, Y h:i A', strtotime($user->created_at)) }}</span></small><br/>
