@@ -118,7 +118,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($certificates as $certificate)
+                                @forelse ($user->certificates as $certificate)
                                     <tr>
                                         <td>
                                             {{ checkcertificatetype($certificate->certificate_type) }}
