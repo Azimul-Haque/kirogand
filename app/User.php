@@ -30,7 +30,7 @@ class User extends Authenticatable
 
     public function certificates()
     {
-        return $this->hasMany(Certificate::class);
+        return $this->hasMany(Certificate::class, 'recipient_user_id');
     }
 
 
