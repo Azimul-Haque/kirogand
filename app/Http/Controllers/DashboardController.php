@@ -708,6 +708,13 @@ class DashboardController extends Controller
         return redirect()->back()->with('success', 'আপনার অফিস আপডেট করা হয়েছে!');
     }
 
+    public function getOfficeUsers()
+    {
+        $users = Package::all();
+        
+        return view('dashboard.packages.index')->withPackages($packages);
+    }
+
     public function getPackages()
     {
         $packages = Package::all();
