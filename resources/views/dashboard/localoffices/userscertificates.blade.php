@@ -78,10 +78,6 @@
                             <b><i class="fas fa-envelope mr-1 text-primary"></i> ইমেল</b> 
                             <a class="float-right text-dark"><?php echo $user->email ?? 'user@example.com'; ?></a>
                         </li>
-                        <li class="list-group-item">
-                            <b><i class="fas fa-map-marker-alt mr-1 text-primary"></i> স্থানীয় অফিস আইডি</b> 
-                            <a class="float-right text-dark"><?php echo $user->local_office_id ?? 'DHAKA-005'; ?></a>
-                        </li>
                     </ul>
 
                     <!-- অ্যাকশন বাটন (উদাহরণ) -->
