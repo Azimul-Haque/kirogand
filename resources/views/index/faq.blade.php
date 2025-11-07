@@ -3,53 +3,100 @@
 
 @section('third_party_stylesheets')
 	<style>
-		.policy-card {
-            margin-top: 1rem;
+        :root {
+            --primary-color: #1e40af; /* Deep Indigo Blue */
+            --light-bg: #f3f4f6; /* Light Gray Background */
+            --text-color: #2c3e50;
+            --accordion-header-bg: #fff;
+            --accordion-active-bg: #eef2ff; /* Very light blue for active state */
+            --border-radius: 0.75rem;
+        }
+        body {
+            font-family: 'Inter', 'Noto Sans Bengali', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.75;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 1.25rem;
+            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.1);
+            padding: 2rem;
+        }
+        .main-header {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .accordion-item {
+            border: 1px solid #e2e8f0;
             margin-bottom: 1rem;
-            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.1); /* Subtle blue shadow */
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: var(--border-radius) !important;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
         }
-        .toggle-group-bg {
-            background-color: #e5e7eb; /* Light gray background for the toggle pill */
-            border-radius: 50rem;
-            padding: 0.25rem;
-            display: inline-flex;
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+        .accordion-item:hover {
+            box-shadow: 0 4px 10px rgba(30, 64, 175, 0.1);
         }
-        .lang-toggle-btn {
-            border-radius: 50rem !important;
-            transition: all 0.25s ease-in-out;
+        .accordion-button {
+            font-size: 1.1rem;
             font-weight: 600;
-            border: none;
-            color: #4b5563; /* Medium gray for inactive state */
-            padding: 0.5rem 1.25rem;
-            white-space: nowrap; /* Prevent wrapping on small screens */
+            color: var(--text-color);
+            background-color: var(--accordion-header-bg);
+            border-radius: var(--border-radius) !important;
+            padding: 1rem 1.25rem;
+            text-align: left;
+            transition: background-color 0.3s, color 0.3s;
         }
-        .lang-toggle-btn.active {
-            background-color: var(--bs-primary) !important;
-            color: white !important;
-            box-shadow: 0 2px 5px rgba(30, 64, 175, 0.3);
-            transform: scale(1.02);
+        .accordion-button:not(.collapsed) {
+            color: var(--primary-color);
+            background-color: var(--accordion-active-bg);
+            border-bottom: 1px solid var(--primary-color);
+            box-shadow: none;
         }
-        .section-title {
-            color: var(--bs-primary);
-            border-bottom: 2px solid #bfdbfe; /* Lighter primary color border */
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(30, 64, 175, 0.25);
         }
-        .contact-item {
-            transition: all 0.3s;
-            border-left: 5px solid var(--bs-primary);
+        .accordion-body {
+            padding: 1.5rem 1.25rem;
+            background-color: #ffffff;
+            line-height: 1.6;
+            color: #4a5568;
         }
-        .contact-item:hover {
-            background-color: #eef2ff; /* Very light blue on hover */
-            transform: translateY(-2px);
+        .contact-info {
+            background-color: #eef2ff;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border: 1px dashed var(--primary-color);
         }
-        .policy-list li {
-            margin-bottom: 1rem;
-            padding-left: 0.5rem;
+        .contact-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
         }
-	</style>
+        .contact-link:hover {
+            color: #0f358f;
+        }
+        .list-unstyled li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 20px;
+        }
+        .list-unstyled li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
 @endsection
 
 @section('content')
