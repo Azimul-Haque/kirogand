@@ -52,7 +52,7 @@
                 @foreach($users as $user)
                 	<tr>
                 		<td>
-                			<a href="{{ route('dashboard.localoffice.users.certificates', $user->id) }}" data-toggle="tooltip" data-original-title="টেস্ট">{{ $user->name }}</a> <span class="badge @if($user->role == 'admin') bg-success @elseif($user->role == 'manager') bg-warning @else bg-info @endif">{{ checkrole($user->role) }}</span>
+                			<a href="{{ route('dashboard.localoffice.users.certificates', $user->id) }}" data-toggle="tooltip" data-original-title="সনদসমূহ দেখুন">{{ $user->name }}</a> <span class="badge @if($user->role == 'admin') bg-success @elseif($user->role == 'manager') bg-warning @else bg-info @endif">{{ checkrole($user->role) }}</span>
                 			<br/>
                 			<small class="text-black-50">এনআইডি/জন্মসনদ: {{ $user->nid }}</small><br/>
                       <small class="text-black-50">মোবাইল: {{ $user->mobile }}</small> 
@@ -62,7 +62,7 @@
                     </td>
                     <td>{{ bangla($user->certificates->count()) }} টি</td>
                     <td>
-                      <a href="{{ route('dashboard.localoffice.users.certificates', $user->id) }}" class="btn btn-info btn-sm" data-toggle="tooltip" data-original-title="টেস্ট">
+                      <a href="{{ route('dashboard.localoffice.users.certificates', $user->id) }}" class="btn btn-info btn-sm" data-toggle="tooltip" data-original-title="সনদসমূহ দেখুন">
                           <i class="fas fa-eye"></i>
                       </a>
                     </td>
