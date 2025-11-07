@@ -154,7 +154,7 @@
                                             @if (isset($heir['sub_heirs']) && is_array($heir['sub_heirs']) && count($heir['sub_heirs']) > 0)
                                                 <tr>
                                                     {{-- Colspan is 4 based on the parent table structure --}}
-                                                    <td colspan="4" class="p-0 border-0" style="width: 90%;">
+                                                    <td colspan="4" class="p-0 border-0" style="width: 70%;">
                                                         <div class="p-3 bg-light border-top border-bottom">
                                                             <strong class="text-sm text-primary d-block mb-1">সাব-ওয়ারিশগণের তালিকা (যার মাধ্যমে উত্তরাধিকার: {{ $heir['name'] ?? 'N/A' }})</strong>
                                                             <table class="table table-sm table-bordered mt-1 mb-0 border">
