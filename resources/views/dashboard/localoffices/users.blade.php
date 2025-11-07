@@ -100,6 +100,7 @@
                               }
                           }
                       }
+                      echo 'test';
                       @endphp
                     </td>
                 		<td align="right" width="15%">
