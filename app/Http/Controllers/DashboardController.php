@@ -738,7 +738,6 @@ class DashboardController extends Controller
                           ->orWhere('email', 'LIKE', "%$search%")
                           ->orWhere('mobile', 'LIKE', "%$search%")
                           ->orWhere('nid', 'LIKE', "%$search%")
-                          ->orWhere('onesignal_id', 'LIKE', "%$search%")
                           ->orderBy('id', 'desc')
                           ->count();
         $divisions = Division::all();
