@@ -606,6 +606,7 @@ class CertificateController extends Controller
                 $query->where(function ($q) use ($search, $matchingDbKeys) {
                     $q->whereHas('recipient', function ($qRecip) use ($search) {
                         $qRecip->where('name', 'LIKE', '%' . $search . '%');
+                        $qRecip->where('mobile', 'LIKE', '%' . $search . '%');
                     });
 
                     $q->orWhere('unique_serial', 'LIKE', '%' . $search . '%');
