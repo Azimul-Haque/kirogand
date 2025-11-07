@@ -194,6 +194,7 @@
                                         <h6>**সাব-ওয়ারিশের তালিকা** (ওয়ারিশ: <strong class="parent-heir-name">{{ $heir['name'] ?? 'নামবিহীন' }}</strong>)</h6>
                                         <table class="table table-sm table-striped sub-heir-table">
                                             <thead class="bg-secondary">
+                                                {{-- *** FIX: Ensure all columns are present for existing sub-heirs *** --}}
                                                 <tr>
                                                     <th>নাম</th>
                                                     <th>সম্পর্ক</th>
@@ -306,6 +307,7 @@
                 <h6>**সাব-ওয়ারিশের তালিকা** (ওয়ারিশ: <strong class="parent-heir-name">__INDEX__</strong>)</h6>
                 <table class="table table-sm table-striped sub-heir-table">
                     <thead class="bg-secondary">
+                        {{-- *** FIX: Ensure all columns are present in the JS template header *** --}}
                         <tr>
                             <th>নাম</th>
                             <th>সম্পর্ক</th>
@@ -440,7 +442,6 @@
         });
 
         // --- Attach Remove Listener to Pre-existing Sub-Heir Buttons ---
-        // FIX: Query for the button directly and pass it to the listener function.
         subHeirBody.querySelectorAll('.remove-subheir-button').forEach(button => {
              attachRemoveSubHeirListener(button);
         });
@@ -448,12 +449,9 @@
 
     /**
      * Attaches a remove listener directly to the remove button element.
-     * This fixes the 'addEventListener' of null error by ensuring we are attaching
-     * to a valid element found by querySelectorAll.
-     * * @param {HTMLElement} button The remove button element (must not be null).
+     * @param {HTMLElement} button The remove button element (must not be null).
      */
     function attachRemoveSubHeirListener(button) {
-        // We know 'button' is a valid element here.
         button.addEventListener('click', function() {
             // Find the closest ancestor row (<tr>) and remove it
             this.closest('.sub-heir-row').remove();
