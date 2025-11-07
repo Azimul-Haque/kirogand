@@ -1,5 +1,5 @@
 @extends('layouts.index')
-@section('title') ডিজিটাল নাগরিক - ব্যবহারের শর্তাবলি @endsection
+@section('title') ডিজিটাল নাগরিক - ব্যবহারের শর্তাবলি - Terms & Conditions @endsection
 
 @section('third_party_stylesheets')
 	<style>
