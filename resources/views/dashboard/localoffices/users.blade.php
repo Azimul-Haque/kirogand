@@ -63,18 +63,13 @@
                     <td></td>
                 		<td align="right" width="15%">
                       
-                      @if($user->is_active == 0)
+                      {{-- @if($user->is_active == 0)
                       <button type="button" class="btn btn-warning btn-sm edit-user-btn" data-toggle="modal" data-target="#actiavateUser{{ $user->id }}">
                         <i class="fas fa-toggle-on"></i>
                       </button>
                       @endif
                 			<button type="button" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#editUserModal{{ $user->id }}">
                 				<i class="fas fa-user-edit"></i>
-                			</button>
-
-
-                			{{-- <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteUserModal{{ $user->id }}">
-                				<i class="fas fa-user-minus"></i>
                 			</button> --}}
                 		</td>
                         {{-- Delete User Modal Code --}}
