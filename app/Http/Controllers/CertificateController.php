@@ -69,7 +69,7 @@ class CertificateController extends Controller
                 return redirect()->route('index.index');
             }
             if(isPackageExpired(Auth::user()->localOffice->package_expiry_date)) {
-                Session::flash('success', 'আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শেষ, প্যাকেজ কিনে সনদ তৈরি করুন।');
+                Session::flash('warning', 'আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শেষ, প্যাকেজ কিনে সনদ তৈরি করুন।');
                 return redirect()->route('dashboard.payments.office');
             }
         }
