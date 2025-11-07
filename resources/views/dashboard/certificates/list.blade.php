@@ -241,7 +241,7 @@
       });
       $("#certificateTypeFilter").change(function(e) {
           if($('#certificateTypeFilter').val() != '') {
-            var urltocall = 'https://bdhelpline.info/dashboard/hospitals' +  '/' + $('#certificateTypeFilter').val();
+            var urltocall = '{{ route('dashboard.certificates.list') }}' +  '/' + $('#certificateTypeFilter').val();
             location.href= urltocall;
           } else {
             $('#certificateTypeFilter').css({ "border": '#FF0000 2px solid'});
