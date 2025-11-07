@@ -88,7 +88,7 @@ use Illuminate\Support\Carbon;
       else if ($text == 'manager')
           return 'প্রতিনিধি';
       else if ($text == 'user')
-        return 'ব্যবহারকারী';
+        return 'নাগরিক';
       else
           return $text;
   }
