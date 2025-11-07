@@ -412,7 +412,7 @@ class DashboardController extends Controller
         }
 
         Session::flash('success', 'User updated successfully!');
-        return redirect()->route('dashboard.users');
+        return redirect()->back();
     }
 
     protected function syncUserAuthority(User $user, Request $request): void
