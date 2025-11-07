@@ -579,7 +579,7 @@ class CertificateController extends Controller
         $certificateTypeMap = [
             'ওয়ারিশ সনদ' => 'heir-certificate',
             'নাগরিকত্ব সনদ' => 'citizen-certificate',
-            'স্থায়ী বাসিন্দা মর্মে সনদ' => 'permanent-resident',
+            'স্থাইয়ী বাসিন্দা মর্মে সনদ' => 'permanent-resident',
             'একই ব্যক্তি মর্মে প্রত্যয়ন' => 'same-person',
             'চারিত্রিক সনদপত্র' => 'character-certificate',
             'অবিবাহিত সনদপত্র' => 'unmarried-certificate',
