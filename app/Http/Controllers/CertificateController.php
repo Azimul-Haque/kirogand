@@ -628,6 +628,7 @@ class CertificateController extends Controller
                     });
 
                     $q->orWhere('unique_serial', 'LIKE', '%' . $search . '%');
+                    $q->orWhere('data_payload', 'LIKE', '%' . $search . '%');
                     
                     if (!empty($matchingDbKeys)) {
                         $q->orWhereIn('certificate_type', $matchingDbKeys);
