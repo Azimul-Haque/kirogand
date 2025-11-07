@@ -1,5 +1,5 @@
 @extends('layouts.index')
-@section('title') ডিজিটাল নাগরিক - ক্রয় ও ফেরত নীতি ২০২৩ | Purchase & Refund Policy @endsection
+@section('title') ডিজিটাল নাগরিক - ক্রয় ও ফেরত নীতি - Purchase & Refund Policy @endsection
 
 @section('third_party_stylesheets')
 
