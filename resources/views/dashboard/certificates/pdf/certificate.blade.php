@@ -132,7 +132,7 @@
                         @if (isset($heir['sub_heirs']) && is_array($heir['sub_heirs']) && count($heir['sub_heirs']) > 0)
                             <tr>
                                 <td colspan="6" class="sub-heir-row">
-                                    <span class="sub-heir-header">সাব-ওয়ারিশের তালিকা (মূল ওয়ারিশ: {{ $heir['name'] ?? 'N/A' }})</span>
+                                    <span class="sub-heir-header" style="font-weight: bold;">সাব-ওয়ারিশের তালিকা (মূল ওয়ারিশ: {{ $heir['name'] ?? 'N/A' }})</span>
                                     <table class="sub-heir-table">
                                         <thead>
                                             <tr>
