@@ -176,7 +176,7 @@
                                 <td>
                                     <div class="btn-group">
                                         {{-- Secondary Heir Button (NEW) --}}
-                                        <button type="button" class="btn btn-info btn-sm add-subheir-button" title="সাব-ওয়ারিশ যোগ করুন">
+                                        <button type="button" class="btn btn-info btn-sm add-subheir-button" data-toggle="tooltip" data-original-title="সাব-ওয়ারিশ যোগ করুন">
                                             <i class="fas fa-sitemap"></i>
                                         </button>
                                         {{-- Remove Button (Existing) --}}
