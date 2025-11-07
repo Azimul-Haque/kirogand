@@ -11,16 +11,8 @@
             --accordion-active-bg: #eef2ff; /* Very light blue for active state */
             --border-radius: 0.75rem;
         }
-        body {
-            font-family: 'Inter', 'Noto Sans Bengali', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-color);
-            line-height: 1.75;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-        }
+        
         .faq-container {
-            max-width: 900px;
             margin: 0 auto;
             background-color: #ffffff;
             border-radius: 1.25rem;
