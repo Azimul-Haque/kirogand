@@ -53,7 +53,7 @@
 
 @if(Auth::user()->role == 'manager')
 <li class="nav-item">
-    <a href="{{ route('dashboard.localoffice.users') }}" class="nav-link {{ Request::is('dashboard/localoffice/users') ? 'active' : '' }} {{ Request::is('dashboard/certificates-list/*') ? 'active' : '' }}">
+    <a href="{{ route('dashboard.localoffice.users') }}" class="nav-link {{ Request::is('dashboard/localoffice/users') ? 'active' : '' }} {{ Request::is('dashboard/localoffice/users/*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-users"></i>
         <p>নিবন্ধনকৃত ব্যবহারকারীগণ</p>
     </a>
