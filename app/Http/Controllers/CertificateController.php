@@ -577,7 +577,7 @@ class CertificateController extends Controller
         $searchTerm = $search;
 
         $certificateTypeMap = [
-            'ওয়ারিশ সনদ' => 'heir-certificate',
+            'ওয়ারিশ সনদ' => 'heir-certificate',
             'নাগরিকত্ব সনদ' => 'citizen-certificate',
             'স্থায়ী বাসিন্দা মর্মে সনদ' => 'permanent-resident',
             'একই ব্যক্তি মর্মে প্রত্যয়ন' => 'same-person',
