@@ -55,7 +55,7 @@
 <li class="nav-item">
     <a href="{{ route('dashboard.certificates.list') }}" class="nav-link {{ Request::is('dashboard/certificates-list') ? 'active' : '' }} {{ Request::is('dashboard/certificates-list/*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-users"></i>
-        <p>সনদ তালিকা</p>
+        <p>নিবন্ধনকৃত ব্যবহারকারীগণ</p>
     </a>
 </li>
 @endif
