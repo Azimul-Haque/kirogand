@@ -56,7 +56,7 @@
                     <!-- প্রোফাইল শিরোনাম/ছবির স্থান -->
                     <div class="text-center">
                         <div class="profile-image-placeholder">
-                            <i class="fas fa-user-circle"></i>
+                            <i class="fas fa-user-circle text-primary"></i>
                         </div>
                         <h3 class="profile-username text-center font-weight-bold">
                             <?php echo $user->name ?? 'জন ডো'; ?>
