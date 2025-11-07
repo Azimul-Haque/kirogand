@@ -118,15 +118,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- PHP Loop placeholder for $user->certificates -->
-                                <?php 
-                                // Mock Certificate Data for display
-                                $certificates = [
-                                    (object)['id' => 101, 'type' => 'জন্ম নিবন্ধন', 'issue_date' => '2020-05-15', 'status' => 'Issued', 'certificate_id' => 'BR-5678-20'],
-                                    (object)['id' => 102, 'type' => 'ডোমিসাইল সার্টিফিকেট', 'issue_date' => '2022-01-20', 'status' => 'Pending Review', 'certificate_id' => 'DC-1234-22'],
-                                    (object)['id' => 103, 'type' => 'চারিত্রিক সনদপত্র', 'issue_date' => '2023-11-01', 'status' => 'Issued', 'certificate_id' => 'CC-9012-23'],
-                                ];
-                                ?>
+                                
                                 
                                 <?php foreach ($certificates as $cert): ?>
                                 <tr>
