@@ -61,9 +61,6 @@
                       {{ $user->localOffice != null ? $user->localOffice->name_bn : '' }}
                     </td>
                     <td>
-
-                      
-
                       @php
                         $userAuthority = $user->authorities->first();
 
