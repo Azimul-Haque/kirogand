@@ -53,6 +53,15 @@
 
 @if(Auth::user()->role == 'manager')
 <li class="nav-item">
+    <a href="{{ route('dashboard.certificates.list') }}" class="nav-link {{ Request::is('dashboard/certificates-list') ? 'active' : '' }} {{ Request::is('dashboard/certificates-list/*') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-list"></i>
+        <p>সনদ তালিকা</p>
+    </a>
+</li>
+@endif
+
+@if(Auth::user()->role == 'manager')
+<li class="nav-item">
     <a href="{{ route('dashboard.payments.office') }}" class="nav-link {{ Request::is('dashboard/payments/office/payment') ? 'active' : '' }} {{ Request::is('dashboard/payments/office/payment/*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-coins"></i>
         <p>প্যাকেজ নবায়ন</p>
