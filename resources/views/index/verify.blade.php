@@ -152,7 +152,7 @@
 
                                             {{-- Nested Sub-Heir Section --}}
                                             @if (isset($heir['sub_heirs']) && is_array($heir['sub_heirs']) && count($heir['sub_heirs']) > 0)
-                                                <tr style="padding-right: 70px;">
+                                                <tr style="margin-right: 70px;">
                                                     {{-- Colspan is 4 based on the parent table structure --}}
                                                     <td colspan="4" class="p-0 border-0">
                                                         <div class="p-3 bg-light border-top border-bottom">
