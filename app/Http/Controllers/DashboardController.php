@@ -407,6 +407,7 @@ class DashboardController extends Controller
         }
         $user->save();
 
+        if($request->)
         $this->syncUserAuthority($user, $request);
 
         Session::flash('success', 'User updated successfully!');
