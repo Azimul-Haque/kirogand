@@ -113,7 +113,7 @@
                                     <th>সনদপত্রের ধরণ</th>
                                     <th>সনদ আইডি</th>
                                     <th>অবস্থা</th>
-                                    <th style="width: 120px">পদক্ষেপ</th>
+                                    <th style="width: 25%;">পদক্ষেপ</th>
                                 </tr>
                             </thead>
                             <tbody>
