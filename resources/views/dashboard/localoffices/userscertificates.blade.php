@@ -5,12 +5,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-datepicker.min.css') }}">
     <style>
-        /* General Body Styling to match AdminLTE look */
-        body {
-            background-color: #f4f6f9; /* Light grey background */
-            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            padding: 20px;
-        }
         /* Custom Card Styling for a professional, AdminLTE feel */
         .card {
             border-radius: 0.25rem;
