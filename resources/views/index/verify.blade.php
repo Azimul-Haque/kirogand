@@ -157,7 +157,7 @@
                                                     <td colspan="4" class="p-0 border-0">
                                                         <div class="p-2 bg-light border-top border-bottom">
                                                             <strong class="text-sm text-primary d-block mb-1">উপ-ওয়ারিশের তালিকা (যার মাধ্যমে উত্তরাধিকার: {{ $heir['name'] ?? 'N/A' }})</strong>
-                                                            <table class="table table-sm table-striped mt-1 mb-0 border">
+                                                            <table class="table table-sm table-bordered mt-1 mb-0 border">
                                                                 <thead>
                                                                     <tr class="bg-secondary text-white">
                                                                         <th style="width: 10%;">নং</th>
