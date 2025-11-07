@@ -128,7 +128,7 @@
                         </ul>
 
                         @if($certificate->certificate_type == 'heir-certificate')
-                        <!-- HEIR LIST SECTION (Bootstrap Table) -->
+                            <!-- HEIR LIST SECTION (Bootstrap Table) -->
                             <h6 class="text-lg font-bold text-gray-800 mb-3 border-bottom pb-2">বৈধ উত্তরাধিকারীদের তালিকা</h6>
                             <div id="heirsListContainer" class="table-responsive">
                                 <table class="table table-responsive table-bordered">
@@ -142,15 +142,49 @@
                                     </thead>
                                     <tbody>
                                         @forelse ($heirs as $index => $heir)
+                                            {{-- Primary Heir Row --}}
                                             <tr>
                                                 <td>{{ bangla($index + 1) }}</td>
                                                 <td>{{ $heir['name'] ?? '--' }}</td>
                                                 <td>{{ $heir['relation'] ?? '--' }}</td>
                                                 <td>{{ $heir['remark'] ?? '--' }}</td>
                                             </tr>
+
+                                            {{-- Nested Sub-Heir Section --}}
+                                            @if (isset($heir['sub_heirs']) && is_array($heir['sub_heirs']) && count($heir['sub_heirs']) > 0)
+                                                <tr>
+                                                    {{-- Colspan is 4 based on the parent table structure --}}
+                                                    <td colspan="4" class="p-0 border-0">
+                                                        <div class="p-2 bg-light border-top border-bottom">
+                                                            <strong class="text-sm text-primary d-block mb-1">উপ-ওয়ারিশের তালিকা (যার মাধ্যমে উত্তরাধিকার: {{ $heir['name'] ?? 'N/A' }})</strong>
+                                                            <table class="table table-sm table-striped mt-1 mb-0 border">
+                                                                <thead>
+                                                                    <tr class="bg-secondary text-white">
+                                                                        <th style="width: 10%;">নং</th>
+                                                                        <th style="width: 30%;">নাম</th>
+                                                                        <th style="width: 25%;">সম্পর্ক</th>
+                                                                        <th style="width: 35%;">মন্তব্য</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @foreach ($heir['sub_heirs'] as $sub_index => $sub_heir)
+                                                                        <tr>
+                                                                            <td>{{ bangla($sub_index + 1) }}</td>
+                                                                            <td>{{ $sub_heir['name'] ?? '--' }}</td>
+                                                                            <td>{{ $sub_heir['relation'] ?? '--' }}</td>
+                                                                            <td>{{ $sub_heir['remark'] ?? '--' }}</td>
+                                                                        </tr>
+                                                                    @endforeach
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            @endif
                                         @empty
                                             <tr>
-                                                <td colspan="6" style="color: red;">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
+                                                {{-- Changed colspan to 4 to match the current header structure --}}
+                                                <td colspan="4" style="color: red;">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
                                             </tr>
                                         @endforelse
                                     </tbody>
