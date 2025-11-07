@@ -2,7 +2,83 @@
 @section('title') ডিজিটাল নাগরিক - ক্রয় ও ফেরত নীতি - Purchase & Refund Policy @endsection
 
 @section('third_party_stylesheets')
+<style>
+        :root {
+            --primary-color: #1e40af; /* Deep Indigo Blue */
+            --light-bg: #f8fafc; /* Very light gray/blue */
+            --text-color: #2c3e50; /* Darker text for readability */
+            --card-shadow: 0 6px 16px rgba(30, 64, 175, 0.15); /* Stronger shadow */
+        }
+        body {
+            font-family: 'Inter', 'Noto Sans Bengali', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.75;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            font-size: 16px;
+        }
+        .policy-container {
+            max-width: 900px;
+            background-color: #ffffff;
+            border-radius: 1.25rem; /* More rounded corners */
+            box-shadow: var(--card-shadow);
+        }
+        .section-header {
+            color: var(--primary-color);
+            border-bottom: 3px solid #bfdbfe;
+            padding-bottom: 0.75rem;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        .section-header .icon {
+            margin-right: 0.5rem;
+            font-size: 1.2em;
+        }
+        /* ATTRACTIVENESS: Custom bullet point with checkmark */
+        .policy-point {
+            margin-bottom: 1rem;
+            padding: 0.25rem 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        .policy-point::before {
+            content: "\2713"; /* Unicode Checkmark */
+            color: #059669; /* Green checkmark */
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
 
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        .contact-box {
+            background-color: #eef2ff; /* Lighter blue accent */
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-top: 3rem;
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 4px 8px rgba(30, 64, 175, 0.2);
+        }
+        .contact-box a {
+            transition: color 0.3s;
+        }
+        .contact-box a:hover {
+            color: #0f358f !important;
+        }
+        .lang-separator {
+            border-color: #bfdbfe;
+            opacity: 1;
+            margin: 4rem 0;
+        }
+        strong {
+            font-weight: 700; /* Ensure bold is strong */
+        }
+    </style>
 @endsection
 
 @section('content')
