@@ -94,7 +94,7 @@
                               <td>
                                   {{-- Assuming the recipient's name is in the related User model or data_payload --}}
                                   {{ $certificate->recipient->name ?? ($certificate->data_payload['applicant']['name'] ?? 'N/A') }}<br/>
-                                  {{ $certificate->recipientUser->name ?? ($certificate->data_payload['applicant']['name'] ?? 'N/A') }}
+                                  {{ $certificate->recipient->mobile ?? ($certificate->data_payload['applicant']['name'] ?? 'N/A') }}
                               </td>
                               <td>
                                   @if ($certificate->status == 1)
