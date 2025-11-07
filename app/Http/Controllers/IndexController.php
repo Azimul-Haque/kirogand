@@ -100,10 +100,10 @@ class IndexController extends Controller
     {
         return view('index.userguidelines');
     }
-    
-    public function getUserGuidelines()
+
+    public function getFaq()
     {
-        return view('index.userguidelines');
+        return view('index.faq');
     }
 
     public function termsAndConditions()
