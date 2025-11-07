@@ -593,7 +593,9 @@ class CertificateController extends Controller
                                    ->orderBy('id', 'desc')
                                    ->paginate(15);
 
-        return view('dashboard.certificates.list')->withCertificates($certificates);
+        return view('dashboard.certificates.list')
+                            ->withCertificatescount($certificatescount)
+                            ->withCertificates($certificates);
     }
 
     public function showCertificateQr($unique_serial)
