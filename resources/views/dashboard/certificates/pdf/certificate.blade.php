@@ -465,7 +465,7 @@
         width: 99%;
         margin: 5px auto;
         border-collapse: collapse;
-        font-size: 12px; /* Smaller font for nesting */
+        font-size: 11.5px; /* Smaller font for nesting */
     }
     .sub-heir-table th, .sub-heir-table td {
         border: 1px solid #aaa;
