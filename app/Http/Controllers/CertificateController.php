@@ -586,10 +586,10 @@ class CertificateController extends Controller
             'মৃত্যু সনদ' => 'death-certificate',
             'ভোটার এলাকা স্থানান্তর সনদ' => 'voter-area-change',
             'ভূমিহীন প্রত্যয়ন' => 'landless-certificate',
-            'মাসিক আয়ের প্রত্যয়ন' => 'monthly-income',
-            'বাৎসরিক আয়ের প্রত্যয়ন' => 'yearly-income',
-            'নতুন ভোটার প্রত্যয়ন' => 'new-voter',
-            'আর্থিক অস্বচ্ছলতার প্রত্যয়ন' => 'financial-insolvency',
+            'মাসিক আয়ের প্রত্যয়ন' => 'monthly-income',
+            'বাৎসরিক আয়ের প্রত্যয়ন' => 'yearly-income',
+            'নতুন ভোটার প্রত্যয়ন' => 'new-voter',
+            'আর্থিক অস্বচ্ছলতার প্রত্যয়ন' => 'financial-insolvency',
         ];
 
         $certificatescount = Certificate::with('recipient')
