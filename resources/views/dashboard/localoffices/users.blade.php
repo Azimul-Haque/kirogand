@@ -61,7 +61,6 @@
                       {{ $user->localOffice != null ? $user->localOffice->name_bn : '' }}
                     </td>
                     <td></td>
-                		<td></td>
                         {{-- Delete User Modal Code --}}
                         {{-- Delete User Modal Code --}}
                         <!-- Modal -->
