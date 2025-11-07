@@ -623,8 +623,8 @@ class CertificateController extends Controller
             ->count();
 
             $certificates = Certificate::with('recipient')
-            ->where('local_office_id', Auth::user()->local_office_id)
-            ->when($searchTerm, function ($query, $search) use ($certificateTypeMap) {
+                ->where('local_office_id', Auth::user()->local_office_id)
+                ->when($searchTerm, function ($query, $search) use ($certificateTypeMap) {
                 
                 $matchingDbKeys = [];
                 foreach ($certificateTypeMap as $banglaName => $dbKey) {
