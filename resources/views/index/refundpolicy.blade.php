@@ -82,7 +82,7 @@
                 ক্রয় ও ফেরত নীতি
             </h1>
             <p class="lead text-muted">ডি-নাগরিক (D-Nagorik)-এর কোর্স ও পরিষেবা সংক্রান্ত নীতিমালা</p>
-            <p class="small text-secondary">কার্যকরী তারিখ: <span class="fw-semibold">জুলাই ০১, ২০২২</span></p>
+            <p class="small text-secondary">কার্যকরী তারিখ: <span class="fw-semibold">নভেম্বর ০১, ২০২৫</span></p>
         </header>
 
 
