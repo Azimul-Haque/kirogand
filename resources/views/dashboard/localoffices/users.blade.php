@@ -56,7 +56,7 @@
                 @foreach($users as $user)
                 	<tr>
                 		<td>
-                			<a href="{{ route('dashboard.users.single', $user->id) }}" data-toggle="tooltip" data-original-title="টেস্ট">{{ $user->name }}</a><span class="badge @if($user->role == 'admin') bg-success @elseif($user->role == 'manager') bg-warning @else bg-info @endif">{{ checkrole($user->role) }}</span>
+                			<a href="{{ route('dashboard.users.single', $user->id) }}" data-toggle="tooltip" data-original-title="টেস্ট">{{ $user->name }}</a> <span class="badge @if($user->role == 'admin') bg-success @elseif($user->role == 'manager') bg-warning @else bg-info @endif">{{ checkrole($user->role) }}</span>
                 			<br/>
                 			<small class="text-black-50">এনআইডি/জন্মসনদ: {{ $user->nid }}</small><br/>
                       <small class="text-black-50">মোবাইল: {{ $user->mobile }}</small> 
