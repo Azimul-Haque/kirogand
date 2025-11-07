@@ -740,7 +740,7 @@ class DashboardController extends Controller
                           ->orWhere('nid', 'LIKE', "%$search%")
                           ->orderBy('id', 'desc')
                           ->count();
-        $divisions = Division::all();
+                          
         $localoffices = LocalOffice::all();
         $users = User::where('name', 'LIKE', "%$search%")
                      ->orWhere('email', 'LIKE', "%$search%")
