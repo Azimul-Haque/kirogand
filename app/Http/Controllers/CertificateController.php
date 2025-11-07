@@ -595,6 +595,49 @@ class CertificateController extends Controller
 
         $searchTerm = $search;
 
+        $certificateTypeMap = [
+            'ওয়ারিশ সনদ' => 'heir-certificate',
+            'নাগরিকত্ব সনদ' => 'citizen-certificate',
+            'স্থায়ী বাসিন্দা মর্মে সনদ' => 'permanent-resident',
+            'একই ব্যক্তি মর্মে প্রত্যয়ন' => 'same-person',
+            'চারিত্রিক সনদপত্র' => 'character-certificate',
+            'অবিবাহিত সনদপত্র' => 'unmarried-certificate',
+            'মৃত্যু সনদ' => 'death-certificate',
+            'ভোটার এলাকা স্থানান্তর সনদ' => 'voter-area-change',
+            'ভূমিহীন প্রত্যয়ন' => 'landless-certificate',
+            'মাসিক আয়ের প্রত্যয়ন' => 'monthly-income',
+            'বাৎসরিক আয়ের প্রত্যয়ন' => 'yearly-income',
+            'নতুন ভোটার প্রত্যয়ন' => 'new-voter',
+            'আর্থিক অস্বচ্ছলতার প্রত্যয়ন' => 'financial-insolvency',
+        ];
+
+        $certificates = Certificate::with('recipient')
+            ->where('local_office_id', Auth::user()->local_office_id)
+            ->when($searchTerm, function ($query, $search) use ($certificateTypeMap) {
+                
+                $matchingDbKeys = [];
+                foreach ($certificateTypeMap as $banglaName => $dbKey) {
+                    if (mb_stripos($banglaName, $search) !== false) {
+                        $matchingDbKeys[] = $dbKey;
+                    }
+                }
+                
+                $query->where(function ($q) use ($search, $matchingDbKeys) {
+
+                    $q->whereHas('recipient', function ($qRecip) use ($search) {
+                        $qRecip->where('name', 'LIKE', '%' . $search . '%');
+                    });
+                    
+                    if (!empty($matchingDbKeys)) {
+                        $q->orWhereIn('certificate_type', $matchingDbKeys);
+                    }
+
+                    $q->orWhere('certificate_type', 'LIKE', '%' . $search . '%');
+                });
+            })
+            ->orderBy('id', 'desc')
+            ->paginate(15)
+
         $certificates = Certificate::with('recipient')
             ->where('local_office_id', Auth::user()->local_office_id)
             ->when($searchTerm, function ($query, $search) {
