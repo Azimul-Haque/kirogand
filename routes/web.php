@@ -150,7 +150,7 @@ Route::get('/dashboard/certificates/print/{unique_serial}', 'CertificateControll
 Route::get('/dashboard/certificates/download/{unique_serial}', 'CertificateController@downloadCertificate')->name('dashboard.certificates.download');
 
 Route::get('/dashboard/certificates-list', 'CertificateController@getCertificateList')->name('dashboard.certificates.list');
-Route::get('/dashboard/certificates-list', 'CertificateController@getCertificateList')->name('dashboard.certificates.list');
+Route::get('/dashboard/certificates-list/{search}', 'CertificateController@getCertificateListSearch')->name('dashboard.certificates.list');
 // Certificate routes are here
 // Certificate routes are here
 // Certificate routes are here
