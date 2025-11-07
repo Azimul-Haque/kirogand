@@ -110,7 +110,7 @@ Route::post('/dashboard/users/{id}/single/sms', 'DashboardController@sendSingleS
 Route::get('/dashboard/users/{id}/activate', 'DashboardController@activateUser')->name('dashboard.users.activate');
 
 // office dashboard users
-Route::get('/dashboard/users/{id}/activate', 'DashboardController@getOfficeUsers')->name('dashboard.office.users');
+Route::get('/dashboard/office/users', 'DashboardController@getOfficeUsers')->name('dashboard.office.users');
 
 Route::get('/dashboard/local-offices', 'DashboardController@getLocalOffices')->name('dashboard.local-offices');
 Route::get('/dashboard/local-offices/{search}', 'DashboardController@getLocalOfficesSearch')->name('dashboard.local-offices.search');
