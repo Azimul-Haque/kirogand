@@ -627,6 +627,9 @@ class CertificateController extends Controller
                     $q->whereHas('recipient', function ($qRecip) use ($search) {
                         $qRecip->where('name', 'LIKE', '%' . $search . '%');
                     });
+
+                    
+                    $q->orWhere('certificate_type', 'LIKE', '%' . $search . '%');
                     
                     if (!empty($matchingDbKeys)) {
                         $q->orWhereIn('certificate_type', $matchingDbKeys);
