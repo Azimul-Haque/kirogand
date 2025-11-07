@@ -118,7 +118,105 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                @forelse ($certificates as $certificate)
+                                    <tr>
+                                        <td>
+                                            {{ checkcertificatetype($certificate->certificate_type) }}
+                                        </td>
+                                        <td>
+                                            <strong>{{ $certificate->unique_serial }}</strong>
+                                        </td>
+                                        <td>
+                                            {{-- Assuming the recipient's name is in the related User model or data_payload --}}
+                                            {{ $certificate->recipientUser->name ?? ($certificate->data_payload['applicant']['name'] ?? 'N/A') }}
+                                        </td>
+                                        <td>
+                                            @if ($certificate->status == 1)
+                                                <span class="badge badge-success">অনুমোদিত</span>
+                                            @elseif ($certificate->status == 0)
+                                                <span class="badge badge-warning">ড্রাফট / অপেক্ষমাণ</span>
+                                            @else
+                                                <span class="badge badge-danger">বাতিল</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            {{ $certificate->issued_at ? \Carbon\Carbon::parse($certificate->issued_at)->format('d-m-Y') : 'N/A' }}
+                                        </td>
+                                        <td>
+                                          <a href="{{ route('dashboard.certificates.draft', $certificate->unique_serial) }}" class="btn btn-info btn-sm" data-toggle="tooltip" title="দেখুন/ড্রাফট">
+                                              <i class="fas fa-eye"></i>
+                                          </a>
+                                          <a href="{{ route('dashboard.certificates.edit', $certificate->unique_serial) }}" class="btn btn-warning btn-sm" data-toggle="tooltip" title="সংশোধন করুন">
+                                              <i class="fas fa-edit"></i> এডিট
+                                          </a>
+
+                                          @if ($certificate->status == 1)
+                                              <a href="{{ route('dashboard.certificates.print', $certificate->unique_serial) }}" id="pulseThis{{ $certificate->id }}" class="btn btn-primary btn-sm" target="_blank" data-toggle="tooltip" title="প্রিন্ট করুন">
+                                                  <i class="fas fa-print"></i> প্রিন্ট
+                                              </a>
+                                              <a href="{{ route('dashboard.certificates.download', $certificate->unique_serial) }}" class="btn btn-success btn-sm" data-toggle="tooltip" title="সনদ ডাউনলোড করুন">
+                                                  <i class="fas fa-download"></i>
+                                              </a>
+                                          @else
+                                            <form action="{{ route('dashboard.certificates.approve', $certificate->id) }}" id="approveForm{{ $certificate->id }}" method="POST" style="display:inline;">
+                                                @csrf
+                                                <button type="button" class="btn btn-success btn-sm" onclick="return confirmSubmission(event, {{ $certificate->id }});" data-toggle="tooltip" title="অনুমোদন করুন">
+                                                    <i class="fas fa-check"></i> অনুমোদন
+                                                </button>
+                                            </form>
+                                            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+                                            <script type="text/javascript">
+                                              const ToastAprv = Swal.mixin({
+                                                toast: false,
+                                                position: 'center',
+                                                showConfirmButton: true,
+                                                showCancelButton: true,
+                                                timerProgressBar: true,
+                                                didOpen: (toast) => {
+                                                  toast.addEventListener('mouseenter', Swal.stopTimer)
+                                                  toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                                }
+                                              })
+
+                                              function confirmSubmission(event, id) {
+                                                  event.preventDefault(); // Prevent default form submission
+
+                                                  Swal.fire({
+                                                      title: 'আপনি কি নিশ্চিত?',
+                                                      text: 'এই সনদটি অনুমোদন করা হবে।',
+                                                      icon: 'warning',
+                                                      showCancelButton: true,
+                                                      confirmButtonText: 'অনুমোদন করুন',
+                                                      cancelButtonText: 'ফিরে যান',
+                                                      reverseButtons: true
+                                                  }).then((result) => {
+                                                      if (result.isConfirmed) {
+                                                          // If confirmed, manually submit the form
+                                                          document.getElementById('approveForm' + id).submit();
+                                                      }
+                                                  });
+
+                                                  return false; // Prevent default submission initially
+                                              }
+                                            </script>
+                                          @endif
+                                          
+
+                                          {{-- Delete Button (Example using a form for DELETE method) --}}
+                                          {{-- <form action="{{ route('dashboard.certificates.destroy', $certificate->id) }}" method="POST" style="display:inline;">
+                                              @csrf
+                                              @method('DELETE')
+                                              <button type="submit" class="btn btn-danger" title="ডিলেট" onclick="return confirm('আপনি কি নিশ্চিত? এই তথ্য স্থায়ীভাবে মুছে ফেলা হবে।')">
+                                                  <i class="fas fa-trash"></i>
+                                              </button>
+                                          </form> --}}
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="7" class="text-center">কোনো সনদপত্র পাওয়া যায়নি।</td>
+                                    </tr>
+                                @endforelse
                                 
                                 <?php foreach ($certificates as $cert): ?>
                                 <tr>
