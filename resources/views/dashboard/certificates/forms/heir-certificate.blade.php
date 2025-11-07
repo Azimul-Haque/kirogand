@@ -236,7 +236,7 @@
                                                                     placeholder="যেমন: নাবালক" value="{{ $sub_heir['remark'] ?? '' }}">
                                                             </td>
                                                             <td>
-                                                                <button type="button" class="btn btn-danger btn-xs remove-subheir-button" title="ডিলেট করুন">
+                                                                <button type="button" class="btn btn-danger btn-xs remove-subheir-button" title="ডিলেট করুন" data-toggle="tooltip" data-original-title="সাব-ওয়ারিশ যোগ করুন">
                                                                     <i class="fas fa-times"></i>
                                                                 </button>
                                                             </td>
