@@ -111,9 +111,9 @@
                             <thead>
                                 <tr>
                                     <th>সনদপত্রের ধরণ</th>
-                                    <th>সনদ আইডিইস্যুর তারিখ</th>
                                     <th>সনদ আইডি</th>
                                     <th style="width: 150px">অবস্থা</th>
+                                    <th>ইস্যুর তারিখ</th>
                                     <th style="width: 120px">পদক্ষেপ</th>
                                 </tr>
                             </thead>
