@@ -724,7 +724,7 @@ class DashboardController extends Controller
                         ->withUsers($users);
     }
 
-    public function getLocalOfficeUsersSearch()
+    public function getLocalOfficeUsersSearch($search)
     {
         $userscount = User::where('local_office_id', Auth::user()->local_office_id)
                      ->where('role', 'user')
