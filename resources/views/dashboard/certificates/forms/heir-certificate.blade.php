@@ -49,7 +49,7 @@
             $html .= '<td><input type="text" class="form-control form-control-sm" name="heirs_data[' . $index . '][sub_heirs][' . $sub_index . '][id_data]" placeholder="এনআইডি/জন্ম নিবন্ধন" value="' . ($sub_heir['id_data'] ?? '') . '"></td>';
             $html .= '<td><input type="text" class="form-control form-control-sm" name="heirs_data[' . $index . '][sub_heirs][' . $sub_index . '][dob]" placeholder="জন্মতারিখ" value="' . ($sub_heir['dob'] ?? '') . '"></td>';
             $html .= '<td><input type="text" class="form-control form-control-sm" name="heirs_data[' . $index . '][sub_heirs][' . $sub_index . '][remark]" placeholder="যেমন: নাবালক" value="' . ($sub_heir['remark'] ?? '') . '"></td>';
-            $html .= '<td><button type="button" class="btn btn-danger btn-sm remove-subheir-button" data-toggle="tooltip" title="ডিলেট করুন"><i class="fas fa-times"></i></button></td>';
+            $html .= '<td><button type="button" class="btn btn-danger btn-sm remove-subheir-button" data-toggle="tooltip" data-original-title="ডিলেট করুন"><i class="fas fa-times"></i></button></td>';
             $html .= '</tr>';
         }
 
