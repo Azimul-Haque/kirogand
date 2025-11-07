@@ -62,7 +62,6 @@
                             <?php echo $user->name ?? 'নাম'; ?>
                         </h3>
                         <p class="text-muted text-center">নাগরিক</p>
-                        <hr>
                     </div>
 
                     <!-- ব্যবহারকারীর বিবরণী তালিকা -->
