@@ -733,8 +733,8 @@ class DashboardController extends Controller
                      ->where('role', 'user')
                      ->paginate(15);
         $userscount = User::where('local_office_id', Auth::user()->local_office_id)
-                     ->where('role', 'user')
-                     ->where('name', 'LIKE', "%$search%")
+                          ->where('role', 'user')
+                          ->where('name', 'LIKE', "%$search%")
                           ->orWhere('email', 'LIKE', "%$search%")
                           ->orWhere('mobile', 'LIKE', "%$search%")
                           ->orWhere('nid', 'LIKE', "%$search%")
