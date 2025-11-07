@@ -553,6 +553,9 @@ class CertificateController extends Controller
             }
         }
 
+        $certificatescount = Certificate::where('local_office_id', Auth::user()->local_office_id)
+                                   ->orderBy('id', 'desc')
+                                   ->count();
         $certificates = Certificate::where('local_office_id', Auth::user()->local_office_id)
                                    ->orderBy('id', 'desc')
                                    ->paginate(15);
