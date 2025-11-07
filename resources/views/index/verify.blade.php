@@ -160,7 +160,7 @@
                                                             <table class="table table-sm table-bordered mt-1 mb-0 border" style="width: 90%; margin: 0 auto;">
                                                                 <thead>
                                                                     <tr class="bg-secondary text-white">
-                                                                        <th style="width: 10%;">নং</th>
+                                                                        <th style="width: 10%;">ক্রমিক নং</th>
                                                                         <th style="width: 40%;">নাম</th>
                                                                         <th style="width: 25%;">সম্পর্ক</th>
                                                                         <th style="width: 25%;">মন্তব্য</th>
