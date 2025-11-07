@@ -62,7 +62,6 @@
                       <small class="text-black-50">মোবাইল: {{ $user->mobile }}</small> 
                 		</td>
                     <td>
-                      {{ $user->designation }}<br/>
                       {{ $user->localOffice != null ? $user->localOffice->name_bn : '' }}
                     </td>
                     <td>
