@@ -105,7 +105,7 @@
                                   @endif
                               </td>
                               <td>
-                                  {{ $certificate->issued_at ? \Carbon\Carbon::parse($certificate->issued_at)->format('d-m-Y') : 'N/A' }}
+                                  {{ $certificate->issued_at ? bangla(\Carbon\Carbon::parse($certificate->issued_at)->format('d-m-Y')) : 'N/A' }}
                               </td>
                               <td>
                                 <a href="{{ route('dashboard.certificates.draft', $certificate->unique_serial) }}" class="btn btn-info btn-sm" data-toggle="tooltip" title="দেখুন/ড্রাফট">
