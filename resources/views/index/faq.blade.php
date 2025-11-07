@@ -125,7 +125,7 @@
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        ডি-নাগরিকের মাধ্যমে নিম্নলিখিত গুরুত্বপূর্ণ সেবাগুলি পাওয়া যায়:
+                        ডি-নাগরিকের মাধ্যমে নিম্নলিখিত গুরুত্বপূর্ণ সেবাগুলি তথা সনদ বা সার্টিফিকেট পাওয়া যায়:
                         <ul class="list-unstyled mt-3">
                             <li>ওয়ারিশ সনদ</li>
                             <li>নাগরিকত্ব সনদ</li>
