@@ -593,6 +593,18 @@ class CertificateController extends Controller
                                    ->orderBy('id', 'desc')
                                    ->paginate(15);
 
+        $searchTerm = $request->input('search');
+
+                $certificates = Certificate::with('recipient')
+                    ->where('local_office_id', Auth::user()->local_office_id)
+                    ->when($searchTerm, function ($query, $search) {
+                        $query->whereHas('recipient', function ($q) use ($search) {
+                            $q->where('name', 'LIKE', '%' . $search . '%');
+                        });
+                    })
+                    ->orderBy('id', 'desc')
+                    ->paginate(15)
+
         return view('dashboard.certificates.list')
                             ->withCertificatescount($certificatescount)
                             ->withCertificates($certificates);
