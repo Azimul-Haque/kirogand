@@ -46,7 +46,7 @@
                 <tr>
                   <th>নাম</th>
                   <th>ঠিকানা</th>
-                  <th></th>
+                  <th>মোট সনদ</th>
                   {{-- <th><span class="badge bg-danger">55%</span></th> --}}
                 </tr>
                 @foreach($users as $user)
