@@ -128,7 +128,8 @@
                                         </td>
                                         <td>
                                             @if ($certificate->status == 1)
-                                                <span class="badge badge-success">অনুমোদিত</span>
+                                                <span class="badge badge-success">অনুমোদিত</span><br/>
+                                                {{ $certificate->issued_at ? \Carbon\Carbon::parse($certificate->issued_at)->format('d-m-Y') : 'N/A' }}
                                             @elseif ($certificate->status == 0)
                                                 <span class="badge badge-warning">ড্রাফট / অপেক্ষমাণ</span>
                                             @else
@@ -136,7 +137,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            {{ $certificate->issued_at ? \Carbon\Carbon::parse($certificate->issued_at)->format('d-m-Y') : 'N/A' }}
+                                            
                                         </td>
                                         <td>
                                           <a href="{{ route('dashboard.certificates.draft', $certificate->unique_serial) }}" class="btn btn-info btn-sm" data-toggle="tooltip" title="দেখুন/ড্রাফট">
