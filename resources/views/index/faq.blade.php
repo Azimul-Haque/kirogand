@@ -55,227 +55,311 @@
 @section('content')
 
 <section class="service-section section-gap">
-	<div class="container policy-card rounded-4 bg-white">
-	        <div class="p-3 p-md-4">
-	            <!-- Language Toggle Button (Pill Style) -->
-	            <div class="d-flex justify-content-center mb-5 pt-3">
-	                <div class="toggle-group-bg">
-	                    <div class="btn-group" role="group">
-	                        <button id="lang-bn" class="lang-toggle-btn active" data-lang="bn">
-	                            বাংলা
-	                        </button>
-	                        <button id="lang-en" class="lang-toggle-btn" data-lang="en">
-	                            English
-	                        </button>
-	                    </div>
-	                </div>
-	            </div>
+	<div class="container faq-container">
+        <header class="text-center mb-5">
+            <h1 class="main-header display-5">প্রায়শই জিজ্ঞাসিত প্রশ্ন (FAQ)</h1>
+            <p class="lead text-muted">আমাদের প্ল্যাটফর্ম, **ডি-নাগরিক** পরিষেবা এবং বৈশিষ্ট্য সম্পর্কে সাধারণ প্রশ্নের দ্রুত উত্তর পান। আপনি যদি সাহায্যের জন্য খুঁজছেন, আপনি সঠিক জায়গায় আছেন!</p>
+        </header>
 
-	            <!-- Content Area -->
-	            <div id="policy-content">
-	                <!-- Content will be inserted here by JavaScript -->
-	            </div>
-	        
-	        </div>
-	    </div>
+        <div class="accordion" id="faqAccordion">
+
+            <!-- Question 1: What is D-Nagorik? -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <span class="me-2">১.</span> ডি-নাগরিক কী?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        **ডি-নাগরিক** একটি অনলাইন সেবা প্ল্যাটফর্ম যা বাংলাদেশের নাগরিকদের বিভিন্ন সরকারি ও বেসরকারি সেবা সহজে ও দ্রুততার সঙ্গে পেতে সহায়তা করে।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2: Services offered -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <span class="me-2">২.</span> ডি-নাগরিকের মাধ্যমে কী কী সেবা পাওয়া যায়?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        ডি-নাগরিকের মাধ্যমে নিম্নলিখিত গুরুত্বপূর্ণ সেবাগুলি পাওয়া যায়:
+                        <ul class="list-unstyled mt-3">
+                            <li>জন্ম সনদ আবেদন ও সংশোধন</li>
+                            <li>মৃত্যুসনদ আবেদন</li>
+                            <li>জাতীয় পরিচয়পত্র সংশোধন</li>
+                            <li>সরকারি ফি প্রদান</li>
+                            <li>শিক্ষাসনদ যাচাই</li>
+                            <li>কর সার্টিফিকেট ডাউনলোড</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3: Importance of D-Nagorik -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <span class="me-2">৩.</span> ডি-নাগরিক কেন গুরুত্বপূর্ণ?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        ডি-নাগরিক নাগরিক সেবা গ্রহণের একটি দ্রুত ও নির্ভরযোগ্য মাধ্যম। এটি সময়, খরচ এবং জটিলতা কমিয়ে নাগরিক সেবাকে সহজ ও ডিজিটাল করেছে।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4: How D-Nagorik simplifies service -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <span class="me-2">৪.</span> ডি-নাগরিক কীভাবে সেবা গ্রহণ প্রক্রিয়া সহজ করে?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        ডি-নাগরিক একটি অনলাইন প্ল্যাটফর্ম হওয়ায় ব্যবহারকারীরা ঘরে বসেই সেবা নিতে পারেন। এতে অফিসে গিয়ে লাইনে দাঁড়ানোর ঝামেলা থাকে না, ফলে প্রক্রিয়াটি দ্রুত সম্পন্ন হয়।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5: Sustainability -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <span class="me-2">৫.</span> ডি-নাগরিক কি টেকসই উন্নয়নের জন্য সহায়ক?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        হ্যাঁ, এটি ডিজিটাল প্রযুক্তির মাধ্যমে সেবা প্রদান করে যা সময় ও সম্পদের অপচয় কমায় এবং প্রশাসনিক দক্ষতা বাড়ায়, যা টেকসই উন্নয়নে সরাসরি ভূমিকা রাখে।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 6: Rural importance -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        <span class="me-2">৬.</span> ডি-নাগরিক গ্রামীণ এলাকার মানুষের জন্য কতটা গুরুত্বপূর্ণ?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        গ্রামীণ মানুষেরা সাধারণত সেবা পেতে দূরত্ব ও তথ্যের অভাবে সমস্যায় পড়েন। ডি-নাগরিক তাদের জন্য অনলাইন ও মোবাইল অ্যাপের মাধ্যমে সহজে সেবা পৌঁছে দেয়, যার ফলে তারা সহজে নাগরিক সেবা নিতে পারে।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 7: Corruption prevention -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        <span class="me-2">৭.</span> ডি-নাগরিক দুর্নীতি প্রতিরোধে কীভাবে সাহায্য করে?
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        ডি-নাগরিক সরাসরি ডিজিটাল প্ল্যাটফর্ম থেকে সেবা প্রদান করে, ফলে মধ্যস্থতাকারীর প্রয়োজন হয় না। এতে দুর্নীতি ও অবৈধ লেনদেন কমে যায় এবং স্বচ্ছতা নিশ্চিত হয়।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 8: Citizen empowerment -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        <span class="me-2">৮.</span> ডি-নাগরিক নাগরিকদের ক্ষমতায়নে কীভাবে সহায়তা করে?
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        নাগরিকরা সরাসরি অনলাইনে সেবা নিতে পারেন। এতে তাদের সময়, অর্থ ও পরিশ্রম সাশ্রয় হয় এবং সরকার ও নাগরিকদের মধ্যে আস্থা বাড়ে, যা নাগরিক ক্ষমতায়নের মূল ভিত্তি।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 9: Digital Bangladesh Vision -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                        <span class="me-2">৯.</span> ডি-নাগরিক কীভাবে সরকারের ডিজিটাল বাংলাদেশ ভিশনে ভূমিকা রাখে?
+                    </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        এটি ডিজিটাল বাংলাদেশ ভিশন ২০৪১ বাস্তবায়নে গুরুত্বপূর্ণ ভূমিকা রাখছে। ডি-নাগরিক সেবা প্রদানের প্রক্রিয়াকে ডিজিটাল ও কার্যকর করেছে, যার মাধ্যমে সরকারি সেবার ডিজিটাইজেশন ত্বরান্বিত হচ্ছে।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 10: Payment Methods -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                        <span class="me-2">১০.</span> ডি-নাগরিক থেকে কীভাবে পেমেন্ট করবো?
+                    </button>
+                </h2>
+                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        আপনি বিকাশ, রকেট, নগদ (Mobile Financial Services - MFS) বা ডেবিট/ক্রেডিট কার্ড ব্যবহার করে পেমেন্ট করতে পারবেন।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 11: Contact for issues -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEleven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                        <span class="me-2">১১.</span> কোনো সমস্যায় পড়লে কার সঙ্গে যোগাযোগ করবো?
+                    </button>
+                </h2>
+                <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        যে কোনো সহায়তার জন্য আমাদের হেল্পডেস্কে যোগাযোগ করুন:
+                        <div class="mt-3 contact-info p-3 text-center">
+                            <p class="mb-2 fw-bold">📞 মোবাইল:</p>
+                            <a href="tel:+8801737988070" class="contact-link">01737 988 070</a>
+                            <p class="mb-2 mt-3 fw-bold">✉️ ইমেইল:</p>
+                            <a href="mailto:innovatech.frm@gmail.com" class="contact-link">innovatech.frm@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 12: Document submission -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwelve">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                        <span class="me-2">১২.</span> সেবা গ্রহণ করতে কোনো নথি জমা দিতে হয় কি?
+                    </button>
+                </h2>
+                <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        হ্যাঁ, নির্দিষ্ট সেবার জন্য প্রয়োজনীয় কাগজপত্র ডিজিটাল ফরম্যাটে জমা দিতে হয়।
+                        <ul class="list-unstyled mt-3">
+                            <li><strong>জন্ম সনদ সংশোধনের জন্য:</strong> জন্মের প্রমাণপত্র এবং প্রাসঙ্গিক নথি।</li>
+                            <li><strong>এনআইডি সংশোধনের জন্য:</strong> পুরনো এনআইডি এবং অন্যান্য প্রয়োজনীয় কাগজপত্র।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 13: Profile update -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThirteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                        <span class="me-2">১৩.</span> আমার প্রোফাইল কীভাবে আপডেট করবো?
+                    </button>
+                </h2>
+                <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        আপনার প্রোফাইল আপডেট করার জন্য এই ধাপগুলো অনুসরণ করুন:
+                        <ol>
+                            <li>অ্যাকাউন্টে **লগইন** করুন।</li>
+                            <li>“**প্রোফাইল সেটিংস**”-এ যান।</li>
+                            <li>প্রয়োজনীয় তথ্য পরিবর্তন করে “**সেভ**” বাটনে ক্লিক করুন।</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 14: Security -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFourteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                        <span class="me-2">১৪.</span> ডি-নাগরিক কতটা নিরাপদ?
+                    </button>
+                </h2>
+                <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        ডি-নাগরিক আপনার তথ্যের সুরক্ষার জন্য সর্বোচ্চ মান বজায় রাখে। আমরা SSL এনক্রিপশন ও মাল্টি-ফ্যাক্টর অথেনটিকেশন ব্যবহার করি। তথ্য সুরক্ষায় নিয়মিত আপডেট ও মনিটরিং করা হয়।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 15: Internet required -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFifteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                        <span class="me-2">১৫.</span> ডি-নাগরিক ব্যবহারে কি ইন্টারনেট সংযোগ লাগবে?
+                    </button>
+                </h2>
+                <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        হ্যাঁ, ডি-নাগরিক প্ল্যাটফর্ম ব্যবহার করতে ইন্টারনেট সংযোগ প্রয়োজন। তবে, আমাদের মোবাইল অ্যাপ ব্যবহার করলে কিছু সীমিত সেবা অফলাইনেও পাওয়া যেতে পারে।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 16: Rural service -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSixteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                        <span class="me-2">১৬.</span> ডি-নাগরিক কি গ্রামীণ এলাকাতেও সেবা দেয়?
+                    </button>
+                </h2>
+                <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        হ্যাঁ, ডি-নাগরিকের অনলাইন প্ল্যাটফর্ম এবং মোবাইল অ্যাপের মাধ্যমে সারা দেশের নাগরিকরা এই সেবা নিতে পারেন। গ্রামীণ ব্যবহারকারীদের কথা মাথায় রেখে এটি সহজ ও ব্যবহারবান্ধবভাবে তৈরি।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 17: Account block -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeventeen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+                        <span class="me-2">১৭.</span> অ্যাকাউন্ট ব্লক হলে কী করতে হবে?
+                    </button>
+                </h2>
+                <div id="collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="headingSeventeen" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        আপনার অ্যাকাউন্ট ব্লক হলে অবিলম্বে আমাদের হেল্পডেস্কে (ফোন বা ইমেইলের মাধ্যমে) যোগাযোগ করুন। আমাদের যাচাই শেষে আপনার অ্যাকাউন্ট পুনরুদ্ধার করার ব্যবস্থা নেওয়া হবে।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 18: Operating hours -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEighteen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+                        <span class="me-2">১৮.</span> ডি-নাগরিক কি ২৪ ঘণ্টা খোলা থাকে?
+                    </button>
+                </h2>
+                <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        হ্যাঁ, ডি-নাগরিক প্ল্যাটফর্মটি সেবা গ্রহণের জন্য ২৪/৭ খোলা থাকে। তবে হেল্পডেস্ক (ফোন ও ইমেইল সহায়তা) সাধারণত সকাল ৯টা থেকে রাত ৯টা পর্যন্ত সক্রিয় থাকে।
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- /accordion -->
+
+        <div class="contact-info text-center mt-5">
+            <h3 class="h4 fw-bold mb-3" style="color: var(--primary-color);">সহায়তা প্রয়োজন?</h3>
+            <p class="mb-4">যদি আপনার অন্য কোনো প্রশ্ন থাকে, তবে সরাসরি আমাদের সঙ্গে যোগাযোগ করুন।</p>
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-4">
+                <div>
+                    <span class="fw-bold me-2" style="color: var(--primary-color);">📞 কল করুন:</span>
+                    <a href="tel:+8801737988070" class="contact-link">01737 988 070</a>
+                </div>
+                <div>
+                    <span class="fw-bold me-2" style="color: var(--primary-color);">📧 ইমেল করুন:</span>
+                    <a href="mailto:innovatech.frm@gmail.com" class="contact-link">innovatech.frm@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </section>
     
 @endsection
 
 @section('third_party_scripts')
-	<!-- Bootstrap 5 JavaScript Bundle with Popper -->
-	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-	    <script>
-	        // Content data for both languages (Same as previous, just reorganized for clarity)
-	        const policyData = {
-	            bn: {
-	                title: "ডি-নাগরিক-এর গোপনীয়তা নীতি",
-	                date: "কার্যকরী তারিখ: নভেম্বর ৬, ২০২৫",
-	                intro: "আমাদের পরিষেবা (" + window.location.hostname + ") ব্যবহারের ক্ষেত্রে আপনার তথ্য সংগ্রহ, ব্যবহার এবং প্রকাশের বিষয়ে আমাদের নীতিগুলি আপনাকে জানানোর জন্য এই গোপনীয়তা নীতি প্রস্তুত করা হয়েছে। আপনার তথ্যের গোপনীয়তা রক্ষা করা আমাদের কাছে খুবই গুরুত্বপূর্ণ।",
-	                sections: [
-	                    {
-	                        title: "আমরা যে ডেটা সংগ্রহ করি",
-	                        content: [
-	                            "ব্যক্তিগত শনাক্তকরণ তথ্য (PII): আপনি স্বেচ্ছায় আমাদের পরিষেবা ব্যবহার করার সময় এই তথ্যগুলি প্রদান করতে পারেন, যেমন আপনার নাম, ইমেল ঠিকানা, ফোন নম্বর বা অবস্থান।",
-	                            "ব্যবহারের ডেটা: এই ডেটা স্বয়ংক্রিয়ভাবে সংগ্রহ করা হয়। এর মধ্যে আপনার ডিভাইসের ইন্টারনেট প্রোটোকল (আইপি) ঠিকানা, ব্রাউজারের ধরন, ব্রাউজারের সংস্করণ, আপনি যে পাতাগুলি দেখেছেন, পরিদর্শনের সময় ও তারিখ এবং অন্যান্য ডায়াগনস্টিক ডেটা অন্তর্ভুক্ত।",
-	                            "কুকিজ (Cookies) ও ট্র্যাকিং ডেটা: আমরা পরিষেবাটির কার্যকলাপ ট্র্যাক করতে এবং কিছু তথ্য সংরক্ষণ করতে কুকিজ এবং অনুরূপ ট্র্যাকিং প্রযুক্তি ব্যবহার করি। কুকিজ হল স্বল্প পরিমাণের ডেটা যা আপনার ডিভাইসে সংরক্ষিত থাকে।"
-	                        ]
-	                    },
-	                    {
-	                        title: "কীভাবে ডেটা ব্যবহার করা হয়",
-	                        content: [
-	                            "পরিষেবা প্রদান: আমরা আমাদের পরিষেবাগুলি প্রদান ও রক্ষণাবেক্ষণের জন্য ডেটা ব্যবহার করি।",
-	                            "যোগাযোগ: আপনার অনুরোধ বা প্রশ্নের উত্তর দিতে অথবা পরিষেবা সম্পর্কিত গুরুত্বপূর্ণ আপডেট জানাতে ডেটা ব্যবহার করা যেতে পারে।",
-	                            "পরিষেবা উন্নত করা: আমরা পরিষেবাটির ব্যবহার বিশ্লেষণ করি এবং আমাদের প্ল্যাটফর্মের কার্যকারিতা ও ব্যবহারকারীর অভিজ্ঞতা উন্নত করার জন্য ডেটা ব্যবহার করি।"
-	                        ]
-	                    },
-	                    {
-	                        title: "ডেটা শেয়ারিং",
-	                        content: [
-	                            "আইনি বাধ্যবাধকতা পূরণের জন্য, আমাদের অধিকার রক্ষা করার জন্য, অথবা পরিষেবার নিরাপত্তার সমস্যা প্রতিরোধ বা সমাধান করার জন্য আপনার ব্যক্তিগত ডেটা প্রকাশ করা যেতে পারে।"
-	                        ]
-	                    },
-	                    {
-	                        title: "আপনার অধিকার",
-	                        content: [
-	                            "আপনার ব্যক্তিগত ডেটা অ্যাক্সেস, আপডেট বা মুছে ফেলার অধিকার আপনার রয়েছে। আপনি যদি এই ধরনের অনুরোধ জানাতে চান, তবে অনুগ্রহ করে নিচের যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন।"
-	                        ]
-	                    },
-	                    {
-	                        title: "আমাদের সাথে যোগাযোগ করুন",
-	                        content: [
-	                            "এই গোপনীয়তা নীতি সম্পর্কে আপনার কোনো প্রশ্ন থাকলে, আপনি আমাদের সাথে যোগাযোগ করতে পারেন:"
-	                        ],
-	                        contact: [
-	                            { label: "ফোন", icon: "📞", value: "+88 01737 988 070", link: "tel:+8801737988070" },
-	                            { label: "ইমেইল", icon: "📧", value: "innovatech.frm@gmail.com", link: "mailto:innovatech.frm@gmail.com" },
-	                            { label: "ওয়েবসাইট", icon: "🌐", value: "dnagorik.com", link: "https://dnagorik.com/", target: "_blank" }
-	                        ]
-	                    }
-	                ],
-	                footer: "নীতিমালা পরিবর্তন: আমরা সময়ে সময়ে আমাদের গোপনীয়তা নীতি আপডেট করতে পারি। যেকোনো পরিবর্তন এই পৃষ্ঠায় পোস্ট করা হবে।"
-	            },
-	            en: {
-	                title: "D-Nagorik Privacy Policy",
-	                date: "Effective Date: November 6, 2025",
-	                intro: "This Privacy Policy informs you regarding our policies on the collection, use, and disclosure of your information when you use our Service (" + window.location.hostname + "). Protecting your data privacy is very important to us.",
-	                sections: [
-	                    {
-	                        title: "Data We Collect",
-	                        content: [
-	                            "Personal Identification Information (PII): This includes information you may voluntarily provide while using our Service, such as your name, email address, phone number, or location.",
-	                            "Usage Data: This data is collected automatically. It may include your device's Internet Protocol (IP) address, browser type, browser version, the pages you visit, the time and date of your visit, and other diagnostic data.",
-	                            "Cookies and Tracking Data: We use Cookies and similar tracking technologies to track the activity on our Service and hold certain information. Cookies are files with a small amount of data that are stored on your device."
-	                        ]
-	                    },
-	                    {
-	                        title: "How We Use Data",
-	                        content: [
-	                            "Service Provision: We use the data to provide and maintain our Service.",
-	                            "Communication: Data may be used to respond to your requests or inquiries, or to send you important updates regarding the Service.",
-	                            "Service Improvement: We analyze the use of the Service and use the data to improve the performance and user experience of our platform."
-	                        ]
-	                    },
-	                    {
-	                        title: "Data Sharing",
-	                        content: [
-	                            "Your Personal Data may be disclosed to comply with a legal obligation, to protect and defend our rights, or to prevent or investigate possible wrongdoing in connection with the Service."
-	                        ]
-	                    },
-	                    {
-	                        title: "Your Rights",
-	                        content: [
-	                            "You have the right to access, update, or request the deletion of your personal data. If you wish to make such a request, please contact us using the details provided below."
-	                        ]
-	                    },
-	                    {
-	                        title: "Contact Us",
-	                        content: [
-	                            "If you have any questions about this Privacy Policy, you can contact us:"
-	                        ],
-	                        contact: [
-	                            { label: "Phone", icon: "📞", value: "+88 01737 988 070", link: "tel:+8801737988070" },
-	                            { label: "Email", icon: "📧", value: "innovatech.frm@gmail.com", link: "mailto:innovatech.frm@gmail.com" },
-	                            { label: "Website", icon: "🌐", value: "dnagorik.com", link: "https://dnagorik.com/", target: "_blank" }
-	                        ]
-	                    }
-	                ],
-	                footer: "Changes to this Policy: We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page."
-	            }
-	        };
-
-	        let currentLang = 'bn';
-	        const contentDiv = document.getElementById('policy-content');
-	        const langBnButton = document.getElementById('lang-bn');
-	        const langEnButton = document.getElementById('lang-en');
-
-	        /**
-	         * Renders the Privacy Policy content based on the current language setting.
-	         */
-	        function renderContent() {
-	            const data = policyData[currentLang];
-	            
-	            // Generate HTML using Bootstrap classes
-	            let htmlContent = `
-	                <h3 class="display-6 fw-bolder text-center mb-1" style="color: var(--bs-primary);">${data.title}</h3>
-	                <p class="text-secondary mb-5 text-center small">${data.date}</p>
-	                
-	                <p class="mb-5 lead">${data.intro}</p>
-	            `;
-
-	            data.sections.forEach(section => {
-	                htmlContent += `
-	                    <h2 class="h4 fw-bold section-title mt-5">${section.title}</h2>
-	                    <ul class="list-unstyled policy-list ps-0 mb-5">
-	                        ${section.content.map(point => `
-	                            <li class="d-flex align-items-start">
-	                                <span class="me-3 fs-5" style="color: var(--bs-primary);">&rarr;</span> 
-	                                <span>${point}</span>
-	                            </li>
-	                        `).join('')}
-	                    </ul>
-	                `;
-
-	                // Add contact details specifically for the last section (Contact Us)
-	                if (section.contact) {
-	                    htmlContent += `
-	                        <div class="row g-4 pt-3 pb-4">
-	                            ${section.contact.map(item => `
-	                                <div class="col-12 col-md-4">
-	                                    <div class="p-3 bg-light rounded-3 shadow-sm contact-item">
-	                                        <div class="d-flex align-items-center">
-	                                            <span class="fs-4 me-3" style="color: var(--bs-primary);">${item.icon}</span>
-	                                            <div>
-	                                                <p class="mb-0 text-muted small">${item.label}</p>
-	                                                <a href="${item.link}" 
-	                                                   class="fw-bold text-decoration-none text-dark link-primary break-words d-block" 
-	                                                   style="font-size: 0.95rem;"
-	                                                   ${item.target ? `target="${item.target}"` : ''}
-	                                                >
-	                                                    ${item.value}
-	                                                </a>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            `).join('')}
-	                        </div>
-	                    `;
-	                }
-	            });
-
-	            htmlContent += `
-	                <p class="text-muted small mt-5 border-top pt-4 text-center">${data.footer}</p>
-	            `;
-
-	            contentDiv.innerHTML = htmlContent;
-	            
-	            // Update button styles using Bootstrap classes
-	            if (currentLang === 'bn') {
-	                langBnButton.classList.add('active');
-	                langEnButton.classList.remove('active');
-	            } else {
-	                langEnButton.classList.add('active');
-	                langBnButton.classList.remove('active');
-	            }
-	        }
-
-	        /**
-	         * Toggles the language and updates the buttons.
-	         * @param {string} lang - 'bn' or 'en'.
-	         */
-	        function toggleLanguage(lang) {
-	            currentLang = lang;
-	            renderContent();
-	        }
-
-	        // Event listeners for the toggle buttons
-	        langBnButton.addEventListener('click', () => toggleLanguage('bn'));
-	        langEnButton.addEventListener('click', () => toggleLanguage('en'));
-
-	        // Initial render on window load
-	        window.onload = renderContent;
-
-	    </script>
+	
 @endsection
