@@ -44,7 +44,7 @@
             <table class="table">
               <tbody>
                 <tr>
-                  <th>1.</th>
+                  <th>নাম</th>
                   <th>Update software</th>
                   <th>
                     <div class="progress progress-xs">
