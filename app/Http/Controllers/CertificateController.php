@@ -560,6 +560,22 @@ class CertificateController extends Controller
         return view('dashboard.certificates.list')->withCertificates($certificates);
     }
 
+    public function getCertificateList()
+    {
+        if(Auth::user()->role == 'manager') {
+            if (Auth::user()->is_active === 0) {
+                Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01737988070');
+                return redirect()->route('index.index');
+            }
+        }
+
+        $certificates = Certificate::where('local_office_id', Auth::user()->local_office_id)
+                                   ->orderBy('id', 'desc')
+                                   ->paginate(15);
+
+        return view('dashboard.certificates.list')->withCertificates($certificates);
+    }
+
     public function showCertificateQr($unique_serial)
     {
         return view('certificate-qr', [
