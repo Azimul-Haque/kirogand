@@ -92,7 +92,7 @@
                           <input type="number" class="form-control @error('nid') is-invalid @enderror" 
                                  id="nid" 
                                  name="nid" 
-                                 placeholder="১১/১৭ সংখ্যার এনআইডি" 
+                                 placeholder="১০/১৭ সংখ্যার এনআইডি" 
                                  required 
                                  pattern="[0-9]{10,17}" 
                                  title="অনুগ্রহ করে সঠিক এনআইডি নম্বর দিন" 
