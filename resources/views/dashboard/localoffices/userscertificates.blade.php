@@ -68,7 +68,7 @@
                     <ul class="list-group list-group-unbordered mb-3">
                         <li class="list-group-item">
                             <b><i class="fas fa-id-card mr-1 text-primary"></i> এনআইডি/জন্মসনদ</b> 
-                            <a class="float-right text-dark font-weight-bold"><?php echo $user->nid ?? '০১২৩৪৫৬৭৮৯'; ?></a>
+                            <a class="float-right text-dark font-weight-bold"><?php echo $user->nid ?? 'xxxxxxxx'; ?></a>
                         </li>
                         <li class="list-group-item">
                             <b><i class="fas fa-phone mr-1 text-primary"></i> মোবাইল</b> 
