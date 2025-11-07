@@ -5,19 +5,18 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-datepicker.min.css') }}">
     <style>
-        {{-- /* Custom Card Styling for a professional, AdminLTE feel */
-        .card {
+        {{-- .card {
             border-radius: 0.25rem;
             box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
         }
         .card-header {
-            background-color: #f8f9fa; /* Light header background */
+            background-color: #f8f9fa; 
             border-bottom: 1px solid rgba(0, 0, 0, 0.125);
         }
         .profile-image-placeholder {
             width: 90px;
             height: 90px;
-            background-color: #ced4da; /* Grey background */
+            background-color: #ced4da; 
             color: #495057;
             font-size: 2rem;
             border-radius: 50%;
@@ -30,7 +29,7 @@
         }
         .btn-print {
             color: #fff;
-            background-color: #007bff; /* Blue for primary action */
+            background-color: #007bff;
             border-color: #007bff;
         } --}}
     </style>
