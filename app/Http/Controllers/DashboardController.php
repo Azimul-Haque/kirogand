@@ -708,13 +708,13 @@ class DashboardController extends Controller
         return redirect()->back()->with('success', 'আপনার অফিস আপডেট করা হয়েছে!');
     }
 
-    public function getOfficeUsers()
+    public function getLocalOfficeUsers()
     {
         $users = User::where('local_office_id', Auth::user()->local_office_id)
                      ->where('role', 'user')
                      ->paginate(15);
         
-        return view('dashboard.packages.index')->withPackages($packages);
+        return view('dashboard.packages.index')->withusers($users);
     }
 
     public function getPackages()
