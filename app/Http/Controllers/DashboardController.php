@@ -726,12 +726,6 @@ class DashboardController extends Controller
 
     public function getLocalOfficeUsersSearch($search)
     {
-        $userscount = User::
-                     ->count();
-
-        $users = User::where('local_office_id', Auth::user()->local_office_id)
-                     ->where('role', 'user')
-                     ->paginate(15);
         $userscount = User::where('local_office_id', Auth::user()->local_office_id)
                           ->where('role', 'user')
                           ->where('name', 'LIKE', "%$search%")
