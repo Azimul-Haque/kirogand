@@ -148,7 +148,7 @@
                                             @foreach ($heir['sub_heirs'] as $sub_index => $sub_heir)
                                                 <tr>
                                                     <td>{{ bangla($sub_index + 1) }}</td>
-                                                    <td style="width: 40%;">{{ $sub_heir['name'] ?? '--' }}</td>
+                                                    <td>{{ $sub_heir['name'] ?? '--' }}</td>
                                                     <td>{{ $sub_heir['relation'] ?? '--' }}</td>
                                                     <td>{{ $sub_heir['id_data'] ?? '--' }}</td>
                                                     <td>{{ $sub_heir['dob'] ?? '--' }}</td>
