@@ -100,6 +100,11 @@ class IndexController extends Controller
     {
         return view('index.userguidelines');
     }
+    
+    public function getUserGuidelines()
+    {
+        return view('index.userguidelines');
+    }
 
     public function termsAndConditions()
     {
