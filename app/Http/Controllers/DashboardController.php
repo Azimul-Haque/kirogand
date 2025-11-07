@@ -724,6 +724,22 @@ class DashboardController extends Controller
                         ->withUsers($users);
     }
 
+    public function getLocalOfficeUsersCerts($id)
+    {
+        $userscount = User::where('local_office_id', Auth::user()->local_office_id)
+                     ->where('role', 'user')
+                     ->count();
+
+        $users = User::where('local_office_id', Auth::user()->local_office_id)
+                     ->where('role', 'user')
+                     ->paginate(15);
+                     
+        
+        return view('dashboard.localoffices.users')
+                        ->withUserscount($userscount)
+                        ->withUsers($users);
+    }
+
     public function getPackages()
     {
         $packages = Package::all();
