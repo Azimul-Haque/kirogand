@@ -736,7 +736,7 @@ class DashboardController extends Controller
                           ->count();
 
         $localoffices = LocalOffice::all();
-        $users = User::User::where('local_office_id', Auth::user()->local_office_id)
+        $users = User::where('local_office_id', Auth::user()->local_office_id)
                            ->where('role', 'user')
                            ->where('name', 'LIKE', "%$search%")
                            ->orWhere('email', 'LIKE', "%$search%")
