@@ -726,9 +726,7 @@ class DashboardController extends Controller
 
     public function getLocalOfficeUsersCerts($id)
     {
-        $user = User::where('local_office_id', Auth::user()->local_office_id)
-                     ->where('role', 'user')
-                     ->count();
+        $user = User::find($id);
 
         $users = User::where('local_office_id', Auth::user()->local_office_id)
                      ->where('role', 'user')
