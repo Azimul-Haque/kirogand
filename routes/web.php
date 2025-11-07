@@ -109,6 +109,9 @@ Route::post('/dashboard/users/{id}/single/sms', 'DashboardController@sendSingleS
 
 Route::get('/dashboard/users/{id}/activate', 'DashboardController@activateUser')->name('dashboard.users.activate');
 
+// office dashboard users
+Route::get('/dashboard/users/{id}/activate', 'DashboardController@activateUser')->name('dashboard.office.users');
+
 Route::get('/dashboard/local-offices', 'DashboardController@getLocalOffices')->name('dashboard.local-offices');
 Route::get('/dashboard/local-offices/{search}', 'DashboardController@getLocalOfficesSearch')->name('dashboard.local-offices.search');
 Route::post('/dashboard/local-offices/{id}/update/', 'DashboardController@updateLocalOffices')->name('dashboard.local-offices.update');
