@@ -7,31 +7,109 @@
 
 @section('content')
 <section class="service-section section-gap">
-    <div class="container">
-	    <div class="row">
-	      <div class="col-md-12 col-12">
-	      	<h4>Purchase & Refund Policy</h4><br/>
-			<p><strong>Purchase Policy</strong></p>
-			<p>
-			Users will be required to pay the appropriate fees for the various Courses. When you are signed into your account, any pricing that is provided for a specific course can change as well. You consent not to use an illegitimate or unauthorized payment method when you make a transaction. Access to any course may be disabled at our discretion. For any number of days, we may give a free trial. We retain the right to either (a) revise the Free Trial offer's Terms of Service or (b) terminate it at any time and without prior notice.
-			</p>
-			<br/>
-			<p><strong>Refund Policy:</strong></p> <p>
-			A Refund Request will be considered acceptable only if filed within 5 days after purchase by email to bcsexamaid@gmail.com or via our App's contact page, mentioning your particular credential used during registration. Courses purchased with less than 6 months validity are not refundable.
-			<br/>
-			Within 14 days of the refund request being properly processed and accepted by <strong>App Lab IT</strong> Authority, refunds will be sent to the bank, mfs account, or card used to make the transaction.
-			</p><br/>
-			<p>
-				These purchase & refund policies are effective as of <u>July 01, 2022</u>.
-			</p>
-			<br/>
-			<p><strong>Contact Us</strong></p>
-			<p>
-			If you have any questions concerning our Purchase & Refund Policy, please contact us at <strong>bcsexamaid@gmail.com</strong>.
-			</p>
-	      </div>
-	  	</div>
-  	</div>
+    <div class="container policy-container p-4 p-md-5">
+
+        <!-- Banner & Title -->
+        <header class="text-center mb-5 pb-3">
+            <h1 class="display-5 fw-bolder text-uppercase" style="color: var(--primary-color);">
+                ক্রয় ও ফেরত নীতি
+            </h1>
+            <p class="lead text-muted">ডি-নাগরিক (D-Nagorik)-এর কোর্স ও পরিষেবা সংক্রান্ত নীতিমালা</p>
+            <p class="small text-secondary">কার্যকরী তারিখ: <span class="fw-semibold">জুলাই ০১, ২০২২</span></p>
+        </header>
+
+
+        <!-- ========================================================================= -->
+        <!--                                BANGLA VERSION                              -->
+        <!-- ========================================================================= -->
+
+        <div id="bangla-policy" role="region" aria-labelledby="bangla-purchase-heading">
+            <h2 class="section-header" id="bangla-purchase-heading"><span class="icon">🛡️</span> ক্রয় নীতি (Purchase Policy)</h2>
+            <div class="policy-body">
+                <p class="policy-point">ব্যবহারকারীদের বিভিন্ন কোর্সের জন্য উপযুক্ত <strong>ফি প্রদান</strong> করতে হবে।</p>
+                <p class="policy-point">আপনি আপনার অ্যাকাউন্টে **লগইন থাকা অবস্থায়**, নির্দিষ্ট কোর্সের জন্য প্রদত্ত <strong>মূল্যের পরিবর্তন</strong> হতে পারে।</p>
+                <p class="policy-point">আপনি একটি লেনদেন করার সময় কোনো <strong>অবৈধ বা অননুমোদিত পেমেন্ট পদ্ধতি</strong> ব্যবহার না করার সম্মতি দিচ্ছেন।</p>
+                <p class="policy-point">আমাদের বিবেচনার ভিত্তিতে যেকোনো কোর্সে অ্যাক্সেস <strong>নিষ্ক্রিয়</strong> করা হতে পারে।</p>
+                <p class="policy-point">আমরা নির্দিষ্ট দিনের জন্য একটি <strong>ফ্রি ট্রায়াল</strong> অফার করতে পারি। আমরা যেকোনো সময় এবং পূর্ব ঘোষণা ছাড়াই (ক) ফ্রি ট্রায়াল অফারের শর্তাবলী <strong>সংশোধন</strong> করার অথবা (খ) এটি <strong>বাতিল</strong> করার অধিকার রাখি।</p>
+            </div>
+
+            <h2 class="section-header" id="bangla-refund-heading"><span class="icon">🔄</span> ফেরত নীতি (Refund Policy)</h2>
+            <div class="policy-body">
+                <p class="policy-point">একটি ফেরত অনুরোধ তখনই <strong>গ্রহণযোগ্য</strong> হবে, যখন তা ক্রয় করার <strong>৫ দিনের মধ্যে</strong> <strong>innovatech.frm@gmail.com</strong> ইমেলের মাধ্যমে বা আমাদের অ্যাপের যোগাযোগ পৃষ্ঠার মাধ্যমে আবেদন করা হবে। আবেদনে অবশ্যই নিবন্ধনের সময় ব্যবহৃত আপনার <strong>নির্দিষ্ট পরিচয়পত্র/ক্রেডেনশিয়াল</strong> উল্লেখ করতে হবে।</p>
+                <p class="policy-point">যেসব কোর্সের <strong>বৈধতা ৬ মাসের কম</strong>, সেগুলো ফেরতযোগ্য নয়।</p>
+                <p class="policy-point">**ডি-নাগরিক কর্তৃপক্ষ** দ্বারা ফেরত অনুরোধটি যথাযথভাবে যাচাই এবং <strong>গৃহীত হওয়ার ১৪ দিনের মধ্যে</strong>, লেনদেনের জন্য ব্যবহৃত ব্যাংক, এমএফএস অ্যাকাউন্ট, বা কার্ডে টাকা ফেরত পাঠানো হবে।</p>
+            </div>
+
+            <!-- Contact Section - Bangla -->
+            <div class="contact-box text-center">
+                <h3 class="h5 fw-bold mb-3" style="color: var(--primary-color);">যোগাযোগ করুন</h3>
+                <p class="mb-4">আমাদের ক্রয় ও ফেরত নীতি সম্পর্কে আপনার কোনো প্রশ্ন থাকলে, অনুগ্রহ করে যোগাযোগ করুন:</p>
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+                    <div class="d-flex align-items-center">
+                        <span class="highlight me-2">📧 ইমেইল:</span>
+                        <a href="mailto:innovatech.frm@gmail.com" class="text-decoration-none fw-bold" style="color: var(--text-color);">innovatech.frm@gmail.com</a>
+                    </div>
+                    <div class="d-none d-md-block text-muted">|</div>
+                    <div class="d-flex align-items-center">
+                        <span class="highlight me-2">📞 মোবাইল:</span>
+                        <a href="tel:+8801737988070" class="text-decoration-none fw-bold" style="color: var(--text-color);">01737 988 070</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal Separator -->
+        <hr class="lang-separator">
+
+
+        <!-- ========================================================================= -->
+        <!--                                ENGLISH VERSION                             -->
+        <!-- ========================================================================= -->
+
+        <div id="english-policy" role="region" aria-labelledby="english-purchase-heading">
+            <header class="text-center mb-5 pt-3">
+                <h1 class="display-6 fw-bolder text-uppercase" style="color: var(--primary-color);">
+                    Purchase & Refund Policy
+                </h1>
+                <p class="lead text-muted">Policy regarding courses and services of D-Nagorik</p>
+                <p class="small text-secondary">Effective as of: <span class="fw-semibold">July 01, 2022</span></p>
+            </header>
+
+            <h2 class="section-header" id="english-purchase-heading"><span class="icon">🛡️</span> Purchase Policy</h2>
+            <div class="policy-body">
+                <p class="policy-point">Users will be required to pay the appropriate <strong>fees</strong> for the various Courses.</p>
+                <p class="policy-point">When you are signed into your account, any pricing that is provided for a specific course <strong>can change</strong>.</p>
+                <p class="policy-point">You consent not to use an <strong>illegitimate or unauthorized payment method</strong> when you make a transaction.</p>
+                <p class="policy-point">Access to any course may be <strong>disabled at our discretion</strong>.</p>
+                <p class="policy-point">We may give a <strong>free trial</strong> for any number of days. We retain the right to either (a) **revise** the Free Trial offer's Terms of Service or (b) **terminate** it at any time and without prior notice.</p>
+            </div>
+
+            <h2 class="section-header" id="english-refund-heading"><span class="icon">🔄</span> Refund Policy</h2>
+            <div class="policy-body">
+                <p class="policy-point">A Refund Request will be considered <strong>acceptable</strong> only if filed within **5 days** after purchase by email to **innovatech.frm@gmail.com** or via our App's contact page, mentioning your particular <strong>credential used during registration</strong>.</p>
+                <p class="policy-point">Courses purchased with less than **6 months validity** are not refundable.</p>
+                <p class="policy-point">Within **14 days** of the refund request being properly processed and **accepted** by the **D-Nagorik Authority**, refunds will be sent to the bank, mfs account, or card used to make the transaction.</p>
+            </div>
+
+            <!-- Contact Section - English -->
+            <div class="contact-box text-center">
+                <h3 class="h5 fw-bold mb-3" style="color: var(--primary-color);">Contact Us</h3>
+                <p class="mb-4">If you have any questions concerning our Purchase & Refund Policy, please contact us:</p>
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+                    <div class="d-flex align-items-center">
+                        <span class="highlight me-2">📧 Email:</span>
+                        <a href="mailto:innovatech.frm@gmail.com" class="text-decoration-none fw-bold" style="color: var(--text-color);">innovatech.frm@gmail.com</a>
+                    </div>
+                    <div class="d-none d-md-block text-muted">|</div>
+                    <div class="d-flex align-items-center">
+                        <span class="highlight me-2">📞 Mobile:</span>
+                        <a href="tel:+8801737988070" class="text-decoration-none fw-bold" style="color: var(--text-color);">01737 988 070</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </section>
 @endsection
 
