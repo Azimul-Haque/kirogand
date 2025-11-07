@@ -180,7 +180,7 @@
                                             <i class="fas fa-sitemap"></i>
                                         </button>
                                         {{-- Remove Button (Existing) --}}
-                                        <button type="button" class="btn btn-danger btn-sm remove-heir-button" title="ডিলেট করুন">
+                                        <button type="button" class="btn btn-danger btn-sm remove-heir-button" data-toggle="tooltip" data-original-title="ডিলেট করুন">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </div>
