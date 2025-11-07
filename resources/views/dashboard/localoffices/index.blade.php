@@ -68,7 +68,13 @@
                     </td>
                     <td>{{ $localoffice->office_type == 'up' ? 'ইউনিয়ন পরিষদ' : 'পৌরসভা' }}</td>
                     <td>
-                      @foreach($localoffice->users as $user)
+                      @php
+                          // Filter the collection to only include users with the 'manager' role (for example)
+                          $managers = $localoffice->users->filter(function ($user) {
+                              return $user->role === 'manager';
+                          });
+                      @endphp
+                      @foreach($localoffice->users->filter as $user)
                         <span class="badge badge-success">{{ $user->name }}</span>
                       @endforeach
                     </td>
