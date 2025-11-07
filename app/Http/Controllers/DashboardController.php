@@ -739,8 +739,8 @@ class DashboardController extends Controller
                                         ->orWhere('nid', 'LIKE', "%{$search}%");
                               } 
                           })
-                            ->orderBy('id', 'desc')
-                            ->count();
+                          ->orderBy('id', 'desc')
+                          ->count();
 
         $localoffices = LocalOffice::all();
         $users = User::where('local_office_id', Auth::user()->local_office_id)
