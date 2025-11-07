@@ -51,7 +51,7 @@
                       <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
                     </div>
                   </th>
-                  <th><span class="badge bg-danger">55%</span></th>
+                  {{-- <th><span class="badge bg-danger">55%</span></th> --}}
                 </tr>
                 @foreach($users as $user)
                 	<tr>
