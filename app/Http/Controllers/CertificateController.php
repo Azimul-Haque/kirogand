@@ -229,7 +229,7 @@ class CertificateController extends Controller
         $ifolduser = User::where('mobile', $request->mobile)
                          ->orWhere('nid', $request->id_value)
                          ->first();
-
+                         dd($ifolduser);
         if($ifolduser == null) {
             $newuser = User::create([
                 'local_office_id' => Auth::user()->local_office_id,
