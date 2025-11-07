@@ -57,7 +57,7 @@
               <div class="card-tools">
                 <form class="form-inline form-group-lg" action="">
                   <select id="certificateTypeFilter" class="form-control form-control-sm" data-placeholder="সনদপত্রের ধরণ ফিল্টার করুন" name="certificate_type" style="margin-right: 20px;">
-                      <option selected="" disabled="" value="">সনদপত্রের ধরণ ফিল্টার করুন</option>
+                      <option selected="" disabled="" value="">সনদপত্রের ধরণ ফিল্টার</option>
                       <option value="heir-certificate">ওয়ারিশ সনদ</option>
                       <option value="citizen-certificate">নাগরিকত্ব সনদ</option>
                       <option value="permanent-resident">স্থায়ী বাসিন্দা মর্মে সনদ</option>
