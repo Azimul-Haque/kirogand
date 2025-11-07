@@ -462,7 +462,7 @@
         border-top: none !important;
     }
     .sub-heir-table {
-        width: 99%;
+        width: 80%;
         margin: 5px auto;
         border-collapse: collapse;
         font-size: 11.5px; /* Smaller font for nesting */
