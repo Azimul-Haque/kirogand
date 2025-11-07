@@ -73,8 +73,8 @@
                               return $user->role === 'manager';
                           });
                       @endphp
-                      @foreach($localoffice->users->filter as $user)
-                        <span class="badge badge-success">{{ $user->name }}</span>
+                      @foreach($managers as $manager)
+                        <span class="badge badge-success">{{ $manager->name }}</span>
                       @endforeach
                     </td>
                     <td><small>{{ date('F d, Y', strtotime($localoffice->created_at)) }}</small></td>
