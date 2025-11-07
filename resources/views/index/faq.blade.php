@@ -1,5 +1,5 @@
 @extends('layouts.index')
-@section('title') ডিজিটাল নাগরিক - গোপনীয়তা নীতি - Privacy Policy @endsection
+@section('title') ডিজিটাল নাগরিক - প্রায়শই জিজ্ঞাসিত প্রশ্ন (FAQ) @endsection
 
 @section('third_party_stylesheets')
 	<style>
