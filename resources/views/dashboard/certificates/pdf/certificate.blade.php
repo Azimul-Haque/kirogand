@@ -457,5 +457,33 @@
         margin-top: 40px;
     }
 
+    .sub-heir-row {
+        padding: 0;
+        border-top: none !important;
+    }
+    .sub-heir-table {
+        width: 99%;
+        margin: 5px auto;
+        border-collapse: collapse;
+        font-size: 11px; /* Smaller font for nesting */
+    }
+    .sub-heir-table th, .sub-heir-table td {
+        border: 1px solid #aaa;
+        padding: 3px 5px;
+        text-align: center;
+        background-color: #f7f7f7;
+    }
+    .sub-heir-table th {
+        background-color: #e0e0e0;
+        font-weight: bold;
+    }
+    .sub-heir-header {
+        font-weight: bold;
+        font-size: 12px;
+        padding: 5px 0 0 10px;
+        text-align: left;
+        display: block;
+    }
+
 </style>
 </html>
