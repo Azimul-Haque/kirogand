@@ -39,7 +39,7 @@
 @endsection
 
 @section('content')
-  @section('page-header') সনদ (মোট {{ $certificatescount ?? '0' }} টি সনদ)@endsection
+  @section('page-header') সনদ (মোট {{ bangla($certificatescount) }} টি সনদ)@endsection
   @section('page-header-right')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
