@@ -49,7 +49,7 @@
             $html .= '<td><input type="text" class="form-control form-control-sm" name="heirs_data[' . $index . '][sub_heirs][' . $sub_index . '][id_data]" placeholder="এনআইডি/জন্ম নিবন্ধন" value="' . ($sub_heir['id_data'] ?? '') . '"></td>';
             $html .= '<td><input type="text" class="form-control form-control-sm" name="heirs_data[' . $index . '][sub_heirs][' . $sub_index . '][dob]" placeholder="জন্মতারিখ" value="' . ($sub_heir['dob'] ?? '') . '"></td>';
             $html .= '<td><input type="text" class="form-control form-control-sm" name="heirs_data[' . $index . '][sub_heirs][' . $sub_index . '][remark]" placeholder="যেমন: নাবালক" value="' . ($sub_heir['remark'] ?? '') . '"></td>';
-            $html .= '<td><button type="button" class="btn btn-danger btn-xs remove-subheir-button" title="ডিলেট করুন"><i class="fas fa-times"></i></button></td>';
+            $html .= '<td><button type="button" class="btn btn-danger btn-xs remove-subheir-button" data-toggle="tooltip" data-original-title="ডিলেট করুন"><i class="fas fa-times"></i></button></td>';
             $html .= '</tr>';
         }
 
@@ -215,7 +215,7 @@
                                         <button type="button" class="btn btn-info btn-sm add-subheir-button" title="সাব-ওয়ারিশ যোগ করুন" data-parent-id="{{ $index }}">
                                             <i class="fas fa-sitemap"></i>
                                         </button>
-                                        <button type="button" class="btn btn-danger btn-sm remove-heir-button" title="ডিলেট করুন">
+                                        <button type="button" class="btn btn-danger btn-sm remove-heir-button" data-toggle="tooltip" data-original-title="ডিলেট করুন">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </div>
@@ -273,7 +273,7 @@
                 <button type="button" class="btn btn-info btn-sm add-subheir-button" title="সাব-ওয়ারিশ যোগ করুন" data-parent-id="__INDEX__">
                     <i class="fas fa-sitemap"></i>
                 </button>
-                <button type="button" class="btn btn-danger btn-sm remove-heir-button" title="ডিলেট করুন">
+                <button type="button" class="btn btn-danger btn-sm remove-heir-button" data-toggle="tooltip" data-original-title="ডিলেট করুন">
                     <i class="fas fa-trash"></i>
                 </button>
             </div>
@@ -329,7 +329,7 @@
             <input type="text" class="form-control form-control-sm" name="heirs_data[__PARENT_INDEX__][sub_heirs][__SUB_INDEX__][remark]" placeholder="যেমন: নাবালক">
         </td>
         <td>
-            <button type="button" class="btn btn-danger btn-xs remove-subheir-button" title="ডিলেট করুন">
+            <button type="button" class="btn btn-danger btn-xs remove-subheir-button" data-toggle="tooltip" data-original-title="ডিলেট করুন">
                 <i class="fas fa-times"></i>
             </button>
         </td>
