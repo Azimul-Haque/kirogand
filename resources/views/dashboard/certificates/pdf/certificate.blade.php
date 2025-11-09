@@ -434,7 +434,7 @@
         text-align: center;
     }
     .beneficiary-table th {
-        background-color: rgba(229, 231, 235, 0.5);
+        background-color: rgba(229, 231, 235, 0.3);
         font-weight: bold;
     }
 
@@ -473,7 +473,7 @@
         text-align: center;
     }
     .sub-heir-table th {
-        background-color: rgba(229, 231, 235, 0.5);
+        background-color: rgba(229, 231, 235, 0.3);
         font-weight: bold;
     }
     .sub-heir-header {
