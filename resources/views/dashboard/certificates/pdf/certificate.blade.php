@@ -429,7 +429,7 @@
         font-size: 13px;
     }
     .beneficiary-table th, .beneficiary-table td {
-        border: 1px solid #999;
+        border: 1px solid rgba(52, 58, 64, 0.6);
         padding: 8px 10px;
         text-align: center;
     }
