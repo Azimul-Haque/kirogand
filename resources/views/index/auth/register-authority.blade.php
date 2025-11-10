@@ -161,7 +161,7 @@
                       <!-- কর্তৃপক্ষের ধরণ -->
                       <div class="col-md-12">
                           <label for="authorityType" class="form-label small fw-bold">কর্তৃপক্ষের ধরণ <span class="required-asterisk">*</span></label>
-                          <select id="authorityType" name="office_type" class="form-select @error('office_type') is-invalid @enderror" required> <!-- Added name="office_type" -->
+                          <select id="authorityType" name="office_type" class="form-select @error('office_type') is-invalid @enderror" onchange="toggleUnionTypeVisibility()" required> <!-- Added name="office_type" -->
                               <option value="" selected disabled>কর্তৃপক্ষের ধরণ নির্বাচন করুন</option>
                               <option value="up" {{ old('office_type') == 'up' ? 'selected' : '' }}>ইউনিয়ন পরিষদ</option>
                               <option value="poura" {{ old('office_type') == 'poura' ? 'selected' : '' }}>পৌরসভা</option>
