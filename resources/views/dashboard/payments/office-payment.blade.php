@@ -366,7 +366,7 @@
                           <iframe id="youtube-video" 
                                   class="embed-responsive-item"
                                   src=""
-                                  data-src="https://www.youtube.com/embed/v-XtAT9CDQg?si=yNA0nJZYzmpomsmN&rel=0&amp;autoplay=1"
+                                  data-src="https://www.youtube.com/embed/eOb0MwGJh5c?si=gH4ahKtUGvd0CL1k&rel=0&amp;autoplay=1"
                                   allow="autoplay; encrypted-media"
                                   allowfullscreen>
                           </iframe>
