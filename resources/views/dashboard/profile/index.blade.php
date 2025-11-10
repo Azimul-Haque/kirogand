@@ -375,7 +375,7 @@
         <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <div class="modal-header bg-warning">
+                    <div class="modal-header bg-danger">
                         <h5 class="modal-title font-weight-bold" id="videoModalLabel">
                             <i class="fab fa-youtube"></i> প্রোফাইল আপডেট টিউটোরিয়াল
                         </h5>
