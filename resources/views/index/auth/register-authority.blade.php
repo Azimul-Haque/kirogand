@@ -204,7 +204,7 @@
                       </div>
                       
                       <!-- থানা / উপজেলা -->
-                      <div class="col-md-6" id="add_union_col">
+                      <div class="col-md-6">
                           <label for="add_upazila_id" class="form-label small fw-bold">থানা / উপজেলা <span class="required-asterisk">*</span></label>
                           <select id="add_upazila_id" name="add_upazila_id" class="form-select authority-select @error('add_upazila_id') is-invalid @enderror" data-level="Upazila" data-target="add_union_id" data-model="Union" {{ old('add_upazila_id') ? '' : 'disabled' }}>
                               <option value="{{ old('add_upazila_id') }}" selected>{{ old('add_upazila_id') ? 'পূর্ববর্তী উপজেলা নির্বাচিত' : 'উপজেলা/পৌরসভা নির্বাচন করুন' }}</option>
@@ -216,7 +216,7 @@
                       </div>
 
                       <!-- NEW FIELD: ইউনিয়ন -->
-                      <div class="col-md-6">
+                      <div class="col-md-6" id="add_union_col">
                           <label for="add_union_id" class="form-label small fw-bold">ইউনিয়ন <span class="required-asterisk">*</span></label>
                           <select id="add_union_id" name="add_union_id" class="form-select authority-select @error('add_union_id') is-invalid @enderror" data-level="Union" data-target="" data-model="" {{ old('add_union_id') ? '' : 'disabled' }}>
                               <option value="{{ old('add_union_id') }}" selected>{{ old('add_union_id') ? 'পূর্ববর্তী ইউনিয়ন নির্বাচিত' : 'ইউনিয়ন নির্বাচন করুন' }}</option>
