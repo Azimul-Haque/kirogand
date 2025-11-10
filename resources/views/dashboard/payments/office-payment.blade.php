@@ -353,7 +353,7 @@
               <div class="modal-content">
                   <div class="modal-header bg-danger">
                       <h5 class="modal-title font-weight-bold" id="videoModalLabel">
-                          <i class="fab fa-youtube"></i> প্রোফাইল আপডেট টিউটোরিয়াল
+                          <i class="fab fa-youtube"></i> প্যাকেজ নবায়ন বা পেমেন্ট
                       </h5>
                       <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
@@ -375,7 +375,7 @@
               </div>
           </div>
       </div>
-      
+
     </div>
 @endsection
 
