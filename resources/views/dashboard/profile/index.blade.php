@@ -372,6 +372,33 @@
                 title="ভিডিও টিউটোরিয়াল দেখুন">
             <i class="fas fa-play"></i>
         </button>
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-info">
+                        <h5 class="modal-title font-weight-bold" id="videoModalLabel">
+                            <i class="fas fa-chalkboard-teacher mr-2"></i> How to Renew Your Package
+                        </h5>
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <!-- Bootstrap 4 Responsive Video Embed (16:9 Aspect Ratio) -->
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <!-- The data-src holds the video URL for lazy loading -->
+                            <iframe id="youtube-video" 
+                                    class="embed-responsive-item"
+                                    src=""
+                                    data-src="https://www.youtube.com/embed/YjY5JmQ_nL0?rel=0&amp;autoplay=1"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
 
