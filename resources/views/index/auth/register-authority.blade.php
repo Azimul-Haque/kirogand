@@ -466,7 +466,7 @@
             }
 
             // Check if the selected value of authorityType is 'up'
-            if (authoritySelect.value === 'up') {
+            if (authoritySelect.value === 'poura') {
                 // Hide the union type select element
                 unionTypeSelect.style.display = 'none';
             } else {
