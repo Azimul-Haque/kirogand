@@ -14,8 +14,8 @@
         #floating-video-button {
             /* Fixes the button to the viewport */
             position: fixed;
-            bottom: 30px; /* 30px from bottom */
-            right: 30px;  /* 30px from right */
+            bottom: 40px; /* 40px from bottom */
+            right: 40px;  /* 40px from right */
             
             /* Sizing and Styling */
             width: 60px;
