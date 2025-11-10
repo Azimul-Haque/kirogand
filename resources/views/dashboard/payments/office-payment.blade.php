@@ -167,9 +167,9 @@
                               <span class="badge badge-warning p-1" style="position: absolute; top: 5px; left: 50%; transform: translateX(-50%); font-size: 0.8rem;">
                                   সর্বাধিক জনপ্রিয় প্যাকেজ
                               </span>
-                              <div class="pt-4 pb-3">
+                              <div class="pt-4 pb-3"></div>
                           @else
-                              <div class="pt-3 pb-2">
+                              <div class="pt-3 pb-2"></div>
                           @endif
                               <h4 class="mb-1 @if($package->suggested != 1) text-primary @endif">
                                   {{ $package->name }}
