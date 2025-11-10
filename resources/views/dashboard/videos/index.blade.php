@@ -255,7 +255,7 @@
 
               // Update modal title
               const videoTitle = $triggerElement.closest('.card').find('.video-tutorial-title').text();
-              $videoModal.find('.modal-title').html(`<i class="fas fa-play-circle mr-2"></i> ${videoTitle || "ভিডিও টিউটোরিয়াল"}`);
+              $videoModal.find('.modal-title').html(`<i class="fab fa-youtube mr-2"></i> ${videoTitle || "ভিডিও টিউটোরিয়াল"}`);
           });
 
           // Stops the video playback when the modal is closed
