@@ -5,8 +5,113 @@
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css"> --}}
 
     <style>
-        
-    </style>
+      /* Custom Styles for Enhanced Aesthetics */
+      
+      /* 1. Gradient Hero Header */
+      .tutorial-header {
+          background-image: linear-gradient(135deg, #007bff 0%, #17a2b8 100%); /* Blue to Cyan Gradient */
+          color: #ffffff;
+          padding: 40px 0;
+          margin-bottom: 20px;
+          border-radius: 0 0 15px 15px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* 2. Enhanced Card Styling */
+      .video-card {
+          border: 1px solid #e9ecef; /* Light grey border */
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          border-radius: 10px;
+          overflow: hidden;
+          background-color: #fff;
+      }
+      
+      .video-card:hover {
+          transform: translateY(-8px); /* More pronounced lift effect */
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Darker, more striking shadow */
+      }
+
+      /* 3. Thumbnail Container and Overlay */
+      .thumbnail-container {
+          position: relative;
+          overflow: hidden;
+          height: 180px;
+          cursor: pointer;
+      }
+
+      .thumbnail-container img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+      }
+      
+      .video-card:hover .thumbnail-container img {
+          transform: scale(1.05); /* Slight zoom on image hover */
+      }
+      
+      /* Play Icon Overlay (Attractive indicator) */
+      .play-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.4); /* Dark semi-transparent overlay */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 1;
+          transition: opacity 0.3s ease;
+      }
+
+      .video-card:hover .play-overlay {
+          opacity: 1; /* Keep visible on hover */
+      }
+      
+      .play-overlay i {
+          font-size: 40px;
+          color: #ff0000; /* Classic YouTube Red */
+          background-color: #ffffff;
+          border-radius: 50%;
+          padding: 10px;
+          box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+      }
+
+      /* 4. Content Area Styling */
+      .video-card .card-body {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+      }
+      
+      .video-tutorial-title {
+          color: #343a40;
+          font-size: 1.35rem; /* Slightly larger, more dominant title */
+          font-weight: 700;
+          margin-bottom: 8px;
+      }
+      
+      .card-text {
+          color: #6c757d;
+          font-size: 1rem;
+          flex-grow: 1; 
+          margin-bottom: 20px;
+          line-height: 1.5;
+      }
+      
+      .btn-watch {
+          background-color: #007bff; /* Primary Blue for button */
+          border: none;
+          font-weight: 600;
+          padding: 10px 15px;
+          border-radius: 5px;
+          transition: background-color 0.2s;
+      }
+      .btn-watch:hover {
+          background-color: #0056b3; /* Darker blue on hover */
+      }
+  </style>
 @endsection
 
 @section('content')
