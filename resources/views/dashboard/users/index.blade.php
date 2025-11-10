@@ -386,6 +386,7 @@
                                               <option value="সচিব" @if($user->designation == 'সচিব') selected @endif>ইউনিয়ন সচিব</option>
                                               <option value="সহকারী" @if($user->designation == 'সহকারী') selected @endif>ইউনিয়ন সহকারী</option>
                                               <option value="মেয়র" @if($user->designation == 'মেয়র') selected @endif>মেয়র</option>
+                                              <option value="প্রশাসক" @if($user->designation == 'প্রশাসক') selected @endif>প্রশাসক</option>
                                               <option value="কাউন্সিলর" @if($user->designation == 'কাউন্সিলর') selected @endif>কাউন্সিলর</option>
                                               <option value="পৌর সচিব" @if($user->designation == 'পৌর সচিব') selected @endif>পৌর সচিব</option>
                                           </select>

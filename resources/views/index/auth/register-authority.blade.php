@@ -144,6 +144,7 @@
                               <option value="সচিব" {{ old('designation') == 'সচিব' ? 'selected' : '' }}>ইউনিয়ন সচিব</option>
                               <option value="সহকারী" {{ old('designation') == 'সহকারী' ? 'selected' : '' }}>ইউনিয়ন সহকারী</option>
                               <option value="মেয়র" {{ old('designation') == 'মেয়র' ? 'selected' : '' }}>মেয়র</option>
+                              <option value="প্রশাসক" {{ old('designation') == 'প্রশাসক' ? 'selected' : '' }}>প্রশাসক</option>
                               <option value="কাউন্সিলর" {{ old('designation') == 'কাউন্সিলর' ? 'selected' : '' }}>কাউন্সিলর</option>
                               <option value="পৌর সচিব" {{ old('designation') == 'পৌর সচিব' ? 'selected' : '' }}>পৌর সচিব</option>
                           </select>
