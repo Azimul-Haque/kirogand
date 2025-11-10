@@ -467,7 +467,7 @@
 
 
           // Check if the selected value of authorityType is 'up'
-          if ($('#authorityType').val == 'poura') {
+          if ($('#authorityType').val() == 'poura') {
             console.log('dd');
               // Hide the union type select element
               unionTypeSelect.style.display = 'none';
