@@ -66,7 +66,7 @@
               <i class="fas fa-globe"></i>
             </a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" data-toggle="tooltip" data-original-title="ভিডিও টিউটোরিয়াল">
             <a class="nav-link" data-toggle="dropdown" href="#">
               <i class="far fa-bell"></i>
               <span class="badge badge-warning navbar-badge">@if($unresolvedmessagecount > 0) {{ $unresolvedmessagecount }} @endif</span>
