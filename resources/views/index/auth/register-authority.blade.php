@@ -217,7 +217,7 @@
 
                       <!-- NEW FIELD: ইউনিয়ন -->
                       <div class="col-md-6">
-                          <label for="add_union_id" class="form-label small fw-bold">ইউনিয়ন <span class="required-asterisk">*</span></label>
+                          <label for="add_union_id" class="form-label small fw-bold">ইউনিয়ন <span class="required-asterisk">পৌরসভা হলে সিলেক্ট করার দরকার নেই</span></label>
                           <select id="add_union_id" name="add_union_id" class="form-select authority-select @error('add_union_id') is-invalid @enderror" data-level="Union" data-target="" data-model="" {{ old('add_union_id') ? '' : 'disabled' }}>
                               <option value="{{ old('add_union_id') }}" selected>{{ old('add_union_id') ? 'পূর্ববর্তী ইউনিয়ন নির্বাচিত' : 'ইউনিয়ন নির্বাচন করুন' }}</option>
                               <!-- Existing options will be shown by JS, or the old value will be retained if available -->
