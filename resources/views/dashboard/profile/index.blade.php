@@ -365,7 +365,7 @@
         </div>
         <!-- /.row -->
 
-        <div>
+        <div data-toggle="tooltip">
             <button type="button" 
                     id="floating-video-button"
                     data-toggle="modal" 
