@@ -109,7 +109,7 @@
           transition: background-color 0.2s;
       }
       .btn-watch:hover {
-          background-color: #0056b3; /* Darker blue on hover */
+          background-color: #A9000; /* Darker blue on hover */
       }
   </style>
 @endsection
