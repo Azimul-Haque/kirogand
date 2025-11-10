@@ -134,20 +134,28 @@
 @section('third_party_scripts')
   <script>
       $(document).ready(function() {
-          const $modal = $('#videoModal');
-          const $iframe = $('#youtube-video');
-          const videoSrc = $iframe.data('src');
+          const $videoModal = $('#videoModal');
+          const $youtubeIframe = $('#youtube-video-iframe');
 
-          // Event 1: When the modal is fully shown (opened)
-          $modal.on('shown.bs.modal', function () {
-              // Load the full video URL with autoplay=1 to start playback
-              $iframe.attr('src', videoSrc); 
+          // Handles the dynamic loading of the video URL when the modal is opened
+          $videoModal.on('show.bs.modal', function (event) {
+              const $triggerElement = $(event.relatedTarget); // Element that triggered the modal (Button or Thumbnail)
+              const youtubeId = $triggerElement.data('youtube-id');
+              const videoSrc = `https://www.youtube.com/embed/${youtubeId}?rel=0&amp;autoplay=1`;
+              
+              // Set iframe src to start playing the video
+              $youtubeIframe.attr('src', videoSrc);
+
+              // Update modal title
+              const videoTitle = $triggerElement.closest('.card').find('.video-tutorial-title').text();
+              $videoModal.find('.modal-title').html(`<i class="fas fa-play-circle mr-2"></i> ${videoTitle || "ভিডিও টিউটোরিয়াল"}`);
           });
 
-          // Event 2: When the modal is completely hidden (closed)
-          $modal.on('hidden.bs.modal', function () {
-              // Stop the video by clearing the source
-              $iframe.attr('src', '');
+          // Stops the video playback when the modal is closed
+          $videoModal.on('hidden.bs.modal', function () {
+              $youtubeIframe.attr('src', ''); // Clear the src to stop the video
+              // Reset the modal title to the generic one
+              $videoModal.find('.modal-title').html(`<i class="fas fa-play-circle mr-2"></i> ভিডিও টিউটোরিয়াল`);
           });
       });
   </script>
