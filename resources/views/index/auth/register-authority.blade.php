@@ -464,6 +464,7 @@
           if (!authoritySelect || !unionTypeSelect) {
               return;
           }
+          console.log('dd');
 
           // Check if the selected value of authorityType is 'up'
           if ($('#authorityType').value === 'poura') {
