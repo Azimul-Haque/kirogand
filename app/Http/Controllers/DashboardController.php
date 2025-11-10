@@ -636,7 +636,7 @@ class DashboardController extends Controller
             'name' => 'required|string|max:255',
             'name_en' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:users,email,' . $id,
-            'mobile' => 'required|string|max:20|unique:users,mobile,' . $id,
+            // 'mobile' => 'required|string|max:20|unique:users,mobile,' . $id,
             'nid' => 'required|string|max:20',
             'designation' => 'required|string|max:20',
         ]);
