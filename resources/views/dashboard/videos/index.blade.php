@@ -212,7 +212,7 @@
     <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-info">
+                <div class="modal-header bg-danger">
                     <h5 class="modal-title font-weight-bold text-white" id="videoModalLabel">
                         <i class="fas fa-play-circle mr-2"></i> ভিডিও টিউটোরিয়াল
                     </h5>
