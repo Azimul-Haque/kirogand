@@ -380,23 +380,23 @@
 @endsection
 
 @section('third_party_scripts')
-    <script>
-        $(document).ready(function() {
-            const $modal = $('#videoModal');
-            const $iframe = $('#youtube-video');
-            const videoSrc = $iframe.data('src');
+  <script>
+      $(document).ready(function() {
+          const $modal = $('#videoModal');
+          const $iframe = $('#youtube-video');
+          const videoSrc = $iframe.data('src');
 
-            // Event 1: When the modal is fully shown (opened)
-            $modal.on('shown.bs.modal', function () {
-                // Load the full video URL with autoplay=1 to start playback
-                $iframe.attr('src', videoSrc); 
-            });
+          // Event 1: When the modal is fully shown (opened)
+          $modal.on('shown.bs.modal', function () {
+              // Load the full video URL with autoplay=1 to start playback
+              $iframe.attr('src', videoSrc); 
+          });
 
-            // Event 2: When the modal is completely hidden (closed)
-            $modal.on('hidden.bs.modal', function () {
-                // Stop the video by clearing the source
-                $iframe.attr('src', '');
-            });
-        });
-    </script>
+          // Event 2: When the modal is completely hidden (closed)
+          $modal.on('hidden.bs.modal', function () {
+              // Stop the video by clearing the source
+              $iframe.attr('src', '');
+          });
+      });
+  </script>
 @endsection
