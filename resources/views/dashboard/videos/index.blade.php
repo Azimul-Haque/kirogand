@@ -60,7 +60,7 @@
         </div>
 
         <!-- VIDEO CARD 3 -->
-        <div class="col-md-6 col-lg-4 mb-5">
+        {{-- <div class="col-md-6 col-lg-4 mb-5">
             <div class="card h-100 video-card shadow-lg">
                 <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="VIDEO_ID_3">
                     <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="নতুন সনদ তৈরি থাম্বনেইল">
@@ -77,7 +77,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <!-- VIDEO CARD 4 -->
         <div class="col-md-6 col-lg-4 mb-5">
