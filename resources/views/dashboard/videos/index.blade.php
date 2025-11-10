@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title') ড্যাশবোর্ড | পেমেন্ট @endsection
+@section('title') ড্যাশবোর্ড | ভিডিও টিউটোরিয়ালসমূহ @endsection
 
 @section('third_party_stylesheets')
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css"> --}}
@@ -146,11 +146,11 @@
 @endsection
 
 @section('content')
-	@section('page-header') পেমেন্ট @endsection
+	@section('page-header') ভিডিও টিউটোরিয়ালসমূহ @endsection
   @section('page-header-right')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
-        <li class="breadcrumb-item active">পেমেন্ট</li>
+        <li class="breadcrumb-item active">ভিডিও টিউটোরিয়ালসমূহ</li>
     </ol>
   @endsection
     <div class="container-fluid">
@@ -321,7 +321,7 @@
                           সম্মানিত ইউজার, আপনার প্যাকেজ রিনিউ সংক্রান্ত একটি বিশেষ তথ্য:
                       </p>
                       <p class="font-weight-bold mb-3">
-                          আপনি যখনই নতুন পেমেন্ট বা প্যাকেজ যোগ করবেন, তখন আপনার
+                          আপনি যখনই নতুন ভিডিও টিউটোরিয়ালসমূহ বা প্যাকেজ যোগ করবেন, তখন আপনার
                           বর্তমান অবশিষ্ট মেয়াদ এর সাথে নতুন প্যাকেজের দিনগুলো যোগ হয়ে যাবে।
                       </p>
                       
@@ -353,7 +353,7 @@
               <div class="modal-content">
                   <div class="modal-header bg-danger">
                       <h5 class="modal-title font-weight-bold" id="videoModalLabel">
-                          <i class="fab fa-youtube"></i> প্যাকেজ নবায়ন বা পেমেন্ট
+                          <i class="fab fa-youtube"></i> প্যাকেজ নবায়ন বা ভিডিও টিউটোরিয়ালসমূহ
                       </h5>
                       <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
