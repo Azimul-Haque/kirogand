@@ -369,7 +369,7 @@
                 id="floating-video-button"
                 data-toggle="modal tooltip" 
                 data-target="#videoModal"
-                title="Watch Tutorial">
+                data-orifinal-title="Watch Tutorial">
             <i class="fas fa-play"></i>
         </button>
     </div>
