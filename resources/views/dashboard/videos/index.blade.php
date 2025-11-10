@@ -216,7 +216,7 @@
             <div class="modal-content">
                 <div class="modal-header bg-danger">
                     <h5 class="modal-title font-weight-bold text-white" id="videoModalLabel">
-                        <i class="fab fa-youtube mr-2"></i> ভিডিও টিউটোরিয়াল
+                        <i class="fas fa-play-circle mr-2"></i> ভিডিও টিউটোরিয়াল
                     </h5>
                     <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
