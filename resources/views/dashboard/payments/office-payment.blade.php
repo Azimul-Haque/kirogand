@@ -84,6 +84,64 @@
             margin-right: 8px;
             font-weight: bold;
         }
+        /*
+        --------------------------------------------------
+        CUSTOM CSS FOR FLOATING PULSING BUTTON
+        --------------------------------------------------
+        */
+        
+        #floating-video-button {
+            /* Fixes the button to the viewport */
+            position: fixed;
+            bottom: 40px; /* 40px from bottom */
+            right: 40px;  /* 40px from right */
+            
+            /* Sizing and Styling */
+            width: 65px;
+            height: 65px;
+            border-radius: 50%; /* Makes it round */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1050; /* Ensures it is above all content */
+            
+            /* AdminLTE button styling */
+            background-color: #FF0234; /* AdminLTE Info color */
+            color: #ffffff;
+            border: none;
+            
+            /* Apply the pulsing animation */
+            animation: pulse 2.0s infinite;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        #floating-video-button:hover {
+            /* Slight lift on hover */
+            transform: scale(1.05);
+            transition: all 0.2s ease-in-out;
+            animation: none; /* Stop pulsing on hover for cleaner look */
+        }
+        
+        #floating-video-button .fas {
+            font-size: 32px;
+            margin-left: 3px; /* Optical adjustment */
+        }
+
+        /* Define the Pulsing Keyframe Animation */
+        @keyframes pulse {
+            0% {
+                /* Start with a strong shadow based on the button color */
+                box-shadow: 0 0 0 0 rgba(23, 162, 184, 0.8); 
+            }
+            70% {
+                /* Expand the shadow and make it fully transparent */
+                box-shadow: 0 0 0 15px rgba(23, 162, 184, 0);
+            }
+            100% {
+                /* Reset for the next cycle */
+                box-shadow: 0 0 0 0 rgba(23, 162, 184, 0);
+            }
+        }
     </style>
 @endsection
 
