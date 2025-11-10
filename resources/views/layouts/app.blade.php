@@ -61,7 +61,7 @@
               <i class="fab fa-youtube"></i>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="tooltip" data-original-title="ভিডিও টিউটোরিয়াল">
             <a class="nav-link" href="{{ route('index.index') }}"  target="_blank">
               <i class="fas fa-globe"></i>
             </a>
