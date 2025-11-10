@@ -72,6 +72,10 @@ class CertificateController extends Controller
                 Session::flash('warning', 'আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শেষ, প্যাকেজ কিনে সনদ তৈরি করুন।');
                 return redirect()->route('dashboard.payments.office');
             }
+            if(isPackageExpired(Auth::user()->localOffice->package_expiry_date)) {
+                Session::flash('warning', 'আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শেষ, প্যাকেজ কিনে সনদ তৈরি করুন।');
+                return redirect()->route('dashboard.payments.office');
+            }
         }
 
         return view('dashboard.certificates.create')->with('certificate_type', $certificate_type);
