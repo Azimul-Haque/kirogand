@@ -108,7 +108,7 @@
                                   <strong>{{ $certificate->unique_serial }}</strong>
                               </td>
                               <td>
-                                  <a href="" title="{{ $certificate->recipient->id }}">{{ $certificate->data_payload['applicant']['name'] ?? 'N/A' }}</a>
+                                  <a href="" title="{{ route('', $certificate->recipient->id) }}">{{ $certificate->data_payload['applicant']['name'] ?? 'N/A' }}</a>
                                   <br/>
                                   <small class="text-muted">মোবাইল: {{ $certificate->recipient->mobile ?? ($certificate->data_payload['applicant']['mobile'] ?? 'N/A') }}</small>
                               </td>
