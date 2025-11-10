@@ -365,14 +365,13 @@
         </div>
         <!-- /.row -->
 
-        <div data-toggle="tooltip" data-original-title="ভিডিও টিউটোরিয়াল দেখুন">
-            <button type="button" 
-                    id="floating-video-button"
-                    data-toggle="modal" 
-                    data-target="#videoModal">
-                <i class="fas fa-play"></i>
-            </button>
-        </div>
+        <button type="button" 
+                id="floating-video-button"
+                data-toggle="modal" 
+                data-target="#videoModal"
+                title="ভিডিও টিউটোরিয়াল দেখুন">
+            <i class="fas fa-play"></i>
+        </button>
     </div>
 @endsection
 
