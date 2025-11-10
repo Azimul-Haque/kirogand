@@ -136,7 +136,7 @@ Route::get('/dashboard/messages', 'DashboardController@getMessages')->name('dash
 Route::post('/dashboard/messages/{id}/update', 'DashboardController@updateMessage')->name('dashboard.messages.update');
 Route::get('/dashboard/messages/delete/{id}', 'DashboardController@deleteMessage')->name('dashboard.messages.delete');
 
-Route::get('/dashboard/video-tutorials', 'DashboardController@deleteMessage')->name('dashboard.messages.delete');
+Route::get('/dashboard/video-tutorials', 'DashboardController@getVideoTutorial')->name('dashboard.messages.delete');
 
 // Certificate routes are here
 // Certificate routes are here
