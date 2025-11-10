@@ -56,7 +56,7 @@
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="tooltip" data-original-title="ভিডিও টিউটোরিয়াল">
             <a class="nav-link" href="{{ route('index.index') }}">
               <i class="fab fa-youtube"></i>
             </a>
