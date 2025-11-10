@@ -370,7 +370,6 @@
                 data-toggle="modal" 
                 data-target="#videoModal"
                 title="Watch Tutorial">
-            <!-- Icon representing a Play button -->
             <i class="fas fa-play"></i>
         </button>
     </div>
