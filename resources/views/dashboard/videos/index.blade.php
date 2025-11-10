@@ -99,9 +99,36 @@
             </div>
         </div>
 
-    </div>
+      </div>
 
     </div>
+
+    <!-- Video Modal (Reused for all cards) -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title font-weight-bold text-white" id="videoModalLabel">
+                        <i class="fas fa-play-circle mr-2"></i> ভিডিও টিউটোরিয়াল
+                    </h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="youtube-video-iframe" 
+                                class="embed-responsive-item"
+                                src=""
+                                allow="autoplay; encrypted-media"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Video Modal -->
 @endsection
 
 @section('third_party_scripts')
