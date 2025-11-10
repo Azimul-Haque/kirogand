@@ -1025,6 +1025,13 @@ class DashboardController extends Controller
         return view('dashboard.notifications.index')->withNotifications($notifications);
     }
 
+    public function getVideoTutorial()
+    {
+        $notifications = Notification::orderBy('id', 'desc')->paginate(12);
+
+        return view('dashboard.notifications.index')->withNotifications($notifications);
+    }
+
     public function sendNotification(Request $request)
     {
         $this->validate($request,array(
