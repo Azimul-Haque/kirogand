@@ -456,39 +456,7 @@
 
 
         $(document).on('change', '#authorityType', function() {
-            const userId = $(this).data('userid');
-            const parentId = $(this).val();
-            const targetId = $(this).data('target');
-            const modelName = $(this).data('model');
-            const level = $(this).data('level');
-            const context = $(this).attr('id').startsWith('add') ? 'add' : 'edit';
-            
-            // 2a. Update the hidden authority_level/authority_id fields
-
-            if (parentId) {
-                $('#add_authority_level').val(level);
-                $('#add_authority_id').val(parentId);
-            } else {
-                // If the selected value is empty, reset the current authority level/id
-                $('#add_authority_level').val('');
-                $('#add_authority_id').val('');
-            }
-            
-            // 2b. Load the next level of locations
-            if (targetId) {
-                // Clear the authority selection for downstream models when a parent changes
-                $('#' + targetId).prop('disabled', true).html('<option value="" selected disabled>নির্বাচন করুন</option>');
-                
-                // Clear any selections two levels down (for District -> Union clearing)
-                const grandTargetId = $('#' + targetId).data('target');
-                if (grandTargetId) {
-                    $('#' + grandTargetId).prop('disabled', true).html('<option value="" selected disabled>নির্বাচন করুন</option>');
-                }
-
-                if (parentId && modelName) {
-                  loadLocations('#' + $(this).attr('id'), parentId, '#' + targetId, modelName);
-                }
-            }
+            $('#add_authority_level').val(level);
         });
       });
   </script>
