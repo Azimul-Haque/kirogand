@@ -456,7 +456,7 @@
 
 
         $(document).on('change', '#authorityType', function() {
-            $('#add_authority_level').val(level);
+            $('#add_union_id').val(level);
         });
       });
   </script>
