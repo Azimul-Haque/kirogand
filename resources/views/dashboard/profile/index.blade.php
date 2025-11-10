@@ -365,12 +365,11 @@
         </div>
         <!-- /.row -->
 
-        <div data-toggle="tooltip">
+        <div data-toggle="tooltip" data-original-title="Watch Tutorial">
             <button type="button" 
                     id="floating-video-button"
                     data-toggle="modal" 
-                    data-target="#videoModal"
-                    data-original-title="Watch Tutorial">
+                    data-target="#videoModal">
                 <i class="fas fa-play"></i>
             </button>
         </div>
