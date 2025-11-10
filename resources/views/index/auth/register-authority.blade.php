@@ -458,7 +458,7 @@
       function toggleUnionTypeVisibility() {
           // Get references to the elements by their IDs
           const authoritySelect = document.getElementById('authorityType');
-          const unionTypeSelect = document.getElementById('add_union_id');
+          const unionTypeSelect = document.getElementById('add_union_col');
 
           // Gracefully exit if the elements are not found (e.g., in views where they don't exist)
           if (!authoritySelect || !unionTypeSelect) {
