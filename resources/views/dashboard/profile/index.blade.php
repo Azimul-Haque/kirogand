@@ -18,8 +18,8 @@
             right: 30px;  /* 30px from right */
             
             /* Sizing and Styling */
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%; /* Makes it round */
             display: flex;
             justify-content: center;
