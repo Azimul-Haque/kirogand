@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title') ড্যাশবোর্ড | ভিডিও টিউটোরিয়ালসমূহ @endsection
+@section('title') ড্যাশবোর্ড | ভিডিও টিউটোরিয়াল @endsection
 
 @section('third_party_stylesheets')
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css"> --}}
@@ -10,11 +10,11 @@
 @endsection
 
 @section('content')
-	@section('page-header') ভিডিও টিউটোরিয়ালসমূহ @endsection
+	@section('page-header') ভিডিও টিউটোরিয়াল @endsection
   @section('page-header-right')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">ড্যাশবোর্ড</a></li>
-        <li class="breadcrumb-item active">ভিডিও টিউটোরিয়ালসমূহ</li>
+        <li class="breadcrumb-item active">ভিডিও টিউটোরিয়াল</li>
     </ol>
   @endsection
     <div class="container-fluid">
