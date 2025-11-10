@@ -27,7 +27,7 @@
             z-index: 1050; /* Ensures it is above all content */
             
             /* AdminLTE button styling */
-            background-color: #17a2b8; /* AdminLTE Info color */
+            background-color: #FF0234; /* AdminLTE Info color */
             color: #ffffff;
             border: none;
             
