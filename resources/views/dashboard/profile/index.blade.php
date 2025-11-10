@@ -365,7 +365,7 @@
         </div>
         <!-- /.row -->
 
-        <div data-toggle="tooltip" data-original-title="Watch Tutorial">
+        <div data-toggle="tooltip" data-original-title="ভিডিও টিউটোরিয়াল দেখুন">
             <button type="button" 
                     id="floating-video-button"
                     data-toggle="modal" 
