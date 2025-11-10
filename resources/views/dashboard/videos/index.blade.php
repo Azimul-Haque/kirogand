@@ -110,7 +110,8 @@
           color: #fff;
       }
       .btn-watch:hover {
-          background-color: #A90000; /* Darker blue on hover */
+          background-color: #A90000;
+          color: #fff;
       }
   </style>
 @endsection
