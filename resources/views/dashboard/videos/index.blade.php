@@ -101,7 +101,7 @@
       }
       
       .btn-watch {
-          background-color: #007bff; /* Primary Blue for button */
+          background-color: #FF0234; /* Primary Blue for button */
           border: none;
           font-weight: 600;
           padding: 10px 15px;
