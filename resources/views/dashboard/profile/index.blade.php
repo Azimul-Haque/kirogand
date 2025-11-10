@@ -33,7 +33,7 @@
             
             /* Apply the pulsing animation */
             animation: pulse 2.0s infinite;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
         }
 
         #floating-video-button:hover {
