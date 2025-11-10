@@ -377,7 +377,7 @@
                 <div class="modal-content">
                     <div class="modal-header bg-info">
                         <h5 class="modal-title font-weight-bold" id="videoModalLabel">
-                            <i class="fab fa-youtube"></i> How to Renew Your Package
+                            <i class="fab fa-youtube"></i> প্রোফাইল আপডেট টিউটোরিয়াল
                         </h5>
                         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
