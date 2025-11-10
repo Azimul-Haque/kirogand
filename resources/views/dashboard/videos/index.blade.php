@@ -107,6 +107,7 @@
           padding: 10px 15px;
           border-radius: 5px;
           transition: background-color 0.2s;
+          color: #fff;
       }
       .btn-watch:hover {
           background-color: #A90000; /* Darker blue on hover */
