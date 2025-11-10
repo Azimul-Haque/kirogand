@@ -913,6 +913,15 @@ class DashboardController extends Controller
         return redirect()->route('dashboard.messages');
     }
 
+    
+
+    public function getVideoTutorial()
+    {
+        $notifications = Notification::orderBy('id', 'desc')->paginate(12);
+
+        return view('dashboard.notifications.index')->withNotifications($notifications);
+    }
+
     public function sendSingleNotification(Request $request, $id)
     {
         $user = User::find($id);
@@ -1019,13 +1028,6 @@ class DashboardController extends Controller
     }
 
     public function getNotifications()
-    {
-        $notifications = Notification::orderBy('id', 'desc')->paginate(12);
-
-        return view('dashboard.notifications.index')->withNotifications($notifications);
-    }
-
-    public function getVideoTutorial()
     {
         $notifications = Notification::orderBy('id', 'desc')->paginate(12);
 
