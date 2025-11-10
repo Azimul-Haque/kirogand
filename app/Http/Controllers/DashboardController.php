@@ -915,7 +915,7 @@ class DashboardController extends Controller
 
     public function getVideoTutorial()
     {
-        return view('dashboard.notifications.index')->withNotifications($notifications);
+        return view('dashboard.videos.index');
     }
 
     public function sendSingleNotification(Request $request, $id)
