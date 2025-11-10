@@ -22,8 +22,8 @@
         <!-- VIDEO CARD 1 -->
         <div class="col-md-6 col-lg-4 mb-5">
             <div class="card h-100 video-card shadow-lg">
-                <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="KIsT2ZNK8JQ">
-                    <img src="https://img.youtube.com/vi/KIsT2ZNK8JQ/hqdefault.jpg" alt="প্রোফাইল আপডেট থাম্বনেইল">
+                <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="eOb0MwGJh5c">
+                    <img src="https://img.youtube.com/vi/eOb0MwGJh5c/hqdefault.jpg" alt="প্রোফাইল আপডেট থাম্বনেইল">
                     <div class="play-overlay">
                         <i class="fab fa-youtube"></i>
                     </div>
@@ -32,7 +32,7 @@
                     <h5 class="video-tutorial-title">প্রোফাইল আপডেট: ব্যক্তিগত ও কার্যালয় তথ্য</h5>
                     <p class="card-text">ডি-নাগরিক প্ল্যাটফর্মে আপনার প্রোফাইল কীভাবে সঠিকভাবে আপডেট করবেন, ব্যক্তিগত ও কার্যালয়ের তথ্য যোগ করবেন এবং সনদ তৈরির জন্য মনোগ্রাম আপলোড করবেন, তা জানুন।</p>
                     <button type="button" class="btn btn-watch btn-block mt-auto" 
-                            data-toggle="modal" data-target="#videoModal" data-youtube-id="KIsT2ZNK8JQ">
+                            data-toggle="modal" data-target="#videoModal" data-youtube-id="eOb0MwGJh5c">
                         <i class="fas fa-video mr-2"></i> ভিডিও দেখুন
                     </button>
                 </div>
