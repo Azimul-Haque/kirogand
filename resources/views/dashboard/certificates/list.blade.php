@@ -108,7 +108,6 @@
                                   <strong>{{ $certificate->unique_serial }}</strong>
                               </td>
                               <td>
-                                  {{-- Assuming the recipient's name is in the related User model or data_payload --}}
                                   {{ $certificate->data_payload['applicant']['name'] ?? 'N/A' }}<br/>
                                   <small class="text-muted">মোবাইল: {{ $certificate->recipient->mobile ?? ($certificate->data_payload['applicant']['mobile'] ?? 'N/A') }}</small>
                               </td>
