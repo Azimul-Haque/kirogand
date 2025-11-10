@@ -309,8 +309,16 @@
 
         </div>
         <!-- /.row -->
+
+        <button type="button" 
+                id="floating-video-button"
+                data-toggle="modal" 
+                data-target="#videoModal"
+                title="Watch Tutorial">
+            <!-- Icon representing a Play button -->
+            <i class="fas fa-play"></i>
+        </button>
     </div>
-    
 @endsection
 
 @section('third_party_scripts')
