@@ -455,9 +455,25 @@
         });
 
 
-        $(document).on('change', '#authorityType', function() {
-            $('#add_union_id').hide();
-        });
+        function toggleUnionTypeVisibility() {
+            // Get references to the elements by their IDs
+            const authoritySelect = document.getElementById('authorityType');
+            const unionTypeSelect = document.getElementById('add_union_type');
+
+            // Gracefully exit if the elements are not found (e.g., in views where they don't exist)
+            if (!authoritySelect || !unionTypeSelect) {
+                return;
+            }
+
+            // Check if the selected value of authorityType is 'up'
+            if (authoritySelect.value === 'up') {
+                // Hide the union type select element
+                unionTypeSelect.style.display = 'none';
+            } else {
+                // Show the union type select element
+                unionTypeSelect.style.display = 'block';
+            }
+        }
       });
   </script>
 
