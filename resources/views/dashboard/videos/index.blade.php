@@ -18,7 +18,88 @@
     </ol>
   @endsection
     <div class="container-fluid">
-		  
+		  <div class="row">             
+        <!-- VIDEO CARD 1 -->
+        <div class="col-md-6 col-lg-4 mb-5">
+            <div class="card h-100 video-card shadow-lg">
+                <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="YjY5JmQ_nL0">
+                    <img src="https://img.youtube.com/vi/YjY5JmQ_nL0/hqdefault.jpg" alt="প্রোফাইল আপডেট থাম্বনেইল">
+                    <div class="play-overlay">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="video-tutorial-title">প্রোফাইল আপডেট: ব্যক্তিগত ও কার্যালয় তথ্য</h5>
+                    <p class="card-text">ডি-নাগরিক প্ল্যাটফর্মে আপনার প্রোফাইল কীভাবে সঠিকভাবে আপডেট করবেন, ব্যক্তিগত ও কার্যালয়ের তথ্য যোগ করবেন এবং সনদ তৈরির জন্য মনোগ্রাম আপলোড করবেন, তা জানুন।</p>
+                    <button type="button" class="btn btn-watch btn-block mt-auto" 
+                            data-toggle="modal" data-target="#videoModal" data-youtube-id="YjY5JmQ_nL0">
+                        <i class="fas fa-video mr-2"></i> ভিডিও দেখুন
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIDEO CARD 2 -->
+        <div class="col-md-6 col-lg-4 mb-5">
+            <div class="card h-100 video-card shadow-lg">
+                <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="dQw4w9WgXcQ">
+                    <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="প্যাকেজ নবায়ন থাম্বনেইল">
+                    <div class="play-overlay">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="video-tutorial-title">প্যাকেজ নবায়ন: সাশ্রয়ী মূল্যে সার্ভিস চালু রাখুন</h5>
+                    <p class="card-text">আপনার ডি-নাগরিক সার্ভিসের মেয়াদ বাড়াতে এবং আনলিমিটেড সার্টিফিকেট তৈরির সুবিধা চালু রাখতে প্যাকেজ নবায়নের সম্পূর্ণ প্রক্রিয়া ও সাশ্রয়ের টিপস জানুন।</p>
+                    <button type="button" class="btn btn-watch btn-block mt-auto" 
+                            data-toggle="modal" data-target="#videoModal" data-youtube-id="dQw4w9WgXcQ">
+                        <i class="fas fa-video mr-2"></i> ভিডিও দেখুন
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIDEO CARD 3 -->
+        <div class="col-md-6 col-lg-4 mb-5">
+            <div class="card h-100 video-card shadow-lg">
+                <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="VIDEO_ID_3">
+                    <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="নতুন সনদ তৈরি থাম্বনেইল">
+                    <div class="play-overlay">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="video-tutorial-title">কীভাবে একটি নতুন ডিজিটাল সনদ তৈরি করবেন?</h5>
+                    <p class="card-text">ধাপে ধাপে শিখুন কীভাবে ডি-নাগরিক প্ল্যাটফর্ম ব্যবহার করে বিভিন্ন ডিজিটাল প্রত্যয়নপত্র বা সনদ তৈরি ও বিতরণ করবেন।</p>
+                    <button type="button" class="btn btn-watch btn-block mt-auto" 
+                            data-toggle="modal" data-target="#videoModal" data-youtube-id="VIDEO_ID_3">
+                        <i class="fas fa-video mr-2"></i> ভিডিও দেখুন
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIDEO CARD 4 -->
+        <div class="col-md-6 col-lg-4 mb-5">
+            <div class="card h-100 video-card shadow-lg">
+                <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="VIDEO_ID_4">
+                    <img src="https://img.youtube.com/vi/VIDEO_ID_4/hqdefault.jpg" alt="নিবন্ধন পদ্ধতি থাম্বনেইল">
+                    <div class="play-overlay">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="video-tutorial-title">ডি-নাগরিক প্ল্যাটফর্মে নিবন্ধন পদ্ধতি</h5>
+                    <p class="card-text">ডি-নাগরিকে প্রশাসনিক কর্তৃপক্ষ হিসেবে দ্রুত এবং সফলভাবে নিবন্ধন করার জন্য প্রয়োজনীয় সব ধাপ এই ভিডিওতে দেখুন।</p>
+                    <button type="button" class="btn btn-watch btn-block mt-auto" 
+                            data-toggle="modal" data-target="#videoModal" data-youtube-id="VIDEO_ID_4">
+                        <i class="fas fa-video mr-2"></i> ভিডিও দেখুন
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     </div>
 @endsection
