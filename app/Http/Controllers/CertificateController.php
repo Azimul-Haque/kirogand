@@ -69,8 +69,8 @@ class CertificateController extends Controller
                 return redirect()->route('index.index');
             }
             if(Auth::user()->localOffice->mobile == null || Auth::user()->localOffice->email == null || Auth::user()->localOffice->monogram == null || Auth::user()->localOffice->signatory == null) {
-                Session::flash('warning', 'আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শেষ, প্যাকেজ কিনে সনদ তৈরি করুন।');
-                return redirect()->route('dashboard.payments.office');
+                Session::flash('warning', 'তথ্যসমূহ হালনাগাদ করুন। সনদ তৈরিতে তথ্যগুলো অপরিহার্য।');
+                return redirect()->route('dashboard.profile');
             }
             if(isPackageExpired(Auth::user()->localOffice->package_expiry_date)) {
                 Session::flash('warning', 'আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শেষ, প্যাকেজ কিনে সনদ তৈরি করুন।');
