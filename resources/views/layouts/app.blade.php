@@ -57,8 +57,8 @@
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('index.index') }}"  target="_blank">
-              <i class="fas fa-globe"></i>
+            <a class="nav-link" href="{{ route('index.index') }}">
+              <i class="fab fa-youtube"></i>
             </a>
           </li>
           <li class="nav-item">
