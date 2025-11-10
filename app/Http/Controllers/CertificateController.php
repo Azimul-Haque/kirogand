@@ -68,7 +68,7 @@ class CertificateController extends Controller
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01737988070');
                 return redirect()->route('index.index');
             }
-            if(isPackageExpired(Auth::user()->localOffice->package_expiry_date)) {
+            if(Auth::user()->localOffice->package_expiry_date) {
                 Session::flash('warning', 'আপনার সফটওয়্যার ব্যবহারের প্যাকেজটির মেয়াদ শেষ, প্যাকেজ কিনে সনদ তৈরি করুন।');
                 return redirect()->route('dashboard.payments.office');
             }
