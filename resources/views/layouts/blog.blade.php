@@ -77,7 +77,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-8">@yield('content-s')</div>
-                <div class="col-md-4 col-sm-4 col-md-offset-1 sidebar py-5" style="padding-bottom: 50px;">
+                <div class="col-md-4 col-sm-4  sidebar py-5" style="padding-bottom: 50px;">
                     @include('partials._blog_sidebar')
                 </div>
             </div>
