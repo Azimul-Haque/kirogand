@@ -227,8 +227,8 @@
 
         <div class="col-md-6 col-lg-4 mb-5">
             <div class="card h-100 video-card shadow-lg">
-                <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="cwrWqwv9-JM">
-                    <img src="https://img.youtube.com/vi/cwrWqwv9-JM/hqdefault.jpg" alt="নিবন্ধন পদ্ধতি থাম্বনেইল">
+                <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="5CZfxVfwBec">
+                    <img src="https://img.youtube.com/vi/5CZfxVfwBec/hqdefault.jpg" alt="নিবন্ধন পদ্ধতি থাম্বনেইল">
                     <div class="play-overlay">
                         <i class="fab fa-youtube"></i>
                     </div>
@@ -237,7 +237,7 @@
                     <h5 class="video-tutorial-title">ডি-নাগরিক ড্যাশবোর্ডে নাগরিকত্ব সনদ তৈরি পদ্ধতি</h5>
                     <p class="card-text">ডি-নাগরিক ড্যাশবোর্ডে নাগরিকত্ব সনদ তৈরির প্রক্রিয়া ধাপে ধাপে শিখতে এই ভিডিওটি দেখুন।</p>
                     <button type="button" class="btn btn-watch btn-block mt-auto" 
-                            data-toggle="modal" data-target="#videoModal" data-youtube-id="cwrWqwv9-JM">
+                            data-toggle="modal" data-target="#videoModal" data-youtube-id="5CZfxVfwBec">
                         <i class="fas fa-video mr-2"></i> ভিডিও দেখুন
                     </button>
                 </div>
