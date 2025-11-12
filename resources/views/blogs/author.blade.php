@@ -36,7 +36,7 @@
 @endsection
 
 @section('content')
-<section style="padding-bottom: 60px;background-color: #FFFFFF; height: 100px; border-bottom: 1px solid #F4F4F4;" class="py-5">
+<section style="background-color: #FFFFFF; height: 100px; border-bottom: 1px solid #F4F4F4;" class="py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
