@@ -102,7 +102,7 @@
                                                         <input type="text" name="description" value="{{ $blog->description }}" class="form-control mb-3" placeholder="SEO Description (Optional)">
                                                       </div>
                                                   </div>
-                                                  <textarea id="bodysummernote{{ $blog->id }}" class="summernote-editor" name="body">{{ $blog->body }}</textarea>
+                                                  <textarea id="bodysummernote{{ $blog->id }}" class="form-control summernote-editor" name="body">{{ $blog->body }}</textarea>
                                                   <br/>
                                                   <div class="row">
                                                       <div class="col-md-6">
@@ -360,7 +360,7 @@
                           <input type="text" name="description" value="{{ old('description') }}" class="form-control mb-3" placeholder="SEO Description (Optional)">
                         </div>
                     </div>
-                    <textarea id="bodysummernote" class="summernote-editor" name="body"></textarea>
+                    <textarea id="bodysummernote" class="form-control summernote-editor" name="body"></textarea>
                     <br/>
                     <div class="row">
                         <div class="col-md-6">
@@ -448,7 +448,7 @@
     // Ensure jQuery and Summernote are loaded before this script runs
     $(document).ready(function() {
         if ($.fn.summernote) {
-            $('.summernote-editor').summernote({
+            $('.form-control summernote-editor').summernote({
                 toolbar: [
                     // Styles (Paragraph, H1-H6, Blockquote)
                     ['style', ['style']],
