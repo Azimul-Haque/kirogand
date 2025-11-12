@@ -102,7 +102,7 @@
                                                         <input type="text" name="description" value="{{ $blog->description }}" class="form-control mb-3" placeholder="SEO Description (Optional)">
                                                       </div>
                                                   </div>
-                                                  <textarea id="bodysummernote{{ $blog->id }}" name="body">{{ $blog->body }}</textarea>
+                                                  <textarea id="bodysummernote{{ $blog->id }}" class="summernote-editor" name="body">{{ $blog->body }}</textarea>
                                                   <br/>
                                                   <div class="row">
                                                       <div class="col-md-6">
