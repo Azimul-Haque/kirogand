@@ -360,7 +360,7 @@
                           <input type="text" name="description" value="{{ old('description') }}" class="form-control mb-3" placeholder="SEO Description (Optional)">
                         </div>
                     </div>
-                    <textarea id="bodysummernote" name="body"></textarea>
+                    <textarea id="bodysummernote" class="summernote-editor" name="body"></textarea>
                     <br/>
                     <div class="row">
                         <div class="col-md-6">
