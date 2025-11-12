@@ -144,7 +144,7 @@
                                       </div>
 
                                       <script>
-                                          $('#bodysummernote{{ $blog->id }}').summernote({
+                                          {{-- $('#bodysummernote{{ $blog->id }}').summernote({
                                             // callbacks: {
                                             //   onChange: function(contents, $editable) {
                                             //     $("textarea#content").html(contents);
@@ -163,7 +163,7 @@
                                               ['insert', ['link', 'picture', 'video']],
                                               ['view', ['fullscreen', 'codeview', 'help']]
                                             ]
-                                          });
+                                          }); --}}
                                       </script>
 
 <script type="text/javascript">
