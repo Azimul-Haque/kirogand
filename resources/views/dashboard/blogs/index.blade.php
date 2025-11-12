@@ -4,19 +4,20 @@
 @section('third_party_stylesheets')
 <link href="{{ asset('css/select2.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('css/select2-bootstrap4.min.css') }}" rel="stylesheet" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ asset('js/select2.full.min.js') }}"></script>
 
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <style type="text/css">
   .select2-selection__choice{
       background-color: rgba(0, 123, 255) !important;
   }
-  .note-editor.note-frame .note-editing-area .note-editable {
-      min-height: 200px; /* Adjust height for the editor */
-  }
 </style>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 @endsection
 
 @section('content')
@@ -102,7 +103,7 @@
                                                         <input type="text" name="description" value="{{ $blog->description }}" class="form-control mb-3" placeholder="SEO Description (Optional)">
                                                       </div>
                                                   </div>
-                                                  <textarea id="bodysummernote{{ $blog->id }}" class="form-control summernote-editor" name="body">{{ $blog->body }}</textarea>
+                                                  <textarea id="bodysummernote{{ $blog->id }}" name="body">{{ $blog->body }}</textarea>
                                                   <br/>
                                                   <div class="row">
                                                       <div class="col-md-6">
@@ -144,7 +145,7 @@
                                       </div>
 
                                       <script>
-                                          {{-- $('#bodysummernote{{ $blog->id }}').summernote({
+                                          $('#bodysummernote{{ $blog->id }}').summernote({
                                             // callbacks: {
                                             //   onChange: function(contents, $editable) {
                                             //     $("textarea#content").html(contents);
@@ -163,7 +164,7 @@
                                               ['insert', ['link', 'picture', 'video']],
                                               ['view', ['fullscreen', 'codeview', 'help']]
                                             ]
-                                          }); --}}
+                                          });
                                       </script>
 
 <script type="text/javascript">
@@ -360,7 +361,7 @@
                           <input type="text" name="description" value="{{ old('description') }}" class="form-control mb-3" placeholder="SEO Description (Optional)">
                         </div>
                     </div>
-                    <textarea id="bodysummernote" class="form-control summernote-editor" name="body"></textarea>
+                    <textarea id="bodysummernote" name="body"></textarea>
                     <br/>
                     <div class="row">
                         <div class="col-md-6">
@@ -437,130 +438,8 @@
 @endsection
 
 @section('third_party_scripts')
-<script src="{{ asset('js/select2.full.min.js') }}"></script>
-<!-- Summernote JS for WYSIWYG editor -->
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-
-<script type="text/javascript">
-    // Ensure jQuery is loaded before attempting to initialize Summernote
-    // Also ensure Bootstrap 4's JavaScript is loaded in your layouts.app
-    
-    // Ensure jQuery and Summernote are loaded before this script runs
-  $('.summernote-editor').summernote({
-      toolbar: [
-          // Styles (Paragraph, H1-H6, Blockquote)
-          ['style', ['style']],
-
-          // Basic Text Formatting (Bold, Italic, Strikethrough, Underline, Clear formatting)
-          ['font', ['bold', 'italic', 'strikethrough', 'underline', 'clear']],
-
-          // Font Family and Font Size
-          ['fontname', ['fontname']],
-          ['fontsize', ['fontsize']],
-
-          // Text Color and Background Color
-          ['color', ['color']],
-
-          // Paragraph Formatting (Lists, Indent/Outdent, Alignments)
-          ['para', ['ul', 'ol', 'paragraph', 'blockquote']],
-
-          // Insert Options (Link, Picture, Table, Horizontal Line)
-          ['insert', ['link', 'picture', 'table', 'hr']],
-
-          // History (Undo/Redo)
-          ['history', ['undo', 'redo']],
-
-          // Code View
-          ['view', ['codeview']],
-
-          // Fullscreen Toggle
-          ['misc', ['fullscreen']] // Add fullscreen option for convenience
-      ],
-      styleTags: [ // Define the styles available in the 'style' dropdown
-          'p',
-          'h1',
-          'h2',
-          'h3',
-          'h4',
-          'h5',
-          'h6',
-          'blockquote'
-      ],
-      fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica Neue', 'Helvetica', 'Impact', 'Lucida Grande', 'Tahoma', 'Times New Roman', 'Verdana', 'Inter'], // Example font names
-      fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '24', '36'], // Example font sizes
-      height: 200, // Set the height of the editor area
-      dialogsInBody: true, // Prevents modals from being cut off if inside other modals
-      callbacks: {
-          // You can add callbacks here for custom functionalities if needed, e.g., image upload
-          // onImageUpload: function(files) {
-          //     // Handle image upload logic here
-          // }
-      }
-  });
-    $(document).ready(function() {
-        if ($.fn.summernote) {
-            $('.summernote-editor').summernote({
-                toolbar: [
-                    // Styles (Paragraph, H1-H6, Blockquote)
-                    ['style', ['style']],
-
-                    // Basic Text Formatting (Bold, Italic, Strikethrough, Underline, Clear formatting)
-                    ['font', ['bold', 'italic', 'strikethrough', 'underline', 'clear']],
-
-                    // Font Family and Font Size
-                    ['fontname', ['fontname']],
-                    ['fontsize', ['fontsize']],
-
-                    // Text Color and Background Color
-                    ['color', ['color']],
-
-                    // Paragraph Formatting (Lists, Indent/Outdent, Alignments)
-                    ['para', ['ul', 'ol', 'paragraph', 'blockquote']],
-
-                    // Insert Options (Link, Picture, Table, Horizontal Line)
-                    ['insert', ['link', 'picture', 'table', 'hr']],
-
-                    // History (Undo/Redo)
-                    ['history', ['undo', 'redo']],
-
-                    // Code View
-                    ['view', ['codeview']],
-
-                    // Fullscreen Toggle
-                    ['misc', ['fullscreen']] // Add fullscreen option for convenience
-                ],
-                styleTags: [ // Define the styles available in the 'style' dropdown
-                    'p',
-                    'h1',
-                    'h2',
-                    'h3',
-                    'h4',
-                    'h5',
-                    'h6',
-                    'blockquote'
-                ],
-                fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica Neue', 'Helvetica', 'Impact', 'Lucida Grande', 'Tahoma', 'Times New Roman', 'Verdana', 'Inter'], // Example font names
-                fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '24', '36'], // Example font sizes
-                height: 200, // Set the height of the editor area
-                dialogsInBody: true, // Prevents modals from being cut off if inside other modals
-                callbacks: {
-                    // You can add callbacks here for custom functionalities if needed, e.g., image upload
-                    // onImageUpload: function(files) {
-                    //     // Handle image upload logic here
-                    // }
-                }
-            });
-        } else {
-            console.error("Summernote is not loaded. Ensure jQuery and Bootstrap 4 JS are loaded before Summernote JS.");
-        }
-
-        // Existing custom file input label update
-        $('.custom-file-input').on('change', function() {
-            let fileName = $(this).val().split('\\').pop();
-            $(this).next('.custom-file-label').addClass("selected").html(fileName);
-        });
-    });
-</script>
+{{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
+{{-- <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script> --}}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
     $('.multiple-select').select2({
