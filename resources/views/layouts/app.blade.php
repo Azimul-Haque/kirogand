@@ -27,7 +27,7 @@
         }
 
         body {
-            font-family: 'kalpurush', Arial, sans-serif;
+            font-family: 'Shonar Bangla', Arial, sans-serif;
         }
     </style>
     @yield('third_party_stylesheets')
