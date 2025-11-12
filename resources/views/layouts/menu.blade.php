@@ -81,7 +81,7 @@
 <li class="nav-item">
     <a href="{{ route('dashboard.video.tutorials') }}" class="nav-link {{ Request::is('dashboard/video-tutorials') ? 'active' : '' }}">
         <i class="nav-icon fas fa-hand-holding-usd"></i>
-        <p>পেমেন্ট তালিকা</p>
+        <p>ভিডিও টিউটোরিয়াল</p>
     </a>
 </li>
 
