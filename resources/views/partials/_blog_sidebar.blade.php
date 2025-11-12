@@ -44,7 +44,7 @@
 <div class="card mb-4 rounded-3 shadow-sm">
 <h5 class="card-header fw-bold text-uppercase bg-light border-bottom">Popular Posts</h5>
 
-<div class="card-body p-3">
+<div class="card-body ">
     <ul class="list-unstyled">
         @foreach($populars as $popular)
         <!-- d-flex for alignment, pb-3 separates items -->
