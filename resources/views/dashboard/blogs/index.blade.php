@@ -2,7 +2,6 @@
 @section('title') ড্যাশবোর্ড | ব্লগ @endsection
 
 @section('third_party_stylesheets')
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link href="{{ asset('css/select2.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('css/select2-bootstrap4.min.css') }}" rel="stylesheet" />
 <script src="{{ asset('js/select2.full.min.js') }}"></script>
