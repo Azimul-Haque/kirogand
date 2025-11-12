@@ -208,8 +208,8 @@
 
         <div class="col-md-6 col-lg-4 mb-5">
             <div class="card h-100 video-card shadow-lg">
-                <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="KIsT2ZNK8JQ">
-                    <img src="https://img.youtube.com/vi/KIsT2ZNK8JQ/hqdefault.jpg" alt="নিবন্ধন পদ্ধতি থাম্বনেইল">
+                <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="cwrWqwv9-JM">
+                    <img src="https://img.youtube.com/vi/cwrWqwv9-JM/hqdefault.jpg" alt="নিবন্ধন পদ্ধতি থাম্বনেইল">
                     <div class="play-overlay">
                         <i class="fab fa-youtube"></i>
                     </div>
@@ -218,7 +218,7 @@
                     <h5 class="video-tutorial-title">ডি-নাগরিক ড্যাশবোর্ডে ওয়ারিশ সনদ তৈরি পদ্ধতি</h5>
                     <p class="card-text">ডি-নাগরিক ড্যাশবোর্ডে ওয়ারিশ বা উত্তরাধিকার সনদ তৈরির প্রয়োজনীয় সব ধাপ এই ভিডিওতে দেখুন।</p>
                     <button type="button" class="btn btn-watch btn-block mt-auto" 
-                            data-toggle="modal" data-target="#videoModal" data-youtube-id="KIsT2ZNK8JQ">
+                            data-toggle="modal" data-target="#videoModal" data-youtube-id="cwrWqwv9-JM">
                         <i class="fas fa-video mr-2"></i> ভিডিও দেখুন
                     </button>
                 </div>
