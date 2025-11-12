@@ -176,42 +176,42 @@
     <!-- Share Modal (Bootstrap 5 Structure) -->
 
     <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-    <div class="modal-header">
-    <h5 class="modal-title" id="shareModalLabel">ব্লগটি শেয়ার করুন!</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <div class="modal-body">
-    <p>নিচের ব্লগ লিংকটি শেয়ার করুন</p>
-    <div class="input-group">
-    <!-- Example of pre-filling the URL in a read-only input -->
-    <input type="text" class="form-control" value="{{ Request::url() }}" readonly>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="shareModalLabel">ব্লগটি শেয়ার করুন!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>নিচের ব্লগ লিংকটি শেয়ার করুন</p>
+                    <div class="input-group">
+                        <!-- Example of pre-filling the URL in a read-only input -->
+                        <input type="text" class="form-control" value="{{ Request::url() }}" readonly>
+                        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <script type="text/javascript">
-      const Toast = Swal.mixin({
-        toast: false,
-        position: 'center',
-        showConfirmButton: true,
-        timer: 4000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
-    </script>
-    <button class="btn btn-outline-secondary" type="button" id="copyShareLink"
-    onclick="navigator.clipboard.writeText('{{ Request::url() }}'); Toast.fire({ icon: 'success', title: 'লিংক কপি করা হয়েছে!' })">কপি করুন</button>
+                        <script type="text/javascript">
+                          const Toast = Swal.mixin({
+                            toast: false,
+                            position: 'center',
+                            showConfirmButton: true,
+                            timer: 4000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                              toast.addEventListener('mouseenter', Swal.stopTimer)
+                              toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            }
+                          })
+                        </script>
+                        <button class="btn btn-outline-secondary" type="button" id="copyShareLink"
+                        onclick="navigator.clipboard.writeText('{{ Request::url() }}'); Toast.fire({ icon: 'success', title: 'লিংক কপি করা হয়েছে!' })">কপি করুন</button>
 
-    </div>
-    </div>
-        {{-- <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div> --}}
-    </div>
-    </div>
+                    </div>
+                </div>
+                    {{-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div> --}}
+            </div>
+        </div>
     </div>
     <!-- End Share Modal -->
 
