@@ -109,7 +109,7 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion0">
                     <div class="accordion-body">
-                        ডি-নাগরিক নাগরিক সেবা গ্রহণের একটি দ্রুত ও নির্ভরযোগ্য মাধ্যম। এটি সময়, খরচ এবং জটিলতা কমিয়ে নাগরিক সেবাকে সহজ ও ডিজিটাল করেছে।
+                        অন্যান্য সনদ তৈরির প্লাটফর্ম যেখানে সনদ প্রতি ১৫/২০ এমকি ৩০ টাকা পর্যন্ত নিচ্ছে, সেখানে ডি-নাগরিক
                     </div>
                 </div>
             </div>
