@@ -273,7 +273,7 @@
                 <button type="button" class="btn btn-info btn-sm add-subheir-button" data-toggle="tooltip" data-original-title="ওয়ারিশ মৃত হলে সাব-ওয়ারিশ যোগ করুন" title="ওয়ারিশ মৃত হলে সাব-ওয়ারিশ যোগ করুন" data-parent-id="__INDEX__">
                     <i class="fas fa-sitemap"></i>
                 </button>
-                <button type="button" class="btn btn-danger btn-sm remove-heir-button" data-toggle="tooltip" data-original-title="ডিলেট করুন">
+                <button type="button" class="btn btn-danger btn-sm remove-heir-button" data-toggle="tooltip" data-original-title="ডিলেট করুন" title="ডিলেট করুন">
                     <i class="fas fa-trash"></i>
                 </button>
             </div>
