@@ -437,8 +437,106 @@
 @endsection
 
 @section('third_party_scripts')
-{{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
-{{-- <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script> --}}
+<script src="{{ asset('js/select2.full.min.js') }}"></script>
+<!-- Summernote JS for WYSIWYG editor -->
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
+<script type="text/javascript">
+    // Ensure jQuery is loaded before attempting to initialize Summernote
+    // Also ensure Bootstrap 4's JavaScript is loaded in your layouts.app
+    
+    // Ensure jQuery and Summernote are loaded before this script runs
+    $(document).ready(function() {
+        if ($.fn.summernote) {
+            $('.summernote-editor').summernote({
+                toolbar: [
+                    // Styles (Paragraph, H1-H6, Blockquote)
+                    ['style', ['style']],
+
+                    // Basic Text Formatting (Bold, Italic, Strikethrough, Underline, Clear formatting)
+                    ['font', ['bold', 'italic', 'strikethrough', 'underline', 'clear']],
+
+                    // Font Family and Font Size
+                    ['fontname', ['fontname']],
+                    ['fontsize', ['fontsize']],
+
+                    // Text Color and Background Color
+                    ['color', ['color']],
+
+                    // Paragraph Formatting (Lists, Indent/Outdent, Alignments)
+                    ['para', ['ul', 'ol', 'paragraph', 'blockquote']],
+
+                    // Insert Options (Link, Picture, Table, Horizontal Line)
+                    ['insert', ['link', 'picture', 'table', 'hr']],
+
+                    // History (Undo/Redo)
+                    ['history', ['undo', 'redo']],
+
+                    // Code View
+                    ['view', ['codeview']],
+
+                    // Fullscreen Toggle
+                    ['misc', ['fullscreen']] // Add fullscreen option for convenience
+                ],
+                styleTags: [ // Define the styles available in the 'style' dropdown
+                    'p',
+                    'h1',
+                    'h2',
+                    'h3',
+                    'h4',
+                    'h5',
+                    'h6',
+                    'blockquote'
+                ],
+                fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica Neue', 'Helvetica', 'Impact', 'Lucida Grande', 'Tahoma', 'Times New Roman', 'Verdana', 'Inter'], // Example font names
+                fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '24', '36'], // Example font sizes
+                height: 200, // Set the height of the editor area
+                dialogsInBody: true, // Prevents modals from being cut off if inside other modals
+                callbacks: {
+                    // You can add callbacks here for custom functionalities if needed, e.g., image upload
+                    // onImageUpload: function(files) {
+                    //     // Handle image upload logic here
+                    // }
+                }
+            });
+        } else {
+            console.error("Summernote is not loaded. Ensure jQuery and Bootstrap 4 JS are loaded before Summernote JS.");
+        }
+
+        // Existing custom file input label update
+        $('.custom-file-input').on('change', function() {
+            let fileName = $(this).val().split('\\').pop();
+            $(this).next('.custom-file-label').addClass("selected").html(fileName);
+        });
+    });
+
+
+    // Search functionality
+    $(document).on('click', '#search-button', function() {
+        if($('#search-param').val() != '') {
+            // The form action already handles the GET request, so just submit the form
+            $(this).closest('form').submit();
+        } else {
+            $('#search-param').css({ "border": '#FF0000 2px solid'});
+            // Assuming Toast.fire is defined globally or included
+            if (typeof Toast !== 'undefined') {
+                Toast.fire({
+                    icon: 'warning',
+                    title: 'Write something!'
+                });
+            } else {
+                console.warn('Toast.fire function is not defined. Please include SweetAlert2.');
+            }
+        }
+    });
+
+    $("#search-param").keyup(function(e) {
+        if(e.which == 13) { // Enter key
+            e.preventDefault(); // Prevent default form submission
+            $('#search-button').click(); // Trigger the search button click
+        }
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
     $('.multiple-select').select2({
