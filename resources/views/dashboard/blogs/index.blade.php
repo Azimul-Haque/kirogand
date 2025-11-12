@@ -5,16 +5,18 @@
 <link href="{{ asset('css/select2.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('css/select2-bootstrap4.min.css') }}" rel="stylesheet" />
 
-
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-
 <style type="text/css">
   .select2-selection__choice{
       background-color: rgba(0, 123, 255) !important;
   }
+  .note-editor.note-frame .note-editing-area .note-editable {
+      min-height: 200px; /* Adjust height for the editor */
+  }
 </style>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 @endsection
 
 @section('content')
