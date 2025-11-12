@@ -203,10 +203,8 @@
       })
     </script>
     <button class="btn btn-outline-secondary" type="button" id="copyShareLink"
-    onclick="Toast.fire({
-          icon: 'success',
-          title: '{{Session::get('লিংক কপি করা হয়েছে')}}'
-        })">Copy</button>
+    onclick="navigator.clipboard.writeText('{{ Request::url() }}'); alert('Link copied!');">Copy</button>
+    
     </div>
     </div>
     <div class="modal-footer">
