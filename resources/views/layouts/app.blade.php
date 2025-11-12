@@ -28,9 +28,6 @@
 
         body {
             font-family: 'kalpurush', Arial, sans-serif;
-            line-height: 1.6;
-            background-color: var(--white-bg);
-            color: var(--darker-color);
         }
     </style>
     @yield('third_party_stylesheets')
