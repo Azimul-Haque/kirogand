@@ -187,6 +187,30 @@
     <div class="input-group">
     <!-- Example of pre-filling the URL in a read-only input -->
     <input type="text" class="form-control" value="{{ Request::url() }}" readonly>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script type="text/javascript">
+      const Toast = Swal.mixin({
+        toast: false,
+        position: 'center',
+        showConfirmButton: true,
+        timer: 4000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+    </script>
+       
+    @if (Session::has('success'))
+      <script type="text/javascript">
+        Toast.fire({
+          icon: 'success',
+          title: '{{Session::get('success')}}'
+        })
+      </script>
+    @endif
     <button class="btn btn-outline-secondary" type="button" id="copyShareLink"
     onclick="navigator.clipboard.writeText('{{ Request::url() }}'); alert('Link copied!');">Copy</button>
     </div>
