@@ -446,7 +446,7 @@
     // Also ensure Bootstrap 4's JavaScript is loaded in your layouts.app
     
     // Ensure jQuery and Summernote are loaded before this script runs
-  $('.form-control summernote-editor').summernote({
+  $('.summernote-editor').summernote({
       toolbar: [
           // Styles (Paragraph, H1-H6, Blockquote)
           ['style', ['style']],
@@ -499,7 +499,7 @@
   });
     $(document).ready(function() {
         if ($.fn.summernote) {
-            $('.form-control summernote-editor').summernote({
+            $('.summernote-editor').summernote({
                 toolbar: [
                     // Styles (Paragraph, H1-H6, Blockquote)
                     ['style', ['style']],
