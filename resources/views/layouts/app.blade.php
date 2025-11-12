@@ -177,7 +177,7 @@
 </div>
 
 @if(Request::is('dashboard/blogs') || Request::is('dashboard/blogs/*'))
-    
+    <script src="{{ mix('js/app.js') }}" defer></script>
 @else
     <script src="{{ mix('js/app.js') }}" defer></script>
 @endif
