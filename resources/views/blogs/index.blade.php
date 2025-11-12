@@ -106,7 +106,7 @@
         </div>
 
     <!-- Paginating Links -->
-    <div class="d-flex justify-content-center mt-5">
+    <div class="d-flex justify-content-center ">
         {{ $blogs->links() }}
     </div>
 
