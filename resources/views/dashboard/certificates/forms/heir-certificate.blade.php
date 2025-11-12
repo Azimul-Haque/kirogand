@@ -326,7 +326,7 @@
             <input type="text" class="form-control form-control-sm" name="heirs_data[__PARENT_INDEX__][sub_heirs][__SUB_INDEX__][dob]" placeholder="জন্মতারিখ">
         </td>
         <td>
-            <input type="text" class="form-control form-control-sm" name="heirs_data[__PARENT_INDEX__][sub_heirs][__SUB_INDEX__][remark]" placeholder="যেমন: নাবালক" title="ওয়ারিশ মৃত হলে সাব-ওয়ারিশ যোগ করুন">
+            <input type="text" class="form-control form-control-sm" name="heirs_data[__PARENT_INDEX__][sub_heirs][__SUB_INDEX__][remark]" placeholder="যেমন: নাবালক">
         </td>
         <td>
             <button type="button" class="btn btn-danger btn-sm remove-subheir-button" data-toggle="tooltip" data-original-title="ডিলেট করুন" title="ডিলেট করুন">
