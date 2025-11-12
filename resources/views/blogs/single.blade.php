@@ -183,7 +183,7 @@
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-    <p>Share the link below:</p>
+    <p>নিচের ব্লগ লিংকটি শেয়ার করুন</p>
     <div class="input-group">
     <!-- Example of pre-filling the URL in a read-only input -->
     <input type="text" class="form-control" value="{{ Request::url() }}" readonly>
