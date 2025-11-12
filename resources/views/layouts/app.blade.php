@@ -176,7 +176,11 @@
     </footer>
 </div>
 
-<script src="{{ mix('js/app.js') }}" defer></script>
+@if(Request::is('dashboard/products') || Request::is('dashboard/products/*') || Request::is('dashboard/markets') || Request::is('dashboard/markets/*') || Request::is('dashboard/teams') || Request::is('dashboard/teams/*') || Request::is('dashboard/news') || Request::is('dashboard/news/*') || Request::is('dashboard/events') || Request::is('dashboard/success-stories') || Request::is('dashboard/abouts'))
+    
+@else
+    <script src="{{ mix('js/app.js') }}" defer></script>
+@endif
 <script src="{{ asset('js/pace.min.js') }}"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
