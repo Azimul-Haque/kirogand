@@ -203,13 +203,13 @@
       })
     </script>
     <button class="btn btn-outline-secondary" type="button" id="copyShareLink"
-    onclick="navigator.clipboard.writeText('{{ Request::url() }}'); Toast.fire({ icon: 'success', title: 'লিংক কপি করা হয়েছে!' })">কপি করিন</button>
+    onclick="navigator.clipboard.writeText('{{ Request::url() }}'); Toast.fire({ icon: 'success', title: 'লিংক কপি করা হয়েছে!' })">কপি করুন</button>
 
     </div>
     </div>
-        <div class="modal-footer">
+        {{-- <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
+        </div> --}}
     </div>
     </div>
     </div>
