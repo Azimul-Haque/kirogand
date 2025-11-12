@@ -179,10 +179,10 @@
 @if(Request::is('dashboard/blogs') || Request::is('dashboard/blogs/*'))
     
 @else
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/app.js') }}" defer></script><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 @endif
 <script src="{{ asset('js/pace.min.js') }}"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
     Pace.restart();
     $(document).ready(function(){
