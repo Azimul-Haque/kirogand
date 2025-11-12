@@ -66,7 +66,7 @@ use Illuminate\Support\Carbon;
         $bn = array( 'পূর্বাহ্ন', 'অপরাহ্ন');
         $str = str_replace( $en, $bn, $str);
         $en = array( 'day ago', 'days ago', 'seconds ago', 'minutes ago');
-        $bn = array( 'দিন আগে', 'দিন আগে');
+        $bn = array( 'দিন আগে', 'দিন আগে', 'সেকেন্ড আগে', 'মিনিট আগে');
         $str = str_replace( $en, $bn, $str);
         return $str;
   }
