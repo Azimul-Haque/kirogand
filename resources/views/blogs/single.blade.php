@@ -202,17 +202,11 @@
         }
       })
     </script>
-       
-    @if (Session::has('success'))
-      <script type="text/javascript">
-        Toast.fire({
+    <button class="btn btn-outline-secondary" type="button" id="copyShareLink"
+    onclick="Toast.fire({
           icon: 'success',
           title: '{{Session::get('success')}}'
-        })
-      </script>
-    @endif
-    <button class="btn btn-outline-secondary" type="button" id="copyShareLink"
-    onclick="navigator.clipboard.writeText('{{ Request::url() }}'); alert('Link copied!');">Copy</button>
+        })">Copy</button>
     </div>
     </div>
     <div class="modal-footer">
