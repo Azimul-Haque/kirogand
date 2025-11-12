@@ -443,18 +443,7 @@
 {{-- <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script> --}}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
-    $('.multiple-select').select2({
-      // theme: 'bootstrap4',
-    });
-    // ClassicEditor
-    //     .create( document.querySelector( '.summernote' ) )
-    //     .then( editor => {
-    //             console.log( editor );
-    //     } )
-    //     .catch( error => {
-    //             console.error( error );
-    //     } );
-
+    
     $('#bodysummernote').summernote({
       // callbacks: {
       //   onChange: function(contents, $editable) {
