@@ -79,7 +79,7 @@
 @endif
 
 <li class="nav-item">
-    <a href="{{ route('dashboard.video.tutorials') }}" class="nav-link {{ Request::is('dashboard/payments/office/payment-list') ? 'active' : '' }}">
+    <a href="{{ route('dashboard.video.tutorials') }}" class="nav-link {{ Request::is('dashboard/video-tutorials') ? 'active' : '' }}">
         <i class="nav-icon fas fa-hand-holding-usd"></i>
         <p>পেমেন্ট তালিকা</p>
     </a>
