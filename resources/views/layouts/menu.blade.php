@@ -78,6 +78,13 @@
 </li>
 @endif
 
+<li class="nav-item">
+    <a href="{{ route('dashboard.payments.office.payment-list') }}" class="nav-link {{ Request::is('dashboard/payments/office/payment-list') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-hand-holding-usd"></i>
+        <p>পেমেন্ট তালিকা</p>
+    </a>
+</li>
+
 @if(Auth::user()->role == 'admin')
 <li class="nav-item">
     <a href="{{ route('dashboard.payments') }}" class="nav-link {{ Request::is('dashboard/payments') ? 'active' : '' }} {{ Request::is('dashboard/payments/*') ? 'active' : '' }}">
