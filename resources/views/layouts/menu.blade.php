@@ -80,7 +80,7 @@
 
 <li class="nav-item">
     <a href="{{ route('dashboard.video.tutorials') }}" class="nav-link {{ Request::is('dashboard/video-tutorials') ? 'active' : '' }}">
-        <i class="nav-icon fas fa-hand-holding-usd"></i>
+        <i class="nav-icon fab fa-youtube"></i>
         <p>ভিডিও টিউটোরিয়াল</p>
     </a>
 </li>
