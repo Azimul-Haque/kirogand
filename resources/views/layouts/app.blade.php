@@ -16,6 +16,21 @@
 
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/pace.min.css') }}" rel="stylesheet">
+    @font-face {
+        font-family: 'Tiro Bangla'; 
+        font-weight: 400;
+        font-style: normal;
+        /*src: url('https://dnagorik.com/fonts/kalpurush-webfont.woff2') format('woff2'),
+             url('https://dnagorik.com/fonts/kalpurush-webfont.woff') format('woff'); */
+        font-display: swap;
+    }
+
+    body {
+        font-family: 'Tiro Bangla', Arial, sans-serif;
+        line-height: 1.6;
+        background-color: var(--white-bg);
+        color: var(--darker-color);
+    }
     @yield('third_party_stylesheets')
 
     @stack('page_css')
