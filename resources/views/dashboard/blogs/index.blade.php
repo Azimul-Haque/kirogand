@@ -575,7 +575,7 @@
     //             console.error( error );
     //     } );
 
-    {{-- $('#bodysummernote').summernote({
+    $('#bodysummernote').summernote({
       // callbacks: {
       //   onChange: function(contents, $editable) {
       //     $("textarea#question").html(contents);
@@ -590,7 +590,7 @@
         ['insert', ['link', 'picture']],
         ['view', ['codeview']]
       ]
-    }); --}}
+    });
 </script>
 <script type="text/javascript">
     $(document).ready( function() {
