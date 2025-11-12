@@ -18,7 +18,7 @@
     <link href="{{ asset('css/pace.min.css') }}" rel="stylesheet">
     <style>
         body {
-            font-family: 'Kalpurush', Arial, sans-serif;
+            font-family: 'SolaimanLipi', Arial, sans-serif;
             font-size: 1rem;
         }
     </style>
