@@ -176,7 +176,7 @@
     </footer>
 </div>
 
-@if(Request::is('dashboard/blogs') || Request::is('dashboard/products/*') || Request::is('dashboard/markets') || Request::is('dashboard/markets/*') || Request::is('dashboard/teams') || Request::is('dashboard/teams/*') || Request::is('dashboard/news') || Request::is('dashboard/news/*') || Request::is('dashboard/events') || Request::is('dashboard/success-stories') || Request::is('dashboard/abouts'))
+@if(Request::is('dashboard/blogs') || Request::is('dashboard/blogs/*') || Request::is('dashboard/markets') || Request::is('dashboard/markets/*') || Request::is('dashboard/teams') || Request::is('dashboard/teams/*') || Request::is('dashboard/news') || Request::is('dashboard/news/*') || Request::is('dashboard/events') || Request::is('dashboard/success-stories') || Request::is('dashboard/abouts'))
     
 @else
     <script src="{{ mix('js/app.js') }}" defer></script>
