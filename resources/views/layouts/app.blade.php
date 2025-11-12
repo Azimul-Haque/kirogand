@@ -19,6 +19,7 @@
     <style>
         body {
             font-family: 'SolaimanLipi', Arial, sans-serif;
+            font-size: 1rem;
         }
     </style>
     @yield('third_party_stylesheets')
