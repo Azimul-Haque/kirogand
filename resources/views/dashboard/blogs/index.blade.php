@@ -443,7 +443,7 @@
 @section('third_party_scripts')
 {{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
 {{-- <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script> --}}
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> --}}
 <script>
     $('#bodysummernote').summernote({
       // callbacks: {
