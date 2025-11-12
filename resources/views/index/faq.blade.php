@@ -148,7 +148,7 @@
             <!-- Question 3: Importance of D-Nagorik -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         <span class="me-2">৩.</span> ডি-নাগরিক কেন গুরুত্বপূর্ণ?
                     </button>
                 </h2>
