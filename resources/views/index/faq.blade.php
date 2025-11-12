@@ -100,6 +100,21 @@
             <p class="lead text-muted">আমাদের প্ল্যাটফর্ম, **ডি-নাগরিক** পরিষেবা এবং বৈশিষ্ট্য সম্পর্কে সাধারণ প্রশ্নের দ্রুত উত্তর পান। আপনি যদি সাহায্যের জন্য খুঁজছেন, আপনি সঠিক জায়গায় আছেন!</p>
         </header>
 
+        <div class="accordion" id="faqAccordion0">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <span class="me-2">#.</span> ডি-নাগরিক কেন সবার থেকে আলাদা?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion0">
+                    <div class="accordion-body">
+                        ডি-নাগরিক নাগরিক সেবা গ্রহণের একটি দ্রুত ও নির্ভরযোগ্য মাধ্যম। এটি সময়, খরচ এবং জটিলতা কমিয়ে নাগরিক সেবাকে সহজ ও ডিজিটাল করেছে।
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="accordion" id="faqAccordion">
 
             <!-- Question 1: What is D-Nagorik? -->
@@ -153,20 +168,6 @@
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        ডি-নাগরিক নাগরিক সেবা গ্রহণের একটি দ্রুত ও নির্ভরযোগ্য মাধ্যম। এটি সময়, খরচ এবং জটিলতা কমিয়ে নাগরিক সেবাকে সহজ ও ডিজিটাল করেছে।
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <span class="me-2">#.</span> ডি-নাগরিক কেন সবার থেকে আলাদা?
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                         ডি-নাগরিক নাগরিক সেবা গ্রহণের একটি দ্রুত ও নির্ভরযোগ্য মাধ্যম। এটি সময়, খরচ এবং জটিলতা কমিয়ে নাগরিক সেবাকে সহজ ও ডিজিটাল করেছে।
                     </div>
