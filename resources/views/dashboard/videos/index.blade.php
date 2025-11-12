@@ -253,7 +253,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="video-tutorial-title">ডি-নাগরিক ড্যাশবোর্ডে নাগরিকত্ব সনদ তৈরি পদ্ধতি</h5>
+                    <h5 class="video-tutorial-title">ডি-নাগরিক ওয়েবসাইটে সনদ যাচাই করবেন যেভাবে</h5>
                     <p class="card-text">ডি-নাগরিক ড্যাশবোর্ডে নাগরিকত্ব সনদ তৈরির প্রক্রিয়া ধাপে ধাপে শিখতে এই ভিডিওটি দেখুন।</p>
                     <button type="button" class="btn btn-watch btn-block mt-auto" 
                             data-toggle="modal" data-target="#videoModal" data-youtube-id="5CZfxVfwBec">
