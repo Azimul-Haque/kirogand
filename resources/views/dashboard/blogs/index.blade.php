@@ -586,10 +586,34 @@
       tabsize: 1,
       height: 300,
       toolbar: [
-        ['font', ['bold', 'underline', 'clear', 'strikethrough', 'superscript', 'subscript']],
-        ['insert', ['link', 'picture']],
-        ['view', ['codeview']]
-      ]
+          // Styles (Paragraph, H1-H6, Blockquote)
+          ['style', ['style']],
+
+          // Basic Text Formatting (Bold, Italic, Strikethrough, Underline, Clear formatting)
+          ['font', ['bold', 'italic', 'strikethrough', 'underline', 'clear']],
+
+          // Font Family and Font Size
+          ['fontname', ['fontname']],
+          ['fontsize', ['fontsize']],
+
+          // Text Color and Background Color
+          ['color', ['color']],
+
+          // Paragraph Formatting (Lists, Indent/Outdent, Alignments)
+          ['para', ['ul', 'ol', 'paragraph', 'blockquote']],
+
+          // Insert Options (Link, Picture, Table, Horizontal Line)
+          ['insert', ['link', 'picture', 'table', 'hr']],
+
+          // History (Undo/Redo)
+          ['history', ['undo', 'redo']],
+
+          // Code View
+          ['view', ['codeview']],
+
+          // Fullscreen Toggle
+          ['misc', ['fullscreen']] // Add fullscreen option for convenience
+      ],
     });
 </script>
 <script type="text/javascript">
