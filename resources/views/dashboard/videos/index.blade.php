@@ -254,7 +254,7 @@
                 </div>
                 <div class="card-body">
                     <h5 class="video-tutorial-title">ডি-নাগরিক ওয়েবসাইটে সনদ যাচাই করবেন যেভাবে</h5>
-                    <p class="card-text">ডি-নাগরিক প্ল্যাটফর্ম থেকে ইস্যু হওয়া যেকোনো ডিজিটাল সনদপত্র যাচাই করা অত্যন্ত জরুরি। এই ভিডিওতে আমরা ধাপে ধাপে দেখিয়েছি কীভাবে ডি-নাগরিক ওয়েবসাইটে গিয়ে খুব সহজে যেকোনো সনদের বৈধতা যাচাই (Verification) করা যায়।</p>
+                    <p class="card-text">এই ভিডিওতে আমরা ধাপে ধাপে দেখিয়েছি কীভাবে ডি-নাগরিক ওয়েবসাইটে গিয়ে খুব সহজে যেকোনো সনদের বৈধতা যাচাই (Verification) করা যায়।</p>
                     <button type="button" class="btn btn-watch btn-block mt-auto" 
                             data-toggle="modal" data-target="#videoModal" data-youtube-id="5CZfxVfwBec">
                         <i class="fas fa-video mr-2"></i> ভিডিও দেখুন
