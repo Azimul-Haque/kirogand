@@ -246,8 +246,8 @@
 
         <div class="col-md-6 col-lg-4 mb-5">
             <div class="card h-100 video-card shadow-lg">
-                <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="5CZfxVfwBec">
-                    <img src="https://img.youtube.com/vi/5CZfxVfwBec/hqdefault.jpg" alt="নিবন্ধন পদ্ধতি থাম্বনেইল">
+                <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="8uOBwx1lpM4">
+                    <img src="https://img.youtube.com/vi/8uOBwx1lpM4/hqdefault.jpg" alt="নিবন্ধন পদ্ধতি থাম্বনেইল">
                     <div class="play-overlay">
                         <i class="fab fa-youtube"></i>
                     </div>
@@ -256,7 +256,7 @@
                     <h5 class="video-tutorial-title">ডি-নাগরিক ওয়েবসাইটে সনদ যাচাই করবেন যেভাবে</h5>
                     <p class="card-text">এই ভিডিওতে আমরা ধাপে ধাপে দেখিয়েছি কীভাবে ডি-নাগরিক ওয়েবসাইটে গিয়ে খুব সহজে যেকোনো সনদের বৈধতা যাচাই (Verification) করা যায়।</p>
                     <button type="button" class="btn btn-watch btn-block mt-auto" 
-                            data-toggle="modal" data-target="#videoModal" data-youtube-id="5CZfxVfwBec">
+                            data-toggle="modal" data-target="#videoModal" data-youtube-id="8uOBwx1lpM4">
                         <i class="fas fa-video mr-2"></i> ভিডিও দেখুন
                     </button>
                 </div>
