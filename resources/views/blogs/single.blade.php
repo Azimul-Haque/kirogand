@@ -205,7 +205,7 @@
     <button class="btn btn-outline-secondary" type="button" id="copyShareLink"
     onclick="Toast.fire({
           icon: 'success',
-          title: '{{Session::get('success')}}'
+          title: '{{Session::get('লিংক কপি করা হয়েছে')}}'
         })">Copy</button>
     </div>
     </div>
