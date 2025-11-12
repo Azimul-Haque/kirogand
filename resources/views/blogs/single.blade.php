@@ -203,7 +203,7 @@
       })
     </script>
     <button class="btn btn-outline-secondary" type="button" id="copyShareLink"
-    onclick="navigator.clipboard.writeText('{{ Request::url() }}'); alert('Link copied!');">Copy</button>
+    onclick="navigator.clipboard.writeText('{{ Request::url() }}'); Toast.fire({ icon: 'success', title: '{{Session::get('success')}}' })">Copy</button>
     
     </div>
     </div>
