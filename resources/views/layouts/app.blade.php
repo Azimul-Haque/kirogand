@@ -27,7 +27,7 @@
         }
 
         body {
-            font-family: 'SolaimanLipi', Arial, sans-serif;
+            font-family: 'Kalpurush', Arial, sans-serif;
         }
     </style>
     @yield('third_party_stylesheets')
