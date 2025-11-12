@@ -72,7 +72,7 @@
                                 
                                 <!-- Blog Excerpt / Body -->
                                 <div class="mb-4 text-justify">
-                                    @if(strlen(strip_tags($blog->body)) > 300)
+                                    @if(strlen(strip_tags($blog->body)) > 230)
                                         {{ mb_substr(strip_tags($blog->body), 0, stripos($blog->body, " ", stripos(strip_tags($blog->body), " ")+200))."... " }}
                                     @else
                                         {{ strip_tags($blog->body) }}
