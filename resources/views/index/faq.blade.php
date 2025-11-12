@@ -104,7 +104,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <span class="me-2">#.</span> ডি-নাগরিক কেন সবার থেকে আলাদা?
+                        <span class="me-2">#</span> ডি-নাগরিক কেন সবার থেকে আলাদা?
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion0">
