@@ -152,7 +152,7 @@
                         <span class="me-2">৩.</span> ডি-নাগরিক কেন গুরুত্বপূর্ণ?
                     </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse " aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                         ডি-নাগরিক নাগরিক সেবা গ্রহণের একটি দ্রুত ও নির্ভরযোগ্য মাধ্যম। এটি সময়, খরচ এবং জটিলতা কমিয়ে নাগরিক সেবাকে সহজ ও ডিজিটাল করেছে।
                     </div>
