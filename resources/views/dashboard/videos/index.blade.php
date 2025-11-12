@@ -205,7 +205,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="col-md-6 col-lg-4 mb-5">
             <div class="card h-100 video-card shadow-lg">
                 <div class="thumbnail-container" data-toggle="modal" data-target="#videoModal" data-youtube-id="KIsT2ZNK8JQ">
@@ -215,7 +215,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="video-tutorial-title">ডি-নাগরিক প্ল্যাটফর্মে নিবন্ধন পদ্ধতি</h5>
+                    <h5 class="video-tutorial-title">ডি-নাগরিক ড্যাশবোর্ডে ওয়ারিশ সনদ তৈরি পদ্ধতি</h5>
                     <p class="card-text">ডি-নাগরিকে প্রশাসনিক কর্তৃপক্ষ হিসেবে দ্রুত এবং সফলভাবে নিবন্ধন করার জন্য প্রয়োজনীয় সব ধাপ এই ভিডিওতে দেখুন।</p>
                     <button type="button" class="btn btn-watch btn-block mt-auto" 
                             data-toggle="modal" data-target="#videoModal" data-youtube-id="KIsT2ZNK8JQ">
