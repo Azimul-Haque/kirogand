@@ -509,33 +509,6 @@
             $(this).next('.custom-file-label').addClass("selected").html(fileName);
         });
     });
-
-
-    // Search functionality
-    $(document).on('click', '#search-button', function() {
-        if($('#search-param').val() != '') {
-            // The form action already handles the GET request, so just submit the form
-            $(this).closest('form').submit();
-        } else {
-            $('#search-param').css({ "border": '#FF0000 2px solid'});
-            // Assuming Toast.fire is defined globally or included
-            if (typeof Toast !== 'undefined') {
-                Toast.fire({
-                    icon: 'warning',
-                    title: 'Write something!'
-                });
-            } else {
-                console.warn('Toast.fire function is not defined. Please include SweetAlert2.');
-            }
-        }
-    });
-
-    $("#search-param").keyup(function(e) {
-        if(e.which == 13) { // Enter key
-            e.preventDefault(); // Prevent default form submission
-            $('#search-button').click(); // Trigger the search button click
-        }
-    });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
