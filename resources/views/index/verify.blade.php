@@ -87,7 +87,18 @@
                         $lglevels = [];
                         $auth = $certificate->localOffice->users[0]->authorities->first();
                         echo $auth;
-                        
+                        // if(count(getgovlevels($auth)) > 0) {
+                        //     $lglevels = getgovlevels($auth);
+                        // }
+                        // //get levels data
+                        // $union_info = [
+                        //     'union_name' => $certificate->localOffice->name_bn ?? 'তথ্য নেই',
+                        //     'upazila' => $lglevels['Upazila'] ?? 'তথ্য নেই',
+                        //     'district' => $lglevels['District'] ?? 'তথ্য নেই',
+                        //     // 'chairman_name' => $certificate->localOffice->name_bn,
+                        //     'email' => $certificate->localOffice->email ?? '',
+                        //     'phone' => $certificate->localOffice->mobile ?? '',
+                        // ];
 
                         // Conditional Draft Watermark
                         $is_draft = ($certificate->status ?? 0) == 0;
