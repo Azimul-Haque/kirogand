@@ -84,9 +84,9 @@
                         $heirs = $payload['heirs'] ?? [];
 
                         //get levels data
-                        $lglevels = [];
-                        $auth = $certificate->localOffice->users[0]->authorities->first();
-                        echo $certificate->localOffice->users[0];
+                        // $lglevels = [];
+                        // $auth = $certificate->localOffice->users[0]->authorities->first();
+                        // echo $certificate->localOffice->users[0];
                         // if(count(getgovlevels($auth)) > 0) {
                         //     $lglevels = getgovlevels($auth);
                         // }
@@ -101,7 +101,7 @@
                         // ];
 
                         // Conditional Draft Watermark
-                        $is_draft = ($certificate->status ?? 0) == 0;
+                        // $is_draft = ($certificate->status ?? 0) == 0;
                     @endphp
                     <div class="card-body p-4 p-md-5">
                         <h3 class="text-center">{{ checkcertificatetype($certificate->certificate_type) }}</h3>
