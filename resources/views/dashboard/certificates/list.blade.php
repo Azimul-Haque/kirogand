@@ -109,7 +109,7 @@
                               </td>
                               <td>
                                 {{-- {{ route('dashboard.localoffice.users.certificates', $certificate->recipient->id) }} --}}
-                                  <a href="#!">{{ $certificate->data_payload['applicant']['name'] ?? 'N/A' }}</a>
+                                  <a href="{{ route('dashboard.localoffice.users.certificates', $certificate->recipient->id) }}">{{ $certificate->data_payload['applicant']['name'] ?? 'N/A' }}</a>
                                   <br/>
                                   <small class="text-muted">মোবাইল: {{ $certificate->recipient->mobile ?? ($certificate->data_payload['applicant']['mobile'] ?? 'N/A') }}</small>
                               </td>
