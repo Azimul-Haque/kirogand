@@ -64,7 +64,7 @@ class CertificateController extends Controller
     public function createCertificate($certificate_type)
     {
         if(Auth::user()->role == 'manager') {
-            if (Auth::user()->is_active === 0) {
+            if (Auth::user()->is_active == 0) {
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01737988070');
                 return redirect()->route('index.index');
             }
