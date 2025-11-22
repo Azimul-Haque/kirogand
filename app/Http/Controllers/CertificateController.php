@@ -555,14 +555,15 @@ class CertificateController extends Controller
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01737988070');
                 return redirect()->route('index.index');
             }
+            $certificatescount = Certificate::where('local_office_id', Auth::user()->local_office_id)
+                                       ->orderBy('id', 'desc')
+                                       ->count();
+            $certificates = Certificate::where('local_office_id', Auth::user()->local_office_id)
+                                       ->orderBy('id', 'desc')
+                                       ->paginate(15);
         }
 
-        $certificatescount = Certificate::where('local_office_id', Auth::user()->local_office_id)
-                                   ->orderBy('id', 'desc')
-                                   ->count();
-        $certificates = Certificate::where('local_office_id', Auth::user()->local_office_id)
-                                   ->orderBy('id', 'desc')
-                                   ->paginate(15);
+        
 
         return view('dashboard.certificates.list')
                             ->withCertificatescount($certificatescount)
