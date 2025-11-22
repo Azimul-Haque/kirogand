@@ -567,8 +567,6 @@ class CertificateController extends Controller
                                        ->paginate(15);
         }
 
-        
-
         return view('dashboard.certificates.list')
                             ->withCertificatescount($certificatescount)
                             ->withCertificates($certificates);
