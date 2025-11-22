@@ -562,10 +562,8 @@ class CertificateController extends Controller
                                        ->orderBy('id', 'desc')
                                        ->paginate(15);
         } else {
-            $certificatescount = Certificate::orderBy('id', 'desc')
-                                       ->count();
-            $certificates = Certificate::where('local_office_id', Auth::user()->local_office_id)
-                                       ->orderBy('id', 'desc')
+            $certificatescount = Certificate::orderBy('id', 'desc')->count();
+            $certificates = Certificate::orderBy('id', 'desc')
                                        ->paginate(15);
         }
 
