@@ -50,7 +50,7 @@ class CertificateController extends Controller
     public function index()
     {
         if(Auth::user()->role == 'manager') {
-            if (Auth::user()->is_active === 0) {
+            if (Auth::user()->is_active == 0) {
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01737988070');
                 return redirect()->route('index.index');
             }
@@ -283,7 +283,7 @@ class CertificateController extends Controller
     public function getDraftCertificate($unique_serial)
     {
         if(Auth::user()->role == 'manager') {
-            if (Auth::user()->is_active === 0) {
+            if (Auth::user()->is_active == 0) {
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01737988070');
                 return redirect()->route('index.index');
             }
@@ -299,7 +299,7 @@ class CertificateController extends Controller
     public function editCertificate($unique_serial)
     {
         if(Auth::user()->role == 'manager') {
-            if (Auth::user()->is_active === 0) {
+            if (Auth::user()->is_active == 0) {
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01737988070');
                 return redirect()->route('index.index');
             }
@@ -494,7 +494,7 @@ class CertificateController extends Controller
     public function approveCertificate(Request $request)
     {
         if(Auth::user()->role == 'manager') {
-            if (Auth::user()->is_active === 0) {
+            if (Auth::user()->is_active == 0) {
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01737988070');
                 return redirect()->route('index.index');
             }
@@ -511,7 +511,7 @@ class CertificateController extends Controller
     public function printCertificate($unique_serial)
     {
         if(Auth::user()->role == 'manager') {
-            if (Auth::user()->is_active === 0) {
+            if (Auth::user()->is_active == 0) {
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01737988070');
                 return redirect()->route('index.index');
             }
@@ -532,7 +532,7 @@ class CertificateController extends Controller
     public function downloadCertificate($unique_serial)
     {
         if(Auth::user()->role == 'manager') {
-            if (Auth::user()->is_active === 0) {
+            if (Auth::user()->is_active == 0) {
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01737988070');
                 return redirect()->route('index.index');
             }
@@ -551,7 +551,7 @@ class CertificateController extends Controller
     public function getCertificateList()
     {
         if(Auth::user()->role == 'manager') {
-            if (Auth::user()->is_active === 0) {
+            if (Auth::user()->is_active == 0) {
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01737988070');
                 return redirect()->route('index.index');
             }
@@ -575,7 +575,7 @@ class CertificateController extends Controller
     public function getCertificateListSearch($search)
     {
         if(Auth::user()->role == 'manager') {
-            if (Auth::user()->is_active === 0) {
+            if (Auth::user()->is_active == 0) {
                 Session::flash('success', 'আপনার নিবন্ধন সফল হয়েছে। অনুমোদনের জন্য অপেক্ষা করুন। আপনার সাথে যোগাযোগ করা হবে। অথবা এই নম্বরে যোগাযোগ করুন: 01737988070');
                 return redirect()->route('index.index');
             }
