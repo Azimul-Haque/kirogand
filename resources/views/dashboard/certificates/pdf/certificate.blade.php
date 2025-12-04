@@ -412,7 +412,7 @@
         margin: 10px auto;
         width: 40%;
         border-radius: 20px;
-        font-size: 18px;
+        font-size: 22px;
         font-weight: bold;
     }
 
