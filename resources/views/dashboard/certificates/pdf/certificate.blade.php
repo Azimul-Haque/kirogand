@@ -409,7 +409,7 @@
         background-color: #e5ffe5; /* Light green background */
         border: 1px solid #c2e6c2;
         padding: 10px 10px;
-        margin: 10px auto;
+        margin: 5px auto;
         width: 40%;
         border-radius: 20px;
         font-size: 24px;
