@@ -125,9 +125,9 @@
             </div>
             <div class="row">
                 <div class="form-group col-md-6">
-                    <label for="father">পিতার নাম <span class="text-danger">*</span></label>
+                    <label for="father">পিতা/স্বামীর নাম <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('father') is-invalid @enderror" id="father" name="father"
-                        value="{{ old('father', $applicant['father'] ?? '') }}" placeholder="পিতার নাম" required>
+                        value="{{ old('father', $applicant['father'] ?? '') }}" placeholder="পিতা/স্বামীর নাম" required>
                     @error('father') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group col-md-6">
