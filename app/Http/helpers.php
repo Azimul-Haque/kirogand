@@ -4,13 +4,13 @@ use Illuminate\Support\Carbon;
     
     function checkcertificatetype($text) {
         if ($text == 'heir-certificate')
-            return 'ওয়ারিশ সনদ';
+            return 'ওয়ারিশ সনদপত্র';
         else if ($text == 'citizen-certificate')
-          return 'নাগরিকত্ব সনদ';
+          return 'নাগরিকত্ব সনদপত্র';
         else if ($text == 'permanent-resident')
-          return 'স্থায়ী বাসিন্দা মর্মে সনদ';
+          return 'স্থায়ী বাসিন্দা মর্মে সনদপত্র';
         else if ($text == 'same-person')
-          return 'একই ব্যক্তি মর্মে প্রত্যয়ন';
+          return 'একই ব্যক্তি মর্মে প্রত্যয়ন পত্র';
         else if ($text == 'character-certificate')
           return 'চারিত্রিক সনদপত্র';
         else if ($text == 'unmarried-certificate')
