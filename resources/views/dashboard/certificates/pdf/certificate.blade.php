@@ -104,7 +104,9 @@
             </p>
 
             {{-- Beneficiary Table (Using Heirs Data) --}}
-            
+            <div style="text-align: center; margin-bottom: 5px; font-weight: bold; font-size: 16px; margin-top: 0px; font-weight: bold;">
+                ওয়ারিশগণের নাম
+            </div>
             <table class="beneficiary-table">
                 <thead>
                     <tr>
