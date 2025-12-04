@@ -91,7 +91,7 @@
 
         {{-- Certificate Title --}}
         <div class="cert-title">
-            আর্থিক অস্বচ্ছলতার প্রত্যয়ন পত্র
+            একই ব্যক্তি মর্মে প্রত্যয়ন পত্র
         </div>
 
         @if($certificate->certificate_type == 'heir-certificate')
