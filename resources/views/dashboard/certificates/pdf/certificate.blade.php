@@ -421,7 +421,7 @@
         text-align: justify;
         margin-top: 20px;
         font-size: 16px;
-        line-height: 2em;
+        line-height: 1.5em;
         text-indent: 3em;
     }
 
