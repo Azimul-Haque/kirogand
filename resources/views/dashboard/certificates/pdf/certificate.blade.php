@@ -97,15 +97,15 @@
         @if($certificate->certificate_type == 'heir-certificate')
             {{-- Introduction Paragraph (Using Applicant Data) --}}
             <p class="info-paragraph">
-                এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }},
+                এই মর্মে ওয়ারিশান সনদপত্র প্রদান করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }},
                 গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, @if($certificate->localOffice->office_type == 'up') ইউনিয়ন: {{ $applicant['union'] ?? '--' }}@endif, উপজেলা: {{ $union_info['upazila'] ?? '--' }},
                 জেলা: {{ $union_info['district'] ?? '--' }}। তিনি আমার {{ $certificate->localOffice->office_type == 'up' ? 'ইউনিয়নের' : 'পৌরসভার' }} {{ $applicant['ward'] ?? '--' }} ওয়ার্ডের একজন স্থায়ী বাসিন্দা ছিলেন। তথ্য দাতার তথ্য
-                মতে তিনি নিম্ন লিখিত ওয়ারিশান হিসাবে রেখে মৃত্যু বরণ করেন।
+                মতে তিনি নিম্ন লিখিত ওয়ারিশান হিসাবে রেখে মৃত্যু বরণ করেন।
             </p>
 
             {{-- Beneficiary Table (Using Heirs Data) --}}
             <div style="text-align: center; margin-bottom: 5px; font-weight: bold; font-size: 16px; margin-top: 0px; font-weight: bold;">
-                ওয়ারিশগণের নাম
+                ওয়ারিশগণের নাম
             </div>
             <table class="beneficiary-table">
                 <thead>
@@ -134,7 +134,7 @@
                         @if (isset($heir['sub_heirs']) && is_array($heir['sub_heirs']) && count($heir['sub_heirs']) > 0)
                             <tr>
                                 <td colspan="6" class="sub-heir-row">
-                                    <span class="sub-heir-header" style="font-weight: bold;">সাব-ওয়ারিগণের তালিকা (মূল ওয়ারিশ: {{ $heir['name'] ?? 'N/A' }})</span>
+                                    <span class="sub-heir-header" style="font-weight: bold;">সাব-ওয়ারিগণের তালিকা (মূল ওয়ারিশ: {{ $heir['name'] ?? 'N/A' }})</span>
                                     <table class="sub-heir-table">
                                         <thead>
                                             <tr>
@@ -164,7 +164,7 @@
                         @endif
                     @empty
                         <tr>
-                            <td colspan="6" style="color: red;">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
+                            <td colspan="6" style="color: red;">কোন ওয়ারিশের তথ্য পাওয়া যায়নি।</td>
                         </tr>
                     @endforelse
                 </tbody>
@@ -172,7 +172,7 @@
 
             {{-- Closing Remark --}}
             <p class="info-paragraph" style="margin-top: 15px;">
-                আমি উক্ত ওয়ারিশগণের সার্বিক উন্নতি ও মঙ্গল কামনা করছি।
+                আমি উক্ত ওয়ারিশগণের সার্বিক উন্নতি ও মঙ্গল কামনা করছি।
             </p>
         @elseif($certificate->certificate_type == 'citizen-certificate')
             <p class="info-paragraph" style="margin-top: 30px;">
