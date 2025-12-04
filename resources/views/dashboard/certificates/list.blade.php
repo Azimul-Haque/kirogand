@@ -105,7 +105,8 @@
                                   {{ checkcertificatetype($certificate->certificate_type) }}
                               </td>
                               <td>
-                                  <strong>{{ $certificate->unique_serial }}</strong>
+                                  <strong>{{ $certificate->unique_serial }}</strong><br/>
+                                  
                               </td>
                               <td>
                                 {{-- {{ route('dashboard.localoffice.users.certificates', $certificate->recipient->id) }} --}}
