@@ -73,7 +73,7 @@
                 </div>
                 <!-- জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন -->
                 <div class="form-group col-md-6">
-                    <label for="id_type">জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন নং <span class="text-danger">*</span></label>
+                    <label for="id_type">জাতীয় পরিচয়পত্র / জন্ম নিবন্ধন নং <span class="text-success">(ঐচ্ছিক)</span></label>
                     <div class="input-group">
                         @php
                             $idType = old('id_type', $applicant['id_type'] ?? 'এনআইডি');
