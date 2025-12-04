@@ -91,7 +91,7 @@
 
         {{-- Certificate Title --}}
         <div class="cert-title">
-            {{ checkcertificatetype($certificate->certificate_type) }}
+            {{ checkcertificatetype($certificate->certificate_type) }} প্রদানের তারিখ প্রদানের তারিখ
         </div>
 
         @if($certificate->certificate_type == 'heir-certificate')
