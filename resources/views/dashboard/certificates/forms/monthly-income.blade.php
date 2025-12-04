@@ -49,7 +49,7 @@
                     <select class="form-control @error('earner') is-invalid @enderror" id="earner" name="earner" required>
                         <option value="" selected disabled>আয়ের ব্যক্তি নির্বাচন করুন</option>
                         <option value="own" {{ old('earner', $applicant['earner'] ?? '') == 'own' ? 'selected' : '' }}>নিজে</option>
-                        <option value="father" {{ old('earner', $applicant['earner'] ?? '') == 'father' ? 'selected' : '' }}>পিতা</option>
+                        <option value="father" {{ old('earner', $applicant['earner'] ?? '') == 'father' ? 'selected' : '' }}>পিতা/স্বামী</option>
                         <option value="mother" {{ old('earner', $applicant['earner'] ?? '') == 'mother' ? 'selected' : '' }}>মাতা</option>
                         <option value="other" {{ old('earner', $applicant['earner'] ?? '') == 'other' ? 'selected' : '' }}>বৈধ অভিভাবক</option>
                     </select>
@@ -107,11 +107,11 @@
             </div>
 
             <div class="row">
-                <!-- পিতার নাম -->
+                <!-- পিতা/স্বামীর নাম -->
                 <div class="form-group col-md-6">
-                    <label for="father">পিতার নাম <span class="text-danger">*</span></label>
+                    <label for="father">পিতা/স্বামীর নাম <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('father') is-invalid @enderror" id="father" name="father"
-                           value="{{ old('father', $applicant['father'] ?? '') }}" placeholder="পিতার নাম" required>
+                           value="{{ old('father', $applicant['father'] ?? '') }}" placeholder="পিতা/স্বামীর নাম" required>
                     @error('father') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <!-- মাতার নাম -->
@@ -158,7 +158,7 @@
             {{-- <div class="mt-3 mb-3">
                 <label for="editor">সনদের ভাষা: (ব্লক করা অংশগুলো বাদে এডিট করুন)</label>
                 <div id="editor" contenteditable="true" name="main_content" spellcheck="false" required>
-                    <p>এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, <span class="protected-token" contenteditable="false">[নাম]</span>, পিতা: <span class="protected-token" contenteditable="false">[পিতার নাম]</span>, মাতা: <span class="protected-token" contenteditable="false">[মাতার নাম]</span>, গ্রাম: <span class="protected-token" contenteditable="false">[গ্রাম]</span>, ওয়ার্ড: <span class="protected-token" contenteditable="false">[ওয়ার্ড]</span>, ডাকঘর: <span class="protected-token" contenteditable="false">[ডাকঘর]</span>, উপজেলা: <span class="protected-token" contenteditable="false">[উপজেলা]</span>, জেলা: <span class="protected-token" contenteditable="false">[জেলা]</span>-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র <span class="protected-token" contenteditable="false">[ইউনিয়ন]</span>-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক। আমার জানামতে, তিনি কোন প্রকার সমাজবিরোধী বা রাষ্ট্রবিদ্রোহমূলক কর্মকাণ্ডের সাথে জড়িত ছিলেন না বা নেই।
+                    <p>এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, <span class="protected-token" contenteditable="false">[নাম]</span>, পিতা/স্বামী: <span class="protected-token" contenteditable="false">[পিতা/স্বামীর নাম]</span>, মাতা: <span class="protected-token" contenteditable="false">[মাতার নাম]</span>, গ্রাম: <span class="protected-token" contenteditable="false">[গ্রাম]</span>, ওয়ার্ড: <span class="protected-token" contenteditable="false">[ওয়ার্ড]</span>, ডাকঘর: <span class="protected-token" contenteditable="false">[ডাকঘর]</span>, উপজেলা: <span class="protected-token" contenteditable="false">[উপজেলা]</span>, জেলা: <span class="protected-token" contenteditable="false">[জেলা]</span>-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র <span class="protected-token" contenteditable="false">[ইউনিয়ন]</span>-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক। আমার জানামতে, তিনি কোন প্রকার সমাজবিরোধী বা রাষ্ট্রবিদ্রোহমূলক কর্মকাণ্ডের সাথে জড়িত ছিলেন না বা নেই।
                     </p>
                     <p>
                         তার নৈতিক চরিত্র ভালো। আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
