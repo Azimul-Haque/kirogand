@@ -428,7 +428,7 @@
         width: 100%;
         border-collapse: collapse;
         margin-top: 0px;
-        font-size: 13px;
+        font-size: 14px;
     }
     .beneficiary-table th, .beneficiary-table td {
         border: 1px solid #999;
