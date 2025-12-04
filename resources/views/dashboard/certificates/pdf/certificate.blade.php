@@ -179,35 +179,35 @@
                 এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা/স্বামী: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক। আমার জানামতে, তিনি কোন প্রকার সমাজবিরোধী বা রাষ্ট্রবিদ্রোহমূলক কর্মকাণ্ডের সাথে জড়িত ছিলেন না বা নেই। তার নৈতিক চরিত্র ভালো। 
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
-                আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
+                আমি তার ভবিষ্যৎ জীবনের সর্বাঙ্গীন মঙ্গল কামনা করি
             </p>
         @elseif($certificate->certificate_type == 'permanent-resident')
             <p class="info-paragraph" style="margin-top: 30px;">
                 এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা/স্বামী: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি জন্মগতসূত্রে বাংলাদেশের নাগরিক। উল্লেখ্য যে, তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর {{ $applicant['ward'] ?? '--' }} ওয়ার্ডের স্থায়ী বাসিন্দা। এটি আমার জানামতে সত্য।
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
-                আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
+                আমি তার ভবিষ্যৎ জীবনের সর্বাঙ্গীন মঙ্গল কামনা করি
             </p>
         @elseif($certificate->certificate_type == 'same-person')
             <p class="info-paragraph" style="margin-top: 30px;">
                 এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}) ওরফে {{ $applicant['same_name'] ?? '--' }}, পিতা/স্বামী: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক। তিনি {{ $applicant['name'] ?? '--' }} ওরফে {{ $applicant['same_name'] ?? '--' }} দুই নামেই পরিচিত বা একই ব্যক্তি। এটি আমার জানামতে সত্য।
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
-                আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
+                আমি তার ভবিষ্যৎ জীবনের সর্বাঙ্গীন মঙ্গল কামনা করি
             </p>
         @elseif($certificate->certificate_type == 'character-certificate')
             <p class="info-paragraph" style="margin-top: 30px;">
                 এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা/স্বামী: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক। আমার জানামতে, তিনি কোন প্রকার সমাজবিরোধী বা রাষ্ট্রবিদ্রোহমূলক কর্মকাণ্ডের সাথে জড়িত ছিলেন না বা নেই। তার নৈতিক চরিত্র ভালো। 
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
-                আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
+                আমি তার ভবিষ্যৎ জীবনের সর্বাঙ্গীন মঙ্গল কামনা করি
             </p>
         @elseif($certificate->certificate_type == 'unmarried-certificate')
             <p class="info-paragraph" style="margin-top: 30px;">
                 এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা/স্বামী: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর {{ $applicant['ward'] ?? '--' }} ওয়ার্ডের স্থায়ী বাসিন্দা। উল্লেখ্য যে, সে বর্তমানে অবিবাহিত। এটি আমার জানামতে সত্য।
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
-                আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
+                আমি তার ভবিষ্যৎ জীবনের সর্বাঙ্গীন মঙ্গল কামনা করি
             </p>
         @elseif($certificate->certificate_type == 'death-certificate')
             <p class="info-paragraph" style="margin-top: 30px;">
@@ -221,14 +221,14 @@
                 এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা/স্বামী: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক। তিনি পূর্বে অন্যত্র ভোটার নিবন্ধন করেছেন। কিন্তু, তিনি বর্মানে অত্র {{ $certificate->localOffice->office_type == 'up' ? 'ইউনিয়নে' : 'পৌরসভায়' }} ঘড়বাড়ি নির্মাণ করে স্থায়ীভাবে বসবাস করে আসছেন। এমতাবস্থায়, তার ভোটার নিবন্ধন স্থানান্তর করার জন্য জোর সুপারিশ করছি।
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
-                আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
+                আমি তার ভবিষ্যৎ জীবনের সর্বাঙ্গীন মঙ্গল কামনা করি
             </p>
         @elseif($certificate->certificate_type == 'landless-certificate')
             <p class="info-paragraph" style="margin-top: 30px;">
                 এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা/স্বামী: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর স্থায়ী বাসিন্দা ও জন্মগতভাবে বাংলাদেশের নাগরিক। উল্লেখ্য যে, তিনি একজন দরিদ্র দিনমজুর ও অসহায় ভূমিহীন মানুষ। আমার জানামতে তার নিজস্ব কোন জায়গা-জমি নেই। এ মর্মে প্রত্যয়ন প্রদান করা হলো।
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
-                আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
+                আমি তার ভবিষ্যৎ জীবনের সর্বাঙ্গীন মঙ্গল কামনা করি
             </p>
         @elseif($certificate->certificate_type == 'monthly-income')
             <p class="info-paragraph" style="margin-top: 30px;">
@@ -244,7 +244,7 @@
                 @endif
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
-                আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
+                আমি তার ভবিষ্যৎ জীবনের সর্বাঙ্গীন মঙ্গল কামনা করি
             </p>
         @elseif($certificate->certificate_type == 'yearly-income')
             <p class="info-paragraph" style="margin-top: 30px;">
@@ -260,21 +260,21 @@
                 @endif
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
-                আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
+                আমি তার ভবিষ্যৎ জীবনের সর্বাঙ্গীন মঙ্গল কামনা করি
             </p>
         @elseif($certificate->certificate_type == 'new-voter')
             <p class="info-paragraph" style="margin-top: 30px;">
                 এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), জন্মতারিখ: {{ isset($applicant['dob']) ? bangla(date('d F Y', strtotime($applicant['dob']))) : '--' }}, পিতা/স্বামী: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }} অত্র {{ $applicant['union'] ?? '--' }}-এর {{ $applicant['ward'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। সে অত্র {{ $certificate->localOffice->office_type == 'up' ? 'ইউনিয়নে' : 'পৌরসভায়' }} স্থায়ীভাবে বসবাস করে আসছে। উল্লেখ্য যে, সে পূর্বে অন্য কোথাও ভোটার নিবন্ধন সম্পন্ন করেনি। এটি আমার জানামতে সত্য। এমতাবস্থায়, তার ভোটার নিবন্ধন করার জন্য জোর সুপারিশ করছি।
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
-                আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
+                আমি তার ভবিষ্যৎ জীবনের সর্বাঙ্গীন মঙ্গল কামনা করি
             </p>
         @elseif($certificate->certificate_type == 'financial-insolvency')
             <p class="info-paragraph" style="margin-top: 30px;">
                 এতদ্বারা প্রত্যয়ন করা যাচ্ছে যে, {{ $applicant['name'] ?? '--' }} ({{ $applicant['id_type'] ?? '--' }}: {{ $applicant['id_value'] ?? '--' }}), পিতা/স্বামী: {{ $applicant['father'] ?? '--' }}, মাতা: {{ $applicant['mother'] ?? '--' }}, গ্রাম: {{ $applicant['village'] ?? '--' }}, ওয়ার্ড: {{ $applicant['ward'] ?? '--' }}, ডাকঘর: {{ $applicant['post_office'] ?? '--' }}, উপজেলা: {{ $union_info['upazila'] ?? '--' }}, জেলা: {{ $union_info['district'] ?? '--' }}-কে আমি ব্যক্তিগতভাবে চিনি ও জানি। তিনি অত্র {{ $applicant['union'] ?? '--' }}-এর স্থায়ী বাসিন্দা। {{ $applicant['problem'] ?? '' }}। তাই তাকে আর্থিকভাবে সহযোগিতা করার জন্য জোর সুপারিশ করছি।
             </p>
             <p class="info-paragraph" style="margin-top: 15px; margin-bottom: 50px;">
-                আমি তার সর্বাঙ্গীন মঙ্গল কামনা করি।
+                আমি তার ভবিষ্যৎ জীবনের সর্বাঙ্গীন মঙ্গল কামনা করি
             </p>
         @endif
 
