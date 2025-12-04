@@ -420,7 +420,7 @@
         line-height: 1.6;
         text-align: justify;
         margin-top: 20px;
-        font-size: 15px;
+        font-size: 17px;
         text-indent: 3em;
     }
 
