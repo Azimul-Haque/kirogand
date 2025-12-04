@@ -408,7 +408,7 @@
         text-align: center;
         background-color: #e5ffe5; /* Light green background */
         border: 1px solid #c2e6c2;
-        padding: 7px 7px;
+        padding: 5px 5px;
         margin: 10px auto;
         width: 40%;
         border-radius: 20px;
