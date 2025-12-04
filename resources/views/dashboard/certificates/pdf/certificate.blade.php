@@ -91,7 +91,7 @@
 
         {{-- Certificate Title --}}
         <div class="cert-title">
-            ভোটার এলাকা স্থানান্তর সনদপত্র
+            {{ checkcertificatetype($certificate->certificate_type) }}
         </div>
 
         @if($certificate->certificate_type == 'heir-certificate')
