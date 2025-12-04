@@ -16,19 +16,19 @@ use Illuminate\Support\Carbon;
         else if ($text == 'unmarried-certificate')
           return 'অবিবাহিত সনদপত্র';
         else if ($text == 'death-certificate')
-          return 'মৃত্যু সনদ';
+          return 'মৃত্যু সনদপত্র';
         else if ($text == 'voter-area-change')
-          return 'ভোটার এলাকা স্থানান্তর সনদ';
+          return 'ভোটার এলাকা স্থানান্তর সনদপত্র';
         else if ($text == 'landless-certificate')
-          return 'ভূমিহীন প্রত্যয়ন';
+          return 'ভূমিহীন প্রত্যয়ন পত্র';
         else if ($text == 'monthly-income')
-          return 'মাসিক আয়ের প্রত্যয়ন';
+          return 'মাসিক আয়ের প্রত্যয়ন পত্র';
         else if ($text == 'yearly-income')
-          return 'বাৎসরিক আয়ের প্রত্যয়ন';
+          return 'বাৎসরিক আয়ের প্রত্যয়ন পত্র';
         else if ($text == 'new-voter')
-          return 'নতুন ভোটার প্রত্যয়ন';
+          return 'নতুন ভোটার প্রত্যয়ন পত্র';
         else if ($text == 'financial-insolvency')
-          return 'আর্থিক অস্বচ্ছলতার প্রত্যয়ন';
+          return 'আর্থিক অস্বচ্ছলতার প্রত্যয়ন পত্র';
         else
             return $text;
     }
