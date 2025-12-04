@@ -83,11 +83,12 @@
                             <select class="custom-select @error('id_type') is-invalid @enderror" id="id_type" name="id_type" required style="width: 110px;">
                                 <option value="এনআইডি" {{ $idType == 'এনআইডি' ? 'selected' : '' }}>এনআইডি</option>
                                 <option value="জন্ম সনদ" {{ $idType == 'জন্ম সনদ' ? 'selected' : '' }}>জন্ম সনদ</option>
+                                <option value="নেই" {{ $idType == 'নেই' ? 'selected' : '' }}>নেই</option>
                             </select>
                         </div>
                         <!-- Input for Value: name="id_value" -->
                         <input type="text" class="form-control @error('id_value') is-invalid @enderror" name="id_value"
-                               placeholder="নম্বর দিন" value="{{ old('id_value', $applicant['id_value'] ?? '') }}" required>
+                               placeholder="নম্বর দিন" value="{{ old('id_value', $applicant['id_value'] ?? '') }}">
                     </div>
                     @error('id_type') <span class="text-danger d-block mt-1">{{ $message }}</span> @enderror
                     @error('id_value') <span class="text-danger d-block mt-1">{{ $message }}</span> @enderror
