@@ -411,7 +411,7 @@
         padding: 5px 5px;
         margin: 10px auto;
         width: 40%;
-        border-radius: 20px;
+        border-radius: 30px;
         font-size: 24px;
         font-weight: bold;
     }
