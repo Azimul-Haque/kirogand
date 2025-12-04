@@ -106,7 +106,7 @@
                               </td>
                               <td>
                                   <strong>{{ $certificate->unique_serial }}</strong><br/>
-                                  <small></small>
+                                  <small>{{ $certificate->recipient }}</small>
                               </td>
                               <td>
                                 {{-- {{ route('dashboard.localoffice.users.certificates', $certificate->recipient->id) }} --}}
