@@ -71,7 +71,7 @@
                         </div>
                         <!-- Input for Value: name="id_value" -->
                         <input type="text" class="form-control @error('id_value') is-invalid @enderror" name="id_value"
-                               placeholder="নম্বর দিন" value="{{ old('id_value', $applicant['id_value'] ?? '') }}" required>
+                               placeholder="নম্বর দিন" value="{{ old('id_value', $applicant['id_value'] ?? '') }}">
                     </div>
                     @error('id_type') <span class="text-danger d-block mt-1">{{ $message }}</span> @enderror
                     @error('id_value') <span class="text-danger d-block mt-1">{{ $message }}</span> @enderror
