@@ -66,6 +66,7 @@
                             <select class="custom-select @error('id_type') is-invalid @enderror" id="id_type" name="id_type" required style="width: 110px;">
                                 <option value="এনআইডি" {{ $idType == 'এনআইডি' ? 'selected' : '' }}>এনআইডি</option>
                                 <option value="জন্ম সনদ" {{ $idType == 'জন্ম সনদ' ? 'selected' : '' }}>জন্ম সনদ</option>
+                                <option value="নেই" {{ $idType == 'নেই' ? 'selected' : '' }}>নেই</option>
                             </select>
                         </div>
                         <!-- Input for Value: name="id_value" -->
