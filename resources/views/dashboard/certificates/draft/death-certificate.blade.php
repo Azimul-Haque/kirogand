@@ -69,7 +69,7 @@
                                 <div class="col-md-6">
                                     <p><span class="info-label">মৃত্যু রেজিস্ট্রেশন নং:</span> {{ $applicant['death_reg_no'] ?? 'N/A' }}</p>
                                     <p><span class="info-label">নাম (Name):</span> {{ $applicant['name'] ?? 'N/A' }} @if($certificate->certificate_type == 'same-person') (ওরফে {{ $applicant['same_name'] ?? '--' }}) @endif</p>
-                                    <p><span class="info-label">পিতা (Father):</span> {{ $applicant['father'] ?? 'N/A' }}</p>
+                                    <p><span class="info-label">পিতা/স্বামী (Father/Husband):</span> {{ $applicant['father'] ?? 'N/A' }}</p>
                                     <p><span class="info-label">মাতা (Mother):</span> {{ $applicant['mother'] ?? 'N/A' }}</p>
                                 </div>
                                 <div class="col-md-6">
