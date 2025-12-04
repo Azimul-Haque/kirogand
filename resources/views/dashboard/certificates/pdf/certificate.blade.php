@@ -91,7 +91,7 @@
 
         {{-- Certificate Title --}}
         <div class="cert-title">
-            আর্থিক অস্বচ্ছলতার প্রত্যয়ন পত্র
+            {{ checkcertificatetype($certificate->certificate_type) }}
         </div>
 
         @if($certificate->certificate_type == 'heir-certificate')
@@ -412,7 +412,7 @@
         margin: 10px auto;
         width: 45%;
         border-radius: 30px;
-        font-size: 24px;
+        font-size: 23px;
         font-weight: bold;
     }
 
