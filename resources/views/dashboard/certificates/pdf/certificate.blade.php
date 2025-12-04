@@ -410,7 +410,7 @@
         border: 1px solid #c2e6c2;
         padding: 4px 4px;
         margin: 10px auto;
-        width: 40%;
+        width: 45%;
         border-radius: 30px;
         font-size: 24px;
         font-weight: bold;
