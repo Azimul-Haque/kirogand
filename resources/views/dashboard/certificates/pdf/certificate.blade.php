@@ -93,7 +93,7 @@
         <table style="width: 100%; margin-top: 5px;">
             <tr>
                 <td width="30%"></td>
-                <td width="30%" style="text-align: center;">
+                <td width="45%" style="text-align: center;">
                     <div class="cert-title">
                         {{ checkcertificatetype($certificate->certificate_type) }}
                     </div>
