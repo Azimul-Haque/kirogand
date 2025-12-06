@@ -437,12 +437,7 @@
         display: inline-block;
         min-width: 46%;
         box-sizing: border-box; 
-        
-        /* mPDF এ border-radius প্রয়োগের জন্য */
-        border-radius: 30px; 
-        
-        /* এই margin: 10px auto; টিডি-এর টেক্সট-এলাইন ব্যবহার না করে সেন্টারিং করতে সাহায্য করবে */
-        /* যেহেতু আমরা col-center এ text-align: center; ব্যবহার করছি, এটি এখন সহায়ক। */
+        border-radius: 30px;
         margin: 0 auto; 
     }
 
