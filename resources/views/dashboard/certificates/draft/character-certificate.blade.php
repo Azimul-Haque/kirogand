@@ -86,36 +86,18 @@
                                         // 2. Check if the file name is stored AND if the physical file exists.
                                         $imageExists = $certificate->image && File::exists($imagePath);
                                     @endphp
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <!-- Custom File Input (AdminLTE compatible) -->
-                                                <div class="custom-file">
-                                                    <input type="file"
-                                                           class="custom-file-input"
-                                                           id="monogram"
-                                                           name="monogram"
-                                                           accept="image/png, image/jpeg, image/gif"
-                                                           @if(!$imageExists) required @endif>
-                                                    <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
-                                                </div>
-                                                <small class="form-text text-muted">সর্বোচ্চ ফাইলের সাইজ 300KB (PNG, JPG, GIF), (300px X 300px)</small>
-                                            </div>
+                                    @if ($imageExists)
+                                        <div class="monogram-container mb-4">
+                                            <img 
+                                                src="{{ asset('images/localoffices/' . Auth::user()->localoffice->monogram) }}" 
+                                                alt="{{ Auth::user()->localoffice->name_bn }} Monogram" 
+                                                class="img-fluid" style="max-height: 120px; width: auto;">
                                         </div>
-                                        <div class="col-md-6">
-                                          @if ($imageExists)
-                                              <div class="monogram-container mb-4">
-                                                  <img 
-                                                      src="{{ asset('images/localoffices/' . Auth::user()->localoffice->monogram) }}" 
-                                                      alt="{{ Auth::user()->localoffice->name_bn }} Monogram" 
-                                                      class="img-fluid" style="max-height: 120px; width: auto;">
-                                              </div>
-                                          @else
-                                              <div class="monogram-placeholder bg-gray-100 p-6 rounded-lg text-center border-dashed border-2 border-gray-300">
-                                                  <p class="text-gray-500">কোন মনোগ্রাম সেট করা নেই!</p>
-                                              </div>
-                                          @endif
+                                    @else
+                                        <div class="monogram-placeholder bg-gray-100 p-6 rounded-lg text-center border-dashed border-2 border-gray-300">
+                                            <p class="text-gray-500">কোন মনোগ্রাম সেট করা নেই!</p>
                                         </div>
+                                    @endif
                                 </div>
                             </div>
                             <div class="row">
