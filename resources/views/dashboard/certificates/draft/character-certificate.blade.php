@@ -80,6 +80,7 @@
                                     @php
                                         // 1. Define the full local path to the file.
                                         // We use public_path() because that's where File::exists() looks.
+                                        $image = $certificate->image ?? null;
                                         $imagePath = public_path('images/certificate-images/' . Auth::user()->applicant->monogram);
 
                                         // 2. Check if the file name is stored AND if the physical file exists.
