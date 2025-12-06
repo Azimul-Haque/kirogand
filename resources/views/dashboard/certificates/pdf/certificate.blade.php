@@ -103,6 +103,27 @@
                 </td>
             </tr>
         </table>
+        <div class="cert-row">
+            
+            {{-- বাম কলাম (27% ফাঁকা স্থান) --}}
+            <div class="cert-col col-left">
+                {{-- এই কলামটি ফাঁকা থাকবে, টেবিলের প্রথম td-এর মতো --}}
+            </div>
+
+            {{-- মধ্যম কলাম (46% কন্টেন্ট) --}}
+            <div class="cert-col col-center">
+                {{-- .cert-title ক্লাসটি আপনার পছন্দসই বর্ডার-সহ বক্স তৈরি করবে --}}
+                <div class="cert-title">
+                    {{ checkcertificatetype($certificate->certificate_type) }}
+                </div>
+            </div>
+
+            {{-- ডান কলাম (27% ফাঁকা স্থান) --}}
+            <div class="cert-col col-right">
+                {{-- এই কলামটিও ফাঁকা থাকবে, টেবিলের শেষ td-এর মতো --}}
+            </div>
+            
+        </div>
         
 
         @if($certificate->certificate_type == 'heir-certificate')
