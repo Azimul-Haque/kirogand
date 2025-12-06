@@ -464,6 +464,7 @@
     }
     .col-left {
         width: 27%;
+        float: right;
     }
     .col-center {
         width: 46%;
