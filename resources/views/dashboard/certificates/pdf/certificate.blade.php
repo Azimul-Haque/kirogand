@@ -110,7 +110,7 @@
                 @endphp
                 @if ($imageExists)
                     <img 
-                        src="{{ asset('images/certificate-images/' . $payload['image']) }}" 
+                        src="{{ image_url }}" 
                         alt="আবেদনকারীর ছবি" 
                         class="img-fluid" style="max-height: 150px; width: auto;">
                 @endif
