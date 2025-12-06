@@ -104,12 +104,8 @@
             </tr>
         </table>
         <div class="cert-row">
-            <div class="cert-col col-left">
-            </div>
-
-            {{-- মধ্যম কলাম (46% কন্টেন্ট) --}}
+            <div class="cert-col col-left"></div>
             <div class="cert-col col-center">
-                {{-- .cert-title ক্লাসটি আপনার পছন্দসই বর্ডার-সহ বক্স তৈরি করবে --}}
                 <div class="cert-title">
                     {{ checkcertificatetype($certificate->certificate_type) }}
                 </div>
