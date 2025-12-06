@@ -69,17 +69,34 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                     <p><span class="info-label">নাম (Name):</span> {{ $applicant['name'] ?? 'N/A' }} @if($certificate->certificate_type == 'same-person') (ওরফে {{ $applicant['same_name'] ?? '--' }}) @endif</p>
                                     <p><span class="info-label">পেশা:</span> {{ earner($applicant['profession']) ?? 'N/A' }}</p>
                                     <p><span class="info-label">পিতা/স্বামী (Father/Husband):</span> {{ $applicant['father'] ?? 'N/A' }}</p>
                                     <p><span class="info-label">মাতা (Mother):</span> {{ $applicant['mother'] ?? 'N/A' }}</p>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                     <p><span class="info-label">গড় বাৎসরিক আয়:</span> {{ bangla($applicant['income']) ?? 'N/A' }}</p>
                                     <p><span class="info-label">পরিচয়পত্র (ID Type):</span> {{ $applicant['id_type'] ?? 'N/A' }}</p>
                                     <p><span class="info-label">পরিচয় নং (ID No.):</span> {{ $applicant['id_value'] ?? 'N/A' }}</p>
                                     <p><span class="info-label">ইউনিয়ন/পৌরসভা:</span> {{ $applicant['union'] ?? 'N/A' }}</p>
+                                </div>
+                                <div class="col-md-2">
+                                    @php
+                                        // 1. Define the full local path to the file.
+                                        // We use public_path() because that's where File::exists() looks.
+                                        $image = $payload['image'] ?? null;
+                                        $imagePath = public_path('images/certificate-images/' . $image);
+
+                                        // 2. Check if the file name is stored AND if the physical file exists.
+                                        $imageExists = $image && File::exists($imagePath);
+                                    @endphp
+                                    @if ($imageExists)
+                                        <img 
+                                            src="{{ asset('images/certificate-images/' . $payload['image']) }}" 
+                                            alt="আবেদনকারীর ছবি" 
+                                            class="img-fluid" style="max-height: 150px; width: auto;">
+                                    @endif
                                 </div>
                             </div>
                             <div class="row">
