@@ -416,15 +416,25 @@
     }
 
     .cert-title {
-        text-align: center;
-        background-color: #e5ffe5; /* Light green background */
-        border: 1px solid #c2e6c2;
-        padding: 4px 4px;
-        margin: 10px auto;
-        width: 100%;
-        border-radius: 30px;
-        font-size: 23px;
-        font-weight: bold;
+        /* টেক্সট ও ডিজাইনের জন্য মূল বৈশিষ্ট্য */
+    text-align: center;
+    background-color: #e5ffe5; /* Light green background */
+    border: 1px solid #c2e6c2;
+    font-size: 23px;
+    font-weight: bold;
+    color: #004d00; /* Darker text for readability */
+
+    /* mPDF-বান্ধব স্টাইলিং */
+    padding: 5px 15px; /* ভেতরের টেক্সটের চারপাশে প্যাডিং */
+    display: inline-block; /* div-কে তার কন্টেন্টের আকারের সমান করে */
+    min-width: 60%; /* নিশ্চিত করে যাতে এটি দেখতে বড় লাগে */
+    box-sizing: border-box; 
+    
+    /* mPDF এ border-radius প্রয়োগের জন্য */
+    border-radius: 30px; 
+    
+    /* অটো-সেন্টারিং টিডি-এর মধ্যে প্রয়োজন নেই, কিন্তু যদি এটি অন্য স্থানে ব্যবহার হয় */
+    /* margin: 10px auto; (টিডি-এর টেক্সট-এলাইন ব্যবহার করছি) */
     }
 
     .info-paragraph {
