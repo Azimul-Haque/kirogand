@@ -425,7 +425,7 @@ class CertificateController extends Controller
                 'post_office' => ['required', 'string', 'max:255'],
                 'union' => ['required', 'string', 'max:255'],
                 'memo' => ['nullable', 'string'],
-                'image' => ['nullable', 'sometimes|image|max:300'],
+                'image' => ['nullable', 'image', 'max:300'],
             ]);
         }
 
