@@ -424,7 +424,7 @@
         border: 1px solid #c2e6c2;
         padding: 4px 4px;
         margin: 10px auto;
-        width: 45%;
+        width: 100%;
         border-radius: 30px;
         font-size: 23px;
         font-weight: bold;
