@@ -110,9 +110,7 @@
                 @endphp
                 @if ($imageExists)
                     <img 
-                        src="{{ $image_url }}" 
-                        alt="আবেদনকারীর ছবি" 
-                        class="img-fluid" style="max-height: 150px; width: auto;">
+                        src="{{ $image_url }}" alt="আবেদনকারীর ছবি" style="max-height: 150px; width: auto;">
                 @endif
             </div>
         </div>
