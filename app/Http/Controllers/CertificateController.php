@@ -275,6 +275,7 @@ class CertificateController extends Controller
 
                 $dataPayload = [
                     'applicant' => $applicantData,
+                    'image' => $applicantData,
                     'submission_timestamp' => now()->toDateTimeString(),
                 ];
             } else {
