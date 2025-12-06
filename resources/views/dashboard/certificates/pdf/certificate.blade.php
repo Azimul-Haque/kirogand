@@ -442,20 +442,24 @@
         /* mPDF এ border-radius প্রয়োগের জন্য */
         border-radius: 30px; 
         
-        /* অটো-সেন্টারিং টিডি-এর মধ্যে প্রয়োজন নেই, কিন্তু যদি এটি অন্য স্থানে ব্যবহার হয় */
-        /* margin: 10px auto; (টিডি-এর টেক্সট-এলাইন ব্যবহার করছি) */
+        /* এই margin: 10px auto; টিডি-এর টেক্সট-এলাইন ব্যবহার না করে সেন্টারিং করতে সাহায্য করবে */
+        /* যেহেতু আমরা col-center এ text-align: center; ব্যবহার করছি, এটি এখন সহায়ক। */
+        margin: 0 auto; 
     }
 
     /* --- টেবিল-বিহীন কলামের জন্য নতুন CSS --- */
     .cert-row {
         width: 100%;
-        overflow: hidden; /* এটি float ক্লিয়ার করার জন্য mPDF-এ প্রায়ই ব্যবহার করা হয় */
+        /* overflow: hidden; float ক্লিয়ার করার জন্য এটি mPDF-এ অপরিহার্য */
+        overflow: hidden; 
         margin-top: 15px;
     }
     .cert-col {
         float: left;
         box-sizing: border-box;
-        min-height: 1px; /* mPDF-এ রেন্ডারিং ঠিক রাখতে */
+        /* রেন্ডারিং ত্রুটি এড়াতে min-height বাড়ানো হলো */
+        min-height: 10px; 
+        padding: 0 5px; /* কলামগুলির মধ্যে সামান্য ব্যবধান */
     }
     .col-left {
         width: 27%;
