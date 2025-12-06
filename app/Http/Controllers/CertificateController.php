@@ -263,8 +263,6 @@ class CertificateController extends Controller
                 'submission_timestamp' => now()->toDateTimeString(),
             ];
         } else {
-            
-
             if($request->hasFile('image')) {
                 $image      = $request->file('image');
                 $filename   = strtolower($certificate_type) . '-image-' . time() . '.' . "png";
