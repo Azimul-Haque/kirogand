@@ -98,7 +98,21 @@
                 </div>
             </div>
             <div class="cert-col col-right">
-                
+                @php
+                    // 1. Define the full local path to the file.
+                    // We use public_path() because that's where File::exists() looks.
+                    $image = $payload['image'] ?? null;
+                    $imagePath = public_path('images/certificate-images/' . $image);
+
+                    // 2. Check if the file name is stored AND if the physical file exists.
+                    $imageExists = $payload['image'] && File::exists($imagePath);
+                @endphp
+                @if ($imageExists)
+                    <img 
+                        src="{{ asset('images/certificate-images/' . $payload['image']) }}" 
+                        alt="আবেদনকারীর ছবি" 
+                        class="img-fluid" style="max-height: 150px; width: auto;">
+                @endif
             </div>
         </div>
         
