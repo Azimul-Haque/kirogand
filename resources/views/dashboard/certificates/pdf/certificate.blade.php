@@ -103,6 +103,17 @@
                 </td>
             </tr>
         </table> --}}
+        <table style="width: 100%; margin-top: 5px;">
+            <tr>
+                <td width="27%"></td>
+                <td width="46%" style="text-align: center; padding: 10px 0;">
+                    <div class="cert-title">
+                        {{ checkcertificatetype($certificate->certificate_type) }}
+                    </div>
+                </td>
+                <td width="27%"></td>
+            </tr>
+        </table>
         <div class="cert-row">
             <div class="cert-col col-left"></div>
             <div class="cert-col col-center">
