@@ -106,6 +106,7 @@
 
                     // 2. Check if the file name is stored AND if the physical file exists.
                     $imageExists = $payload['image'] && File::exists($imagePath);
+                    $image_url = public_path('images/localoffices/'. $certificate->localOffice->monogram);
                 @endphp
                 @if ($imageExists)
                     <img 
