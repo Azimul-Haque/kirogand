@@ -66,12 +66,17 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                     <p><span class="info-label">নাম (Name):</span> {{ $applicant['name'] ?? 'N/A' }}</p>
                                     <p><span class="info-label">পিতা/স্বামী (Father/Husband):</span> {{ $applicant['father'] ?? 'N/A' }}</p>
                                     <p><span class="info-label">মাতা (Mother):</span> {{ $applicant['mother'] ?? 'N/A' }}</p>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-5">
+                                    <p><span class="info-label">পরিচয়পত্র (ID Type):</span> {{ $applicant['id_type'] ?? 'N/A' }}</p>
+                                    <p><span class="info-label">পরিচয় নং (ID No.):</span> {{ $applicant['id_value'] ?? 'N/A' }}</p>
+                                    <p><span class="info-label">ইউনিয়ন/পৌরসভা:</span> {{ $applicant['union'] ?? 'N/A' }}</p>
+                                </div>
+                                <div class="col-md-2">
                                     <p><span class="info-label">পরিচয়পত্র (ID Type):</span> {{ $applicant['id_type'] ?? 'N/A' }}</p>
                                     <p><span class="info-label">পরিচয় নং (ID No.):</span> {{ $applicant['id_value'] ?? 'N/A' }}</p>
                                     <p><span class="info-label">ইউনিয়ন/পৌরসভা:</span> {{ $applicant['union'] ?? 'N/A' }}</p>
