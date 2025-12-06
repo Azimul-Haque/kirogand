@@ -102,9 +102,6 @@
                     
                 </td>
             </tr>
-            {{-- <tr>
-                <td colspan="2" style="text-align: right; font-size: 14px;">প্রদানের তারিখ: {{ bangla(date('d-m-Y')) }}</td>
-            </tr> --}}
         </table>
         
 
