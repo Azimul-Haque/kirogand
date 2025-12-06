@@ -257,6 +257,8 @@ class CertificateController extends Controller
 
         // check or create new user
         if($certificate_type == 'heir-certificate') {
+            // heir er khetre image nai
+            // heir er khetre image nai
             $dataPayload = [
                 'applicant' => $applicantData,
                 'heirs' => array_values($request->heirs_data),
