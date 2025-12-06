@@ -84,7 +84,7 @@
                                         $imagePath = public_path('images/certificate-images/' . $image);
 
                                         // 2. Check if the file name is stored AND if the physical file exists.
-                                        $monogramExists = $certificate->image && File::exists($imagePath);
+                                        $imageExists = $certificate->image && File::exists($imagePath);
                                     @endphp
                                     <div class="row">
                                         <div class="col-md-6">
@@ -96,14 +96,14 @@
                                                            id="monogram"
                                                            name="monogram"
                                                            accept="image/png, image/jpeg, image/gif"
-                                                           @if(!$monogramExists) required @endif>
+                                                           @if(!$imageExists) required @endif>
                                                     <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
                                                 </div>
                                                 <small class="form-text text-muted">সর্বোচ্চ ফাইলের সাইজ 300KB (PNG, JPG, GIF), (300px X 300px)</small>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                          @if ($monogramExists)
+                                          @if ($imageExists)
                                               <div class="monogram-container mb-4">
                                                   <img 
                                                       src="{{ asset('images/localoffices/' . Auth::user()->localoffice->monogram) }}" 
