@@ -452,7 +452,7 @@
         float: left;
         box-sizing: border-box;
         min-height: 10px; 
-        padding: 0 5px; /* কলামগুলির মধ্যে সামান্য ব্যবধান */
+        padding: 0 2px; /* কলামগুলির মধ্যে সামান্য ব্যবধান */
     }
     .col-left {
         width: 27%;
