@@ -287,8 +287,6 @@ class CertificateController extends Controller
 
         $uniqueSerial = now()->format('ymd') . Auth::user()->local_office_id . mt_rand(100000, 999999);
 
-        
-
         $certificate = Certificate::create([
             'local_office_id' => Auth::user()->local_office_id,
             'certificate_type' => $certificate_type,
