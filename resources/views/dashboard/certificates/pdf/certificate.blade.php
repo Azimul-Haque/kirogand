@@ -463,7 +463,7 @@
     }
     .col-right {
         width: 27%;
-        float: right;
+        float: left;
     }
 
     .info-paragraph {
