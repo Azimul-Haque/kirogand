@@ -85,7 +85,7 @@
                                         $imagePath = public_path('images/certificate-images/' . $image);
 
                                         // 2. Check if the file name is stored AND if the physical file exists.
-                                        $imageExists = $certificate->image && File::exists($imagePath);
+                                        $imageExists = $payload['image'] && File::exists($imagePath);
                                     @endphp
                                     @if ($imageExists)
                                         <img 
