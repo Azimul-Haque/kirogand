@@ -471,6 +471,7 @@
     }
     .col-right {
         width: 27%;
+        float: left;
     }
 
     .info-paragraph {
