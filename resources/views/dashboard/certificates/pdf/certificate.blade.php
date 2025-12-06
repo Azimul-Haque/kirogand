@@ -98,6 +98,7 @@
                 </div>
             </div>
             <div class="cert-col col-right">
+                
             </div>
         </div>
         
