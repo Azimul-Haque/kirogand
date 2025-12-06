@@ -486,8 +486,8 @@ class CertificateController extends Controller
             $image      = $request->file('image');
             $filename   = strtolower($localoffice->office_type) . '-image-' . time() . '.' . "png";
             $filename_back   = 'background-' . strtolower($localoffice->office_type) . '-image-' . time() . '.' . "png";
-            $location   = public_path('images/localoffices/' . $filename);
-            $location_back   = public_path('images/localoffices/' . $filename_back);
+            $location   = public_path('images/certificate-images/' . $filename);
+            $location_back   = public_path('images/certificate-images/' . $filename_back);
             Image::make($image)->fit(300, 300)->save($location);
             Image::make($image)->fit(450, 450)->opacity(15)->save($location_back);
             $localoffice->image = $filename;
