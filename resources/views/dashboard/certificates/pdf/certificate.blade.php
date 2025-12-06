@@ -94,7 +94,7 @@
             <tr>
                 <td width="27%"></td>
                 <td width="46%" style="text-align: center; border: 1px solid #000; border-radius: 30px;">
-                    <div class="cert-title">
+                    <div class="cert-title" style="text-align: center; background-color: #e5ffe5; /* Light green background */ border: 1px solid #c2e6c2; padding: 4px 4px; margin: 10px auto; width: 100%; border-radius: 30px; font-size: 23px; font-weight: bold;">
                         {{ checkcertificatetype($certificate->certificate_type) }}
                     </div>
                 </td>
