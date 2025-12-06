@@ -105,7 +105,7 @@
                     {{-- <input type="file" class="form-control @error('mother') is-invalid @enderror" id="image" name="image"
                            value="{{ old('image', $applicant['image'] ?? '') }}" placeholder="ছবি" required> --}}
                     <input type="file" placeholder="ছবি" class="form-control" id="image" name="image" accept="image/png, image/jpeg, image/gif">
-                    <small class="form-text text-muted">সর্বোচ্চ সাইজ 300KB (PNG, JPG, GIF), (300px X 300px)</small>
+                    <small class="form-text text-muted">সর্বোচ্চ সাইজ 300KB (PNG, JPG, GIF)</small>
                     @error('image') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
