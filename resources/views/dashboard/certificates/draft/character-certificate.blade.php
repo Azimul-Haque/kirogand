@@ -87,12 +87,10 @@
                                         $imageExists = $certificate->image && File::exists($imagePath);
                                     @endphp
                                     @if ($imageExists)
-                                        <div class="monogram-container mb-4">
-                                            <img 
-                                                src="{{ asset('images/localoffices/' . Auth::user()->localoffice->monogram) }}" 
-                                                alt="{{ Auth::user()->localoffice->name_bn }} Monogram" 
-                                                class="img-fluid" style="max-height: 120px; width: auto;">
-                                        </div>
+                                        <img 
+                                            src="{{ asset('images/certificate-images/' . Auth::user()->localoffice->monogram) }}" 
+                                            alt="{{ Auth::user()->localoffice->name_bn }} Monogram" 
+                                            class="img-fluid" style="max-height: 120px; width: auto;">
                                     @endif
                                 </div>
                             </div>
