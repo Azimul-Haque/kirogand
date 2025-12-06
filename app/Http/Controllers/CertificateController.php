@@ -524,10 +524,6 @@ class CertificateController extends Controller
                     'updated_timestamp' => now()->toDateTimeString(),
                 ];
             } else {
-                $dataPayload = [
-                    'applicant' => $applicantData,
-                    'submission_timestamp' => now()->toDateTimeString(),
-                ];
                 $updatedDataPayload = [
                     'applicant' => $applicantData,
                     'submission_timestamp' => $submissionTimestamp,
