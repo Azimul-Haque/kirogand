@@ -430,12 +430,12 @@
         text-align: center;
         background-color: #e5ffe5;
         border: 1px solid #c2e6c2;
-        font-size: 23px;
+        font-size: 22px;
         font-weight: bold;
         color: #004d00;
         padding: 5px 15px;
         display: inline-block;
-        min-width: 46%;
+        min-width: 45%;
         box-sizing: border-box; 
         border-radius: 30px;
         margin: 0 auto; 
