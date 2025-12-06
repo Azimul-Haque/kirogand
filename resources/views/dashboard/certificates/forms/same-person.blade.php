@@ -22,7 +22,7 @@
             <i class="fas fa-file-alt"></i> {{ $title }}
         </h3>
     </div>
-    <form action="{{ $route }}" method="POST">
+    <form action="{{ $route }}" method="POST" enctype="multipart/form-data">
         @csrf
         {{-- @if ($isEdit)
             @method('PUT')
