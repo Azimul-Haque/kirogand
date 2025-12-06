@@ -427,18 +427,15 @@
     }
 
     .cert-title {
-        /* টেক্সট ও ডিজাইনের জন্য মূল বৈশিষ্ট্য */
         text-align: center;
-        background-color: #e5ffe5; /* Light green background */
+        background-color: #e5ffe5;
         border: 1px solid #c2e6c2;
         font-size: 23px;
         font-weight: bold;
-        color: #004d00; /* Darker text for readability */
-
-        /* mPDF-বান্ধব স্টাইলিং */
-        padding: 5px 15px; /* ভেতরের টেক্সটের চারপাশে প্যাডিং */
-        display: inline-block; /* div-কে তার কন্টেন্টের আকারের সমান করে */
-        min-width: 46%; /* নিশ্চিত করে যাতে এটি দেখতে বড় লাগে */
+        color: #004d00;
+        padding: 5px 15px;
+        display: inline-block;
+        min-width: 46%;
         box-sizing: border-box; 
         
         /* mPDF এ border-radius প্রয়োগের জন্য */
