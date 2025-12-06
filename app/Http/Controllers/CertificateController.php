@@ -271,7 +271,7 @@ class CertificateController extends Controller
 
         $uniqueSerial = now()->format('ymd') . Auth::user()->local_office_id . mt_rand(100000, 999999);
 
-        if ($request->hasFile('image')) {
+        if($request->hasFile('image')) {
             $image      = $request->file('image');
             $filename   = strtolower($localoffice->office_type) . '-image-' . time() . '.' . "png";
             $filename_back   = 'background-' . strtolower($localoffice->office_type) . '-image-' . time() . '.' . "png";
