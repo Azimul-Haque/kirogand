@@ -77,7 +77,44 @@
                                     <p><span class="info-label">ইউনিয়ন/পৌরসভা:</span> {{ $applicant['union'] ?? 'N/A' }}</p>
                                 </div>
                                 <div class="col-md-2">
-                                    
+                                    @php
+                                        // 1. Define the full local path to the file.
+                                        // We use public_path() because that's where File::exists() looks.
+                                        $imagePath = public_path('images/localoffices/' . Auth::user()->localoffice->monogram);
+
+                                        // 2. Check if the file name is stored AND if the physical file exists.
+                                        $monogramExists = Auth::user()->localoffice->monogram && File::exists($imagePath);
+                                    @endphp
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <!-- Custom File Input (AdminLTE compatible) -->
+                                                <div class="custom-file">
+                                                    <input type="file"
+                                                           class="custom-file-input"
+                                                           id="monogram"
+                                                           name="monogram"
+                                                           accept="image/png, image/jpeg, image/gif"
+                                                           @if(!$monogramExists) required @endif>
+                                                    <label class="custom-file-label" for="monogram">মনোগ্রাম সিলেক্ট করুন</label>
+                                                </div>
+                                                <small class="form-text text-muted">সর্বোচ্চ ফাইলের সাইজ 300KB (PNG, JPG, GIF), (300px X 300px)</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                          @if ($monogramExists)
+                                              <div class="monogram-container mb-4">
+                                                  <img 
+                                                      src="{{ asset('images/localoffices/' . Auth::user()->localoffice->monogram) }}" 
+                                                      alt="{{ Auth::user()->localoffice->name_bn }} Monogram" 
+                                                      class="img-fluid" style="max-height: 120px; width: auto;">
+                                              </div>
+                                          @else
+                                              <div class="monogram-placeholder bg-gray-100 p-6 rounded-lg text-center border-dashed border-2 border-gray-300">
+                                                  <p class="text-gray-500">কোন মনোগ্রাম সেট করা নেই!</p>
+                                              </div>
+                                          @endif
+                                        </div>
                                 </div>
                             </div>
                             <div class="row">
