@@ -263,10 +263,7 @@ class CertificateController extends Controller
                 'submission_timestamp' => now()->toDateTimeString(),
             ];
         } else {
-            $dataPayload = [
-                'applicant' => $applicantData,
-                'submission_timestamp' => now()->toDateTimeString(),
-            ];
+            
 
             if($request->hasFile('image')) {
                 $image      = $request->file('image');
@@ -275,6 +272,16 @@ class CertificateController extends Controller
                 Image::make($image)->fit(250, 200)->save($location);
                 // Image::make($image)->fit(450, 450)->opacity(15)->save($location_back);
                 $localoffice->image = $filename;
+
+                $dataPayload = [
+                    'applicant' => $applicantData,
+                    'submission_timestamp' => now()->toDateTimeString(),
+                ];
+            } else {
+                $dataPayload = [
+                    'applicant' => $applicantData,
+                    'submission_timestamp' => now()->toDateTimeString(),
+                ];
             }
         }
 
