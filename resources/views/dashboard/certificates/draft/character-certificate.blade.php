@@ -90,7 +90,7 @@
                                         <img 
                                             src="{{ asset('images/certificate-images/' . $payload['image']) }}" 
                                             alt="আবেদনকারীর ছবি" 
-                                            class="img-fluid" style="max-height: 120px; width: auto;">
+                                            class="img-fluid" style="max-height: 150px; width: auto;">
                                     @endif
                                 </div>
                             </div>
