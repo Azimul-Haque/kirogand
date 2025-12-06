@@ -77,7 +77,7 @@
                                     <p><span class="info-label">ইউনিয়ন/পৌরসভা:</span> {{ $applicant['union'] ?? 'N/A' }}</p>
                                 </div>
                                 <div class="col-md-2">
-                                    {{ $certificate->image }}
+                                    {{ $payload['image'] }}
                                     @php
                                         // 1. Define the full local path to the file.
                                         // We use public_path() because that's where File::exists() looks.
@@ -89,7 +89,7 @@
                                     @endphp
                                     @if ($imageExists)
                                         <img 
-                                            src="{{ asset('images/certificate-images/' . $certificate->image) }}" 
+                                            src="{{ asset('images/certificate-images/' . $payload['image']) }}" 
                                             alt="আবেদনকারীর ছবি" 
                                             class="img-fluid" style="max-height: 120px; width: auto;">
                                     @endif
