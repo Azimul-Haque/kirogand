@@ -110,7 +110,7 @@
                 @endphp
                 @if ($imageExists)
                     <img 
-                        src="{{ $personImage }}" alt="আবেদনকারীর ছবি" style="max-width: 100px; height: autol">
+                        src="{{ $personImage }}" alt="আবেদনকারীর ছবি" style="max-width: 100px; height: auto;">
                 @endif
             </div>
         </div>
