@@ -90,7 +90,7 @@
         </table>
 
         {{-- Certificate Title --}}
-        <table style="width: 100%; margin-top: 5px;">
+        {{-- <table style="width: 100%; margin-top: 5px;">
             <tr>
                 <td width="27%"></td>
                 <td width="46%" style="text-align: center; border: 1px solid #000; border-radius: 30px;">
@@ -102,7 +102,7 @@
                     
                 </td>
             </tr>
-        </table>
+        </table> --}}
         <div class="cert-row">
             <div class="cert-col col-left"></div>
             <div class="cert-col col-center">
