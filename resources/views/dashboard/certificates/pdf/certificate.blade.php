@@ -97,7 +97,7 @@
                     {{ checkcertificatetype($certificate->certificate_type) }}
                 </div>
             </div>
-            <div class="cert-col col-right">sss
+            <div class="cert-col col-right">
                 @php
                     // 1. Define the full local path to the file.
                     // We use public_path() because that's where File::exists() looks.
