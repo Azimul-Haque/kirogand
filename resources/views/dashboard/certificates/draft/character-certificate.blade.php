@@ -77,6 +77,7 @@
                                     <p><span class="info-label">ইউনিয়ন/পৌরসভা:</span> {{ $applicant['union'] ?? 'N/A' }}</p>
                                 </div>
                                 <div class="col-md-2">
+                                    {{ $certificate->image }}
                                     @php
                                         // 1. Define the full local path to the file.
                                         // We use public_path() because that's where File::exists() looks.
