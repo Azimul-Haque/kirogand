@@ -438,7 +438,7 @@
         /* mPDF-বান্ধব স্টাইলিং */
         padding: 5px 15px; /* ভেতরের টেক্সটের চারপাশে প্যাডিং */
         display: inline-block; /* div-কে তার কন্টেন্টের আকারের সমান করে */
-        min-width: 46%; /* নিশ্চিত করে যাতে এটি দেখতে বড় লাগে */
+        min-width: 60%; /* নিশ্চিত করে যাতে এটি দেখতে বড় লাগে */
         box-sizing: border-box; 
         
         /* mPDF এ border-radius প্রয়োগের জন্য */
@@ -459,7 +459,8 @@
     .cert-col {
         float: left;
         box-sizing: border-box;
-        min-height: 10px;
+        min-height: 10px; 
+        padding: 0 5px; /* কলামগুলির মধ্যে সামান্য ব্যবধান */
     }
     .col-left {
         width: 27%;
