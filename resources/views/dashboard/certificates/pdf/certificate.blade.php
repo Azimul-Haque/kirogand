@@ -110,10 +110,7 @@
                     {{ checkcertificatetype($certificate->certificate_type) }}
                 </div>
             </div>
-
-            {{-- ডান কলাম (27% ফাঁকা স্থান) --}}
             <div class="cert-col col-right">
-                {{-- এই কলামটিও ফাঁকা থাকবে, টেবিলের শেষ td-এর মতো --}}
             </div>
             
         </div>
