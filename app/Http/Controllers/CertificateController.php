@@ -271,11 +271,10 @@ class CertificateController extends Controller
                 $location   = public_path('images/certificate-images/' . $filename);
                 Image::make($image)->fit(250, 200)->save($location);
                 // Image::make($image)->fit(450, 450)->opacity(15)->save($location_back);
-                $localoffice->image = $filename;
-
+                // $localoffice->image = $filename;
                 $dataPayload = [
                     'applicant' => $applicantData,
-                    'image' => $applicantData,
+                    'image' => $filename,
                     'submission_timestamp' => now()->toDateTimeString(),
                 ];
             } else {
