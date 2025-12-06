@@ -92,7 +92,8 @@
                                                 src="{{ asset('images/localoffices/' . Auth::user()->localoffice->monogram) }}" 
                                                 alt="{{ Auth::user()->localoffice->name_bn }} Monogram" 
                                                 class="img-fluid" style="max-height: 120px; width: auto;">
-                                        </div>@endif
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                             <div class="row">
