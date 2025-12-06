@@ -505,6 +505,25 @@ class CertificateController extends Controller
                 'submission_timestamp' => $submissionTimestamp,
                 'updated_timestamp' => now()->toDateTimeString(),
             ];
+
+            if($request->hasFile('image')) {
+                $image      = $request->file('image');
+                $filename   = strtolower($certificate_type) . '-image-' . time() . '.' . "png";
+                $location   = public_path('images/certificate-images/' . $filename);
+                Image::make($image)->fit(200, 230)->save($location);
+                // Image::make($image)->fit(450, 450)->opacity(15)->save($location_back);
+                // $localoffice->image = $filename;
+                $dataPayload = [
+                    'applicant' => $applicantData,
+                    'image' => $filename,
+                    'submission_timestamp' => now()->toDateTimeString(),
+                ];
+            } else {
+                $dataPayload = [
+                    'applicant' => $applicantData,
+                    'submission_timestamp' => now()->toDateTimeString(),
+                ];
+            }
         }
 
         $uniqueSerial = now()->format('ymd') . Auth::user()->local_office_id . mt_rand(100000, 999999);
