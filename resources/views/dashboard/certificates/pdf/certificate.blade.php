@@ -90,30 +90,6 @@
         </table>
 
         {{-- Certificate Title --}}
-        {{-- <table style="width: 100%; margin-top: 5px;">
-            <tr>
-                <td width="27%"></td>
-                <td width="46%" style="text-align: center; border: 1px solid #000; border-radius: 30px;">
-                    <div class="cert-title" style="text-align: center; background-color: #e5ffe5; /* Light green background */ border: 1px solid #c2e6c2; padding: 4px 4px; margin: 10px auto; width: 100%; border-radius: 30px; font-size: 23px; font-weight: bold;">
-                        {{ checkcertificatetype($certificate->certificate_type) }}
-                    </div>
-                </td>
-                <td style="text-align: right;">
-                    
-                </td>
-            </tr>
-        </table> --}}
-        <table style="width: 100%; margin-top: 5px;">
-            <tr>
-                <td width="27%"></td>
-                <td width="46%" style="text-align: center; padding: 10px 0;">
-                    <span class="cert-title" style="text-align: center; background-color: #e5ffe5; border: 1px solid #c2e6c2; font-size: 23px; font-weight: bold; color: #004d00; padding: 5px 15px; display: inline-block; min-width: 60%; box-sizing: border-box; border-radius: 30px; margin: 0 auto;">
-                        {{ checkcertificatetype($certificate->certificate_type) }}
-                    </span>
-                </td>
-                <td width="27%"></td>
-            </tr>
-        </table>
         <div class="cert-row">
             <div class="cert-col col-left">.</div>
             <div class="cert-col col-center">
