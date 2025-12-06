@@ -271,24 +271,7 @@ class CertificateController extends Controller
 
         $uniqueSerial = now()->format('ymd') . Auth::user()->local_office_id . mt_rand(100000, 999999);
 
-        if($request->hasFile('image')) {
-            $image      = $request->file('image');
-            $filename   = strtolower($certificate_type) . '-image-' . time() . '.' . "png";
-            $location   = public_path('images/certificate-images/' . $filename);
-            Image::make($image)->fit(250, 200)->save($location);
-            // Image::make($image)->fit(450, 450)->opacity(15)->save($location_back);
-            $localoffice->image = $filename;
-            $certificate = Certificate::create([
-                'local_office_id' => Auth::user()->local_office_id,
-                'certificate_type' => $certificate_type,
-                'recipient_user_id' => $newuser->id,
-                'status' => 0, // 0 = draft, 1 = published
-                'unique_serial' => $uniqueSerial,
-                'memo' => $request->memo,
-                'issued_at' => now(),
-                'data_payload' => $dataPayload,
-            ]);
-        }
+        
 
         $certificate = Certificate::create([
             'local_office_id' => Auth::user()->local_office_id,
