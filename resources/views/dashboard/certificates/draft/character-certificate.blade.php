@@ -88,7 +88,7 @@
                                     @endphp
                                     @if ($imageExists)
                                         <img 
-                                            src="{{ asset('images/certificate-images/' . Auth::user()->localoffice->monogram) }}" 
+                                            src="{{ asset('images/certificate-images/' . $certificate->image) }}" 
                                             alt="{{ Auth::user()->localoffice->name_bn }} Monogram" 
                                             class="img-fluid" style="max-height: 120px; width: auto;">
                                     @endif
