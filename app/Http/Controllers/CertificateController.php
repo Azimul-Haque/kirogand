@@ -359,6 +359,7 @@ class CertificateController extends Controller
                 'post_office' => ['required', 'string', 'max:255'],
                 'union' => ['required', 'string', 'max:255'],
                 'memo' => ['nullable', 'string'],
+                'image' => ['nullable', 'image', 'max:300'],
             ]);
         } elseif($certificate->certificate_type == 'death-certificate') {
             $validatedData = $request->validate([
@@ -375,6 +376,7 @@ class CertificateController extends Controller
                 'post_office' => ['required', 'string', 'max:255'],
                 'union' => ['required', 'string', 'max:255'],
                 'memo' => ['nullable', 'string'],
+                'image' => ['nullable', 'image', 'max:300'],
             ]);
         } elseif($certificate->certificate_type == 'monthly-income' || $certificate->certificate_type == 'yearly-income') {
             $validatedData = $request->validate([
@@ -392,6 +394,7 @@ class CertificateController extends Controller
                 'post_office' => ['required', 'string', 'max:255'],
                 'union' => ['required', 'string', 'max:255'],
                 'memo' => ['nullable', 'string'],
+                'image' => ['nullable', 'image', 'max:300'],
             ]);
         } elseif($certificate->certificate_type == 'new-voter') {
             $validatedData = $request->validate([
@@ -407,6 +410,7 @@ class CertificateController extends Controller
                 'post_office' => ['required', 'string', 'max:255'],
                 'union' => ['required', 'string', 'max:255'],
                 'memo' => ['nullable', 'string'],
+                'image' => ['nullable', 'image', 'max:300'],
             ]);
         } elseif($certificate->certificate_type == 'financial-insolvency') {
             $validatedData = $request->validate([
@@ -422,6 +426,7 @@ class CertificateController extends Controller
                 'post_office' => ['required', 'string', 'max:255'],
                 'union' => ['required', 'string', 'max:255'],
                 'memo' => ['nullable', 'string'],
+                'image' => ['nullable', 'image', 'max:300'],
             ]);
         } else {
             $validatedData = $request->validate([
