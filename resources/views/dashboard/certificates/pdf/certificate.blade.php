@@ -93,16 +93,18 @@
         <table style="width: 100%; margin-top: 5px;">
             <tr>
                 <td width="30%"></td>
-                <td style="text-align: center;">@if($certificate->memo) স্মারক নং - {{ $certificate->memo }} @else সনদ নং - {{ $certificate->unique_serial }} @endif</td>
+                <td style="text-align: center;">
+                    <div class="cert-title">
+                        {{ checkcertificatetype($certificate->certificate_type) }}
+                    </div>
+                </td>
                 <td style="text-align: right; font-size: 14px;">তারিখ: {{ $certificate->issued_at != null ?  bangla(date('d-m-Y', strtotime($certificate->issued_at))) : bangla(date('d-m-Y')) }}</td>
             </tr>
             {{-- <tr>
                 <td colspan="2" style="text-align: right; font-size: 14px;">প্রদানের তারিখ: {{ bangla(date('d-m-Y')) }}</td>
             </tr> --}}
         </table>
-        <div class="cert-title">
-            {{ checkcertificatetype($certificate->certificate_type) }}
-        </div>
+        
 
         @if($certificate->certificate_type == 'heir-certificate')
             {{-- Introduction Paragraph (Using Applicant Data) --}}
