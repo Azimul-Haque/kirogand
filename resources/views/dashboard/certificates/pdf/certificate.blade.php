@@ -459,8 +459,7 @@
     .cert-col {
         float: left;
         box-sizing: border-box;
-        min-height: 10px; 
-        padding: 0 5px; /* কলামগুলির মধ্যে সামান্য ব্যবধান */
+        min-height: 10px;
     }
     .col-left {
         width: 27%;
