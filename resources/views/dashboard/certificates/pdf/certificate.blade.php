@@ -91,7 +91,7 @@
 
         {{-- Certificate Title --}}
         <div class="cert-row">
-            <div class="cert-col col-left">.</div>
+            <div class="cert-col col-left" style="color: #FFF;">.</div>
             <div class="cert-col col-center">
                 <div class="cert-title">
                     {{ checkcertificatetype($certificate->certificate_type) }}
