@@ -107,9 +107,9 @@
             <tr>
                 <td width="27%"></td>
                 <td width="46%" style="text-align: center; padding: 10px 0;">
-                    <div class="cert-title">
+                    <span class="cert-title">
                         {{ checkcertificatetype($certificate->certificate_type) }}
-                    </div>
+                    </span>
                 </td>
                 <td width="27%"></td>
             </tr>
