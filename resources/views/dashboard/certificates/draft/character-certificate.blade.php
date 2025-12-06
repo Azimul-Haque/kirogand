@@ -84,7 +84,7 @@
                                         $imagePath = public_path('images/certificate-images/' . $image);
 
                                         // 2. Check if the file name is stored AND if the physical file exists.
-                                        $monogramExists = Auth::user()->localoffice->monogram && File::exists($imagePath);
+                                        $monogramExists = $certificate->image && File::exists($imagePath);
                                     @endphp
                                     <div class="row">
                                         <div class="col-md-6">
