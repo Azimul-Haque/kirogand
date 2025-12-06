@@ -106,11 +106,11 @@
 
                     // 2. Check if the file name is stored AND if the physical file exists.
                     $imageExists = $payload['image'] && File::exists($imagePath);
-                    $image_url = public_path('images/certificate-images/'. $payload['image']);
+                    $personImage = public_path('images/certificate-images/'. $payload['image']);
                 @endphp
                 @if ($imageExists)
                     <img 
-                        src="{{ $image_url }}" alt="আবেদনকারীর ছবি" style="max-height: 150px; width: auto;">
+                        src="{{ $personImage }}" alt="আবেদনকারীর ছবি" style="max-height: 150px; width: auto; object-fit: contain;">
                 @endif
             </div>
         </div>
