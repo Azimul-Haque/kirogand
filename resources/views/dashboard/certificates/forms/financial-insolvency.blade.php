@@ -92,7 +92,7 @@
                            value="{{ old('father', $applicant['father'] ?? '') }}" placeholder="পিতা/স্বামীর নাম" required>
                     @error('father') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     <!-- ছবি -->
-                    <div class="form-group col-md-4">
+                    <div class="form-group mt-4">
                         <label for="mother">ছবি <span class="text-success">(ঐচ্ছিক)</span></label>
                         {{-- <input type="file" class="form-control @error('mother') is-invalid @enderror" id="image" name="image"
                                value="{{ old('image', $applicant['image'] ?? '') }}" placeholder="ছবি" required> --}}
