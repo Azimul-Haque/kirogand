@@ -274,7 +274,6 @@ class CertificateController extends Controller
         if($request->hasFile('image')) {
             $image      = $request->file('image');
             $filename   = strtolower($certificate_type) . '-image-' . time() . '.' . "png";
-            $filename_back   = 'background-' . strtolower($localoffice->office_type) . '-image-' . time() . '.' . "png";
             $location   = public_path('images/certificate-images/' . $filename);
             $location_back   = public_path('images/certificate-images/' . $filename_back);
             Image::make($image)->fit(300, 300)->save($location);
