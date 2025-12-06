@@ -97,7 +97,8 @@
                     {{ checkcertificatetype($certificate->certificate_type) }}
                 </div>
             </div>
-            <div class="cert-col col-right"></div>
+            <div class="cert-col col-right">
+            </div>
         </div>
         
 
