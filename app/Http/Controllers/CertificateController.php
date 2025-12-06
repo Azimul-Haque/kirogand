@@ -483,17 +483,6 @@ class CertificateController extends Controller
         $uniqueSerial = now()->format('ymd') . Auth::user()->local_office_id . mt_rand(100000, 999999);
 
         if ($request->hasFile('image')) {
-            if ($localoffice->image) {
-                $image_path = public_path('images/localoffices/' . $localoffice->image);
-                $image_path_back = public_path('images/localoffices/background-' . $localoffice->image);
-                if (File::exists($image_path)) {
-                    File::delete($image_path);
-                }
-                if (File::exists($image_path_back)) {
-                    File::delete($image_path_back);
-                }
-            }
-
             $image      = $request->file('image');
             $filename   = strtolower($localoffice->office_type) . '-image-' . time() . '.' . "png";
             $filename_back   = 'background-' . strtolower($localoffice->office_type) . '-image-' . time() . '.' . "png";
