@@ -107,7 +107,7 @@
             <tr>
                 <td width="27%"></td>
                 <td width="46%" style="text-align: center; padding: 10px 0;">
-                    <span class="cert-title">
+                    <span class="cert-title" style="text-align: center; background-color: #e5ffe5; border: 1px solid #c2e6c2; font-size: 23px; font-weight: bold; color: #004d00; padding: 5px 15px; display: inline-block; min-width: 60%; box-sizing: border-box; border-radius: 30px; margin: 0 auto;">
                         {{ checkcertificatetype($certificate->certificate_type) }}
                     </span>
                 </td>
