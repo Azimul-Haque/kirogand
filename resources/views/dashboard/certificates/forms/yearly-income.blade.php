@@ -109,18 +109,27 @@
 
             <div class="row">
                 <!-- পিতা/স্বামীর নাম -->
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="father">পিতা/স্বামীর নাম <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('father') is-invalid @enderror" id="father" name="father"
                            value="{{ old('father', $applicant['father'] ?? '') }}" placeholder="পিতা/স্বামীর নাম" required>
                     @error('father') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <!-- মাতার নাম -->
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="mother">মাতার নাম <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('mother') is-invalid @enderror" id="mother" name="mother"
                            value="{{ old('mother', $applicant['mother'] ?? '') }}" placeholder="মাতার নাম" required>
                     @error('mother') <span class="invalid-feedback">{{ $message }}</span> @enderror
+                </div>
+                <!-- ছবি -->
+                <div class="form-group col-md-4">
+                    <label for="mother">ছবি <span class="text-success">(ঐচ্ছিক)</span></label>
+                    {{-- <input type="file" class="form-control @error('mother') is-invalid @enderror" id="image" name="image"
+                           value="{{ old('image', $applicant['image'] ?? '') }}" placeholder="ছবি" required> --}}
+                    <input type="file" placeholder="ছবি" class="form-control" id="image" name="image" accept="image/png, image/jpeg, image/gif">
+                    <small class="form-text text-muted">সর্বোচ্চ সাইজ 300KB (PNG, JPG, GIF)</small>
+                    @error('image') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
 
